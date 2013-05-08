@@ -1,0 +1,9 @@
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideDataService\WorldWideData\bin\Debug\StockLoan.WorldWideData.dll
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideDataService\WorldWideData\bin\Debug\StockLoan.WorldWideData.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideDataService\WorldWideData\bin\Debug\StockLoan.Common.dll
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideDataService\WorldWideData\bin\Debug\StockLoan.DataAccess.dll
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideDataService\WorldWideData\bin\Debug\StockLoan.Common.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideDataService\WorldWideData\bin\Debug\StockLoan.DataAccess.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideDataService\WorldWideData\obj\Debug\ResolveAssemblyReference.cache
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideDataService\WorldWideData\obj\Debug\StockLoan.WorldWideData.dll
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideDataService\WorldWideData\obj\Debug\StockLoan.WorldWideData.pdb

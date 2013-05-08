@@ -1,0 +1,1130 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Silverlight.Data</name>
+    </assembly>
+    <members>
+        <member name="T:C1.Silverlight.Data.DataView">
+            <summary>
+            Represents a bindable view of a <see cref="T:C1.Silverlight.Data.DataTable"/> with support for
+            sorting and filtering.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataView.#ctor(C1.Silverlight.Data.DataTable,System.String[])">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Data.DataView"/> class.
+            </summary>
+            <param name="table">The <see cref="T:C1.Silverlight.Data.DataTable"/> that provides data for this <see cref="T:C1.Silverlight.Data.DataView"/>.</param>
+            <param name="columnNames">Array containing the names of the columns exposed by this <see cref="T:C1.Silverlight.Data.DataView"/>.</param>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataView.#ctor(C1.Silverlight.Data.DataTable)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Data.DataView"/> class.
+            </summary>
+            <param name="table">The <see cref="T:C1.Silverlight.Data.DataTable"/> that provides data for this <see cref="T:C1.Silverlight.Data.DataView"/>.</param>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataView.SetSource">
+            <summary>
+            Sets the source collection.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataView.EvaluateFilter(System.Object)">
+            <summary>
+            Evaluates the current filter condition for a given <see cref="T:C1.Silverlight.Data.DataRow"/>.
+            </summary>
+            <param name="item"><see cref="T:C1.Silverlight.Data.DataRow"/> used to evaluate the filter.</param>
+            <returns>True if the <see cref="T:C1.Silverlight.Data.DataRow"/> satisfies the filter condition, 
+            false otherwise.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataView.SetSortDescriptions(System.String)">
+            <summary>
+            Sets the <see cref="T:System.ComponentModel.SortDescriptionCollection"/> that defines how the view is sorted.
+            </summary>
+            <param name="sortString">Comma-delimited list of field names that define the current sort.</param>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataView.Item(System.Int32)">
+            <summary>
+            Gets the <see cref="T:C1.Silverlight.Data.DataRowView"/> item at a given index.
+            </summary>
+            <param name="index">Index of the item to return.</param>
+            <returns>The <see cref="T:C1.Silverlight.Data.DataRowView"/> item at the given index.</returns>
+        </member>
+        <member name="E:C1.Silverlight.Data.DataView.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataView.Count">
+            <summary>
+            Gets the quantity of rows in this view.
+            </summary>
+            <value>Number of viewrows in the view.</value>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataView.Table">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.Data.DataTable"/> that provides data for this <see cref="T:C1.Silverlight.Data.DataView"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataView.RowFilter">
+            <summary>
+            Gets or sets a string that specifies which rows should be included in this <see cref="T:C1.Silverlight.Data.DataView"/>.
+            </summary>
+            <remarks>
+            This property sets the Filter predicate. Was maintained by compatibility.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataView.Sort">
+            <summary>
+            Gets or sets a string that specifies the columns used to sort this <see cref="T:C1.Silverlight.Data.DataView"/>.
+            </summary>
+            <remarks>
+            This property sets the SortDescriptions collection. Was maintained by compatibility.
+            </remarks>
+        </member>
+        <member name="T:C1.Silverlight.Data.UpdatableCollection`1">
+            <summary>
+            Observable collection similar to the one in System.Collections.ObjectModel but with 
+            BeginUpdate/EndUpdate methods used to optionally suppress notifications.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:C1.Silverlight.Data.UpdatableCollection`1.BeginUpdate">
+            <summary>
+            Prevents the list from firing notification events until the <see cref="M:C1.Silverlight.Data.UpdatableCollection`1.EndUpdate"/> method is called.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Data.UpdatableCollection`1.EndUpdate">
+            <summary>
+            Resumes event firing after it had been suspended by a call to the <see cref="M:C1.Silverlight.Data.UpdatableCollection`1.BeginUpdate"/> method.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Data.UpdatableCollection`1.OnCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Raises the <b>CollectionChanged</b> event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:C1.Silverlight.Data.UpdatableCollection`1.Updating">
+            <summary>
+            Gets whether events are temporarily suspended because of calls to the <see cref="M:C1.Silverlight.Data.UpdatableCollection`1.BeginUpdate"/> method.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Data.DataRowView">
+            <summary>
+            Class that wraps a <see cref="T:C1.Silverlight.Data.DataRow"/> object, used as a base for
+            dynamically-generated classes that expose the <see cref="T:C1.Silverlight.Data.DataRow"/> 
+            columns as bindable properties.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataRowView.#ctor(C1.Silverlight.Data.DataRow)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Data.DataRowView"/>.
+            </summary>
+            <param name="dr">Underlying <see cref="T:C1.Silverlight.Data.DataRow"/> object.</param>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataRowView.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Data.DataRowView"/>.
+            </summary>
+            <remarks>This constructor is for internal use only.</remarks>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataRowView.GetRow">
+            <summary>
+            Gets a reference to the underlying <see cref="T:C1.Silverlight.Data.DataRow"/> object.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataRowView.GetData(System.String)">
+            <summary>
+            Gets the data for a specified column in the underlying <see cref="T:C1.Silverlight.Data.DataRow"/>.
+            </summary>
+            <param name="columnName">Name of the column that contains the data.</param>
+            <returns>Data at column <paramref name="columnName"/>.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataRowView.GetData(System.Int32)">
+            <summary>
+            Gets the data for a specified column in the underlying <see cref="T:C1.Silverlight.Data.DataRow"/>.
+            </summary>
+            <param name="columnIndex">Index of the column that contains the data.</param>
+            <returns>Data at column <paramref name="columnIndex"/>.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataRowView.SetData(System.String,System.Object)">
+            <summary>
+            Sets the data for a specified column in the underlying <see cref="T:C1.Silverlight.Data.DataRow"/>.
+            </summary>
+            <param name="columnName">Name of the column that contains the data.</param>
+            <param name="value">New value for the column.</param>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataRowView.SetData(System.Int32,System.Object)">
+            <summary>
+            Sets the data for a specified column in the underlying <see cref="T:C1.Silverlight.Data.DataRow"/>.
+            </summary>
+            <param name="columnIndex">Index of the column that contains the data.</param>
+            <param name="value">New value for the column.</param>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataRowView.GetHashCode">
+            <summary>
+            Gets the hash code of the wrapped <see cref="T:C1.Silverlight.Data.DataRow"/>.
+            </summary>
+            <returns>The hash code of the wrapped <see cref="T:C1.Silverlight.Data.DataRow"/>.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataRowView.Equals(System.Object)">
+            <summary>
+            Determines if two <see cref="T:C1.Silverlight.Data.DataRowView"/> objects refer to the same <see cref="T:C1.Silverlight.Data.DataRow"/>.
+            </summary>
+            <param name="obj">Object to compare to this <see cref="T:C1.Silverlight.Data.DataRowView"/>.</param>
+            <returns>True if the object is a <see cref="T:C1.Silverlight.Data.DataRowView"/> that refers to the same <see cref="T:C1.Silverlight.Data.DataRow"/>.</returns>
+        </member>
+        <member name="E:C1.Silverlight.Data.DataRowView.PropertyChanged">
+            <summary>
+            Fires when one of the fields in the underlying <see cref="T:C1.Silverlight.Data.DataRow"/> changes value.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Data.ClassFactory">
+            <summary>
+            Class used to build classes that derive from <see cref="T:C1.Silverlight.Data.DataRowView"/> and add
+            properties that map to each field in the underlying <see cref="T:C1.Silverlight.Data.DataRow"/> object.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Data.ClassFactory.CreateAnonymousType(C1.Silverlight.Data.DataTable)">
+            <summary>
+            Creates an <see cref="T:C1.Silverlight.Data.AnonymousType"/> that exposes all columns in a <see cref="T:C1.Silverlight.Data.DataTable"/>
+            as individual properties.
+            </summary>
+            <param name="dt"><see cref="T:C1.Silverlight.Data.DataTable"/> that defines the property names and types.</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Silverlight.Data.ClassFactory.CreateAnonymousType(C1.Silverlight.Data.DataTable,System.String[])">
+            <summary>
+            Creates an <see cref="T:C1.Silverlight.Data.AnonymousType"/> that exposes all columns in a <see cref="T:C1.Silverlight.Data.DataTable"/>
+            as individual properties.
+            </summary>
+            <param name="dt"><see cref="T:C1.Silverlight.Data.DataTable"/> that defines the property names and types.</param>
+            <param name="columnNames">Specific column names to use when building the type (null causes all columns to be included).</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Silverlight.Data.ClassFactory.CreateAnonymousType(C1.Silverlight.Data.DataTable,C1.Silverlight.Data.DataColumn[])">
+            <summary>
+            Creates an <see cref="T:C1.Silverlight.Data.AnonymousType"/> that exposes selected columns in a <see cref="T:C1.Silverlight.Data.DataTable"/>
+            as individual properties.
+            </summary>
+            <param name="dt"><see cref="T:C1.Silverlight.Data.DataTable"/> that defines the property names and types.</param>
+            <param name="columns">Specific columns to use when building the type (null causes all columns to be included).</param>
+            <returns></returns>
+        </member>
+        <member name="T:C1.Silverlight.Data.AnonymousType">
+            <summary>
+            Base class for dynamically emitted classes that expose the fields in a
+            <see cref="T:C1.Silverlight.Data.DataRowView"/> as properties.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Data.MappingType">
+            <summary>
+            Specifies how the data in a <see cref="T:C1.Silverlight.Data.DataColumn"/> is persisted to XML.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Data.MappingType.Element">
+            <summary>
+            The column is mapped to an XML element.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Data.MappingType.Attribute">
+            <summary>
+            The column is mapped to an XML attribute.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Data.MappingType.Hidden">
+            <summary>
+            The column is not mapped to XML.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Data.DataTable">
+            <summary>
+            Subset of the System.Data.DataTable class.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Data.NamedObject">
+            <summary>
+            Object that has a <see cref="P:C1.Silverlight.Data.NamedObject.Name"/> property.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.NamedObject.Name">
+            <summary>
+            Gets or sets the object's name.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.NamedObject.ExtendedProperties">
+            <summary>
+            Gets a collection of custom user information associated with this 
+            <see cref="T:C1.Silverlight.Data.NamedObject"/>.
+            </summary>
+            <remarks>
+            Use this property to store custom information with a 
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataTable.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Data.DataTable"/>.
+            </summary>
+            <param name="tableName">Name of the new <see cref="T:C1.Silverlight.Data.DataTable"/>.</param>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataTable.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Data.DataTable"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataTable.NewRowFromBuilder(C1.Silverlight.Data.DataRowBuilder)">
+             <summary>
+             Creates a new uninitialized <see cref="T:C1.Silverlight.Data.DataRow"/> object.
+             </summary>
+             <returns>A new uninitialized <see cref="T:C1.Silverlight.Data.DataRow"/> object.</returns>
+             <remarks>
+             Override this method when implementing typed data set objects. Instead
+             of returning a <see cref="T:C1.Silverlight.Data.DataRow"/> object, return a new instance of 
+             the typed data row object in your typed data table.
+             </remarks>
+             <example>
+             The example below shows how you can override the <see cref="M:C1.Silverlight.Data.DataTable.NewRowFromBuilder(C1.Silverlight.Data.DataRowBuilder)"/>
+             method to return a typed data row:
+             <code>
+             // create a new row of the appropriate type
+             protected override DataRow NewRowFromBuilder(DataRowBuilder builder)
+             {
+               return new TypedDataRow(builder);
+             }
+             
+             // creates, initializes, and returns a new row.
+             public TypedDataRow NewTypedDataRow()
+             {
+               TypedDataRow newRow = (TypedDataRow)this.NewRow();
+               return newRow;
+             }
+            
+             // typed DataRow object
+             public class TypedDataRow : DataRow
+             {
+               public string FirstName
+               {
+                 get { return (string)this["FirstName"]; }
+                 set { return this["FirstName"] = (string)value; }
+               }
+             }
+             </code>
+             </example>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataTable.NewRow">
+            <summary>
+            Creates a new <see cref="T:C1.Silverlight.Data.DataRow"/> that is compatible with this table.
+            </summary>
+            <returns>A new <see cref="T:C1.Silverlight.Data.DataRow"/> object that is compatible with this table.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataTable.AcceptChanges">
+            <summary>
+            Marks all rows as unchanged.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataTable.GetChanges(C1.Silverlight.Data.DataRowState)">
+            <summary>
+            Gets a <see cref="T:C1.Silverlight.Data.DataTable"/> containing all rows that have changed since the
+            table was loaded or <see cref="M:C1.Silverlight.Data.DataTable.AcceptChanges"/> was called, or <b>null</b> if
+            the table contains no changes.
+            </summary>
+            <param name="state"><see cref="T:C1.Silverlight.Data.DataRowState"/> value used to filter the rows.</param>
+            <returns>A <see cref="T:C1.Silverlight.Data.DataTable"/> containing all rows that have changed since the
+            table was loaded or <see cref="M:C1.Silverlight.Data.DataTable.AcceptChanges"/> was called, or <b>null</b> if
+            the table contains no changes.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataTable.GetChanges">
+            <summary>
+            Gets a <see cref="T:C1.Silverlight.Data.DataTable"/> containing all rows that have changed since the
+            table was loaded or <see cref="M:C1.Silverlight.Data.DataTable.AcceptChanges"/> was called, or <b>null</b> if
+            the table contains no changes.
+            </summary>
+            <returns>A <see cref="T:C1.Silverlight.Data.DataTable"/> containing all rows that have changed since the
+            table was loaded or <see cref="M:C1.Silverlight.Data.DataTable.AcceptChanges"/> was called, or <b>null</b> if
+            the table contains no changes.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataTable.Compute(System.String,C1.Silverlight.Data.DataRow)">
+            <summary>
+            Evaluates an expression using data in a given <see cref="T:C1.Silverlight.Data.DataRow"/>.
+            </summary>
+            <param name="expression"></param>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataTable.Compute(System.String)">
+            <summary>
+            Evaluates an expression assuming no current row.
+            This is mostly useful for computing aggregates, which are not
+            supported yet.
+            </summary>
+            <param name="expression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataTable.Select(System.String)">
+            <summary>
+            Gets an array with all rows in the table that match a filter expression.
+            </summary>
+            <param name="filterExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataTable.Select">
+            <summary>
+            Gets an array with all rows in the table.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataTable.BeginLoadData">
+            <summary>
+            Suspends notifications during batch operations.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataTable.EndLoadData">
+            <summary>
+            Resumes notifications suspended by a call to <see cref="M:C1.Silverlight.Data.DataTable.BeginLoadData"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataTable.TableName">
+            <summary>
+            Gets or sets the name of the table.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataTable.Columns">
+            <summary>
+            Gets a list of <see cref="T:C1.Silverlight.Data.DataColumn"/> columns.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataTable.Rows">
+            <summary>
+            Gets a list of <see cref="T:C1.Silverlight.Data.DataRow"/> objects.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataTable.DataSet">
+            <summary>
+            Gets the <see cref="P:C1.Silverlight.Data.DataTable.DataSet"/> that owns this table.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataTable.PrimaryKey">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.Data.DataColumn"/> that is used as a key for this table.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataTable.DefaultView">
+            <summary>
+            Gets the default <see cref="T:C1.Silverlight.Data.DataView"/> associated with this <see cref="T:C1.Silverlight.Data.DataTable"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataTable.HasChanges">
+            <summary>
+            Gets or sets a value that indicates whether this table has any changes
+            since it was created, loaded, or since the <see cref="M:C1.Silverlight.Data.DataTable.AcceptChanges"/>
+            method was called.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataTable.ChildRelations">
+            <summary>
+            Gets a collection with all <see cref="T:C1.Silverlight.Data.DataRelation"/> objects for which 
+            this table is the parent table.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataTable.ParentRelations">
+            <summary>
+            Gets a collection with all <see cref="T:C1.Silverlight.Data.DataRelation"/> objects for which this
+            table is the child table.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataTable.CaseSensitive">
+            <summary>
+            Indicates whether string comparisons within the table are case-sensitive.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataTable.Locale">
+            <summary>
+            Gets or sets the locale information used to compare strings within the table.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Data.DataTableCollection">
+            <summary>
+            List of <see cref="T:C1.Silverlight.Data.DataTable"/> objects.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Data.NamedObjectCollection`1">
+            <summary>
+            Collection of named objects, provides string indexer to retrieve objects by name.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:C1.Silverlight.Data.NamedObjectCollection`1.Add(System.String)">
+            <summary>
+            Creates an item and appends it to the list.
+            </summary>
+            <param name="name">Name of the new item.</param>
+            <returns>A reference to the new item added to the list.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Data.NamedObjectCollection`1.Contains(System.String)">
+            <summary>
+            Gets a value that determines whether an item is a member of the list.
+            </summary>
+            <param name="name">Name of the item to search.</param>
+            <returns>True if the list contains an item named <paramref name="name"/>, false otherwise.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Data.NamedObjectCollection`1.IndexOf(System.String)">
+            <summary>
+            Gets the index of an item in the list.
+            </summary>
+            <param name="name">Name of the item to search.</param>
+            <returns>The index of the item in the list, or -1 if the item could not be found.</returns>
+        </member>
+        <member name="P:C1.Silverlight.Data.NamedObjectCollection`1.Item(System.String)">
+            <summary>
+            Gets or sets an item in the list by name.
+            </summary>
+            <param name="name">Name of the item to get or set.</param>
+            <returns>A reference to the item with the given name.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataTableCollection.OnCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Raises the <b>CollectionChanged</b> event.
+            </summary>
+            <param name="e"><see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataTableCollection.Clear">
+            <summary>
+            Removes all the <see cref="T:C1.Silverlight.Data.DataTable"/> items from the list.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Data.DataColumn">
+            <summary>
+            Subset of the System.Data.DataColumn class.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataColumn.#ctor(System.String,System.Type,System.String)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Data.DataColumn"/> object.
+            </summary>
+            <param name="columnName">Name of the new column.</param>
+            <param name="dataType">Type of values stored in the new column.</param>
+            <param name="expression">Expression used to evaluate items in the new column.</param>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataColumn.#ctor(System.String,System.Type)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Data.DataColumn"/> object.
+            </summary>
+            <param name="columnName">Name of the new column.</param>
+            <param name="dataType">Type of values stored in the new column.</param>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataColumn.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Data.DataColumn"/> object.
+            </summary>
+            <param name="columnName">Name of the new column.</param>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataColumn.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Data.DataColumn"/> object.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataColumn.RaisePropertyChanged(System.String)">
+            <summary>
+            Raises the <see cref="E:C1.Silverlight.Data.DataColumn.PropertyChanged"/> event.
+            </summary>
+            <param name="propertyName">Name of the property whose value changed.</param>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataColumn.DataType">
+            <summary>
+            Gets or sets the <see cref="T:System.Type"/> of value stored in this <see cref="T:C1.Silverlight.Data.DataColumn"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataColumn.ColumnName">
+            <summary>
+            Gets or sets the name of this <see cref="T:C1.Silverlight.Data.DataColumn"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataColumn.ColumnEscapedName">
+            <summary>
+            Gets the name of the column removing spaces and invalid characters.
+            </summary>
+            <value>The escaped name of the column.</value>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataColumn.Caption">
+            <summary>
+            Gets or sets the caption for the column.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataColumn.Table">
+            <summary>
+            Gets a reference to the <see cref="T:C1.Silverlight.Data.DataTable"/> that contains this <see cref="T:C1.Silverlight.Data.DataColumn"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataColumn.Expression">
+            <summary>
+            Gets or sets a string that specifies an expression used to calculate values in this <see cref="T:C1.Silverlight.Data.DataColumn"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataColumn.Ordinal">
+            <summary>
+            Gets the position of this <see cref="T:C1.Silverlight.Data.DataColumn"/> in the parent table.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataColumn.ReadOnly">
+            <summary>
+            Gets or sets a value that determines whether this <see cref="T:C1.Silverlight.Data.DataColumn"/> is read-only.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataColumn.DefaultValue">
+            <summary>
+            Gets or sets the default value stored in this <see cref="T:C1.Silverlight.Data.DataColumn"/> when a new <see cref="T:C1.Silverlight.Data.DataRow"/> object is created.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataColumn.AllowDBNull">
+            <summary>
+            Gets or sets a value that indicates whether null values are allowed in this column.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataColumn.AutoIncrement">
+            <summary>
+            Gets or sets a value that indicates whether the column automatically increments the 
+            value of the column for new rows added to the table. 
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataColumn.AutoIncrementSeed">
+            <summary>
+            Gets or sets the starting value for a column that has its <see cref="P:C1.Silverlight.Data.DataColumn.AutoIncrement"/> 
+            property set to true. 
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataColumn.AutoIncrementStep">
+            <summary>
+            Gets or sets the increment used by a column with its <see cref="P:C1.Silverlight.Data.DataColumn.AutoIncrement"/> 
+            property set to true. 
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataColumn.MaxLength">
+            <summary>
+            Gets or sets the maximum length of a text column.
+            If the column has no maximum length, the value is –1 (default).
+            </summary>
+            <remarks>The MaxLength property is ignored for non-text columns.</remarks>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataColumn.ColumnMapping">
+            <summary>
+            Gets or sets how the column data is saved to XML.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Data.DataColumn.PropertyChanged">
+            <summary>
+            Fires when the value of a property changes.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Data.DataColumnList">
+            <summary>
+            List of <see cref="T:C1.Silverlight.Data.DataColumn"/> objects.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataColumnList.Add">
+            <summary>
+            Creates a new <see cref="T:C1.Silverlight.Data.DataColumn"/> and appends it to the list.
+            </summary>
+            <returns>A reference to the new <see cref="T:C1.Silverlight.Data.DataColumn"/>.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataColumnList.Add(System.String,System.Type)">
+            <summary>
+            Creates a new <see cref="T:C1.Silverlight.Data.DataColumn"/> and appends it to the list.
+            </summary>
+            <param name="columnName">Name of the new column.</param>
+            <param name="dataType">Type of data stored in the new column.</param>
+            <returns>A reference to the new <see cref="T:C1.Silverlight.Data.DataColumn"/>.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataColumnList.Add(System.String,System.Type,System.String)">
+            <summary>
+            Creates a new <see cref="T:C1.Silverlight.Data.DataColumn"/> and appends it to the list.
+            </summary>
+            <param name="columnName">Name of the new column.</param>
+            <param name="dataType">Type of data stored in the new column.</param>
+            <param name="expression">String that contains an expression used to evaluate values in the new column.</param>
+            <returns>A reference to the new <see cref="T:C1.Silverlight.Data.DataColumn"/>.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataColumnList.OnCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Raises the <b>CollectionChanged</b> event.
+            </summary>
+            <param name="e"><see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataColumnList.Clear">
+            <summary>
+            Removes all items from the list.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Data.DataRowState">
+            <summary>
+            Specifies the state of a <see cref="T:C1.Silverlight.Data.DataRow"/> object.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Data.DataRowState.Unchanged">
+            <summary>
+            The row has not changed.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Data.DataRowState.Added">
+            <summary>
+            The row has been added to the table.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Data.DataRowState.Deleted">
+            <summary>
+            The row has been deleted from the table.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Data.DataRowState.Detached">
+            <summary>
+            The row has been created but not yet added to the table.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Data.DataRowState.Modified">
+            <summary>
+            The row has been modified since it was created or loaded.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Data.DataRow">
+            <summary>
+            Subset of the System.Data.DataRow class.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataRow.#ctor(C1.Silverlight.Data.DataRowBuilder)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Data.DataRow"/> object.
+            </summary>
+            <param name="builder"><see cref="T:C1.Silverlight.Data.DataRowBuilder"/> that contains
+            information about the new row.</param>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataRow.Delete">
+            <summary>
+            Removes this row from its parent table.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataRow.GetChildRows(C1.Silverlight.Data.DataRelation)">
+            <summary>
+            Gets the child rows of this <see cref="T:C1.Silverlight.Data.DataRow"/> using the specified <see cref="T:C1.Silverlight.Data.DataRelation"/>.
+            </summary>
+            <param name="relation">The <see cref="T:C1.Silverlight.Data.DataRelation"/> to use.</param>
+            <returns>An array containing the child rows of this <see cref="T:C1.Silverlight.Data.DataRow"/> using 
+            the specified <see cref="T:C1.Silverlight.Data.DataRelation"/>.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataRow.GetChildRows(System.String)">
+            <summary>
+            Gets the child rows of this <see cref="T:C1.Silverlight.Data.DataRow"/> using the specified <see cref="T:C1.Silverlight.Data.DataRelation"/>.
+            </summary>
+            <param name="relationName">The name of the <see cref="T:C1.Silverlight.Data.DataRelation"/> to use.</param>
+            <returns>An array containing the child rows of this <see cref="T:C1.Silverlight.Data.DataRow"/> using 
+            the specified <see cref="T:C1.Silverlight.Data.DataRelation"/>.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataRow.GetParentRow(C1.Silverlight.Data.DataRelation)">
+            <summary>
+            Gets the parent row of this <see cref="T:C1.Silverlight.Data.DataRow"/> using the specified <see cref="T:C1.Silverlight.Data.DataRelation"/>.
+            </summary>
+            <param name="relation">The <see cref="T:C1.Silverlight.Data.DataRelation"/> to use.</param>
+            <returns>The parent row of this <see cref="T:C1.Silverlight.Data.DataRow"/> using the specified <see cref="T:C1.Silverlight.Data.DataRelation"/>.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataRow.GetParentRow(System.String)">
+            <summary>
+            Gets the parent row of this <see cref="T:C1.Silverlight.Data.DataRow"/> using the specified <see cref="T:C1.Silverlight.Data.DataRelation"/>.
+            </summary>
+            <param name="relationName">The name of the <see cref="T:C1.Silverlight.Data.DataRelation"/> to use.</param>
+            <returns>The parent row of this <see cref="T:C1.Silverlight.Data.DataRow"/> using the specified <see cref="T:C1.Silverlight.Data.DataRelation"/>.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataRow.GetRowView">
+            <summary>
+            Gets a dynamically-built object suitable for data-binding scenarios.
+            </summary>
+            <returns>A dynamically built type suitable for data-binding scenarios.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataRow.GetRowView(System.String[])">
+            <summary>
+            Gets a dynamically-built object suitable for data-binding scenarios.
+            </summary>
+            <returns>A dynamically-built type suitable for data-binding scenarios.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataRow.AcceptChanges">
+            <summary>
+            Marks the row as unchanged.
+            </summary>
+            <remarks>
+            If the <see cref="P:C1.Silverlight.Data.DataRow.RowState"/> of the row was Added or Modified, the <see cref="P:C1.Silverlight.Data.DataRow.RowState"/> becomes Unchanged. 
+            If the <see cref="P:C1.Silverlight.Data.DataRow.RowState"/> was Deleted, the row is removed.
+            The <see cref="T:C1.Silverlight.Data.DataTable"/> class also has an <see cref="M:C1.Silverlight.Data.DataTable.AcceptChanges"/> method which 
+            affects changes made to the whole table. 
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataRow.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Raises the <see cref="E:C1.Silverlight.Data.DataRow.PropertyChanged"/> event.
+            </summary>
+            <param name="e"><see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataRow.Table">
+            <summary>
+            Gets a reference to the <see cref="T:C1.Silverlight.Data.DataTable"/> that contains this row.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataRow.RowState">
+            <summary>
+            Gets a <see cref="T:C1.Silverlight.Data.DataRowState"/> value that determines the state of this row.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataRow.Item(System.Int32)">
+            <summary>
+            Gets or sets the value stored in this row for a given column.
+            </summary>
+            <param name="index">Index of the column.</param>
+            <returns>The value stored in this row for the given column.</returns>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataRow.Item(System.String)">
+            <summary>
+            Gets or sets the value stored in this row for a given column.
+            </summary>
+            <param name="columnName">Name of the column.</param>
+            <returns>The value stored in this row for the given column.</returns>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataRow.Item(C1.Silverlight.Data.DataColumn)">
+            <summary>
+            Gets or sets the value stored in this row for a given column.
+            </summary>
+            <param name="column">Reference to a <see cref="T:C1.Silverlight.Data.DataColumn"/>.</param>
+            <returns>The value stored in this row for the given column.</returns>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataRow.ItemArray">
+            <summary>
+            Gets or sets an array of objects that represent the data stored in this row.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Data.DataRow.PropertyChanged">
+            <summary>
+            Fires when a field value changes.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Data.DataRowBuilder">
+            <summary>
+            Helper class used for building typed <see cref="T:C1.Silverlight.Data.DataRow"/> objects.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Data.DataRowCollection">
+            <summary>
+            Collection of <see cref="T:C1.Silverlight.Data.DataRow"/> objects.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataRowCollection.Find(System.Object)">
+            <summary>
+            Finds the <see cref="T:C1.Silverlight.Data.DataRow"/> that has the specified key in its <see cref="P:C1.Silverlight.Data.DataTable.PrimaryKey"/> column.
+            </summary>
+            <param name="key">Value to look for.</param>
+            <returns>A <see cref="T:C1.Silverlight.Data.DataRow"/> object that has the specified key.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataRowCollection.Add(System.Object[])">
+            <summary>
+            Creates a row using specified values and adds it to the collection.
+            </summary>
+            <param name="values">The array of values used to create the new row.</param>
+            <returns>A reference to the new row.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataRowCollection.InsertItem(System.Int32,C1.Silverlight.Data.DataRow)">
+            <summary>
+            Inserts a <see cref="T:C1.Silverlight.Data.DataRow"/> object into the list at a specified position.
+            </summary>
+            <param name="index">Position where the row will be inserted.</param>
+            <param name="item"><see cref="T:C1.Silverlight.Data.DataRow"/> that will be inserted into the list.</param>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataRowCollection.RemoveItem(System.Int32)">
+            <summary>
+            Removes the <see cref="T:C1.Silverlight.Data.DataRow"/> at the specified index from the list.
+            </summary>
+            <param name="index">Index of the <see cref="T:C1.Silverlight.Data.DataRow"/> to remove from the list.</param>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataRowCollection.Clear">
+            <summary>
+            Removes all rows from the list.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Data.DataTableExpressionEngine">
+            <summary>
+            Extends ExpressionEngine to expose data columns as variables
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Data.DataSet">
+            <summary>
+            Subset of the System.Data.DataSet class.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataSet.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Data.DataSet"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataSet.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Data.DataSet"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataSet.ReadXml(System.IO.Stream)">
+            <summary>
+            Loads a <see cref="T:C1.Silverlight.Data.DataSet"/> from an Xml stream.
+            </summary>
+            <param name="stream"><see cref="T:System.IO.Stream"/> that contains the data.</param>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataSet.ReadXml(System.Xml.XmlReader)">
+            <summary>
+            Loads a <see cref="T:C1.Silverlight.Data.DataSet"/> from an <see cref="T:System.Xml.XmlReader"/>.
+            </summary>
+            <param name="xr"><see cref="T:System.Xml.XmlReader"/> that contains the data.</param>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataSet.ReadXmlFromString(System.String)">
+            <summary>
+            Loads a <see cref="T:C1.Silverlight.Data.DataSet"/> from the specified string containing XML representation of the data.
+            </summary>
+            <param name="xml">A string containing XML representation of the data.</param>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataSet.WriteXml(System.IO.Stream)">
+            <summary>
+            Writes a <see cref="T:C1.Silverlight.Data.DataSet"/> into an Xml stream.
+            </summary>
+            <param name="stream"><see cref="T:System.IO.Stream"/> where the <see cref="T:C1.Silverlight.Data.DataSet"/> will be saved.</param>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataSet.WriteXml(System.Xml.XmlWriter)">
+            <summary>
+            Writes a <see cref="T:C1.Silverlight.Data.DataSet"/> into an <see cref="T:System.Xml.XmlWriter"/>.
+            </summary>
+            <param name="xw"><see cref="T:System.Xml.XmlWriter"/> where the <see cref="T:C1.Silverlight.Data.DataSet"/> will be saved.</param>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataSet.GetXml">
+            <summary>
+            Returns the XML representation of the data stored in the <see cref="T:C1.Silverlight.Data.DataSet"/>.
+            </summary>
+            <returns>A string that is a representation of the data stored in the <see cref="T:C1.Silverlight.Data.DataSet"/>.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataSet.Clear">
+            <summary>
+            Clears all rows in all tables of the <see cref="T:C1.Silverlight.Data.DataSet"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataSet.Reset">
+            <summary>
+            Resets the <see cref="T:C1.Silverlight.Data.DataSet"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataSet.AcceptChanges">
+            <summary>
+            Marks all rows on all tables as unchanged.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataSet.GetChanges(C1.Silverlight.Data.DataRowState)">
+            <summary>
+            Gets a <see cref="T:C1.Silverlight.Data.DataSet"/> containing all tables that have changed since the
+            data was loaded or <see cref="M:C1.Silverlight.Data.DataSet.AcceptChanges"/> was called, or <b>null</b> if
+            there are no changes.
+            </summary>
+            <returns>A <see cref="T:C1.Silverlight.Data.DataSet"/> containing all modifications on all tables,
+            or <b>null</b> if there are no changes.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataSet.GetChanges">
+            <summary>
+            Gets a <see cref="T:C1.Silverlight.Data.DataSet"/> containing all tables that have changed since the
+            data was loaded or <see cref="M:C1.Silverlight.Data.DataSet.AcceptChanges"/> was called.
+            </summary>
+            <returns>A <see cref="T:C1.Silverlight.Data.DataSet"/> containing all modifications on all tables.</returns>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataSet.DataSetName">
+            <summary>
+            Gets or sets the name of this <see cref="T:C1.Silverlight.Data.DataSet"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataSet.Tables">
+            <summary>
+            Gets a list with all the <see cref="T:C1.Silverlight.Data.DataTable"/> objects in the <see cref="T:C1.Silverlight.Data.DataSet"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataSet.Relations">
+            <summary>
+            Gets a list with all the <see cref="T:C1.Silverlight.Data.DataRelation"/> objects in the <see cref="T:C1.Silverlight.Data.DataSet"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataSet.EnforceConstraints">
+            <summary>
+            Gets or sets a value indicating whether constraint rules are 
+            followed when attempting any update operation.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataSet.CaseSensitive">
+            <summary>
+            Gets or sets a value indicating whether string comparisons within DataTable objects are case-sensitive.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataSet.Locale">
+            <summary>
+            Gets or sets the locale information used to compare strings within the table.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataSet.HasChanges">
+            <summary>
+            Gets a value that indicates whether the <see cref="T:C1.Silverlight.Data.DataSet"/> has
+            any changes since it was created, loaded, or since the <see cref="M:C1.Silverlight.Data.DataSet.AcceptChanges"/>
+            method was called.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Data.AcceptRejectRule">
+            <summary>
+            Indicates the action that occurs across this constraint when 
+            <see cref="M:C1.Silverlight.Data.DataSet.AcceptChanges"/> is called.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Data.AcceptRejectRule.Cascade">
+            <summary>
+            Changes are cascaded across the data relation.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Data.AcceptRejectRule.None">
+            <summary>
+            No action is taken.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Data.Rule">
+            <summary>
+            Indicates the action that occurs across this constraint when 
+            rows are updated or deleted.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Data.Rule.Cascade">
+            <summary>
+            Changes are cascaded across the data relation.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Data.Rule.None">
+            <summary>
+            No action is taken.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Data.Rule.SetDefault">
+            <summary>
+            Set values on related rows to the default value.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Data.Rule.SetNull">
+            <summary>
+            Set values on related rows to null.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Data.DataRelation">
+            <summary>
+            Represents a parent/child relationship between two <see cref="T:C1.Silverlight.Data.DataTable"/> objects.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataRelation.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Data.DataRelation"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Data.DataRelation.#ctor(System.String,C1.Silverlight.Data.DataColumn,C1.Silverlight.Data.DataColumn)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Data.DataRelation"/>.
+            </summary>
+            <param name="name">Name of the new <see cref="T:C1.Silverlight.Data.DataRelation"/>.</param>
+            <param name="parentColumn">Parent <see cref="T:C1.Silverlight.Data.DataColumn"/> in the new relation.</param>
+            <param name="childColumn">Child <see cref="T:C1.Silverlight.Data.DataColumn"/> in the new relation.</param>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataRelation.RelationName">
+            <summary>
+            Gets or sets the name of the <see cref="T:C1.Silverlight.Data.DataRelation"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataRelation.DataSet">
+            <summary>
+            Gets a reference to the <see cref="P:C1.Silverlight.Data.DataRelation.DataSet"/> to which this relation belongs.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataRelation.ParentColumn">
+            <summary>
+            Gets a reference to the parent <see cref="T:C1.Silverlight.Data.DataColumn"/> in this <see cref="T:C1.Silverlight.Data.DataRelation"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataRelation.ChildColumn">
+            <summary>
+            Gets a reference to the child <see cref="T:C1.Silverlight.Data.DataColumn"/> in this <see cref="T:C1.Silverlight.Data.DataRelation"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataRelation.ParentTable">
+            <summary>
+            Gets a reference to the parent <see cref="T:C1.Silverlight.Data.DataTable"/> in this <see cref="T:C1.Silverlight.Data.DataRelation"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataRelation.ChildTable">
+            <summary>
+            Gets a reference to the child <see cref="T:C1.Silverlight.Data.DataTable"/> in this <see cref="T:C1.Silverlight.Data.DataRelation"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.DataRelation.ChildKeyConstraint">
+            <summary>
+            Gets the <see cref="T:C1.Silverlight.Data.ForeignKeyConstraint"/> for this <see cref="T:C1.Silverlight.Data.DataRelation"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Data.ForeignKeyConstraint">
+            <summary>
+            Represents an action restriction enforced on a set of columns when a row is deleted or updated.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.ForeignKeyConstraint.AcceptRejectRule">
+            <summary>
+            Gets or sets the action that occurs across this constraint when changes are accepted.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.ForeignKeyConstraint.DeleteRule">
+            <summary>
+            Gets or sets the action that occurs across this constraint when a row is deleted.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Data.ForeignKeyConstraint.UpdateRule">
+            <summary>
+            Gets or sets the action that occurs across this constraint when a row is updated.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Data.DataRelationCollection">
+            <summary>
+            Collection of <see cref="T:C1.Silverlight.Data.DataRelation"/> objects.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Data.PropertyCollection">
+            <summary>
+            Represents a collection of properties that can be added to a 
+            DataSet, DataTable, or DataColumn.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Data.Expression">
+            <summary>
+            Base Expression
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Data.UnaryExpression">
+            <summary>
+            Unary Expression (for example, +2, -3, Not true)
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Data.BinaryExpression">
+            <summary>
+            Binary Expression (for example, 2+3, 'a' LIKE 'b')
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Data.ParmExpression">
+            <summary>
+            Parameterized Expression (for example, LEN('foo'))
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Data.UserExpression">
+            <summary>
+            User Expression (for example, custom objects such as table columns)
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Data.ExpressionValueWrapper">
+            <summary>
+            ExpressionValueWrapper is a helper class that wraps simple objects
+            and exposes a Value property.
+            </summary>
+        </member>
+    </members>
+</doc>

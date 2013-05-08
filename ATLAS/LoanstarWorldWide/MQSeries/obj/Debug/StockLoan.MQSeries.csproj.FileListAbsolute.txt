@@ -1,0 +1,9 @@
+C:\_dev\ATLAS\LoanstarWorldWide\MQSeries\bin\Debug\StockLoan.MQSeries.dll
+C:\_dev\ATLAS\LoanstarWorldWide\MQSeries\bin\Debug\StockLoan.MQSeries.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\MQSeries\bin\Debug\StockLoan.Common.dll
+C:\_dev\ATLAS\LoanstarWorldWide\MQSeries\bin\Debug\StockLoan.Common.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\MQSeries\obj\Debug\StockLoan.MQSeries.Properties.Resources.resources
+C:\_dev\ATLAS\LoanstarWorldWide\MQSeries\obj\Debug\StockLoan.MQSeries.dll
+C:\_dev\ATLAS\LoanstarWorldWide\MQSeries\obj\Debug\StockLoan.MQSeries.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\MQSeries\obj\Debug\StockLoan.MQSeries.csprojResolveAssemblyReference.cache
+C:\_dev\ATLAS\LoanstarWorldWide\MQSeries\obj\Debug\StockLoan.MQSeries.csproj.GenerateResource.Cache

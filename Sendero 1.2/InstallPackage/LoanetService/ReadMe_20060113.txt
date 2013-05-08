@@ -1,0 +1,11 @@
+Loanet Service
+
+As Deployed in Staging Environment: 
+
+Files: 
+	\\devweb1\c$\Sendero\Loanet
+
+
+In production:
+Must modify the .config file to point to 
+the correct folders and locations for production. 

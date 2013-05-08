@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="CentralClient">
+</Property><Property Name="Solution File" Value="C:\ATLAS\Loanstar\CENTRALCLIENT\CentralClient.sln">
+</Property><Property Name="User Options File" Value="C:\ATLAS\Loanstar\CENTRALCLIENT\CentralClient.suo">
+</Property><Property Name="Date" Value="Thursday, April 23, 2009">
+</Property><Property Name="Time" Value="11:49 AM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="CentralClient.sln" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\CentralClient.sln">
+</Event><Event ErrorLevel="0" Project="" Source="CentralClient.suo" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\CentralClient.suo">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="CentralClient.csproj" Description="Project file successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\CentralClient.csproj">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="CentralClient.csproj.user" Description="Project user file successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\CentralClient.csproj.user">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AdminBookForm.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AdminBookForm.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AdminBookForm.Designer.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AdminBookForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AdminCountriesForm.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AdminCountriesForm.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AdminCountriesForm.Designer.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AdminCountriesForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AdminCurrenciesForm.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AdminCurrenciesForm.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AdminCurrenciesForm.Designer.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AdminCurrenciesForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AdminHolidaysForm.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AdminHolidaysForm.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AdminHolidaysForm.Designer.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AdminHolidaysForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AdminHolidaysInputForm.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AdminHolidaysInputForm.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AdminHolidaysInputForm.Designer.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AdminHolidaysInputForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AdminKeyValuesForm.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AdminKeyValuesForm.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AdminKeyValuesForm.Designer.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AdminKeyValuesForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AdminLoginForm.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AdminLoginForm.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AdminLoginForm.Designer.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AdminLoginForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AdminRolesForm.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AdminRolesForm.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AdminRolesForm.Designer.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AdminRolesForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AdminSecMasterForm.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AdminSecMasterForm.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AdminSecMasterForm.Designer.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AdminSecMasterForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AdminSecMasterItemForm.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AdminSecMasterItemForm.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AdminSecMasterItemForm.Designer.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AdminSecMasterItemForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AnalysisContractSummaryCounterpartyForm.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AnalysisContractSummaryCounterpartyForm.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AnalysisContractSummaryCounterpartyForm.Designer.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AnalysisContractSummaryCounterpartyForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AnalysisContractSummarySecurityForm.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AnalysisContractSummarySecurityForm.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AnalysisContractSummarySecurityForm.Designer.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AnalysisContractSummarySecurityForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AssemblyInfo.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AdminUsersForm.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AdminUsersForm.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AdminUsersForm.Designer.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AdminUsersForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="Email.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\Email.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="Excel.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\Excel.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="ExcelCellStyle.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\ExcelCellStyle.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="InventoryLookupForm.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\InventoryLookupForm.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="InventoryLookupForm.Designer.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\InventoryLookupForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="InventoryUploadForm.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\InventoryUploadForm.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="InventoryUploadForm.Designer.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\InventoryUploadForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="MessageForm.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\MessageForm.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="ProcessStatusForm.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\ProcessStatusForm.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="ProcessStatusForm.Designer.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\ProcessStatusForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="SecMasterResultsForm.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\SecMasterResultsForm.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="SecMasterResultsForm.Designer.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\SecMasterResultsForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="SplashStartUpInfoForm.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\SplashStartUpInfoForm.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="SplashStartUpInfoForm.Designer.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\SplashStartUpInfoForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="InventorySubscriptionsForm.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\InventorySubscriptionsForm.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="InventorySubscriptionsForm.Designer.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\InventorySubscriptionsForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="SecMaster.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\SecMaster.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="SecMaster.Designer.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\SecMaster.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="SecurityMasterForm.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\SecurityMasterForm.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="SecurityMasterForm.Designer.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\SecurityMasterForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="SplashForm.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\SplashForm.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="SplashForm.Designer.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\SplashForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="MainForm.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\MainForm.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="Properties\Resources.Designer.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="TradingContractBlotterForm.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\TradingContractBlotterForm.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="TradingContractBlotterForm.Designer.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\TradingContractBlotterForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="TradingContractResearchPopupForm.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\TradingContractResearchPopupForm.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="TradingContractResearchPopupForm.Designer.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\TradingContractResearchPopupForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="TradingContractsMarksForm.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\TradingContractsMarksForm.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="TradingContractsMarksForm.Designer.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\TradingContractsMarksForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="TradingContractSummaryForm.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\TradingContractSummaryForm.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="TradingContractSummaryForm.Designer.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\TradingContractSummaryForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="TradingDeskInputForm.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\TradingDeskInputForm.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="TradingDeskInputForm.Designer.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\TradingDeskInputForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="TradingFundingRatesForm.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\TradingFundingRatesForm.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="TradingFundingRatesForm.Designer.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\TradingFundingRatesForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="TradingRecallInputForm.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\TradingRecallInputForm.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="TradingRecallInputForm.Designer.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\TradingRecallInputForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="TradingReturnInputForm.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\TradingReturnInputForm.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="TradingReturnInputForm.Designer.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\TradingReturnInputForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="Resources\redo1.PNG" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\Resources\redo1.PNG">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="Resources\Bar Alt 4.jpg" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\Resources\Bar Alt 4.jpg">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="Resources\buttonblack1.bmp" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\Resources\buttonblack1.bmp">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="Resources\buttonblack.bmp" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\Resources\buttonblack.bmp">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="App.config" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\App.config">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="App.ico" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\App.ico">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AdminBookForm.resx" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AdminBookForm.resx">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AdminCountriesForm.resx" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AdminCountriesForm.resx">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AdminCurrenciesForm.resx" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AdminCurrenciesForm.resx">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AdminHolidaysForm.resx" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AdminHolidaysForm.resx">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AdminHolidaysInputForm.resx" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AdminHolidaysInputForm.resx">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AdminKeyValuesForm.resx" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AdminKeyValuesForm.resx">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AdminLoginForm.resx" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AdminLoginForm.resx">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AdminRolesForm.resx" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AdminRolesForm.resx">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AdminSecMasterForm.resx" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AdminSecMasterForm.resx">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AdminSecMasterItemForm.resx" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AdminSecMasterItemForm.resx">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AdminUsersForm.resx" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AdminUsersForm.resx">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AnalysisContractSummaryCounterpartyForm.resx" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AnalysisContractSummaryCounterpartyForm.resx">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="AnalysisContractSummarySecurityForm.resx" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\AnalysisContractSummarySecurityForm.resx">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="InventoryLookupForm.resx" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\InventoryLookupForm.resx">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="InventoryUploadForm.resx" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\InventoryUploadForm.resx">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="MessageForm.resx" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\MessageForm.resx">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="ProcessStatusForm.resx" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\ProcessStatusForm.resx">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="SecMasterResultsForm.resx" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\SecMasterResultsForm.resx">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="SplashStartUpInfoForm.resx" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\SplashStartUpInfoForm.resx">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="InventorySubscriptionsForm.resx" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\InventorySubscriptionsForm.resx">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="licenses.licx" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\licenses.licx">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="MainForm.resx" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\MainForm.resx">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="Properties\Resources.resx" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="SecMaster.resx" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\SecMaster.resx">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="SecurityMasterForm.resx" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\SecurityMasterForm.resx">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="SplashForm.resx" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\SplashForm.resx">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="TradingContractBlotterForm.resx" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\TradingContractBlotterForm.resx">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="TradingContractResearchPopupForm.resx" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\TradingContractResearchPopupForm.resx">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="TradingContractsMarksForm.resx" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\TradingContractsMarksForm.resx">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="TradingContractSummaryForm.resx" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\TradingContractSummaryForm.resx">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="TradingDeskInputForm.resx" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\TradingDeskInputForm.resx">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="TradingFundingRatesForm.resx" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\TradingFundingRatesForm.resx">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="TradingRecallInputForm.resx" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\TradingRecallInputForm.resx">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="TradingReturnInputForm.resx" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\TradingReturnInputForm.resx">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="CentralClient.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="CentralClient" Source="CentralClient.csproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="Common" Source="..\..\Common\Common.csproj" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\Common.csproj" Description="Project file successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\Common\Common.csproj">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\Common.csproj.user" Description="Project user file successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\Common\Common.csproj.user">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\AssemblyInfo.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\Common\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\DealList.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\Common\DealList.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\KeyValue.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\Common\KeyValue.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\List.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\Common\List.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\Log.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\Common\Log.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\RegistryValue.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\Common\RegistryValue.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\RemotingTools.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\Common\RemotingTools.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\Security.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\Common\Security.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\Standard.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\Common\Standard.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\Tools.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\Common\Tools.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\Common.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Common" Source="..\..\Common\Common.csproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="Main" Source="..\MAIN\Main.csproj" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="0" Project="Main" Source="..\MAIN\Main.csproj" Description="Project file successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\Main\Main.csproj">
+</Event><Event ErrorLevel="0" Project="Main" Source="..\MAIN\AssemblyInfo.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\Main\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Main" Source="..\MAIN\IProcess.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\Main\IProcess.cs">
+</Event><Event ErrorLevel="0" Project="Main" Source="..\MAIN\IAdmin.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\Main\IAdmin.cs">
+</Event><Event ErrorLevel="0" Project="Main" Source="..\MAIN\IInventory.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\Main\IInventory.cs">
+</Event><Event ErrorLevel="0" Project="Main" Source="..\MAIN\IPosition.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\Main\IPosition.cs">
+</Event><Event ErrorLevel="0" Project="Main" Source="..\MAIN\IService.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\CENTRALCLIENT\Backup\Main\IService.cs">
+</Event><Event ErrorLevel="0" Project="Main" Source="..\MAIN\Main.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Main" Source="..\MAIN\Main.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="CentralClient.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="CentralClient.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="CentralClient" Source="CentralClient.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\Common.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Main" Source="..\MAIN\Main.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

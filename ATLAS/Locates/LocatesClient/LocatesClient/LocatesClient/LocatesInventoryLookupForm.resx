@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="MainCommandHolder.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="MainContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>169, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="SendToExcelCommand.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAABWFJ7NAolDdQKJR3RWFJ7MAAAAAHx+b2D9Ar91AQK/dIiKd2gAAAACfKRi6tlRE3bZV
+        Rd2fKRi6AAAAAAAAAAA5nkrVn/ey/6P4tf85nkrVAAAAAFZZwf+hp/7+pKn//19gxf8AAAAAtlVF3v/N
+        tP//0Lj/tlVF3gAAAAAAAAAAOJ1K1Zn2rv+c9rD/OJ1K1QAAAABUV8H/mqP+/p2l//9cX8X/AAAAALZV
+        RN7/ya7//8yy/7ZVRN4AAAAAAAAAADedSdWT9Kn+lvWr/jedSdUAAAAAUVbB/pOf/v6Wof7+WV3F/gAA
+        AAC2VEPe/sOn/v7IrP62VEPeAAAAAAAAAAA2nUjVjvOl/5H0p/82nUjVAAAAAE9Uwf+Mm/7+j53//1Zc
+        xf8AAAAAtlNB3v++n///wqX/tlNB3gAAAAAAAAAANp1H1Ynyof+L8qP/Np1H1QAAAABNU8H/h5j+/oma
+        //9UWsX/AAAAALZSQN7/upj//72d/7ZSQN4AAAAAAAAAADWdR9WE8Z3+hvGf/jWdR9UAAAAAS1LB/oKV
+        /v6Elv7+UlnF/gAAAAC2UT7e/rWS/v64l/62UT7eAAAAAAAAAAA0nEfVgfCb/4LwnP80nEfVAAAAAExU
+        wf+Hmv7+iZv+/1Naxf8AAAAAtlA93v+xi///tJD/tlA93gAAAAAAAAAANJxH1YHwm/+B8Jv/NJxH1QAA
+        AAAGBo2WDA2RmgwNkZoGBo2YAAAAALZPO97/rob//7CK/7ZPO94AAAAAAAAAADScR9WC8Jz/gvCc/zSc
+        R9UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC2Tjre/6uC//+thf+2TjreAAAAAAAAAAANgCCaKJI6vyiS
+        Or8NgCCaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAtk053v6qgP7+qoH+tk053gAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALZNOd7/qoH//6qB/7ZNOd4AAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC2TTne/6qB//+qgf+2TTneAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAnSUTs7JINNWySDTVnSUTswAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA//8AAIQhAACEIQAAhCEAAIQhAACEIQAAhCEAAIQhAACEIQAAhCEAAIfhAACH4QAA/+EAAP/h
+        AAD/4QAA//8AAA==
+</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAJSQkNecmJj1mpaW9ZmVlfWYlJT1l5OT9ZWQkPWKY1P5qVYv/bFSJf6oVi/9iWNS+YiD
+        g9MAAAAAAAAAAAAAAACbl5fv+vb0//fv7P/27er/9uzo//Pn5P+7cVH/2Gw7/8ZfLv/YrJf/vVQh/8ZZ
+        I/+bUS/5JgsAAwAAAAAAAAAAnZiY7/nz8P/16OP/8+Xg//Li3f+/kX7/53xR/+d4S//WgVz//////8Bo
+        Pf+/TRb/xlkj/4EqA20AAAAAAAAAAJ6amu/69fP/9uzo//Xq5f/05+L/wWxI/+h4Vv/tflf/4Y1s////
+        ///JcUj/wU8Z/79OF/+uRxbLAAAAAAAAAACfm5vv+vb0//jv7P/37ur/9uvn/75dN//aZ0n/5nZU/+SP
+        cv//////1n9a/85dKv/CURr/tEwa6gAAAAAAAAAAoJyc7/r29P/58e7/+PDt//jv6/+8Z0T/x1Q6/9dl
+        R//eeFr/5MG2/+R+Wf/fcEH/0WEt/7BJGc0AAAAAAAAAAKGdne/69vT/+fHu//nx7v/58O3/w5iG/8BP
+        Mf/ETzb/z3FZ//bu7P/jiGn/631T/991Rf+FLARxAAAAAAAAAACjnp7v+vb0//nx7v/58e7/+fHu//bt
+        6v+5bU3/vk0w/79QOf/XmIn/3XJU/+Z7U/+iVjX5LA0ABAAAAAAAAAAApJ+f7/r29P/58e7/+fHu//nx
+        7v/58e7/9u3q/8SYhf+7ZUP/vFgz/8FqR//Gmof/kY2N6QAAAAAAAAAAAAAAAKWgoO/69vT/+fHu//nx
+        7v/58e7/+fHu//nx7v/58e7/+fHu//nw7f/48Oz/+vXz/5SQkOkAAAAAAAAAAAAAAACmoaHv+vb0//nx
+        7v/58e7/+fHu//nx7v/58e7/+fHu//nx7v/48O3/+PDt//r29P+VkZHpAAAAAAAAAAAAAAAApqKi7/r2
+        9P/58e7/+fHu//nx7v/58e7/+fHu//nx7v/48O3/7ubj/+Tc2v/n5OL/ko6O6QAAAAAAAAAAAAAAAKej
+        o+/69vT/+fHu//nx7v/58e7/+fHu//nx7v/58e7/9+/s/6WgoP+empr/mZWV/5OOjuEAAAAAAAAAAAAA
+        AACoo6Pv+vb0//nx7v/58e7/+fHu//nx7v/58e7/+fHu//fv7P+hnZ3/09HS/5qWlu6cmJg0AAAAAAAA
+        AAAAAAAAqaSk7/v5+P/69vT/+vb0//r29P/69vT/+vb0//r29P/69fT/oZyc/5yYmO6dmZk0AAAAAAAA
+        AAAAAAAAAAAAAKSfn9KppKTvqKOj76ejo++moqLvpqGh76WgoO+kn5/vo56e75qVleGjnp40AAAAAAAA
+        AAAAAAAAwAEAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAQAAwAEAAMABAADAAQAAwAEAAMAB
+        AADAAwAAwAcAAA==
+</value>
+  </data>
+  <data name="InventoryGrid.Images" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAADdJREFUKFNjYMAE
+        /7GIgYWQJXCxURTCFOE1ESSJoQAmiI9GcSayQqzuR3cLVithOvH6DpsisBgAoKoc5C8W7oEAAAAASUVO
+        RK5CYII=
+</value>
+  </data>
+  <data name="InventoryGrid.PrintInfo.PageSettings" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0
+        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAACRTeXN0ZW0uRHJh
+        d2luZy5QcmludGluZy5QYWdlU2V0dGluZ3MHAAAAD3ByaW50ZXJTZXR0aW5ncwVjb2xvcglwYXBlclNp
+        emULcGFwZXJTb3VyY2URcHJpbnRlclJlc29sdXRpb24JbGFuZHNjYXBlB21hcmdpbnMEBAQEBAQEJ1N5
+        c3RlbS5EcmF3aW5nLlByaW50aW5nLlByaW50ZXJTZXR0aW5ncwIAAAAgU3lzdGVtLkRyYXdpbmcuUHJp
+        bnRpbmcuVHJpU3RhdGUCAAAAIVN5c3RlbS5EcmF3aW5nLlByaW50aW5nLlBhcGVyU2l6ZQIAAAAjU3lz
+        dGVtLkRyYXdpbmcuUHJpbnRpbmcuUGFwZXJTb3VyY2UCAAAAKVN5c3RlbS5EcmF3aW5nLlByaW50aW5n
+        LlByaW50ZXJSZXNvbHV0aW9uAgAAACBTeXN0ZW0uRHJhd2luZy5QcmludGluZy5UcmlTdGF0ZQIAAAAf
+        U3lzdGVtLkRyYXdpbmcuUHJpbnRpbmcuTWFyZ2lucwIAAAACAAAACQMAAAAF/P///yBTeXN0ZW0uRHJh
+        d2luZy5QcmludGluZy5UcmlTdGF0ZQEAAAAFdmFsdWUAAgIAAAAACgoKAfv////8////AAkGAAAABQMA
+        AAAnU3lzdGVtLkRyYXdpbmcuUHJpbnRpbmcuUHJpbnRlclNldHRpbmdzEgAAAAtwcmludGVyTmFtZQpk
+        cml2ZXJOYW1lCm91dHB1dFBvcnQLcHJpbnRUb0ZpbGUUcHJpbnREaWFsb2dEaXNwbGF5ZWQKZXh0cmFi
+        eXRlcwlleHRyYWluZm8GY29waWVzBmR1cGxleAdjb2xsYXRlE2RlZmF1bHRQYWdlU2V0dGluZ3MIZnJv
+        bVBhZ2UGdG9QYWdlB21heFBhZ2UHbWluUGFnZQpwcmludFJhbmdlDGRldm1vZGVieXRlcw1jYWNoZWRE
+        ZXZtb2RlAQEBAAAABwAEBAQAAAAABAAHAQEHAgceU3lzdGVtLkRyYXdpbmcuUHJpbnRpbmcuRHVwbGV4
+        AgAAACBTeXN0ZW0uRHJhd2luZy5QcmludGluZy5UcmlTdGF0ZQIAAAAkU3lzdGVtLkRyYXdpbmcuUHJp
+        bnRpbmcuUGFnZVNldHRpbmdzAgAAAAgICAgiU3lzdGVtLkRyYXdpbmcuUHJpbnRpbmcuUHJpbnRSYW5n
+        ZQIAAAAHAgIAAAAKBgcAAAAACQcAAAAAAAAACv//Bfj///8eU3lzdGVtLkRyYXdpbmcuUHJpbnRpbmcu
+        RHVwbGV4AQAAAAd2YWx1ZV9fAAgCAAAA/////wH3/////P///wAJCgAAAAAAAAAAAAAADycAAAAAAAAF
+        9f///yJTeXN0ZW0uRHJhd2luZy5QcmludGluZy5QcmludFJhbmdlAQAAAAd2YWx1ZV9fAAgCAAAAAAAA
+        AAAACgUGAAAAH1N5c3RlbS5EcmF3aW5nLlByaW50aW5nLk1hcmdpbnMEAAAABGxlZnQFcmlnaHQDdG9w
+        BmJvdHRvbQAAAAAICAgIAgAAAGQAAABkAAAAZAAAAGQAAAABCgAAAAEAAAAJAwAAAAHz/////P///wAK
+        CgoB8v////z///8ACQ8AAAABDwAAAAYAAABkAAAAZAAAAGQAAABkAAAACw==
+</value>
+  </data>
+  <data name="InventoryGrid.PropBag" xml:space="preserve">
+    <value>&lt;?xml version="1.0"?&gt;&lt;Blob&gt;&lt;DataCols&gt;&lt;C1DataColumn Caption="Received" DataField="ScribeTime" NumberFormat="FormatText Event"&gt;&lt;ValueItems /&gt;&lt;GroupInfo /&gt;&lt;/C1DataColumn&gt;&lt;C1DataColumn Caption="For" DataField="BizDate" NumberFormat="FormatText Event"&gt;&lt;ValueItems /&gt;&lt;GroupInfo /&gt;&lt;/C1DataColumn&gt;&lt;C1DataColumn Caption="Desk" DataField="Desk"&gt;&lt;ValueItems /&gt;&lt;GroupInfo /&gt;&lt;/C1DataColumn&gt;&lt;C1DataColumn Caption="Book" DataField="Desk"&gt;&lt;ValueItems /&gt;&lt;GroupInfo /&gt;&lt;/C1DataColumn&gt;&lt;C1DataColumn Caption="Quantity" DataField="Quantity" NumberFormat="FormatText Event"&gt;&lt;ValueItems /&gt;&lt;GroupInfo /&gt;&lt;/C1DataColumn&gt;&lt;/DataCols&gt;&lt;Styles type="C1.Win.C1TrueDBGrid.Design.ContextWrapper"&gt;&lt;Data&gt;Group{AlignVert:Center;Border:None,,0, 0, 0, 0;BackColor:ControlDark;}RecordSelector{AlignImage:Center;}Style13{}Style5{}Style23{AlignHorz:Near;}Style37{}Style17{AlignHorz:Near;}Selected{ForeColor:HighlightText;BackColor:Highlight;}Style21{}Style20{}FilterWatermark{ForeColor:InfoText;BackColor:Info;}Style30{AlignHorz:Near;}Style10{AlignHorz:Center;BackColor:WhiteSmoke;}Style41{AlignHorz:Near;}Style38{}Style1{}Style18{Font:Verdana, 8.25pt;AlignHorz:Near;}Style12{}Style25{}Inactive{ForeColor:InactiveCaptionText;BackColor:InactiveCaption;}Caption{AlignHorz:Center;}Style34{}Style8{}Style14{}Style39{}Style45{}Style19{}Style26{}Normal{Font:Verdana, 8.25pt;}Style6{}Style43{}Style4{}Style27{}EvenRow{BackColor:Aqua;}Style9{}Footer{}OddRow{}FilterBar{}Style7{ForeColor:ControlText;}Style46{}Style31{}Style2{}Style11{}Style22{}Style28{}Style40{}Editor{}Heading{Wrap:True;BackColor:Control;Border:Flat,ControlDark,0, 1, 0, 1;ForeColor:ControlText;AlignVert:Center;}Style32{}Style3{}Style35{AlignHorz:Near;}Style15{}Style29{AlignHorz:Near;}Style42{AlignHorz:Far;}Style44{}Style33{}HighlightRow{ForeColor:HighlightText;BackColor:AliceBlue;}Style36{AlignHorz:Near;}Style24{AlignHorz:Far;}Style16{}&lt;/Data&gt;&lt;/Styles&gt;&lt;Splits&gt;&lt;C1.Win.C1TrueDBGrid.MergeView HBarStyle="None" VBarStyle="Always" Name="" CaptionHeight="17" ColumnCaptionHeight="17" ColumnFooterHeight="17" ExtendRightColumn="True" FetchRowStyles="True" MarqueeStyle="HighlightRow" RecordSelectorWidth="16" DefRecSelWidth="16" RecordSelectors="False" VerticalScrollGroup="1" HorizontalScrollGroup="1"&gt;&lt;Caption&gt;Available Inventory&lt;/Caption&gt;&lt;Height&gt;311&lt;/Height&gt;&lt;CaptionStyle parent="Style2" me="Style10" /&gt;&lt;EditorStyle parent="Editor" me="Style5" /&gt;&lt;EvenRowStyle parent="EvenRow" me="Style8" /&gt;&lt;FilterBarStyle parent="FilterBar" me="Style13" /&gt;&lt;FilterWatermarkStyle parent="FilterWatermark" me="Style14" /&gt;&lt;FooterStyle parent="Footer" me="Style3" /&gt;&lt;GroupStyle parent="Group" me="Style12" /&gt;&lt;HeadingStyle parent="Heading" me="Style2" /&gt;&lt;HighLightRowStyle parent="HighlightRow" me="Style7" /&gt;&lt;InactiveStyle parent="Inactive" me="Style4" /&gt;&lt;OddRowStyle parent="OddRow" me="Style9" /&gt;&lt;RecordSelectorStyle parent="RecordSelector" me="Style11" /&gt;&lt;SelectedStyle parent="Selected" me="Style6" /&gt;&lt;Style parent="Normal" me="Style1" /&gt;&lt;internalCols&gt;&lt;C1DisplayColumn&gt;&lt;HeadingStyle parent="Style2" me="Style17" /&gt;&lt;Style parent="Style1" me="Style18" /&gt;&lt;FooterStyle parent="Style3" me="Style19" /&gt;&lt;EditorStyle parent="Style5" me="Style20" /&gt;&lt;GroupHeaderStyle parent="Style1" me="Style22" /&gt;&lt;GroupFooterStyle parent="Style1" me="Style21" /&gt;&lt;Visible&gt;True&lt;/Visible&gt;&lt;ColumnDivider&gt;DarkGray,Single&lt;/ColumnDivider&gt;&lt;Width&gt;78&lt;/Width&gt;&lt;Height&gt;15&lt;/Height&gt;&lt;Locked&gt;True&lt;/Locked&gt;&lt;DCIdx&gt;0&lt;/DCIdx&gt;&lt;/C1DisplayColumn&gt;&lt;C1DisplayColumn&gt;&lt;HeadingStyle parent="Style2" me="Style23" /&gt;&lt;Style parent="Style1" me="Style24" /&gt;&lt;FooterStyle parent="Style3" me="Style25" /&gt;&lt;EditorStyle parent="Style5" me="Style26" /&gt;&lt;GroupHeaderStyle parent="Style1" me="Style28" /&gt;&lt;GroupFooterStyle parent="Style1" me="Style27" /&gt;&lt;Visible&gt;True&lt;/Visible&gt;&lt;ColumnDivider&gt;DarkGray,Single&lt;/ColumnDivider&gt;&lt;Height&gt;15&lt;/Height&gt;&lt;Locked&gt;True&lt;/Locked&gt;&lt;DCIdx&gt;1&lt;/DCIdx&gt;&lt;/C1DisplayColumn&gt;&lt;C1DisplayColumn&gt;&lt;HeadingStyle parent="Style2" me="Style29" /&gt;&lt;Style parent="Style1" me="Style30" /&gt;&lt;FooterStyle parent="Style3" me="Style31" /&gt;&lt;EditorStyle parent="Style5" me="Style32" /&gt;&lt;GroupHeaderStyle parent="Style1" me="Style34" /&gt;&lt;GroupFooterStyle parent="Style1" me="Style33" /&gt;&lt;Visible&gt;True&lt;/Visible&gt;&lt;ColumnDivider&gt;DarkGray,Single&lt;/ColumnDivider&gt;&lt;Height&gt;15&lt;/Height&gt;&lt;Locked&gt;True&lt;/Locked&gt;&lt;DCIdx&gt;2&lt;/DCIdx&gt;&lt;/C1DisplayColumn&gt;&lt;C1DisplayColumn&gt;&lt;HeadingStyle parent="Style2" me="Style35" /&gt;&lt;Style parent="Style1" me="Style36" /&gt;&lt;FooterStyle parent="Style3" me="Style37" /&gt;&lt;EditorStyle parent="Style5" me="Style38" /&gt;&lt;GroupHeaderStyle parent="Style1" me="Style40" /&gt;&lt;GroupFooterStyle parent="Style1" me="Style39" /&gt;&lt;Visible&gt;True&lt;/Visible&gt;&lt;ColumnDivider&gt;DarkGray,Single&lt;/ColumnDivider&gt;&lt;Height&gt;15&lt;/Height&gt;&lt;Locked&gt;True&lt;/Locked&gt;&lt;DCIdx&gt;3&lt;/DCIdx&gt;&lt;/C1DisplayColumn&gt;&lt;C1DisplayColumn&gt;&lt;HeadingStyle parent="Style2" me="Style41" /&gt;&lt;Style parent="Style1" me="Style42" /&gt;&lt;FooterStyle parent="Style3" me="Style43" /&gt;&lt;EditorStyle parent="Style5" me="Style44" /&gt;&lt;GroupHeaderStyle parent="Style1" me="Style46" /&gt;&lt;GroupFooterStyle parent="Style1" me="Style45" /&gt;&lt;Visible&gt;True&lt;/Visible&gt;&lt;ColumnDivider&gt;DarkGray,Single&lt;/ColumnDivider&gt;&lt;Height&gt;15&lt;/Height&gt;&lt;Locked&gt;True&lt;/Locked&gt;&lt;DCIdx&gt;4&lt;/DCIdx&gt;&lt;/C1DisplayColumn&gt;&lt;/internalCols&gt;&lt;ClientRect&gt;0, 0, 515, 311&lt;/ClientRect&gt;&lt;BorderSide&gt;0&lt;/BorderSide&gt;&lt;/C1.Win.C1TrueDBGrid.MergeView&gt;&lt;/Splits&gt;&lt;NamedStyles&gt;&lt;Style parent="" me="Normal" /&gt;&lt;Style parent="Normal" me="Heading" /&gt;&lt;Style parent="Heading" me="Footer" /&gt;&lt;Style parent="Heading" me="Caption" /&gt;&lt;Style parent="Heading" me="Inactive" /&gt;&lt;Style parent="Normal" me="Selected" /&gt;&lt;Style parent="Normal" me="Editor" /&gt;&lt;Style parent="Normal" me="HighlightRow" /&gt;&lt;Style parent="Normal" me="EvenRow" /&gt;&lt;Style parent="Normal" me="OddRow" /&gt;&lt;Style parent="Heading" me="RecordSelector" /&gt;&lt;Style parent="Normal" me="FilterBar" /&gt;&lt;Style parent="FilterBar" me="FilterWatermark" /&gt;&lt;Style parent="Caption" me="Group" /&gt;&lt;/NamedStyles&gt;&lt;vertSplits&gt;1&lt;/vertSplits&gt;&lt;horzSplits&gt;1&lt;/horzSplits&gt;&lt;Layout&gt;Modified&lt;/Layout&gt;&lt;DefaultRecSelWidth&gt;16&lt;/DefaultRecSelWidth&gt;&lt;ClientArea&gt;0, 0, 515, 311&lt;/ClientArea&gt;&lt;PrintPageHeaderStyle parent="" me="Style15" /&gt;&lt;PrintPageFooterStyle parent="" me="Style16" /&gt;&lt;/Blob&gt;</value>
+  </data>
+  <metadata name="SaveDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>309, 17</value>
+  </metadata>
+</root>

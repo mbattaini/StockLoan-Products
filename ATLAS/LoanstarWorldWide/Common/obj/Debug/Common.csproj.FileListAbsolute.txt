@@ -1,0 +1,5 @@
+C:\_dev\ATLAS\LoanstarWorldWide\Common\bin\Debug\StockLoan.Common.dll
+C:\_dev\ATLAS\LoanstarWorldWide\Common\bin\Debug\StockLoan.Common.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\Common\obj\Debug\StockLoan.Common.dll
+C:\_dev\ATLAS\LoanstarWorldWide\Common\obj\Debug\StockLoan.Common.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache

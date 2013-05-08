@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ExpressionBlendVersion>4.0.20525.0</ExpressionBlendVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{33C29983-0160-47BB-A375-27878A47D5AA}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StockLoan_LocatesClient</RootNamespace>
+    <AssemblyName>StockLoan.LocatesClient</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>StockLoan.LocatesClient.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>StockLoan_LocatesClient.App</SilverlightAppEntry>
+    <TestPageFileName>TestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>false</EnableOutOfBrowser>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>
+    </LinkedServerProject>
+    <Utf8Output>true</Utf8Output>
+    <SignManifests>false</SignManifests>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the
+		MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+		to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.Silverlight, Version=4.0.20121.237, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.Chart, Version=4.0.20121.237, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.Data, Version=4.0.20121.237, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.DataGrid, Version=4.0.20121.237, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.DataGrid.Analytics, Version=4.0.20121.237, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.DataGrid.Excel, Version=4.0.20121.237, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.DataGrid.Filters, Version=4.0.20121.237, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.DataGrid.Ria, Version=4.0.20121.237, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.DataGrid.Summaries, Version=4.0.20121.237, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.DateTimeEditors, Version=4.0.20121.237, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.Docking, Version=4.0.20121.237, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.Excel, Version=4.0.20121.237, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.FlexGrid.4, Version=4.0.20121.237, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.Imaging, Version=4.0.20121.237, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.Pdf" />
+    <Reference Include="C1.Silverlight.PdfViewer" />
+    <Reference Include="C1.Silverlight.Theming, Version=4.0.20121.237, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.Theming.BureauBlack, Version=4.0.20121.237, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.Toolbar, Version=4.0.20121.237, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Data.Input, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Input, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Classes\ClientItem.cs" />
+    <Compile Include="Custom Classes\ClientWindow.cs" />
+    <Compile Include="Custom Classes\Export.cs" />
+    <Compile Include="Custom Classes\PdfUtils.cs" />
+    <Compile Include="Custom Classes\SysWindow.cs" />
+    <Compile Include="Custom Classes\CustomEvents.cs" />
+    <Compile Include="Custom Classes\UserInformation.cs" />
+    <Compile Include="Functions.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\ServiceLocates\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\InventoryLookupControl.xaml.cs">
+      <DependentUpon>InventoryLookupControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\LocateAvailableInventoryControl.xaml.cs">
+      <DependentUpon>LocateAvailableInventoryControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\LocateGroupCodeSummaryControl.xaml.cs">
+      <DependentUpon>LocateGroupCodeSummaryControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\LocateProcessingControl.xaml.cs">
+      <DependentUpon>LocateProcessingControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\LocatesGridControl.xaml.cs">
+      <DependentUpon>LocatesGridControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\LocateSubmitListControl.xaml.cs">
+      <DependentUpon>LocateSubmitListControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\LocateSummaryControl.xaml.cs">
+      <DependentUpon>LocateSummaryControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\LocateTradingGroupsControl.xaml.cs">
+      <DependentUpon>LocateTradingGroupsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\LoginControl.xaml.cs">
+      <DependentUpon>LoginControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\SecurityMasterControl.xaml.cs">
+      <DependentUpon>SecurityMasterControl.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="Assets\Style.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User Controls\InventoryLookupControl.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="User Controls\LocateAvailableInventoryControl.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="User Controls\LocateGroupCodeSummaryControl.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="User Controls\LocateProcessingControl.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="User Controls\LocatesGridControl.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="User Controls\LocateSubmitListControl.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="User Controls\LocateSummaryControl.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="User Controls\LocateTradingGroupsControl.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="User Controls\LoginControl.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="User Controls\SecurityMasterControl.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Service References\ServiceLocates\configuration91.svcinfo" />
+    <None Include="Service References\ServiceLocates\configuration.svcinfo" />
+    <None Include="Service References\ServiceLocates\LocatesService.wsdl" />
+    <None Include="Service References\ServiceLocates\LocatesService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceLocates\LocatesService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceLocates\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Resource Include="01712_disruption_1680x1050.jpg" />
+    <Resource Include="Images\address.png" />
+    <Resource Include="Images\administrative-docs.png" />
+    <Resource Include="Images\advertising.png" />
+    <Resource Include="Images\archives.png" />
+    <Resource Include="Images\attibutes.png" />
+    <Resource Include="Images\bank.png" />
+    <Resource Include="Images\basket.png" />
+    <Resource Include="Images\bestseller.png" />
+    <Resource Include="Images\billing.png" />
+    <Resource Include="Images\bookmark.png" />
+    <Resource Include="Images\brainstorming.png" />
+    <Resource Include="Images\business-contact.png" />
+    <Resource Include="Images\busy.png" />
+    <Resource Include="Images\calendar.png" />
+    <Resource Include="Images\category.png" />
+    <Resource Include="Images\check.png" />
+    <Resource Include="Images\collaboration.png" />
+    <Resource Include="Images\comment.png" />
+    <Resource Include="Images\communication.png" />
+    <Resource Include="Images\config.png" />
+    <Resource Include="Images\consulting.png" />
+    <Resource Include="Images\contact.png" />
+    <Resource Include="Images\cost.png" />
+    <Resource Include="Images\credit-card.png" />
+    <Resource Include="Images\credit.png" />
+    <Resource Include="Images\current-work.png" />
+    <Resource Include="Images\customers.png" />
+    <Resource Include="Images\cv.png" />
+    <Resource Include="Images\database.png" />
+    <Resource Include="Images\date.png" />
+    <Resource Include="Images\delicious.png" />
+    <Resource Include="Images\document-library.png" />
+    <Resource Include="Images\donate.png" />
+    <Resource Include="Images\drawings.png" />
+    <Resource Include="Images\edit.png" />
+    <Resource Include="Images\email.png" />
+    <Resource Include="Images\facebook.png" />
+    <Resource Include="Images\featured.png" />
+    <Resource Include="Images\feed.png" />
+    <Resource Include="Images\finished-work.png" />
+    <Resource Include="Images\flag.png" />
+    <Resource Include="Images\folder.png" />
+    <Resource Include="Images\free-for-job.png" />
+    <Resource Include="Images\freelance.png" />
+    <Resource Include="Images\full-time.png" />
+    <Resource Include="Images\future-projects.png" />
+    <Resource Include="Images\graphic-design.png" />
+    <Resource Include="Images\heart.png" />
+    <Resource Include="Images\hire-me.png" />
+    <Resource Include="Images\home.png" />
+    <Resource Include="Images\illustration.png" />
+    <Resource Include="Images\invoice.png" />
+    <Resource Include="Images\issue.png" />
+    <Resource Include="Images\library.png" />
+    <Resource Include="Images\lightbulb.png" />
+    <Resource Include="Images\limited-edition.png" />
+    <Resource Include="Images\link.png" />
+    <Resource Include="Images\lock.png" />
+    <Resource Include="Images\login.png" />
+    <Resource Include="Images\logout.png" />
+    <Resource Include="Images\milestone.png" />
+    <Resource Include="Images\my-account.png" />
+    <Resource Include="Images\networking.png" />
+    <Resource Include="Images\old-versions.png" />
+    <Resource Include="Images\order-149.png" />
+    <Resource Include="Images\order.png" />
+    <Resource Include="Images\payment-card.png" />
+    <Resource Include="Images\paypal.png" />
+    <Resource Include="Images\pc.png" />
+    <Resource Include="Images\pen.png" />
+    <Resource Include="Images\pencil.png" />
+    <Resource Include="Images\phone.png" />
+    <Resource Include="Images\photography.png" />
+    <Resource Include="Images\plus.png" />
+    <Resource Include="Images\premium.png" />
+    <Resource Include="Images\print.png" />
+    <Resource Include="Images\process.png" />
+    <Resource Include="Images\product-163.png" />
+    <Resource Include="Images\product-design.png" />
+    <Resource Include="Images\product.png" />
+    <Resource Include="Images\project.png" />
+    <Resource Include="Images\publish.png" />
+    <Resource Include="Images\refresh.png" />
+    <Resource Include="Images\search.png" />
+    <Resource Include="Images\settings.png" />
+    <Resource Include="Images\shipping.png" />
+    <Resource Include="Images\showreel.png" />
+    <Resource Include="Images\sign-in.png" />
+    <Resource Include="Images\sign-out.png" />
+    <Resource Include="Images\sign-up.png" />
+    <Resource Include="Images\sitemap.png" />
+    <Resource Include="Images\special-offer.png" />
+    <Resource Include="Images\star.png" />
+    <Resource Include="Images\statistics.png" />
+    <Resource Include="Images\suppliers.png" />
+    <Resource Include="Images\tag.png" />
+    <Resource Include="Images\ticket.png" />
+    <Resource Include="Images\twitter.png" />
+    <Resource Include="Images\upcoming-work.png" />
+    <Resource Include="Images\user.png" />
+    <Resource Include="Images\world.png" />
+    <Resource Include="Images\zoom.png" />
+    <None Include="Service References\ServiceLocates\LocatesService1.disco" />
+    <Resource Include="Images\MB_0008_Excel.png" />
+    <Resource Include="Images\MB_0015_reload.png" />
+    <Content Include="ServiceReferences.ClientConfig" />
+    <Resource Include="User Controls\MB_0008_Excel.png" />
+    <Resource Include="User Controls\MB_0015_reload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceLocates\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	     Other similar extension points exist, see Microsoft.Common.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>

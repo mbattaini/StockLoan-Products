@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://www.penson.com/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://www.penson.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Flynet Viewer STKSEGModule WebService</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.penson.com/">
+      <s:element name="STKSEGTask">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="from" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="to" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="account" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="qty" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="security" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="STKSEGTaskResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="STKSEGTaskResult" type="tns:STKSEGTaskInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="STKSEGTaskInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sessionKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="activeView" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="STKSEG" type="tns:STKSEGMap" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STKSEGMap">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="from" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="to" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="account" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="qty" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="security" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="STKSEGTaskSoapIn">
+    <wsdl:part name="parameters" element="tns:STKSEGTask" />
+  </wsdl:message>
+  <wsdl:message name="STKSEGTaskSoapOut">
+    <wsdl:part name="parameters" element="tns:STKSEGTaskResponse" />
+  </wsdl:message>
+  <wsdl:portType name="STKSEGModuleSoap">
+    <wsdl:operation name="STKSEGTask">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Enter STKSEGTask Data and Retrieve Info</wsdl:documentation>
+      <wsdl:input message="tns:STKSEGTaskSoapIn" />
+      <wsdl:output message="tns:STKSEGTaskSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="STKSEGModuleSoap" type="tns:STKSEGModuleSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="STKSEGTask">
+      <soap:operation soapAction="http://www.penson.com/STKSEGTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="STKSEGModuleSoap12" type="tns:STKSEGModuleSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <wsdl:operation name="STKSEGTask">
+      <soap12:operation soapAction="http://www.penson.com/STKSEGTask" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="STKSEGModule">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Flynet Viewer STKSEGModule WebService</wsdl:documentation>
+    <wsdl:port name="STKSEGModuleSoap" binding="tns:STKSEGModuleSoap">
+      <soap:address location="http://ltpen-tpham/STKSEGWSDev/STKSEGModule.asmx" />
+    </wsdl:port>
+    <wsdl:port name="STKSEGModuleSoap12" binding="tns:STKSEGModuleSoap12">
+      <soap12:address location="http://ltpen-tpham/STKSEGWSDev/STKSEGModule.asmx" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

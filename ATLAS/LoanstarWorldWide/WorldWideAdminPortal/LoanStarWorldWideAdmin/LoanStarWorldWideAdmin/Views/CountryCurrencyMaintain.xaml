@@ -1,0 +1,131 @@
+﻿<sdk:Page	
+    Name="CountryCurrencyMaintenance"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+	xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"	
+    xmlns:c1="clr-namespace:C1.Silverlight;assembly=C1.Silverlight" 
+    xmlns:c1grid="clr-namespace:C1.Silverlight.DataGrid;assembly=C1.Silverlight.DataGrid" 
+    xmlns:c1chart="clr-namespace:C1.Silverlight.Chart;assembly=C1.Silverlight.Chart"
+	xmlns:c1datetime="clr-namespace:C1.Silverlight.DateTimeEditors;assembly=C1.Silverlight.DateTimeEditors"
+	mc:Ignorable="d" 
+    Title="LoanStar WorlwordWide Country-Currency Maintenance Page" 
+	x:Class="LoanStarWorldWideAdmin.Views.CountryCurrencyMaintain">
+
+    <Grid x:Name="LayoutRoot" Height="665" Width="800" VerticalAlignment="Top" HorizontalAlignment="Center" >
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" />
+                <GradientStop Color="#FF365E90" Offset="1" />
+                <GradientStop Color="#FF1C3C64" Offset="0.009" />
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <sdk:Label Content="Message Bar" FontSize="12" FontWeight="Bold" Foreground="Red" Height="30" BorderBrush="Red" BorderThickness="1" HorizontalAlignment="Center" 
+        		HorizontalContentAlignment="Right" x:Name="UpdateLabel" Width="800" VerticalAlignment="Top" d:LayoutOverrides="Height" Visibility="Collapsed" d:IsHidden="True" Margin="0,3,0,0" />
+
+        <sdk:Label Content="Status" FontSize="14" FontWeight="Bold" Foreground="DarkBlue" Height="30" BorderBrush="Blue" BorderThickness="2" 
+        		HorizontalAlignment="Center" HorizontalContentAlignment="Right" x:Name="StatusLabel" Width="800" VerticalAlignment="Top" Margin="0,2,0,0" />
+
+        <StackPanel x:Name="CheckBoxStackPanel" Height="28" HorizontalAlignment="Left" VerticalAlignment="Top" Width="800" Orientation="Horizontal" Visibility="Collapsed">
+                <sdk:Label Content=" " Height="28" FontSize="11" Foreground="White" FontWeight="Bold" Width="60" HorizontalContentAlignment="Right" />
+                <CheckBox Content="Country Only" Height="16" HorizontalAlignment="Left" x:Name="CountryCheckBox" VerticalAlignment="Bottom" FontSize="11" Foreground="White" FontWeight="Bold" Click="CountryCheckBox_Click" Margin="0,0,0,6" />
+                <sdk:Label Content=" " Height="28" FontSize="11" Foreground="White" FontWeight="Bold" Width="60" HorizontalContentAlignment="Right" />
+                <CheckBox Content="Currency Only" x:Name="CurrencyCheckBox" Height="16" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,6" FontSize="11" Foreground="White" FontWeight="Bold" Click="CurrencyCheckBox_Click" />
+                <sdk:Label Content=" " Height="28" FontSize="11" Foreground="White" FontWeight="Bold" Width="60" HorizontalContentAlignment="Right" />
+                <CheckBox Content="Currency Conversion Only" x:Name="ConversionCheckBox" Height="16" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,6" FontSize="11" Foreground="White" FontWeight="Bold" Click="ConversionCheckBox_Click" />
+                <sdk:Label Content=" " Height="28" FontSize="11" Foreground="White" FontWeight="Bold" Width="60" HorizontalContentAlignment="Right" />
+                <CheckBox Content="All" x:Name="AllCheckBox" Height="16" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,6" FontSize="11" Foreground="White" FontWeight="Bold" Click="AllCheckBox_Click" />
+            </StackPanel> 
+
+        <StackPanel x:Name="CountryMainStackPanel" HorizontalAlignment="Left" Margin="0,30,0,0" Height="254" Width="800" VerticalAlignment="Top">
+            <StackPanel Height="170" HorizontalAlignment="Left" x:Name="CountryHeaderStackPanel" VerticalAlignment="Top" Width="784" Orientation="Horizontal">
+            <sdk:Label Content="Country Maintenance" Height="28" FontSize="14" Foreground="White" FontWeight="Bold" x:Name="CountryHeadLabel" Width="216" HorizontalContentAlignment="Center" />
+
+            <c1grid:C1DataGrid x:Name="CountryGrid" AutoGenerateColumns="False" CanUserAddRows="False" CanUserEditRows="False" Width="475" 
+                                   CanUserRemoveRows="False" CanUserReorderColumns="False" Height="169" ScrollMode="RealTime" CanUserResizeColumns="False" 
+                                   CanUserResizeRows="False" CanUserToggleDetails="False" VerticalAlignment="Top" VerticalContentAlignment="Top" 
+                                   CanUserFilter="False" SelectionChanged="CountryGrid_SelectionChanged">
+                <c1grid:C1DataGrid.Columns>
+                    <c1grid:DataGridBoundColumn x:Name="CountryCode" Binding="{Binding CountryCode}" Width="90" Header="Country Code" CanUserMove="False" CanUserResize="False" />
+                    <c1grid:DataGridBoundColumn x:Name="Country" Binding="{Binding Country}" Format="" GroupHeader="Country" Header="Country" CanUserMove="False" CanUserResize="False" />
+                </c1grid:C1DataGrid.Columns>
+            </c1grid:C1DataGrid>
+        </StackPanel>
+
+        <StackPanel Height="51" HorizontalAlignment="Left" x:Name="stackPanel1" VerticalAlignment="Top" Width="784" Orientation="Horizontal">
+            <sdk:Label Content="Country Code " Height="28" FontSize="11" Foreground="White" FontWeight="Bold" x:Name="CountryCodeLabel" Width="110" HorizontalContentAlignment="Right" />
+            <TextBox Height="23" x:Name="CountryCodeTextBox" Width="40" />
+            <sdk:Label Content="Name " Height="28" FontSize="11" Foreground="White" FontWeight="Bold" x:Name="NameLabel" Width="65" HorizontalContentAlignment="Right" />
+            <TextBox Height="23" x:Name="CountryNameTextBox" Width="320" />
+            <sdk:Label Content="  SettleDays " Height="28" FontSize="11" Foreground="White" FontWeight="Bold" x:Name="SettleDaysLabel" Width="85" HorizontalContentAlignment="Right" />
+            <TextBox Height="23" x:Name="CountrySettleDaysTextBox" Width="40" />
+            <sdk:Label Content=" " Height="28" FontSize="11" Foreground="White" FontWeight="Bold" Width="15" HorizontalContentAlignment="Right" />
+            <CheckBox Content="Active" Height="16" x:Name="ActiveCheckBox" FontSize="11" Foreground="White" FontWeight="Bold"/>
+        </StackPanel>
+        <StackPanel Height="35" HorizontalAlignment="Left" x:Name="CountryButtonsStackPanel" VerticalAlignment="Top" Width="781" Orientation="Horizontal">
+            <sdk:Label Content=" " Height="28" FontSize="11" Foreground="White" FontWeight="Bold" Width="440" HorizontalContentAlignment="Right" />
+            <Button Content="Cancel" Height="23" x:Name="CountryCancelButton" Width="95" Click="CountryCancelButton_Click"/>
+            <sdk:Label Content=" " Height="28" FontSize="11" Foreground="White" FontWeight="Bold" Width="15" HorizontalContentAlignment="Right" />
+            <Button Content="Save/Update" Height="23" x:Name="CountrySaveButton" Width="95" Click="CountrySaveButton_Click" />
+        </StackPanel>
+    </StackPanel>
+
+
+    <StackPanel x:Name="CurrencyMainStackPanel" Height="261" HorizontalAlignment="Left" Margin="0,288,0,0" VerticalAlignment="Top" Width="800" >
+        <StackPanel Height="170" HorizontalAlignment="Left" x:Name="CurrencyHeaderStackPanel" VerticalAlignment="Top" Width="784" Orientation="Horizontal">
+            <sdk:Label Content="Currency Maintenance" Height="28" FontSize="14" Foreground="White" FontWeight="Bold" x:Name="CurrencyHeadLabel" Width="216" HorizontalContentAlignment="Center" />
+            <c1grid:C1DataGrid x:Name="CurrencyGrid" AutoGenerateColumns="False" CanUserAddRows="False" CanUserEditRows="False" Width="475" 
+                                   CanUserRemoveRows="False" CanUserReorderColumns="False" Height="169" ScrollMode="RealTime" CanUserResizeColumns="False" 
+                                   CanUserResizeRows="False" CanUserToggleDetails="False" VerticalAlignment="Top" VerticalContentAlignment="Top" 
+                                   CanUserFilter="False" SelectionChanged="CurrencyGrid_SelectionChanged">
+                <c1grid:C1DataGrid.Columns>
+                    <c1grid:DataGridBoundColumn x:Name="CurrencyCode" Binding="{Binding CurrencyCode}" Width="90" Header="ISO Code" CanUserMove="False" CanUserResize="False" />
+                    <c1grid:DataGridBoundColumn x:Name="Currency" Binding="{Binding Currency}" Format="" GroupHeader="Currency" Header="Currency" CanUserMove="False" CanUserResize="False" />
+                </c1grid:C1DataGrid.Columns>
+            </c1grid:C1DataGrid>
+        </StackPanel>
+        <StackPanel Height="51" HorizontalAlignment="Left" x:Name="CurrencyStackPanel" VerticalAlignment="Top" Width="784" Orientation="Horizontal">
+            <sdk:Label Content="Currency Code: " Height="28" FontSize="11" Foreground="White" FontWeight="Bold" x:Name="CurrencyCodeLabel" Width="120" HorizontalContentAlignment="Right" />
+            <TextBox Height="23" x:Name="CurrencyCodeTextBox" Width="45" />
+            <sdk:Label Content="Name " Height="28" FontSize="11" Foreground="White" FontWeight="Bold" x:Name="CurrencyLabel" Width="50" HorizontalContentAlignment="Right" />
+            <TextBox Height="23" x:Name="CurrencyTextBox" Width="300" />
+            <sdk:Label Content=" " Height="28" FontSize="11" Foreground="White" FontWeight="Bold" Width="35" HorizontalContentAlignment="Right" />
+            <CheckBox Content="Active" Height="16" x:Name="CurrencyActiveCheckBox" FontSize="11" Foreground="White" FontWeight="Bold" />
+        </StackPanel>
+        <StackPanel Height="37" HorizontalAlignment="Left" x:Name="CurrencyButtonsStackPanel" VerticalAlignment="Top" Width="784" Orientation="Horizontal">
+            <sdk:Label Content=" " Height="28" FontSize="11" Foreground="White" FontWeight="Bold" Width="440" HorizontalContentAlignment="Right" />
+            <Button Content="Cancel" Height="23" x:Name="CurrencyCancelButton" Width="95" Click="CurrencyCancelButton_Click"/>
+            <sdk:Label Content=" " Height="28" FontSize="11" Foreground="White" FontWeight="Bold" Width="15" HorizontalContentAlignment="Right" />
+            <Button Content="Save/Update" Height="23" x:Name="CurrencySaveButton" Width="95" Click="CurrencySaveButton_Click" />
+        </StackPanel>
+    </StackPanel>
+
+    <StackPanel x:Name="CurrencyConversionMainStackPanel" Height="110" HorizontalAlignment="Left" Margin="0,551,0,0" VerticalAlignment="Top" Width="800" d:LayoutOverrides="VerticalAlignment" >
+            <StackPanel Height="28" HorizontalAlignment="Left" x:Name="CurrencyConversionHeaderStackPanel" VerticalAlignment="Top" Width="784" Orientation="Horizontal">
+                <sdk:Label Content="Currency Conversion Maintenance" Height="28" FontSize="14" Foreground="White" FontWeight="Bold" x:Name="CurrencyConversionHeadLabel" Width="300" HorizontalContentAlignment="Center" />
+            </StackPanel>
+            <StackPanel x:Name="CurrencyConversionStackPanel" Height="51" HorizontalAlignment="Left" VerticalAlignment="Top" Width="784" Orientation="Horizontal">
+                <sdk:Label Content="From ISO Code " Height="28" FontSize="11" Foreground="White" FontWeight="Bold" x:Name="CurrencyFromLabel" Width="120" HorizontalContentAlignment="Right" />
+                <c1:C1ComboBox x:Name="IsoFromCombo" FontSize="10.667" Height="25" VerticalAlignment="Center" TabIndex="4" Width="100" SelectedItemChanged="IsoFromCombo_SelectedItemChanged" />
+
+                <sdk:Label Content="To ISO Code " Height="28" FontSize="11" Foreground="White" FontWeight="Bold" x:Name="CurrencyToLabel" Width="115" HorizontalContentAlignment="Right" />
+                <c1:C1ComboBox x:Name="IsoToCombo" FontSize="10.667" Height="25" VerticalAlignment="Center" TabIndex="4" Width="100" SelectedItemChanged="IsoToCombo_SelectedItemChanged" />
+                
+                <sdk:Label Content="Conversion Rate " Height="28" FontSize="11" Foreground="White" FontWeight="Bold" x:Name="ConversionRateLabel" Width="120" HorizontalContentAlignment="Right" />
+                <TextBox Height="23" x:Name="ConversionRateTextBox" Width="120" />
+
+            </StackPanel>
+            <StackPanel x:Name="CurrencyConvertButtonsStackPanel" Height="28" HorizontalAlignment="Left" VerticalAlignment="Top" Width="784" Orientation="Horizontal">
+                <sdk:Label Content=" " Height="28" FontSize="11" Foreground="White" FontWeight="Bold" Width="440" HorizontalContentAlignment="Right" />
+                <Button Content="Cancel" Height="23" x:Name="CurrencyConversionCancelButton"  Width="95" Click="CurrencyConversionCancelButton_Click" />
+                <sdk:Label Content=" " Height="28" FontSize="11" Foreground="White" FontWeight="Bold" Width="15" HorizontalContentAlignment="Right" />
+                <Button Content="Save/Update" Height="23" x:Name="CurrencyConversionSaveButton" Width="95" Click="CurrencyConversionSaveButton_Click"/>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+    
+</sdk:Page>

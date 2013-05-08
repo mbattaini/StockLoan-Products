@@ -1,0 +1,1 @@
+C:\_Dev\ATLAS\LoanstarWorldWide\WorldWideDataService\WorldWideDataService\bin\Debug\StockLoan.WorldWideDataService.exe.config

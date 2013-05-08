@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="\\sendero1\C$\Loanstar\TradingGateway\" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/TradingGateway.pdb" publishTime="02/02/2011 14:19:30" />
+    <file relUrl="TradeGeneric.svc" publishTime="01/13/2011 15:02:41" />
+    <file relUrl="bin/StockLoan.MQSeries.dll" publishTime="02/02/2011 14:19:30" />
+    <file relUrl="bin/StockLoan.Common.pdb" publishTime="02/02/2011 14:19:28" />
+    <file relUrl="bin/TradingGateway.dll" publishTime="02/02/2011 14:19:30" />
+    <file relUrl="bin/TgDatabaseFunctions.dll" publishTime="02/02/2011 14:19:29" />
+    <file relUrl="bin/System.Web.Services.dll" publishTime="06/10/2009 16:23:20" />
+    <file relUrl="bin/TGTradeFormats.dll" publishTime="02/02/2011 14:19:29" />
+    <file relUrl="bin/System.EnterpriseServices.dll" publishTime="06/10/2009 16:23:18" />
+    <file relUrl="bin/System.Data.dll" publishTime="06/10/2009 16:23:17" />
+    <file relUrl="Web.config" publishTime="02/02/2011 14:19:47" />
+    <file relUrl="bin/System.Xml.dll" publishTime="06/10/2009 16:23:20" />
+    <file relUrl="bin/StockLoan.Common.dll" publishTime="02/02/2011 14:19:29" />
+    <file relUrl="bin/TgDatabaseFunctions.pdb" publishTime="02/02/2011 14:19:29" />
+    <file relUrl="bin/System.dll" publishTime="06/10/2009 16:23:18" />
+    <file relUrl="bin/System.Xml.Linq.dll" publishTime="06/10/2009 16:14:45" />
+    <file relUrl="bin/System.Web.Mobile.dll" publishTime="06/10/2009 16:23:20" />
+    <file relUrl="bin/StockLoan.MQSeries.pdb" publishTime="02/02/2011 14:19:30" />
+    <file relUrl="bin/System.Web.Extensions.dll" publishTime="09/23/2010 17:31:15" />
+    <file relUrl="bin/System.Web.dll" publishTime="09/23/2010 17:31:15" />
+    <file relUrl="bin/System.Runtime.Serialization.dll" publishTime="06/10/2009 16:13:54" />
+    <file relUrl="bin/System.Configuration.dll" publishTime="06/10/2009 16:23:17" />
+    <file relUrl="bin/System.ServiceModel.dll" publishTime="06/10/2009 16:13:55" />
+    <file relUrl="bin/System.Drawing.dll" publishTime="06/10/2009 16:23:18" />
+    <file relUrl="bin/System.ServiceModel.Web.dll" publishTime="06/10/2009 16:14:02" />
+    <file relUrl="bin/TGTradeFormats.pdb" publishTime="02/02/2011 14:19:29" />
+  </publishProfile>
+</publishData>

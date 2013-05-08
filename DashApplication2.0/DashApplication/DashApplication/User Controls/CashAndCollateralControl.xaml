@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="DashApplication.CashAndCollateralControl"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" 
+             xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Name="MainUserControl"
+    mc:Ignorable="d" Height="492" Width="809" FontFamily="TitilliumText22L">
+    
+<Grid x:Name="LayoutRoot" Style="{StaticResource LayoutRootGridStyle}" >
+        <c1:C1DataGrid x:Name="CounterPartyCashGrid" CanUserRemoveRows="False" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" CanUserAddRows="False" CanUserEditRows="False" Margin="10,82,0,0" HorizontalAlignment="Left" Width="789" AutoGenerateColumns="False" Height="199" VerticalAlignment="Top" Style="{StaticResource C1GridStyle}">
+            <c1:C1DataGrid.Columns>
+                <c1:DataGridBoundColumn Header="Book Group" Binding="{Binding BookGroup, Mode=OneTime}"/>
+                <c1:DataGridBoundColumn Header="Book" Binding="{Binding Book, FallbackValue=Book}"/>
+                <c1:DataGridBoundColumn Header="Borrow Amt" HorizontalAlignment="Right" Binding="{Binding BorrowAmount, FallbackValue=BorrowAmount}" Format="#,##0.00"/>
+                <c1:DataGridBoundColumn Header="Loan Amt" HorizontalAlignment="Right" Binding="{Binding LoanAmount, FallbackValue=LoanAmount}" Format="#,##0.00"/>
+                <c1:DataGridBoundColumn Header="CC" Binding="{Binding CurrencyIso, FallbackValue=CurrencyIso}"/>
+            </c1:C1DataGrid.Columns>
+        </c1:C1DataGrid>
+        <c1:C1DataGrid x:Name="ExcessCollateralGrid" CanUserAddRows="False" CanUserEditRows="False" Margin="10,308,0,7" Width="789" HorizontalAlignment="Left" AutoGenerateColumns="False" Style="{StaticResource C1GridStyle}">
+            <c1:C1DataGrid.Columns>
+                <c1:DataGridBoundColumn Binding="{Binding BookGroup}" Header="Book Group"/>
+                <c1:DataGridBoundColumn Binding="{Binding Book}" Header="Book"/>
+                <c1:DataGridBoundColumn Binding="{Binding CurrencyIso}" Header="CC"/>
+                <c1:DataGridBoundColumn Binding="{Binding BorrowExCoAmount}" Header="Borrow Amt" Format="#,##0.00" HorizontalAlignment="Right"/>
+                <c1:DataGridBoundColumn Binding="{Binding LoanExCoAmount}" Header="Loan Amt" Format="#,##0.00" HorizontalAlignment="Right"/>
+                <c1:DataGridBoundColumn Binding="{Binding NetExCoAmount}" Header="Net Amt" Format="#,##0.00" HorizontalAlignment="Right"/>
+            </c1:C1DataGrid.Columns>
+        </c1:C1DataGrid>
+        <StackPanel Orientation="Horizontal" Margin="10,10,0,0" Style="{StaticResource BrandingStackPanelStyle}" Background="#FFB2E0F4" Height="33" VerticalAlignment="Top" HorizontalAlignment="Left" Width="789">
+            <RadioButton x:Name="RadioDomestic" Content="Domestic" HorizontalAlignment="Left"  Width="106" VerticalContentAlignment="Center" Foreground="White" IsChecked="True" Checked="RadioDomestic_Checked" VerticalAlignment="Center"/>
+            <RadioButton x:Name="RadioInternational" Content="International" VerticalContentAlignment="Center" Foreground="White" Checked="RadioInternational_Checked" HorizontalAlignment="Left" Width="115" VerticalAlignment="Center"/>          
+            <c1:C1DateTimePicker x:Name="ContractsDatePicker"  Width="134" DateTimeChanged="ContractsDatePicker_DateTimeChanged" EditMode="Date" HorizontalAlignment="Right" d:LayoutOverrides="Width" Style="{StaticResource C1BizDatePickerStyle}" VerticalAlignment="Center"/>
+        </StackPanel>
+        <Grid x:Name="ExcessheaderGrid" Height="17" VerticalAlignment="Top" Margin="10,286,0,0" HorizontalAlignment="Left" Width="789" Background="#FFB2E0F4">
+            <TextBlock HorizontalAlignment="Left" Margin="8,0,0,1" TextWrapping="Wrap" Text="Excess Margin Collateral" Width="221" Foreground="White" FontSize="10.667"/>
+            <HyperlinkButton x:Name="ExcessExcelButton" HorizontalAlignment="Right" Margin="0,0,6,1" Foreground="White" FontWeight="Bold" Height="14" VerticalAlignment="Bottom" Content="Excel" Click="ExcessExcelButton_Click"/>
+        </Grid>
+        <Grid x:Name="CashHeaderGrid" Height="17" VerticalAlignment="Top" Margin="10,61,0,0" HorizontalAlignment="Left" Width="789" Style="{StaticResource LayoutRootGridStyle}" Background="#FFB2E0F4">
+            <TextBlock HorizontalAlignment="Left" Margin="8,0,0,1" TextWrapping="Wrap" Text="Cash By Counterparty" Width="221" Foreground="White" FontSize="10.667"/>
+            <HyperlinkButton x:Name="CashExcelButton" HorizontalAlignment="Right" Margin="0,0,6,1" Foreground="White" FontWeight="Bold" Height="14" VerticalAlignment="Bottom" Content="Excel" Click="CashExcelButton_Click"/>
+        </Grid>
+    </Grid>
+</UserControl>

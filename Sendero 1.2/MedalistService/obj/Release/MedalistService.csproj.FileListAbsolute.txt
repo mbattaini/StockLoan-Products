@@ -1,0 +1,16 @@
+C:\_dev\Sendero 1.2\MedalistService\obj\Release\Anetics.MedalistService.exe
+C:\_dev\Sendero 1.2\MedalistService\bin\Release\Anetics.MedalistService.exe
+C:\_dev\Sendero 1.2\MedalistService\bin\Release\Anetics.MedalistServer.dll
+C:\_dev\Sendero 1.2\MedalistService\bin\Release\Anetics.Medalist.dll
+C:\_dev\Sendero 1.2\MedalistService\bin\Release\Anetics.Common.dll
+C:\_dev\Sendero 1.2\MedalistService\bin\Release\Anetics.Process.dll
+C:\_dev\Sendero 1.2\MedalistService\bin\Release\Anetics.SmartSeg.dll
+C:\_dev\Sendero 1.2\MedalistService\bin\Release\Anetics.Filer.dll
+C:\_dev\Sendero 1.2\MedalistService\bin\Release\Rebex.Net.Ftp.dll
+C:\_dev\Sendero 1.2\MedalistService\bin\Release\Rebex.Net.ProxySocket.dll
+C:\_dev\Sendero 1.2\MedalistService\bin\Release\Anetics.SmartSeg.pdb
+C:\_dev\Sendero 1.2\MedalistService\bin\Release\Anetics.MedalistServer.XmlSerializers.dll
+C:\_dev\Sendero 1.2\MedalistService\obj\Release\MedalistService.csprojResolveAssemblyReference.cache
+C:\_dev\Sendero 1.2\MedalistService\obj\Release\Anetics.Medalist.ProjectInstaller.resources
+C:\_dev\Sendero 1.2\MedalistService\obj\Release\Anetics.Medalist.Service.resources
+C:\_dev\Sendero 1.2\MedalistService\obj\Release\MedalistService.csproj.GenerateResource.Cache

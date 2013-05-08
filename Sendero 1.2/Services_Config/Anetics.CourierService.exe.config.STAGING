@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <appSettings>
+    <add key="TempPath" value="C:\Sendero\Temp\" />
+    <add key="LogFilePath" value="C:\Sendero\Logs\" />
+    <add key="LogLevel" value="3" />
+
+    <add key="MainDatabaseHost" value="NEMESIS\Porky" />
+    <add key="MainDatabaseName" value="Sendero" />
+
+    <add key="HttpWebProxy" value="ispen001.penson.com:8080" />
+
+    <add key="Email.Host" value="mail.stockloan.net" />
+    <add key="Email.UserId" value="penson" />
+    <add key="Email.Password" value="southChurch" />
+  </appSettings>
+</configuration>

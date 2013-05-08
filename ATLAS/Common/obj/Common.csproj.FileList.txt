@@ -1,0 +1,12 @@
+bin\Release\StockLoan.Common.dll
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\StockLoan.Common.dll
+bin\Debug\StockLoan.Common.dll
+bin\Debug\StockLoan.Common.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\StockLoan.Common.dll
+obj\Debug\StockLoan.Common.pdb
+bin\Debug\System.Data.dll
+bin\Debug\System.Data.xml
+bin\Release\System.Data.dll
+bin\Release\System.Data.xml

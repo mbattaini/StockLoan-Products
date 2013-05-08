@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BroadRidgeOptSegFileFormat", "BroadRidgeOptSegFileFormat\BroadRidgeOptSegFileFormat.csproj", "{E0C5F16E-CEB7-4A35-A9E3-159D8B37D54A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0C5F16E-CEB7-4A35-A9E3-159D8B37D54A}.Debug|x86.ActiveCfg = Debug|x86
+		{E0C5F16E-CEB7-4A35-A9E3-159D8B37D54A}.Debug|x86.Build.0 = Debug|x86
+		{E0C5F16E-CEB7-4A35-A9E3-159D8B37D54A}.Release|x86.ActiveCfg = Release|x86
+		{E0C5F16E-CEB7-4A35-A9E3-159D8B37D54A}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

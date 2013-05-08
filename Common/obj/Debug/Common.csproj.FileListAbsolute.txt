@@ -1,0 +1,31 @@
+C:\ATLAS\Common\bin\Debug\StockLoan.Common.dll
+C:\ATLAS\Common\bin\Debug\StockLoan.Common.pdb
+C:\ATLAS\Common\bin\Debug\System.Data.dll
+C:\ATLAS\Common\bin\Debug\System.Data.xml
+C:\ATLAS\Common\obj\Debug\ResolveAssemblyReference.cache
+C:\ATLAS\Common\obj\Debug\StockLoan.Common.dll
+C:\ATLAS\Common\obj\Debug\StockLoan.Common.pdb
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Common\bin\Debug\StockLoan.Common.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Common\bin\Debug\StockLoan.Common.pdb
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Common\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Common\obj\Debug\StockLoan.Common.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Common\obj\Debug\StockLoan.Common.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Common\bin\Debug\StockLoan.Common.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Common\bin\Debug\StockLoan.Common.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Common\obj\Debug\ResolveAssemblyReference.cache
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Common\obj\Debug\StockLoan.Common.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Common\obj\Debug\StockLoan.Common.pdb
+U:\_Dev\ATLAS\Common\bin\Debug\StockLoan.Common.dll
+U:\_Dev\ATLAS\Common\bin\Debug\StockLoan.Common.pdb
+U:\_Dev\ATLAS\Common\obj\Debug\ResolveAssemblyReference.cache
+U:\_Dev\ATLAS\Common\obj\Debug\StockLoan.Common.dll
+U:\_Dev\ATLAS\Common\obj\Debug\StockLoan.Common.pdb
+U:\_Dev\Common\bin\Debug\StockLoan.Common.dll
+U:\_Dev\Common\bin\Debug\StockLoan.Common.pdb
+U:\_Dev\Common\obj\Debug\ResolveAssemblyReference.cache
+U:\_Dev\Common\obj\Debug\StockLoan.Common.dll
+U:\_Dev\Common\obj\Debug\StockLoan.Common.pdb
+C:\_Dev\Common\bin\Debug\StockLoan.Common.dll
+C:\_Dev\Common\bin\Debug\StockLoan.Common.pdb
+C:\_Dev\Common\obj\Debug\StockLoan.Common.dll
+C:\_Dev\Common\obj\Debug\StockLoan.Common.pdb

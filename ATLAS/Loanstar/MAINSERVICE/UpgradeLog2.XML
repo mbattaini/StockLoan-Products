@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="MainService">
+</Property><Property Name="Solution File" Value="C:\ATLAS\Loanstar\MAINSERVICE\MainService.sln">
+</Property><Property Name="User Options File" Value="C:\ATLAS\Loanstar\MAINSERVICE\MainService.suo">
+</Property><Property Name="Date" Value="Sunday, June 14, 2009">
+</Property><Property Name="Time" Value="22:22 PM">
+</Property><Property Name="Log Number" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="MainService.sln" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\MainService.sln">
+</Event><Event ErrorLevel="0" Project="" Source="MainService.suo" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\MainService.suo">
+</Event><Event ErrorLevel="1" Project="Common" Source="..\..\Common\Common.csproj" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\Common.csproj" Description="Project file successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\Common\Common.csproj">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\Common.csproj.user" Description="Project user file successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\Common\Common.csproj.user">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\AssemblyInfo.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\Common\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\DealList.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\Common\DealList.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\KeyValue.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\Common\KeyValue.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\List.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\Common\List.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\Log.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\Common\Log.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\RegistryValue.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\Common\RegistryValue.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\RemotingTools.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\Common\RemotingTools.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\Security.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\Common\Security.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\Standard.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\Common\Standard.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\Tools.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\Common\Tools.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\Common.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Common" Source="..\..\Common\Common.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="1" Project="BackOffice" Source="..\BACKOFFICE\BackOffice.csproj" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="0" Project="BackOffice" Source="..\BACKOFFICE\BackOffice.csproj" Description="Project file successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\BackOffice\BackOffice.csproj">
+</Event><Event ErrorLevel="0" Project="BackOffice" Source="..\BACKOFFICE\AssemblyInfo.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\BackOffice\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="BackOffice" Source="..\BACKOFFICE\IBackOffice.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\BackOffice\IBackOffice.cs">
+</Event><Event ErrorLevel="0" Project="BackOffice" Source="..\BACKOFFICE\BackOffice.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="BackOffice" Source="..\BACKOFFICE\BackOffice.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="1" Project="PushData" Source="..\PUSHDATA\PushData.csproj" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="0" Project="PushData" Source="..\PUSHDATA\PushData.csproj" Description="Project file successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\PushData\PushData.csproj">
+</Event><Event ErrorLevel="0" Project="PushData" Source="..\PUSHDATA\ContractSummaryDocument.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\PushData\ContractSummaryDocument.cs">
+</Event><Event ErrorLevel="0" Project="PushData" Source="..\PUSHDATA\PdfDoucment.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\PushData\PdfDoucment.cs">
+</Event><Event ErrorLevel="0" Project="PushData" Source="..\PUSHDATA\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\PushData\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="PushData" Source="..\PUSHDATA\PushData.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="PushData" Source="..\PUSHDATA\PushData.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="1" Project="Main" Source="..\MAIN\Main.csproj" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="0" Project="Main" Source="..\MAIN\Main.csproj" Description="Project file successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\Main\Main.csproj">
+</Event><Event ErrorLevel="0" Project="Main" Source="..\MAIN\AssemblyInfo.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\Main\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Main" Source="..\MAIN\IProcess.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\Main\IProcess.cs">
+</Event><Event ErrorLevel="0" Project="Main" Source="..\MAIN\IAdmin.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\Main\IAdmin.cs">
+</Event><Event ErrorLevel="0" Project="Main" Source="..\MAIN\IInventory.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\Main\IInventory.cs">
+</Event><Event ErrorLevel="0" Project="Main" Source="..\MAIN\IPosition.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\Main\IPosition.cs">
+</Event><Event ErrorLevel="0" Project="Main" Source="..\MAIN\IService.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\Main\IService.cs">
+</Event><Event ErrorLevel="0" Project="Main" Source="..\MAIN\Main.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Main" Source="..\MAIN\Main.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="1" Project="MainServer" Source="..\MAINSERVER\MainServer.csproj" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="0" Project="MainServer" Source="..\MAINSERVER\MainServer.csproj" Description="Project file successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\MainServer\MainServer.csproj">
+</Event><Event ErrorLevel="0" Project="MainServer" Source="..\MAINSERVER\AdminAgent.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\MainServer\AdminAgent.cs">
+</Event><Event ErrorLevel="0" Project="MainServer" Source="..\MAINSERVER\AssemblyInfo.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\MainServer\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="MainServer" Source="..\MAINSERVER\ProcessAgent.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\MainServer\ProcessAgent.cs">
+</Event><Event ErrorLevel="0" Project="MainServer" Source="..\MAINSERVER\InventoryAgent.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\MainServer\InventoryAgent.cs">
+</Event><Event ErrorLevel="0" Project="MainServer" Source="..\MAINSERVER\Master.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\MainServer\Master.cs">
+</Event><Event ErrorLevel="0" Project="MainServer" Source="..\MAINSERVER\MedalistMain.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\MainServer\MedalistMain.cs">
+</Event><Event ErrorLevel="0" Project="MainServer" Source="..\MAINSERVER\PositionAgent.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\MainServer\PositionAgent.cs">
+</Event><Event ErrorLevel="0" Project="MainServer" Source="..\MAINSERVER\ServiceAgent.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\MainServer\ServiceAgent.cs">
+</Event><Event ErrorLevel="0" Project="MainServer" Source="..\MAINSERVER\MainServer.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="MainServer" Source="..\MAINSERVER\MainServer.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="MainService" Source="MainService.csproj" Description="Project file successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\MainService.csproj">
+</Event><Event ErrorLevel="0" Project="MainService" Source="AssemblyInfo.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="MainService" Source="ProjectInstaller.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\ProjectInstaller.cs">
+</Event><Event ErrorLevel="0" Project="MainService" Source="Service.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\Service.cs">
+</Event><Event ErrorLevel="0" Project="MainService" Source="ProjectInstaller.resx" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\ProjectInstaller.resx">
+</Event><Event ErrorLevel="0" Project="MainService" Source="Service.resx" Description="File successfully backed up as C:\ATLAS\Loanstar\MAINSERVICE\Backup1\Service.resx">
+</Event><Event ErrorLevel="0" Project="MainService" Source="MainService.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="MainService" Source="MainService.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="MainService.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="MainService.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="MainService" Source="MainService.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

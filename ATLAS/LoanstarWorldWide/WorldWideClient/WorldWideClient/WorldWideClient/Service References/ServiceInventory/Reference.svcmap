@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3bd2d12c-6712-4b92-970d-4845b79fb09c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localHost:59014/InventoryService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="InventoryService.xsd" MetadataType="Schema" ID="402f1b19-fb94-47da-980a-332fcb2d135e" SourceId="1" SourceUrl="http://localhost:59014/InventoryService.svc?xsd=xsd0" />
+    <MetadataFile FileName="InventoryService.disco" MetadataType="Disco" ID="b2eae29d-f342-4d65-804d-451fd515dc47" SourceId="1" SourceUrl="http://localhost:59014/InventoryService.svc?disco" />
+    <MetadataFile FileName="InventoryService.wsdl" MetadataType="Wsdl" ID="edf4859b-351f-44e2-80ec-d123be485d4d" SourceId="1" SourceUrl="http://localhost:59014/InventoryService.svc?wsdl" />
+    <MetadataFile FileName="InventoryService1.xsd" MetadataType="Schema" ID="395846ec-9109-41a5-a1d8-c0053384d03a" SourceId="1" SourceUrl="http://localhost:59014/InventoryService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

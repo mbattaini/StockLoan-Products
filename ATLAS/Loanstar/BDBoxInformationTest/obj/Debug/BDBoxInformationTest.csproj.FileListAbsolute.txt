@@ -1,0 +1,13 @@
+C:\_dev\ATLAS\Loanstar\BDBoxInformationTest\obj\Debug\ResolveAssemblyReference.cache
+C:\_dev\ATLAS\Loanstar\BDBoxInformationTest\bin\Debug\StockLoan.BDDataTest.exe.config
+C:\_dev\ATLAS\Loanstar\BDBoxInformationTest\bin\Debug\StockLoan.BDDataTest.exe
+C:\_dev\ATLAS\Loanstar\BDBoxInformationTest\bin\Debug\StockLoan.BDDataTest.pdb
+C:\_dev\ATLAS\Loanstar\BDBoxInformationTest\bin\Debug\StockLoan.BDData.dll
+C:\_dev\ATLAS\Loanstar\BDBoxInformationTest\bin\Debug\StockLoan.Common.dll
+C:\_dev\ATLAS\Loanstar\BDBoxInformationTest\bin\Debug\StockLoan.BDData.pdb
+C:\_dev\ATLAS\Loanstar\BDBoxInformationTest\bin\Debug\StockLoan.Common.pdb
+C:\_dev\ATLAS\Loanstar\BDBoxInformationTest\obj\Debug\StockLoan.BDDataTest.exe
+C:\_dev\ATLAS\Loanstar\BDBoxInformationTest\obj\Debug\StockLoan.BDDataTest.pdb
+H:\_dev\ATLAS\Loanstar\BDBoxInformationTest\bin\Debug\StockLoan.BDDataTest.exe.config
+H:\_dev\ATLAS\Loanstar\BDBoxInformationTest\obj\Debug\StockLoan.BDDataTest.exe
+H:\_dev\ATLAS\Loanstar\BDBoxInformationTest\obj\Debug\StockLoan.BDDataTest.pdb

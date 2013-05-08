@@ -1,0 +1,1597 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Silverlight.Maps</name>
+    </assembly>
+    <members>
+        <member name="T:C1.Silverlight.Maps.C1MapCanvas">
+            <summary>
+            A <see cref="T:System.Windows.Controls.Panel"/> that positions its elements using geographic coordinates and the current state of an associated <see cref="T:C1.Silverlight.Maps.C1Maps"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1MapCanvas.GetLatLong(System.Windows.DependencyObject)">
+            <summary> 
+            Gets the value of the LatLong attached property for the 
+            specified element.
+            </summary> 
+            <param name="element">
+            The element from which to read the attached property.
+            </param> 
+            <returns>The value of the LatLong property.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1MapCanvas.SetLatLong(System.Windows.DependencyObject,System.Windows.Point)">
+            <summary> 
+            Sets the value of the LatLong attached property for the 
+            specified element.
+            </summary> 
+            <param name="element">
+            The element to write the attached property to.
+            </param> 
+            <param name="value">The property value to set.</param>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1MapCanvas.LatLongProperty">
+            <summary> 
+            Identifies the LatLong attached property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1MapCanvas.GetPinpoint(System.Windows.DependencyObject)">
+            <summary> 
+            Gets the value of the Pinpoint attached property for the 
+            specified element.
+            </summary> 
+            <param name="element">
+            The element from which to read the attached property.
+            </param> 
+            <returns>The value of the Pinpoint property.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1MapCanvas.SetPinpoint(System.Windows.DependencyObject,System.Windows.Point)">
+            <summary> 
+            Sets the value of the Pinpoint attached property for the 
+            specified element.
+            </summary> 
+            <param name="element">
+            The element to write the attached property to.
+            </param> 
+            <param name="value">The property value to set.</param>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1MapCanvas.PinpointProperty">
+            <summary> 
+            Identifies the Pinpoint attached property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1MapCanvas.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Maps.C1MapCanvas"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1MapCanvas.ParentMaps">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.Maps.C1Maps"/> to which this C1MapCanvas is associated with.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Maps.C1MapItemsLayer">
+            <summary>
+            An <see cref="T:System.Windows.Controls.ItemsControl"/> that displays its items positioned geographically inside a <see cref="T:C1.Silverlight.Maps.C1Maps"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Maps.IMapLayer">
+            <summary>
+            Interface implemented by classes that will be added as layers of a <see cref="T:C1.Silverlight.Maps.C1Maps"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.IMapLayer.ParentMaps">
+            <summary>
+            Get or sets the parent <see cref="T:C1.Silverlight.Maps.C1Maps"/> for this <see cref="T:C1.Silverlight.Maps.IMapLayer"/>
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1MapItemsLayer.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Maps.C1MapItemsLayer"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1MapItemsLayer.ParentMaps">
+            <summary>
+            Get or sets the parent <see cref="T:C1.Silverlight.Maps.C1Maps"/> for this <see cref="T:C1.Silverlight.Maps.IMapLayer"/>
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Maps.C1Maps">
+            <remarks>
+            <para>In order for C1Maps to be able to access tiles over the internet, the Silverlight application must be hosted in a Web server. If the Silverlight application
+            is ran directly from local disk, the Silverlight runtime prevents it from accessing internet resources.</para>
+            <para>Note that geographic coordinates are represented using <see cref="T:System.Windows.Point"/> structures. The X property of Point is the longitude and the Y property is the latitude.</para>
+            </remarks>
+            <summary>
+            Displays a map with layers of content above it.
+            </summary>	
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1Maps.MaxZoom">
+            <summary>
+            The maximum zoom of a C1Maps.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1Maps.MinZoom">
+            <summary>
+            The minimum zoom of a C1Maps.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1Maps.MaxLat">
+            <summary>
+            The maximum latitude of a C1Maps.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1Maps.MinLat">
+            <summary>
+            The minimum zoom of a C1Maps.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1Maps.MaxLong">
+            <summary>
+            The maximum longitude of a C1Maps.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1Maps.MinLong">
+            <summary>
+            The minimum zoom of a C1Maps.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1Maps.ScreenToGeographic(System.Windows.Point)">
+            <summary>
+            Transform a point from screen coordinates to geographic coordinates.
+            </summary>
+            <param name="point">A point in screen coordinates (pixels from the top left corner of this control).</param>
+            <returns>The geographic coordinates currently mapped to the parameter screen coordinates.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1Maps.GeographicToScreen(System.Windows.Point)">
+            <summary>
+            Transform a point from geographic coordinates to screen coordinates.
+            </summary>
+            <param name="latLong">A point in geographic coordinates.</param>
+            <returns>The screen coordinates currently mapped to the parameter geographic coordinates.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1Maps.ScreenToLogic(System.Windows.Point)">
+            <summary>
+            Transform a point from screen coordinates to logic coordinates.
+            </summary>
+            <remarks>
+            The logic coordinates are the ones used by the <see cref="T:C1.Silverlight.Maps.IMapProjection"/>.
+            </remarks>
+            <param name="point">A point in screen coordinates (pixels from the top left corner of this control).</param>
+            <returns>The screen coordinates currently mapped to the parameter screen coordinates.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1Maps.LogicToScreen(System.Windows.Point)">
+            <summary>
+            Transform a point from logic coordinates to screen coordinates.
+            </summary>
+            <param name="point">A point in logic coordinates.</param>
+            <returns>The screen coordinates currently mapped to the parameter logic coordinates.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1Maps.Distance(System.Windows.Point,System.Windows.Point)">
+            <summary>
+            Returns the distance, in meters, between two geographic coordinates.
+            </summary>
+            <param name="latLong1">The first geographic coordinate.</param>
+            <param name="latLong2">The second geographic coordinate.</param>
+            <returns>The distance, in meters, between the two geographic coordinates.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1Maps.ChangeVisualStateCommon(System.Boolean)">
+            <summary>
+            Updates the current visual state of the Common visual state group to match the object's properties.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1Maps.SourceProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Maps.C1Maps.Source"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1Maps.CenterProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Maps.C1Maps.Center"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1Maps.ProjectionProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Maps.C1Maps.Projection"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1Maps.ZoomProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Maps.C1Maps.Zoom"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1Maps.TargetZoomProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Maps.C1Maps.TargetZoom"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1Maps.ShowToolsProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Maps.C1Maps.ShowTools"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1Maps.TargetZoomSpeedProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Maps.C1Maps.TargetZoomSpeed"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1Maps.TargetCenterProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Maps.C1Maps.TargetCenter"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1Maps.TargetCenterSpeedProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Maps.C1Maps.TargetCenterSpeed"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1Maps.TilesModeProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Maps.C1Maps.TilesMode"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1Maps.FadeInTilesProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Maps.C1Maps.FadeInTiles"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1Maps.IsMouseOverProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Maps.C1Maps.IsMouseOver"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1Maps.ForceMouseOverProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Maps.C1Maps.ForceMouseOver"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1Maps.FocusCuesVisibilityProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Maps.C1Maps.FocusCuesVisibility"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1Maps.DisabledCuesVisibilityProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Maps.C1Maps.DisabledCuesVisibility"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1Maps.MouseOverBrushProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Maps.C1Maps.MouseOverBrush"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1Maps.PressedBrushProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Maps.C1Maps.PressedBrush"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1Maps.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Maps.C1Maps"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1Maps.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.Maps.C1Maps"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="E:C1.Silverlight.Maps.C1Maps.TilesLoadProgress">
+            <summary>
+            Fires when the number of tiles that need to be loaded changes. Only fires when using native tiles mode.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1Maps.Layers">
+            <summary>
+            Gets the collection of layers.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1Maps.ViewportWidth">
+            <summary>
+            The visible width of the map in logic coordinates.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1Maps.ViewportHeight">
+            <summary>
+            The visible height of the map in logic coordinates.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1Maps.Source">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.MultiScaleTileSource"/> used as source for the base map tiles.
+            </summary>
+            <remarks>
+            If the source is set to null no map tiles are shown.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1Maps.Center">
+            <summary>
+            Gets or sets the center of this map in geographic coordinates.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Maps.C1Maps.CenterChanged">
+            <summary> 
+            Event raised when the <see cref="P:C1.Silverlight.Maps.C1Maps.Center"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1Maps.Projection">
+            <summary>
+            Gets or sets the projection used for this map.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1Maps.Zoom">
+            <summary>
+            Gets or sets the zoom factor of this map.
+            </summary>
+            <remarks>
+            The minimum zoom factor is 0. An increment of 1 in the zoom factor doubles the map resolution.
+            </remarks>
+        </member>
+        <member name="E:C1.Silverlight.Maps.C1Maps.ZoomChanged">
+            <summary> 
+            Event raised when the <see cref="P:C1.Silverlight.Maps.C1Maps.Zoom"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1Maps.TargetZoom">
+            <summary>
+            Gets or sets the target zoom.
+            </summary>
+            <remarks>
+            When TargetZoom is set, the <see cref="P:C1.Silverlight.Maps.C1Maps.Zoom"/> property value smoothly changes to TargetZoom.
+            </remarks>
+        </member>
+        <member name="E:C1.Silverlight.Maps.C1Maps.TargetZoomChanged">
+            <summary> 
+            Event raised when the <see cref="P:C1.Silverlight.Maps.C1Maps.TargetZoom"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1Maps.ShowTools">
+            <summary>
+            Gets or sets a value indicating whether the default tools are shown.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1Maps.TargetZoomSpeed">
+            <summary>
+            Gets or sets a value that determines the speed with which <see cref="P:C1.Silverlight.Maps.C1Maps.Zoom"/> approaches <see cref="P:C1.Silverlight.Maps.C1Maps.TargetZoom"/>.
+            </summary>
+            <remarks>
+            The value should be between 0 and 1. A value of 1 indicates that Zoom instantly changes to TargetZoom.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1Maps.TargetCenter">
+            <summary>
+            Gets or sets the target center.
+            </summary>
+            <remarks>
+            When TargetCenter is set, the <see cref="P:C1.Silverlight.Maps.C1Maps.Center"/> property value smoothly changes to TargetCenter.
+            </remarks>
+        </member>
+        <member name="E:C1.Silverlight.Maps.C1Maps.TargetCenterChanged">
+            <summary> 
+            Event raised when the <see cref="P:C1.Silverlight.Maps.C1Maps.TargetCenter"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1Maps.TargetCenterSpeed">
+            <summary>
+            Gets or sets a value that determines the speed with which <see cref="P:C1.Silverlight.Maps.C1Maps.Center"/> approaches <see cref="P:C1.Silverlight.Maps.C1Maps.TargetCenter"/>.
+            </summary>
+            <remarks>
+            The value should be between 0 and 1. A value of 1 indicates that Center instantly changes to TargetCenter.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1Maps.TilesMode">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.Maps.MapTilesMode"/> used by the built in <see cref="T:C1.Silverlight.Maps.C1MapTilesLayer"/>.
+            </summary>
+            <remarks>
+            <see cref="F:C1.Silverlight.Maps.MapTilesMode.Native"/> uses less CPU than <see cref="F:C1.Silverlight.Maps.MapTilesMode.DeepZoom"/>, but its transitions aren't as smooth.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1Maps.FadeInTiles">
+            <summary>
+            Gets or sets whether tiles fade in on load.  This property can only be used with the native tiles mode.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1Maps.IsMouseOver">
+            <summary>
+            Returns true if the mouse is over the control.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Maps.C1Maps.IsMouseOverChanged">
+            <summary> 
+            Event raised when the <see cref="P:C1.Silverlight.Maps.C1Maps.IsMouseOver"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1Maps.ForceMouseOver">
+            <summary>
+            Set to true to force the mouse over visual state.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1Maps.FocusCuesVisibility">
+            <summary>
+            Gets or sets a value indicating whether the focus visuals of the control are visible.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1Maps.DisabledCuesVisibility">
+            <summary>
+            Gets or sets a value indicating whether the disabled visuals of the control are visible.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1Maps.MouseOverBrush">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to highlight the control when it has the mouse over.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1Maps.PressedBrush">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to paint a button when it is pressed.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Maps.C1MapTilesLayer">
+            <summary>
+            A <see cref="T:C1.Silverlight.Maps.IMapLayer"/> that displays map tiles from a <see cref="T:System.Windows.Media.MultiScaleTileSource"/>
+            </summary>
+            <remarks>
+            <see cref="T:C1.Silverlight.Maps.C1Maps"/> comes with a C1MapTilesLayer layer, so that it's not usually necessary to add a layer of this type.
+            </remarks>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1MapTilesLayer.SourceProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Maps.C1MapTilesLayer.Source"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1MapTilesLayer.ModeProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Maps.C1MapTilesLayer.Mode"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1MapTilesLayer.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Maps.C1MapTilesLayer"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1MapTilesLayer.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.Maps.C1MapTilesLayer"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="E:C1.Silverlight.Maps.C1MapTilesLayer.TilesLoadProgress">
+            <summary>
+            Fires when the number of tiles that need to be loaded changes. Only fires when using native tiles mode.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1MapTilesLayer.ParentMaps">
+            <summary>
+            Get or sets the parent <see cref="T:C1.Silverlight.Maps.C1Maps"/> for this <see cref="T:C1.Silverlight.Maps.IMapLayer"/>
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1MapTilesLayer.FadeInTiles">
+            <summary>
+            Gets or sets whether tiles fade in on load. This property can only be used with the native tiles mode.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1MapTilesLayer.Source">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.MultiScaleTileSource"/> used as source for this map tiles.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1MapTilesLayer.Mode">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.Maps.MapTilesMode"/> used by this tiles layer.
+            </summary>
+            <remarks>
+            <see cref="F:C1.Silverlight.Maps.MapTilesMode.Native"/> uses less CPU than <see cref="F:C1.Silverlight.Maps.MapTilesMode.DeepZoom"/>, but its transitions aren't as smooth.
+            </remarks>
+        </member>
+        <member name="T:C1.Silverlight.Maps.MapTilesMode">
+            <summary>
+            Defines the modes used to display tiles in <see cref="T:C1.Silverlight.Maps.C1MapTilesLayer"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.MapTilesMode.Native">
+            <summary>
+            Use native Silverlight implementation with low CPU usage.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.MapTilesMode.DeepZoom">
+            <summary>
+            Use Deep Zoom.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Maps.C1MapToolsLayer">
+            <summary>
+            A <see cref="T:C1.Silverlight.Maps.IMapLayer"/> that displays tools for panning and zooming the map, and a scale.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1MapToolsLayer.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Maps.C1MapToolsLayer"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1MapToolsLayer.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.Maps.C1MapToolsLayer"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1MapToolsLayer.ParentMaps">
+            <summary>
+            Get or sets the parent <see cref="T:C1.Silverlight.Maps.C1Maps"/> for this <see cref="T:C1.Silverlight.Maps.IMapLayer"/>
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Maps.C1MapVirtualLayer">
+            <summary>
+            A <see cref="T:C1.Silverlight.Maps.IMapLayer"/> that displays its items positioned geographically and only shows the items actually in view.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1MapVirtualLayer.ForceRefresh">
+            <summary>
+            Forces this C1MapVirtualLayer to request all items again.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1MapVirtualLayer.ItemTemplateProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Maps.C1MapVirtualLayer.ItemTemplate"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1MapVirtualLayer.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Maps.C1MapVirtualLayer"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1MapVirtualLayer.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.Maps.C1MapVirtualLayer"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1MapVirtualLayer.ParentMaps">
+            <summary>
+            Get or sets the parent <see cref="T:C1.Silverlight.Maps.C1Maps"/> for this <see cref="T:C1.Silverlight.Maps.IMapLayer"/>
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1MapVirtualLayer.Slices">
+            <summary>
+            Gets the collection of <see cref="T:C1.Silverlight.Maps.MapSlice"/> specifying how the map is partitioned for virtualization.
+            </summary>
+            <remarks>
+            Each <see cref="T:C1.Silverlight.Maps.MapSlice"/> defines a set of regions this C1MapVirtualLayer will get items for when needed.
+            The minimum zoom of a MapSlice is the value of its <see cref="P:C1.Silverlight.Maps.MapSlice.Zoom"/> property, while the 
+            maximum zoom is the value from the Zoom property of the next slice.
+            Each slice divides the map in a uniform grid of regions according to the current <see cref="P:C1.Silverlight.Maps.C1Maps.Projection"/>.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1MapVirtualLayer.MapItemsSource">
+            <summary>
+            Gets os sets the current <see cref="T:C1.Silverlight.Maps.IMapVirtualSource"/> for this C1MapVirtualLayer.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1MapVirtualLayer.ItemTemplate">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.DataTemplate"/> used to display each item.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Maps.C1MultiScaleImage">
+            <summary>
+            This object enables users to open a multi-resolution image which can be zoomed in on and panned across.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1MultiScaleImage.ChangeVisualStateCommon(System.Boolean)">
+            <summary>
+            Updates the current visual state of the Common visual state group to match the object's properties.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1MultiScaleImage.ViewportOriginProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Maps.C1MultiScaleImage.ViewportOrigin"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1MultiScaleImage.ViewportWidthProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Maps.C1MultiScaleImage.ViewportWidth"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1MultiScaleImage.SourceProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Maps.C1MultiScaleImage.Source"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1MultiScaleImage.IsMouseOverProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Maps.C1MultiScaleImage.IsMouseOver"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1MultiScaleImage.ForceMouseOverProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Maps.C1MultiScaleImage.ForceMouseOver"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1MultiScaleImage.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Maps.C1MultiScaleImage"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1MultiScaleImage.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.Maps.C1MultiScaleImage"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1MultiScaleImage.FadeInTiles">
+            <summary>
+            Gets or sets whether tiles fade in on load.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Maps.C1MultiScaleImage.TilesLoadProgress">
+            <summary>
+            Fires when the number of tiles that need to be loaded changes.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1MultiScaleImage.ViewportOrigin">
+            <summary>
+            Gets or sets the top-left corner of the area of the image to be displayed.
+            </summary>
+            <remarks>
+            The point of the top-left corner of the rectangular area of the image to
+            be displayed. The coordinates of the point are in local coordinates (0-1)
+            relative to the displayed image. For example, a ViewportOrigin point value
+            of 1,1 would specify an origin on the lower right-hand corner of the image.
+            Because this origin is for the top-left corner of the rectangular area of
+            the image displayed, a value of 1, 1 would actually show nothing of the image
+            (area would be lower and to the right of the image). As another example,
+            a point at 0.5, 0.5 would be directly in the center of the image and therefore
+            the area shown would be to the lower-right of the image center.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1MultiScaleImage.ViewportWidth">
+            <summary>
+            Gets or sets the width of the area of the image displayed.
+            </summary>
+            <remarks>
+            The width of the area of the image displayed. This value is in logical coordinates.
+            For example a value of 1 displays the entire image (no zoom), a value of
+            0.5 is 200% zoomed in and a value of 0 is completely zoomed (user cannot
+            see the image at all). A value above 1 is zooming out from the image. For
+            example, a value of 2 means that the image will take up half the size of
+            the System.Windows.Controls.MultiScaleImage control area (50% zoom).
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1MultiScaleImage.Source">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.Maps.C1MultiScaleTileSource"/> used to obtain the Uris of the tiles.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1MultiScaleImage.IsMouseOver">
+            <summary>
+            Returns true if the mouse is over the control.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Maps.C1MultiScaleImage.IsMouseOverChanged">
+            <summary> 
+            Event raised when the <see cref="P:C1.Silverlight.Maps.C1MultiScaleImage.IsMouseOver"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1MultiScaleImage.ForceMouseOver">
+            <summary>
+            Set to true to force the mouse over visual state.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Maps.TilesLoadProgressEventArgs">
+            <summary>
+            Provides data for the <see cref="E:C1.Silverlight.Maps.C1MultiScaleImage.TilesLoadProgress"/> event.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.TilesLoadProgressEventArgs.#ctor(System.Int32)">
+            <summary>
+            Initializes a new <see cref="T:C1.Silverlight.Maps.TilesLoadProgressEventArgs"/>
+            </summary>
+            <param name="tilesRemaining">Value to initialize the <see cref="P:C1.Silverlight.Maps.TilesLoadProgressEventArgs.TilesRemaining"/> property.</param>
+        </member>
+        <member name="P:C1.Silverlight.Maps.TilesLoadProgressEventArgs.TilesRemaining">
+            <summary>
+            Gets the number of tiles that remain to be loaded.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Maps.C1VectorItem">
+            <summary>
+            Represents element with geometry defined in geographic coordinates.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Maps.C1VectorItemBase">
+            <summary>
+            An element for C1VectorLayer.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1VectorItemBase.LodProperty">
+            <summary>
+            Identifies the Lod dependency property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1VectorItemBase.FillProperty">
+            <summary>
+            Identifies the Fill dependency property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1VectorItemBase.StrokeProperty">
+            <summary>
+            Identifies the Stroke dependency property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1VectorItemBase.StrokeThicknessProperty">
+            <summary>
+            Identifies the StrokeThickness dependency property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1VectorItemBase.StrokeDashArrayProperty">
+            <summary>
+            Identifies the StrokeDashArray dependency property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1VectorItemBase.StrokeStartLineCapProperty">
+            <summary>
+            Identifies the StrokeStartLineCap dependency property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1VectorItemBase.StrokeEndLineCapProperty">
+            <summary>
+            Identifies the StrokeEndLineCap dependency property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1VectorItemBase.StrokeDashCapProperty">
+            <summary>
+            Identifies the StrokeDashCap dependency property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1VectorItemBase.StrokeLineJoinProperty">
+            <summary>
+            Identifies the StrokeLineJoin dependency property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1VectorItemBase.StrokeDashOffsetProperty">
+            <summary>
+            Identifies the StrokeDashOffset dependency property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1VectorItemBase.StrokeMiterLimitProperty">
+            <summary>
+            Identifies the StrokeMiterLimit dependency property.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1VectorItemBase.GetScreenBounds">
+            <summary>
+            Gets the element bounds in screen coordinates.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1VectorItemBase.InitShape(System.Windows.Shapes.Shape)">
+            <summary>
+            Initializes the internal shape.
+            </summary>
+            <param name="shape"></param>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1VectorItemBase.GetBounds(System.Collections.Generic.IEnumerable{System.Windows.Point})">
+            <summary>
+            Gets the bounding rectangle.
+            </summary>
+            <param name="pts"></param>
+            <returns></returns>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorItemBase.Lod">
+            <summary>
+            Gets or sets the level of details of the element.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorItemBase.Fill">
+            <summary>
+            Gets or sets the fill brush.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorItemBase.Stroke">
+            <summary>
+            Gets or sets the stroke brush.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorItemBase.StrokeThickness">
+            <summary>
+            Gets or sets the stroke thickness.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorItemBase.StrokeDashArray">
+            <summary>
+            Gets or sets the stroke dash array.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorItemBase.StrokeStartLineCap">
+            <summary>
+            Gets or sets the stroke start line cap.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorItemBase.StrokeEndLineCap">
+            <summary>
+            Gets or sets the stroke end line cap.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorItemBase.StrokeDashCap">
+            <summary>
+            Gets or sets the stroke end line cap.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorItemBase.StrokeLineJoin">
+            <summary>
+            Gets or sets the stroke line join.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorItemBase.StrokeDashOffset">
+            <summary>
+            Gets or sets the stroke dash offset.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorItemBase.StrokeMiterLimit">
+            <summary>
+            Gets or sets the stroke miter limit.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorItemBase.Bounds">
+            <summary>
+            Get the bounds in geographical coordinates.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorItemBase.DefiningGeometry">
+            <summary>
+            Gets the defining geometry. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1VectorItem.GeometryProperty">
+            <summary>
+            Identifies the Geometry dependency property.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorItem.Geometry">
+            <summary>
+            Gets or sets the element geometry.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorItem.DefiningGeometry">
+            <summary>
+            Gets the defining geometry.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Maps.LabelVisibility">
+            <summary>
+            Specifies label visibility.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.LabelVisibility.AutoHide">
+            <summary>
+            Overlapped labels are automatically hidden.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.LabelVisibility.Hidden">
+            <summary>
+            Labels are not visible.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.LabelVisibility.Visible">
+            <summary>
+            All labels are visible.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Maps.LabelPosition">
+            <summary>
+            Specifies label position relatively to the corresponding element.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.LabelPosition.Center">
+            <summary>
+            Label is centered.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.LabelPosition.Left">
+            <summary>
+            Label is at the left.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.LabelPosition.Right">
+            <summary>
+            Label is at the right.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.LabelPosition.Top">
+            <summary>
+            Label is at the top. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.LabelPosition.Bottom">
+            <summary>
+            Label is at the bottom.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Maps.C1VectorLayer">
+            <summary>
+            Represents map layer with the shapes, vectors or geometries in geographical coordinates.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1VectorLayer.#ctor">
+            <summary>
+            Creates an instance of C1VectorLayer object.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1VectorLayer.ItemTemplateProperty">
+            <summary>
+            Identifies the ItemTemplate dependency property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1VectorLayer.ItemStyleProperty">
+            <summary>
+            Identifies the ItemStyle dependency property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1VectorLayer.ItemsSourceProperty">
+            <summary>
+            Identifies the ItemSource dependency property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1VectorLayer.UriSourceProperty">
+            <summary>
+            Identifies the UriSource dependency property.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1VectorLayer.BeginUpdate">
+            <summary>
+            Starts batch update.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1VectorLayer.EndUpdate">
+            <summary>
+            Finishes batch update.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1VectorLayer.OnApplyTemplate">
+            <summary>
+            The method is invoked during ApplyTemplate() call.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorLayer.ItemTemplate">
+            <summary>
+            Gets or sets the item template. Item template should define
+            C1VectorItemBase object.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorLayer.ItemStyle">
+            <summary>
+            Gets or sets the item style.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorLayer.ItemsSource">
+            <summary>
+            Gets or sets the items source. The items should be collection of
+            C1VectorItemBase objects or ItemTemplate should define C1VectorItemBase
+            object.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorLayer.UriSource">
+            <summary>
+            Gets or sets the item style.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Maps.C1VectorLayer.UriSourceFailed">
+            <summary>
+            Fires when the loading of UriSource failed.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Maps.C1VectorLayer.UriSourceLoaded">
+            <summary>
+            Fires when data from UriSource was loaded.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorLayer.Children">
+            <summary>
+            Gets the collection of child elements.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorLayer.LabelVisibility">
+            <summary>
+            Gets or sets the label visibility.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorLayer.MinSize">
+            <summary>
+            Specifies minimal size at which element becomes visible.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorLayer.ParentMaps">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.Maps.C1Maps"/> to which this C1VectorLayer is associated with.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Maps.C1VectorLayer.UriSourceFailedEventArgs">
+            <summary>
+            Provides data for <see cref="E:C1.Silverlight.Maps.C1VectorLayer.UriSourceFailed"/> event.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1VectorLayer.UriSourceFailedEventArgs.#ctor(System.Exception)">
+            <summary>
+            Initializes a new instance of UriSourceFailedEventArgs class.
+            </summary>
+            <param name="error">Value to initialize <see cref="P:C1.Silverlight.Maps.C1VectorLayer.UriSourceFailedEventArgs.ErrorException"/>.</param>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorLayer.UriSourceFailedEventArgs.ErrorException">
+            <summary>
+            Gets the underlying exception reported by the event.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Maps.C1VectorPanel">
+            <summary>
+            The panel which performs layout of vector elements.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1VectorPanel.#ctor">
+            <summary>
+            Creates a new instance of C1VectorPanel.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1VectorPanel.ArrangeOverride(System.Windows.Size)">
+            <summary>
+            Performs layout for the element.
+            </summary>
+            <param name="finalSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1VectorPanel.MeasureOverride(System.Windows.Size)">
+            <summary>
+            Performs measure operation for the element.
+            </summary>
+            <param name="availableSize"></param>
+            <returns></returns>
+        </member>
+        <member name="T:C1.Silverlight.Maps.C1VectorPlacemark">
+            <summary>
+            Represents placemark on the map.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1VectorPlacemark.LabelPositionProperty">
+            <summary>
+            Identifies the LabelPosition dependency property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1VectorPlacemark.GeoPointProperty">
+            <summary>
+            Identifies the GeoPoint dependency property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1VectorPlacemark.LabelProperty">
+            <summary>
+            Identifies the Label dependency property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1VectorPlacemark.LabelTemplateProperty">
+            <summary>
+            Identifies the LabelTemplate dependency property.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1VectorPlacemark.GetScreenBounds">
+            <summary>
+            Gets the element bounds in screen coordinates.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1VectorPlacemark.#ctor">
+            <summary>
+            Initializes a new instance of C1VectorPlacemark class.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1VectorPlacemark.OnDataContextChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when data context was changed.
+            </summary>
+            <param name="obj"></param>
+            <param name="args"></param>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorPlacemark.LabelPosition">
+            <summary>
+            Gets or sets the label position relatively to the associated geographical coordinates
+            which is specified by GeoPoint property.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorPlacemark.PinPoint">
+            <summary>
+            Gets or sets the element position in geographical coordinates.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorPlacemark.GeoPoint">
+            <summary>
+            Gets or sets the element position in geographical coordinates where X=longitude and Y=latitude.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorPlacemark.Label">
+            <summary>
+            Gets or set the label associated with the vector.
+            </summary>
+            <remarks>
+            Depending on LabelDisplay property it can be displayed as tooltip or always visible.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorPlacemark.LabelTemplate">
+            <summary>
+            Gets or set the label template associated with the place mark.
+            </summary>
+            <remarks>
+            The label is created from the template only if the Label property is not set.</remarks>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorPlacemark.Bounds">
+            <summary>
+            Get the bounds in geographical coordinates.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorPlacemark.LabelUI">
+            <summary>
+            Gets the UIElement associated with label.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Maps.C1VectorPolygon">
+            <summary>
+            Represents polygon in geographical coordinates.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1VectorPolygon.PointsProperty">
+            <summary>
+            Identifies the Points dependency property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1VectorPolygon.PointsSourceProperty">
+            <summary>
+            Identifies the PointsSource dependency property.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1VectorPolygon.GetScreenBounds">
+            <summary>
+            Gets the element bounds in screen coordinates.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorPolygon.Points">
+            <summary>
+            Gets or sets a collection that contains the vertex points of the C1VectorPolygon.
+            The points represents geographical coordinates where X=longitude and Y=latitude.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorPolygon.PointsSource">
+            <summary>
+            Gets or sets a source for the vertex points. The PointsSource is used only
+            if Points property is not set(Points is null value).
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorPolygon.Bounds">
+            <summary>
+            Get the bounds in geographical coordinates.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Maps.C1VectorPolyline">
+            <summary>
+            Represents polyline in geographical coordinates.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1VectorPolyline.PointsProperty">
+            <summary>
+            Identifies the Points dependency property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.C1VectorPolyline.PointsSourceProperty">
+            <summary>
+            Identifies the PointsSource dependency property.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1VectorPolyline.GetScreenBounds">
+            <summary>
+            Gets the element bounds in screen coordinates.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorPolyline.Points">
+            <summary>
+            Gets or sets a collection that contains the vertex points of the C1VectorPolyline.
+            The points represents geographical coordinates where X=longitude and Y=latitude.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorPolyline.PointsSource">
+            <summary>
+            Gets or sets a source for the vertex points. The PointsSource is used only
+            if Points property is not set(Points is null value).
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1VectorPolyline.Bounds">
+            <summary>
+            Get the bounds in geographical coordinates.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Maps.GeoRssReader">
+            <summary>
+            Contains methods for importing GeoRSS data.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.GeoRssReader.Read(System.IO.Stream)">
+            <summary>
+            Read GeoRSS data from the specified stream.
+            </summary>
+            <param name="stream">Stream with GeoRSS data.</param>
+            <returns>The list of imported vector elements.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Maps.GeoRssReader.Read(System.String)">
+            <summary>
+            Read GeoRSS data from the specified string.
+            </summary>
+            <param name="s">String with GeoRSS data.</param>
+            <returns>The list of imported vector elements.</returns>
+        </member>
+        <member name="T:C1.Silverlight.Maps.XElementConverter">
+            <summary>
+            Provides conversion routines for binding with XML-based data.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.XElementConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Modifies the source data before passing it to the target.
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Silverlight.Maps.XElementConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Modifies the target data before passing it to the source object. 
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="T:C1.Silverlight.Maps.KmlReader">
+            <summary>
+            Contains methods for import KML files.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.KmlReader.Read(System.IO.Stream)">
+            <summary>
+            Read kml data from stream.
+            </summary>
+            <param name="stream">Stream that contains KML data.</param>
+            <returns>List of vector objects for C1VectorLayer.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Maps.KmlReader.Read(System.String)">
+            <summary>
+            Read kml data from string.
+            </summary>
+            <param name="s">String that contains KML data.</param>
+            <returns>List of vector objects for C1VectorLayer.</returns>
+        </member>
+        <member name="T:C1.Silverlight.Maps.SaveElementCallback">
+            <summary>
+            Callback for KmlWriter.Write method.
+            </summary>
+            <param name="vector">Vector for writing.</param>
+            <param name="element">Created xml element.</param>
+            <returns>The resulting xml-element.</returns>
+        </member>
+        <member name="T:C1.Silverlight.Maps.KmlWriter">
+            <summary>
+            Contains methods for KML export.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.KmlWriter.Write(System.IO.Stream,System.Collections.Generic.IEnumerable{C1.Silverlight.Maps.C1VectorItemBase},System.String,C1.Silverlight.Maps.SaveElementCallback)">
+            <summary>
+            Saves collection of C1VectorItems into the stream as KML placemarks.
+            </summary>
+            <param name="stream"></param>
+            <param name="vectors"></param>
+            <param name="nsp"></param>
+            <param name="saveElementCallback"></param>
+        </member>
+        <member name="T:C1.Silverlight.Maps.KmzReader">
+            <summary>
+            Contains methods for importing KMZ files(compressed KML).
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.KmzReader.Read(System.IO.Stream)">
+            <summary>
+            Reads collection of vector objects from specified KMZ stream.
+            </summary>
+            <param name="stream">Stream that contains KMZ data.</param>
+            <returns>The list of imported vector objects.</returns>
+        </member>
+        <member name="T:C1.Silverlight.Maps.LOD">
+            <summary>
+            LOD(Level Of Details) structure specifies visibility of elements depending on
+            the map scale(zoom).
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.LOD.#ctor(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Creates an instance of LOD structure.
+            </summary>
+            <param name="minSize"></param>
+            <param name="maxSize"></param>
+            <param name="minZoom"></param>
+            <param name="maxZoom"></param>
+        </member>
+        <member name="P:C1.Silverlight.Maps.LOD.MinSize">
+            <summary>
+            When the pixel size of element is less than MinSize the element is not visible.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.LOD.MaxSize">
+            <summary>
+            When the pixel size of element is greater than MaxSize the element is not visible.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.LOD.MinZoom">
+            <summary>
+            When the map zoom is less than MinZoom the element is not visible.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.LOD.MaxZoom">
+            <summary>
+            When the map zoom is greater than MaxZoom the element is not visible.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Maps.IMapProjection">
+            <summary>
+            Interface for projections between geographic coordinates and logical coordinates.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.IMapProjection.Project(System.Windows.Point)">
+            <summary>
+            Projects a geographic coordinate to logical coordinate.
+            </summary>
+            <param name="latLong">The geographic coordinate to project.</param>
+            <returns>The logical coordinate corresponding to the geographic coordinate.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Maps.IMapProjection.Unproject(System.Windows.Point)">
+            <summary>
+            Inverse of <see cref="M:C1.Silverlight.Maps.IMapProjection.Project(System.Windows.Point)"/>.
+            </summary>
+            <param name="point">The logical coordinate to apply the inverse projection.</param>
+            <returns>The geographic coordinate corresponding to the logical coordinate.</returns>
+        </member>
+        <member name="T:C1.Silverlight.Maps.IMapVirtualSource">
+            <summary>
+            Interface implemented by items sources for <see cref="T:C1.Silverlight.Maps.C1MapVirtualLayer"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.IMapVirtualSource.Request(System.Double,System.Double,System.Windows.Point,System.Windows.Point,System.Action{System.Collections.ICollection})">
+            <summary>
+            Called from <see cref="T:C1.Silverlight.Maps.C1MapVirtualLayer"/> when new items are needed for a map region.
+            </summary>
+            <param name="minZoom">The minimum zoom of the region.</param>
+            <param name="maxZoom">The maximum zoom of the region.</param>
+            <param name="lowerLeft">The lower left coordinate of the region, in geographic coordinates.</param>
+            <param name="upperRight">The upper right coordinate of the region, in geographic coordinates.</param>
+            <param name="callback">A delegate to call with the elements inside the specified region.</param>
+        </member>
+        <member name="T:C1.Silverlight.Maps.LatLongFormat">
+            <summary>
+            Defines different string representations of geographic coordinates.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.LatLongFormat.SignedDegrees">
+            <summary>
+            Represents a geographic coordinate as a comma separated pair of signed numbers.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.LatLongFormat.DegreesMinutes">
+            <summary>
+            Represents a geographic coordinate as pair of values in degrees, minutes and hemisphere. Example: 18°35.438'N 14°15.314'W
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.LatLongFormat.DegreesMinutesSeconds">
+            <summary>
+            Represents a geographic coordinate as pair of values in degrees, minutes, seconds and hemisphere. Example: 18°35'20.07"N 14°15'48.77"W
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Maps.LatLongConverter">
+            <summary>
+            Converts from a string to a <see cref="T:System.Windows.Point"/> representing a geographic coordinate and back.
+            </summary>
+            <remarks>
+            When converting from a string, LatLongConverter accepts any of the formats defined by <see cref="T:C1.Silverlight.Maps.LatLongFormat"/>.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Maps.LatLongConverter.Format">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.Maps.LatLongFormat"/> used when converting to a string.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Maps.MapSlice">
+            <summary>
+            Represents a map slice as used in <see cref="T:C1.Silverlight.Maps.C1MapVirtualLayer"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.MapSlice.#ctor(System.Int32,System.Int32,System.Double)">
+            <summary>
+            Initializes a new MapSlice.
+            </summary>
+            <param name="latSlices">The number of latitude divisions for this slice.</param>
+            <param name="longSlices">The number of longitude divisions for this slice.</param>
+            <param name="zoom">The minimum zoom of this slice.</param>
+        </member>
+        <member name="P:C1.Silverlight.Maps.MapSlice.Zoom">
+            <summary>
+            Gets the minimum zoom of this slice.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.MapSlice.LatSlices">
+            <summary>
+            Gets the number of latitude divisions for this slice.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.MapSlice.LongSlices">
+            <summary>
+            Gets the number of longitude divisions for this slice.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Maps.MercatorProjection">
+            <summary>
+            A <see cref="T:C1.Silverlight.Maps.IMapProjection"/> implementation for the Mercator projection.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.MercatorProjection.#ctor(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Initializes a new MercatorProjection.
+            </summary>
+            <param name="scaleX">Scale applied to the x coordinate after the projection.</param>
+            <param name="scaleY">Scale applied to the y coordinate after the projection.</param>
+            <param name="offsetX">Offset added to the x coordinate after the projection and after scaling.</param>
+            <param name="offsetY">Offset added to the y coordinate after the projection and after scaling.</param>
+        </member>
+        <member name="T:C1.Silverlight.Maps.C1MultiScaleTileSource">
+            <summary>
+            Base class for C1's <see cref="T:System.Windows.Media.MultiScaleTileSource"/> implementations.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.C1MultiScaleTileSource.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Creates a new instance of the <see cref="T:C1.Silverlight.Maps.C1MultiScaleTileSource"/> class with the specified parameters.
+            </summary>
+            <param name="imageWidth">The width of the image.</param>
+            <param name="imageHeight">The height of the image.</param>
+            <param name="tileWidth">The width of the tiles in the image.</param>
+            <param name="tileHeight">The height of the tiles in the image.</param>
+            <param name="tileOverlap">How much the tiles in the image overlap.</param>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1MultiScaleTileSource.TileWidth">
+            <summary>
+            Gets the tile width of the image.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Maps.C1MultiScaleTileSource.TileHeight">
+            <summary>
+            Gets the tile height of the image.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Maps.QuadTreeTileSource">
+            <summary>
+            Base class for <see cref="T:System.Windows.Media.MultiScaleTileSource"/> implementation accessing a quad tree of tiles.
+            </summary>
+            <remarks>
+            See http://msdn.microsoft.com/en-us/library/bb545006.aspx for a specific case of the quad tree access pattern.
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.Maps.QuadTreeTileSource.#ctor(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new QuadTreeTileSource.
+            </summary>
+            <param name="uriFormat">
+            A string with the format of the tile URLs. 
+            It must have two string.Format place holder. The first is for the server number (a random number from 0 to 3),
+            the second parameter is the quad tree access string.
+            </param>
+            <param name="code">
+            A four character string containing the characters for the tiles in the following order: 
+            upper left, lower left, upper right and lower right.
+            </param>
+            <param name="size">The side length in pixels of the source image at the maximum zoom level.</param>
+            <param name="tileSize">The side length, in pixels, of a tile.</param>
+        </member>
+        <member name="T:C1.Silverlight.Maps.VirtualEarthSource">
+            <summary>
+            Base class for Virtual Earth sources.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.VirtualEarthSource.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new instance of <see cref="T:C1.Silverlight.Maps.VirtualEarthSource"/>.
+            </summary>
+            <param name="uriFormat">Uri format with placeholders for server number and tile id.</param>
+            <param name="token">Authentication token.</param>
+        </member>
+        <member name="M:C1.Silverlight.Maps.VirtualEarthSource.#ctor(System.String)">
+            <summary>
+            Creates a new instance of <see cref="T:C1.Silverlight.Maps.VirtualEarthSource"/>.
+            </summary>
+            <param name="uriFormat">Uri format with placeholders for server number and tile id.</param>
+        </member>
+        <member name="T:C1.Silverlight.Maps.VirtualEarthRoadSource">
+            <summary>
+            A <see cref="T:System.Windows.Media.MultiScaleTileSource"/> accessing Microsoft's Virtual Earth road tiles.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.VirtualEarthRoadSource.UriFormat">
+            <summary>
+            The URI format used for accessing the tiles. It might be necessary to change this if Microsoft changes the tiles URLs.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.VirtualEarthRoadSource.#ctor">
+            <summary>
+            Initializes a new VirtualEarthRoadSource.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.VirtualEarthRoadSource.#ctor(System.String)">
+            <summary>
+            Initializes a new VirtualEarthRoadSource with an authentication token.
+            </summary>
+            <remarks>
+            See <see href="http://msdn.microsoft.com/en-us/library/cc980844.aspx">this MSDN article</see> for information
+            on how to obtain a token.
+            </remarks>
+        </member>
+        <member name="T:C1.Silverlight.Maps.VirtualEarthAerialSource">
+            <summary>
+            A <see cref="T:System.Windows.Media.MultiScaleTileSource"/> accessing Microsoft's Virtual Earth aerial tiles.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.VirtualEarthAerialSource.UriFormat">
+            <summary>
+            The URI format used for accessing the tiles. It might be necessary to change this if Microsoft changes the tiles URLs.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.VirtualEarthAerialSource.#ctor">
+            <summary>
+            Initializes a new VirtualEarthAerialSource.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.VirtualEarthAerialSource.#ctor(System.String)">
+            <summary>
+            Initializes a new VirtualEarthAerialSource with an authentication token.
+            </summary>
+            <remarks>
+            See <see href="http://msdn.microsoft.com/en-us/library/cc980844.aspx">this MSDN article</see> for information
+            on how to obtain a token.
+            </remarks>
+        </member>
+        <member name="T:C1.Silverlight.Maps.VirtualEarthHybridSource">
+            <summary>
+            A <see cref="T:System.Windows.Media.MultiScaleTileSource"/> accessing Microsoft's Virtual Earth hybrid tiles.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Maps.VirtualEarthHybridSource.UriFormat">
+            <summary>
+            The URI format used for accessing the tiles. It might be necessary to change this if Microsoft changes the tiles URLs.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.VirtualEarthHybridSource.#ctor">
+            <summary>
+            Initializes a new VirtualEarthHybridSource.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Maps.VirtualEarthHybridSource.#ctor(System.String)">
+            <summary>
+            Initializes a new VirtualEarthHybridSource with an authentication token.
+            </summary>
+            <remarks>
+            See <see href="http://msdn.microsoft.com/en-us/library/cc980844.aspx">this MSDN article</see> for information
+            on how to obtain a token.
+            </remarks>
+        </member>
+    </members>
+</doc>

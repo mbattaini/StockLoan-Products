@@ -1,0 +1,82 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:System="clr-namespace:System;assembly=mscorlib" xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+	x:Class="StockLoan_LocatesClient.MainPage" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+	
+	<Grid x:Name="LayoutRoot" Background="White">
+		
+		  <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+		
+		<c1:C1ThemeBureauBlack>
+			<Grid x:Name="MainGrid">
+				<Grid.Background>
+					<ImageBrush Stretch="UniformToFill" ImageSource="01712_disruption_1680x1050.jpg"/>
+				</Grid.Background>
+				<c1:C1DockControl  x:Name="MainDockControl" Margin="8,73,8,8" Background="{x:Null}" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" TabControlBackground="#FF1B4487" TabStripBackground="#FF1B4487" HeaderBackground="#FF1B4487" BorderBrush="#FF1B4487">
+
+					<c1:C1DockGroup>
+
+						<c1:C1DockTabControl x:Name="UpperMainDockTabControl" Dock="Top" DockWidth="500" DockHeight="500" TabItemShape="Rounded" Margin="0,0,-5,-2" CanUserSlide="False" CanUserReorder="False" CanUserHide="False" CanUserFloat="False" TabStripPlacement="Right" CanUserDock="False" TabItemClose="InEachTab" UpdateSourceCollection="False" Style="{StaticResource TransparantDockTabControl}" HeaderForeground="White" ShowMenu="False" HeaderBackground="#FF8FACB0">
+							<c1:C1DockTabControl.Background>
+								<SolidColorBrush Color="#FF626B7B" Opacity="0"/>
+							</c1:C1DockTabControl.Background>
+						</c1:C1DockTabControl>
+
+						<c1:C1DockTabControl x:Name="LowerLeftDockTabControl" CanUserSlide="False" CanUserReorder="False" CanUserHide="False" CanUserFloat="False" CanUserDock="False" TabItemClose="InEachTab" TabStripPlacement="Right" Style="{StaticResource TransparantDockTabControl}" HeaderBackground="#FF8FACB0" TabStripBackground="#FF1B4487" HeaderForeground="White" ShowMenu="False">
+							<c1:C1DockTabControl.Background>
+								<SolidColorBrush Color="#FF626B7B" Opacity="0"/>
+							</c1:C1DockTabControl.Background>
+						</c1:C1DockTabControl>
+						<c1:C1DockTabControl x:Name="LowerMiddleDockTabControl" CanUserSlide="False" CanUserReorder="False" CanUserHide="False" CanUserFloat="False" CanUserDock="False" TabItemClose="InEachTab" TabStripPlacement="Right" Style="{StaticResource TransparantDockTabControl}" Margin="0,0,-1,0" HeaderBackground="#FF8FACB0" HeaderForeground="White" ShowMenu="False">
+							<c1:C1DockTabControl.Background>
+								<SolidColorBrush Color="#FF626B7B" Opacity="0"/>
+							</c1:C1DockTabControl.Background>
+						</c1:C1DockTabControl>
+						<c1:C1DockTabControl x:Name="LowerRightDockTabControl" CanUserSlide="False" CanUserReorder="False" CanUserHide="False" CanUserFloat="False" CanUserDock="False" TabItemClose="InEachTab" TabStripPlacement="Right" Style="{StaticResource TransparantDockTabControl}" Margin="0,0,-1,0" HeaderBackground="#FF8FACB0" HeaderForeground="White" ShowMenu="False">
+							<c1:C1DockTabControl.Background>
+								<SolidColorBrush Color="#FF626B7B" Opacity="0"/>
+							</c1:C1DockTabControl.Background>
+						</c1:C1DockTabControl>
+
+					</c1:C1DockGroup>
+					<c1:C1DockGroup HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+
+						<c1:C1DockTabControl x:Name="RightDockTabControl" Dock="Top" DockWidth="500" DockHeight="500" TabItemShape="Rounded" Margin="0,0,-5,-2" CanUserSlide="False" CanUserReorder="False" CanUserHide="False" CanUserFloat="False" TabStripPlacement="Right" CanUserDock="False" TabItemClose="InEachTab" UpdateSourceCollection="False" Style="{StaticResource TransparantDockTabControl}" HorizontalContentAlignment="Stretch" HeaderBackground="#FF8FACB0" HeaderForeground="White" OpacityMask="Black" ShowMenu="False">
+							<c1:C1DockTabControl.Background>
+								<SolidColorBrush Color="#FF626B7B" Opacity="0"/>
+							</c1:C1DockTabControl.Background>
+						</c1:C1DockTabControl>
+						<c1:C1DockTabControl x:Name="RightLowerDockTabControl" CanUserSlide="False" CanUserReorder="False" CanUserHide="False" CanUserFloat="False" CanUserDock="False" TabItemClose="InEachTab" TabStripPlacement="Right" Style="{StaticResource TransparantDockTabControl}" Margin="0,0,-1,0" HeaderBackground="#FF8FACB0" HeaderForeground="White" ShowMenu="False">
+							<c1:C1DockTabControl.Background>
+								<SolidColorBrush Color="#FF626B7B" Opacity="0"/>
+							</c1:C1DockTabControl.Background>
+						</c1:C1DockTabControl>
+
+					</c1:C1DockGroup>
+
+				</c1:C1DockControl>
+				<c1:C1ToolbarStrip x:Name="MainToolbarStrip" VerticalAlignment="Top" Style="{StaticResource TransparantToolBarStrip}">
+					<c1:C1ToolbarButton x:Name="LocatesButton" ToolTipService.ToolTip="Locates" Height="24" Width="24" Style="{StaticResource TransparantButton}" Click="LocatesButton_Click">
+						<Image Stretch="Fill" Source="Images/feed.png" />
+					</c1:C1ToolbarButton>
+					<c1:C1ToolbarButton x:Name="SubmitListButton" ToolTipService.ToolTip="Submit List" Height="24" Width="24"  Style="{StaticResource TransparantButton}" Click="SubmitListButton_Click">
+						<Image Stretch="Fill" Source="Images/product.png" />
+					</c1:C1ToolbarButton>
+					<c1:C1ToolbarButton x:Name="TradingGroupsButton" ToolTipService.ToolTip="Trading Groups" Height="24" Width="24"  Style="{StaticResource TransparantButton}" Click="TradingGroupsButton_Click">
+						<Image Stretch="Fill" Source="Images/customers.png" />
+					</c1:C1ToolbarButton>
+				</c1:C1ToolbarStrip>
+			</Grid>
+		</c1:C1ThemeBureauBlack>
+	</Grid>
+</UserControl>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="NorthStarClient">
+</Property><Property Name="Solution File" Value="U:\_Dev\RebateBillingClient\NorthStarClient.sln">
+</Property><Property Name="Date" Value="Wednesday, June 23, 2010">
+</Property><Property Name="Time" Value="8:20 AM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="NorthStarClient.sln" Description="File successfully backed up as U:\_Dev\RebateBillingClient\Backup\NorthStarClient.sln">
+</Event><Event ErrorLevel="0" Project="NorthStarClient" Source="NorthStarClient.csproj" Description="Project file successfully backed up as U:\_Dev\RebateBillingClient\Backup\NorthStarClient.csproj">
+</Event><Event ErrorLevel="0" Project="NorthStarClient" Source="ContextMenuExtend.cs" Description="File successfully backed up as U:\_Dev\RebateBillingClient\Backup\ContextMenuExtend.cs">
+</Event><Event ErrorLevel="0" Project="NorthStarClient" Source="Email.cs" Description="File successfully backed up as U:\_Dev\RebateBillingClient\Backup\Email.cs">
+</Event><Event ErrorLevel="0" Project="NorthStarClient" Source="Excel.cs" Description="File successfully backed up as U:\_Dev\RebateBillingClient\Backup\Excel.cs">
+</Event><Event ErrorLevel="0" Project="NorthStarClient" Source="ExcelCellStyle.cs" Description="File successfully backed up as U:\_Dev\RebateBillingClient\Backup\ExcelCellStyle.cs">
+</Event><Event ErrorLevel="0" Project="NorthStarClient" Source="CashAccountReportForm.cs" Description="File successfully backed up as U:\_Dev\RebateBillingClient\Backup\CashAccountReportForm.cs">
+</Event><Event ErrorLevel="0" Project="NorthStarClient" Source="CashAccountReportForm.designer.cs" Description="File successfully backed up as U:\_Dev\RebateBillingClient\Backup\CashAccountReportForm.designer.cs">
+</Event><Event ErrorLevel="0" Project="NorthStarClient" Source="MarginCollateralReportForm.cs" Description="File successfully backed up as U:\_Dev\RebateBillingClient\Backup\MarginCollateralReportForm.cs">
+</Event><Event ErrorLevel="0" Project="NorthStarClient" Source="MarginCollateralReportForm.designer.cs" Description="File successfully backed up as U:\_Dev\RebateBillingClient\Backup\MarginCollateralReportForm.designer.cs">
+</Event><Event ErrorLevel="0" Project="NorthStarClient" Source="Properties\Resources.Designer.cs" Description="File successfully backed up as U:\_Dev\RebateBillingClient\Backup\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="NorthStarClient" Source="SecMaster.cs" Description="File successfully backed up as U:\_Dev\RebateBillingClient\Backup\SecMaster.cs">
+</Event><Event ErrorLevel="0" Project="NorthStarClient" Source="SecMaster.designer.cs" Description="File successfully backed up as U:\_Dev\RebateBillingClient\Backup\SecMaster.designer.cs">
+</Event><Event ErrorLevel="0" Project="NorthStarClient" Source="ShortInterestReportForm.cs" Description="File successfully backed up as U:\_Dev\RebateBillingClient\Backup\ShortInterestReportForm.cs">
+</Event><Event ErrorLevel="0" Project="NorthStarClient" Source="ShortInterestReportForm.Designer.cs" Description="File successfully backed up as U:\_Dev\RebateBillingClient\Backup\ShortInterestReportForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="NorthStarClient" Source="MainForm.cs" Description="File successfully backed up as U:\_Dev\RebateBillingClient\Backup\MainForm.cs">
+</Event><Event ErrorLevel="0" Project="NorthStarClient" Source="MainForm.designer.cs" Description="File successfully backed up as U:\_Dev\RebateBillingClient\Backup\MainForm.designer.cs">
+</Event><Event ErrorLevel="0" Project="NorthStarClient" Source="Program.cs" Description="File successfully backed up as U:\_Dev\RebateBillingClient\Backup\Program.cs">
+</Event><Event ErrorLevel="0" Project="NorthStarClient" Source="AssemblyInfo.cs" Description="File successfully backed up as U:\_Dev\RebateBillingClient\Backup\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="NorthStarClient" Source="App.config" Description="File successfully backed up as U:\_Dev\RebateBillingClient\Backup\App.config">
+</Event><Event ErrorLevel="0" Project="NorthStarClient" Source="NorthStarClient.cmd" Description="File successfully backed up as U:\_Dev\RebateBillingClient\Backup\NorthStarClient.cmd">
+</Event><Event ErrorLevel="0" Project="NorthStarClient" Source="CashAccountReportForm.resx" Description="File successfully backed up as U:\_Dev\RebateBillingClient\Backup\CashAccountReportForm.resx">
+</Event><Event ErrorLevel="0" Project="NorthStarClient" Source="MarginCollateralReportForm.resx" Description="File successfully backed up as U:\_Dev\RebateBillingClient\Backup\MarginCollateralReportForm.resx">
+</Event><Event ErrorLevel="0" Project="NorthStarClient" Source="Properties\Resources.resx" Description="File successfully backed up as U:\_Dev\RebateBillingClient\Backup\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="NorthStarClient" Source="SecMaster.resx" Description="File successfully backed up as U:\_Dev\RebateBillingClient\Backup\SecMaster.resx">
+</Event><Event ErrorLevel="0" Project="NorthStarClient" Source="ShortInterestReportForm.resx" Description="File successfully backed up as U:\_Dev\RebateBillingClient\Backup\ShortInterestReportForm.resx">
+</Event><Event ErrorLevel="0" Project="NorthStarClient" Source="MainForm.resx" Description="File successfully backed up as U:\_Dev\RebateBillingClient\Backup\MainForm.resx">
+</Event><Event ErrorLevel="0" Project="NorthStarClient" Source="licenses.licx" Description="File successfully backed up as U:\_Dev\RebateBillingClient\Backup\licenses.licx">
+</Event><Event ErrorLevel="1" Project="NorthStarClient" Source="NorthStarClient.csproj" Description="Your project is targeting .NET Framework 2.0 or 3.0. If your project uses assemblies requiring a newer .NET Framework, your project will fail to build. You can change the .NET Framework version by clicking Properties on the project menu and then selecting a new version in the '.NET Framework' dropdown box. (In Visual Basic, this is located on the Compile tab by clicking the 'Advanced Compiler Options...' button.)">
+</Event><Event ErrorLevel="0" Project="NorthStarClient" Source="NorthStarClient.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="NorthStarClient" Source="NorthStarClient.csproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="Common" Source="..\..\Common\Common.csproj" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="2" Project="Common" Source="..\..\Common\Common.csproj" Description="Unable to open project file to perform upgrade.  ">
+</Event><Event ErrorLevel="1" Project="NorthStar" Source="..\NorthStar\NorthStar.csproj" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="2" Project="NorthStar" Source="..\NorthStar\NorthStar.csproj" Description="Unable to open project file to perform upgrade.  ">
+</Event><Event ErrorLevel="2" Project="" Source="NorthStarClient.sln" Description="Solution file 'U:\_Dev\RebateBillingClient\NorthStarClient.sln' cannot be converted because it is read-only on disk. To convert the solution, change the permissions on the solution file to allow modification and re-open it.">
+</Event><Event ErrorLevel="3" Project="" Source="NorthStarClient.sln" Description="Not Converted">
+</Event></UpgradeLog>

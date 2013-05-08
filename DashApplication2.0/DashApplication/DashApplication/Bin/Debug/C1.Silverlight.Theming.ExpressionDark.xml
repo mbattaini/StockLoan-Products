@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Silverlight.Theming.ExpressionDark</name>
+    </assembly>
+    <members>
+        <member name="T:C1.Silverlight.Theming.ExpressionDark.C1ThemeExpressionDark">
+            <summary>
+            ContentControl defining the ExpressionDark theme.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Theming.ExpressionDark.C1ThemeExpressionDark.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Silverlight.Theming.ExpressionDark.C1ThemeExpressionDark"/> class.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Theming.ExpressionDark.C1ThemeExpressionDark.#ctor(System.Reflection.Assembly,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Silverlight.Theming.ExpressionDark.C1ThemeExpressionDark"/> class.
+            </summary>
+            <param name="assembly">The assembly containing the new overrides.</param>
+            <param name="overrides">The ResourceDictionary with the overrides.</param>
+        </member>
+    </members>
+</doc>

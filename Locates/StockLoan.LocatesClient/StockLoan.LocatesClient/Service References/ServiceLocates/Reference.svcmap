@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="47844c4d-57ff-4c13-b402-7fcb4ee4ee1a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://dalatlprd01:43/LocatesService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LocatesService.xsd" MetadataType="Schema" ID="8517cadf-e5b1-4d19-894f-d2fb74ee245f" SourceId="1" SourceUrl="http://dalatlprd01.penson.com:43/LocatesService.svc?xsd=xsd1" />
+    <MetadataFile FileName="LocatesService1.disco" MetadataType="Disco" ID="954234d7-2305-4ea1-8b65-3132bef9854c" SourceId="1" SourceUrl="http://dalatlprd01.penson.com:43/LocatesService.svc?disco" />
+    <MetadataFile FileName="LocatesService1.xsd" MetadataType="Schema" ID="2e2d29db-2a8c-4a38-9204-beceb4af37c9" SourceId="1" SourceUrl="http://dalatlprd01.penson.com:43/LocatesService.svc?xsd=xsd0" />
+    <MetadataFile FileName="LocatesService.wsdl" MetadataType="Wsdl" ID="758e8028-e026-455f-a343-bc1283c04b3d" SourceId="1" SourceUrl="http://dalatlprd01.penson.com:43/LocatesService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

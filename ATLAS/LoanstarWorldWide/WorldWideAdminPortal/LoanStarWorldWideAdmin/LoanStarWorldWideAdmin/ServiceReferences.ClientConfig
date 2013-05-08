@@ -1,0 +1,52 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="BasicHttpBinding_IBooksService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IInventoryService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IAdminService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_ISecurityService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IUserAdminService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IFunctionsService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/BooksService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IBooksService"
+                contract="SVR_BooksService.IBooksService" name="BasicHttpBinding_IBooksService" />
+            <endpoint address="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/InventoryService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IInventoryService"
+                contract="SVR_InventoryService.IInventoryService" name="BasicHttpBinding_IInventoryService" />
+            <endpoint address="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/AdminService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IAdminService"
+                contract="SVR_AdminService.IAdminService" name="BasicHttpBinding_IAdminService" />
+            <endpoint address="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/SecurityService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ISecurityService"
+                contract="SVR_SecurityService.ISecurityService" name="BasicHttpBinding_ISecurityService" />
+            <endpoint address="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/UserAdminService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IUserAdminService"
+                contract="SVR_UserAdminService.IUserAdminService" name="BasicHttpBinding_IUserAdminService" />
+            <endpoint address="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/FunctionsService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IFunctionsService"
+                contract="SVR_FunctionsService.IFunctionsService" name="BasicHttpBinding_IFunctionsService" />
+        </client>
+    </system.serviceModel>
+</configuration>

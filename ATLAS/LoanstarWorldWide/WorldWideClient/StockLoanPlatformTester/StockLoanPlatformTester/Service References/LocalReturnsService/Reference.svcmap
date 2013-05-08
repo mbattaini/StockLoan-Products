@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6bd10929-9dc5-478c-ba07-cf53e68d98ef" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/StockLoan.WebServices/ReturnsService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ReturnsService.wsdl" MetadataType="Wsdl" ID="609e5d2e-9638-4d25-ae46-da29e2e804dd" SourceId="1" SourceUrl="http://wspen-sl08w7.penson.com/StockLoan.WebServices/ReturnsService.svc?wsdl" />
+    <MetadataFile FileName="ReturnsService.xsd" MetadataType="Schema" ID="0ff1b643-a268-4e4f-9329-96a48c1a76cc" SourceId="1" SourceUrl="http://wspen-sl08w7.penson.com/StockLoan.WebServices/ReturnsService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ReturnsService1.xsd" MetadataType="Schema" ID="0aeaf4d2-652a-41df-976c-ce623e6d0c8b" SourceId="1" SourceUrl="http://wspen-sl08w7.penson.com/StockLoan.WebServices/ReturnsService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ReturnsService.disco" MetadataType="Disco" ID="d51b2f28-2e44-4d90-a296-b4a4031dffbb" SourceId="1" SourceUrl="http://wspen-sl08w7.penson.com/StockLoan.WebServices/ReturnsService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

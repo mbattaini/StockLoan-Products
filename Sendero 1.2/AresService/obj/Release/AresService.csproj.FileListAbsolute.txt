@@ -1,0 +1,14 @@
+C:\_dev\Sendero 1.2\AresService\bin\Release\Anetics.AresService.exe.config
+C:\_dev\Sendero 1.2\AresService\bin\Release\Anetics.AresService.exe
+C:\_dev\Sendero 1.2\AresService\bin\Release\Anetics.Ares.dll
+C:\_dev\Sendero 1.2\AresService\bin\Release\Anetics.Common.dll
+C:\_dev\Sendero 1.2\AresService\bin\Release\C1.C1Excel.dll
+C:\_dev\Sendero 1.2\AresService\bin\Release\Anetics.Filer.dll
+C:\_dev\Sendero 1.2\AresService\bin\Release\Rebex.Net.Ftp.dll
+C:\_dev\Sendero 1.2\AresService\bin\Release\Rebex.Net.ProxySocket.dll
+C:\_dev\Sendero 1.2\AresService\bin\Release\Anetics.Common.pdb
+C:\_dev\Sendero 1.2\AresService\obj\Release\Anetics.Courier.ProjectInstaller.resources
+C:\_dev\Sendero 1.2\AresService\obj\Release\Anetics.Ares.Service.resources
+C:\_dev\Sendero 1.2\AresService\obj\Release\Anetics.AresService.exe
+C:\_dev\Sendero 1.2\AresService\obj\Release\AresService.csprojResolveAssemblyReference.cache
+C:\_dev\Sendero 1.2\AresService\obj\Release\AresService.csproj.GenerateResource.Cache

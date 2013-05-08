@@ -1,0 +1,63 @@
+﻿<sdk:Page	
+    Name="SubscriptionMaintenance" 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:my="clr-namespace:System;assembly=mscorlib"
+    xmlns:uriMapper="clr-namespace:System.Windows.Navigation;assembly=System.Windows.Controls.Navigation"
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"	
+    xmlns:c1="clr-namespace:C1.Silverlight;assembly=C1.Silverlight" 
+    xmlns:c1grid="clr-namespace:C1.Silverlight.DataGrid;assembly=C1.Silverlight.DataGrid"
+	xmlns:c1chart="clr-namespace:C1.Silverlight.Chart;assembly=C1.Silverlight.Chart"
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+    xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+    xmlns:c11="http://schemas.componentone.com/winfx/2006/xaml" 
+    mc:Ignorable="d" 
+	x:Class="LoanStarWorldWideAdmin.Views.SubscriptionMaint" 
+	Title="LoanStar WorlwordWide Subscription Maintenance Page" 
+    d:DesignWidth="904" d:DesignHeight="486"  LostFocus="SubscriptionMaintenance_LostFocus">
+
+    <Grid x:Name="LayoutRoot" Width="904" Height="486" Background="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Center" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="699*" />
+            <RowDefinition Height="1" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="966*" />
+            <ColumnDefinition Width="5" />
+        </Grid.ColumnDefinitions>
+        <sdk:Frame x:Name="MainFrame" Margin="8,5,8,0" VerticalAlignment="Top" HorizontalAlignment="Center" Visibility="Collapsed"/>
+ 
+        <Grid x:Name="CaptionGrid" Height="33" VerticalAlignment="Top" HorizontalAlignment="Center" Width="904" Grid.ColumnSpan="2">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF365E90" Offset="1"/>
+                    <GradientStop Color="#FF1C3C64" Offset="0.009"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <TextBlock HorizontalAlignment="Left" Margin="7,7,0,6" TextWrapping="Wrap" Text="Book Group" Width="77" Foreground="White" FontSize="10.667" FontWeight="Bold"/>
+            <c1:C1ComboBox x:Name="BookGroupCombo" Margin="84,0,0,0" HorizontalAlignment="Left" Width="126" Height="30" VerticalAlignment="Top" SelectedIndexChanged="BookGroupCombo_SelectedIndexChanged" FontSize="10.667" MouseLeftButtonUp="BookGroupCombo_MouseLeftButtonUp" Grid.ColumnSpan="1" />
+            <Button x:Name="addSubscriptionButton" Content="Add New Subscription" Height="30" HorizontalAlignment="Left" Margin="761,0,0,0" VerticalAlignment="Top" 
+                        Width="140" Click="addSubscriptionButton_Click" />
+            <Button x:Name="fileLayoutsButton" Content="File Layouts" Height="30" HorizontalAlignment="Left" Margin="574,0,0,0" VerticalAlignment="Top" 
+                        Width="140" Click="fileLayoutsButton_Click" />
+
+        </Grid>
+
+        <!-- <TextBlock x:Name="bookGroupTextBlock" Margin="9,5,0,0" TextWrapping="Wrap" Text="Book Group" Width="77" Foreground="DarkBlue" FontSize="10.667" FontWeight="Bold" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" />-->
+        <c1grid:C1DataGrid x:Name="SubscriptionGrid" Margin="0,30,0,0" AutoGenerateColumns="False" Height="456" VerticalAlignment="Top" HorizontalAlignment="Left" Width="904" CanUserEditRows="False" CanUserAddRows="False" SelectionChanged="SubscriptionGrid_SelectionChanged" Grid.RowSpan="2" Grid.ColumnSpan="2">
+			<c1grid:C1DataGrid.Columns>
+                <c1grid:DataGridBoundColumn Header="Type" Binding="{Binding InventoryType}" Width="40" />
+                <c1grid:DataGridBoundColumn Header="Desk" Binding="{Binding Desk}" Width="130" />
+				<c1grid:DataGridBoundColumn Header="Business Date" Binding="{Binding BizDate}" Format="yyyy-MM-dd"/>
+				<c1grid:DataGridBoundColumn Header="Quantity" HorizontalAlignment="Right" AllowNull="True" Format="#,##0" Binding="{Binding Items}"/>
+				<c1grid:DataGridBoundColumn Header="Last Loaded Time" HorizontalAlignment="Left" AllowNull="True" Format="yyyy-MM-dd hh:mm"  Binding="{Binding LastLoadedTime}"/>
+				<c1grid:DataGridBoundColumn Header="Load Status" HorizontalAlignment="Left" AllowNull="True" Binding="{Binding LoadStatus}"/>
+
+            </c1grid:C1DataGrid.Columns>
+		</c1grid:C1DataGrid>
+        <sdk:Label x:Name="StatusLabel" Content="Status" FontSize="14" FontWeight="Bold" Foreground="DarkBlue" Height="30" BorderBrush="Blue" BorderThickness="2" Margin="0,53,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="901" Grid.ColumnSpan="2" />
+    </Grid>
+</sdk:Page>

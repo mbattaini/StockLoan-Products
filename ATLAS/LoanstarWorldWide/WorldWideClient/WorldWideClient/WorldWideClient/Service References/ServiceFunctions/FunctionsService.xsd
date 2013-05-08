@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="GetSourceIP">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSourceIPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSourceIPResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HolidaySet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bookGroupSet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="holidayDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="countryCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isBankHoliday" type="xs:boolean" />
+        <xs:element minOccurs="0" name="isExchangeHoliday" type="xs:boolean" />
+        <xs:element minOccurs="0" name="actUserId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isActive" type="xs:boolean" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HolidaySetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HolidaySetResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TimeZonesGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="timeZoneId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="timeZoneName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TimeZonesGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TimeZonesGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HolidaysGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bookGroupToCheck" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="countryCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="utcOffSet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HolidaysGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HolidaysGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HolidaysGetList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bookGroupToCheck" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="compareDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="utcOffSet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HolidaysGetListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HolidaysGetListResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsBankHoliday">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bookGroupToCheck" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="countryCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="holidayDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="utcOffSet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsBankHolidayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsBankHolidayResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsExchangeHoliday">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bookGroupToCheck" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="countryCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="holidayDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="utcOffSet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsExchangeHolidayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsExchangeHolidayResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="KeyValueSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="keyId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="keyValue" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="KeyValueSetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="KeyValueSetResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="KeyValuesGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="keyId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="KeyValuesGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="KeyValuesGetResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="KeyValuesListGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="KeyValuesListGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="KeyValuesListGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogicOperatorsGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogicOperatorsGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LogicOperatorsGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SettlementSystsemProcessSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SettlementSystsemProcessSetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SettlementSystsemProcessSetResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

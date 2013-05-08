@@ -1,0 +1,73 @@
+﻿<sdk:Page
+    Name="HolidayMaintenance"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+	xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"	
+    xmlns:c1="clr-namespace:C1.Silverlight;assembly=C1.Silverlight" 
+    xmlns:c1grid="clr-namespace:C1.Silverlight.DataGrid;assembly=C1.Silverlight.DataGrid" 
+    xmlns:c1chart="clr-namespace:C1.Silverlight.Chart;assembly=C1.Silverlight.Chart"
+	xmlns:c1datetime="clr-namespace:C1.Silverlight.DateTimeEditors;assembly=C1.Silverlight.DateTimeEditors"
+    mc:Ignorable="d" x:Class="LoanStarWorldWideAdmin.Views.HolidaysMaintain" 
+	Title="LoanStar WorlwordWide Admin Holidays Maintenance Page" 
+    xmlns:c1sched="clr-namespace:C1.Silverlight.Schedule;assembly=C1.Silverlight.Schedule" d:DesignHeight="778" d:DesignWidth="875">
+
+    <Grid x:Name="LayoutRoot" Height="801" Width="875" VerticalAlignment="Top" HorizontalAlignment="Center" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="31*" />
+            <RowDefinition Height="879*" />
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="CaptionGrid" Height="33" VerticalAlignment="Top" HorizontalAlignment="Center" Width="875" Margin="0,0,0,0" Grid.RowSpan="2">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF365E90" Offset="1"/>
+                    <GradientStop Color="#FF1C3C64" Offset="0.009"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <sdk:Label x:Name="UpdateLabel" Content="Message Bar" FontSize="14" FontWeight="ExtraBold" Foreground="Red" Height="30" BorderBrush="Red" BorderThickness="1" 
+            	    HorizontalAlignment="Center" HorizontalContentAlignment="Right" Margin="231,0,0,0" Width="644" Visibility="Collapsed" VerticalAlignment="Top" />
+            <sdk:Label x:Name="StatusLabel" Content="Status" FontSize="14" FontWeight="Bold" Foreground="DarkBlue" Height="30" BorderBrush="Blue" BorderThickness="2" HorizontalContentAlignment="Center" 
+                   Margin="231,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="644" Grid.RowSpan="2" />
+
+            <sdk:Label x:Name="BookGroupHeadLabel" Content="Book Group  " Height="28" FontSize="11" Foreground="White" FontWeight="ExtraBold" Width="74" 
+                    Margin="16,3,0,2" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <c1:C1ComboBox Name="BookGroupCombo" FontSize="10.667" Height="30" VerticalAlignment="Top" Width="122" Margin="96,2,0,0" HorizontalAlignment="Left" 
+                   SelectedItemChanged="BookGroupCombo_SelectedItemChanged" MouseLeftButtonDown="BookGroupCombo_MouseLeftButtonDown" TabIndex="0" Grid.RowSpan="2" />
+
+        </Grid>
+ 
+        <StackPanel Name="CalendarMainStackPanel" Height="530" HorizontalAlignment="Left" VerticalAlignment="Top" Width="875" Grid.RowSpan="2" Margin="0,1,0,0">
+            <sdk:Label Content="" FontSize="14" FontWeight="Bold" Height="32" BorderThickness="0" 
+                       HorizontalContentAlignment="Center" Margin="21,0,0,0" VerticalAlignment="Top" Grid.RowSpan="2" HorizontalAlignment="Center" Width="625" />
+            <c1sched:C1Calendar x:Name="HolidayCalendar" Height="487" DataContext="{Binding}" MonthCalendarStyle="{Binding}" Margin="0,0,-4,0" Width="875" 
+                       SelectedDateChanged="HolidayCalendar_SelectedDateChanged" MouseLeftButtonUp="HolidayCalendar_MouseLeftButtonUp" />
+        </StackPanel>
+            
+
+        
+        
+        <Button x:Name="HolidayEditButton" Content="Edit Selected Holiday" Click="HolidayEditButton_Click" Width="150" FontWeight="Bold" Height="30" Margin="135,694,0,50" 
+                   Grid.Row="1" HorizontalAlignment="Left" />
+        
+        <Button x:Name="HolidayAddButton" Content="Add New Holiday" Width="150" Click="HolidayAddButton_Click" Height="30" FontWeight="Bold" Margin="616,694,0,50" 
+                Grid.Row="1" HorizontalAlignment="Left"/>
+
+        <c1grid:C1DataGrid x:Name="HolidayListGrid" Margin="0,491,0,0" AutoGenerateColumns="False" HorizontalAlignment="Left" Width="875" Height="199" 
+                           VerticalAlignment="Top" CanUserEditRows="False" CanUserAddRows="False" FontSize="10" SelectionMode="SingleRow" TabIndex="3" CanUserRemoveRows="False" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" CanUserToggleDetails="False" Grid.Row="1" ShowGroupingPanel="False" RowHeaderWidth="0">
+            
+            <c1grid:C1DataGrid.Columns>
+                <c1grid:DataGridBoundColumn Header="CD" Binding="{Binding CountryCode}" Width="30" x:Name="countryCode" HorizontalAlignment="Left" AllowNull="False" />
+                <c1grid:DataGridBoundColumn Header="Book Group" Binding="{Binding BookGroup}" Width="72" x:Name="bookGroup" HorizontalAlignment="Left" AllowNull="False" />
+                <c1grid:DataGridBoundColumn Header="Country" Binding="{Binding Country}" Width="160" x:Name="country" HorizontalAlignment="Left" AllowNull="False" />
+                <c1grid:DataGridBoundColumn Header="Holiday Date" Binding="{Binding HolidayDate}" Width="90" x:Name="holidayDate" HorizontalAlignment="Left" AllowNull="False" />
+                <c1grid:DataGridBoundColumn Header="Is Bank" Binding="{Binding IsBankHolidayDate}" Width="52" x:Name="bankHoliday" HorizontalAlignment="Left" AllowNull="False" />
+                <c1grid:DataGridBoundColumn Header="Is Exch" Binding="{Binding IsExchangeHoliday}" Width="52" x:Name="exchangeHoliday" HorizontalAlignment="Left" AllowNull="False" />
+                <c1grid:DataGridBoundColumn Header="Holiday Description/Explanation" Binding="{Binding Description}" Width="400" x:Name="holidayExplain" HorizontalAlignment="Left" AllowNull="True" />
+            </c1grid:C1DataGrid.Columns>
+        </c1grid:C1DataGrid>
+    </Grid>
+</sdk:Page>

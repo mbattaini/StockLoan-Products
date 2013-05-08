@@ -1,0 +1,15 @@
+bin\Debug\Atlas_Schedule.exe
+bin\Debug\Atlas_Schedule.pdb
+bin\Debug\C1.Win.C1Command.2.dll
+bin\Debug\C1.Win.C1Ribbon.2.dll
+bin\Debug\C1.Win.C1TrueDBGrid.2.dll
+bin\Debug\C1.Win.C1Ribbon.2.xml
+bin\Debug\C1.Win.C1TrueDBGrid.2.xml
+bin\Debug\C1.Win.C1Command.2.xml
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Atlas_Schedule.Form1.resources
+obj\Debug\Atlas_Schedule.Properties.Resources.resources
+obj\Debug\Atlas_Schedule.csproj.GenerateResource.Cache
+obj\Debug\Atlas_Schedule.exe.licenses
+obj\Debug\Atlas_Schedule.exe
+obj\Debug\Atlas_Schedule.pdb

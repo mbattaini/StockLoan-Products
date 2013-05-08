@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://dalatlprd01.penson.com:443/PositionService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DashBusiness" />
+  <xs:element name="RecallTradingSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="secId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="comment" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecallTradingSetResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ShortSaleBillingBPSItemSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="secId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quantityShorted" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quantityCovered" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="settlementDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="price" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="actUserId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ShortSaleBillingBPSItemSetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ShortSaleBillingBPSItemSetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CollateralizationUtilGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CollateralizationUtilGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CollateralizationUtilGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CollateralizationUtilDetailGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="classGroup" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CollateralizationUtilDetailGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CollateralizationUtilDetailGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BorrowsMorningGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BorrowsMorningGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BorrowsMorningGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BorrowsMorningSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="secId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quantity" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BorrowsMorningSetResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BorrowsMorningPurge">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BorrowsMorningPurgeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserValidationGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserValidationGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserValidationGetResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContractDataGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="secId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContractDataGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ContractDataGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContractSummaryByCashLoad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/DashBusiness" minOccurs="0" name="localeType" type="q1:Locale" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContractSummaryByCashLoadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ContractSummaryByCashLoadResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContractSummaryBySecurity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DashBusiness" minOccurs="0" name="localeType" type="q2:Locale" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContractSummaryBySecurityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ContractSummaryBySecurityResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContractsExcessCollateralSummaryLoad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/DashBusiness" minOccurs="0" name="localeType" type="q3:Locale" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContractsExcessCollateralSummaryLoadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ContractsExcessCollateralSummaryLoadResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContractSummaryByBooKGroupCashLoad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/DashBusiness" minOccurs="0" name="localeType" type="q4:Locale" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContractSummaryByBooKGroupCashLoadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ContractSummaryByBooKGroupCashLoadResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContractSummaryByBooKGroupSharesCashLoad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/DashBusiness" minOccurs="0" name="localeType" type="q5:Locale" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContractSummaryByBooKGroupSharesCashLoadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ContractSummaryByBooKGroupSharesCashLoadResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContractsDetailByBookSummaryLoad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="book" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="currencyIso" nillable="true" type="xs:string" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/DashBusiness" minOccurs="0" name="localeType" type="q6:Locale" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContractsDetailByBookSummaryLoadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ContractsDetailByBookSummaryLoadResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MarksGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="book" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="currencyIso" nillable="true" type="xs:string" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/DashBusiness" minOccurs="0" name="localeType" type="q7:Locale" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MarksGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MarksGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InventoryHistoryGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="secId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InventoryHistoryGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InventoryHistoryGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InventoryHistorySummaryGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="secId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InventoryHistorySummaryGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InventoryHistorySummaryGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InventoryDeskGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="desk" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InventoryDeskGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InventoryDeskGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeskListGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeskListGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeskListGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BookGroupGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BookGroupGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BookGroupGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HtbProfitabilityGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/DashBusiness" minOccurs="0" name="htbLocate" type="q8:HtbLocale" />
+        <xs:element minOccurs="0" name="numOfRecords" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HtbProfitabilityGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HtbProfitabilityGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HtbProfitabilitySpreadsGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/DashBusiness" minOccurs="0" name="htbLocate" type="q9:HtbLocale" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HtbProfitabilitySpreadsGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HtbProfitabilitySpreadsGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HolidaysGet">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HolidaysGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HolidaysGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserCanView">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserCanViewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserCanViewResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebSecurityProfileDataSetGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebSecurityProfileDataSetGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WebSecurityProfileDataSetGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InventoryRateGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="secId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InventoryRateGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InventoryRateGetResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InventoryRateHistoryGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="secId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InventoryRateHistoryGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InventoryRateHistoryGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FileReader">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="path" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FileReaderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FileReaderResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebReportsGet">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebReportsGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WebReportsGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReportValueSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="reportName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportRecipient" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="format" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="justify" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReportValueSetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReportValueSetResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StraddlesGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountList" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="locMemo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StraddlesGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StraddlesGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ShortSaleLocatesSourceGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tradeDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="source" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ShortSaleLocatesSourceGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ShortSaleLocatesSourceGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BankLoanReleaseReportGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="book" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BankLoanReleaseReportGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BankLoanReleaseReportGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MemoSegLockupGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="system" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MemoSegLockupGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MemoSegLockupGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MemoSegStartOfDaySet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="system" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="secId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quantity" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MemoSegStartOfDaySetResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PenaltyBoxGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PenaltyBoxGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PenaltyBoxGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PenaltyBoxItemSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="secId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isDelete" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PenaltyBoxItemSetResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecallTradingGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecallTradingGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RecallTradingGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

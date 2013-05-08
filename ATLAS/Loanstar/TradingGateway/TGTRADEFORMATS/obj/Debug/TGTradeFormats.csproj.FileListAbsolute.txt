@@ -1,0 +1,21 @@
+U:\_Dev\ATLAS\Loanstar 2.0\TGTRADEFORMATS\bin\Debug\TGTradeFormats.dll
+U:\_Dev\ATLAS\Loanstar 2.0\TGTRADEFORMATS\bin\Debug\TGTradeFormats.pdb
+U:\_Dev\ATLAS\Loanstar 2.0\TGTRADEFORMATS\obj\Debug\ResolveAssemblyReference.cache
+U:\_Dev\ATLAS\Loanstar 2.0\TGTRADEFORMATS\obj\Debug\TGTradeFormats.dll
+U:\_Dev\ATLAS\Loanstar 2.0\TGTRADEFORMATS\obj\Debug\TGTradeFormats.pdb
+U:\_Dev\ATLAS\Loanstar 2.0\TGTRADEFORMATS\bin\Debug\StockLoan.Common.dll
+U:\_Dev\ATLAS\Loanstar 2.0\TGTRADEFORMATS\bin\Debug\StockLoan.Common.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar 3.0\TGTRADEFORMATS\bin\Debug\TGTradeFormats.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar 3.0\TGTRADEFORMATS\bin\Debug\TGTradeFormats.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar 3.0\TGTRADEFORMATS\bin\Debug\StockLoan.Common.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar 3.0\TGTRADEFORMATS\bin\Debug\StockLoan.Common.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar 3.0\TGTRADEFORMATS\obj\Debug\ResolveAssemblyReference.cache
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar 3.0\TGTRADEFORMATS\obj\Debug\TGTradeFormats.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar 3.0\TGTRADEFORMATS\obj\Debug\TGTradeFormats.pdb
+C:\_Dev\ATLAS\Loanstar\TradingGateway\TGTRADEFORMATS\bin\Debug\TGTradeFormats.dll
+C:\_Dev\ATLAS\Loanstar\TradingGateway\TGTRADEFORMATS\bin\Debug\TGTradeFormats.pdb
+C:\_Dev\ATLAS\Loanstar\TradingGateway\TGTRADEFORMATS\obj\Debug\ResolveAssemblyReference.cache
+C:\_Dev\ATLAS\Loanstar\TradingGateway\TGTRADEFORMATS\obj\Debug\TGTradeFormats.dll
+C:\_Dev\ATLAS\Loanstar\TradingGateway\TGTRADEFORMATS\obj\Debug\TGTradeFormats.pdb
+C:\_Dev\ATLAS\Loanstar\TradingGateway\TGTRADEFORMATS\bin\Debug\StockLoan.Common.dll
+C:\_Dev\ATLAS\Loanstar\TradingGateway\TGTRADEFORMATS\bin\Debug\StockLoan.Common.pdb

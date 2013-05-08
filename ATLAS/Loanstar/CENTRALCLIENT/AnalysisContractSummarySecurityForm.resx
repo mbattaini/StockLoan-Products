@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="BookGroupCombo.Images" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAADdJREFUKFNjYMAE
+        /7GIgYWQJXCxURTCFOE1ESSJoQAmiI9GcSayQqzuR3cLVithOvH6DpsisBgAoKoc5C8W7oEAAAAASUVO
+        RK5CYII=
+</value>
+  </data>
+  <data name="BookGroupCombo.PropBag" xml:space="preserve">
+    <value>&lt;?xml version="1.0"?&gt;&lt;Blob&gt;&lt;DataCols&gt;&lt;C1DataColumn Level="0" Caption="Book Group" DataField="BookGroup"&gt;&lt;ValueItems /&gt;&lt;/C1DataColumn&gt;&lt;C1DataColumn Level="0" Caption="Name" DataField="BookGroupName"&gt;&lt;ValueItems /&gt;&lt;/C1DataColumn&gt;&lt;/DataCols&gt;&lt;Styles type="C1.Win.C1List.Design.ContextWrapper"&gt;&lt;Data&gt;Style15{AlignHorz:Near;}Inactive{ForeColor:InactiveCaptionText;BackColor:InactiveCaption;}OddRow{}Style5{}Style1{}RecordSelector{AlignImage:Center;}Style6{}Style8{}Style17{}Footer{}Style3{}Style4{}HighlightRow{ForeColor:HighlightText;BackColor:Highlight;}Style10{}EvenRow{BackColor:Aqua;}Style11{}Style16{AlignHorz:Near;}Style13{Font:Microsoft Sans Serif, 8.25pt;AlignHorz:Near;}Caption{AlignHorz:Center;}Selected{ForeColor:WindowText;BackColor:239, 239, 247;}Style9{AlignHorz:Near;}Style12{AlignHorz:Near;}Style2{}Style14{}Normal{}Style7{}Heading{Wrap:True;AlignVert:Center;Border:Raised,,1, 1, 1, 1;ForeColor:ControlText;BackColor:Control;}Group{BackColor:ControlDark;Border:None,,0, 0, 0, 0;AlignVert:Center;}&lt;/Data&gt;&lt;/Styles&gt;&lt;Splits&gt;&lt;C1.Win.C1List.ListBoxView AllowColSelect="False" Name="Split[0,0]" CaptionHeight="17" ColumnCaptionHeight="17" ColumnFooterHeight="17" ExtendRightColumn="True" DefRecSelWidth="16" VerticalScrollGroup="1" HorizontalScrollGroup="1"&gt;&lt;ClientRect&gt;0, 0, 116, 156&lt;/ClientRect&gt;&lt;Height&gt;156&lt;/Height&gt;&lt;BorderSide&gt;Right&lt;/BorderSide&gt;&lt;VScrollBar&gt;&lt;Width&gt;16&lt;/Width&gt;&lt;/VScrollBar&gt;&lt;HScrollBar&gt;&lt;Height&gt;16&lt;/Height&gt;&lt;/HScrollBar&gt;&lt;CaptionStyle parent="Style2" me="Style9" /&gt;&lt;EvenRowStyle parent="EvenRow" me="Style7" /&gt;&lt;FooterStyle parent="Footer" me="Style3" /&gt;&lt;GroupStyle parent="Group" me="Style11" /&gt;&lt;HeadingStyle parent="Heading" me="Style2" /&gt;&lt;HighLightRowStyle parent="HighlightRow" me="Style6" /&gt;&lt;InactiveStyle parent="Inactive" me="Style4" /&gt;&lt;OddRowStyle parent="OddRow" me="Style8" /&gt;&lt;RecordSelectorStyle parent="RecordSelector" me="Style10" /&gt;&lt;SelectedStyle parent="Selected" me="Style5" /&gt;&lt;Style parent="Normal" me="Style1" /&gt;&lt;internalCols&gt;&lt;C1DisplayColumn&gt;&lt;HeadingStyle parent="Style2" me="Style12" /&gt;&lt;Style parent="Style1" me="Style13" /&gt;&lt;FooterStyle parent="Style3" me="Style14" /&gt;&lt;ColumnDivider&gt;&lt;Style&gt;Single&lt;/Style&gt;&lt;/ColumnDivider&gt;&lt;Height&gt;15&lt;/Height&gt;&lt;DCIdx&gt;0&lt;/DCIdx&gt;&lt;/C1DisplayColumn&gt;&lt;C1DisplayColumn&gt;&lt;HeadingStyle parent="Style2" me="Style15" /&gt;&lt;Style parent="Style1" me="Style16" /&gt;&lt;FooterStyle parent="Style3" me="Style17" /&gt;&lt;ColumnDivider&gt;&lt;Style&gt;Single&lt;/Style&gt;&lt;/ColumnDivider&gt;&lt;Height&gt;15&lt;/Height&gt;&lt;DCIdx&gt;1&lt;/DCIdx&gt;&lt;/C1DisplayColumn&gt;&lt;/internalCols&gt;&lt;/C1.Win.C1List.ListBoxView&gt;&lt;/Splits&gt;&lt;NamedStyles&gt;&lt;Style parent="" me="Normal" /&gt;&lt;Style parent="Normal" me="Heading" /&gt;&lt;Style parent="Heading" me="Footer" /&gt;&lt;Style parent="Heading" me="Caption" /&gt;&lt;Style parent="Heading" me="Inactive" /&gt;&lt;Style parent="Normal" me="Selected" /&gt;&lt;Style parent="Normal" me="HighlightRow" /&gt;&lt;Style parent="Normal" me="EvenRow" /&gt;&lt;Style parent="Normal" me="OddRow" /&gt;&lt;Style parent="Heading" me="RecordSelector" /&gt;&lt;Style parent="Caption" me="Group" /&gt;&lt;/NamedStyles&gt;&lt;vertSplits&gt;1&lt;/vertSplits&gt;&lt;horzSplits&gt;1&lt;/horzSplits&gt;&lt;Layout&gt;Modified&lt;/Layout&gt;&lt;DefaultRecSelWidth&gt;16&lt;/DefaultRecSelWidth&gt;&lt;/Blob&gt;</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAASAAAALAQEBFoGBgZmBgYGZgYGBmYGBgZmBgYGZgYGBmYGBgZmBgYGZgYGBmYGBgZmBAQEWgAA
+        ACwAAAASAAAACQAAABYQEBBm6+vr/+bm5v/m5ub/5ubm/+bm5v/m5ub/5ubm/+bm5v/m5ub/6+vr/xAQ
+        EGYAAAAWAAAACQAAAAAAAAAAHBwcZujo6P+0tLT/vb29/8XFxf+9vb3/zs7O/+Dg4P/g4OD/4ODg/+jo
+        6P8cHBxmAAAAAAAAAAAAAAAAAAAAACQkJGbq6ur/0NDQ/9DQ0P/Q0ND/0NDQ/9DQ0P/i4uL/4uLi/+Li
+        4v/q6ur/JCQkZgAAAAAAAAAAAAAAAAAAAAAnJydm7Ozs/46Ojv+lpaX/paWl/46Ojv/T09P/5eXl/8LC
+        wv+5ubn/7Ozs/ycnJ2YAAAAAAAAAAAAAAAAAAAAAKioqZu7u7v/o6Oj/6Ojo/+jo6P/o6Oj/6Ojo/+jo
+        6P/V1dX/1dXV/+7u7v8qKipmAAAAAAAAAAAAAAAAAAAAAC4uLmbw8PD/v7+//8fHx//Q0ND/x8fH/9jY
+        2P/q6ur/v7+//8fHx//w8PD/Li4uZgAAAAAAAAAAAAAAAAAAAAAxMTFm8vLy/9vb2//b29v/29vb/9vb
+        2//b29v/7e3t/9vb2//b29v/8vLy/zExMWYAAAAAAAAAAAAAAAAAAAAANDQ0ZvX19f+RkZH/xMTE/6qq
+        qv+qqqr/kZGR//Hx8f+7u7v/zMzM//X19f80NDRmAAAAAAAAAAAAAAAAAAAAADc3N2b39/f/9PT0//T0
+        9P/09PT/9PT0//T09P/09PT/9PT0//T09P/39/f/Nzc3ZgAAAAAAAAAAAAAAAAAAAAA6Ojpm+fn5/wNZ
+        nf8JYaX/Gne7/yWHy/8Zdrr/JYfL/xVwtP8FXKD/+fn5/zo6OmYAAAAAAAAAAAAAAAAAAAAAPDw8Zvv7
+        +/8DWZ3/wtjp/4m52/+Qw+X/ts/g/yWHy/8VcLT/BVyg//v7+/88PDxmAAAAAAAAAAAAAAAAAAAAAD4+
+        Pmb9/f3/A1md/xJssP8khMj/MJba/zGW2v8lh8v/FXC0/wVcoP/9/f3/Pj4+ZgAAAAAAAAAAAAAAAAAA
+        AABAQEBm/v7+/wJXm/8JYaX/Em2x/xh2uv8Zdrr/E26y/wtjp/8DWZ3//v7+/0BAQGYAAAAAAAAAAAAA
+        AAAAAAAAQkJCZv////////////////////////////////////////////////////9CQkJmAAAAAAAA
+        AAAAAAAAAAAAADMzM01ERERmREREZkRERGZERERmREREZkRERGZERERmREREZkRERGZERERmMzMzTQAA
+        AAAAAAAAAAAAAAAAAADAAwAAwAMAAMADAADAAwAAwAMAAMADAADAAwAAwAMAAMADAADAAwAAwAMAAMAD
+        AADAAwAAwAMAAA==
+</value>
+  </data>
+</root>

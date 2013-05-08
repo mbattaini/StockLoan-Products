@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="StockLoanWebServices.ServiceAgent" CodeBehind="ServiceAgent.svc.cs" %>

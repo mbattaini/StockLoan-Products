@@ -1,0 +1,335 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Silverlight.Automation</name>
+    </assembly>
+    <members>
+        <member name="T:C1.Silverlight.Automation.C1AutomationPeer">
+            <summary>
+            Base Automation peer class.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Automation.C1TreeViewItemAutomationPeer">
+            <summary>
+            Automation peer for the C1TreeViewItem.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Automation.C1TreeViewItemAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Automation.C1TreeViewItemAutomationPeer"/>.
+            </summary>
+            <param name="owner">The control associated with this peer.</param>
+        </member>
+        <member name="T:C1.Silverlight.Automation.C1TreeViewAutomationPeer">
+            <summary>
+            Automation peer for the C1TreeViewItem.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Automation.C1TreeViewAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Automation.C1TreeViewItemAutomationPeer"/>.
+            </summary>
+            <param name="owner">The control associated with this peer.</param>
+        </member>
+        <member name="T:C1.Silverlight.Automation.C1TabControlAutomationPeer">
+            <summary>
+            Automation peer for the C1TabControl.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Automation.C1TabControlAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Automation.C1TabControlAutomationPeer"/>.
+            </summary>
+            <param name="owner">The control associated with this peer.</param>
+        </member>
+        <member name="T:C1.Silverlight.Automation.C1TabItemAutomationPeer">
+            <summary>
+            Automation peer for the C1TreeViewItem.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Automation.C1TabItemAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Automation.C1TabItemAutomationPeer"/>.
+            </summary>
+            <param name="owner">The control associated with this peer.</param>
+        </member>
+        <member name="T:C1.Silverlight.Automation.C1DockTabControlAutomationPeer">
+            <summary>
+            Automation peer for the C1DockTabControl.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Automation.C1DockTabControlAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Automation.C1DockTabControlAutomationPeer"/>.
+            </summary>
+            <param name="owner">The control associated with this peer.</param>
+        </member>
+        <member name="T:C1.Silverlight.Automation.C1BookZoneAutomationPeer">
+            <summary>
+            Automation peer class for a BookZone.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Automation.C1BookAutomationPeer">
+            <summary>
+            Automation peer for the C1Book control.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Automation.C1BookAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Automation.C1BookAutomationPeer"/>.
+            </summary>
+            <param name="owner">The control associated with this peer.</param>
+        </member>
+        <member name="T:C1.Silverlight.Automation.C1ColorPickerAutomationPeer">
+            <summary>
+            Automation peer for the C1ColorPicker control.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Automation.C1ColorPickerAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Automation.C1ColorPickerAutomationPeer"/>.
+            </summary>
+            <param name="owner">The control associated with this peer.</param>
+        </member>
+        <member name="T:C1.Silverlight.Automation.C1ExpanderAutomationPeer">
+            <summary>
+            Automation peer for the C1Expander control.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Automation.C1ExpanderButtonAutomationPeer">
+            <summary>
+            Automation peer for the C1ExpanderButton control.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Automation.C1CoverFlowAutomationPeer">
+            <summary>
+            Automation peer for the C1CoverFlow control.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Automation.C1CoverFlowAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Automation.C1BookAutomationPeer"/>.
+            </summary>
+            <param name="owner">The control associated with this peer.</param>
+        </member>
+        <member name="T:C1.Silverlight.Automation.C1CoverFlowItemAutomationPeer">
+            <summary>
+            Automation peer for the C1CoverFlowItem control.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Automation.C1CoverFlowItemAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Automation.C1BookAutomationPeer"/>.
+            </summary>
+            <param name="owner">The control associated with this peer.</param>
+        </member>
+        <member name="T:C1.Silverlight.Automation.C1PropertyGridAutomationPeer">
+            <summary>
+            Automation peer for the C1PropertyGrid control.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Automation.C1PropertyGridAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Automation.C1BookAutomationPeer"/>.
+            </summary>
+            <param name="owner">The control associated with this peer.</param>
+        </member>
+        <member name="T:C1.Silverlight.Automation.MemberAutomationPeer">
+            <summary>
+            Automation peer for the MethodBox, PropertyBox.
+            </summary>
+            <remarks>
+            Invoke acts as ResetValue().
+            GetName() returns the property or method name.
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.Automation.MemberAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Automation.MemberAutomationPeer"/>.
+            </summary>
+            <param name="owner">The control associated with this peer.</param>
+        </member>
+        <member name="T:C1.Silverlight.Automation.PropertyBoxAutomationPeer">
+            <summary>
+            Automation peer for PropertyBox.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Automation.PropertyBoxAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Automation.PropertyBoxAutomationPeer"/>.
+            </summary>
+            <param name="owner">The control associated with this peer.</param>
+        </member>
+        <member name="T:C1.Silverlight.Automation.MethodBoxAutomationPeer">
+            <summary>
+            Automation peer for MethodBox.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Automation.MethodBoxAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Automation.PropertyBoxAutomationPeer"/>.
+            </summary>
+            <param name="owner">The control associated with this peer.</param>
+        </member>
+        <member name="T:C1.Silverlight.Automation.C1FlexGridAutomationPeer">
+            <summary>
+            Automation peer for the C1FlexGrid control.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Automation.C1FlexGridAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Automation.C1FlexGridAutomationPeer"/>.
+            </summary>
+            <param name="owner">The control associated with this peer.</param>
+        </member>
+        <member name="M:C1.Silverlight.Automation.C1FlexGridAutomationPeer.Scroll(System.Windows.Automation.ScrollAmount,System.Windows.Automation.ScrollAmount)">
+            <summary>
+            Scrolls the visible region of the content area horizontally, vertically, or both.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Automation.C1FlexGridAutomationPeer.HorizontallyScrollable">
+            <summary>
+            Gets a value that indicates whether the grid can scroll horizontally.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Automation.C1FlexGridAutomationPeer.HorizontalScrollPercent">
+            <summary>
+            Gets the current horizontal scroll position.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Automation.C1FlexGridAutomationPeer.HorizontalViewSize">
+            <summary>
+            Gets the current horizontal view size.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Automation.C1FlexGridAutomationPeer.VerticallyScrollable">
+            <summary>
+            Gets a value that indicates whether the control can scroll vertically.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Automation.C1FlexGridAutomationPeer.VerticalScrollPercent">
+            <summary>
+            Gets the current vertical scroll position.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Automation.C1FlexGridAutomationPeer.VerticalViewSize">
+            <summary>
+            Gets the vertical view size.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Automation.C1FlexGridCellAutomationPeer">
+            <summary>
+            Automation peer for a cell of the C1FlexGrid control.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Automation.C1FlexGridPartAutomationPeer">
+            <summary>
+            Base Automation peer class for parts (rows and cells) of the C1FlexGrid control.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Automation.C1FlexGridPanelAutomationPeer">
+            <summary>
+            Automation peer for the C1FlexGrid control.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Automation.C1FlexGridPanelAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Automation.C1FlexGridAutomationPeer"/>.
+            </summary>
+            <param name="owner">The control associated with this peer.</param>
+        </member>
+        <member name="T:C1.Silverlight.Automation.C1FlexComboBoxAutomationPeer">
+            <summary>
+            Automation peer for the C1FlexComboBox control.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Automation.C1FlexComboBoxAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Automation.C1FlexGridAutomationPeer"/>.
+            </summary>
+            <param name="owner">The control associated with this peer.</param>
+        </member>
+        <member name="T:C1.Silverlight.Automation.C1FlexGridRowAutomationPeer">
+            <summary>
+            Automation peer for a row of the C1FlexGrid control.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Automation.C1GaugeAutomationPeer">
+            <summary>
+            Automation peer for the C1Gauge.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Automation.C1GaugeAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Automation.C1GaugeAutomationPeer"/>.
+            </summary>
+            <param name="owner">The control associated with this peer.</param>
+        </member>
+        <member name="T:C1.Silverlight.Automation.C1LinearGaugeAutomationPeer">
+            <summary>
+            Automation peer for the C1Gauge.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Automation.C1LinearGaugeAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Automation.C1LinearGaugeAutomationPeer"/>.
+            </summary>
+            <param name="owner">The control associated with this peer.</param>
+        </member>
+        <member name="T:C1.Silverlight.Automation.C1KnobAutomationPeer">
+            <summary>
+            Automation peer for the C1Gauge.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Automation.C1KnobAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Automation.C1LinearGaugeAutomationPeer"/>.
+            </summary>
+            <param name="owner">The control associated with this peer.</param>
+        </member>
+        <member name="T:C1.Silverlight.Automation.C1OutlookBarAutomationPeer">
+            <summary>
+            Automation peer for the C1OutlookBar.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Automation.C1OutlookBarAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Automation.C1OutlookBarAutomationPeer"/>.
+            </summary>
+            <param name="owner">The control associated with this peer.</param>
+        </member>
+        <member name="T:C1.Silverlight.Automation.C1OutlookItemAutomationPeer">
+            <summary>
+            Automation peer for the C1OutlookBar.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Automation.C1OutlookItemAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Automation.C1OutlookBarAutomationPeer"/>.
+            </summary>
+            <param name="owner">The control associated with this peer.</param>
+        </member>
+        <member name="T:C1.Silverlight.Automation.C1TileViewAutomationPeer">
+            <summary>
+            Automation peer for the C1TileView.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Automation.C1TileViewAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Automation.C1OutlookBarAutomationPeer"/>.
+            </summary>
+            <param name="owner">The control associated with this peer.</param>
+        </member>
+        <member name="T:C1.Silverlight.Automation.C1TileViewItemAutomationPeer">
+            <summary>
+            Automation peer for the C1TileViewItem.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Automation.C1TileViewItemAutomationPeer.#ctor(System.Windows.FrameworkElement)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Automation.C1OutlookBarAutomationPeer"/>.
+            </summary>
+            <param name="owner">The control associated with this peer.</param>
+        </member>
+    </members>
+</doc>

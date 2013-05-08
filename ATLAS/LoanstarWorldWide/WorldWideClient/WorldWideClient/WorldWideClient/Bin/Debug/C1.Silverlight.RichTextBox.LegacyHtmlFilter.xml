@@ -1,0 +1,241 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Silverlight.RichTextBox.LegacyHtmlFilter</name>
+    </assembly>
+    <members>
+        <member name="T:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlEncoding">
+            <summary>
+            Defines options for encoding a <see cref="T:C1.Silverlight.RichTextBox.Documents.C1Document"/> as HTML.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlEncoding.StyleSheet">
+            <summary>
+            Encodes the styles in an embedded style sheet. Generates classes for every style.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlEncoding.Inline">
+            <summary>
+            Encodes the styles as style attributes in each HTML tag.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlFilter">
+            <summary>
+            Filter for converting <see cref="T:C1.Silverlight.RichTextBox.Documents.C1Document"/> objects to and from HTML strings.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlFilter.ConvertToDocument(System.String)">
+            <summary>
+            Parses a string into a <see cref="T:C1.Silverlight.RichTextBox.Documents.C1Document"/>.
+            </summary>
+            <param name="html">String containing the HTML document.</param>
+            <returns>A <see cref="T:C1.Silverlight.RichTextBox.Documents.C1Document"/> that represents the given string.</returns>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlFilter.ConvertToDocument(System.String,System.Uri)">
+            <summary>
+            Parses a string into a <see cref="T:C1.Silverlight.RichTextBox.Documents.C1Document"/>.
+            </summary>
+            <param name="html">String containing the HTML document.</param>
+            <param name="baseUri">Base <see cref="T:System.Uri"/> used for resolving image references.</param>
+            <returns>A <see cref="T:C1.Silverlight.RichTextBox.Documents.C1Document"/> that represents the given string.</returns>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlFilter.ConvertFromDocument(C1.Silverlight.RichTextBox.Documents.C1Document)">
+            <summary>
+            Creates a string representation of a <see cref="T:C1.Silverlight.RichTextBox.Documents.C1Document"/>.
+            </summary>
+            <param name="doc"><see cref="T:C1.Silverlight.RichTextBox.Documents.C1Document"/> to convert into a string.</param>
+            <returns>A string containing an HTML representation of the document.</returns>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlFilter.ConvertFromDocument(C1.Silverlight.RichTextBox.Documents.C1Document,C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlEncoding)">
+            <summary>
+            Creates a string representation of a <see cref="T:C1.Silverlight.RichTextBox.Documents.C1Document"/>.
+            </summary>
+            <param name="doc"><see cref="T:C1.Silverlight.RichTextBox.Documents.C1Document"/> to convert into a string.</param>
+            <param name="encoding">The <see cref="T:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlEncoding"/> used to encode styles in the HTML document.</param>
+            <returns>A string containing an HTML representation of the document.</returns>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlFilter.ParseTag(C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlFragment,System.Uri,C1.Silverlight.RichTextBox.Documents.C1TextElement)">
+            <summary>
+            Creates a <see cref="T:C1.Silverlight.RichTextBox.Documents.C1TextElement"/> from an <see cref="T:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlFragment"/>.
+            </summary>
+            <param name="hf"><see cref="T:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlFragment"/> that describes the element being created.</param>
+            <param name="baseUri"><see cref="T:System.Uri"/> to use a base for relative addresses.</param>
+            <param name="parent">Parent of the element being created.</param>
+            <returns>A new <see cref="T:C1.Silverlight.RichTextBox.Documents.C1TextElement"/> that represents the given <see cref="T:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlFragment"/>.</returns>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlFilter.CloseTag(C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlFragment,System.Uri,C1.Silverlight.RichTextBox.Documents.C1TextElement)">
+            <summary>
+            Closes an HTML tag and updates the parent element for the parser.
+            </summary>
+            <param name="hf"><see cref="T:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlFragment"/> that contains the end tag being processed.</param>
+            <param name="baseUri"><see cref="T:System.Uri"/> to use a base for relative addresses.</param>
+            <param name="parent"><see cref="T:C1.Silverlight.RichTextBox.Documents.C1TextElement"/> that contains the last element parsed.</param>
+            <returns>The parent element for the next tag in the input stream.</returns>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlFilter.ResolveUri(System.String,System.Uri)">
+            <summary>
+            Resolves a <see cref="T:System.Uri"/> into an absolute Uri.
+            </summary>
+            <param name="sourceUri">Source Uri (absolute or relative).</param>
+            <param name="baseUri">Base Uri to be used when <paramref name="sourceUri"/> is a relative Uri.</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlFilter.BuildTag(C1.Silverlight.RichTextBox.Documents.C1TextElement,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Builds an HTML tag for a <see cref="T:C1.Silverlight.RichTextBox.Documents.C1TextElement"/> object.
+            </summary>
+            <param name="e"><see cref="T:C1.Silverlight.RichTextBox.Documents.C1TextElement"/> that will be represented by the tag.</param>
+            <param name="attributes">Element attributes.</param>
+            <param name="styleDef">Element style definition.</param>
+            <param name="styleSheet">Dictionary with style definitions and names.</param>
+            <returns>A string containing an HTML tag for the element.</returns>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlFilter.EncodeText(System.String)">
+            <summary>
+            Encodes a string to obtain an HTML representation.
+            </summary>
+            <param name="text">Plain text string.</param>
+            <returns>An HTML representation of the <paramref name="text"/> string.</returns>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlFilter.DecodeText(System.String)">
+            <summary>
+            Decodes an HTML-encoded string to obtain a plain text string.
+            </summary>
+            <param name="text">Encoded HTML string.</param>
+            <returns>An plain text version of the HTML-encoded <paramref name="text"/> string.</returns>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlFilter.GetStyleClass(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Gets a class definition for an element based on its style.
+            </summary>
+            <param name="styleDef">CSS style definition.</param>
+            <param name="styleSheet">Style sheet containing style definitions and their names.</param>
+            <returns>A string such as ' class=classname' if the stylesheet contains the style 
+            definition; or a string such as ' style=styledefinition' otherwise.</returns>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlParser">
+            <summary>
+            Class used to parse HTML strings.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlFragment">
+            <summary>
+            Represents a fragment of an HTML document being parsed.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlFragment.ToString">
+            <summary>
+            Converts this fragment into an HTML string.
+            </summary>
+            <returns>An HTML string that represents this fragment.</returns>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlFragment.Node">
+            <summary>
+            Gets the <see cref="T:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlNode"/> that represents this fragment.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlFragment.NodeType">
+            <summary>
+            Gets the type of <see cref="T:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlNode"/> represented by this fragment.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlFragment.Style">
+            <summary>
+            Gets the <see cref="T:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlStyle"/> represented by this fragment.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlFragmentList">
+            <summary>
+            List of <see cref="T:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlFragment"/> elements.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlNode">
+            <summary>
+            Represents a node in an Html document.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlNode.#ctor">
+            <summary>
+            Constructs a new <see cref="T:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlNode"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlNode.Clone">
+            <summary>
+            Creates a shallow copy of this node.
+            </summary>
+            <returns>A shallow copy of this node.</returns>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlNode.Name">
+            <summary>
+            Gets or sets the name of this node.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlNode.Namespace">
+            <summary>
+            Gets or sets the namespace of this node.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlNode.Value">
+            <summary>
+            Gets or sets the value of this node.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlNode.Attributes">
+            <summary>
+            Gets or sets a collection of attributes that are applied to this node.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlNode.NodeType">
+            <summary>
+            Gets or sets the type of this node.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlNode.IsDiv">
+            <summary>
+            Gets a value that determines whether this node is a div-type tag.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.LegacyHtmlFilter.HtmlNode.CompleteName">
+            <summary>
+            Gets the name, including namespace if available.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.LegacyHtmlFilter.NameValueCollection">
+            <summary>
+            Collection of named values.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.LegacyHtmlFilter.NameValueCollection.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.LegacyHtmlFilter.NameValueCollection"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.LegacyHtmlFilter.NameValueCollection.Item(System.String)">
+            <summary>
+            Gets or sets the value associated with a given key.
+            </summary>
+            <param name="key">Name of the value to get or set.</param>
+            <returns>The value associated with the given key, or null if the key is not present in the collection.</returns>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.LegacyHtmlFilter.StyleSheet">
+            <summary>
+            Collection of styles.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.LegacyHtmlFilter.CursorTranslator">
+            <summary>
+            Convert html to/from Silverlight cursors.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.LegacyHtmlFilter.MarkerStyleTranslator">
+            <summary>
+            Convert html to/from TextMarkerStyle.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.LegacyHtmlFilter.ColorTranslator">
+            <summary>
+            Convert html to/from Color (present in .NET but not in Silverlight).
+            </summary>
+        </member>
+    </members>
+</doc>

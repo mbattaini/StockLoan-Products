@@ -1,0 +1,7 @@
+C:\_dev\ATLAS\Loanstar\BDBoxInformation\bin\Debug\StockLoan.BDData.dll
+C:\_dev\ATLAS\Loanstar\BDBoxInformation\bin\Debug\StockLoan.BDData.pdb
+C:\_dev\ATLAS\Loanstar\BDBoxInformation\bin\Debug\StockLoan.Common.dll
+C:\_dev\ATLAS\Loanstar\BDBoxInformation\bin\Debug\StockLoan.Common.pdb
+C:\_dev\ATLAS\Loanstar\BDBoxInformation\obj\Debug\ResolveAssemblyReference.cache
+C:\_dev\ATLAS\Loanstar\BDBoxInformation\obj\Debug\StockLoan.BDData.dll
+C:\_dev\ATLAS\Loanstar\BDBoxInformation\obj\Debug\StockLoan.BDData.pdb

@@ -1,0 +1,16 @@
+C:\_dev\Sendero 1.2\LoanetServer\obj\Debug\ResolveAssemblyReference.cache
+C:\_dev\Sendero 1.2\LoanetServer\obj\Debug\Anetics.LoanetServer.dll
+C:\_dev\Sendero 1.2\LoanetServer\bin\Debug\Anetics.LoanetServer.dll
+C:\_dev\Sendero 1.2\LoanetServer\bin\Debug\Anetics.LoanetServer.pdb
+C:\_dev\Sendero 1.2\LoanetServer\bin\Debug\amqmdnet.dll
+C:\_dev\Sendero 1.2\LoanetServer\bin\Debug\Anetics.Common.dll
+C:\_dev\Sendero 1.2\LoanetServer\bin\Debug\Anetics.Filer.dll
+C:\_dev\Sendero 1.2\LoanetServer\bin\Debug\Anetics.Loanet.dll
+C:\_dev\Sendero 1.2\LoanetServer\bin\Debug\Anetics.Process.dll
+C:\_dev\Sendero 1.2\LoanetServer\bin\Debug\Rebex.Net.Ftp.dll
+C:\_dev\Sendero 1.2\LoanetServer\bin\Debug\Rebex.Net.ProxySocket.dll
+C:\_dev\Sendero 1.2\LoanetServer\bin\Debug\Anetics.Common.pdb
+C:\_dev\Sendero 1.2\LoanetServer\bin\Debug\Anetics.Filer.pdb
+C:\_dev\Sendero 1.2\LoanetServer\bin\Debug\Anetics.Loanet.pdb
+C:\_dev\Sendero 1.2\LoanetServer\bin\Debug\Anetics.Process.pdb
+C:\_dev\Sendero 1.2\LoanetServer\obj\Debug\Anetics.LoanetServer.pdb

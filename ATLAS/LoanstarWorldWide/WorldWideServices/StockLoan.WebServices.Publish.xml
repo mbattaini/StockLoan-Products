@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="\\dalgsldev01\C$\StockLoan\WorldwideServices\" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="http://dalgsldev01/StockLoan.WebServices/" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="False" msdeployMarkAsApp="True" profileName="WorldWideServiceDeploy" publishMethod="FileSystem" replaceMatchingFiles="True" userName="PenDal_NT\BStone" savePWD="True" userPWD="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAu9Gm+UTxW0WKIEXOhf3X3wAAAAACAAAAAAADZgAAwAAAABAAAACsA8fS36lWXwa9HLvO3SF5AAAAAASAAACgAAAAEAAAAMxtc6xIgyOnNsCLk9DT9voYAAAA2/G6FT7nReqJN9GKdj47Fn9U38GaguKYFAAAAD0feWQyXUQkhofKfZHMCjqd894X" SelectedForPublish="True">
+    <file relUrl="bin/StockLoan.Transport.dll" publishTime="05/25/2011 07:27:10" />
+    <file relUrl="ContractsService.svc" publishTime="01/06/2011 07:54:34" />
+    <file relUrl="PositionsService.svc" publishTime="01/06/2011 07:54:34" />
+    <file relUrl="bin/StockLoan.Transport.pdb" publishTime="05/25/2011 07:27:10" />
+    <file relUrl="bin/StockLoan.Common.dll" publishTime="06/21/2011 09:56:23" />
+    <file relUrl="AdminService.svc" publishTime="01/06/2011 07:54:34" />
+    <file relUrl="DealsService.svc" publishTime="01/06/2011 07:54:34" />
+    <file relUrl="bin/StockLoan.DataAccess.pdb" publishTime="06/21/2011 09:56:24" />
+    <file relUrl="SecurityService.svc" publishTime="01/06/2011 07:54:34" />
+    <file relUrl="ReturnsService.svc" publishTime="01/06/2011 07:54:34" />
+    <file relUrl="FundsService.svc" publishTime="01/06/2011 07:54:34" />
+    <file relUrl="BooksService.svc" publishTime="01/06/2011 07:54:34" />
+    <file relUrl="UserAdminService.svc" publishTime="01/06/2011 07:54:34" />
+    <file relUrl="MarksService.svc" publishTime="01/06/2011 07:54:34" />
+    <file relUrl="bin/WorldWideEncrypt.pdb" publishTime="03/02/2011 07:59:56" />
+    <file relUrl="FunctionsService.svc" publishTime="01/06/2011 07:54:34" />
+    <file relUrl="bin/StockLoan.DataAccess.dll" publishTime="06/21/2011 09:56:24" />
+    <file relUrl="InventoryService.svc" publishTime="01/06/2011 07:54:34" />
+    <file relUrl="bin/StockLoan.WebServices.pdb" publishTime="06/21/2011 09:56:26" />
+    <file relUrl="bin/StockLoan.Common.pdb" publishTime="06/21/2011 09:56:23" />
+    <file relUrl="SecMasterService.svc" publishTime="01/06/2011 07:54:34" />
+    <file relUrl="RecallsService.svc" publishTime="01/06/2011 07:54:34" />
+    <file relUrl="bin/StockLoan.WebServices.dll" publishTime="06/21/2011 09:56:26" />
+    <file relUrl="bin/StockLoan.Business.dll" publishTime="06/21/2011 09:56:25" />
+    <file relUrl="bin/StockLoan.Business.pdb" publishTime="06/21/2011 09:56:25" />
+    <file relUrl="bin/WorldWideEncrypt.dll" publishTime="03/02/2011 07:59:57" />
+    <file relUrl="Web.config" publishTime="06/21/2011 09:56:34" />
+  </publishProfile>
+</publishData>

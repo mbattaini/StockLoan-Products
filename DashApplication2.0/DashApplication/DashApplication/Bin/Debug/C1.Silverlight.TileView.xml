@@ -1,0 +1,414 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Silverlight.TileView</name>
+    </assembly>
+    <members>
+        <member name="T:C1.Silverlight.TileView.C1TileViewItem">
+            <summary>
+            A selectable item inside a <see cref="T:C1.Silverlight.TileView.C1TileView"/>.
+            </summary>	
+        </member>
+        <member name="M:C1.Silverlight.TileView.C1TileViewItem.OnCreateAutomationPeer">
+            <summary>
+            Gets an AutomationPeer object used for testing the control.
+            </summary>
+            <returns>An AutomationPeer object used for testing the control.</returns>
+        </member>
+        <member name="M:C1.Silverlight.TileView.C1TileViewItem.ChangeVisualStateTiled(System.Boolean)">
+            <summary>
+            Updates the current visual state of the Tiled visual state group to match the object's properties.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.TileView.C1TileViewItem.TiledStateProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.TileView.C1TileViewItem.TiledState"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.TileView.C1TileViewItem.ContentMaximizedProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.TileView.C1TileViewItem.ContentMaximized"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.TileView.C1TileViewItem.ContentMinimizedProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.TileView.C1TileViewItem.ContentMinimized"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.TileView.C1TileViewItem.ContentTemplateMaximizedProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.TileView.C1TileViewItem.ContentTemplateMaximized"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.TileView.C1TileViewItem.ContentTemplateMinimizedProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.TileView.C1TileViewItem.ContentTemplateMinimized"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.TileView.C1TileViewItem.MouseOverBrushProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.TileView.C1TileViewItem.MouseOverBrush"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.TileView.C1TileViewItem.PressedBrushProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.TileView.C1TileViewItem.PressedBrush"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.TileView.C1TileViewItem.FocusBrushProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.TileView.C1TileViewItem.FocusBrush"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.TileView.C1TileViewItem.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.TileView.C1TileViewItem"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.TileView.C1TileViewItem.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.TileView.C1TileViewItem"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.TileView.C1TileViewItem.TiledState">
+            <summary>
+            Gets or sets the current role of the <see cref="T:C1.Silverlight.TileView.C1TileViewItem"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.TileView.C1TileViewItem.ContentMaximized">
+            <summary>
+            Gets or sets the content used when the <see cref="T:C1.Silverlight.TileView.C1TileViewItem"/> is maximized item. If null, <see cref="P:System.Windows.Controls.ContentControl.Content"/> is used.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.TileView.C1TileViewItem.ContentMinimized">
+            <summary>
+            Gets or sets the content used when another <see cref="T:C1.Silverlight.TileView.C1TileViewItem"/> is maximized. If null, <see cref="P:System.Windows.Controls.ContentControl.Content"/> is used.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.TileView.C1TileViewItem.ContentTemplateMaximized">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.DataTemplate"/> used for <see cref="P:C1.Silverlight.TileView.C1TileViewItem.ContentMaximized"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.TileView.C1TileViewItem.ContentTemplateMinimized">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.DataTemplate"/> used for <see cref="P:C1.Silverlight.TileView.C1TileViewItem.ContentMinimized"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.TileView.C1TileViewItem.MouseOverBrush">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to highlight the control when it has the mouse over.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.TileView.C1TileViewItem.PressedBrush">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to paint a button when it is pressed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.TileView.C1TileViewItem.FocusBrush">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to highlight the focused control.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.TileView.C1TileView">
+            <summary>
+            Contains a scrollable list of items organized in columns and rows.  Any item can be maximized and shown bigger.
+            </summary>	
+        </member>
+        <member name="M:C1.Silverlight.TileView.C1TileView.OnCreateAutomationPeer">
+            <summary>
+            Gets an AutomationPeer object used for testing the control.
+            </summary>
+            <returns>An AutomationPeer object used for testing the control.</returns>
+        </member>
+        <member name="F:C1.Silverlight.TileView.C1TileView.AnimationEasingFunctionProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.TileView.C1TileView.AnimationEasingFunction"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.TileView.C1TileView.MaximizedItemProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.TileView.C1TileView.MaximizedItem"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.TileView.C1TileView.MaximizedIndexProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.TileView.C1TileView.MaximizedIndex"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.TileView.C1TileView.ItemBackgroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.TileView.C1TileView.ItemBackground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.TileView.C1TileView.ItemForegroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.TileView.C1TileView.ItemForeground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.TileView.C1TileView.HeaderBackgroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.TileView.C1TileView.HeaderBackground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.TileView.C1TileView.HeaderForegroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.TileView.C1TileView.HeaderForeground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.TileView.C1TileView.ScrollBarVisibilityProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.TileView.C1TileView.ScrollBarVisibility"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.TileView.C1TileView.MinimizedItemsPositionProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.TileView.C1TileView.MinimizedItemsPosition"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.TileView.C1TileView.ScrollBarStyleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.TileView.C1TileView.ScrollBarStyle"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.TileView.C1TileView.AnimationDurationProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.TileView.C1TileView.AnimationDuration"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.TileView.C1TileView.ColumnsProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.TileView.C1TileView.Columns"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.TileView.C1TileView.RowsProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.TileView.C1TileView.Rows"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.TileView.C1TileView.ItemTemplateMaximizedProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.TileView.C1TileView.ItemTemplateMaximized"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.TileView.C1TileView.ItemTemplateMinimizedProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.TileView.C1TileView.ItemTemplateMinimized"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.TileView.C1TileView.ItemTemplateHeaderProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.TileView.C1TileView.ItemTemplateHeader"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.TileView.C1TileView.CanUserReorderProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.TileView.C1TileView.CanUserReorder"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.TileView.C1TileView.UpdateSourceCollectionProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.TileView.C1TileView.UpdateSourceCollection"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.TileView.C1TileView.MouseOverBrushProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.TileView.C1TileView.MouseOverBrush"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.TileView.C1TileView.PressedBrushProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.TileView.C1TileView.PressedBrush"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.TileView.C1TileView.ButtonBackgroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.TileView.C1TileView.ButtonBackground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.TileView.C1TileView.ButtonForegroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.TileView.C1TileView.ButtonForeground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.TileView.C1TileView.FocusBrushProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.TileView.C1TileView.FocusBrush"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.TileView.C1TileView.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.TileView.C1TileView"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.TileView.C1TileView.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.TileView.C1TileView"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.TileView.C1TileView.AnimationEasingFunction">
+            <summary>
+            Gets or sets how to soften the reordering movement.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.TileView.C1TileView.MaximizedItem">
+            <summary>
+            Gets or sets the member of the <see cref="P:Items" /> collection currently highlighted.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.TileView.C1TileView.MaximizedItemChanged">
+            <summary> 
+            Event raised when the <see cref="P:MaximizedItem"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.TileView.C1TileView.MaximizedIndex">
+            <summary>
+            Gets or sets the index in the <see cref="P:Items" /> collection of the selected item.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.TileView.C1TileView.MaximizedIndexChanged">
+            <summary> 
+            Event raised when the <see cref="P:MaximizedIndex"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.TileView.C1TileView.ItemBackground">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used as background of the contained <see cref="T:C1.Silverlight.TileView.C1TileViewItem"/>s.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.TileView.C1TileView.ItemForeground">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used as foreground of the contained <see cref="T:C1.Silverlight.TileView.C1TileViewItem"/>s.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.TileView.C1TileView.HeaderBackground">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used as background of the header of the contained <see cref="T:C1.Silverlight.TileView.C1TileViewItem"/>s.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.TileView.C1TileView.HeaderForeground">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used as foreground of the header of the contained <see cref="T:C1.Silverlight.TileView.C1TileViewItem"/>s.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.TileView.C1TileView.ScrollBarVisibility">
+            <summary>
+            Gets or sets whether the scrollbar should be visible.
+            </summary>
+            <remarks>
+            The default value is Auto.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.TileView.C1TileView.MinimizedItemsPosition">
+            <summary>
+            Gets or sets where to place the strip with the minimized items. The ScrollBar is at the right or bottom of the strip.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.TileView.C1TileView.ScrollBarStyle">
+            <summary>
+            Gets or sets the style used for the inner scrollbar.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.TileView.C1TileView.AnimationDuration">
+            <summary>
+            Gets or sets the time that item reordering takes.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.TileView.C1TileView.Columns">
+            <summary>
+            Gets or sets the number of columns the <see cref="T:C1.Silverlight.TileView.C1TileViewItem"/>s are laid in. If the value is zero, the minimum number that doesn't require scrolling is used. If both Columns and <see cref="P:C1.Silverlight.TileView.C1TileView.Rows"/> are zero, the items are laid in a square.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.TileView.C1TileView.Rows">
+            <summary>
+            Gets or sets the number of rows the <see cref="T:C1.Silverlight.TileView.C1TileViewItem"/>s are laid in. If the value is zero, the minimum number that doesn't require scrolling is used. If both <see cref="P:C1.Silverlight.TileView.C1TileView.Columns"/> and Rows are zero, the items are laid in a square.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.TileView.C1TileView.ItemTemplateMaximized">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.DataTemplate"/> used for items in the <see cref="F:TiledState.Maximized"/> state.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.TileView.C1TileView.ItemTemplateMinimized">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.DataTemplate"/> used for items in the <see cref="F:TiledState.Minimized"/> state.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.TileView.C1TileView.ItemTemplateHeader">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.DataTemplate"/> used as title for the items.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.TileView.C1TileView.CanUserReorder">
+            <summary>
+            Gets or sets whether the user is allowed to drag and drop and reorder  <see cref="T:C1.Silverlight.TileView.C1TileViewItem"/>s from this control.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.TileView.C1TileView.UpdateSourceCollection">
+            <summary>
+            Gets or sets whether changes in the order of the items are written to Items or ItemsSource.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.TileView.C1TileView.MouseOverBrush">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to highlight the control when it has the mouse over.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.TileView.C1TileView.PressedBrush">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to paint a button when it is pressed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.TileView.C1TileView.ButtonBackground">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> that will be assigned to the Background of the buttons inside the control.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.TileView.C1TileView.ButtonForeground">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> that will be assigned to the Foreground of the buttons inside the control.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.TileView.C1TileView.FocusBrush">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to highlight the focused control.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.TileView.C1TileViewPanel">
+            <summary>
+            Internal class.  Use only in <see cref="T:C1.Silverlight.TileView.C1TileView"/>'s ItemsPanelTemplate.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.TileView.TiledState">
+            <summary>
+            Specifies whether a <see cref="T:C1.Silverlight.TileView.C1TileViewItem"/> is minimized, maximized, or tiled along its siblings.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.TileView.TiledState.Tiled">
+            <summary>
+            <see cref="P:C1.Silverlight.TileView.C1TileView.MaximizedItem"/> is null.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.TileView.TiledState.Maximized">
+            <summary>
+            <see cref="P:C1.Silverlight.TileView.C1TileView.MaximizedItem"/> equals this <see cref="T:C1.Silverlight.TileView.C1TileViewItem"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.TileView.TiledState.Minimized">
+            <summary>
+            <see cref="P:C1.Silverlight.TileView.C1TileView.MaximizedItem"/> equals another <see cref="T:C1.Silverlight.TileView.C1TileViewItem"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.TileView.StringToObjectConverter">
+            <summary>
+            Used to convert objects to strings and vice versa
+            </summary>
+        </member>
+    </members>
+</doc>

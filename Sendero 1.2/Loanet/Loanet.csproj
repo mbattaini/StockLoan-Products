@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.30319</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{72C22D94-1B70-4AC0-9E96-DECBDF4FEC73}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon />
+    <AssemblyKeyContainerName />
+    <AssemblyName>Anetics.Loanet</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Anetics.Loanet</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Name>Common</Name>
+      <Project>{51D7F048-02E1-49F8-BA33-743E3E5373F7}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Process\Process.csproj">
+      <Name>Process</Name>
+      <Project>{E80C0B0F-DA0D-4B72-85A2-183D96613175}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BankLoan_Pledge_Release.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BankLoan_Pledge_Release_Datagram.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Debit_Data_Datagram.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Errors.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FullPartial_Return_AmountCallback.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="General_System_Reject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Lcor_Borrow_Order.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Lcor_Borrow_Order_Executed_Datagram.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Lcor_Borrow_Order_Unexecuted_Datagram.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Memo_Seg_Update.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Memo_Seg_Update_Datagram.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NewContract_International_Add.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NewContract_SameDay_Add.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProfitCenter_Change.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Rate_Change_BoxRate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Rate_Change_BoxToNegotiated.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Rate_Change_NegotiatedRate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Rate_Change_NegotiatedToBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Rate_Change_PositiveNegative.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Recall_Add.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Recall_Delete.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transaction_Data_Datagram.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,5 @@
+C:\_Dev\ATLAS\WCFFunctions\WCFFunctions\obj\Debug\ResolveAssemblyReference.cache
+C:\_Dev\ATLAS\WCFFunctions\WCFFunctions\bin\Debug\WCFFunctions.dll
+C:\_Dev\ATLAS\WCFFunctions\WCFFunctions\bin\Debug\WCFFunctions.pdb
+C:\_Dev\ATLAS\WCFFunctions\WCFFunctions\obj\Debug\WCFFunctions.dll
+C:\_Dev\ATLAS\WCFFunctions\WCFFunctions\obj\Debug\WCFFunctions.pdb

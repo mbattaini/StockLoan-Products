@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ContractsService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/ContractsService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/ContractsService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IContractsService_GetSourceIP_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSourceIP" />
+  </wsdl:message>
+  <wsdl:message name="IContractsService_GetSourceIP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSourceIPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContractsService_ContractBillingsGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:ContractBillingsGet" />
+  </wsdl:message>
+  <wsdl:message name="IContractsService_ContractBillingsGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ContractBillingsGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContractsService_ContractDetailsGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:ContractDetailsGet" />
+  </wsdl:message>
+  <wsdl:message name="IContractsService_ContractDetailsGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ContractDetailsGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContractsService_ContractRateChangeAsOfSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:ContractRateChangeAsOfSet" />
+  </wsdl:message>
+  <wsdl:message name="IContractsService_ContractRateChangeAsOfSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ContractRateChangeAsOfSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContractsService_ContractSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:ContractSet" />
+  </wsdl:message>
+  <wsdl:message name="IContractsService_ContractSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ContractSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContractsService_ContractsGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:ContractsGet" />
+  </wsdl:message>
+  <wsdl:message name="IContractsService_ContractsGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ContractsGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContractsService_ContractsResearchGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:ContractsResearchGet" />
+  </wsdl:message>
+  <wsdl:message name="IContractsService_ContractsResearchGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ContractsResearchGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContractsService_ContractsSummaryByBillings_InputMessage">
+    <wsdl:part name="parameters" element="tns:ContractsSummaryByBillings" />
+  </wsdl:message>
+  <wsdl:message name="IContractsService_ContractsSummaryByBillings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ContractsSummaryByBillingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContractsService_ContractSummaryGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:ContractSummaryGet" />
+  </wsdl:message>
+  <wsdl:message name="IContractsService_ContractSummaryGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ContractSummaryGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContractsService_ContractSummaryByBookCash_InputMessage">
+    <wsdl:part name="parameters" element="tns:ContractSummaryByBookCash" />
+  </wsdl:message>
+  <wsdl:message name="IContractsService_ContractSummaryByBookCash_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ContractSummaryByBookCashResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContractsService_ContractSummaryByBookProfitLossGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:ContractSummaryByBookProfitLossGet" />
+  </wsdl:message>
+  <wsdl:message name="IContractsService_ContractSummaryByBookProfitLossGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ContractSummaryByBookProfitLossGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContractsService_ContractSummarybyCashGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:ContractSummarybyCashGet" />
+  </wsdl:message>
+  <wsdl:message name="IContractsService_ContractSummarybyCashGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ContractSummarybyCashGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContractsService_ContractSummaryByCreditsDebits_InputMessage">
+    <wsdl:part name="parameters" element="tns:ContractSummaryByCreditsDebits" />
+  </wsdl:message>
+  <wsdl:message name="IContractsService_ContractSummaryByCreditsDebits_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ContractSummaryByCreditsDebitsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContractsService_ContractSummaryByHypothicationGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:ContractSummaryByHypothicationGet" />
+  </wsdl:message>
+  <wsdl:message name="IContractsService_ContractSummaryByHypothicationGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ContractSummaryByHypothicationGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContractsService_ContractSummaryByMarketValueGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:ContractSummaryByMarketValueGet" />
+  </wsdl:message>
+  <wsdl:message name="IContractsService_ContractSummaryByMarketValueGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ContractSummaryByMarketValueGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContractsService_ContractSummaryBySecurityGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:ContractSummaryBySecurityGet" />
+  </wsdl:message>
+  <wsdl:message name="IContractsService_ContractSummaryBySecurityGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ContractSummaryBySecurityGetResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IContractsService">
+    <wsdl:operation name="GetSourceIP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContractsService/GetSourceIP" message="tns:IContractsService_GetSourceIP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContractsService/GetSourceIPResponse" message="tns:IContractsService_GetSourceIP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContractBillingsGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContractsService/ContractBillingsGet" message="tns:IContractsService_ContractBillingsGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContractsService/ContractBillingsGetResponse" message="tns:IContractsService_ContractBillingsGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContractDetailsGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContractsService/ContractDetailsGet" message="tns:IContractsService_ContractDetailsGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContractsService/ContractDetailsGetResponse" message="tns:IContractsService_ContractDetailsGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContractRateChangeAsOfSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContractsService/ContractRateChangeAsOfSet" message="tns:IContractsService_ContractRateChangeAsOfSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContractsService/ContractRateChangeAsOfSetResponse" message="tns:IContractsService_ContractRateChangeAsOfSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContractSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContractsService/ContractSet" message="tns:IContractsService_ContractSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContractsService/ContractSetResponse" message="tns:IContractsService_ContractSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContractsGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContractsService/ContractsGet" message="tns:IContractsService_ContractsGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContractsService/ContractsGetResponse" message="tns:IContractsService_ContractsGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContractsResearchGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContractsService/ContractsResearchGet" message="tns:IContractsService_ContractsResearchGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContractsService/ContractsResearchGetResponse" message="tns:IContractsService_ContractsResearchGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContractsSummaryByBillings">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContractsService/ContractsSummaryByBillings" message="tns:IContractsService_ContractsSummaryByBillings_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContractsService/ContractsSummaryByBillingsResponse" message="tns:IContractsService_ContractsSummaryByBillings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContractSummaryGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContractsService/ContractSummaryGet" message="tns:IContractsService_ContractSummaryGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContractsService/ContractSummaryGetResponse" message="tns:IContractsService_ContractSummaryGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContractSummaryByBookCash">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContractsService/ContractSummaryByBookCash" message="tns:IContractsService_ContractSummaryByBookCash_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContractsService/ContractSummaryByBookCashResponse" message="tns:IContractsService_ContractSummaryByBookCash_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContractSummaryByBookProfitLossGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContractsService/ContractSummaryByBookProfitLossGet" message="tns:IContractsService_ContractSummaryByBookProfitLossGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContractsService/ContractSummaryByBookProfitLossGetResponse" message="tns:IContractsService_ContractSummaryByBookProfitLossGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContractSummarybyCashGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContractsService/ContractSummarybyCashGet" message="tns:IContractsService_ContractSummarybyCashGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContractsService/ContractSummarybyCashGetResponse" message="tns:IContractsService_ContractSummarybyCashGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContractSummaryByCreditsDebits">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContractsService/ContractSummaryByCreditsDebits" message="tns:IContractsService_ContractSummaryByCreditsDebits_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContractsService/ContractSummaryByCreditsDebitsResponse" message="tns:IContractsService_ContractSummaryByCreditsDebits_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContractSummaryByHypothicationGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContractsService/ContractSummaryByHypothicationGet" message="tns:IContractsService_ContractSummaryByHypothicationGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContractsService/ContractSummaryByHypothicationGetResponse" message="tns:IContractsService_ContractSummaryByHypothicationGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContractSummaryByMarketValueGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContractsService/ContractSummaryByMarketValueGet" message="tns:IContractsService_ContractSummaryByMarketValueGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContractsService/ContractSummaryByMarketValueGetResponse" message="tns:IContractsService_ContractSummaryByMarketValueGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContractSummaryBySecurityGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContractsService/ContractSummaryBySecurityGet" message="tns:IContractsService_ContractSummaryBySecurityGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContractsService/ContractSummaryBySecurityGetResponse" message="tns:IContractsService_ContractSummaryBySecurityGet_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IContractsService" type="tns:IContractsService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSourceIP">
+      <soap:operation soapAction="http://tempuri.org/IContractsService/GetSourceIP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractBillingsGet">
+      <soap:operation soapAction="http://tempuri.org/IContractsService/ContractBillingsGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractDetailsGet">
+      <soap:operation soapAction="http://tempuri.org/IContractsService/ContractDetailsGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractRateChangeAsOfSet">
+      <soap:operation soapAction="http://tempuri.org/IContractsService/ContractRateChangeAsOfSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractSet">
+      <soap:operation soapAction="http://tempuri.org/IContractsService/ContractSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractsGet">
+      <soap:operation soapAction="http://tempuri.org/IContractsService/ContractsGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractsResearchGet">
+      <soap:operation soapAction="http://tempuri.org/IContractsService/ContractsResearchGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractsSummaryByBillings">
+      <soap:operation soapAction="http://tempuri.org/IContractsService/ContractsSummaryByBillings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractSummaryGet">
+      <soap:operation soapAction="http://tempuri.org/IContractsService/ContractSummaryGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractSummaryByBookCash">
+      <soap:operation soapAction="http://tempuri.org/IContractsService/ContractSummaryByBookCash" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractSummaryByBookProfitLossGet">
+      <soap:operation soapAction="http://tempuri.org/IContractsService/ContractSummaryByBookProfitLossGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractSummarybyCashGet">
+      <soap:operation soapAction="http://tempuri.org/IContractsService/ContractSummarybyCashGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractSummaryByCreditsDebits">
+      <soap:operation soapAction="http://tempuri.org/IContractsService/ContractSummaryByCreditsDebits" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractSummaryByHypothicationGet">
+      <soap:operation soapAction="http://tempuri.org/IContractsService/ContractSummaryByHypothicationGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractSummaryByMarketValueGet">
+      <soap:operation soapAction="http://tempuri.org/IContractsService/ContractSummaryByMarketValueGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractSummaryBySecurityGet">
+      <soap:operation soapAction="http://tempuri.org/IContractsService/ContractSummaryBySecurityGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ContractsService">
+    <wsdl:port name="BasicHttpBinding_IContractsService" binding="tns:BasicHttpBinding_IContractsService">
+      <soap:address location="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/ContractsService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,553 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Silverlight.Carousel</name>
+    </assembly>
+    <members>
+        <member name="T:C1.Silverlight.Carousel.HorizontalItemAnchor">
+            <summary>
+            Defines possible horizontal placements of the <see cref="T:C1.Silverlight.Carousel.C1CarouselPanel"/> child controls relative
+            to the carousel's path.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Carousel.HorizontalItemAnchor.Left">
+            <summary>
+            Child element is aligned to the left of the path.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Carousel.HorizontalItemAnchor.Center">
+            <summary>
+            Child element is centered horizontally relative to the path.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Carousel.HorizontalItemAnchor.Right">
+            <summary>
+            Child element is aligned to the right of the path.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Carousel.VerticalItemAnchor">
+            <summary>
+            Defines possible vertical placements of the <see cref="T:C1.Silverlight.Carousel.C1CarouselPanel"/> child controls relative
+            to the carousel's path.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Carousel.VerticalItemAnchor.Top">
+            <summary>
+            Child element is aligned to the top of the path.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Carousel.VerticalItemAnchor.Center">
+            <summary>
+            Child element is centered vertically relative to the path.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Carousel.VerticalItemAnchor.Bottom">
+            <summary>
+            Child element is aligned to the bottom of the path.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Carousel.C1CarouselPanel">
+            <summary>
+            Represents a virtualizing panel that lays out its child elements along an arbitrary path.
+            </summary>
+            <remarks>
+            The <see cref="T:C1.Silverlight.Carousel.C1CarouselPanel"/> can be used only as a panel of ItemsControl or derived
+            control, it can't be used as a standalone panel.
+            <para>
+            Most of the <see cref="T:C1.Silverlight.Carousel.C1CarouselPanel"/> properties are attached properties, so their values
+            can be specified on ItemsControl that hosts the panel.
+            </para>
+            </remarks>
+        </member>
+        <member name="F:C1.Silverlight.Carousel.C1CarouselPanel.PageSizeProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Carousel.C1CarouselPanel.PageSize"/> property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Carousel.C1CarouselPanel.PaddingProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Carousel.C1CarouselPanel.Padding"/> property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Carousel.C1CarouselPanel.PathGeometryProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Carousel.C1CarouselPanel.PathGeometry"/> property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Carousel.C1CarouselPanel.HorizontalPathAlignmentProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Carousel.C1CarouselPanel.HorizontalPathAlignment"/> property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Carousel.C1CarouselPanel.VerticalPathAlignmentProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Carousel.C1CarouselPanel.VerticalPathAlignment"/> property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Carousel.C1CarouselPanel.HorizontalItemAnchorOnPathProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Carousel.C1CarouselPanel.HorizontalItemAnchorOnPath"/> property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Carousel.C1CarouselPanel.VerticalItemAnchorOnPathProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Carousel.C1CarouselPanel.VerticalItemAnchorOnPath"/> property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Carousel.C1CarouselPanel.PerspectiveAngleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Carousel.C1CarouselPanel.PerspectiveAngle"/> property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Carousel.C1CarouselPanel.PerspectiveFactorProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Carousel.C1CarouselPanel.PerspectiveFactor"/> property.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.#ctor">
+            <summary>
+            Creates a new instance of the <see cref="T:C1.Silverlight.Carousel.C1CarouselPanel"/> class.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.ClearCarouselProperties(System.Windows.DependencyObject)">
+            <summary>
+            Clears the values of all <see cref="T:C1.Silverlight.Carousel.C1CarouselPanel"/> attached properties on the specified
+            object.
+            </summary>
+            <param name="d">
+            The object to clear <see cref="T:C1.Silverlight.Carousel.C1CarouselPanel"/>'s attached properties on.
+            </param>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.GetPageSize(System.Windows.DependencyObject)">
+            <summary>
+            Gets the value of the <see cref="P:C1.Silverlight.Carousel.C1CarouselPanel.PageSize"/> attached property from a given object.
+            </summary>
+            <param name="d">
+            The object to read value from.
+            </param>
+            <returns>
+            The property value.
+            </returns>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.SetPageSize(System.Windows.DependencyObject,System.Int32)">
+            <summary>
+            Sets the value of the <see cref="P:C1.Silverlight.Carousel.C1CarouselPanel.PageSize"/> attached property to a given object.
+            </summary>
+            <param name="d">
+            The object to set value to.
+            </param>
+            <param name="value">
+            The property value.
+            </param>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.GetPadding(System.Windows.DependencyObject)">
+            <summary>
+            Gets the value of the <see cref="P:C1.Silverlight.Carousel.C1CarouselPanel.Padding"/> attached property from a given object.
+            </summary>
+            <param name="d">
+            The object to read value from.
+            </param>
+            <returns>
+            The property value.
+            </returns>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.SetPadding(System.Windows.DependencyObject,System.Windows.Thickness)">
+            <summary>
+            Sets the value of the <see cref="P:C1.Silverlight.Carousel.C1CarouselPanel.Padding"/> attached property to a given object.
+            </summary>
+            <param name="d">
+            The object to set value to.
+            </param>
+            <param name="value">
+            The property value.
+            </param>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.GetPathGeometry(System.Windows.DependencyObject)">
+            <summary>
+            Gets the value of the <see cref="P:C1.Silverlight.Carousel.C1CarouselPanel.PathGeometry"/> attached property from a given object.
+            </summary>
+            <param name="d">
+            The object to read value from.
+            </param>
+            <returns>
+            The property value.
+            </returns>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.SetPathGeometry(System.Windows.DependencyObject,System.Windows.Media.PathGeometry)">
+            <summary>
+            Sets the value of the <see cref="P:C1.Silverlight.Carousel.C1CarouselPanel.PathGeometry"/> attached property to a given object.
+            </summary>
+            <param name="d">
+            The object to set value to.
+            </param>
+            <param name="value">
+            The property value.
+            </param>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.GetHorizontalPathAlignment(System.Windows.DependencyObject)">
+            <summary>
+            Gets the value of the <see cref="P:C1.Silverlight.Carousel.C1CarouselPanel.HorizontalPathAlignment"/> attached property from a given object.
+            </summary>
+            <param name="d">
+            The object to read value from.
+            </param>
+            <returns>
+            The property value.
+            </returns>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.SetHorizontalPathAlignment(System.Windows.DependencyObject,System.Windows.HorizontalAlignment)">
+            <summary>
+            Sets the value of the <see cref="P:C1.Silverlight.Carousel.C1CarouselPanel.HorizontalPathAlignment"/> attached property to a given object.
+            </summary>
+            <param name="d">
+            The object to set value to.
+            </param>
+            <param name="value">
+            The property value.
+            </param>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.GetVerticalPathAlignment(System.Windows.DependencyObject)">
+            <summary>
+            Gets the value of the <see cref="P:C1.Silverlight.Carousel.C1CarouselPanel.VerticalPathAlignment"/> attached property from a given object.
+            </summary>
+            <param name="d">
+            The object to read value from.
+            </param>
+            <returns>
+            The property value.
+            </returns>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.SetVerticalPathAlignment(System.Windows.DependencyObject,System.Windows.VerticalAlignment)">
+            <summary>
+            Sets the value of the <see cref="P:C1.Silverlight.Carousel.C1CarouselPanel.VerticalPathAlignment"/> attached property to a given object.
+            </summary>
+            <param name="d">
+            The object to set value to.
+            </param>
+            <param name="value">
+            The property value.
+            </param>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.GetHorizontalItemAnchorOnPath(System.Windows.DependencyObject)">
+            <summary>
+            Gets the value of the <see cref="P:C1.Silverlight.Carousel.C1CarouselPanel.HorizontalItemAnchorOnPath"/> attached property from a given object.
+            </summary>
+            <param name="d">
+            The object to read value from.
+            </param>
+            <returns>
+            The property value.
+            </returns>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.SetHorizontalItemAnchorOnPath(System.Windows.DependencyObject,C1.Silverlight.Carousel.HorizontalItemAnchor)">
+            <summary>
+            Sets the value of the <see cref="P:C1.Silverlight.Carousel.C1CarouselPanel.HorizontalItemAnchorOnPath"/> attached property to a given object.
+            </summary>
+            <param name="d">
+            The object to set value to.
+            </param>
+            <param name="value">
+            The property value.
+            </param>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.GetVerticalItemAnchorOnPath(System.Windows.DependencyObject)">
+            <summary>
+            Gets the value of the <see cref="P:C1.Silverlight.Carousel.C1CarouselPanel.VerticalItemAnchorOnPath"/> attached property from a given object.
+            </summary>
+            <param name="d">
+            The object to read value from.
+            </param>
+            <returns>
+            The property value.
+            </returns>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.SetVerticalItemAnchorOnPath(System.Windows.DependencyObject,C1.Silverlight.Carousel.VerticalItemAnchor)">
+            <summary>
+            Sets the value of the <see cref="P:C1.Silverlight.Carousel.C1CarouselPanel.VerticalItemAnchorOnPath"/> attached property to a given object.
+            </summary>
+            <param name="d">
+            The object to set value to.
+            </param>
+            <param name="value">
+            The property value.
+            </param>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.GetPerspectiveAngle(System.Windows.DependencyObject)">
+            <summary>
+            Gets the value of the <see cref="P:C1.Silverlight.Carousel.C1CarouselPanel.PerspectiveAngle"/> attached property from a given object.
+            </summary>
+            <param name="d">
+            The object to read value from.
+            </param>
+            <returns>
+            The property value.
+            </returns>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.SetPerspectiveAngle(System.Windows.DependencyObject,System.Double)">
+            <summary>
+            Sets the value of the <see cref="P:C1.Silverlight.Carousel.C1CarouselPanel.PerspectiveAngle"/> attached property to a given object.
+            </summary>
+            <param name="d">
+            The object to set value to.
+            </param>
+            <param name="value">
+            The property value.
+            </param>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.GetPerspectiveFactor(System.Windows.DependencyObject)">
+            <summary>
+            Gets the value of the <see cref="P:C1.Silverlight.Carousel.C1CarouselPanel.PerspectiveFactor"/> attached property from a given object.
+            </summary>
+            <param name="d">
+            The object to read value from.
+            </param>
+            <returns>
+            The property value.
+            </returns>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.SetPerspectiveFactor(System.Windows.DependencyObject,System.Double)">
+            <summary>
+            Sets the value of the <see cref="P:C1.Silverlight.Carousel.C1CarouselPanel.PerspectiveFactor"/> attached property to a given object.
+            </summary>
+            <param name="d">
+            The object to set value to.
+            </param>
+            <param name="value">
+            The property value.
+            </param>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.LineDown">
+            <summary>
+            Implements the IScrollInfo.LineDown method.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.LineLeft">
+            <summary>
+            Implements the IScrollInfo.LineLeft method.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.LineRight">
+            <summary>
+            Implements the IScrollInfo.LineRight method.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.LineUp">
+            <summary>
+            Implements the IScrollInfo.LineUp method.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.MakeVisible(System.Windows.UIElement,System.Windows.Rect)">
+            <summary>
+            Implements the IScrollInfo.MakeVisible method.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.System#Windows#Controls#Primitives#IScrollInfo#MakeVisible(System.Windows.UIElement,System.Windows.Rect)">
+            <summary>
+            Implements the IScrollInfo.MakeVisible method.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.MouseWheelDown">
+            <summary>
+            Implements the IScrollInfo.MouseWheelDown method.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.MouseWheelLeft">
+            <summary>
+            Implements the IScrollInfo.MouseWheelLeft method.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.MouseWheelRight">
+            <summary>
+            Implements the IScrollInfo.MouseWheelRight method.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.MouseWheelUp">
+            <summary>
+            Implements the IScrollInfo.MouseWheelUp method.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.PageDown">
+            <summary>
+            Implements the IScrollInfo.PageDown method.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.PageLeft">
+            <summary>
+            Implements the IScrollInfo.PageLeft method.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.PageRight">
+            <summary>
+            Implements the IScrollInfo.PageRight method.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.PageUp">
+            <summary>
+            Implements the IScrollInfo.PageUp method.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.SetHorizontalOffset(System.Double)">
+            <summary>
+            Implements the IScrollInfo.SetHorizontalOffset method.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.SetVerticalOffset(System.Double)">
+            <summary>
+            Implements the IScrollInfo.SetVerticalOffset method.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.C1CarouselPanel.GetFinalTransform(System.Windows.Size)">
+            <summary>
+            
+            </summary>
+            <param name="panelContentSize">
+            Use RenderSize in OnRender
+            </param>
+            <returns></returns>
+        </member>
+        <member name="P:C1.Silverlight.Carousel.C1CarouselPanel.PageSize">
+            <summary>
+            Defines the number of visible items in <see cref="T:C1.Silverlight.Carousel.C1CarouselPanel"/>.
+            This is an attached dependency property.
+            </summary>
+            <remarks>
+            You can specify this property value on ItemsControl that hosts the <see cref="T:C1.Silverlight.Carousel.C1CarouselPanel"/>.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Carousel.C1CarouselPanel.Padding">
+            <summary>
+            Gets or sets the amount of space between <see cref="T:C1.Silverlight.Carousel.C1CarouselPanel"/> and its child elements.
+            This is an attached dependency property.
+            </summary>
+            <remarks>
+            You can specify this property value on ItemsControl that hosts the <see cref="T:C1.Silverlight.Carousel.C1CarouselPanel"/>.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Carousel.C1CarouselPanel.PathGeometry">
+            <summary>
+            Defines the path that child elements are laid out along.
+            This is an attached dependency property.
+            </summary>
+            <remarks>
+            You can specify this property value on ItemsControl that hosts the <see cref="T:C1.Silverlight.Carousel.C1CarouselPanel"/>.
+            <para>
+            The <see cref="P:C1.Silverlight.Carousel.C1CarouselPanel.PathGeometry"/> itself defines a two-dimentional curve, but in a composition
+            with the <see cref="P:C1.Silverlight.Carousel.C1CarouselPanel.PerspectiveAngle"/> property it defines three-dimentional curve.
+            </para>
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Carousel.C1CarouselPanel.HorizontalPathAlignment">
+            <summary>
+            Gets or sets a horizontal alignment of the <see cref="P:C1.Silverlight.Carousel.C1CarouselPanel.PathGeometry"/>.
+            This is an attached dependency property.
+            </summary>
+            <remarks>
+            You can specify this property value on ItemsControl that hosts the <see cref="T:C1.Silverlight.Carousel.C1CarouselPanel"/>.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Carousel.C1CarouselPanel.VerticalPathAlignment">
+            <summary>
+            Gets or sets a vertical alignment of the <see cref="P:C1.Silverlight.Carousel.C1CarouselPanel.PathGeometry"/>.
+            This is an attached dependency property.
+            </summary>
+            <remarks>
+            You can specify this property value on ItemsControl that hosts the <see cref="T:C1.Silverlight.Carousel.C1CarouselPanel"/>.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Carousel.C1CarouselPanel.HorizontalItemAnchorOnPath">
+            <summary>
+            Gets or sets the horizontal placement of the child controls relative to the carousel's path.
+            This is an attached dependency property.
+            </summary>
+            <remarks>
+            You can specify this property value on ItemsControl that hosts the <see cref="T:C1.Silverlight.Carousel.C1CarouselPanel"/>.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Carousel.C1CarouselPanel.VerticalItemAnchorOnPath">
+            <summary>
+            Gets or sets the vertical placement of the child controls relative to the carousel's path.
+            This is an attached dependency property.
+            </summary>
+            <remarks>
+            You can specify this property value on ItemsControl that hosts the <see cref="T:C1.Silverlight.Carousel.C1CarouselPanel"/>.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Carousel.C1CarouselPanel.PerspectiveAngle">
+            <summary>
+            Gets or sets the angle, in degrees, to which the planar <see cref="P:C1.Silverlight.Carousel.C1CarouselPanel.PathGeometry"/> curve is
+            turned around the x-axis and thus forms a three-dimensional curve.
+            This is an attached dependency property.
+            </summary>
+            <remarks>
+            You can specify this property value on ItemsControl that hosts the <see cref="T:C1.Silverlight.Carousel.C1CarouselPanel"/>.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Carousel.C1CarouselPanel.PerspectiveFactor">
+            <summary>
+            Gets or sets the value defining how much more distant elements are zoomed out comparing
+            to less distant elements.
+            This is an attached dependency property.
+            </summary>
+            <remarks>
+            You can specify this property value on ItemsControl that hosts the <see cref="T:C1.Silverlight.Carousel.C1CarouselPanel"/>.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Carousel.C1CarouselPanel.ActualScrollTransitionFactor">
+            <summary>
+            Negative or positive depending on scroll direction. Absolute range is [0; 1].
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Carousel.C1CarouselPanel.CanHorizontallyScroll">
+            <summary>
+            Implements the IScrollInfo.CanHorizontallyScroll property.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Carousel.C1CarouselPanel.CanVerticallyScroll">
+            <summary>
+            Implements the IScrollInfo.CanVerticallyScroll property.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Carousel.C1CarouselPanel.ExtentHeight">
+            <summary>
+            Implements the IScrollInfo.ExtentHeight property.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Carousel.C1CarouselPanel.ExtentWidth">
+            <summary>
+            Implements the IScrollInfo.ExtentWidth property.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Carousel.C1CarouselPanel.HorizontalOffset">
+            <summary>
+            Implements the IScrollInfo.HorizontalOffset property.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Carousel.C1CarouselPanel.ScrollOwner">
+            <summary>
+            Implements the IScrollInfo.ScrollOwner property.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Carousel.C1CarouselPanel.VerticalOffset">
+            <summary>
+            Implements the IScrollInfo.VerticalOffset property.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Carousel.C1CarouselPanel.ViewportHeight">
+            <summary>
+            Implements the IScrollInfo.ViewportHeight property.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Carousel.C1CarouselPanel.ViewportWidth">
+            <summary>
+            Implements the IScrollInfo.ViewportWidth property.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Carousel.PathGeometryConverter.Parse(System.String)">
+            <summary>
+            Main parser routine, which loops over each char in received string, and performs actions according to command/parameter being passed
+            </summary>
+            <param name="path">String with path data definition</param>
+            <returns>PathGeometry object created from string definition</returns>
+        </member>
+    </members>
+</doc>

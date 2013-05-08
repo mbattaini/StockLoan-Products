@@ -1,0 +1,7 @@
+C:\ATLAS\Loanstar\Ares\obj\Debug\ResolveAssemblyReference.cache
+C:\ATLAS\Loanstar\Ares\bin\Debug\StockLoan.Ares.dll
+C:\ATLAS\Loanstar\Ares\bin\Debug\StockLoan.Ares.pdb
+C:\ATLAS\Loanstar\Ares\bin\Debug\StockLoan.Common.dll
+C:\ATLAS\Loanstar\Ares\bin\Debug\StockLoan.Common.pdb
+C:\ATLAS\Loanstar\Ares\obj\Debug\StockLoan.Ares.dll
+C:\ATLAS\Loanstar\Ares\obj\Debug\StockLoan.Ares.pdb

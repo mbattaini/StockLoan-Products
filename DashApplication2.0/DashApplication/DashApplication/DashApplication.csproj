@@ -1,0 +1,665 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ExpressionBlendVersion>4.0.20525.0</ExpressionBlendVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CA449DEA-C5CF-4D41-9A94-3583DE98415F}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DashApplication</RootNamespace>
+    <AssemblyName>DashApplication</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>DashApplication20120731.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>DashApplication.App</SilverlightAppEntry>
+    <TestPageFileName>TestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>false</EnableOutOfBrowser>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>
+    </LinkedServerProject>
+    <Utf8Output>true</Utf8Output>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the
+		MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+		to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.Silverlight, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.Analytics, Version=4.0.20122.259, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.Automation, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.Carousel, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.Carousel.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.Chart, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.Chart.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.Chart.Editor, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.Chart.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.Chart.Extended, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.Chart.Extended.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.Chart3D, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.Chart3D.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.Data, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.DataGrid, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.DataGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.DataGrid.Analytics, Version=4.0.20122.259, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.DataGrid.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.DataGrid.Excel, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.DataGrid.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.DataGrid.Filters, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.DataGrid.Filters.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.DataGrid.Ria, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.DataGrid.Ria.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.DataGrid.Summaries, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.DataGrid.Summaries.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.DateTimeEditors, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.DateTimeEditors.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.Docking, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.Excel, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.Extended, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.Extended.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.Extended.Analytics, Version=4.0.20122.259, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.Extended.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.FlexGrid.4, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.FlexGrid.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.FlexGridFilter.4, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.FlexGridFilter.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.Gauge, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.Gauge.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.Imaging, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.Legacy, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.Legacy.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.Maps, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.Maps.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.MediaPlayer, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.MediaPlayer.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.Olap.4, Version=4.0.20122.157, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.Olap.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.OrgChart, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.OrgChart.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.OutlookBar, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.OutlookBar.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.Pdf, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.PdfViewer, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.PdfViewer.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.ReportViewer, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.ReportViewer.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.RichTextBox, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.RichTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.RichTextBox.LegacyHtmlFilter, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.RichTextBox.LegacyHtmlFilter.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.RichTextBox.PdfFilter, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.RichTextBox.PdfFilter.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.RichTextBox.RtfFilter, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.RichTextBox.RtfFilter.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.RichTextBox.Toolbar, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.RichTextBox.Toolbar.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.Schedule, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.Schedule.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.SpellChecker, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.SpellChecker.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.Theming, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.Theming.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.Theming.BureauBlack, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.Theming.BureauBlack.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.Theming.Cosmopolitan, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.Theming.Cosmopolitan.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.Theming.ExpressionDark, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.Theming.ExpressionDark.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.Theming.ExpressionLight, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.Theming.ExpressionLight.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.Theming.Office2007, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.Theming.Office2007.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.Theming.Office2010, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.Theming.Office2010.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.Theming.RainierOrange, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.Theming.RainierOrange.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.Theming.ShinyBlue, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.Theming.ShinyBlue.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.Theming.WhistlerBlue, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.Theming.WhistlerBlue.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.TileView, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.TileView.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.Toolbar, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.Toolbar.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.Uploader, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.Uploader.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.Zip, Version=4.0.20122.259, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for Silverlight\Bin\v4\C1.Silverlight.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="FloatableWindow">
+      <HintPath>..\..\..\..\Users\mbattaini\Desktop\GlobalStar\WorldWideAdminPortal\LoanStarWorldWideAdmin\LoanStarWorldWideAdmin\Bin\Debug\FloatableWindow.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Effects, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Expression.Prototyping.Interactivity, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Expression.Prototyping.SketchControls, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System.ComponentModel.DataAnnotations, Version=2.0.5.0, Culture=neutral, PublicKeyToken=ddd0da4d3e678217, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Windows.Controls.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Data.Input" />
+    <Reference Include="system.windows.controls.datavisualization.toolkit, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Input, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Navigation, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Toolkit, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\ToLower_Behavior.cs" />
+    <Compile Include="Assets\ToUpper_Behavior.cs" />
+    <Compile Include="Custom Classes\ChildWindowWrapper.cs" />
+    <Compile Include="Custom Classes\ClientWindow.cs" />
+    <Compile Include="Custom Classes\ContractsChildWindowWrapper.cs" />
+    <Compile Include="Custom Classes\CustomAnimations.cs" />
+    <Compile Include="Custom Classes\CustomCollateralTabItem.cs" />
+    <Compile Include="Custom Classes\CustomEvents.cs" />
+    <Compile Include="Custom Classes\CustomTypes.cs" />
+    <Compile Include="Custom Classes\Functions.cs" />
+    <Compile Include="Custom Classes\PdfUtils.cs" />
+    <Compile Include="Custom Classes\UserInformation.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\ServicePosition\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\BorrowsMorningControl.xaml.cs">
+      <DependentUpon>BorrowsMorningControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\CashAndCollateralControl.xaml.cs">
+      <DependentUpon>CashAndCollateralControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\CollateralUtilizationControl.xaml.cs">
+      <DependentUpon>CollateralUtilizationControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\CollateralUtilizationDetailControl.xaml.cs">
+      <DependentUpon>CollateralUtilizationDetailControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\CollateralUtilizationSummaryControl.xaml.cs">
+      <DependentUpon>CollateralUtilizationSummaryControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\CollateralUtilizationShellControl.xaml.cs">
+      <DependentUpon>CollateralUtilizationShellControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\CollateralUtilizationSummaryDetailControl.xaml.cs">
+      <DependentUpon>CollateralUtilizationSummaryDetailControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\ContractBySecurityControl.xaml.cs">
+      <DependentUpon>ContractBySecurityControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\GenericTileCntrl.xaml.cs">
+      <DependentUpon>GenericTileCntrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\HardToBorrowBillingItemControl.xaml.cs">
+      <DependentUpon>HardToBorrowBillingItemControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\LoginControl.xaml.cs">
+      <DependentUpon>LoginControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\PenaltyBoxControl.xaml.cs">
+      <DependentUpon>PenaltyBoxControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\PenaltyBoxItemSetControl.xaml.cs">
+      <DependentUpon>PenaltyBoxItemSetControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\RecallTradingControl.xaml.cs">
+      <DependentUpon>RecallTradingControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\RecallTradingItemSetControl.xaml.cs">
+      <DependentUpon>RecallTradingItemSetControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\RecallTradingSupplementControl.xaml.cs">
+      <DependentUpon>RecallTradingSupplementControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\ReportViewerControl.xaml.cs">
+      <DependentUpon>ReportViewerControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\SLBalancesCombinedCntrl.xaml.cs">
+      <DependentUpon>SLBalancesCombinedCntrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\SLDashboardBalancesCntrl.xaml.cs">
+      <DependentUpon>SLDashboardBalancesCntrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\SLDashBoardCreditBalancesCntrl.xaml.cs">
+      <DependentUpon>SLDashBoardCreditBalancesCntrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\StockLoanDashboardControl.xaml.cs">
+      <DependentUpon>StockLoanDashboardControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\PageCashAndCollateral.xaml.cs">
+      <DependentUpon>PageCashAndCollateral.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\PageApps.xaml.cs">
+      <DependentUpon>PageApps.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\PageBorrowsMorning.xaml.cs">
+      <DependentUpon>PageBorrowsMorning.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\PageCollateralSummary.xaml.cs">
+      <DependentUpon>PageCollateralSummary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\PageCollateralUtilization.xaml.cs">
+      <DependentUpon>PageCollateralUtilization.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\PageContractsbySecurity.xaml.cs">
+      <DependentUpon>PageContractsbySecurity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\PageHardToBorrowBillingItem.xaml.cs">
+      <DependentUpon>PageHardToBorrowBillingItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\PagePenaltyBox.xaml.cs">
+      <DependentUpon>PagePenaltyBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\PageRcallTradingSupplement.xaml.cs">
+      <DependentUpon>PageRcallTradingSupplement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\PageRecallTrading.xaml.cs">
+      <DependentUpon>PageRecallTrading.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\PageReportViewer.xaml.cs">
+      <DependentUpon>PageReportViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\PageStockLoanDashboard.xaml.cs">
+      <DependentUpon>PageStockLoanDashboard.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="Assets\Brushes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Fonts.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Styles.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User Controls\BorrowsMorningControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User Controls\CashAndCollateralControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User Controls\CollateralUtilizationControl.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="User Controls\CollateralUtilizationDetailControl.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="User Controls\CollateralUtilizationSummaryControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User Controls\CollateralUtilizationShellControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="User Controls\CollateralUtilizationSummaryDetailControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User Controls\ContractBySecurityControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User Controls\GenericTileCntrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User Controls\HardToBorrowBillingItemControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User Controls\LoginControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User Controls\PenaltyBoxControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User Controls\PenaltyBoxItemSetControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User Controls\RecallTradingControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User Controls\RecallTradingItemSetControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User Controls\RecallTradingSupplementControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User Controls\ReportViewerControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User Controls\SLBalancesCombinedCntrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User Controls\SLDashboardBalancesCntrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User Controls\SLDashBoardCreditBalancesCntrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="User Controls\StockLoanDashboardControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserPages\PageCashAndCollateral.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserPages\PageApps.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserPages\PageBorrowsMorning.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserPages\PageCollateralSummary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserPages\PageCollateralUtilization.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserPages\PageContractsbySecurity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserPages\PageHardToBorrowBillingItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserPages\PagePenaltyBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserPages\PageRcallTradingSupplement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserPages\PageRecallTrading.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserPages\PageReportViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserPages\PageStockLoanDashboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Service References\ServicePosition\configuration91.svcinfo" />
+    <None Include="Service References\ServicePosition\configuration.svcinfo" />
+    <None Include="Service References\ServicePosition\PositionService1.wsdl" />
+    <None Include="Service References\ServicePosition\PositionService2.wsdl" />
+    <None Include="Service References\ServicePosition\PositionService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicePosition\PositionService31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicePosition\PositionService32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicePosition\PositionService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicePosition\PositionService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicePosition\PositionService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicePosition\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Resource Include="Image\White\MB_0023_home2.png" />
+    <Resource Include="Image\White\MB_0043_apps9.png" />
+    <Resource Include="Image\Other\MB_0005_weather1.png" />
+    <Resource Include="Image\Other\MB_0007_book.png" />
+    <Resource Include="Image\Other\MB_0010_world.png" />
+    <Resource Include="Image\White\MB_0010_info.png" />
+    <Resource Include="Image\White\MB_0015_reload.png" />
+    <Resource Include="Image\White\MB_0012_landskape.png" />
+    <Resource Include="Image\White\MB_0019_shut-down.png" />
+    <Resource Include="Image\White\MB_0018_viewer.png" />
+    <Resource Include="Image\White\MB_0008_save.png" />
+    <Resource Include="Image\White\MB_0008_Excel.png" />
+    <Resource Include="Image\White\MB_0009_loading.png" />
+    <Resource Include="Image\Other\MB_0006_back.png" />
+    <Resource Include="Image\White\MB_0030_off.png" />
+    <Resource Include="Image\White\MS_0000s_0036_search.png" />
+    <Resource Include="Image\Other\MB_0024_LOCK.png" />
+    <Resource Include="Image\Other\MB_0006_calculator.png" />
+    <Resource Include="Image\Other\MB_0042_apps4.png" />
+    <Resource Include="Image\White\MS_0000s_0034_signal4.png" />
+    <Resource Include="Image\Other\MB_0029_netw_conn.png" />
+    <Resource Include="Image\Other\MB_0003_Apps.png" />
+    <Resource Include="Image\Other\MB_0017_Sattelite.png" />
+    <Resource Include="Image\Other\MB_0019_plus.png" />
+    <None Include="Service References\ServicePosition\PositionService.disco" />
+    <Resource Include="Image\White\MB_0010_tasks.png" />
+    <Resource Include="Image\Other\MB_0011_apple.png" />
+    <None Include="Service References\ServicePosition\PositionService2.disco" />
+    <Content Include="ServiceReferences.ClientConfig" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServicePosition\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	     Other similar extension points exist, see Microsoft.Common.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>

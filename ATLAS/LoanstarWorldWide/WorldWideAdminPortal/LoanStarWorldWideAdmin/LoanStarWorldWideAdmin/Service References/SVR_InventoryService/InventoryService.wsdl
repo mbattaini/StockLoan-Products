@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="InventoryService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/InventoryService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/InventoryService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IInventoryService_GetSourceIP_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSourceIP" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_GetSourceIP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSourceIPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_DesksGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:DesksGet" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_DesksGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DesksGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_DeskSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeskSet" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_DeskSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeskSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_DeskTypesGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeskTypesGet" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_DeskTypesGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeskTypesGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_FirmsGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:FirmsGet" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_FirmsGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FirmsGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_FirmSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:FirmSet" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_FirmSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FirmSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_InventoryGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:InventoryGet" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_InventoryGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InventoryGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_InventoryItemSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:InventoryItemSet" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_InventoryItemSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InventoryItemSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_InventoryFileLayoutGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:InventoryFileLayoutGet" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_InventoryFileLayoutGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InventoryFileLayoutGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_InventoryFileLayoutSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:InventoryFileLayoutSet" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_InventoryFileLayoutSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InventoryFileLayoutSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_InventoryRatesGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:InventoryRatesGet" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_InventoryRatesGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InventoryRatesGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_InventorySubscriptionsGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:InventorySubscriptionsGet" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_InventorySubscriptionsGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InventorySubscriptionsGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_InventorySubscriptionSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:InventorySubscriptionSet" />
+  </wsdl:message>
+  <wsdl:message name="IInventoryService_InventorySubscriptionSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InventorySubscriptionSetResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IInventoryService">
+    <wsdl:operation name="GetSourceIP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/GetSourceIP" message="tns:IInventoryService_GetSourceIP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/GetSourceIPResponse" message="tns:IInventoryService_GetSourceIP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DesksGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/DesksGet" message="tns:IInventoryService_DesksGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/DesksGetResponse" message="tns:IInventoryService_DesksGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeskSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/DeskSet" message="tns:IInventoryService_DeskSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/DeskSetResponse" message="tns:IInventoryService_DeskSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeskTypesGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/DeskTypesGet" message="tns:IInventoryService_DeskTypesGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/DeskTypesGetResponse" message="tns:IInventoryService_DeskTypesGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FirmsGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/FirmsGet" message="tns:IInventoryService_FirmsGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/FirmsGetResponse" message="tns:IInventoryService_FirmsGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FirmSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/FirmSet" message="tns:IInventoryService_FirmSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/FirmSetResponse" message="tns:IInventoryService_FirmSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InventoryGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/InventoryGet" message="tns:IInventoryService_InventoryGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/InventoryGetResponse" message="tns:IInventoryService_InventoryGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InventoryItemSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/InventoryItemSet" message="tns:IInventoryService_InventoryItemSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/InventoryItemSetResponse" message="tns:IInventoryService_InventoryItemSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InventoryFileLayoutGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/InventoryFileLayoutGet" message="tns:IInventoryService_InventoryFileLayoutGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/InventoryFileLayoutGetResponse" message="tns:IInventoryService_InventoryFileLayoutGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InventoryFileLayoutSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/InventoryFileLayoutSet" message="tns:IInventoryService_InventoryFileLayoutSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/InventoryFileLayoutSetResponse" message="tns:IInventoryService_InventoryFileLayoutSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InventoryRatesGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/InventoryRatesGet" message="tns:IInventoryService_InventoryRatesGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/InventoryRatesGetResponse" message="tns:IInventoryService_InventoryRatesGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InventorySubscriptionsGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/InventorySubscriptionsGet" message="tns:IInventoryService_InventorySubscriptionsGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/InventorySubscriptionsGetResponse" message="tns:IInventoryService_InventorySubscriptionsGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InventorySubscriptionSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventoryService/InventorySubscriptionSet" message="tns:IInventoryService_InventorySubscriptionSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventoryService/InventorySubscriptionSetResponse" message="tns:IInventoryService_InventorySubscriptionSet_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IInventoryService" type="tns:IInventoryService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSourceIP">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/GetSourceIP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DesksGet">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/DesksGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeskSet">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/DeskSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeskTypesGet">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/DeskTypesGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FirmsGet">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/FirmsGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FirmSet">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/FirmSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InventoryGet">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/InventoryGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InventoryItemSet">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/InventoryItemSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InventoryFileLayoutGet">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/InventoryFileLayoutGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InventoryFileLayoutSet">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/InventoryFileLayoutSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InventoryRatesGet">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/InventoryRatesGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InventorySubscriptionsGet">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/InventorySubscriptionsGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InventorySubscriptionSet">
+      <soap:operation soapAction="http://tempuri.org/IInventoryService/InventorySubscriptionSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InventoryService">
+    <wsdl:port name="BasicHttpBinding_IInventoryService" binding="tns:BasicHttpBinding_IInventoryService">
+      <soap:address location="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/InventoryService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

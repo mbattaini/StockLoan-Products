@@ -1,0 +1,17 @@
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\C1.C1Pdf.2.dll
+bin\Debug\StockLoan.Common.dll
+bin\Debug\StockLoan.Common.pdb
+bin\Debug\C1.C1Pdf.2.xml
+bin\Release\C1.C1Pdf.2.dll
+bin\Release\StockLoan.Common.dll
+bin\Release\C1.C1Pdf.2.xml
+obj\Release\ResolveAssemblyReference.cache
+bin\Release\StockLoan.PushData.dll
+bin\Release\StockLoan.PushData.pdb
+obj\Release\StockLoan.PushData.dll
+obj\Release\StockLoan.PushData.pdb
+bin\Debug\StockLoan.PushData.dll
+bin\Debug\StockLoan.PushData.pdb
+obj\Debug\StockLoan.PushData.dll
+obj\Debug\StockLoan.PushData.pdb

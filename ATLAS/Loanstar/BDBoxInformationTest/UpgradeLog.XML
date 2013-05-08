@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="AresTest">
+</Property><Property Name="Solution File" Value="C:\ATLAS\Loanstar\AresTest\AresTest.sln">
+</Property><Property Name="User Options File" Value="C:\ATLAS\Loanstar\AresTest\AresTest.suo">
+</Property><Property Name="Date" Value="Tuesday, September 29, 2009">
+</Property><Property Name="Time" Value="12:45 PM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="AresTest.sln" Description="File successfully backed up as C:\ATLAS\Loanstar\AresTest\Backup\AresTest.sln">
+</Event><Event ErrorLevel="0" Project="" Source="AresTest.suo" Description="File successfully backed up as C:\ATLAS\Loanstar\AresTest\Backup\AresTest.suo">
+</Event><Event ErrorLevel="1" Project="Common" Source="..\Common\Common.csproj" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="2" Project="Common" Source="..\Common\Common.csproj" Description="Unable to open project file to perform upgrade.  ">
+</Event><Event ErrorLevel="1" Project="Ares" Source="..\Ares\Ares.csproj" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="0" Project="Ares" Source="..\Ares\Ares.csproj" Description="Project file successfully backed up as C:\ATLAS\Loanstar\AresTest\Backup\Ares\Ares.csproj">
+</Event><Event ErrorLevel="0" Project="Ares" Source="..\Ares\Ares.csproj.user" Description="Project user file successfully backed up as C:\ATLAS\Loanstar\AresTest\Backup\Ares\Ares.csproj.user">
+</Event><Event ErrorLevel="0" Project="Ares" Source="..\Ares\AresMain.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\AresTest\Backup\Ares\AresMain.cs">
+</Event><Event ErrorLevel="0" Project="Ares" Source="..\Ares\AssemblyInfo.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\AresTest\Backup\Ares\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Ares" Source="..\Ares\Email.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\AresTest\Backup\Ares\Email.cs">
+</Event><Event ErrorLevel="0" Project="Ares" Source="..\Ares\Master.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\AresTest\Backup\Ares\Master.cs">
+</Event><Event ErrorLevel="0" Project="Ares" Source="..\Ares\Ares.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Ares" Source="..\Ares\Ares.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="AresTest" Source="AresTest.csproj" Description="Project file successfully backed up as C:\ATLAS\Loanstar\AresTest\Backup\AresTest.csproj">
+</Event><Event ErrorLevel="0" Project="AresTest" Source="AresTest.csproj.user" Description="Project user file successfully backed up as C:\ATLAS\Loanstar\AresTest\Backup\AresTest.csproj.user">
+</Event><Event ErrorLevel="0" Project="AresTest" Source="AssemblyInfo.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\AresTest\Backup\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="AresTest" Source="TestHarness.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\AresTest\Backup\TestHarness.cs">
+</Event><Event ErrorLevel="0" Project="AresTest" Source="App.config" Description="File successfully backed up as C:\ATLAS\Loanstar\AresTest\Backup\App.config">
+</Event><Event ErrorLevel="0" Project="AresTest" Source="AresTest.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="AresTest" Source="AresTest.csproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="Filer" Source="..\Filer\Filer.csproj" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="2" Project="Filer" Source="..\Filer\Filer.csproj" Description="Unable to open project file to perform upgrade.  ">
+</Event><Event ErrorLevel="0" Project="" Source="AresTest.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="AresTest.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Ares" Source="..\Ares\Ares.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="AresTest" Source="AresTest.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

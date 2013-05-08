@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PositionsService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:3918/PositionsService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:3918/PositionsService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPositionsService_BoxPositionGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:BoxPositionGet" />
+  </wsdl:message>
+  <wsdl:message name="IPositionsService_BoxPositionGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BoxPositionGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPositionsService_BoxPositionLookupGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:BoxPositionLookupGet" />
+  </wsdl:message>
+  <wsdl:message name="IPositionsService_BoxPositionLookupGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BoxPositionLookupGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPositionsService_BoxSummaryDataConfigGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:BoxSummaryDataConfigGet" />
+  </wsdl:message>
+  <wsdl:message name="IPositionsService_BoxSummaryDataConfigGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BoxSummaryDataConfigGetResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPositionsService">
+    <wsdl:operation name="BoxPositionGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPositionsService/BoxPositionGet" message="tns:IPositionsService_BoxPositionGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPositionsService/BoxPositionGetResponse" message="tns:IPositionsService_BoxPositionGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BoxPositionLookupGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPositionsService/BoxPositionLookupGet" message="tns:IPositionsService_BoxPositionLookupGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPositionsService/BoxPositionLookupGetResponse" message="tns:IPositionsService_BoxPositionLookupGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BoxSummaryDataConfigGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPositionsService/BoxSummaryDataConfigGet" message="tns:IPositionsService_BoxSummaryDataConfigGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPositionsService/BoxSummaryDataConfigGetResponse" message="tns:IPositionsService_BoxSummaryDataConfigGet_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPositionsService" type="tns:IPositionsService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="BoxPositionGet">
+      <soap:operation soapAction="http://tempuri.org/IPositionsService/BoxPositionGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BoxPositionLookupGet">
+      <soap:operation soapAction="http://tempuri.org/IPositionsService/BoxPositionLookupGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BoxSummaryDataConfigGet">
+      <soap:operation soapAction="http://tempuri.org/IPositionsService/BoxSummaryDataConfigGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PositionsService">
+    <wsdl:port name="BasicHttpBinding_IPositionsService" binding="tns:BasicHttpBinding_IPositionsService">
+      <soap:address location="http://localhost:3918/PositionsService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

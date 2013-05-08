@@ -1,0 +1,23 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"	
+	xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"	
+	mc:Ignorable="d"
+	x:Class="WorldWideClient.LoginControl" Height="320" Width="544">
+
+	<Grid>
+		<Grid.Background>
+			<ImageBrush ImageSource="/Images/Snow-Leopard-Server-wallpaper.jpg" Stretch="UniformToFill"/>
+		</Grid.Background>
+		<c1:C1TextBoxBase x:Name="UserIdTextBox" Margin="172,130,172,0" VerticalScrollBarVisibility="Disabled" Text=" " AcceptsReturn="False" Style="{StaticResource TransparantLightBlueTextBox}" Height="27" VerticalAlignment="Top" CaretBrush="White" HorizontalContentAlignment="Left" Background="#63254061"/>		
+		<Button x:Name="LoginButton" Content="Login" Height="32" VerticalAlignment="Bottom" FontSize="12" Margin="222,0,222,75" Click="LoginButton_Click" Style="{StaticResource TransparantButton}" Foreground="#FF0F0F14"/>		
+		<sdk:Label x:Name="StatusLabel" Height="25" Margin="172,0,172,46" VerticalAlignment="Bottom" Content="" FontWeight="Bold" Style="{StaticResource TransparantLabel}" HorizontalContentAlignment="Center" Background="#63254061"/>
+		<PasswordBox x:Name="PasswordTextBox" Height="27" Margin="172,0,172,111" VerticalAlignment="Bottom" Style="{StaticResource TransparantPasswordBox}" CaretBrush="White" Background="#63254061" HorizontalContentAlignment="Left"/>
+		<sdk:Label x:Name="StatusLabel_Copy" Margin="172,114,0,0" VerticalAlignment="Top" Content="User ID:" FontWeight="Bold" Style="{StaticResource TransparantLabel}" HorizontalContentAlignment="Center" Background="#00254061" HorizontalAlignment="Left" Width="46"/>
+		<sdk:Label x:Name="StatusLabel_Copy1" Margin="172,0,0,142" VerticalAlignment="Bottom" Content="Password:" FontWeight="Bold" Style="{StaticResource TransparantLabel}" HorizontalContentAlignment="Center" Background="#00254061" HorizontalAlignment="Left"/>
+		<c1:C1Image Height="102" Margin="172,8,172,0" VerticalAlignment="Top" Source="/WorldWideClient;component/Images/Android-Voice-Dailer-256.png"/>		
+	</Grid>
+</UserControl>

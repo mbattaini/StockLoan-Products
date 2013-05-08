@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="BDDataTest">
+</Property><Property Name="Solution File" Value="C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\BDDataTest.sln">
+</Property><Property Name="Date" Value="Monday, March 15, 2010">
+</Property><Property Name="Time" Value="8:42 AM">
+</Property><Property Name="Log Number" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="BDDataTest.sln" Description="File successfully backed up as C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\Backup\BDDataTest.sln">
+</Event><Event ErrorLevel="1" Project="Ares" Source="..\Ares\Ares.csproj" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="0" Project="Ares" Source="..\Ares\Ares.csproj" Description="Project file successfully backed up as C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\Backup\Ares\Ares.csproj">
+</Event><Event ErrorLevel="0" Project="Ares" Source="..\Ares\Ares.csproj.user" Description="Project user file successfully backed up as C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\Backup\Ares\Ares.csproj.user">
+</Event><Event ErrorLevel="0" Project="Ares" Source="..\Ares\AresMain.cs" Description="File successfully backed up as C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\Backup\Ares\AresMain.cs">
+</Event><Event ErrorLevel="0" Project="Ares" Source="..\Ares\AssemblyInfo.cs" Description="File successfully backed up as C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\Backup\Ares\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Ares" Source="..\Ares\Email.cs" Description="File successfully backed up as C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\Backup\Ares\Email.cs">
+</Event><Event ErrorLevel="0" Project="Ares" Source="..\Ares\Master.cs" Description="File successfully backed up as C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\Backup\Ares\Master.cs">
+</Event><Event ErrorLevel="0" Project="Ares" Source="..\Ares\Ares.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Ares" Source="..\Ares\Ares.csproj" Description="Converted">
+</Event><Event ErrorLevel="2" Project="AresTest" Source="AresTest.csproj" Description="Unable to open project file to perform upgrade.  ">
+</Event><Event ErrorLevel="1" Project="Common" Source="..\..\Common\Common.csproj" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\Common.csproj" Description="Project file successfully backed up as C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\Backup\Common\Common.csproj">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\Common.csproj.user" Description="Project user file successfully backed up as C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\Backup\Common\Common.csproj.user">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\AssemblyInfo.cs" Description="File successfully backed up as C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\Backup\Common\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\DealList.cs" Description="File successfully backed up as C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\Backup\Common\DealList.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\KeyValue.cs" Description="File successfully backed up as C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\Backup\Common\KeyValue.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\List.cs" Description="File successfully backed up as C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\Backup\Common\List.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\Log.cs" Description="File successfully backed up as C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\Backup\Common\Log.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\RegistryValue.cs" Description="File successfully backed up as C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\Backup\Common\RegistryValue.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\RemotingTools.cs" Description="File successfully backed up as C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\Backup\Common\RemotingTools.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\Security.cs" Description="File successfully backed up as C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\Backup\Common\Security.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\Standard.cs" Description="File successfully backed up as C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\Backup\Common\Standard.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\Tools.cs" Description="File successfully backed up as C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\Backup\Common\Tools.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\Common.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Common" Source="..\..\Common\Common.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="BDDataTest.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="BDDataTest.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Ares" Source="..\Ares\Ares.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\Common.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

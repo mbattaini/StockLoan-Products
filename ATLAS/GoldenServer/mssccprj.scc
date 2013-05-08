@@ -1,0 +1,9 @@
+SCC = This is a Source Code Control file
+
+[GoldenServer.csproj]
+SCC_Aux_Path = "\\rspen001\SourceSafe\PensonSource"
+SCC_Project_Name = "$/SourceCode/C#/0 Development/Atlas/GoldenServer", CSKNAAAA
+
+[GoldenServer.sln]
+SCC_Aux_Path = "\\rspen001\SourceSafe\PensonSource"
+SCC_Project_Name = "$/SourceCode/C#/0 Development/Atlas/GoldenServer", CSKNAAAA

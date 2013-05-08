@@ -1,0 +1,75 @@
+﻿<UserControl 
+    Name="MaintainRoles"
+    x:Class="LoanStarWorldWideAdmin.Views.RolesMaintain"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation" 
+    xmlns:uriMapper="clr-namespace:System.Windows.Navigation;assembly=System.Windows.Controls.Navigation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:c1datetime="clr-namespace:C1.Silverlight.DateTimeEditors;assembly=C1.Silverlight.DateTimeEditors"
+    xmlns:c1grid="clr-namespace:C1.Silverlight.DataGrid;assembly=C1.Silverlight.DataGrid" 
+    xmlns:c1="clr-namespace:C1.Silverlight;assembly=C1.Silverlight"
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+    
+    mc:Ignorable="d" d:DesignWidth="921" d:DesignHeight="486" >
+
+    <Grid x:Name="LayoutRoot" Style="{StaticResource LayoutRootGridStyle}" Height="486" Width="921" Background="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Center" >
+
+        <Grid HorizontalAlignment="Left" Name="BackgroundGrid" Width="917" Margin="0,1,0,0" Height="480" VerticalAlignment="Top">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" />
+                    <GradientStop Color="#FF365E90" Offset="1" />
+                    <GradientStop Color="#FF1C3C64" Offset="0.009" />
+                </LinearGradientBrush>
+            </Grid.Background>
+            <sdk:Label Content="Status" FontSize="14" FontWeight="ExtraBold" Foreground="White" Height="30" BorderBrush="Blue" BorderThickness="2" 
+	            HorizontalAlignment="Center" HorizontalContentAlignment="Right" Name="StatusLabel" Width="917" VerticalAlignment="Top" Margin="0,0,4,0" />
+
+            <sdk:Label Content="Message Bar" FontSize="12" FontWeight="Bold" Foreground="Red" Height="30" BorderBrush="Red" BorderThickness="1" 
+	            HorizontalAlignment="Center" HorizontalContentAlignment="Right" Name="UpdateLabel" Width="917" Visibility="Collapsed" VerticalAlignment="Top" />
+
+            <sdk:Label Content="Delete Functions through Grid.   Highlight, then press Delete" FontSize="14" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" 
+                   HorizontalContentAlignment="Center" Margin="0,29,0,0" Name="deleteInstructLabel" Width="917" Height="24" VerticalAlignment="Top" />
+
+
+                <sdk:Label Content="Book Group:" FontSize="11" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" 
+                   HorizontalContentAlignment="Right" Margin="7,67,0,0" Name="bookGroupLabel" Width="78" Height="24" VerticalAlignment="Top" />
+                <c1:C1ComboBox FontSize="10.667" Height="25" Margin="88,62,0,0" Name="BookGroupCombo" VerticalAlignment="Top" TabIndex="1" Width="158" 
+                       HorizontalAlignment="Left" SelectedItemChanged="BookGroupCombo_SelectedItemChanged" />
+
+                <Button x:Name="AddNewBookGroupButton" Content="Add New" HorizontalAlignment="Left" Margin="260,62,0,0" Width="54" RenderTransformOrigin="0.472,0.5" 
+                Click="AddNewBookGroupButton_Click"  Height="25" VerticalAlignment="Top"  IsTabStop="False" />
+
+                <sdk:Label Content="Role:" FontSize="11" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" 
+                   HorizontalContentAlignment="Right" Margin="50,100,0,0" Name="roleLabel" Width="35" Height="24" VerticalAlignment="Top" />
+                <c1:C1ComboBox FontSize="10.667" Height="25" Margin="88,96,0,0" Name="RoleCombo" VerticalAlignment="Top" TabIndex="2" Width="158" SelectedItemChanged="RoleCombo_SelectedItemChanged" HorizontalAlignment="Left" />
+                <Button x:Name="AddNewRoleButton" Content="Add New" HorizontalAlignment="Left" Margin="260,96,0,0" Width="54" RenderTransformOrigin="0.472,0.5" 
+                Click="AddNewRoleButton_Click" Height="25" VerticalAlignment="Top"  IsTabStop="False" />
+
+                <sdk:Label Content="Function:" FontSize="11" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" 
+                   HorizontalContentAlignment="Right" Margin="24,134,0,0" Name="functionLabel" Width="61" Height="24" VerticalAlignment="Top" />
+                <c1:C1ComboBox FontSize="10.667" Height="25" Margin="88,130,0,0" Name="FunctionCombo" VerticalAlignment="Top" TabIndex="3" Width="158" SelectedItemChanged="FunctionCombo_SelectedItemChanged" HorizontalAlignment="Left" />
+                <Button x:Name="AddNewFunctionButton" Content="Add New" HorizontalAlignment="Left" Margin="260,130,0,0" Width="54" RenderTransformOrigin="0.472,0.5" 
+                Click="AddNewFunctionButton_Click" Height="25" VerticalAlignment="Top"  IsTabStop="False" />
+                <Button x:Name="AssignButton" Content="Assign Role" HorizontalAlignment="Left" Margin="86,168,0,0" Width="175" RenderTransformOrigin="0.472,0.5" 
+        	Click="AssignButton_Click"  Height="33" VerticalAlignment="Top" TabIndex="4" d:LayoutOverrides="VerticalAlignment" />
+        </Grid>
+
+        <c1grid:C1DataGrid x:Name="BookGroupRolesGrid" Margin="325,62,0,0" AutoGenerateColumns="False" HorizontalAlignment="Left" Width="580" CanUserEditRows="False" CanUserAddRows="False" 
+                           Height="359" VerticalAlignment="Top" DeletingRows="BookGroupRolesGrid_DeletingRows">
+
+            <c1grid:C1DataGrid.Columns>
+                <c1grid:DataGridBoundColumn Header="Book Group" Binding="{Binding BookGroup}" Width="77" x:Name="bookGroup" HorizontalAlignment="Left" AllowNull="False" />
+                <c1grid:DataGridBoundColumn Header="Role Name" Binding="{Binding RoleName}" Width="90" x:Name="roleName" HorizontalAlignment="Left" AllowNull="False" />
+                <c1grid:DataGridBoundColumn Header="Function Path" Binding="{Binding FunctionPath}" Width="155" x:Name="functionPath" HorizontalAlignment="Left" AllowNull="False" />
+                <c1grid:DataGridBoundColumn Header="Role Comment" Binding="{Binding Comment}" Width="215" x:Name="roleComment" HorizontalAlignment="Left" AllowNull="True" />
+            </c1grid:C1DataGrid.Columns>
+        </c1grid:C1DataGrid>
+
+        <Button Content="Cancel" Height="26" HorizontalAlignment="Left" Margin="792,439,0,0" Name="buttonCancel" Click="buttonCancel_Click"  RenderTransformOrigin="0.472,0.5" TabIndex="5" VerticalAlignment="Top" Width="112" />
+
+    </Grid>
+    
+</UserControl>

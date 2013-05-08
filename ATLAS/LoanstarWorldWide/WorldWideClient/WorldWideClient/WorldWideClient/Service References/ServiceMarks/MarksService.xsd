@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="GetSourceIP">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSourceIPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSourceIPResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MarkAsOfSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tradeDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="settleDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="book" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contractId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contractType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="price" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="markId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="deliveryCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="actUserId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MarkAsOfSetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MarkAsOfSetResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MarkIsExistGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="book" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contractId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contractType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="secId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="amount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MarkIsExistGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MarkIsExistGetResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MarkSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="markId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="book" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contractId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contractType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="secId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="amount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="openDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="settleDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="deliveryCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="actUserId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isActive" type="xs:boolean" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MarkSetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MarkSetResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MarksGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="markId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contractId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="utcOffset" type="xs:short" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MarksGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MarksGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MarksSummaryByCashGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="markId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contractId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MarksSummaryByCashGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MarksSummaryByCashGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MarksSummaryGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="markId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bizDateFormat" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contractId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MarksSummaryGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MarksSummaryGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

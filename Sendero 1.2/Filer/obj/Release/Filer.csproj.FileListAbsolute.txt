@@ -1,0 +1,7 @@
+C:\_dev\Sendero 1.2\Filer\bin\Release\Anetics.Filer.dll
+C:\_dev\Sendero 1.2\Filer\bin\Release\Anetics.Common.dll
+C:\_dev\Sendero 1.2\Filer\bin\Release\Rebex.Net.Ftp.dll
+C:\_dev\Sendero 1.2\Filer\bin\Release\Rebex.Net.ProxySocket.dll
+C:\_dev\Sendero 1.2\Filer\bin\Release\Anetics.Common.pdb
+C:\_dev\Sendero 1.2\Filer\obj\Release\Filer.csprojResolveAssemblyReference.cache
+C:\_dev\Sendero 1.2\Filer\obj\Release\Anetics.Filer.dll

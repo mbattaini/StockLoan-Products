@@ -1,0 +1,78 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S3Service", "S3Service.csproj", "{30564E74-CCAB-4162-9120-DEC88C34C09F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{863D23F7-042C-4A17-8A13-76370F6238C6} = {863D23F7-042C-4A17-8A13-76370F6238C6}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Filer", "..\Filer\Filer.csproj", "{BADFA01C-F61F-48A0-B785-033BBE0364DC}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "..\Common\Common.csproj", "{51D7F048-02E1-49F8-BA33-743E3E5373F7}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Email", "..\Email\Email.csproj", "{789FF742-AF7A-4759-99CE-D923D2ACC87B}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S3", "..\S3\S3.csproj", "{863D23F7-042C-4A17-8A13-76370F6238C6}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S3Server", "..\S3Server\S3Server.csproj", "{9D789FF2-9290-40C5-889D-6A0521F9F8DF}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartSeg", "..\S3XMLAgent\SmartSeg.csproj", "{0D20B5F5-279D-43B1-B761-F1469A55B941}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zip", "..\ZIP\Zip.csproj", "{FCE59116-8BCC-4803-8DBC-8080C20A1B11}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{30564E74-CCAB-4162-9120-DEC88C34C09F}.Debug.ActiveCfg = Debug|.NET
+		{30564E74-CCAB-4162-9120-DEC88C34C09F}.Debug.Build.0 = Debug|.NET
+		{30564E74-CCAB-4162-9120-DEC88C34C09F}.Release.ActiveCfg = Release|.NET
+		{30564E74-CCAB-4162-9120-DEC88C34C09F}.Release.Build.0 = Release|.NET
+		{BADFA01C-F61F-48A0-B785-033BBE0364DC}.Debug.ActiveCfg = Debug|.NET
+		{BADFA01C-F61F-48A0-B785-033BBE0364DC}.Debug.Build.0 = Debug|.NET
+		{BADFA01C-F61F-48A0-B785-033BBE0364DC}.Release.ActiveCfg = Release|.NET
+		{BADFA01C-F61F-48A0-B785-033BBE0364DC}.Release.Build.0 = Release|.NET
+		{51D7F048-02E1-49F8-BA33-743E3E5373F7}.Debug.ActiveCfg = Debug|.NET
+		{51D7F048-02E1-49F8-BA33-743E3E5373F7}.Debug.Build.0 = Debug|.NET
+		{51D7F048-02E1-49F8-BA33-743E3E5373F7}.Release.ActiveCfg = Release|.NET
+		{51D7F048-02E1-49F8-BA33-743E3E5373F7}.Release.Build.0 = Release|.NET
+		{789FF742-AF7A-4759-99CE-D923D2ACC87B}.Debug.ActiveCfg = Debug|.NET
+		{789FF742-AF7A-4759-99CE-D923D2ACC87B}.Debug.Build.0 = Debug|.NET
+		{789FF742-AF7A-4759-99CE-D923D2ACC87B}.Release.ActiveCfg = Release|.NET
+		{789FF742-AF7A-4759-99CE-D923D2ACC87B}.Release.Build.0 = Release|.NET
+		{863D23F7-042C-4A17-8A13-76370F6238C6}.Debug.ActiveCfg = Debug|.NET
+		{863D23F7-042C-4A17-8A13-76370F6238C6}.Debug.Build.0 = Debug|.NET
+		{863D23F7-042C-4A17-8A13-76370F6238C6}.Release.ActiveCfg = Release|.NET
+		{863D23F7-042C-4A17-8A13-76370F6238C6}.Release.Build.0 = Release|.NET
+		{9D789FF2-9290-40C5-889D-6A0521F9F8DF}.Debug.ActiveCfg = Debug|.NET
+		{9D789FF2-9290-40C5-889D-6A0521F9F8DF}.Debug.Build.0 = Debug|.NET
+		{9D789FF2-9290-40C5-889D-6A0521F9F8DF}.Release.ActiveCfg = Release|.NET
+		{9D789FF2-9290-40C5-889D-6A0521F9F8DF}.Release.Build.0 = Release|.NET
+		{0D20B5F5-279D-43B1-B761-F1469A55B941}.Debug.ActiveCfg = Debug|.NET
+		{0D20B5F5-279D-43B1-B761-F1469A55B941}.Debug.Build.0 = Debug|.NET
+		{0D20B5F5-279D-43B1-B761-F1469A55B941}.Release.ActiveCfg = Release|.NET
+		{0D20B5F5-279D-43B1-B761-F1469A55B941}.Release.Build.0 = Release|.NET
+		{FCE59116-8BCC-4803-8DBC-8080C20A1B11}.Debug.ActiveCfg = Debug|.NET
+		{FCE59116-8BCC-4803-8DBC-8080C20A1B11}.Debug.Build.0 = Debug|.NET
+		{FCE59116-8BCC-4803-8DBC-8080C20A1B11}.Release.ActiveCfg = Release|.NET
+		{FCE59116-8BCC-4803-8DBC-8080C20A1B11}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

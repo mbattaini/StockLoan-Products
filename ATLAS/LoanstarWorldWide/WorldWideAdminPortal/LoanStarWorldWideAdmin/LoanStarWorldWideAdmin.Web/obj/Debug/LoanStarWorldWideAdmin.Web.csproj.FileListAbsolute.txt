@@ -1,0 +1,10 @@
+C:\AppDev\Atlas\LoanStarWorldWide\WorldWideAdminPortal\LoanStarWorldWideAdmin\LoanStarWorldWideAdmin.Web\bin\LoanStarWorldWideAdmin.Web.dll
+C:\AppDev\Atlas\LoanStarWorldWide\WorldWideAdminPortal\LoanStarWorldWideAdmin\LoanStarWorldWideAdmin.Web\bin\LoanStarWorldWideAdmin.Web.pdb
+C:\AppDev\Atlas\LoanStarWorldWide\WorldWideAdminPortal\LoanStarWorldWideAdmin\LoanStarWorldWideAdmin.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\AppDev\Atlas\LoanStarWorldWide\WorldWideAdminPortal\LoanStarWorldWideAdmin\LoanStarWorldWideAdmin.Web\obj\Debug\LoanStarWorldWideAdmin.Web.dll
+C:\AppDev\Atlas\LoanStarWorldWide\WorldWideAdminPortal\LoanStarWorldWideAdmin\LoanStarWorldWideAdmin.Web\obj\Debug\LoanStarWorldWideAdmin.Web.pdb
+C:\_Dev\ATLAS\LoanstarWorldWide\WorldWideAdminPortal\LoanStarWorldWideAdmin\LoanStarWorldWideAdmin.Web\bin\LoanStarWorldWideAdmin.Web.dll
+C:\_Dev\ATLAS\LoanstarWorldWide\WorldWideAdminPortal\LoanStarWorldWideAdmin\LoanStarWorldWideAdmin.Web\bin\LoanStarWorldWideAdmin.Web.pdb
+C:\_Dev\ATLAS\LoanstarWorldWide\WorldWideAdminPortal\LoanStarWorldWideAdmin\LoanStarWorldWideAdmin.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\_Dev\ATLAS\LoanstarWorldWide\WorldWideAdminPortal\LoanStarWorldWideAdmin\LoanStarWorldWideAdmin.Web\obj\Debug\LoanStarWorldWideAdmin.Web.dll
+C:\_Dev\ATLAS\LoanstarWorldWide\WorldWideAdminPortal\LoanStarWorldWideAdmin\LoanStarWorldWideAdmin.Web\obj\Debug\LoanStarWorldWideAdmin.Web.pdb

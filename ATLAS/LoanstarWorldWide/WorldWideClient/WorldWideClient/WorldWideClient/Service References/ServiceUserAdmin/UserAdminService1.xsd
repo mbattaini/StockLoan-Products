@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="FunctionSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="functionPathSet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mayView" type="xs:boolean" />
+        <xs:element minOccurs="0" name="mayEdit" type="xs:boolean" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FunctionSetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FunctionSetResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FunctionsGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="functionPathGet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FunctionsGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FunctionsGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RoleFunctionsBookGroupGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userIdGet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroupGet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RoleFunctionsBookGroupGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RoleFunctionsBookGroupGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RoleFunctionsBookGroupSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="roleNameSet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPathSet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroupSet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="actUserId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isActive" type="xs:short" />
+        <xs:element minOccurs="0" name="delete" type="xs:short" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RoleFunctionsBookGroupSetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RoleFunctionsBookGroupSetResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RoleFunctionSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="roleName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPathSet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mayView" type="xs:boolean" />
+        <xs:element minOccurs="0" name="mayEdit" type="xs:boolean" />
+        <xs:element minOccurs="0" name="comment" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="delete" type="xs:boolean" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RoleFunctionSetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RoleFunctionSetResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RoleSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="roleId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="roleName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="comment" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="delete" type="xs:boolean" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RoleSetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RoleSetResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RolesGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="roleCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RolesGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RolesGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userIdGet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RoleFunctionsGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="roleName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPathGet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="utcOffSet" type="xs:short" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RoleFunctionsGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RoleFunctionsGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserRolesGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userIdGet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="roleName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="utcOffset" type="xs:short" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserRolesGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserRolesGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserRolesSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userIdSet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="roleName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="comment" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="delete" type="xs:boolean" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserRolesSetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserRolesSetResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userIdSet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="shortName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="newPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="title" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="comment" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isLocked" type="xs:boolean" />
+        <xs:element minOccurs="0" name="isActive" type="xs:boolean" />
+        <xs:element minOccurs="0" name="isLoggedIn" type="xs:boolean" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserSetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserSetResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserBookGroupsGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserBookGroupsGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserBookGroupsGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

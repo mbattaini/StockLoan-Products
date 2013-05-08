@@ -1,0 +1,15 @@
+bin\Debug\StockLoan.BackOffice.dll
+bin\Debug\StockLoan.Common.dll
+bin\Debug\StockLoan.PushData.dll
+bin\Debug\C1.C1Pdf.2.dll
+bin\Debug\StockLoan.Common.pdb
+bin\Debug\StockLoan.PushData.pdb
+bin\Debug\StockLoan.BackOffice.pdb
+bin\Debug\C1.C1Pdf.2.xml
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\StockLoan.MainServer.dll
+bin\Debug\StockLoan.MainServer.pdb
+bin\Debug\StockLoan.Main.dll
+bin\Debug\StockLoan.Main.pdb
+obj\Debug\StockLoan.MainServer.dll
+obj\Debug\StockLoan.MainServer.pdb

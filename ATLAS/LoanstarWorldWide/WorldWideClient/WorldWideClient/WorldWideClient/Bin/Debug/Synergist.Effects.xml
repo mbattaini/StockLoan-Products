@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Synergist.Effects</name>
+    </assembly>
+    <members>
+        <member name="T:Synergist.Effects.Global">
+            <summary>
+            Global functions
+            </summary>
+        </member>
+        <member name="F:Synergist.Effects.Global.assemblyShortName">
+            <summary>
+            the assembly short name
+            </summary>
+        </member>
+        <member name="M:Synergist.Effects.Global.MakePackUri(System.String)">
+            <summary>
+            Make a Pack URL
+            </summary>
+            <param name="relativeFile">the relative filename</param>
+            <returns>the Packed URL</returns>
+        </member>
+        <member name="P:Synergist.Effects.Global.AssemblyShortName">
+            <summary>
+            Gets the assembly short name
+            </summary>
+        </member>
+        <member name="T:Synergist.Effects.ChromaKeyAlphaEffect">
+            <summary>
+            Color Key alpha effect for Silverlight 3
+            </summary>
+        </member>
+        <member name="F:Synergist.Effects.ChromaKeyAlphaEffect.ColorKeyProperty">
+            <summary>
+            This property is mapped to the InputColor variable within the pixel shader.
+            </summary>
+        </member>
+        <member name="F:Synergist.Effects.ChromaKeyAlphaEffect.ToleranceProperty">
+            <summary>
+            This is the tolerance 0=exact 1=full
+            </summary>
+        </member>
+        <member name="F:Synergist.Effects.ChromaKeyAlphaEffect.InputProperty">
+            <summary>
+            The explict input for this pixel shader.
+            </summary>
+        </member>
+        <member name="F:Synergist.Effects.ChromaKeyAlphaEffect.pixelShader">
+            <summary>
+            A reference to the pixel shader used.
+            </summary>
+        </member>
+        <member name="M:Synergist.Effects.ChromaKeyAlphaEffect.#cctor">
+            <summary>
+            Initializes static members of the ChromaKeyAlphaEffect class.
+            </summary>
+        </member>
+        <member name="M:Synergist.Effects.ChromaKeyAlphaEffect.#ctor">
+            <summary>
+            Initializes a new instance of the ChromaKeyAlphaEffect class.
+            </summary>
+        </member>
+        <member name="P:Synergist.Effects.ChromaKeyAlphaEffect.ColorKey">
+            <summary>
+            Gets or sets the InputColor variable within the shader.
+            </summary>
+        </member>
+        <member name="P:Synergist.Effects.ChromaKeyAlphaEffect.Tolerance">
+            <summary>
+            Gets or sets the exactness by which the color must match (0=exact, 1=all colors)
+            </summary>
+        </member>
+        <member name="P:Synergist.Effects.ChromaKeyAlphaEffect.Input">
+            <summary>
+            Gets or sets the Input of shader.
+            </summary>
+        </member>
+        <member name="T:Synergist.Effects.LoopMedia">
+            <summary>
+            Loop a MediaElement so that it starts at the beginning as soon as it ends.
+            </summary>
+        </member>
+        <member name="M:Synergist.Effects.LoopMedia.OnAttached">
+            <summary>
+            Attach the MediaEnded event handler
+            </summary>
+        </member>
+        <member name="M:Synergist.Effects.LoopMedia.OnDetaching">
+            <summary>
+            Detach the MediaEnded even handler
+            </summary>
+        </member>
+        <member name="M:Synergist.Effects.LoopMedia.AssociatedObject_MediaEnded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Restart the media when it reaches the end
+            </summary>
+            <param name="sender">the MediaElement</param>
+            <param name="e">the routed event arguments</param>
+        </member>
+    </members>
+</doc>

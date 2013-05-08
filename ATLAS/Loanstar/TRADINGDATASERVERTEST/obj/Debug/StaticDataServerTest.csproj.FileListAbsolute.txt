@@ -1,0 +1,10 @@
+C:\ATLAS\Loanstar\STATICDATASERVERTEST\bin\Debug\StockLoan.StaticDataServerTest.exe.config
+C:\ATLAS\Loanstar\STATICDATASERVERTEST\obj\Debug\StockLoan.StaticDataServerTest.exe
+C:\ATLAS\Loanstar\STATICDATASERVERTEST\obj\Debug\StockLoan.StaticDataServerTest.pdb
+C:\ATLAS\Loanstar\STATICDATASERVERTEST\bin\Debug\StockLoan.StaticDataServerTest.exe
+C:\ATLAS\Loanstar\STATICDATASERVERTEST\bin\Debug\StockLoan.StaticDataServerTest.pdb
+C:\ATLAS\Loanstar\STATICDATASERVERTEST\bin\Debug\StockLoan.StaticDataServer.dll
+C:\ATLAS\Loanstar\STATICDATASERVERTEST\bin\Debug\StockLoan.Common.dll
+C:\ATLAS\Loanstar\STATICDATASERVERTEST\bin\Debug\StockLoan.Common.pdb
+C:\ATLAS\Loanstar\STATICDATASERVERTEST\bin\Debug\StockLoan.StaticDataServer.pdb
+C:\ATLAS\Loanstar\STATICDATASERVERTEST\obj\Debug\ResolveAssemblyReference.cache

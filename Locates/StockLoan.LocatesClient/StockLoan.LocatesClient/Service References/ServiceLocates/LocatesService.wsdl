@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="LocatesService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://dalatlprd01.penson.com:43/LocatesService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://dalatlprd01.penson.com:43/LocatesService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ILocatesService_WebUserAuthorize_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebUserAuthorize" />
+  </wsdl:message>
+  <wsdl:message name="ILocatesService_WebUserAuthorize_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebUserAuthorizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILocatesService_TradingGroupsGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:TradingGroupsGet" />
+  </wsdl:message>
+  <wsdl:message name="ILocatesService_TradingGroupsGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TradingGroupsGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILocatesService_LocateListSubmit_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocateListSubmit" />
+  </wsdl:message>
+  <wsdl:message name="ILocatesService_LocateListSubmit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocateListSubmitResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILocatesService_InventoryGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:InventoryGet" />
+  </wsdl:message>
+  <wsdl:message name="ILocatesService_InventoryGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InventoryGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILocatesService_LocateItemGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocateItemGet" />
+  </wsdl:message>
+  <wsdl:message name="ILocatesService_LocateItemGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocateItemGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILocatesService_LocatesGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocatesGet" />
+  </wsdl:message>
+  <wsdl:message name="ILocatesService_LocatesGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocatesGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILocatesService_LocateSummaryGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocateSummaryGet" />
+  </wsdl:message>
+  <wsdl:message name="ILocatesService_LocateSummaryGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocateSummaryGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILocatesService_LocateGroupCodeSummaryGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocateGroupCodeSummaryGet" />
+  </wsdl:message>
+  <wsdl:message name="ILocatesService_LocateGroupCodeSummaryGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocateGroupCodeSummaryGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILocatesService_LocateItemSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocateItemSet" />
+  </wsdl:message>
+  <wsdl:message name="ILocatesService_LocateItemSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocateItemSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILocatesService_SecMasterItemGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:SecMasterItemGet" />
+  </wsdl:message>
+  <wsdl:message name="ILocatesService_SecMasterItemGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SecMasterItemGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILocatesService_BoxPositionItemGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:BoxPositionItemGet" />
+  </wsdl:message>
+  <wsdl:message name="ILocatesService_BoxPositionItemGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BoxPositionItemGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILocatesService_BookGroupsGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:BookGroupsGet" />
+  </wsdl:message>
+  <wsdl:message name="ILocatesService_BookGroupsGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BookGroupsGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILocatesService_LocatesMessageGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocatesMessageGet" />
+  </wsdl:message>
+  <wsdl:message name="ILocatesService_LocatesMessageGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocatesMessageGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILocatesService_LocatesMessageSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocatesMessageSet" />
+  </wsdl:message>
+  <wsdl:message name="ILocatesService_LocatesMessageSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocatesMessageSetResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ILocatesService">
+    <wsdl:operation name="WebUserAuthorize">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILocatesService/WebUserAuthorize" message="tns:ILocatesService_WebUserAuthorize_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILocatesService/WebUserAuthorizeResponse" message="tns:ILocatesService_WebUserAuthorize_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TradingGroupsGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILocatesService/TradingGroupsGet" message="tns:ILocatesService_TradingGroupsGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILocatesService/TradingGroupsGetResponse" message="tns:ILocatesService_TradingGroupsGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocateListSubmit">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILocatesService/LocateListSubmit" message="tns:ILocatesService_LocateListSubmit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILocatesService/LocateListSubmitResponse" message="tns:ILocatesService_LocateListSubmit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InventoryGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILocatesService/InventoryGet" message="tns:ILocatesService_InventoryGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILocatesService/InventoryGetResponse" message="tns:ILocatesService_InventoryGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocateItemGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILocatesService/LocateItemGet" message="tns:ILocatesService_LocateItemGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILocatesService/LocateItemGetResponse" message="tns:ILocatesService_LocateItemGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocatesGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILocatesService/LocatesGet" message="tns:ILocatesService_LocatesGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILocatesService/LocatesGetResponse" message="tns:ILocatesService_LocatesGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocateSummaryGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILocatesService/LocateSummaryGet" message="tns:ILocatesService_LocateSummaryGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILocatesService/LocateSummaryGetResponse" message="tns:ILocatesService_LocateSummaryGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocateGroupCodeSummaryGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILocatesService/LocateGroupCodeSummaryGet" message="tns:ILocatesService_LocateGroupCodeSummaryGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILocatesService/LocateGroupCodeSummaryGetResponse" message="tns:ILocatesService_LocateGroupCodeSummaryGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocateItemSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILocatesService/LocateItemSet" message="tns:ILocatesService_LocateItemSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILocatesService/LocateItemSetResponse" message="tns:ILocatesService_LocateItemSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SecMasterItemGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILocatesService/SecMasterItemGet" message="tns:ILocatesService_SecMasterItemGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILocatesService/SecMasterItemGetResponse" message="tns:ILocatesService_SecMasterItemGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BoxPositionItemGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILocatesService/BoxPositionItemGet" message="tns:ILocatesService_BoxPositionItemGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILocatesService/BoxPositionItemGetResponse" message="tns:ILocatesService_BoxPositionItemGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BookGroupsGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILocatesService/BookGroupsGet" message="tns:ILocatesService_BookGroupsGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILocatesService/BookGroupsGetResponse" message="tns:ILocatesService_BookGroupsGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocatesMessageGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILocatesService/LocatesMessageGet" message="tns:ILocatesService_LocatesMessageGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILocatesService/LocatesMessageGetResponse" message="tns:ILocatesService_LocatesMessageGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocatesMessageSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILocatesService/LocatesMessageSet" message="tns:ILocatesService_LocatesMessageSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILocatesService/LocatesMessageSetResponse" message="tns:ILocatesService_LocatesMessageSet_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ILocatesService" type="tns:ILocatesService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WebUserAuthorize">
+      <soap:operation soapAction="http://tempuri.org/ILocatesService/WebUserAuthorize" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TradingGroupsGet">
+      <soap:operation soapAction="http://tempuri.org/ILocatesService/TradingGroupsGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocateListSubmit">
+      <soap:operation soapAction="http://tempuri.org/ILocatesService/LocateListSubmit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InventoryGet">
+      <soap:operation soapAction="http://tempuri.org/ILocatesService/InventoryGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocateItemGet">
+      <soap:operation soapAction="http://tempuri.org/ILocatesService/LocateItemGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocatesGet">
+      <soap:operation soapAction="http://tempuri.org/ILocatesService/LocatesGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocateSummaryGet">
+      <soap:operation soapAction="http://tempuri.org/ILocatesService/LocateSummaryGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocateGroupCodeSummaryGet">
+      <soap:operation soapAction="http://tempuri.org/ILocatesService/LocateGroupCodeSummaryGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocateItemSet">
+      <soap:operation soapAction="http://tempuri.org/ILocatesService/LocateItemSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SecMasterItemGet">
+      <soap:operation soapAction="http://tempuri.org/ILocatesService/SecMasterItemGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BoxPositionItemGet">
+      <soap:operation soapAction="http://tempuri.org/ILocatesService/BoxPositionItemGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BookGroupsGet">
+      <soap:operation soapAction="http://tempuri.org/ILocatesService/BookGroupsGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocatesMessageGet">
+      <soap:operation soapAction="http://tempuri.org/ILocatesService/LocatesMessageGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocatesMessageSet">
+      <soap:operation soapAction="http://tempuri.org/ILocatesService/LocatesMessageSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LocatesService">
+    <wsdl:port name="BasicHttpBinding_ILocatesService" binding="tns:BasicHttpBinding_ILocatesService">
+      <soap:address location="http://dalatlprd01.penson.com:43/LocatesService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

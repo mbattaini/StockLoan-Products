@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FundsService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://wspen-sl08w7.penson.com/StockLoan.WebServices/FundsService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://wspen-sl08w7.penson.com/StockLoan.WebServices/FundsService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IFundsService_GetSourceIP_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSourceIP" />
+  </wsdl:message>
+  <wsdl:message name="IFundsService_GetSourceIP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSourceIPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFundsService_FundingRateResearchGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:FundingRateResearchGet" />
+  </wsdl:message>
+  <wsdl:message name="IFundsService_FundingRateResearchGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FundingRateResearchGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFundsService_FundingRateSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:FundingRateSet" />
+  </wsdl:message>
+  <wsdl:message name="IFundsService_FundingRateSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FundingRateSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFundsService_FundingRatesGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:FundingRatesGet" />
+  </wsdl:message>
+  <wsdl:message name="IFundsService_FundingRatesGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FundingRatesGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFundsService_FundingRatesRoll_InputMessage">
+    <wsdl:part name="parameters" element="tns:FundingRatesRoll" />
+  </wsdl:message>
+  <wsdl:message name="IFundsService_FundingRatesRoll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FundingRatesRollResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFundsService_FundsGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:FundsGet" />
+  </wsdl:message>
+  <wsdl:message name="IFundsService_FundsGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FundsGetResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IFundsService">
+    <wsdl:operation name="GetSourceIP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFundsService/GetSourceIP" message="tns:IFundsService_GetSourceIP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFundsService/GetSourceIPResponse" message="tns:IFundsService_GetSourceIP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FundingRateResearchGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFundsService/FundingRateResearchGet" message="tns:IFundsService_FundingRateResearchGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFundsService/FundingRateResearchGetResponse" message="tns:IFundsService_FundingRateResearchGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FundingRateSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFundsService/FundingRateSet" message="tns:IFundsService_FundingRateSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFundsService/FundingRateSetResponse" message="tns:IFundsService_FundingRateSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FundingRatesGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFundsService/FundingRatesGet" message="tns:IFundsService_FundingRatesGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFundsService/FundingRatesGetResponse" message="tns:IFundsService_FundingRatesGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FundingRatesRoll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFundsService/FundingRatesRoll" message="tns:IFundsService_FundingRatesRoll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFundsService/FundingRatesRollResponse" message="tns:IFundsService_FundingRatesRoll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FundsGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFundsService/FundsGet" message="tns:IFundsService_FundsGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFundsService/FundsGetResponse" message="tns:IFundsService_FundsGet_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IFundsService" type="tns:IFundsService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSourceIP">
+      <soap:operation soapAction="http://tempuri.org/IFundsService/GetSourceIP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FundingRateResearchGet">
+      <soap:operation soapAction="http://tempuri.org/IFundsService/FundingRateResearchGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FundingRateSet">
+      <soap:operation soapAction="http://tempuri.org/IFundsService/FundingRateSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FundingRatesGet">
+      <soap:operation soapAction="http://tempuri.org/IFundsService/FundingRatesGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FundingRatesRoll">
+      <soap:operation soapAction="http://tempuri.org/IFundsService/FundingRatesRoll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FundsGet">
+      <soap:operation soapAction="http://tempuri.org/IFundsService/FundsGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FundsService">
+    <wsdl:port name="BasicHttpBinding_IFundsService" binding="tns:BasicHttpBinding_IFundsService">
+      <soap:address location="http://wspen-sl08w7.penson.com/StockLoan.WebServices/FundsService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

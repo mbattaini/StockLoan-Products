@@ -1,0 +1,11 @@
+C:\_Dev\ATLAS\LoanstarWorldWide\InventoryManagementService\InventoryManagement\bin\Debug\StockLoan.Common.dll
+C:\_Dev\ATLAS\LoanstarWorldWide\InventoryManagementService\InventoryManagement\bin\Debug\StockLoan.DataAccess.dll
+C:\_Dev\ATLAS\LoanstarWorldWide\InventoryManagementService\InventoryManagement\bin\Debug\StockLoan.Common.pdb
+C:\_Dev\ATLAS\LoanstarWorldWide\InventoryManagementService\InventoryManagement\bin\Debug\StockLoan.DataAccess.pdb
+C:\_Dev\ATLAS\LoanstarWorldWide\InventoryManagementService\InventoryManagement\obj\Debug\ResolveAssemblyReference.cache
+C:\_Dev\ATLAS\LoanstarWorldWide\InventoryManagementService\InventoryManagement\bin\Debug\StockLoan.Transport.dll
+C:\_Dev\ATLAS\LoanstarWorldWide\InventoryManagementService\InventoryManagement\bin\Debug\StockLoan.Transport.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\InventoryManagementService\InventoryManagement\bin\Debug\StockLoan.InventoryManagement.dll
+C:\_dev\ATLAS\LoanstarWorldWide\InventoryManagementService\InventoryManagement\bin\Debug\StockLoan.InventoryManagement.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\InventoryManagementService\InventoryManagement\obj\Debug\StockLoan.InventoryManagement.dll
+C:\_dev\ATLAS\LoanstarWorldWide\InventoryManagementService\InventoryManagement\obj\Debug\StockLoan.InventoryManagement.pdb

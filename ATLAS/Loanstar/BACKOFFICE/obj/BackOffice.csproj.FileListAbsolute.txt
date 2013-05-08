@@ -1,0 +1,8 @@
+C:\ATLAS\Loanstar\BACKOFFICE\bin\Debug\StockLoan.BackOffice.dll
+C:\ATLAS\Loanstar\BACKOFFICE\bin\Debug\StockLoan.BackOffice.pdb
+C:\ATLAS\Loanstar\BACKOFFICE\obj\Debug\ResolveAssemblyReference.cache
+C:\ATLAS\Loanstar\BACKOFFICE\obj\Debug\StockLoan.BackOffice.dll
+C:\ATLAS\Loanstar\BACKOFFICE\obj\Debug\StockLoan.BackOffice.pdb
+C:\ATLAS\Loanstar\BACKOFFICE\bin\Release\StockLoan.BackOffice.dll
+C:\ATLAS\Loanstar\BACKOFFICE\obj\Release\ResolveAssemblyReference.cache
+C:\ATLAS\Loanstar\BACKOFFICE\obj\Release\StockLoan.BackOffice.dll

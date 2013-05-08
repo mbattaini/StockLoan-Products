@@ -1,0 +1,1051 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://PensonWebServices/StockLocate" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" targetNamespace="http://PensonWebServices/StockLocate" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://PensonWebServices/StockLocate">
+      <s:element name="submitStockLocate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="argCustomerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argDateTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argComment" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argLocateList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="submitStockLocateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="submitStockLocateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="submitStockLocateXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="argCustomerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argDateTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argComment" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argLocateList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="submitStockLocateXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="submitStockLocateXMLResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="submitStockLocateComplex">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="argCustomerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argDateTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argReturnType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argDelimiter" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argComment" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argLocateList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="submitStockLocateComplexResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="submitStockLocateComplexResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="viewStockLocate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="argCustomerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argDateTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argTradeDateMin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argTradeDateMax" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argFilterSecID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="viewStockLocateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="viewStockLocateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="viewStockLocateXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="argCustomerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argDateTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argTradeDateMin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argTradeDateMax" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argFilterSecID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="viewStockLocateXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="viewStockLocateXMLResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="viewStockLocateComplex">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="argCustomerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argDateTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argReturnType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argDelimiter" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argTradeDateMin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argTradeDateMax" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argFilterSecID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="viewStockLocateComplexResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="viewStockLocateComplexResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="viewSingleStockLocate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="argCustomerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argDateTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argLocateID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="viewSingleStockLocateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="viewSingleStockLocateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="viewSinglStockLocateXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="argCustomerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argDateTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argLocateID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="viewSinglStockLocateXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="viewSinglStockLocateXMLResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="viewSingleStockLocateComplex">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="argCustomerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argDateTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argReturnType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argDelimiter" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argLocateID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="viewSingleStockLocateComplexResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="viewSingleStockLocateComplexResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="submitSingleStockLocate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="argCustomerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argDateTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argComment" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argSecID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argQuantity" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="submitSingleStockLocateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="submitSingleStockLocateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="submitSingleStockLocateXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="argCustomerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argDateTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argComment" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argSecID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argQuantity" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="submitSingleStockLocateXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="submitSingleStockLocateXMLResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="submitSingleStockLocateComplex">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="argCustomerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argDateTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argReturnType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argDelimiter" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argComment" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argSecID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="argQuantity" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="submitSingleStockLocateComplexResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="submitSingleStockLocateComplexResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="submitStockLocateSoapIn">
+    <wsdl:part name="parameters" element="tns:submitStockLocate" />
+  </wsdl:message>
+  <wsdl:message name="submitStockLocateSoapOut">
+    <wsdl:part name="parameters" element="tns:submitStockLocateResponse" />
+  </wsdl:message>
+  <wsdl:message name="submitStockLocateXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:submitStockLocateXML" />
+  </wsdl:message>
+  <wsdl:message name="submitStockLocateXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:submitStockLocateXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="submitStockLocateComplexSoapIn">
+    <wsdl:part name="parameters" element="tns:submitStockLocateComplex" />
+  </wsdl:message>
+  <wsdl:message name="submitStockLocateComplexSoapOut">
+    <wsdl:part name="parameters" element="tns:submitStockLocateComplexResponse" />
+  </wsdl:message>
+  <wsdl:message name="viewStockLocateSoapIn">
+    <wsdl:part name="parameters" element="tns:viewStockLocate" />
+  </wsdl:message>
+  <wsdl:message name="viewStockLocateSoapOut">
+    <wsdl:part name="parameters" element="tns:viewStockLocateResponse" />
+  </wsdl:message>
+  <wsdl:message name="viewStockLocateXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:viewStockLocateXML" />
+  </wsdl:message>
+  <wsdl:message name="viewStockLocateXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:viewStockLocateXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="viewStockLocateComplexSoapIn">
+    <wsdl:part name="parameters" element="tns:viewStockLocateComplex" />
+  </wsdl:message>
+  <wsdl:message name="viewStockLocateComplexSoapOut">
+    <wsdl:part name="parameters" element="tns:viewStockLocateComplexResponse" />
+  </wsdl:message>
+  <wsdl:message name="viewSingleStockLocateSoapIn">
+    <wsdl:part name="parameters" element="tns:viewSingleStockLocate" />
+  </wsdl:message>
+  <wsdl:message name="viewSingleStockLocateSoapOut">
+    <wsdl:part name="parameters" element="tns:viewSingleStockLocateResponse" />
+  </wsdl:message>
+  <wsdl:message name="viewSinglStockLocateXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:viewSinglStockLocateXML" />
+  </wsdl:message>
+  <wsdl:message name="viewSinglStockLocateXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:viewSinglStockLocateXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="viewSingleStockLocateComplexSoapIn">
+    <wsdl:part name="parameters" element="tns:viewSingleStockLocateComplex" />
+  </wsdl:message>
+  <wsdl:message name="viewSingleStockLocateComplexSoapOut">
+    <wsdl:part name="parameters" element="tns:viewSingleStockLocateComplexResponse" />
+  </wsdl:message>
+  <wsdl:message name="submitSingleStockLocateSoapIn">
+    <wsdl:part name="parameters" element="tns:submitSingleStockLocate" />
+  </wsdl:message>
+  <wsdl:message name="submitSingleStockLocateSoapOut">
+    <wsdl:part name="parameters" element="tns:submitSingleStockLocateResponse" />
+  </wsdl:message>
+  <wsdl:message name="submitSingleStockLocateXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:submitSingleStockLocateXML" />
+  </wsdl:message>
+  <wsdl:message name="submitSingleStockLocateXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:submitSingleStockLocateXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="submitSingleStockLocateComplexSoapIn">
+    <wsdl:part name="parameters" element="tns:submitSingleStockLocateComplex" />
+  </wsdl:message>
+  <wsdl:message name="submitSingleStockLocateComplexSoapOut">
+    <wsdl:part name="parameters" element="tns:submitSingleStockLocateComplexResponse" />
+  </wsdl:message>
+  <wsdl:message name="submitStockLocateHttpGetIn">
+    <wsdl:part name="argCustomerID" type="s:string" />
+    <wsdl:part name="argDateTime" type="s:string" />
+    <wsdl:part name="argComment" type="s:string" />
+    <wsdl:part name="argLocateList" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="submitStockLocateHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="submitStockLocateXMLHttpGetIn">
+    <wsdl:part name="argCustomerID" type="s:string" />
+    <wsdl:part name="argDateTime" type="s:string" />
+    <wsdl:part name="argComment" type="s:string" />
+    <wsdl:part name="argLocateList" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="submitStockLocateXMLHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="submitStockLocateComplexHttpGetIn">
+    <wsdl:part name="argCustomerID" type="s:string" />
+    <wsdl:part name="argDateTime" type="s:string" />
+    <wsdl:part name="argReturnType" type="s:string" />
+    <wsdl:part name="argDelimiter" type="s:string" />
+    <wsdl:part name="argComment" type="s:string" />
+    <wsdl:part name="argLocateList" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="submitStockLocateComplexHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="viewStockLocateHttpGetIn">
+    <wsdl:part name="argCustomerID" type="s:string" />
+    <wsdl:part name="argDateTime" type="s:string" />
+    <wsdl:part name="argTradeDateMin" type="s:string" />
+    <wsdl:part name="argTradeDateMax" type="s:string" />
+    <wsdl:part name="argFilterSecID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="viewStockLocateHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="viewStockLocateXMLHttpGetIn">
+    <wsdl:part name="argCustomerID" type="s:string" />
+    <wsdl:part name="argDateTime" type="s:string" />
+    <wsdl:part name="argTradeDateMin" type="s:string" />
+    <wsdl:part name="argTradeDateMax" type="s:string" />
+    <wsdl:part name="argFilterSecID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="viewStockLocateXMLHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="viewStockLocateComplexHttpGetIn">
+    <wsdl:part name="argCustomerID" type="s:string" />
+    <wsdl:part name="argDateTime" type="s:string" />
+    <wsdl:part name="argReturnType" type="s:string" />
+    <wsdl:part name="argDelimiter" type="s:string" />
+    <wsdl:part name="argTradeDateMin" type="s:string" />
+    <wsdl:part name="argTradeDateMax" type="s:string" />
+    <wsdl:part name="argFilterSecID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="viewStockLocateComplexHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="viewSingleStockLocateHttpGetIn">
+    <wsdl:part name="argCustomerID" type="s:string" />
+    <wsdl:part name="argDateTime" type="s:string" />
+    <wsdl:part name="argLocateID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="viewSingleStockLocateHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="viewSinglStockLocateXMLHttpGetIn">
+    <wsdl:part name="argCustomerID" type="s:string" />
+    <wsdl:part name="argDateTime" type="s:string" />
+    <wsdl:part name="argLocateID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="viewSinglStockLocateXMLHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="viewSingleStockLocateComplexHttpGetIn">
+    <wsdl:part name="argCustomerID" type="s:string" />
+    <wsdl:part name="argDateTime" type="s:string" />
+    <wsdl:part name="argReturnType" type="s:string" />
+    <wsdl:part name="argDelimiter" type="s:string" />
+    <wsdl:part name="argLocateID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="viewSingleStockLocateComplexHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="submitSingleStockLocateHttpGetIn">
+    <wsdl:part name="argCustomerID" type="s:string" />
+    <wsdl:part name="argDateTime" type="s:string" />
+    <wsdl:part name="argComment" type="s:string" />
+    <wsdl:part name="argSecID" type="s:string" />
+    <wsdl:part name="argQuantity" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="submitSingleStockLocateHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="submitSingleStockLocateXMLHttpGetIn">
+    <wsdl:part name="argCustomerID" type="s:string" />
+    <wsdl:part name="argDateTime" type="s:string" />
+    <wsdl:part name="argComment" type="s:string" />
+    <wsdl:part name="argSecID" type="s:string" />
+    <wsdl:part name="argQuantity" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="submitSingleStockLocateXMLHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="submitSingleStockLocateComplexHttpGetIn">
+    <wsdl:part name="argCustomerID" type="s:string" />
+    <wsdl:part name="argDateTime" type="s:string" />
+    <wsdl:part name="argReturnType" type="s:string" />
+    <wsdl:part name="argDelimiter" type="s:string" />
+    <wsdl:part name="argComment" type="s:string" />
+    <wsdl:part name="argSecID" type="s:string" />
+    <wsdl:part name="argQuantity" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="submitSingleStockLocateComplexHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="submitStockLocateHttpPostIn">
+    <wsdl:part name="argCustomerID" type="s:string" />
+    <wsdl:part name="argDateTime" type="s:string" />
+    <wsdl:part name="argComment" type="s:string" />
+    <wsdl:part name="argLocateList" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="submitStockLocateHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="submitStockLocateXMLHttpPostIn">
+    <wsdl:part name="argCustomerID" type="s:string" />
+    <wsdl:part name="argDateTime" type="s:string" />
+    <wsdl:part name="argComment" type="s:string" />
+    <wsdl:part name="argLocateList" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="submitStockLocateXMLHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="submitStockLocateComplexHttpPostIn">
+    <wsdl:part name="argCustomerID" type="s:string" />
+    <wsdl:part name="argDateTime" type="s:string" />
+    <wsdl:part name="argReturnType" type="s:string" />
+    <wsdl:part name="argDelimiter" type="s:string" />
+    <wsdl:part name="argComment" type="s:string" />
+    <wsdl:part name="argLocateList" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="submitStockLocateComplexHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="viewStockLocateHttpPostIn">
+    <wsdl:part name="argCustomerID" type="s:string" />
+    <wsdl:part name="argDateTime" type="s:string" />
+    <wsdl:part name="argTradeDateMin" type="s:string" />
+    <wsdl:part name="argTradeDateMax" type="s:string" />
+    <wsdl:part name="argFilterSecID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="viewStockLocateHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="viewStockLocateXMLHttpPostIn">
+    <wsdl:part name="argCustomerID" type="s:string" />
+    <wsdl:part name="argDateTime" type="s:string" />
+    <wsdl:part name="argTradeDateMin" type="s:string" />
+    <wsdl:part name="argTradeDateMax" type="s:string" />
+    <wsdl:part name="argFilterSecID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="viewStockLocateXMLHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="viewStockLocateComplexHttpPostIn">
+    <wsdl:part name="argCustomerID" type="s:string" />
+    <wsdl:part name="argDateTime" type="s:string" />
+    <wsdl:part name="argReturnType" type="s:string" />
+    <wsdl:part name="argDelimiter" type="s:string" />
+    <wsdl:part name="argTradeDateMin" type="s:string" />
+    <wsdl:part name="argTradeDateMax" type="s:string" />
+    <wsdl:part name="argFilterSecID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="viewStockLocateComplexHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="viewSingleStockLocateHttpPostIn">
+    <wsdl:part name="argCustomerID" type="s:string" />
+    <wsdl:part name="argDateTime" type="s:string" />
+    <wsdl:part name="argLocateID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="viewSingleStockLocateHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="viewSinglStockLocateXMLHttpPostIn">
+    <wsdl:part name="argCustomerID" type="s:string" />
+    <wsdl:part name="argDateTime" type="s:string" />
+    <wsdl:part name="argLocateID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="viewSinglStockLocateXMLHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="viewSingleStockLocateComplexHttpPostIn">
+    <wsdl:part name="argCustomerID" type="s:string" />
+    <wsdl:part name="argDateTime" type="s:string" />
+    <wsdl:part name="argReturnType" type="s:string" />
+    <wsdl:part name="argDelimiter" type="s:string" />
+    <wsdl:part name="argLocateID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="viewSingleStockLocateComplexHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="submitSingleStockLocateHttpPostIn">
+    <wsdl:part name="argCustomerID" type="s:string" />
+    <wsdl:part name="argDateTime" type="s:string" />
+    <wsdl:part name="argComment" type="s:string" />
+    <wsdl:part name="argSecID" type="s:string" />
+    <wsdl:part name="argQuantity" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="submitSingleStockLocateHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="submitSingleStockLocateXMLHttpPostIn">
+    <wsdl:part name="argCustomerID" type="s:string" />
+    <wsdl:part name="argDateTime" type="s:string" />
+    <wsdl:part name="argComment" type="s:string" />
+    <wsdl:part name="argSecID" type="s:string" />
+    <wsdl:part name="argQuantity" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="submitSingleStockLocateXMLHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="submitSingleStockLocateComplexHttpPostIn">
+    <wsdl:part name="argCustomerID" type="s:string" />
+    <wsdl:part name="argDateTime" type="s:string" />
+    <wsdl:part name="argReturnType" type="s:string" />
+    <wsdl:part name="argDelimiter" type="s:string" />
+    <wsdl:part name="argComment" type="s:string" />
+    <wsdl:part name="argSecID" type="s:string" />
+    <wsdl:part name="argQuantity" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="submitSingleStockLocateComplexHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="StockLocateSoap">
+    <wsdl:operation name="submitStockLocate">
+      <wsdl:input message="tns:submitStockLocateSoapIn" />
+      <wsdl:output message="tns:submitStockLocateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="submitStockLocateXML">
+      <wsdl:input message="tns:submitStockLocateXMLSoapIn" />
+      <wsdl:output message="tns:submitStockLocateXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="submitStockLocateComplex">
+      <wsdl:input message="tns:submitStockLocateComplexSoapIn" />
+      <wsdl:output message="tns:submitStockLocateComplexSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="viewStockLocate">
+      <wsdl:input message="tns:viewStockLocateSoapIn" />
+      <wsdl:output message="tns:viewStockLocateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="viewStockLocateXML">
+      <wsdl:input message="tns:viewStockLocateXMLSoapIn" />
+      <wsdl:output message="tns:viewStockLocateXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="viewStockLocateComplex">
+      <wsdl:input message="tns:viewStockLocateComplexSoapIn" />
+      <wsdl:output message="tns:viewStockLocateComplexSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="viewSingleStockLocate">
+      <wsdl:input message="tns:viewSingleStockLocateSoapIn" />
+      <wsdl:output message="tns:viewSingleStockLocateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="viewSinglStockLocateXML">
+      <wsdl:input message="tns:viewSinglStockLocateXMLSoapIn" />
+      <wsdl:output message="tns:viewSinglStockLocateXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="viewSingleStockLocateComplex">
+      <wsdl:input message="tns:viewSingleStockLocateComplexSoapIn" />
+      <wsdl:output message="tns:viewSingleStockLocateComplexSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="submitSingleStockLocate">
+      <wsdl:input message="tns:submitSingleStockLocateSoapIn" />
+      <wsdl:output message="tns:submitSingleStockLocateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="submitSingleStockLocateXML">
+      <wsdl:input message="tns:submitSingleStockLocateXMLSoapIn" />
+      <wsdl:output message="tns:submitSingleStockLocateXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="submitSingleStockLocateComplex">
+      <wsdl:input message="tns:submitSingleStockLocateComplexSoapIn" />
+      <wsdl:output message="tns:submitSingleStockLocateComplexSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="StockLocateHttpGet">
+    <wsdl:operation name="submitStockLocate">
+      <wsdl:input message="tns:submitStockLocateHttpGetIn" />
+      <wsdl:output message="tns:submitStockLocateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="submitStockLocateXML">
+      <wsdl:input message="tns:submitStockLocateXMLHttpGetIn" />
+      <wsdl:output message="tns:submitStockLocateXMLHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="submitStockLocateComplex">
+      <wsdl:input message="tns:submitStockLocateComplexHttpGetIn" />
+      <wsdl:output message="tns:submitStockLocateComplexHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="viewStockLocate">
+      <wsdl:input message="tns:viewStockLocateHttpGetIn" />
+      <wsdl:output message="tns:viewStockLocateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="viewStockLocateXML">
+      <wsdl:input message="tns:viewStockLocateXMLHttpGetIn" />
+      <wsdl:output message="tns:viewStockLocateXMLHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="viewStockLocateComplex">
+      <wsdl:input message="tns:viewStockLocateComplexHttpGetIn" />
+      <wsdl:output message="tns:viewStockLocateComplexHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="viewSingleStockLocate">
+      <wsdl:input message="tns:viewSingleStockLocateHttpGetIn" />
+      <wsdl:output message="tns:viewSingleStockLocateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="viewSinglStockLocateXML">
+      <wsdl:input message="tns:viewSinglStockLocateXMLHttpGetIn" />
+      <wsdl:output message="tns:viewSinglStockLocateXMLHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="viewSingleStockLocateComplex">
+      <wsdl:input message="tns:viewSingleStockLocateComplexHttpGetIn" />
+      <wsdl:output message="tns:viewSingleStockLocateComplexHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="submitSingleStockLocate">
+      <wsdl:input message="tns:submitSingleStockLocateHttpGetIn" />
+      <wsdl:output message="tns:submitSingleStockLocateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="submitSingleStockLocateXML">
+      <wsdl:input message="tns:submitSingleStockLocateXMLHttpGetIn" />
+      <wsdl:output message="tns:submitSingleStockLocateXMLHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="submitSingleStockLocateComplex">
+      <wsdl:input message="tns:submitSingleStockLocateComplexHttpGetIn" />
+      <wsdl:output message="tns:submitSingleStockLocateComplexHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="StockLocateHttpPost">
+    <wsdl:operation name="submitStockLocate">
+      <wsdl:input message="tns:submitStockLocateHttpPostIn" />
+      <wsdl:output message="tns:submitStockLocateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="submitStockLocateXML">
+      <wsdl:input message="tns:submitStockLocateXMLHttpPostIn" />
+      <wsdl:output message="tns:submitStockLocateXMLHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="submitStockLocateComplex">
+      <wsdl:input message="tns:submitStockLocateComplexHttpPostIn" />
+      <wsdl:output message="tns:submitStockLocateComplexHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="viewStockLocate">
+      <wsdl:input message="tns:viewStockLocateHttpPostIn" />
+      <wsdl:output message="tns:viewStockLocateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="viewStockLocateXML">
+      <wsdl:input message="tns:viewStockLocateXMLHttpPostIn" />
+      <wsdl:output message="tns:viewStockLocateXMLHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="viewStockLocateComplex">
+      <wsdl:input message="tns:viewStockLocateComplexHttpPostIn" />
+      <wsdl:output message="tns:viewStockLocateComplexHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="viewSingleStockLocate">
+      <wsdl:input message="tns:viewSingleStockLocateHttpPostIn" />
+      <wsdl:output message="tns:viewSingleStockLocateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="viewSinglStockLocateXML">
+      <wsdl:input message="tns:viewSinglStockLocateXMLHttpPostIn" />
+      <wsdl:output message="tns:viewSinglStockLocateXMLHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="viewSingleStockLocateComplex">
+      <wsdl:input message="tns:viewSingleStockLocateComplexHttpPostIn" />
+      <wsdl:output message="tns:viewSingleStockLocateComplexHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="submitSingleStockLocate">
+      <wsdl:input message="tns:submitSingleStockLocateHttpPostIn" />
+      <wsdl:output message="tns:submitSingleStockLocateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="submitSingleStockLocateXML">
+      <wsdl:input message="tns:submitSingleStockLocateXMLHttpPostIn" />
+      <wsdl:output message="tns:submitSingleStockLocateXMLHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="submitSingleStockLocateComplex">
+      <wsdl:input message="tns:submitSingleStockLocateComplexHttpPostIn" />
+      <wsdl:output message="tns:submitSingleStockLocateComplexHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="StockLocateSoap" type="tns:StockLocateSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="submitStockLocate">
+      <soap:operation soapAction="http://PensonWebServices/StockLocate/submitStockLocate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitStockLocateXML">
+      <soap:operation soapAction="http://PensonWebServices/StockLocate/submitStockLocateXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitStockLocateComplex">
+      <soap:operation soapAction="http://PensonWebServices/StockLocate/submitStockLocateComplex" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="viewStockLocate">
+      <soap:operation soapAction="http://PensonWebServices/StockLocate/viewStockLocate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="viewStockLocateXML">
+      <soap:operation soapAction="http://PensonWebServices/StockLocate/viewStockLocateXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="viewStockLocateComplex">
+      <soap:operation soapAction="http://PensonWebServices/StockLocate/viewStockLocateComplex" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="viewSingleStockLocate">
+      <soap:operation soapAction="http://PensonWebServices/StockLocate/viewSingleStockLocate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="viewSinglStockLocateXML">
+      <soap:operation soapAction="http://PensonWebServices/StockLocate/viewSinglStockLocateXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="viewSingleStockLocateComplex">
+      <soap:operation soapAction="http://PensonWebServices/StockLocate/viewSingleStockLocateComplex" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitSingleStockLocate">
+      <soap:operation soapAction="http://PensonWebServices/StockLocate/submitSingleStockLocate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitSingleStockLocateXML">
+      <soap:operation soapAction="http://PensonWebServices/StockLocate/submitSingleStockLocateXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitSingleStockLocateComplex">
+      <soap:operation soapAction="http://PensonWebServices/StockLocate/submitSingleStockLocateComplex" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="StockLocateHttpGet" type="tns:StockLocateHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="submitStockLocate">
+      <http:operation location="/submitStockLocate" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitStockLocateXML">
+      <http:operation location="/submitStockLocateXML" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitStockLocateComplex">
+      <http:operation location="/submitStockLocateComplex" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="viewStockLocate">
+      <http:operation location="/viewStockLocate" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="viewStockLocateXML">
+      <http:operation location="/viewStockLocateXML" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="viewStockLocateComplex">
+      <http:operation location="/viewStockLocateComplex" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="viewSingleStockLocate">
+      <http:operation location="/viewSingleStockLocate" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="viewSinglStockLocateXML">
+      <http:operation location="/viewSinglStockLocateXML" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="viewSingleStockLocateComplex">
+      <http:operation location="/viewSingleStockLocateComplex" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitSingleStockLocate">
+      <http:operation location="/submitSingleStockLocate" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitSingleStockLocateXML">
+      <http:operation location="/submitSingleStockLocateXML" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitSingleStockLocateComplex">
+      <http:operation location="/submitSingleStockLocateComplex" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="StockLocateHttpPost" type="tns:StockLocateHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="submitStockLocate">
+      <http:operation location="/submitStockLocate" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitStockLocateXML">
+      <http:operation location="/submitStockLocateXML" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitStockLocateComplex">
+      <http:operation location="/submitStockLocateComplex" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="viewStockLocate">
+      <http:operation location="/viewStockLocate" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="viewStockLocateXML">
+      <http:operation location="/viewStockLocateXML" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="viewStockLocateComplex">
+      <http:operation location="/viewStockLocateComplex" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="viewSingleStockLocate">
+      <http:operation location="/viewSingleStockLocate" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="viewSinglStockLocateXML">
+      <http:operation location="/viewSinglStockLocateXML" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="viewSingleStockLocateComplex">
+      <http:operation location="/viewSingleStockLocateComplex" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitSingleStockLocate">
+      <http:operation location="/submitSingleStockLocate" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitSingleStockLocateXML">
+      <http:operation location="/submitSingleStockLocateXML" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitSingleStockLocateComplex">
+      <http:operation location="/submitSingleStockLocateComplex" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="StockLocate">
+    <wsdl:port name="StockLocateSoap" binding="tns:StockLocateSoap">
+      <soap:address location="https://webservices.staging.penson.com/stocklocate.asmx" />
+    </wsdl:port>
+    <wsdl:port name="StockLocateHttpGet" binding="tns:StockLocateHttpGet">
+      <http:address location="http://webservices.staging.penson.com:8080/stocklocate.asmx" />
+    </wsdl:port>
+    <wsdl:port name="StockLocateHttpPost" binding="tns:StockLocateHttpPost">
+      <http:address location="http://webservices.staging.penson.com:8080/stocklocate.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

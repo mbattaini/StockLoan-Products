@@ -1,0 +1,29 @@
+﻿<sdk:Page Name="FirmMaintenance"	
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+	xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"	
+    xmlns:c1="clr-namespace:C1.Silverlight;assembly=C1.Silverlight" 
+    xmlns:c1grid="clr-namespace:C1.Silverlight.DataGrid;assembly=C1.Silverlight.DataGrid" 
+    xmlns:c1chart="clr-namespace:C1.Silverlight.Chart;assembly=C1.Silverlight.Chart"
+	xmlns:c1datetime="clr-namespace:C1.Silverlight.DateTimeEditors;assembly=C1.Silverlight.DateTimeEditors"
+	mc:Ignorable="d" 
+    Title="LoanStar WorlwordWide Firm Maintenance Page" Height="574" Width="750" VerticalAlignment="Top"
+	x:Class="LoanStarWorldWideAdmin.Views.FirmMaint" Tag="InventoryManagement" LostFocus="FirmMaintenance_LostFocus">
+
+    <Grid x:Name="LayoutRoot" Height="574" Width="750" Background="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Center" >
+        <c1grid:C1DataGrid x:Name="FirmGrid" AutoGenerateColumns="False" CanUserEditRows="False" CanUserAddRows="False" Height="574" 
+                           VerticalAlignment="Top" SelectionChanged="FirmGrid_SelectionChanged" HorizontalAlignment="Center" Width="746">
+			<c1grid:C1DataGrid.Columns>
+				<c1grid:DataGridBoundColumn Header="Firm Code" Binding="{Binding FirmCode}" Width="100"/>
+				<c1grid:DataGridBoundColumn Header="Firm Name" Binding="{Binding Firm}" Width="350"/>
+                <c1grid:DataGridBoundColumn Header="IsActive" Binding="{Binding IsActive}" GroupHeader="IsActive" x:Name="IsActive" HorizontalAlignment="Left" AllowNull="True" />
+            </c1grid:C1DataGrid.Columns>
+		</c1grid:C1DataGrid>
+        <sdk:Label Content="Status" FontSize="14" FontWeight="Bold" Foreground="DarkBlue" Height="30" BorderBrush="Blue" BorderThickness="2" HorizontalContentAlignment="Center" 
+                   Margin="0,25,0,855" Name="StatusLabel" HorizontalAlignment="Left" Width="746" />
+
+    </Grid>
+</sdk:Page>

@@ -1,0 +1,188 @@
+﻿<UserControl 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
+    xmlns:local="clr-namespace:DashApplication" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" 
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"     
+    xmlns:User_Controls="clr-namespace:DashApplication.User_Controls"     
+    x:Class="DashApplication.CollateralUtilizationSummaryControl"
+  mc:Ignorable="d" MinHeight="600">
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <c1:C1TabControl x:Name="MainTabControl" TabItemShape="Rounded" TabStripPlacement="Bottom" BorderThickness="0" Margin="0,0,10,0" TabItemClose="InEachTab">
+            <c1:C1TabItem Header="Collateral Firm Summary" BorderThickness="0" Height="19" Style="{StaticResource C1TabItemStyle}" CanUserClose="False" >
+                <Grid Margin="0,0,-2,-1">
+                    <c1:C1Chart        
+         
+        				x:Name="UtilChart" Margin="4,37,0,1" Width="735" HorizontalAlignment="Left" Palette="Solstice" FlowDirection="LeftToRight" HorizontalContentAlignment="Stretch" ChartType="Column" Background="White" AllowDrop="True" RenderTransformOrigin="0.5,0.5" Padding="0,50,0,0">
+
+                        <c1:C1Chart.Resources        
+         
+        >
+
+                            <c1:DataPointConverter        
+         
+        						x:Key="cnv"/>
+
+                            <DataTemplate        
+         
+        						x:Key="XYSeries">
+
+                                <StackPanel        
+         
+        							Orientation="Horizontal" Background="DarkGray">
+
+                                    <c1:C1NumericBox        
+         
+        								Value="{Binding ConverterParameter=\{#XValues\}, Converter={StaticResource cnv}}" Format="0.0 MM" Foreground="White" IsReadOnly="True" ShowButtons="False" BorderThickness="0,0,0,0" Background="Transparent" FontSize="9"/>
+
+                                </StackPanel>
+
+                            </DataTemplate>
+
+                            <DataTemplate        
+         
+        						x:Key="XYSeriesOverThreshold">
+
+                                <StackPanel        
+         
+        							Orientation="Horizontal" Background="DarkRed">
+
+                                    <c1:C1NumericBox        
+         
+        								Value="{Binding ConverterParameter=\{#XValues\}, Converter={StaticResource cnv}}" Format="0.0 MM" Foreground="White" IsReadOnly="True" ShowButtons="False" BorderThickness="0,0,0,0" Background="Transparent" FontSize="9"/>
+
+                                </StackPanel>
+
+                            </DataTemplate>
+
+                            <DataTemplate        
+         
+        						x:Key="DataSeries">
+
+                                <StackPanel        
+         
+        							Orientation="Horizontal" Background="DarkGray">
+
+                                    <TextBlock        
+         
+        								Text="Amount ($)=" VerticalAlignment="Center" Foreground="White" FontSize="9"/>
+
+                                    <c1:C1NumericBox        
+         
+        								Value="{Binding Value}" Format="0.0 MM" Foreground="White" IsReadOnly="True" ShowButtons="False" BorderThickness="0,0,0,0" Background="Transparent" FontSize="9"/>
+
+                                </StackPanel>
+
+                            </DataTemplate>
+
+                        </c1:C1Chart.Resources>
+                        <c1:C1Chart.Style>
+                            <StaticResource ResourceKey="C1ChartStyle"/>
+                        </c1:C1Chart.Style>
+
+                        <c1:C1Chart.VisualEffect        
+         
+        >
+
+                            <c1:BorderEffect        
+         
+        />
+
+                        </c1:C1Chart.VisualEffect>
+
+                        <c1:C1Chart.Data        
+         
+        >
+
+                            <c1:ChartData        
+         
+        						ItemNames="P1 P2 P3 P4 P5">
+
+                                <c1:DataSeries        
+         
+        							Label="s1" Values="20, 22, 19, 24, 25"/>
+
+                            </c1:ChartData>
+
+                        </c1:C1Chart.Data>
+
+                        <c1:C1ChartLegend        
+         
+        					x:Name="UtilChartLegend" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+
+                            <c1:C1ChartLegend.ItemTemplate        
+         
+        >
+
+                                <DataTemplate        
+         
+        							x:Name="BarChartLegend">
+
+                                    <StackPanel        
+         
+        								Orientation="Horizontal">
+
+                                        <Rectangle        
+         
+        									Height="5" Width="10" Fill="{Binding Symbol.Fill}" Margin="0,0,10,0"/>
+
+                                        <CheckBox        
+         
+        									Content="{Binding Label}" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" IsChecked="{Binding Item.Tag}" VerticalAlignment="Center"/>
+
+                                    </StackPanel>
+
+                                </DataTemplate>
+
+                            </c1:C1ChartLegend.ItemTemplate>
+
+                        </c1:C1ChartLegend>
+
+                    </c1:C1Chart>
+                    <ScrollViewer Margin="744,151,8,10" BorderThickness="2" BorderBrush="#FFB2E0F4" Style="{StaticResource BlendScrollViewerStyle}" Background="#00000000" Padding="0,0,4,4">
+                        <StackPanel Orientation="Vertical" Name="MainStackPanel" ScrollViewer.VerticalScrollBarVisibility="Visible"/>
+</ScrollViewer>
+                    <c1:C1ToolbarStrip Style="{StaticResource C1ToolBarStyle}">
+                    <sdk:Label Content="Business Date" Width="96" Style="{StaticResource LabelStyle}"/>
+                    <c1:C1DateTimePicker TimeFormat="Custom" EditMode="Date" DateFormat="Long" x:Name="BizDatePicker" DateTimeChanged="BizDatePicker_DateTimeChanged" Style="{StaticResource C1BizDatePickerStyle}" />
+                    <c1:C1ToolbarButton x:Name="ExportToImageButton" ToolTipService.ToolTip="Save Chart As Image" Click="ExportToImageButton_Click" Background="#00D1DCE8" BorderBrush="#FFBFE1EA" Padding="0">
+                        <Image Width="22" Source="/DashApplication;component/Image/White/MB_0008_save.png"/>
+                    </c1:C1ToolbarButton>
+                </c1:C1ToolbarStrip>
+                    <Grid Margin="744,37,8,0" Background="#FFB2E0F4" Height="109" VerticalAlignment="Top">
+                    <HyperlinkButton x:Name="LookUpHyperLink" VerticalAlignment="Top" ToolTipService.ToolTip="Lookup Data"  HorizontalAlignment="Left" Width="22" Margin="248,36,0,0" Height="17" Click="LookUpHyperLink_Click">
+                            <c1:C1Image Source="/DashApplication;component/Image/White/MB_0018_viewer.png"/>
+                        </HyperlinkButton>
+                        <sdk:Label HorizontalAlignment="Left" Height="14"  VerticalAlignment="Top" Width="158" Content="Utilization Threshold" HorizontalContentAlignment="Center" Margin="10,9,0,0" Style="{StaticResource LabelStyle}"/>
+                        <sdk:Label HorizontalAlignment="Left" Height="14"  VerticalAlignment="Top" Width="38" Content="%" HorizontalContentAlignment="Center" Margin="226,10,0,0" Style="{StaticResource LabelStyle}"/>
+                        <c1:C1NumericBox x:Name="PrecentThresholdNumericBox" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="48" ShowButtons="False" KeyDown="PrecentThresholdNumericBox_KeyDown" Margin="173,6,0,0" Style="{StaticResource NumbericBoxStyle}"/>
+                        <sdk:Label HorizontalAlignment="Left" Height="14" VerticalAlignment="Top" Width="158" Content="Worthless Collateral Threshold" HorizontalContentAlignment="Center" Margin="10,37,0,0" Style="{StaticResource LabelStyle}"/>
+                        <sdk:Label HorizontalAlignment="Left" Height="14" VerticalAlignment="Top" Width="17" Content="$" HorizontalContentAlignment="Center" Margin="226,37,0,0" Style="{StaticResource LabelStyle}"/>
+                        <c1:C1NumericBox x:Name="PriceUselessThresholdNumericBox" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="48" ShowButtons="False" KeyDown="PriceUselessThresholdNumericBox_KeyDown" Margin="173,33,0,0" Style="{StaticResource NumbericBoxStyle}"/>
+                        <StackPanel Orientation="Horizontal" Margin="50,79,49,0" Background="#FFB2E0F4" CacheMode="BitmapCache" Height="20" VerticalAlignment="Top">
+                            <RadioButton x:Name="BaseTypeCollateralRadioButton" Content="Base Security Types (Bar)" HorizontalAlignment="Left" VerticalAlignment="Top" Checked="ChartCheckBox_Checked" Margin="0,0,5,0" Style="{StaticResource RadioStyle}"/>
+                            <RadioButton x:Name="TotalCollateralUtilRadioButton" Content="Total Collateral Utilization (Line)" HorizontalAlignment="Left" VerticalAlignment="Top" Checked="ChartCheckBox_Checked" Margin="0,0,5,0" Style="{StaticResource RadioStyle}" />
+                            <RadioButton x:Name="ProductCollateralLevelRadioButton" Content="Product Collateral Levels (Bar)" HorizontalAlignment="Left"  VerticalAlignment="Top" Checked="ChartCheckBox_Checked" Margin="0,0,5,0" Style="{StaticResource RadioStyle}"/>
+                        </StackPanel>
+                        <sdk:Label Height="14"  VerticalAlignment="Top" Content="Chart Types" HorizontalContentAlignment="Center" Margin="10,62,10,0" Style="{StaticResource LabelStyle}"/>
+                        
+                        <StackPanel Orientation="Vertical" Margin="385,0,0,52">
+                       <sdk:Label Content="Data Type" Style="{StaticResource LabelStyle}"  />
+                            <Grid>
+                       <RadioButton x:Name="StartOfDayRadioButton" Content="Start Of Day Data" HorizontalAlignment="Left"  VerticalAlignment="Top" Checked="ChartCheckBox_Checked" Style="{StaticResource RadioStyle}"/>
+                        <RadioButton x:Name="IntraDayRadioButton" Content="Intra-Day Data" HorizontalAlignment="Left"  VerticalAlignment="Top" Checked="ChartCheckBox_Checked" Margin="0,19,0,-19" Style="{StaticResource RadioStyle}"/>
+                        </Grid>
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+            </c1:C1TabItem>
+        </c1:C1TabControl>
+
+
+
+
+    </Grid>
+</UserControl>

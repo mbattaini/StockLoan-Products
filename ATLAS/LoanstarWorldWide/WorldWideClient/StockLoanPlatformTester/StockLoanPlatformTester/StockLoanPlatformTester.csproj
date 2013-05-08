@@ -1,0 +1,943 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{447E21DD-1798-4FE4-80EF-5D55BFEF9F31}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StockLoanPlatformTester</RootNamespace>
+    <AssemblyName>StockLoanPlatformTester</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>StockLoanPlatformTester.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.C1Zip.2, Version=2.1.20102.65, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\C1.C1Zip.2.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1TrueDBGrid.4, Version=4.0.20102.61195, Culture=neutral, PublicKeyToken=75ae3fb0e2b1e0da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\C1.Win.C1TrueDBGrid.4.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Channels" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LoanstarDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoanstarDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AdminService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\BooksService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ContractsService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DealsService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FunctionsService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FundsService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\InventoryService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LocalAdminService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LocalBooksService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LocalContractsService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LocalDealsService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LocalFunctionsService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LocalFundsService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LocalInventoryService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LocalMarksService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LocalPositionsService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LocalRecallsService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LocalReturnsService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LocalSecMasterService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LocalSecurityService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LocalUserAdminService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MarksService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PositionsService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\RecallsService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ReturnsService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SecMasterService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SecurityService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UserAdminService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SetTesterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetTesterForm.Designer.cs">
+      <DependentUpon>SetTesterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestProg.cs" />
+    <Compile Include="GetTesterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetTesterForm.Designer.cs">
+      <DependentUpon>GetTesterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GetTesterForm.resx">
+      <DependentUpon>GetTesterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SetTesterForm.resx">
+      <DependentUpon>SetTesterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LoanstarDataSet.xsc">
+      <DependentUpon>LoanstarDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LoanstarDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LoanstarDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LoanstarDataSet.xss">
+      <DependentUpon>LoanstarDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\AdminService\AdminService1.wsdl" />
+    <None Include="Service References\AdminService\AdminService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdminService\AdminService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BooksService\BooksService1.wsdl" />
+    <None Include="Service References\BooksService\BooksService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BooksService\BooksService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ContractsService\ContractsService1.wsdl" />
+    <None Include="Service References\ContractsService\ContractsService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ContractsService\ContractsService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DealsService\DealsService1.wsdl" />
+    <None Include="Service References\DealsService\DealsService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DealsService\DealsService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FunctionsService\FunctionsService1.wsdl" />
+    <None Include="Service References\FunctionsService\FunctionsService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FunctionsService\FunctionsService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FundsService\FundsService1.wsdl" />
+    <None Include="Service References\FundsService\FundsService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FundsService\FundsService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InventoryService\InventoryService1.wsdl" />
+    <None Include="Service References\InventoryService\InventoryService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InventoryService\InventoryService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalAdminService\AdminService.wsdl" />
+    <None Include="Service References\LocalAdminService\AdminService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalAdminService\AdminService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalBooksService\BooksService.wsdl" />
+    <None Include="Service References\LocalBooksService\BooksService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalBooksService\BooksService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalContractsService\ContractsService.wsdl" />
+    <None Include="Service References\LocalContractsService\ContractsService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalContractsService\ContractsService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalDealsService\DealsService.wsdl" />
+    <None Include="Service References\LocalDealsService\DealsService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalDealsService\DealsService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalFunctionsService\FunctionsService.wsdl" />
+    <None Include="Service References\LocalFunctionsService\FunctionsService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalFunctionsService\FunctionsService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalFundsService\FundsService.wsdl" />
+    <None Include="Service References\LocalFundsService\FundsService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalFundsService\FundsService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalInventoryService\InventoryService.wsdl" />
+    <None Include="Service References\LocalInventoryService\InventoryService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalInventoryService\InventoryService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalMarksService\MarksService.wsdl" />
+    <None Include="Service References\LocalMarksService\MarksService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalMarksService\MarksService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalPositionsService\PositionsService.wsdl" />
+    <None Include="Service References\LocalPositionsService\PositionsService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalPositionsService\PositionsService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalRecallsService\RecallsService.wsdl" />
+    <None Include="Service References\LocalRecallsService\RecallsService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalRecallsService\RecallsService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalReturnsService\ReturnsService.wsdl" />
+    <None Include="Service References\LocalReturnsService\ReturnsService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalReturnsService\ReturnsService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalSecMasterService\SecMasterService.wsdl" />
+    <None Include="Service References\LocalSecMasterService\SecMasterService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalSecMasterService\SecMasterService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalSecurityService\SecurityService.wsdl" />
+    <None Include="Service References\LocalSecurityService\SecurityService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalSecurityService\SecurityService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalUserAdminService\UserAdminService.wsdl" />
+    <None Include="Service References\LocalUserAdminService\UserAdminService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocalUserAdminService\UserAdminService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MarksService\MarksService1.wsdl" />
+    <None Include="Service References\MarksService\MarksService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MarksService\MarksService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PositionsService\PositionsService1.wsdl" />
+    <None Include="Service References\PositionsService\PositionsService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PositionsService\PositionsService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RecallsService\RecallsService1.wsdl" />
+    <None Include="Service References\RecallsService\RecallsService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RecallsService\RecallsService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReturnsService\ReturnsService1.wsdl" />
+    <None Include="Service References\ReturnsService\ReturnsService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReturnsService\ReturnsService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecMasterService\SecMasterService1.wsdl" />
+    <None Include="Service References\SecMasterService\SecMasterService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecMasterService\SecMasterService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityService\SecurityService1.wsdl" />
+    <None Include="Service References\SecurityService\SecurityService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityService\SecurityService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserAdminService\UserAdminService1.wsdl" />
+    <None Include="Service References\UserAdminService\UserAdminService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserAdminService\UserAdminService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AdminService\" />
+    <WCFMetadataStorage Include="Service References\BooksService\" />
+    <WCFMetadataStorage Include="Service References\ContractsService\" />
+    <WCFMetadataStorage Include="Service References\DealsService\" />
+    <WCFMetadataStorage Include="Service References\FunctionsService\" />
+    <WCFMetadataStorage Include="Service References\FundsService\" />
+    <WCFMetadataStorage Include="Service References\InventoryService\" />
+    <WCFMetadataStorage Include="Service References\LocalAdminService\" />
+    <WCFMetadataStorage Include="Service References\LocalBooksService\" />
+    <WCFMetadataStorage Include="Service References\LocalContractsService\" />
+    <WCFMetadataStorage Include="Service References\LocalDealsService\" />
+    <WCFMetadataStorage Include="Service References\LocalFunctionsService\" />
+    <WCFMetadataStorage Include="Service References\LocalFundsService\" />
+    <WCFMetadataStorage Include="Service References\LocalInventoryService\" />
+    <WCFMetadataStorage Include="Service References\LocalMarksService\" />
+    <WCFMetadataStorage Include="Service References\LocalPositionsService\" />
+    <WCFMetadataStorage Include="Service References\LocalRecallsService\" />
+    <WCFMetadataStorage Include="Service References\LocalReturnsService\" />
+    <WCFMetadataStorage Include="Service References\LocalSecMasterService\" />
+    <WCFMetadataStorage Include="Service References\LocalSecurityService\" />
+    <WCFMetadataStorage Include="Service References\LocalUserAdminService\" />
+    <WCFMetadataStorage Include="Service References\MarksService\" />
+    <WCFMetadataStorage Include="Service References\PositionsService\" />
+    <WCFMetadataStorage Include="Service References\RecallsService\" />
+    <WCFMetadataStorage Include="Service References\ReturnsService\" />
+    <WCFMetadataStorage Include="Service References\SecMasterService\" />
+    <WCFMetadataStorage Include="Service References\SecurityService\" />
+    <WCFMetadataStorage Include="Service References\UserAdminService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdminService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdminService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdminService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BooksService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BooksService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BooksService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ContractsService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ContractsService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ContractsService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DealsService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DealsService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DealsService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FunctionsService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FunctionsService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FunctionsService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FundsService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FundsService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FundsService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InventoryService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InventoryService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InventoryService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MarksService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MarksService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MarksService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PositionsService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PositionsService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PositionsService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RecallsService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RecallsService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RecallsService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReturnsService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReturnsService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReturnsService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SecMasterService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SecMasterService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SecMasterService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SecurityService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SecurityService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SecurityService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserAdminService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserAdminService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserAdminService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalAdminService\AdminService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalAdminService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalAdminService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalAdminService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalBooksService\BooksService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalBooksService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalBooksService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalBooksService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalContractsService\ContractsService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalContractsService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalContractsService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalContractsService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalDealsService\DealsService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalDealsService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalDealsService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalDealsService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalFunctionsService\FunctionsService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalFunctionsService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalFunctionsService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalFunctionsService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalFundsService\FundsService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalFundsService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalFundsService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalFundsService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalInventoryService\InventoryService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalInventoryService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalInventoryService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalInventoryService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalMarksService\MarksService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalMarksService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalMarksService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalMarksService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalPositionsService\PositionsService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalPositionsService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalPositionsService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalPositionsService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalRecallsService\RecallsService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalRecallsService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalRecallsService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalRecallsService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalReturnsService\ReturnsService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalReturnsService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalReturnsService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalReturnsService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalSecMasterService\SecMasterService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalSecMasterService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalSecMasterService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalSecMasterService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalSecurityService\SecurityService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalSecurityService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalSecurityService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalSecurityService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalUserAdminService\UserAdminService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalUserAdminService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalUserAdminService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LocalUserAdminService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\WorldWideBusiness\StockLoan.Business.csproj">
+      <Project>{AB47E4A5-A005-4186-B7DB-A9B73B65FF98}</Project>
+      <Name>StockLoan.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\WorldWideDataAccess\StockLoan.DataAccess.csproj">
+      <Project>{2F4FD756-BCBA-4CDB-B818-89EDCBCEDBDC}</Project>
+      <Name>StockLoan.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\WorldWideEncryption\Encrypt.csproj">
+      <Project>{A8D65C79-CA23-4BF7-A3AA-FECFF28EB5C3}</Project>
+      <Name>Encrypt</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\WorldWideServices\StockLoan.WebServices.csproj">
+      <Project>{FF778A7F-F385-403D-974B-58432DAD4ABE}</Project>
+      <Name>StockLoan.WebServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\WorldWideTransport\Transport\Transport\Transport.csproj">
+      <Project>{595DA93B-4A6D-4716-9242-50DD935F7DA0}</Project>
+      <Name>Transport</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdminService\AdminService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BooksService\BooksService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ContractsService\ContractsService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DealsService\DealsService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FunctionsService\FunctionsService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FundsService\FundsService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InventoryService\InventoryService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MarksService\MarksService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PositionsService\PositionsService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RecallsService\RecallsService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReturnsService\ReturnsService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SecMasterService\SecMasterService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SecurityService\SecurityService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserAdminService\UserAdminService1.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

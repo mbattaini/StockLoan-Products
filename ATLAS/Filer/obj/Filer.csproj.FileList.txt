@@ -1,0 +1,16 @@
+bin\Release\StockLoan.Filer.dll
+bin\Release\Rebex.Net.Ftp.dll
+bin\Release\Rebex.Net.ProxySocket.dll
+bin\Release\StockLoan.Common.dll
+bin\Release\StockLoan.Common.pdb
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\StockLoan.Filer.dll
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\StockLoan.Filer.dll
+bin\Debug\StockLoan.Filer.pdb
+bin\Debug\Rebex.Net.Ftp.dll
+bin\Debug\Rebex.Net.ProxySocket.dll
+bin\Debug\StockLoan.Common.dll
+bin\Debug\StockLoan.Common.pdb
+obj\Debug\StockLoan.Filer.dll
+obj\Debug\StockLoan.Filer.pdb

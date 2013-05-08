@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="UserAdminService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/UserAdminService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/UserAdminService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUserAdminService_GetSourceIP_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSourceIP" />
+  </wsdl:message>
+  <wsdl:message name="IUserAdminService_GetSourceIP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSourceIPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAdminService_FunctionSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:FunctionSet" />
+  </wsdl:message>
+  <wsdl:message name="IUserAdminService_FunctionSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FunctionSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAdminService_FunctionsGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:FunctionsGet" />
+  </wsdl:message>
+  <wsdl:message name="IUserAdminService_FunctionsGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FunctionsGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAdminService_RoleFunctionSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:RoleFunctionSet" />
+  </wsdl:message>
+  <wsdl:message name="IUserAdminService_RoleFunctionSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RoleFunctionSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAdminService_RoleSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:RoleSet" />
+  </wsdl:message>
+  <wsdl:message name="IUserAdminService_RoleSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RoleSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAdminService_RolesGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:RolesGet" />
+  </wsdl:message>
+  <wsdl:message name="IUserAdminService_RolesGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RolesGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAdminService_UserGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserGet" />
+  </wsdl:message>
+  <wsdl:message name="IUserAdminService_UserGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAdminService_RoleFunctionsGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:RoleFunctionsGet" />
+  </wsdl:message>
+  <wsdl:message name="IUserAdminService_RoleFunctionsGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RoleFunctionsGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAdminService_UserRolesGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserRolesGet" />
+  </wsdl:message>
+  <wsdl:message name="IUserAdminService_UserRolesGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserRolesGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAdminService_UserRolesSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserRolesSet" />
+  </wsdl:message>
+  <wsdl:message name="IUserAdminService_UserRolesSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserRolesSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAdminService_UserSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserSet" />
+  </wsdl:message>
+  <wsdl:message name="IUserAdminService_UserSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserSetResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IUserAdminService">
+    <wsdl:operation name="GetSourceIP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAdminService/GetSourceIP" message="tns:IUserAdminService_GetSourceIP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAdminService/GetSourceIPResponse" message="tns:IUserAdminService_GetSourceIP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FunctionSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAdminService/FunctionSet" message="tns:IUserAdminService_FunctionSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAdminService/FunctionSetResponse" message="tns:IUserAdminService_FunctionSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FunctionsGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAdminService/FunctionsGet" message="tns:IUserAdminService_FunctionsGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAdminService/FunctionsGetResponse" message="tns:IUserAdminService_FunctionsGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RoleFunctionSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAdminService/RoleFunctionSet" message="tns:IUserAdminService_RoleFunctionSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAdminService/RoleFunctionSetResponse" message="tns:IUserAdminService_RoleFunctionSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RoleSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAdminService/RoleSet" message="tns:IUserAdminService_RoleSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAdminService/RoleSetResponse" message="tns:IUserAdminService_RoleSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RolesGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAdminService/RolesGet" message="tns:IUserAdminService_RolesGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAdminService/RolesGetResponse" message="tns:IUserAdminService_RolesGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAdminService/UserGet" message="tns:IUserAdminService_UserGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAdminService/UserGetResponse" message="tns:IUserAdminService_UserGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RoleFunctionsGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAdminService/RoleFunctionsGet" message="tns:IUserAdminService_RoleFunctionsGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAdminService/RoleFunctionsGetResponse" message="tns:IUserAdminService_RoleFunctionsGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserRolesGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAdminService/UserRolesGet" message="tns:IUserAdminService_UserRolesGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAdminService/UserRolesGetResponse" message="tns:IUserAdminService_UserRolesGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserRolesSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAdminService/UserRolesSet" message="tns:IUserAdminService_UserRolesSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAdminService/UserRolesSetResponse" message="tns:IUserAdminService_UserRolesSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAdminService/UserSet" message="tns:IUserAdminService_UserSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAdminService/UserSetResponse" message="tns:IUserAdminService_UserSet_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IUserAdminService" type="tns:IUserAdminService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSourceIP">
+      <soap:operation soapAction="http://tempuri.org/IUserAdminService/GetSourceIP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FunctionSet">
+      <soap:operation soapAction="http://tempuri.org/IUserAdminService/FunctionSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FunctionsGet">
+      <soap:operation soapAction="http://tempuri.org/IUserAdminService/FunctionsGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RoleFunctionSet">
+      <soap:operation soapAction="http://tempuri.org/IUserAdminService/RoleFunctionSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RoleSet">
+      <soap:operation soapAction="http://tempuri.org/IUserAdminService/RoleSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RolesGet">
+      <soap:operation soapAction="http://tempuri.org/IUserAdminService/RolesGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserGet">
+      <soap:operation soapAction="http://tempuri.org/IUserAdminService/UserGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RoleFunctionsGet">
+      <soap:operation soapAction="http://tempuri.org/IUserAdminService/RoleFunctionsGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserRolesGet">
+      <soap:operation soapAction="http://tempuri.org/IUserAdminService/UserRolesGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserRolesSet">
+      <soap:operation soapAction="http://tempuri.org/IUserAdminService/UserRolesSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserSet">
+      <soap:operation soapAction="http://tempuri.org/IUserAdminService/UserSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UserAdminService">
+    <wsdl:port name="BasicHttpBinding_IUserAdminService" binding="tns:BasicHttpBinding_IUserAdminService">
+      <soap:address location="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/UserAdminService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

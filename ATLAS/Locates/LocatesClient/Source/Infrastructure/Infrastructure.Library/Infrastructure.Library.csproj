@@ -1,0 +1,130 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{110B5C6E-91B3-4F78-AD36-25A817147179}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StockLoan.Locates.Infrastructure.Library</RootNamespace>
+    <AssemblyName>StockLoan.Locates.Infrastructure.Library</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.CompositeUI, Version=1.0.51205.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\Microsoft.Practices.CompositeUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.CompositeUI.WinForms, Version=1.0.51205.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\Microsoft.Practices.CompositeUI.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51206.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EntityTranslators\BaseTranslator.cs" />
+    <Compile Include="EntityTranslators\EntityMapperTranslator.cs" />
+    <Compile Include="BuilderStrategies\ActionStrategy.cs" />
+    <Compile Include="EntLib\EventTopicExceptionFormatter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\ActionCatalogService.cs" />
+    <Compile Include="Services\ActionCatalogException.cs" />
+    <Compile Include="Services\DependentModuleInfo.cs" />
+    <Compile Include="Services\DependentModuleLoaderService.cs" />
+    <Compile Include="Services\IDependentModuleInfo.cs" />
+    <Compile Include="Services\IModuleInfoStore.cs" />
+    <Compile Include="Services\IProfileCatalogService.cs" />
+    <Compile Include="Services\ISolutionProfileParser.cs" />
+    <Compile Include="Services\ModuleMetadataReflectionHelper.cs" />
+    <Compile Include="Services\ProfileCatalogModuleInfoStore.cs" />
+    <Compile Include="Services\SolutionProfileV1Parser.cs" />
+    <Compile Include="Services\SolutionProfileV2Parser.cs" />
+    <Compile Include="Services\WebServiceCatalogModuleInfoStore.cs" />
+    <Compile Include="Services\WorkspaceLocatorService.cs" />
+    <Compile Include="Services\XmlStreamDependentModuleEnumerator.cs" />
+    <Compile Include="Services\EntityTranslatorService.cs" />
+    <Compile Include="Services\XmlValidationHelper.cs" />
+    <Compile Include="SmartClientApplication.cs" />
+    <Compile Include="UI\WindowSmartpartInfo.cs" />
+    <Compile Include="UI\WindowWorkspace.cs" />
+    <Compile Include="UI\WindowWorkspaceSetting.cs" />
+    <Compile Include="SolutionProfileV1.cs">
+      <DependentUpon>SolutionProfileV1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SolutionProfileV2.cs">
+      <DependentUpon>SolutionProfileV2.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SolutionProfileV1.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SolutionProfileV2.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Infrastructure.Interface\Infrastructure.Interface.csproj">
+      <Project>{4A0C9F45-9F97-4984-8D86-759052C1C0FE}</Project>
+      <Name>Infrastructure.Interface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

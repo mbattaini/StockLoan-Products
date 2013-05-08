@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="DashApplication.ContractBySecurityControl"   
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" 
+             xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+    mc:Ignorable="d" Height="594" Width="837">
+    
+<Grid x:Name="LayoutRoot" >
+        <Grid
+			x:Name="CashHeaderGrid" Height="21" VerticalAlignment="Top" Margin="10,35,10,0" Background="#FFB2E0F4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="719*"/>
+                <ColumnDefinition Width="98*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock
+				HorizontalAlignment="Left" Margin="8,3,0,0" TextWrapping="Wrap" Text="Contracts By Security" Width="221" Foreground="White" FontSize="10.667" Height="17" VerticalAlignment="Top" />
+            <HyperlinkButton x:Name="ExcelButton" HorizontalAlignment="Right" Margin="0,3,10,0" Foreground="White" FontWeight="Bold" Height="14" VerticalAlignment="Top" Content="Excel" Click="ExcelButton_Click" Grid.Column="1"/>
+        </Grid>
+        <StackPanel Orientation="Horizontal" Margin="10,0" Background="#FFB2E0F4" Height="30" VerticalAlignment="Top">
+            <sdk:Label HorizontalAlignment="Left" Width="120" Content="Business Date:" Height="18" VerticalAlignment="Center" Foreground="White" FontWeight="Bold" Margin="0,9,0,8" Padding="0,0,2,0"/>
+            <c1:C1DateTimePicker x:Name="ContractsDatePicker"  Width="134" EditMode="Date" HorizontalAlignment="Right" d:LayoutOverrides="Width" DateTimeChanged="ContractsDatePicker_DateTimeChanged" VerticalAlignment="Center" Style="{StaticResource C1BizDatePickerStyle}" />           
+            
+            <sdk:Label HorizontalAlignment="Left" Width="80" Content="Book Group:" Height="18" VerticalAlignment="Center" Foreground="White" FontWeight="Bold" Margin="10,9,0,8"/>
+            <c1:C1ComboBox  x:Name="BookGroupCombo" HorizontalAlignment="Left" Width="93" Height="25" VerticalAlignment="Center" SelectedValueChanged="BookGroupCombo_SelectedValueChanged" SelectedIndexChanged="BookGroupCombo_SelectedIndexChanged" FontSize="10.667" FontFamily="TitilliumText22L" />
+            
+     
+        </StackPanel>
+        
+        <c1:C1DataGrid
+			x:Name="ContractsGrid" CanUserRemoveRows="False" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" CanUserAddRows="False" CanUserEditRows="False" Margin="10,61,10,10" AutoGenerateColumns="False" ShowFluidMouseOver="True" CanUserFilter="True" LoadedCellPresenter="ContractsGrid_LoadedCellPresenter" Style="{StaticResource C1GridStyle}">
+            <c1:C1DataGrid.Columns
+	>
+                <c1:DataGridBoundColumn
+					Binding="{Binding BookGroup}" Header="Book Group" x:Name="BookGroup" CanUserFilter="True"/>
+                <c1:DataGridBoundColumn
+					Header="Security ID" Binding="{Binding SecId}" CanUserFilter="True" GroupHeader="Security ID" x:Name="SecurityID" CanUserSort="True"/>
+                <c1:DataGridBoundColumn
+					Header="Symbol" Binding="{Binding Symbol, FallbackValue=Book}" GroupHeader="Symbol" x:Name="Symbol" CanUserFilter="True"/>
+                <c1:DataGridBoundColumn
+					Header="CC" HorizontalAlignment="Right" Binding="{Binding CurrencyIso, FallbackValue=BorrowAmount}" Format="" GroupHeader="CC" x:Name="CC"/>
+                <c1:DataGridBoundColumn
+					Header="PC" HorizontalAlignment="Right" Binding="{Binding PoolCode, FallbackValue=LoanAmount}" Format="" GroupHeader="PC" x:Name="Charge"/>
+                <c1:DataGridBoundColumn
+					Binding="{Binding BorrowQuantity}" Format="#,##0" Header="B Quantity" x:Name="BQuantity" GroupHeader="B Quantity" HorizontalAlignment="Right"/>
+                <c1:DataGridBoundColumn
+					Format="#,##0.00" Header="B Amount" x:Name="BAmount" Binding="{Binding BorrowAmount}" GroupHeader="B Amount" HorizontalAlignment="Right"/>
+                <c1:DataGridBoundColumn x:Name="BorrowRate" Binding="{Binding BorrowRate}" Format="#0.000" Header="B Rate" HorizontalAlignment="Right"/>
+                <c1:DataGridBoundColumn
+					Binding="{Binding LoanQuantity}" Format="#,##0" Header="L Quantity" x:Name="LQuantity" GroupHeader="L Quantity" HorizontalAlignment="Right"/>
+                <c1:DataGridBoundColumn
+					Binding="{Binding LoanAmount}" Format="#,##0.00" Header="L Amount" x:Name="LAmount" GroupHeader="L Amount" HorizontalAlignment="Right"/>
+                <c1:DataGridBoundColumn Binding="{Binding LoanRate}" Format="#0.000" Header="L Rate" HorizontalAlignment="Right" x:Name="LoanRate"/>
+            </c1:C1DataGrid.Columns>
+        </c1:C1DataGrid>
+    </Grid>
+</UserControl>

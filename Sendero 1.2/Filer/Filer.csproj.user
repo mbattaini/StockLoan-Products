@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastOpenVersion>7.10.3077</LastOpenVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ReferencePath>C:\Projects\Current\Filer\;C:\Anetics\Projects1.2\Filer\;C:\_DEV\Sendero\SENDERO.1.2.1\Filer\;C:\Sendero1.2\Filer\;C:\Sendero\C++\0 Development\Sendero1.2\Filer\;C:\SENDERO1.2.DEVELOPMENT\Email\bin\Debug\;C:\SENDERO1.2.DEVELOPMENT\Filer\;C:\_Dev\Sendero1.2\Filer\;C:\_Dev\Sendero1.2\Common\obj\Debug\</ReferencePath>
+    <CopyProjectDestinationFolder>
+    </CopyProjectDestinationFolder>
+    <CopyProjectUncPath>
+    </CopyProjectUncPath>
+    <CopyProjectOption>0</CopyProjectOption>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <ProjectTrust>0</ProjectTrust>
+    <PublishUrlHistory />
+    <InstallUrlHistory />
+    <SupportUrlHistory />
+    <UpdateUrlHistory />
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory />
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <EnableASPDebugging>false</EnableASPDebugging>
+    <EnableASPXDebugging>false</EnableASPXDebugging>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <EnableSQLServerDebugging>false</EnableSQLServerDebugging>
+    <RemoteDebugEnabled>false</RemoteDebugEnabled>
+    <RemoteDebugMachine>
+    </RemoteDebugMachine>
+    <StartAction>Project</StartAction>
+    <StartArguments>
+    </StartArguments>
+    <StartPage>
+    </StartPage>
+    <StartProgram>
+    </StartProgram>
+    <StartURL>
+    </StartURL>
+    <StartWorkingDirectory>
+    </StartWorkingDirectory>
+    <StartWithIE>false</StartWithIE>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <EnableASPDebugging>false</EnableASPDebugging>
+    <EnableASPXDebugging>false</EnableASPXDebugging>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <EnableSQLServerDebugging>false</EnableSQLServerDebugging>
+    <RemoteDebugEnabled>false</RemoteDebugEnabled>
+    <RemoteDebugMachine>
+    </RemoteDebugMachine>
+    <StartAction>Project</StartAction>
+    <StartArguments>
+    </StartArguments>
+    <StartPage>
+    </StartPage>
+    <StartProgram>
+    </StartProgram>
+    <StartURL>
+    </StartURL>
+    <StartWorkingDirectory>
+    </StartWorkingDirectory>
+    <StartWithIE>false</StartWithIE>
+  </PropertyGroup>
+</Project>

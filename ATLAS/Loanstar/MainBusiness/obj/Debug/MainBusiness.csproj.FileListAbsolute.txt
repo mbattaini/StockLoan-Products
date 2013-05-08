@@ -1,0 +1,75 @@
+C:\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\contract-summary.xml
+C:\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\mark-summary.xml
+C:\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\recall-summary.xml
+C:\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\return-summary.xml
+C:\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\MarksReport.xml
+C:\ATLAS\Loanstar\MainBusiness\bin\Debug\StockLoan.MainBusiness.dll
+C:\ATLAS\Loanstar\MainBusiness\bin\Debug\StockLoan.MainBusiness.pdb
+C:\ATLAS\Loanstar\MainBusiness\bin\Debug\StockLoan.Main.dll
+C:\ATLAS\Loanstar\MainBusiness\bin\Debug\StockLoan.Main.pdb
+C:\ATLAS\Loanstar\MainBusiness\obj\Debug\ResolveAssemblyReference.cache
+C:\ATLAS\Loanstar\MainBusiness\obj\Debug\StockLoan.MainBusiness.dll
+C:\ATLAS\Loanstar\MainBusiness\obj\Debug\StockLoan.MainBusiness.pdb
+C:\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\BillingContractsDetails.xml
+C:\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\BillingContracts.xml
+C:\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\BillingContractsTop.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\BillingContractsDetails.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\BillingContracts.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\BillingContractsTop.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\contract-summary.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\mark-summary.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\recall-summary.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\return-summary.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\MarksReport.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\StockLoan.MainBusiness.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\StockLoan.MainBusiness.pdb
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\StockLoan.Main.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\StockLoan.Main.pdb
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MainBusiness\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MainBusiness\obj\Debug\StockLoan.MainBusiness.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MainBusiness\obj\Debug\StockLoan.MainBusiness.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\BillingContractsDetails.xml
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\BillingContracts.xml
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\BillingContractsTop.xml
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\contract-summary.xml
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\mark-summary.xml
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\recall-summary.xml
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\return-summary.xml
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\MarksReport.xml
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\StockLoan.MainBusiness.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\StockLoan.MainBusiness.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\StockLoan.Main.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\StockLoan.Main.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MainBusiness\obj\Debug\ResolveAssemblyReference.cache
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MainBusiness\obj\Debug\StockLoan.MainBusiness.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MainBusiness\obj\Debug\StockLoan.MainBusiness.pdb
+U:\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\BillingContractsDetails.xml
+U:\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\BillingContracts.xml
+U:\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\BillingContractsTop.xml
+U:\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\contract-summary.xml
+U:\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\mark-summary.xml
+U:\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\recall-summary.xml
+U:\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\return-summary.xml
+U:\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\MarksReport.xml
+U:\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\StockLoan.MainBusiness.dll
+U:\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\StockLoan.MainBusiness.pdb
+U:\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\StockLoan.Main.dll
+U:\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\StockLoan.Main.pdb
+U:\_Dev\ATLAS\Loanstar\MainBusiness\obj\Debug\ResolveAssemblyReference.cache
+U:\_Dev\ATLAS\Loanstar\MainBusiness\obj\Debug\StockLoan.MainBusiness.dll
+U:\_Dev\ATLAS\Loanstar\MainBusiness\obj\Debug\StockLoan.MainBusiness.pdb
+C:\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\BillingContractsDetails.xml
+C:\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\BillingContracts.xml
+C:\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\BillingContractsTop.xml
+C:\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\contract-summary.xml
+C:\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\mark-summary.xml
+C:\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\recall-summary.xml
+C:\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\return-summary.xml
+C:\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\Layouts\MarksReport.xml
+C:\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\StockLoan.MainBusiness.dll
+C:\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\StockLoan.MainBusiness.pdb
+C:\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\StockLoan.Main.dll
+C:\_Dev\ATLAS\Loanstar\MainBusiness\bin\Debug\StockLoan.Main.pdb
+C:\_Dev\ATLAS\Loanstar\MainBusiness\obj\Debug\ResolveAssemblyReference.cache
+C:\_Dev\ATLAS\Loanstar\MainBusiness\obj\Debug\StockLoan.MainBusiness.dll
+C:\_Dev\ATLAS\Loanstar\MainBusiness\obj\Debug\StockLoan.MainBusiness.pdb

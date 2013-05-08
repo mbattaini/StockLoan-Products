@@ -1,0 +1,5 @@
+C:\_dev\DashApplication3.0\DashApplication3.0.Web\bin\DashApplication3.0.Web.dll
+C:\_dev\DashApplication3.0\DashApplication3.0.Web\bin\DashApplication3.0.Web.pdb
+C:\_dev\DashApplication3.0\DashApplication3.0.Web\obj\Debug\DashApplication3.0.Web.dll
+C:\_dev\DashApplication3.0\DashApplication3.0.Web\obj\Debug\DashApplication3.0.Web.pdb
+C:\_dev\DashApplication3.0\DashApplication3.0.Web\obj\Debug\DashApplication3.0.Web.csprojResolveAssemblyReference.cache

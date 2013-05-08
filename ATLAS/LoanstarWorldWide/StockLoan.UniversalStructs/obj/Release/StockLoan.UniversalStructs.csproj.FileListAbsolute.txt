@@ -1,0 +1,5 @@
+C:\_dev\ATLAS\LoanstarWorldWide\StockLoan.UniversalStructs\bin\Release\StockLoan.UniversalStructs.dll
+C:\_dev\ATLAS\LoanstarWorldWide\StockLoan.UniversalStructs\bin\Release\StockLoan.UniversalStructs.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\StockLoan.UniversalStructs\obj\Release\ResolveAssemblyReference.cache
+C:\_dev\ATLAS\LoanstarWorldWide\StockLoan.UniversalStructs\obj\Release\StockLoan.UniversalStructs.dll
+C:\_dev\ATLAS\LoanstarWorldWide\StockLoan.UniversalStructs\obj\Release\StockLoan.UniversalStructs.pdb

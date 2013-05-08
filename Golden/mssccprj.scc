@@ -1,0 +1,17 @@
+SCC = This is a Source Code Control file
+
+[NorthStar.sln]
+SCC_Aux_Path = "\\rspen001\SourceSafe\PensonSource"
+SCC_Project_Name = "$/SourceCode/C#/0 Development/Atlas/NorthStar/NorthStar", NPUFAAAA
+
+[NorthStar.csproj]
+SCC_Aux_Path = "\\rspen001\SourceSafe\PensonSource"
+SCC_Project_Name = "$/SourceCode/C#/0 Development/Atlas/NorthStar/NorthStar", NPUFAAAA
+
+[GOlden.csproj]
+SCC_Aux_Path = "\\rspen001\SourceSafe\PensonSource"
+SCC_Project_Name = "$/SourceCode/C#/0 Development/Atlas/Golden", BSKNAAAA
+
+[Golden.sln]
+SCC_Aux_Path = "\\rspen001\SourceSafe\PensonSource"
+SCC_Project_Name = "$/SourceCode/C#/0 Development/Atlas/Golden", BSKNAAAA

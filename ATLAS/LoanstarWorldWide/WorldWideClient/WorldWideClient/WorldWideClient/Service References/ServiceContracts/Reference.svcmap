@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="06b25472-9d8b-4942-b189-bb15eb432265" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localHost:59014/ContractsService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ContractsService.wsdl" MetadataType="Wsdl" ID="07a34e15-6cfb-46dd-99c0-93d20c1363ea" SourceId="1" SourceUrl="http://localhost:59014/ContractsService.svc?wsdl" />
+    <MetadataFile FileName="ContractsService.xsd" MetadataType="Schema" ID="74522d72-9970-43f2-b98b-3e813741721a" SourceId="1" SourceUrl="http://localhost:59014/ContractsService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ContractsService.disco" MetadataType="Disco" ID="6a836c06-a932-4558-9aa2-18eaf4c8a0b2" SourceId="1" SourceUrl="http://localhost:59014/ContractsService.svc?disco" />
+    <MetadataFile FileName="ContractsService1.xsd" MetadataType="Schema" ID="c7706ff3-c3ce-42ee-9718-358497490ae1" SourceId="1" SourceUrl="http://localhost:59014/ContractsService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

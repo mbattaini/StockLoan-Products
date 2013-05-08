@@ -1,0 +1,4 @@
+C:\_Dev\Sendero 1.2\Process\bin\Debug\Anetics.Process.dll
+C:\_Dev\Sendero 1.2\Process\bin\Debug\Anetics.Process.pdb
+C:\_Dev\Sendero 1.2\Process\obj\Debug\Anetics.Process.dll
+C:\_Dev\Sendero 1.2\Process\obj\Debug\Anetics.Process.pdb

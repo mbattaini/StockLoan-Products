@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="TRADINGDATAservice">
+</Property><Property Name="Solution File" Value="C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVICE\TRADINGDATAservice.sln">
+</Property><Property Name="Date" Value="Tuesday, February 01, 2011">
+</Property><Property Name="Time" Value="15:01:49 PM">
+</Property><Property Name="Log Number" Value="4">
+</Property></Properties><Event ErrorLevel="0" Project="TradingDataService" Source="TradingDataService.csproj" Description="Project file successfully backed up as C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVICE\Backup3\TradingDataService.csproj">
+</Event><Event ErrorLevel="0" Project="TradingDataService" Source="AssemblyInfo.cs" Description="File successfully backed up as C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVICE\Backup3\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="TradingDataService" Source="ProjectInstaller.cs" Description="File successfully backed up as C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVICE\Backup3\ProjectInstaller.cs">
+</Event><Event ErrorLevel="0" Project="TradingDataService" Source="Service.cs" Description="File successfully backed up as C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVICE\Backup3\Service.cs">
+</Event><Event ErrorLevel="0" Project="TradingDataService" Source="ProjectInstaller.resx" Description="File successfully backed up as C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVICE\Backup3\ProjectInstaller.resx">
+</Event><Event ErrorLevel="0" Project="TradingDataService" Source="Service.resx" Description="File successfully backed up as C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVICE\Backup3\Service.resx">
+</Event><Event ErrorLevel="1" Project="TradingDataService" Source="TradingDataService.csproj" Description="Your project is targeting .NET Framework 2.0 or 3.0. If your project uses assemblies requiring a newer .NET Framework, your project will fail to build. You can change the .NET Framework version by clicking Properties on the project menu and then selecting a new version in the '.NET Framework' dropdown box. (In Visual Basic, this is located on the Compile tab by clicking the 'Advanced Compiler Options...' button.)">
+</Event><Event ErrorLevel="0" Project="TradingDataService" Source="TradingDataService.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="TradingDataService" Source="TradingDataService.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="TradingDataService" Source="TradingDataService.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

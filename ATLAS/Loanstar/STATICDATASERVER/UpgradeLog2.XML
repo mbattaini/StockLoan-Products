@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="StaticDataServer">
+</Property><Property Name="Solution File" Value="\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\STATICDATASERVER\StaticDataServer.sln">
+</Property><Property Name="User Options File" Value="\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\STATICDATASERVER\StaticDataServer.suo">
+</Property><Property Name="Date" Value="Thursday, August 19, 2010">
+</Property><Property Name="Time" Value="10:08 AM">
+</Property><Property Name="Log Number" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="StaticDataServer.sln" Description="File successfully backed up as \\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\STATICDATASERVER\Backup1\StaticDataServer.sln">
+</Event><Event ErrorLevel="0" Project="" Source="StaticDataServer.suo" Description="File successfully backed up as \\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\STATICDATASERVER\Backup1\StaticDataServer.suo">
+</Event><Event ErrorLevel="2" Project="MedalistServer" Source="MedalistServer.csproj" Description="Unable to open project file to perform upgrade.  ">
+</Event><Event ErrorLevel="0" Project="" Source="StaticDataServer.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="StaticDataServer.sln" Description="Converted">
+</Event></UpgradeLog>

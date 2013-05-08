@@ -1,0 +1,32 @@
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDData\bin\Release\StockLoan.BDData.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDData\bin\Release\DatabaseFunctions.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDData\bin\Release\iConnectNet.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDData\bin\Release\StockLoan.Common.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDData\bin\Release\StockLoan.Filer.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDData\bin\Release\Rebex.Net.Ftp.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDData\bin\Release\Rebex.Net.ProxySocket.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDData\bin\Release\DatabaseFunctions.pdb
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDData\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDData\obj\Release\StockLoan.BDData.dll
+U:\_Dev\ATLAS\Loanstar\BDData\bin\Release\StockLoan.BDData.dll
+U:\_Dev\ATLAS\Loanstar\BDData\bin\Release\DatabaseFunctions.dll
+U:\_Dev\ATLAS\Loanstar\BDData\bin\Release\StockLoan.Common.dll
+U:\_Dev\ATLAS\Loanstar\BDData\bin\Release\StockLoan.Filer.dll
+U:\_Dev\ATLAS\Loanstar\BDData\bin\Release\Rebex.Net.Ftp.dll
+U:\_Dev\ATLAS\Loanstar\BDData\bin\Release\Rebex.Net.ProxySocket.dll
+U:\_Dev\ATLAS\Loanstar\BDData\bin\Release\DatabaseFunctions.pdb
+U:\_Dev\ATLAS\Loanstar\BDData\obj\Release\ResolveAssemblyReference.cache
+U:\_Dev\ATLAS\Loanstar\BDData\obj\Release\StockLoan.BDData.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\BDData\bin\Release\StockLoan.BDData.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\BDData\bin\Release\DatabaseFunctions.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\BDData\bin\Release\StockLoan.Common.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\BDData\bin\Release\StockLoan.Filer.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\BDData\bin\Release\Rebex.Net.Ftp.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\BDData\bin\Release\Rebex.Net.ProxySocket.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\BDData\bin\Release\DatabaseFunctions.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\BDData\obj\Release\ResolveAssemblyReference.cache
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\BDData\obj\Release\StockLoan.BDData.dll
+U:\_Dev\ATLAS\Loanstar\BDData\bin\Release\MQSeries.dll
+U:\_Dev\ATLAS\Loanstar\BDData\bin\Release\MQSeries.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\BDData\bin\Release\MQSeries.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\BDData\bin\Release\MQSeries.pdb

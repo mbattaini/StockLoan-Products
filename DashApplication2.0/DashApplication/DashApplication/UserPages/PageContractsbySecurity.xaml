@@ -1,0 +1,15 @@
+﻿<navigation:Page 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           xmlns:DashApplication="clr-namespace:DashApplication" x:Class="DashApplication.UserPages.PageContractsbySecurity"
+           mc:Ignorable="d"
+           Title="PageContractsbySecurity Page" Height="681" Width="899">
+    <Grid x:Name="LayoutRoot">
+
+        <DashApplication:ContractBySecurityControl HorizontalAlignment="Left" VerticalAlignment="Top" Height="681" Width="899"/>
+
+    </Grid>
+</navigation:Page>

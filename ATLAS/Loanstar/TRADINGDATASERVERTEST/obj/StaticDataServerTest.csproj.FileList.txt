@@ -1,0 +1,10 @@
+bin\Debug\StockLoan.StaticDataServerTest.exe.config
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\StockLoan.StaticDataServerTest.exe
+bin\Debug\StockLoan.StaticDataServerTest.pdb
+bin\Debug\StockLoan.StaticDataServer.dll
+bin\Debug\StockLoan.Common.dll
+bin\Debug\StockLoan.Common.pdb
+bin\Debug\StockLoan.StaticDataServer.pdb
+obj\Debug\StockLoan.StaticDataServerTest.exe
+obj\Debug\StockLoan.StaticDataServerTest.pdb

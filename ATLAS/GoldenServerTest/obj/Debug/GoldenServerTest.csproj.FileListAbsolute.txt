@@ -1,0 +1,12 @@
+C:\_dev\ATLAS\GoldenServerTest\bin\Debug\StockLoan.GoldenServerTest.exe.config
+C:\_dev\ATLAS\GoldenServerTest\bin\Debug\StockLoan.GoldenServerTest.exe
+C:\_dev\ATLAS\GoldenServerTest\bin\Debug\StockLoan.GoldenServerTest.pdb
+C:\_dev\ATLAS\GoldenServerTest\bin\Debug\StockLoan.GoldenServer.dll
+C:\_dev\ATLAS\GoldenServerTest\bin\Debug\StockLoan.Golden.dll
+C:\_dev\ATLAS\GoldenServerTest\bin\Debug\StockLoan.Common.dll
+C:\_dev\ATLAS\GoldenServerTest\bin\Debug\StockLoan.GoldenServer.pdb
+C:\_dev\ATLAS\GoldenServerTest\bin\Debug\StockLoan.Golden.pdb
+C:\_dev\ATLAS\GoldenServerTest\bin\Debug\StockLoan.Common.pdb
+C:\_dev\ATLAS\GoldenServerTest\obj\Debug\GoldenServerTest.csprojResolveAssemblyReference.cache
+C:\_dev\ATLAS\GoldenServerTest\obj\Debug\StockLoan.GoldenServerTest.exe
+C:\_dev\ATLAS\GoldenServerTest\obj\Debug\StockLoan.GoldenServerTest.pdb

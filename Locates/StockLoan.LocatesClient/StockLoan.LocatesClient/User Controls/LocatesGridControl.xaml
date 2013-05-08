@@ -1,0 +1,50 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+	mc:Ignorable="d"
+	x:Class="StockLoan_LocatesClient.LocatesGridControl">
+
+	<Grid x:Name="LayoutRoot">
+		<c1:C1DataGrid x:Name="LocatesGrid" Margin="8,40,8,8" Style="{StaticResource TransparantGrid}" AutoGenerateColumns="False"  SelectionChanged="LocatesGrid_SelectionChanged" CanUserAddRows="False" CanUserRemoveRows="False" FrozenTopRowsCount="1" CommittedRowEdit="LocatesGrid_CommittedRowEdit" LoadedCellPresenter="LocatesGrid_LoadedCellPresenter" BeginningRowEdit="LocatesGrid_BeginningRowEdit" HeaderBackground="#FF1A2129" SelectedBackground="#FF242723">
+						<c1:C1DataGrid.TopRows>
+				<c1:DataGridFilterRow />
+			</c1:C1DataGrid.TopRows>
+			<c1:C1DataGrid.Columns>
+                <c1:DataGridTextColumn  Header="LocateId" Binding="{Binding LocateId, Mode=TwoWay}" CanUserFilter="True" FilterMemberPath="LocateId" Width="75px" Visibility="Collapsed"/>
+                <c1:DataGridTextColumn  Header="ID" Binding="{Binding LocateIdTail, Mode=TwoWay}" CanUserFilter="True" FilterMemberPath="LocateIdTail" Width="75px"/>
+                <c1:DataGridTextColumn Header="Security ID" Binding="{Binding SecId, Mode=TwoWay}" CanUserFilter="True" FilterMemberPath="SecId"  CanUserSort="True" SortMemberPath="SecId" HorizontalAlignment="Left" Width="100px"/>
+                <c1:DataGridTextColumn Header="Symbol" Binding="{Binding Symbol, Mode=TwoWay}" CanUserFilter="True" FilterMemberPath="Symbol"  CanUserSort="True"  SortMemberPath="Symbol" HorizontalAlignment="Left" Width="75px"/>
+                <c1:DataGridTextColumn Header="Open At" Binding="{Binding OpenTime, Mode=TwoWay}" CanUserFilter="True" FilterMemberPath="OpenTime"  CanUserSort="True"  SortMemberPath="OpenTime" HorizontalAlignment="Left" Width="75px"/>
+                <c1:DataGridTextColumn Header="From" Binding="{Binding ClientId, Mode=TwoWay}" CanUserFilter="True" FilterMemberPath="ClientId"   CanUserSort="True" SortMemberPath="ClientId" HorizontalAlignment="Left"  Width="75px"/>
+                <c1:DataGridTextColumn Header="Group" Binding="{Binding GroupCode, Mode=TwoWay}" CanUserFilter="True" FilterMemberPath="GroupCode"   CanUserSort="True" SortMemberPath="GroupCode"  Width="75px"/>
+                <c1:DataGridNumericColumn Header="Request" Binding="{Binding ClientQuantity, Mode=TwoWay}" CanUserFilter="True" Format ="#,##0"  CanUserSort="True" FilterMemberPath="ClientQuantity"  SortMemberPath="ClientQuantity"  Width="75px"/>
+                <c1:DataGridTextColumn Header="Status" Binding="{Binding Status, Mode=TwoWay}" CanUserFilter="True" FilterMemberPath="Status"  CanUserSort="True"  SortMemberPath="Status" Width="75px" />
+                <c1:DataGridNumericColumn Header="Located" Binding="{Binding Quantity, Mode=TwoWay}" CanUserFilter="True" Format ="#,##0" FilterMemberPath="Quantity"  CanUserSort="True"  SortMemberPath="Quantity"  Width="75px"/>
+                <c1:DataGridCheckBoxColumn Header="F" Binding="{Binding IsFill, Mode=TwoWay}" CanUserFilter="True" FilterMemberPath="IsFill"  CanUserSort="True" SortMemberPath="IsFill" Width="30px"  />
+                <c1:DataGridTextColumn Header="Source" Binding="{Binding Source, Mode=TwoWay}" CanUserFilter="True" FilterMemberPath="Source"  CanUserSort="True"  SortMemberPath="Source"  Width="75px"/>                
+                <c1:DataGridTextColumn Header="User ID" Binding="{Binding ActUserShortName, Mode=TwoWay}" CanUserFilter="True" FilterMemberPath="ActUserShortName"  CanUserSort="True" SortMemberPath="ActUserShortName"   Width="75px"/>
+                <c1:DataGridDateTimeColumn Header="ActTime" Binding="{Binding ActTime, Mode=TwoWay}" CanUserFilter="True" FilterMemberPath="ActTime"  CanUserSort="True" SortMemberPath="ActTime" Format="HH:mm:ss"  Width="75px"/>
+                <c1:DataGridNumericColumn Header="Fee" Binding="{Binding FeeRate, Mode=TwoWay}" CanUserFilter="True"  Format ="#,##0.000" FilterMemberPath="FeeRate"  CanUserSort="True" SortMemberPath="FeeRate"  Width="75px" />                
+                <c1:DataGridCheckBoxColumn Header="PB" Binding="{Binding PreBorrow, Mode=TwoWay}" CanUserFilter="True"   CanUserSort="True" FilterMemberPath="PreBorrow"  SortMemberPath="PreBorrow" Width="30px" />
+				<c1:DataGridTextColumn Header="Comment" Binding="{Binding Comment, Mode=TwoWay}" CanUserFilter="True" FilterMemberPath="Comment"  CanUserSort="True" SortMemberPath="Comment"  Width="*"/>
+			</c1:C1DataGrid.Columns>
+
+		</c1:C1DataGrid>
+		<c1:C1ToolbarStrip Height="28" Margin="8,8,8,0" Style="{StaticResource TransparantToolBarStrip}" Background="#FF1A2129">
+			<sdk:Label Height="20" Width="88" Content="Business Date:" Style="{StaticResource TransparantLabel}" FontSize="8" Background="#FF1A2129"/>
+			<c1:C1DateTimePicker x:Name="BizDatePicker" Height="20" EditMode="Date" Width="112" Style="{StaticResource TransparantDateTimePicker}" DateTimeChanged="BizDatePicker_DateTimeChanged" FontSize="8" Background="#FF1A2129" />
+			<sdk:Label Height="28" Width="48" Content=""/>
+            <CheckBox x:Name="CheckBoxFilterGroupCode" Content="Filter Group Code" Height="20" Width="136" Background="#FF89A8C2" FontSize="8" VerticalContentAlignment="Center" Foreground="White" HorizontalContentAlignment="Left" Padding="4,1,0,0"/>
+            <CheckBox x:Name="CheckFilterPending" Height="20" Width="136" Background="#FF89A8C2" Content="Filter Pending" Checked="CheckFilterPending_Checked" FontSize="8" VerticalContentAlignment="Center" Foreground="White" Unchecked="CheckFilterPending_Unchecked"/>
+            <c1:C1ToolbarButton x:Name="ButtonShowAll" Height="16" Width="40" Click="ButtonShowAll_Click" FontSize="8" Style="{StaticResource TransparantToolBarStripButton}" VerticalContentAlignment="Center" ToolTipService.ToolTip="Show All Locates" >
+            	<c1:C1Image Source="/StockLoan.LocatesClient;component/Images/MB_0015_reload.png"/>
+            </c1:C1ToolbarButton>
+            <c1:C1ToolbarButton x:Name="ButtonExportToExcel" Height="16" Width="40" Click="ButtonExportToExcel_Click" FontSize="8" Style="{StaticResource TransparantToolBarStripButton}" VerticalContentAlignment="Center">
+            	<c1:C1Image Source="/StockLoan.LocatesClient;component/Images/MB_0008_Excel.png"/>
+            </c1:C1ToolbarButton>
+		</c1:C1ToolbarStrip>
+	</Grid>
+</UserControl>

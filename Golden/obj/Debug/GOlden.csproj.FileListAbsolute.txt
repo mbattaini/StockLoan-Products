@@ -1,0 +1,15 @@
+\\penson.com\shares\Users\MBattaini\_Dev\Golden\obj\Debug\ResolveAssemblyReference.cache
+\\penson.com\shares\Users\MBattaini\_Dev\Golden\bin\Debug\StockLoan.Golden.dll
+\\penson.com\shares\Users\MBattaini\_Dev\Golden\bin\Debug\StockLoan.Golden.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\Golden\obj\Debug\StockLoan.Golden.dll
+\\penson.com\shares\Users\MBattaini\_Dev\Golden\obj\Debug\StockLoan.Golden.pdb
+U:\_Dev\Golden\bin\Debug\StockLoan.Golden.dll
+U:\_Dev\Golden\bin\Debug\StockLoan.Golden.pdb
+U:\_Dev\Golden\obj\Debug\ResolveAssemblyReference.cache
+U:\_Dev\Golden\obj\Debug\StockLoan.Golden.dll
+U:\_Dev\Golden\obj\Debug\StockLoan.Golden.pdb
+C:\_Dev\Golden\bin\Debug\StockLoan.Golden.dll
+C:\_Dev\Golden\bin\Debug\StockLoan.Golden.pdb
+C:\_Dev\Golden\obj\Debug\ResolveAssemblyReference.cache
+C:\_Dev\Golden\obj\Debug\StockLoan.Golden.dll
+C:\_Dev\Golden\obj\Debug\StockLoan.Golden.pdb

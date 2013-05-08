@@ -1,0 +1,1 @@
+C:\ATLAS\Locates\LocatesClient\Source\Infrastructure\Infrastructure.Interface\obj\Debug\ResolveAssemblyReference.cache

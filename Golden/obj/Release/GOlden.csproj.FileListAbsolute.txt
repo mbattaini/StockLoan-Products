@@ -1,0 +1,15 @@
+U:\_Dev\Golden\bin\Release\StockLoan.Golden.dll
+U:\_Dev\Golden\bin\Release\StockLoan.Golden.pdb
+U:\_Dev\Golden\obj\Release\ResolveAssemblyReference.cache
+U:\_Dev\Golden\obj\Release\StockLoan.Golden.dll
+U:\_Dev\Golden\obj\Release\StockLoan.Golden.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\Golden\bin\Release\StockLoan.Golden.dll
+\\penson.com\shares\Users\MBattaini\_Dev\Golden\bin\Release\StockLoan.Golden.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\Golden\obj\Release\ResolveAssemblyReference.cache
+\\penson.com\shares\Users\MBattaini\_Dev\Golden\obj\Release\StockLoan.Golden.dll
+\\penson.com\shares\Users\MBattaini\_Dev\Golden\obj\Release\StockLoan.Golden.pdb
+C:\_Dev\Golden\bin\Release\StockLoan.Golden.dll
+C:\_Dev\Golden\bin\Release\StockLoan.Golden.pdb
+C:\_Dev\Golden\obj\Release\ResolveAssemblyReference.cache
+C:\_Dev\Golden\obj\Release\StockLoan.Golden.dll
+C:\_Dev\Golden\obj\Release\StockLoan.Golden.pdb

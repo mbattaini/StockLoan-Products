@@ -1,0 +1,941 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Silverlight.Imaging</name>
+    </assembly>
+    <members>
+        <member name="T:C1.Silverlight.Imaging.FrameDisposal">
+            <summary>
+            Specifies how a frame should be disposed of after is displayed 
+            in an animated GIF.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Imaging.FrameDisposal.None">
+            <summary>
+            No disposal specified. The decoder is not required to take any action.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Imaging.FrameDisposal.Keep">
+            <summary>
+            Do not dispose. The graphic is to be left in place.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Imaging.FrameDisposal.RestoreBackground">
+            <summary>
+            Restore to background color. The area used by the graphic must be restored to the 
+            background color.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Imaging.FrameDisposal.RestorePrevious">
+            <summary>
+            Restore to previous. The decoder is required to restore the area overwritten by the 
+            graphic with what was there prior to rendering the graphic.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Imaging.AnimationFrame">
+            <summary>
+            Holds information about each animation frame (used for animated GIF files).
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Imaging.ImageFormat">
+            <summary>
+            Represents the format used to encode an image into a stream.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Imaging.ImageFormat.Unknown">
+            <summary>
+            Unknown format.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Imaging.ImageFormat.Png">
+            <summary>
+            Png format.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Imaging.ImageFormat.Jpg">
+            <summary>
+            Jpeg format.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Imaging.ImageFormat.Gif">
+            <summary>
+            Gif format.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Imaging.InterpolationMode">
+            <summary>
+            Represents the interpolation mode used to resize images.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Imaging.InterpolationMode.Default">
+            <summary>
+            Balance between speed and quality.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Imaging.InterpolationMode.Fast">
+            <summary>
+            High performance, low quality.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Imaging.InterpolationMode.HighQuality">
+            <summary>
+            High quality, slow performance.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Imaging.C1Bitmap">
+            <summary>
+            Class that contains an editable image and provides methods for encoding and
+            decoding the image into streams of different formats.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.C1Bitmap.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/> of a given size.
+            </summary>
+            <param name="width">Width of the new bitmap.</param>
+            <param name="height">Height of the new bitmap.</param>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.C1Bitmap.#ctor">
+            <summary>
+            Initializes a new empty <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.C1Bitmap.#ctor(System.IO.Stream)">
+            <summary>
+            Initializes a new <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/> with the contents of an image stream.
+            </summary>
+            <param name="stream">The <see cref="T:System.IO.Stream"/> that contains the source graphics file for this <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>.</param>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.C1Bitmap.#ctor(System.Uri)">
+            <summary>
+            Initializes a new <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/> with the contents of an image stream.
+            </summary>
+            <param name="uriSource">The <see cref="T:System.Uri"/> that references the source graphics file for this <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>.</param>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.C1Bitmap.#ctor(C1.Silverlight.Imaging.C1Bitmap)">
+            <summary>
+            Initializes a new <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/> with the contents of another <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>.
+            </summary>
+            <param name="bmp">The <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/> that will be copied into this new <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>.</param>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.C1Bitmap.#ctor(C1.Silverlight.Imaging.C1Bitmap,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/> with the contents of another <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>.
+            </summary>
+            <param name="bmp">The <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/> that will be copied into this new <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>.</param>
+            <param name="width">Width of the <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/> in pixels.</param>
+            <param name="height">Height of the <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/> in pixels.</param>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.C1Bitmap.#ctor(System.Windows.Media.Imaging.WriteableBitmap)">
+            <summary>
+            Initializes a new <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/> with the contents of a <see cref="T:System.Windows.Media.Imaging.WriteableBitmap"/>. 
+            </summary>
+            <param name="writeableBitmap">The <see cref="T:System.Windows.Media.Imaging.WriteableBitmap"/> that will be copied to this <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>.</param>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.C1Bitmap.GetImageFormat(System.IO.Stream)">
+            <summary>
+            Gets the format used to encode an image in a stream.
+            </summary>
+            <param name="stream"><see cref="T:System.IO.Stream"/> that contains the encoded image.</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.C1Bitmap.SetSize(System.Int32,System.Int32)">
+            <summary>
+            Initializes the <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/> to a blank image of the given size.
+            </summary>
+            <param name="width">Width of the <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/> in pixels.</param>
+            <param name="height">Height of the <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/> in pixels.</param>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.C1Bitmap.GetPixel(System.Int32,System.Int32)">
+            <summary>
+            Gets the color of the pixel at the specified position in the <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>.
+            </summary>
+            <param name="col">Index of the column that contains the pixel.</param>
+            <param name="row">Index of the row that contains the pixel.</param>
+            <returns><see cref="T:System.Windows.Media.Color"/> of the pixel at the specified position in the <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/></returns>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.C1Bitmap.GetInterpolatedPixel(System.Double,System.Double)">
+            <summary>
+            Gets the color of the pixel at the specified interpolated position in the <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>.
+            </summary>
+            <param name="x">X value to sample in image coordinates (from 0 to width).</param>
+            <param name="y">Y value to sample in image coordinates (from 0 to height).</param>
+            <returns><see cref="T:System.Windows.Media.Color"/> of the interpolated pixel at the specified position in the <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/></returns>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.C1Bitmap.SetPixel(System.Int32,System.Int32,System.Windows.Media.Color)">
+            <summary>
+            Sets the color of a pixel in the <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>.
+            </summary>
+            <param name="col">Index of the column that contains the pixel.</param>
+            <param name="row">Index of the row that contains the pixel.</param>
+            <param name="color"><see cref="T:System.Windows.Media.Color"/> to be assigned to the pixel.</param>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.C1Bitmap.SetPixel(System.Int32,System.Int32,System.Byte,System.Byte,System.Byte,System.Byte)">
+            <summary>
+            Sets the color of a pixel in the <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>.
+            </summary>
+            <param name="col">Index of the column that contains the pixel.</param>
+            <param name="row">Index of the row that contains the pixel.</param>
+            <param name="red">Value of the red component of the pixel.</param>
+            <param name="green">Value of the green component of the pixel.</param>
+            <param name="blue">Value of the blue component of the pixel.</param>
+            <param name="alpha">Value of the alpha component of the pixel (0 is transparent, 0xff is opaque).</param>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.C1Bitmap.DrawBitmap(C1.Silverlight.Imaging.C1Bitmap,System.Int32,System.Int32)">
+            <summary>
+            Draws a <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/> into this bitmap.
+            </summary>
+            <param name="bitmap"><see cref="T:C1.Silverlight.Imaging.C1Bitmap"/> that will be drawn into this bitmap.</param>
+            <param name="left">Left position where the drawing will start.</param>
+            <param name="top">Top position where the drawing will start.</param>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.C1Bitmap.Copy(C1.Silverlight.Imaging.C1Bitmap,System.Boolean)">
+            <summary>
+            Copies another <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/> into this one (image and size).
+            </summary>
+            <param name="source"><see cref="T:C1.Silverlight.Imaging.C1Bitmap"/> that contains the image to be copied.</param>
+            <param name="resize">True to update the size of this <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/> to match the source, false to stretch the image and keep the current bitmap size.</param>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.C1Bitmap.SetStream(System.IO.Stream)">
+            <summary>
+            Assigns a new image <see cref="T:System.IO.Stream"/> to the <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>.
+            </summary>
+            <param name="stream"><see cref="T:System.IO.Stream"/> that contains the image.</param>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.C1Bitmap.GetStream">
+            <summary>
+            Gets a PNG <see cref="T:System.IO.Stream"/> that contains the image in this <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>.
+            </summary>
+            <returns>A <see cref="T:System.IO.Stream"/> that contains the image in this <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.C1Bitmap.GetStream(System.Boolean)">
+            <summary>
+            Gets a PNG <see cref="T:System.IO.Stream"/> that contains the image in this <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>.
+            </summary>
+            <param name="compress">Whether the PNG stream should be compressed.</param>
+            <returns>A <see cref="T:System.IO.Stream"/> that contains the image in this <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.C1Bitmap.GetStream(C1.Silverlight.Imaging.ImageFormat,System.Boolean)">
+            <summary>
+            Gets a <see cref="T:System.IO.Stream"/> that contains the image in this <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>.
+            </summary>
+            <param name="format"><see cref="T:C1.Silverlight.Imaging.ImageFormat"/> that specifies the type of stream to return.</param>
+            <param name="compress">Whether the stream should be compressed (optional only for PNG format).</param>
+            <returns>A <see cref="T:System.IO.Stream"/> that contains the image in this <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.C1Bitmap.BeginUpdate">
+            <summary>
+            Stop updating the <see cref="P:C1.Silverlight.Imaging.C1Bitmap.ImageSource"/> while the <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/> content is modified.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.C1Bitmap.EndUpdate">
+            <summary>
+            Resume updating the <see cref="P:C1.Silverlight.Imaging.C1Bitmap.ImageSource"/> while the <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/> content is modified.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.C1Bitmap.GetImageData">
+            <summary>
+            Gets the raw image data in this <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>.
+            </summary>
+            <returns>A byte array containing the raw image data in this <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>.</returns>
+            <remarks>
+            <para>The raw image data is encoded in this format:</para>
+            <para>row0: start rgba rgba rgba rgba ...</para>
+            <para>row1: start rgba rgba rgba rgba ...</para>
+            <para>Where:</para>
+            <para>start are <see cref="P:C1.Silverlight.Imaging.C1Bitmap.RowExtra"/> bytes used internally at the start of each scan row.</para>
+            <para>rgba are red, green, blue, and alpha components for each pixel.</para>
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.C1Bitmap.GetImageSource">
+            <summary>
+            Gets the <see cref="T:System.Windows.Media.Imaging.BitmapImage"/> being used as an image source (but does not create one automatically).
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:C1.Silverlight.Imaging.C1Bitmap.UriSource">
+            <summary>
+            Gets or sets a URL that contains a reference to the image to be loaded 
+            into this <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Imaging.C1Bitmap.Width">
+            <summary>
+            Gets the width of the <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>, in pixels.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Imaging.C1Bitmap.Height">
+            <summary>
+            Gets the height of the <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>, in pixels.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Imaging.C1Bitmap.InterpolationMode">
+            <summary>
+            Gets or sets the <see cref="P:C1.Silverlight.Imaging.C1Bitmap.InterpolationMode"/> parameter used to resize images.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Imaging.C1Bitmap.ImageSource">
+            <summary>
+            Gets an <see cref="P:C1.Silverlight.Imaging.C1Bitmap.ImageSource"/> that is automatically updated to show the content of the <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Imaging.C1Bitmap.RowExtra">
+            <summary>
+            Returns the number of extra bytes at the start of each row. See <see cref="M:C1.Silverlight.Imaging.C1Bitmap.GetImageData"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Imaging.C1Bitmap.Frames">
+            <summary>
+            Gets a list of frames (used for GIF animation).
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Imaging.ImageResizeFilter">
+            <summary>
+            Class used to resize <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/> images.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Imaging.ImageResizeFilterBox">
+            <summary>
+            Fast filter (low quality)
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Imaging.ImageResizeFilterTriangle">
+            <summary>
+            Default filter (good compromise between performance and quality)
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Imaging.ImageResizeFilterMitchell">
+            <summary>
+            High quality interpolation filter (slowest)
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Imaging.C1GifImage">
+            <summary>
+            Class that is analogous to BitmapImage, but displays animated GIF
+            files in addition to static PNG and JPG bitmaps.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.C1GifImage.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Silverlight.Imaging.C1GifImage"/> class.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.C1GifImage.#ctor(System.Uri)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Silverlight.Imaging.C1GifImage"/> class.
+            </summary>
+            <param name="uriSource">The URI source.</param>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.C1GifImage.op_Implicit(C1.Silverlight.Imaging.C1GifImage)~System.Windows.Media.ImageSource">
+            <summary>
+            Performs an implicit conversion from <see cref="T:C1.Silverlight.Imaging.C1GifImage"/> to <see cref="T:System.Windows.Media.ImageSource"/>.
+            </summary>
+            <param name="gifImage">The GIF image.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.C1GifImage.SetSource(System.IO.Stream)">
+            <summary>
+            Loads the image from a stream.
+            </summary>
+            <param name="stream"><see cref="T:System.IO.Stream"/> that contains the image.</param>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.C1GifImage.Play">
+            <summary>
+            Starts playing the animation from the current position.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.C1GifImage.Pause">
+            <summary>
+            Stops the animation at the current position.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.C1GifImage.Stop">
+            <summary>
+            Stops the animation and resets the loop and frame indices.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Imaging.C1GifImage.UriSource">
+            <summary>
+            Gets or sets the <see cref="T:System.Uri"/> that contains this image.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Imaging.C1GifImage.AutoPlay">
+            <summary>
+            Gets or sets a value that causes the animation to start playing
+            automatically when the source is set.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Imaging.C1GifImage.LoopCount">
+            <summary>
+            Gets or sets the number of times to repeat the animation.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Imaging.C1GifImage.FrameCount">
+            <summary>
+            Gets the number of frames in the GIF image.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Imaging.C1GifImage.DownloadProgress">
+            <summary>
+            Fires while the image is being downloaded.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Imaging.C1GifImage.DownloadCompleted">
+            <summary>
+            Fires after the image has been downloaded.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Imaging.C1GifImage.ImageFailed">
+            <summary>
+            Occurs when there is an error associated with image retrieval or format.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Imaging.ImageFailedExceptionEventArgs">
+            <summary>
+            Provides event data for <see cref="E:C1.Silverlight.Imaging.C1GifImage.ImageFailed"/> event.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.ImageFailedExceptionEventArgs.#ctor(System.Exception)">
+            <summary>
+            Initializes a new <see cref="T:C1.Silverlight.Imaging.ImageFailedExceptionEventArgs"/>.
+            </summary>
+            <param name="error">Value to initialize <see cref="P:C1.Silverlight.Imaging.ImageFailedExceptionEventArgs.ErrorException"/>.</param>
+        </member>
+        <member name="P:C1.Silverlight.Imaging.ImageFailedExceptionEventArgs.ErrorException">
+            <summary>
+            Gets the underlying exception reported by the event.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Imaging.C1Image">
+            <para>The trick is the TypeConverter attached to the Source property; it
+            creates a C1GifImage instead of a BitmapImage.</para>
+            <para>This allows adding gif images to xaml, e.g.</para>
+            <summary>
+            The C1Image control is similar to an Image element, but is unique in that it also renders GIF and animated GIF files.
+            </summary>	
+        </member>
+        <member name="F:C1.Silverlight.Imaging.C1Image.SourceProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Imaging.C1Image.Source"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Imaging.C1Image.StretchProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Imaging.C1Image.Stretch"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.C1Image.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Imaging.C1Image"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.C1Image.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.Imaging.C1Image"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Imaging.C1Image.Source">
+            <summary>
+            Gets or sets the source for the image.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Imaging.C1Image.Stretch">
+            <summary>
+            Gets or sets a value that describes how an image should be stretched to fill the destination rectangle.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Imaging.ImageSourceConverter">
+            <summary>
+            Converter that enables the use of C1Image from XAML.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.ImageSourceConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+            <summary>
+            Returns whether the type converter can convert an object from the specified type to the type of this converter.
+            </summary>
+            <param name="context">An object that provides a format context.</param>
+            <param name="sourceType">The type you want to convert from.</param>
+            <returns>
+            true if this converter can perform the conversion; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.ImageSourceConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+            <summary>
+            Converts from the specified value to the type of this converter.
+            </summary>
+            <param name="context">An object that provides a format context.</param>
+            <param name="culture">The <see cref="T:System.Globalization.CultureInfo"/> to use as the current culture.</param>
+            <param name="value">The value to convert to the type of this converter.</param>
+            <returns>The converted value.</returns>
+            <exception cref="T:System.NotSupportedException">
+            The conversion cannot be performed.
+            </exception>
+        </member>
+        <member name="T:C1.Silverlight.Imaging.GifCodec">
+            <summary>
+            Decodes a GIF stream into a <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/> object.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.GifCodec.Decode(System.IO.Stream)">
+            <summary>
+            Creates a new <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/> object initialized with the content of a GIF stream.
+            </summary>
+            <param name="stream"><see cref="T:System.IO.Stream"/> that contains the image encoded in GIF format.</param>
+            <returns>A new <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/> that contains the image encoded in the stream.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.GifCodec.Decode(C1.Silverlight.Imaging.C1Bitmap,System.IO.Stream)">
+            <summary>
+            Loads a <see cref="T:System.IO.Stream"/> into an existing <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:C1.Silverlight.Imaging.GifInfo">
+            <summary>
+            Helper class for reading GIF files.
+            </summary>
+        </member>
+        <member name="T:FluxJpeg.Core.DCT">
+            <summary>
+            Implements the Discrete Cosine Transform with dynamic CIL
+            </summary>
+        </member>
+        <member name="M:FluxJpeg.Core.DCT.buildC">
+            <summary>
+            Precomputes cosine terms in A.3.3 of 
+            http://www.w3.org/Graphics/JPEG/itu-t81.pdf
+            
+            Closely follows the term precomputation in the
+            Java Advanced Imaging library.
+            </summary>
+        </member>
+        <member name="M:FluxJpeg.Core.DCT.FastIDCT(System.Single[])">
+            See figure A.3.3 IDCT (informative) on A-5.
+            http://www.w3.org/Graphics/JPEG/itu-t81.pdf
+        </member>
+        <member name="M:FluxJpeg.Core.DecodedJpeg.Initialize">
+            <summary>
+            This method creates and fills three arrays, Y, Cb, and Cr using the input image.
+            </summary>
+        </member>
+        <member name="M:FluxJpeg.Core.HuffmanTable.GenerateSizeTable">
+            <summary>See Figure C.1</summary>
+        </member>
+        <member name="M:FluxJpeg.Core.HuffmanTable.GenerateCodeTable">
+            <summary>See Figure C.2</summary>
+        </member>
+        <member name="M:FluxJpeg.Core.HuffmanTable.GenerateDecoderTables">
+            <summary>See figure F.15</summary>
+        </member>
+        <member name="M:FluxJpeg.Core.HuffmanTable.Extend(System.Int32,System.Int32)">
+            <summary>Figure F.12</summary>
+        </member>
+        <member name="M:FluxJpeg.Core.HuffmanTable.Decode(FluxJpeg.Core.IO.JPEGBinaryReader)">
+            <summary>Figure F.16 - Reads the huffman code bit-by-bit.</summary>
+        </member>
+        <member name="M:FluxJpeg.Core.HuffmanTable.HuffmanBlockEncoder(System.IO.Stream,System.Int32[],System.Int32,System.Int32,System.Int32)">
+            <summary>
+            HuffmanBlockEncoder run length encodes and Huffman encodes the quantized data.
+            </summary>
+        </member>
+        <member name="M:FluxJpeg.Core.HuffmanTable.bufferIt(System.IO.Stream,System.Int32,System.Int32)">
+            <summary>
+            Uses an integer long (32 bits) buffer to store the Huffman encoded bits
+            and sends them to outStream by the byte.
+            </summary>
+        </member>
+        <member name="M:FluxJpeg.Core.HuffmanTable.initHuf">
+            <summary>
+            Initialisation of the Huffman codes for Luminance and Chrominance.
+            This code results in the same tables created in the IJG Jpeg-6a
+            library.
+            </summary>
+        </member>
+        <member name="M:FluxJpeg.Core.Decoder.JpegComponent.padMCU(System.Int32,System.Int32)">
+            <summary>
+            If a restart marker is found with too little of an MCU count (i.e. our
+            Restart Interval is 63 and we have 61 we copy the last MCU until it's full)
+            </summary>
+        </member>
+        <member name="M:FluxJpeg.Core.Decoder.JpegComponent.resetInterval">
+            <summary>
+            Reset the interval by setting the previous DC value
+            </summary>
+        </member>
+        <member name="M:FluxJpeg.Core.Decoder.JpegComponent.quantizeData">
+            <summary>
+            Run the Quantization backward method on all of the block data.
+            </summary>
+        </member>
+        <member name="M:FluxJpeg.Core.Decoder.JpegComponent.idctData">
+            <summary>
+            Run the Inverse DCT method on all of the block data
+            </summary>
+        </member>
+        <member name="M:FluxJpeg.Core.Decoder.JpegComponent.scaleByFactors(FluxJpeg.Core.Decoder.BlockUpsamplingMode)">
+            <summary>
+            Stretches components as needed to normalize the size of all components.
+            For example, in a 2x1 (4:2:2) sequence, the Cr and Cb channels will be 
+            scaled vertically by a factor of 2.
+            </summary>
+        </member>
+        <member name="M:FluxJpeg.Core.Decoder.JpegComponent.decode_dc_coefficient(FluxJpeg.Core.IO.JPEGBinaryReader)">
+            <summary>
+            Generated from text on F-22, F.2.2.1 - Huffman decoding of DC
+            coefficients on ISO DIS 10918-1. Requirements and Guidelines.
+            </summary>
+            <param name="JPEGStream">Stream that contains huffman bits</param>
+            <returns>DC coefficient</returns>
+        </member>
+        <member name="M:FluxJpeg.Core.Decoder.JpegComponent.decode_ac_coefficients(FluxJpeg.Core.IO.JPEGBinaryReader,System.Single[])">
+            <summary>
+            Generated from text on F-23, F.13 - Huffman decoded of AC coefficients
+            on ISO DIS 10918-1. Requirements and Guidelines.
+            </summary>
+        </member>
+        <member name="F:FluxJpeg.Core.Decoder.BlockUpsamplingMode.BoxFilter">
+            <summary> The simplest upsampling mode. Produces sharper edges. </summary>
+        </member>
+        <member name="F:FluxJpeg.Core.Decoder.BlockUpsamplingMode.Interpolate">
+            <summary> Smoother upsampling. May improve color spread for some images. </summary>
+        </member>
+        <member name="F:FluxJpeg.Core.Decoder.JpegDecoder.MAJOR_VERSION">
+            <summary>
+            This decoder expects JFIF 1.02 encoding.
+            </summary>
+        </member>
+        <member name="F:FluxJpeg.Core.Decoder.JpegDecoder.JFIF_FIXED_LENGTH">
+            <summary>
+            The length of the JFIF field not including thumbnail data.
+            </summary>
+        </member>
+        <member name="F:FluxJpeg.Core.Decoder.JpegDecoder.JFXX_FIXED_LENGTH">
+            <summary>
+            The length of the JFIF extension field not including extension data.
+            </summary>
+        </member>
+        <member name="M:FluxJpeg.Core.Decoder.JpegDecoder.TryParseJFIF(System.Byte[])">
+            <summary>
+            Tries to parse the JFIF APP0 header
+            See http://en.wikipedia.org/wiki/JFIF
+            </summary>
+        </member>
+        <member name="T:FluxJpeg.Core.JpegHuffmanTable">
+            <summary>
+             The JPEGHuffmanTable class represents a Huffman table read from a
+             JPEG image file.  The standard JPEG AC and DC chrominance and
+             luminance values are provided as static fields.
+            </summary>
+        </member>
+        <member name="M:FluxJpeg.Core.JpegHuffmanTable.#ctor(System.Int16[],System.Int16[])">
+            <summary>
+            Construct and initialize a Huffman table. Copies are created of
+            the array arguments. lengths[index] stores the number of Huffman
+            values with Huffman codes of length index + 1. The values array
+            stores the Huffman values in order of increasing code length.
+            
+            throws ArgumentException if either parameter is null, if
+            lengths.Length > 16 or values.Length > 256, if any value in
+            length or values is negative, or if the parameters do not
+            describe a valid Huffman table
+            </summary>
+            <param name="lengths"> an array of Huffman code lengths</param>
+            <param name="values">a sorted array of Huffman values</param>
+        </member>
+        <member name="M:FluxJpeg.Core.JpegHuffmanTable.#ctor(System.Int16[],System.Int16[],System.Boolean)">
+            <summary>
+            Private constructor that avoids unnecessary copying and argument checking.
+            </summary>
+            <param name="lengths">lengths an array of Huffman code lengths</param>
+            <param name="values">a sorted array of Huffman values</param>
+            <param name="copy">true if copies should be created of the given arrays</param>
+        </member>
+        <member name="P:FluxJpeg.Core.JpegHuffmanTable.Lengths">
+            <summary>
+             Retrieve the array of Huffman code lengths.  If the
+             returned array is called lengthcount, there are
+             lengthcount[index] codes of length index + 1.
+            </summary>
+        </member>
+        <member name="F:FluxJpeg.Core.JpegQuantizationTable.K1Luminance">
+            <summary>
+            The standard JPEG luminance quantization table.  Values are
+            stored in natural order.
+            </summary>
+        </member>
+        <member name="F:FluxJpeg.Core.JpegQuantizationTable.K1Div2Luminance">
+            <summary>
+            The standard JPEG luminance quantization table, scaled by
+            one-half.  Values are stored in natural order.
+            </summary>
+        </member>
+        <member name="F:FluxJpeg.Core.JpegQuantizationTable.K2Chrominance">
+            <summary>
+            The standard JPEG chrominance quantization table.  Values are
+            stored in natural order.
+            </summary>
+        </member>
+        <member name="F:FluxJpeg.Core.JpegQuantizationTable.K2Div2Chrominance">
+            <summary>
+            The standard JPEG chrominance quantization table, scaled by
+            one-half.  Values are stored in natural order.
+            </summary>
+        </member>
+        <member name="M:FluxJpeg.Core.JpegQuantizationTable.#ctor(System.Int32[])">
+            <summary>
+            Construct a new JPEG quantization table.  A copy is created of
+            the table argument.
+            </summary>
+            <param name="table">The 64-element value table, stored in natural order</param>
+        </member>
+        <member name="M:FluxJpeg.Core.JpegQuantizationTable.#ctor(System.Int32[],System.Boolean)">
+            <summary>
+            Private constructor that avoids unnecessary copying and argument
+            checking.
+            </summary>
+            <param name="table">the 64-element value table, stored in natural order</param>
+            <param name="copy">true if a copy should be created of the given table</param>
+        </member>
+        <member name="M:FluxJpeg.Core.JpegQuantizationTable.getScaledInstance(System.Single,System.Boolean)">
+            <summary>
+            Retrieve a copy of this JPEG quantization table with every value
+            scaled by the given scale factor, and clamped from 1 to 255
+            </summary>
+            <param name="scaleFactor">the factor by which to scale this table</param>
+            <param name="forceBaseline"> clamp scaled values to a maximum of 255 if baseline or from 1 to 32767 otherwise.</param>
+            <returns>new scaled JPEG quantization table</returns>
+        </member>
+        <member name="M:FluxJpeg.Core.Encoder.JpegEncoder.#ctor(FluxJpeg.Core.DecodedJpeg,System.Int32,System.IO.Stream)">
+            <summary>
+            Encodes a JPEG, preserving the colorspace and metadata of the input JPEG.
+            </summary>
+            <param name="decodedJpeg">Decoded Jpeg to start with.</param>
+            <param name="quality">Quality of the image from 0 to 100.  (Compression from max to min.)</param>
+            <param name="outStream">Stream where the result will be placed.</param>
+        </member>
+        <member name="M:FluxJpeg.Core.Image.ChangeColorSpace(FluxJpeg.Core.ColorSpace)">
+            <summary>
+            Converts the colorspace of an image (in-place)
+            </summary>
+            <param name="cs">Colorspace to convert into</param>
+            <returns>Self</returns>
+        </member>
+        <member name="P:FluxJpeg.Core.Image.DensityX">
+            <summary> X density (dots per inch).</summary>
+        </member>
+        <member name="P:FluxJpeg.Core.Image.DensityY">
+            <summary> Y density (dots per inch).</summary>
+        </member>
+        <member name="T:FluxJpeg.Core.IO.BinaryReader">
+            <summary>
+            Big-endian binary reader
+            </summary>
+        </member>
+        <member name="T:FluxJpeg.Core.IO.BinaryWriter">
+            <summary>
+            A Big-endian binary writer.
+            </summary>
+        </member>
+        <member name="M:FluxJpeg.Core.IO.JPEGBinaryReader.GetNextMarker">
+            <summary>
+            Seeks through the stream until a marker is found.
+            </summary>
+        </member>
+        <member name="M:FluxJpeg.Core.IO.JPEGBinaryReader.ReadBits(System.Int32)">
+            <summary>
+            Places n bits from the stream, where the most-significant bits
+            from the first byte read end up as the most-significant of the returned
+            n bits.
+            </summary>
+            <param name="n">Number of bits to return</param>
+            <returns>Integer containing the bits desired -- shifted all the way right.</returns>
+        </member>
+        <member name="F:FluxJpeg.Core.JPEGMarker.DHT">
+            <summary>Huffman Table</summary>
+        </member>
+        <member name="F:FluxJpeg.Core.JPEGMarker.DQT">
+            <summary>Quantization Table</summary>
+        </member>
+        <member name="F:FluxJpeg.Core.JPEGMarker.SOS">
+            <summary>Start of Scan</summary>
+        </member>
+        <member name="F:FluxJpeg.Core.JPEGMarker.DRI">
+            <summary>Define Restart Interval</summary>
+        </member>
+        <member name="F:FluxJpeg.Core.JPEGMarker.COM">
+            <summary>Comment</summary>
+        </member>
+        <member name="F:FluxJpeg.Core.JPEGMarker.SOI">
+            <summary>Start of Image</summary>
+        </member>
+        <member name="F:FluxJpeg.Core.JPEGMarker.EOI">
+            <summary>End of Image</summary>
+        </member>
+        <member name="F:FluxJpeg.Core.JPEGMarker.DNL">
+            <summary>Define Number of Lines</summary>
+        </member>
+        <member name="F:FluxJpeg.Core.JPEGMarker.SOF0">
+            <summary>Nondifferential Huffman-coding frame (baseline dct)</summary>
+        </member>
+        <member name="F:FluxJpeg.Core.JPEGMarker.SOF1">
+            <summary>Nondifferential Huffman-coding frame (extended dct)</summary>
+        </member>
+        <member name="F:FluxJpeg.Core.JPEGMarker.SOF2">
+            <summary>Nondifferential Huffman-coding frame (progressive dct)</summary>
+        </member>
+        <member name="F:FluxJpeg.Core.JPEGMarker.SOF3">
+            <summary>Nondifferential Huffman-coding frame Lossless (Sequential)</summary>
+        </member>
+        <member name="F:FluxJpeg.Core.JPEGMarker.SOF5">
+            <summary>Differential Huffman-coding frame Sequential DCT</summary>
+        </member>
+        <member name="F:FluxJpeg.Core.JPEGMarker.SOF6">
+            <summary>Differential Huffman-coding frame Progressive DCT</summary> 
+        </member>
+        <member name="F:FluxJpeg.Core.JPEGMarker.SOF7">
+            <summary>Differential Huffman-coding frame lossless</summary>
+        </member>
+        <member name="F:FluxJpeg.Core.JPEGMarker.SOF9">
+            <summary>Nondifferential Arithmetic-coding frame (extended dct)</summary>
+        </member>
+        <member name="F:FluxJpeg.Core.JPEGMarker.SOF10">
+            <summary>Nondifferential Arithmetic-coding frame (progressive dct)</summary>
+        </member>
+        <member name="F:FluxJpeg.Core.JPEGMarker.SOF11">
+            <summary>Nondifferential Arithmetic-coding frame (lossless)</summary>
+        </member>
+        <member name="F:FluxJpeg.Core.JPEGMarker.SOF13">
+            <summary>Differential Arithmetic-coding frame (sequential dct)</summary>
+        </member>
+        <member name="F:FluxJpeg.Core.JPEGMarker.SOF14">
+            <summary>Differential Arithmetic-coding frame (progressive dct)</summary>
+        </member>
+        <member name="F:FluxJpeg.Core.JPEGMarker.SOF15">
+            <summary>Differential Arithmetic-coding frame (lossless)</summary>
+        </member>
+        <member name="M:FluxJpeg.Core.YCbCr.fromRGB(System.Single[])">
+            * RGB to YCbCr range 0-255 */
+        </member>
+        <member name="T:C1.Silverlight.Imaging.JpgCodec">
+            <summary>
+            Decodes and encodes a JPG stream from and into a <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/> object.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.JpgCodec.Decode(System.IO.Stream)">
+            <summary>
+            Creates a new <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/> object initialized with the content of a JPG stream.
+            </summary>
+            <param name="stream"><see cref="T:System.IO.Stream"/> that contains the image encoded in JPG format.</param>
+            <returns>A new <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/> that contains the image encoded in the stream.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.JpgCodec.Decode(C1.Silverlight.Imaging.C1Bitmap,System.IO.Stream)">
+            <summary>
+            Loads a <see cref="T:System.IO.Stream"/> into an existing <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>.
+            </summary>
+            <param name="bmp"></param>
+            <param name="stream"></param>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.JpgCodec.Encode(C1.Silverlight.Imaging.C1Bitmap)">
+            <summary>
+            Gets a <see cref="T:System.IO.Stream"/> that contains a JPG representation of a 
+            <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>
+            </summary>
+            <param name="bmp"><see cref="T:C1.Silverlight.Imaging.C1Bitmap"/> to encode.</param>
+            <returns>A <see cref="T:System.IO.Stream"/> that contains a JPG representation 
+            of the given <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.JpgCodec.Encode(C1.Silverlight.Imaging.C1Bitmap,System.Int32)">
+            <summary>
+            Gets a <see cref="T:System.IO.Stream"/> that contains a JPG representation of a 
+            <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>
+            </summary>
+            <param name="bmp"><see cref="T:C1.Silverlight.Imaging.C1Bitmap"/> to encode.</param>
+            <param name="quality">Quality of the image from 0 to 100.</param>
+            <returns>A <see cref="T:System.IO.Stream"/> that contains a JPG representation 
+            of the given <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>.</returns>
+        </member>
+        <member name="T:C1.Silverlight.Imaging.PngCodec">
+            <summary>
+            http://www.w3.org/TR/PNG/#11IHDR
+            </summary>
+            <summary>
+            Decodes a PNG stream into a <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/> object.
+            </summary>
+            <remarks>
+            The decoder supports all color formats and bit depths in the
+            PNG specification, with the exception of interlaced images.
+            </remarks>
+            <summary>
+            Encodes a <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/> object into a PNG stream.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.PngCodec.Decode(System.IO.Stream)">
+            <summary>
+            Creates a new <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/> object initialized with the content of a PNG stream.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.PngCodec.Decode(C1.Silverlight.Imaging.C1Bitmap,System.IO.Stream)">
+            <summary>
+            Loads a <see cref="T:System.IO.Stream"/> into an existing <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.PngCodec.Encode(C1.Silverlight.Imaging.C1Bitmap)">
+            <summary>
+            Gets a <see cref="T:System.IO.Stream"/> that contains a PNG representation of a 
+            <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>
+            </summary>
+            <param name="bmp"><see cref="T:C1.Silverlight.Imaging.C1Bitmap"/> to encode.</param>
+            <returns>A <see cref="T:System.IO.Stream"/> that contains a PNG representation 
+            of the given <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Imaging.PngCodec.Encode(C1.Silverlight.Imaging.C1Bitmap,System.Boolean)">
+            <summary>
+            Gets a <see cref="T:System.IO.Stream"/> that contains a PNG representation of a 
+            <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>
+            </summary>
+            <param name="bmp"><see cref="T:C1.Silverlight.Imaging.C1Bitmap"/> to encode.</param>
+            <param name="compress">true to use zip compression; otherwise, false.</param>
+            <returns>A <see cref="T:System.IO.Stream"/> that contains a PNG representation 
+            of the given <see cref="T:C1.Silverlight.Imaging.C1Bitmap"/>.</returns>
+        </member>
+        <member name="F:C1.Silverlight.Imaging.PngCodec.ColorTypeEnum.GrayScale">
+            <summary>
+            Each pixel is a grayscale sample.
+            Allowed BitsPerPixel: 1,2,4,8,16.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Imaging.PngCodec.ColorTypeEnum.TrueColor">
+            <summary>
+            Each pixel is an R,G,B triple; a PLTE chunk may appear.
+            Allowed BitsPerPixel: 8,16.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Imaging.PngCodec.ColorTypeEnum.Indexed">
+            <summary>
+            Each pixel is a palette index; a PLTE chunk must appear.
+            Allowed BitsPerPixel: 1,2,4,8.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Imaging.PngCodec.ColorTypeEnum.GrayScaleAlpha">
+            <summary>
+            Each pixel is encoded as a grayscale sample, followed by an alpha sample.
+            Allowed BitsPerPixel: 8,16.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Imaging.PngCodec.ColorTypeEnum.TrueColorAlpha">
+            <summary>
+            Each pixel is an R,G,B triple, followed by an alpha sample; a PLTE chunk may appear.
+            Allowed BitsPerPixel: 8,16.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Imaging.EndianReader">
+            <summary>
+            Class used to read either-endian values from a BinaryReader.
+            </summary>
+        </member>
+    </members>
+</doc>

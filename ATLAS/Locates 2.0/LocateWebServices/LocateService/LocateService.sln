@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocateService", "LocateService\LocateService.csproj", "{88A9446E-0A76-4454-AB41-B3D7267251DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "..\..\..\..\Common\Common.csproj", "{51D7F048-02E1-49F8-BA33-743E3E5373F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocateBusiness", "..\..\LocateBusiness\LocateBusiness\LocateBusiness.csproj", "{6058BFFD-DC54-4376-9B56-8408E00CC72E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocateDatabase", "..\..\LocateDatabase\LocateDatabase\LocateDatabase.csproj", "{4117E063-F7A5-4D34-9A83-2EE779FA8989}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFFunctions", "..\..\..\WCFFunctions\WCFFunctions\WCFFunctions.csproj", "{74F29773-2EF1-41DE-94C7-3358815F7907}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88A9446E-0A76-4454-AB41-B3D7267251DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88A9446E-0A76-4454-AB41-B3D7267251DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88A9446E-0A76-4454-AB41-B3D7267251DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88A9446E-0A76-4454-AB41-B3D7267251DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51D7F048-02E1-49F8-BA33-743E3E5373F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51D7F048-02E1-49F8-BA33-743E3E5373F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51D7F048-02E1-49F8-BA33-743E3E5373F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51D7F048-02E1-49F8-BA33-743E3E5373F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6058BFFD-DC54-4376-9B56-8408E00CC72E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6058BFFD-DC54-4376-9B56-8408E00CC72E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6058BFFD-DC54-4376-9B56-8408E00CC72E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6058BFFD-DC54-4376-9B56-8408E00CC72E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4117E063-F7A5-4D34-9A83-2EE779FA8989}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4117E063-F7A5-4D34-9A83-2EE779FA8989}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4117E063-F7A5-4D34-9A83-2EE779FA8989}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4117E063-F7A5-4D34-9A83-2EE779FA8989}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74F29773-2EF1-41DE-94C7-3358815F7907}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74F29773-2EF1-41DE-94C7-3358815F7907}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74F29773-2EF1-41DE-94C7-3358815F7907}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74F29773-2EF1-41DE-94C7-3358815F7907}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

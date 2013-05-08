@@ -1,0 +1,14 @@
+U:\_Dev\Sendero 1.2\Medalist\bin\Debug\Anetics.Medalist.dll
+U:\_Dev\Sendero 1.2\Medalist\bin\Debug\Anetics.Medalist.pdb
+U:\_Dev\Sendero 1.2\Medalist\obj\Debug\ResolveAssemblyReference.cache
+U:\_Dev\Sendero 1.2\Medalist\obj\Debug\Anetics.Medalist.dll
+U:\_Dev\Sendero 1.2\Medalist\obj\Debug\Anetics.Medalist.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\Sendero 1.2\Medalist\bin\Debug\Anetics.Medalist.dll
+\\penson.com\shares\Users\MBattaini\_Dev\Sendero 1.2\Medalist\bin\Debug\Anetics.Medalist.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\Sendero 1.2\Medalist\obj\Debug\ResolveAssemblyReference.cache
+\\penson.com\shares\Users\MBattaini\_Dev\Sendero 1.2\Medalist\obj\Debug\Anetics.Medalist.dll
+\\penson.com\shares\Users\MBattaini\_Dev\Sendero 1.2\Medalist\obj\Debug\Anetics.Medalist.pdb
+C:\_dev\Sendero 1.2\Medalist\bin\Debug\Anetics.Medalist.dll
+C:\_dev\Sendero 1.2\Medalist\bin\Debug\Anetics.Medalist.pdb
+C:\_dev\Sendero 1.2\Medalist\obj\Debug\Anetics.Medalist.dll
+C:\_dev\Sendero 1.2\Medalist\obj\Debug\Anetics.Medalist.pdb

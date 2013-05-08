@@ -1,0 +1,4 @@
+C:\_dev\Sendero 1.2\Services\bin\Release\Anetics.Services.dll
+C:\_dev\Sendero 1.2\Services\bin\Release\Anetics.Common.dll
+C:\_dev\Sendero 1.2\Services\obj\Release\Services.csprojResolveAssemblyReference.cache
+C:\_dev\Sendero 1.2\Services\obj\Release\Anetics.Services.dll

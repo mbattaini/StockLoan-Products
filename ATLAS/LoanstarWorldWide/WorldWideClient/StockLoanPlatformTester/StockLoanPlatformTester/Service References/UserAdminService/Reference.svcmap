@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2c920a14-3014-477b-8455-2668ab7ac180" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://dalgsldev01:8080/StockLoan.WebServices.DChen/UserAdminService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="UserAdminService1.disco" MetadataType="Disco" ID="fc0353bf-9064-4af8-89db-371e7e4c4e89" SourceId="1" SourceUrl="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/UserAdminService.svc?disco" />
+    <MetadataFile FileName="UserAdminService2.xsd" MetadataType="Schema" ID="f746fadd-bfbb-4ec7-912b-3ec9744f3794" SourceId="1" SourceUrl="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/UserAdminService.svc?xsd=xsd1" />
+    <MetadataFile FileName="UserAdminService21.xsd" MetadataType="Schema" ID="377185d0-c6d9-42c0-b934-f05385b3ff7b" SourceId="1" SourceUrl="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/UserAdminService.svc?xsd=xsd0" />
+    <MetadataFile FileName="UserAdminService1.wsdl" MetadataType="Wsdl" ID="077ab9ad-afde-4037-b0d9-f428be5a81e3" SourceId="1" SourceUrl="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/UserAdminService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

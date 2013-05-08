@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="BookClearingInstructionSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="book" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="countryCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="currencyIso" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="divRate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cashInstructions" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="securityInstructions" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ActUserId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isActive" type="xs:boolean" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BookClearingInstructionSetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BookClearingInstructionSetResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BookClearingInstructionsGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="book" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BookClearingInstructionsGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BookClearingInstructionsGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BookContactSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="book" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="function" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="phoneNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="faxNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="comment" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="actUserId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isActive" type="xs:boolean" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BookContactSetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BookContactSetResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BookContactsGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="book" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="utcOffSet" type="xs:short" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BookContactsGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BookContactsGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BookCreditLimitSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookParent" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="book" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="borrowLimitAmount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loanLimitAmount" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="actUserId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BookCreditLimitSetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BookCreditLimitSetResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BookCreditLimitsGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookParent" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="book" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="utcOffSet" type="xs:short" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BookCreditLimitsGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BookCreditLimitsGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BookFundSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="book" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="actUserId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="currencyIso" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fund" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isActive" type="xs:boolean" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BookFundSetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BookFundSetResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BookFundsGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="book" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="currencyIso" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BookFundsGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BookFundsGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BookGroupRoll">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bizDatePrior" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BookGroupRollResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BookGroupRollResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BookGroupSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bookGroupSet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="timeZoneId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bizDateContract" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bizDateBank" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bizDateExchange" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bizDatePrior" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bizDatePriorBank" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bizDatePriorExchange" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bizDateNext" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bizDateNextBank" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bizDateNextExchange" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="useWeekends" type="xs:boolean" />
+        <xs:element minOccurs="0" name="settlementType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BookGroupSetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BookGroupSetResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BookGroupsGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BookGroupsGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BookGroupsGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BookGroupsGetAll">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BookGroupsGetAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BookGroupsGetAllResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BookSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookParent" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="book" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="addressLine1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="addressLine2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="addressLine3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="phoneNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="faxNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="marginBorrow" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="marginLoan" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="markRoundHouse" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="roundInstitution" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rateStockBorrow" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rateStockLoan" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rateBondBorrow" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rateBondLoan" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="countryCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fundDefault" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="priceMin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="amountMin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="actUserId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isActive" type="xs:boolean" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BookSetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BookSetResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BooksGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="book" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BooksGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BooksGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

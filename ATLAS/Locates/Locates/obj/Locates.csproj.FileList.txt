@@ -1,0 +1,8 @@
+bin\Debug\StockLoan.Locates.dll
+bin\Debug\StockLoan.Locates.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\StockLoan.Locates.dll
+obj\Debug\StockLoan.Locates.pdb
+bin\Release\StockLoan.Locates.dll
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\StockLoan.Locates.dll

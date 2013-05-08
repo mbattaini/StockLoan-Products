@@ -1,0 +1,16 @@
+C:\_Dev\ATLAS\BPSA_Viewer\BPSA_Viewer\bin\Debug\BPSA_Viewer.exe.config
+C:\_Dev\ATLAS\BPSA_Viewer\BPSA_Viewer\bin\Debug\BPSA_Viewer.exe
+C:\_Dev\ATLAS\BPSA_Viewer\BPSA_Viewer\bin\Debug\BPSA_Viewer.pdb
+C:\_Dev\ATLAS\BPSA_Viewer\BPSA_Viewer\bin\Debug\C1.Win.C1FlexGrid.4.xml
+C:\_Dev\ATLAS\BPSA_Viewer\BPSA_Viewer\bin\Debug\C1.Win.C1Input.4.xml
+C:\_Dev\ATLAS\BPSA_Viewer\BPSA_Viewer\bin\Debug\C1.Win.C1TrueDBGrid.4.xml
+C:\_Dev\ATLAS\BPSA_Viewer\BPSA_Viewer\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\_Dev\ATLAS\BPSA_Viewer\BPSA_Viewer\obj\x86\Debug\BPSA_Viewer.Form1.resources
+C:\_Dev\ATLAS\BPSA_Viewer\BPSA_Viewer\obj\x86\Debug\BPSA_Viewer.Properties.Resources.resources
+C:\_Dev\ATLAS\BPSA_Viewer\BPSA_Viewer\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\_Dev\ATLAS\BPSA_Viewer\BPSA_Viewer\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\_Dev\ATLAS\BPSA_Viewer\BPSA_Viewer\obj\x86\Debug\BPSA_Viewer.exe.licenses
+C:\_Dev\ATLAS\BPSA_Viewer\BPSA_Viewer\obj\x86\Debug\BPSA_Viewer.exe
+C:\_Dev\ATLAS\BPSA_Viewer\BPSA_Viewer\obj\x86\Debug\BPSA_Viewer.pdb
+C:\_dev\ATLAS\BPSA_Viewer\BPSA_Viewer\bin\Debug\C1.Win.C1TrueDBGrid.2.dll
+C:\_dev\ATLAS\BPSA_Viewer\BPSA_Viewer\bin\Debug\C1.Win.C1TrueDBGrid.2.xml

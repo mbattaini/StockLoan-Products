@@ -1,0 +1,15 @@
+C:\_dev\ATLAS\GoldenService\bin\Debug\StockLoan.GoldenService.exe.config
+C:\_dev\ATLAS\GoldenService\bin\Debug\StockLoan.GoldenService.exe
+C:\_dev\ATLAS\GoldenService\bin\Debug\StockLoan.GoldenService.pdb
+C:\_dev\ATLAS\GoldenService\bin\Debug\StockLoan.Common.dll
+C:\_dev\ATLAS\GoldenService\bin\Debug\StockLoan.GoldenServer.dll
+C:\_dev\ATLAS\GoldenService\bin\Debug\StockLoan.Golden.dll
+C:\_dev\ATLAS\GoldenService\bin\Debug\StockLoan.Common.pdb
+C:\_dev\ATLAS\GoldenService\bin\Debug\StockLoan.GoldenServer.pdb
+C:\_dev\ATLAS\GoldenService\bin\Debug\StockLoan.Golden.pdb
+C:\_dev\ATLAS\GoldenService\obj\Debug\GoldenService.csprojResolveAssemblyReference.cache
+C:\_dev\ATLAS\GoldenService\obj\Debug\Anetics.Courier.ProjectInstaller.resources
+C:\_dev\ATLAS\GoldenService\obj\Debug\StockLoan.Golden.Service.resources
+C:\_dev\ATLAS\GoldenService\obj\Debug\GoldenService.csproj.GenerateResource.Cache
+C:\_dev\ATLAS\GoldenService\obj\Debug\StockLoan.GoldenService.exe
+C:\_dev\ATLAS\GoldenService\obj\Debug\StockLoan.GoldenService.pdb

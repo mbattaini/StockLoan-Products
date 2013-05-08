@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ImportSubscriptionSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ImportSubscriptionSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="ImportSubscriptionSet" msprop:Generator_DataSetName="ImportSubscriptionSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tbInventorySubscriber" msprop:Generator_UserTableName="tbInventorySubscriber" msprop:Generator_RowDeletedName="tbInventorySubscriberRowDeleted" msprop:Generator_RowChangedName="tbInventorySubscriberRowChanged" msprop:Generator_RowClassName="tbInventorySubscriberRow" msprop:Generator_RowChangingName="tbInventorySubscriberRowChanging" msprop:Generator_RowEvArgName="tbInventorySubscriberRowChangeEvent" msprop:Generator_RowEvHandlerName="tbInventorySubscriberRowChangeEventHandler" msprop:Generator_TableClassName="tbInventorySubscriberDataTable" msprop:Generator_TableVarName="tabletbInventorySubscriber" msprop:Generator_RowDeletingName="tbInventorySubscriberRowDeleting" msprop:Generator_TablePropName="tbInventorySubscriber">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InventorySubscriberID" msprop:Generator_UserColumnName="InventorySubscriberID" msprop:Generator_ColumnVarNameInTable="columnInventorySubscriberID" msprop:Generator_ColumnPropNameInRow="InventorySubscriberID" msprop:Generator_ColumnPropNameInTable="InventorySubscriberIDColumn" type="xs:long" />
+              <xs:element name="InventoryFilePatternID" msprop:Generator_UserColumnName="InventoryFilePatternID" msprop:Generator_ColumnVarNameInTable="columnInventoryFilePatternID" msprop:Generator_ColumnPropNameInRow="InventoryFilePatternID" msprop:Generator_ColumnPropNameInTable="InventoryFilePatternIDColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="SubscriptionTypeID" msprop:Generator_UserColumnName="SubscriptionTypeID" msprop:Generator_ColumnVarNameInTable="columnSubscriptionTypeID" msprop:Generator_ColumnPropNameInRow="SubscriptionTypeID" msprop:Generator_ColumnPropNameInTable="SubscriptionTypeIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Desk" msprop:Generator_UserColumnName="Desk" msprop:Generator_ColumnVarNameInTable="columnDesk" msprop:Generator_ColumnPropNameInRow="Desk" msprop:Generator_ColumnPropNameInTable="DeskColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FileHost" msprop:Generator_UserColumnName="FileHost" msprop:Generator_ColumnVarNameInTable="columnFileHost" msprop:Generator_ColumnPropNameInRow="FileHost" msprop:Generator_ColumnPropNameInTable="FileHostColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FilePathName" msprop:Generator_UserColumnName="FilePathName" msprop:Generator_ColumnVarNameInTable="columnFilePathName" msprop:Generator_ColumnPropNameInRow="FilePathName" msprop:Generator_ColumnPropNameInTable="FilePathNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FileUserName" msprop:Generator_UserColumnName="FileUserName" msprop:Generator_ColumnVarNameInTable="columnFileUserName" msprop:Generator_ColumnPropNameInRow="FileUserName" msprop:Generator_ColumnPropNameInTable="FileUserNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FilePassword" msprop:Generator_UserColumnName="FilePassword" msprop:Generator_ColumnVarNameInTable="columnFilePassword" msprop:Generator_ColumnPropNameInRow="FilePassword" msprop:Generator_ColumnPropNameInTable="FilePasswordColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FileCheckTime" msprop:Generator_UserColumnName="FileCheckTime" msprop:Generator_ColumnVarNameInTable="columnFileCheckTime" msprop:Generator_ColumnPropNameInRow="FileCheckTime" msprop:Generator_ColumnPropNameInTable="FileCheckTimeColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FileTime" msprop:Generator_UserColumnName="FileTime" msprop:Generator_ColumnVarNameInTable="columnFileTime" msprop:Generator_ColumnPropNameInRow="FileTime" msprop:Generator_ColumnPropNameInTable="FileTimeColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FileStatus" msprop:Generator_UserColumnName="FileStatus" msprop:Generator_ColumnVarNameInTable="columnFileStatus" msprop:Generator_ColumnPropNameInRow="FileStatus" msprop:Generator_ColumnPropNameInTable="FileStatusColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MailAddress" msprop:Generator_UserColumnName="MailAddress" msprop:Generator_ColumnVarNameInTable="columnMailAddress" msprop:Generator_ColumnPropNameInRow="MailAddress" msprop:Generator_ColumnPropNameInTable="MailAddressColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MailSubject" msprop:Generator_UserColumnName="MailSubject" msprop:Generator_ColumnVarNameInTable="columnMailSubject" msprop:Generator_ColumnPropNameInRow="MailSubject" msprop:Generator_ColumnPropNameInTable="MailSubjectColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="LoadCount" msprop:Generator_UserColumnName="LoadCount" msprop:Generator_ColumnVarNameInTable="columnLoadCount" msprop:Generator_ColumnPropNameInRow="LoadCount" msprop:Generator_ColumnPropNameInTable="LoadCountColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="IsBizDatePrior" msprop:Generator_UserColumnName="IsBizDatePrior" msprop:Generator_ColumnVarNameInTable="columnIsBizDatePrior" msprop:Generator_ColumnPropNameInRow="IsBizDatePrior" msprop:Generator_ColumnPropNameInTable="IsBizDatePriorColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IsEnabled" msprop:Generator_UserColumnName="IsEnabled" msprop:Generator_ColumnVarNameInTable="columnIsEnabled" msprop:Generator_ColumnPropNameInRow="IsEnabled" msprop:Generator_ColumnPropNameInTable="IsEnabledColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IsRunning" msprop:Generator_UserColumnName="IsRunning" msprop:Generator_ColumnVarNameInTable="columnIsRunning" msprop:Generator_ColumnPropNameInRow="IsRunning" msprop:Generator_ColumnPropNameInTable="IsRunningColumn" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbKeyValues" msprop:Generator_UserTableName="tbKeyValues" msprop:Generator_RowDeletedName="tbKeyValuesRowDeleted" msprop:Generator_RowChangedName="tbKeyValuesRowChanged" msprop:Generator_RowClassName="tbKeyValuesRow" msprop:Generator_RowChangingName="tbKeyValuesRowChanging" msprop:Generator_RowEvArgName="tbKeyValuesRowChangeEvent" msprop:Generator_RowEvHandlerName="tbKeyValuesRowChangeEventHandler" msprop:Generator_TableClassName="tbKeyValuesDataTable" msprop:Generator_TableVarName="tabletbKeyValues" msprop:Generator_RowDeletingName="tbKeyValuesRowDeleting" msprop:Generator_TablePropName="tbKeyValues">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="KeyID" msprop:Generator_UserColumnName="KeyID" msprop:Generator_ColumnVarNameInTable="columnKeyID" msprop:Generator_ColumnPropNameInRow="KeyID" msprop:Generator_ColumnPropNameInTable="KeyIDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="KeyValue" msprop:Generator_UserColumnName="KeyValue" msprop:Generator_ColumnVarNameInTable="columnKeyValue" msprop:Generator_ColumnPropNameInRow="KeyValue" msprop:Generator_ColumnPropNameInTable="KeyValueColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbInventorySubscriptionTypes" msprop:Generator_UserTableName="tbInventorySubscriptionTypes" msprop:Generator_RowDeletedName="tbInventorySubscriptionTypesRowDeleted" msprop:Generator_RowChangedName="tbInventorySubscriptionTypesRowChanged" msprop:Generator_RowClassName="tbInventorySubscriptionTypesRow" msprop:Generator_RowChangingName="tbInventorySubscriptionTypesRowChanging" msprop:Generator_RowEvArgName="tbInventorySubscriptionTypesRowChangeEvent" msprop:Generator_RowEvHandlerName="tbInventorySubscriptionTypesRowChangeEventHandler" msprop:Generator_TableClassName="tbInventorySubscriptionTypesDataTable" msprop:Generator_TableVarName="tabletbInventorySubscriptionTypes" msprop:Generator_RowDeletingName="tbInventorySubscriptionTypesRowDeleting" msprop:Generator_TablePropName="tbInventorySubscriptionTypes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InventorySubscriptionTypeID" msprop:Generator_UserColumnName="InventorySubscriptionTypeID" msprop:Generator_ColumnVarNameInTable="columnInventorySubscriptionTypeID" msprop:Generator_ColumnPropNameInRow="InventorySubscriptionTypeID" msprop:Generator_ColumnPropNameInTable="InventorySubscriptionTypeIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="InventorySubscriptionTypeName" msprop:Generator_UserColumnName="InventorySubscriptionTypeName" msprop:Generator_ColumnVarNameInTable="columnInventorySubscriptionTypeName" msprop:Generator_ColumnPropNameInRow="InventorySubscriptionTypeName" msprop:Generator_ColumnPropNameInTable="InventorySubscriptionTypeNameColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbInventoryFilePatterns" msprop:Generator_UserTableName="tbInventoryFilePatterns" msprop:Generator_RowDeletedName="tbInventoryFilePatternsRowDeleted" msprop:Generator_RowChangedName="tbInventoryFilePatternsRowChanged" msprop:Generator_RowClassName="tbInventoryFilePatternsRow" msprop:Generator_RowChangingName="tbInventoryFilePatternsRowChanging" msprop:Generator_RowEvArgName="tbInventoryFilePatternsRowChangeEvent" msprop:Generator_RowEvHandlerName="tbInventoryFilePatternsRowChangeEventHandler" msprop:Generator_TableClassName="tbInventoryFilePatternsDataTable" msprop:Generator_TableVarName="tabletbInventoryFilePatterns" msprop:Generator_RowDeletingName="tbInventoryFilePatternsRowDeleting" msprop:Generator_TablePropName="tbInventoryFilePatterns">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InventoryFilePatternID" msprop:Generator_UserColumnName="InventoryFilePatternID" msprop:Generator_ColumnVarNameInTable="columnInventoryFilePatternID" msprop:Generator_ColumnPropNameInRow="InventoryFilePatternID" msprop:Generator_ColumnPropNameInTable="InventoryFilePatternIDColumn" type="xs:long" />
+              <xs:element name="Desk" msprop:Generator_UserColumnName="Desk" msprop:Generator_ColumnVarNameInTable="columnDesk" msprop:Generator_ColumnPropNameInRow="Desk" msprop:Generator_ColumnPropNameInTable="DeskColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="HeaderRegEx" msprop:Generator_UserColumnName="HeaderRegEx" msprop:Generator_ColumnVarNameInTable="columnHeaderRegEx" msprop:Generator_ColumnPropNameInRow="HeaderRegEx" msprop:Generator_ColumnPropNameInTable="HeaderRegExColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DataRegEx" msprop:Generator_UserColumnName="DataRegEx" msprop:Generator_ColumnVarNameInTable="columnDataRegEx" msprop:Generator_ColumnPropNameInRow="DataRegEx" msprop:Generator_ColumnPropNameInTable="DataRegExColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TrailerRegEx" msprop:Generator_UserColumnName="TrailerRegEx" msprop:Generator_ColumnVarNameInTable="columnTrailerRegEx" msprop:Generator_ColumnPropNameInRow="TrailerRegEx" msprop:Generator_ColumnPropNameInTable="TrailerRegExColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DateRegEx" msprop:Generator_UserColumnName="DateRegEx" msprop:Generator_ColumnVarNameInTable="columnDateRegEx" msprop:Generator_ColumnPropNameInRow="DateRegEx" msprop:Generator_ColumnPropNameInTable="DateRegExColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AccountRegEx" msprop:Generator_UserColumnName="AccountRegEx" msprop:Generator_ColumnVarNameInTable="columnAccountRegEx" msprop:Generator_ColumnPropNameInRow="AccountRegEx" msprop:Generator_ColumnPropNameInTable="AccountRegExColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="RowCountRegEx" msprop:Generator_UserColumnName="RowCountRegEx" msprop:Generator_ColumnVarNameInTable="columnRowCountRegEx" msprop:Generator_ColumnPropNameInRow="RowCountRegEx" msprop:Generator_ColumnPropNameInTable="RowCountRegExColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbInventoryImportExecution" msprop:Generator_UserTableName="tbInventoryImportExecution" msprop:Generator_RowDeletedName="tbInventoryImportExecutionRowDeleted" msprop:Generator_RowChangedName="tbInventoryImportExecutionRowChanged" msprop:Generator_RowClassName="tbInventoryImportExecutionRow" msprop:Generator_RowChangingName="tbInventoryImportExecutionRowChanging" msprop:Generator_RowEvArgName="tbInventoryImportExecutionRowChangeEvent" msprop:Generator_RowEvHandlerName="tbInventoryImportExecutionRowChangeEventHandler" msprop:Generator_TableClassName="tbInventoryImportExecutionDataTable" msprop:Generator_TableVarName="tabletbInventoryImportExecution" msprop:Generator_RowDeletingName="tbInventoryImportExecutionRowDeleting" msprop:Generator_TablePropName="tbInventoryImportExecution">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InventoryImportExecutionID" msprop:Generator_UserColumnName="InventoryImportExecutionID" msprop:Generator_ColumnVarNameInTable="columnInventoryImportExecutionID" msprop:Generator_ColumnPropNameInRow="InventoryImportExecutionID" msprop:Generator_ColumnPropNameInTable="InventoryImportExecutionIDColumn" type="xs:long" />
+              <xs:element name="SubscriberID" msprop:Generator_UserColumnName="SubscriberID" msprop:Generator_ColumnVarNameInTable="columnSubscriberID" msprop:Generator_ColumnPropNameInRow="SubscriberID" msprop:Generator_ColumnPropNameInTable="SubscriberIDColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="FileTime" msprop:Generator_UserColumnName="FileTime" msprop:Generator_ColumnVarNameInTable="columnFileTime" msprop:Generator_ColumnPropNameInRow="FileTime" msprop:Generator_ColumnPropNameInTable="FileTimeColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ExecutionTime" msprop:Generator_UserColumnName="ExecutionTime" msprop:Generator_ColumnVarNameInTable="columnExecutionTime" msprop:Generator_ColumnPropNameInRow="ExecutionTime" msprop:Generator_ColumnPropNameInTable="ExecutionTimeColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ExecutionStatus" msprop:Generator_UserColumnName="ExecutionStatus" msprop:Generator_ColumnVarNameInTable="columnExecutionStatus" msprop:Generator_ColumnPropNameInRow="ExecutionStatus" msprop:Generator_ColumnPropNameInTable="ExecutionStatusColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ExecutionRecordsImported" msprop:Generator_UserColumnName="ExecutionRecordsImported" msprop:Generator_ColumnVarNameInTable="columnExecutionRecordsImported" msprop:Generator_ColumnPropNameInRow="ExecutionRecordsImported" msprop:Generator_ColumnPropNameInTable="ExecutionRecordsImportedColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbDesks" msprop:Generator_UserTableName="tbDesks" msprop:Generator_RowDeletedName="tbDesksRowDeleted" msprop:Generator_RowChangedName="tbDesksRowChanged" msprop:Generator_RowClassName="tbDesksRow" msprop:Generator_RowChangingName="tbDesksRowChanging" msprop:Generator_RowEvArgName="tbDesksRowChangeEvent" msprop:Generator_RowEvHandlerName="tbDesksRowChangeEventHandler" msprop:Generator_TableClassName="tbDesksDataTable" msprop:Generator_TableVarName="tabletbDesks" msprop:Generator_RowDeletingName="tbDesksRowDeleting" msprop:Generator_TablePropName="tbDesks">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Desk" msprop:Generator_UserColumnName="Desk" msprop:Generator_ColumnVarNameInTable="columnDesk" msprop:Generator_ColumnPropNameInRow="Desk" msprop:Generator_ColumnPropNameInTable="DeskColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FirmCode" msprop:Generator_UserColumnName="FirmCode" msprop:Generator_ColumnVarNameInTable="columnFirmCode" msprop:Generator_ColumnPropNameInRow="FirmCode" msprop:Generator_ColumnPropNameInTable="FirmCodeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CountryCode" msprop:Generator_UserColumnName="CountryCode" msprop:Generator_ColumnVarNameInTable="columnCountryCode" msprop:Generator_ColumnPropNameInRow="CountryCode" msprop:Generator_ColumnPropNameInTable="CountryCodeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DeskTypeCode" msprop:Generator_UserColumnName="DeskTypeCode" msprop:Generator_ColumnVarNameInTable="columnDeskTypeCode" msprop:Generator_ColumnPropNameInRow="DeskTypeCode" msprop:Generator_ColumnPropNameInTable="DeskTypeCodeColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//tbInventorySubscriber" />
+      <xs:field xpath="InventorySubscriberID" />
+    </xs:unique>
+    <xs:unique name="tbInventorySubscriptionTypes_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//tbInventorySubscriptionTypes" />
+      <xs:field xpath="InventorySubscriptionTypeID" />
+    </xs:unique>
+    <xs:unique name="tbInventoryFilePatterns_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//tbInventoryFilePatterns" />
+      <xs:field xpath="InventoryFilePatternID" />
+    </xs:unique>
+    <xs:unique name="tbInventoryImportExecution_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//tbInventoryImportExecution" />
+      <xs:field xpath="InventoryImportExecutionID" />
+    </xs:unique>
+    <xs:unique name="tbDesks_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//tbDesks" />
+      <xs:field xpath="Desk" />
+    </xs:unique>
+    <xs:keyref name="SubscriptionExecutions" refer="Constraint1" msprop:rel_Generator_UserRelationName="SubscriptionExecutions" msprop:rel_Generator_RelationVarName="relationSubscriptionExecutions" msprop:rel_Generator_UserChildTable="tbInventoryImportExecution" msprop:rel_Generator_UserParentTable="tbInventorySubscriber" msprop:rel_Generator_ParentPropName="tbInventorySubscriberRow" msprop:rel_Generator_ChildPropName="GettbInventoryImportExecutionRows">
+      <xs:selector xpath=".//tbInventoryImportExecution" />
+      <xs:field xpath="SubscriberID" />
+    </xs:keyref>
+    <xs:keyref name="DeskSubscriptions" refer="tbDesks_Constraint1" msprop:rel_Generator_UserRelationName="DeskSubscriptions" msprop:rel_Generator_RelationVarName="relationDeskSubscriptions" msprop:rel_Generator_UserChildTable="tbInventorySubscriber" msprop:rel_Generator_UserParentTable="tbDesks" msprop:rel_Generator_ParentPropName="tbDesksRow" msprop:rel_Generator_ChildPropName="GettbInventorySubscriberRows">
+      <xs:selector xpath=".//tbInventorySubscriber" />
+      <xs:field xpath="Desk" />
+    </xs:keyref>
+    <xs:keyref name="SubscriptionMasks" refer="tbInventoryFilePatterns_Constraint1" msprop:rel_Generator_UserRelationName="SubscriptionMasks" msprop:rel_Generator_RelationVarName="relationSubscriptionMasks" msprop:rel_Generator_UserChildTable="tbInventorySubscriber" msprop:rel_Generator_UserParentTable="tbInventoryFilePatterns" msprop:rel_Generator_ParentPropName="tbInventoryFilePatternsRow" msprop:rel_Generator_ChildPropName="GettbInventorySubscriberRows">
+      <xs:selector xpath=".//tbInventorySubscriber" />
+      <xs:field xpath="InventoryFilePatternID" />
+    </xs:keyref>
+    <xs:keyref name="SubscriptionTypes" refer="tbInventorySubscriptionTypes_Constraint1" msprop:rel_Generator_UserRelationName="SubscriptionTypes" msprop:rel_Generator_RelationVarName="relationSubscriptionTypes" msprop:rel_Generator_UserChildTable="tbInventorySubscriber" msprop:rel_Generator_UserParentTable="tbInventorySubscriptionTypes" msprop:rel_Generator_ParentPropName="tbInventorySubscriptionTypesRow" msprop:rel_Generator_ChildPropName="GettbInventorySubscriberRows">
+      <xs:selector xpath=".//tbInventorySubscriber" />
+      <xs:field xpath="SubscriptionTypeID" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

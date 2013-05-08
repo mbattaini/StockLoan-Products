@@ -1,0 +1,10 @@
+C:\_dev\ATLAS\LoanstarWorldWide\DomesticBoxInformation\bin\Release\StockLoan.DomesticBoxInformation.dll
+C:\_dev\ATLAS\LoanstarWorldWide\DomesticBoxInformation\bin\Release\StockLoan.Common.dll
+C:\_dev\ATLAS\LoanstarWorldWide\DomesticBoxInformation\bin\Release\StockLoan.DataAccess.dll
+C:\_dev\ATLAS\LoanstarWorldWide\DomesticBoxInformation\bin\Release\StockLoan.MQSeries.dll
+C:\_dev\ATLAS\LoanstarWorldWide\DomesticBoxInformation\bin\Release\StockLoan.Transport.dll
+C:\_dev\ATLAS\LoanstarWorldWide\DomesticBoxInformation\bin\Release\StockLoan.MQSeries.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\DomesticBoxInformation\bin\Release\StockLoan.DataAccess.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\DomesticBoxInformation\bin\Release\StockLoan.Transport.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\DomesticBoxInformation\obj\Release\ResolveAssemblyReference.cache
+C:\_dev\ATLAS\LoanstarWorldWide\DomesticBoxInformation\obj\Release\StockLoan.DomesticBoxInformation.dll

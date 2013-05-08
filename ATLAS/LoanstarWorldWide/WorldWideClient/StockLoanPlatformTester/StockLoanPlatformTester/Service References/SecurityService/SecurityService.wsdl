@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SecurityService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://dalgsldev01.penson.com/StockLoan.WebServices/SecurityService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://dalgsldev01.penson.com/StockLoan.WebServices/SecurityService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISecurityService_GetSourceIP_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSourceIP" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetSourceIP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSourceIPResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_UserPasswordChange_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserPasswordChange" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_UserPasswordChange_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserPasswordChangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_UserPasswordReset_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserPasswordReset" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_UserPasswordReset_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserPasswordResetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_UserValidate_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserValidate" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_UserValidate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserValidateResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISecurityService">
+    <wsdl:operation name="GetSourceIP">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurityService/GetSourceIP" message="tns:ISecurityService_GetSourceIP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurityService/GetSourceIPResponse" message="tns:ISecurityService_GetSourceIP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserPasswordChange">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurityService/UserPasswordChange" message="tns:ISecurityService_UserPasswordChange_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurityService/UserPasswordChangeResponse" message="tns:ISecurityService_UserPasswordChange_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserPasswordReset">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurityService/UserPasswordReset" message="tns:ISecurityService_UserPasswordReset_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurityService/UserPasswordResetResponse" message="tns:ISecurityService_UserPasswordReset_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserValidate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurityService/UserValidate" message="tns:ISecurityService_UserValidate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurityService/UserValidateResponse" message="tns:ISecurityService_UserValidate_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISecurityService" type="tns:ISecurityService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSourceIP">
+      <soap:operation soapAction="http://tempuri.org/ISecurityService/GetSourceIP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserPasswordChange">
+      <soap:operation soapAction="http://tempuri.org/ISecurityService/UserPasswordChange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserPasswordReset">
+      <soap:operation soapAction="http://tempuri.org/ISecurityService/UserPasswordReset" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserValidate">
+      <soap:operation soapAction="http://tempuri.org/ISecurityService/UserValidate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SecurityService">
+    <wsdl:port name="BasicHttpBinding_ISecurityService" binding="tns:BasicHttpBinding_ISecurityService">
+      <soap:address location="http://dalgsldev01.penson.com/StockLoan.WebServices/SecurityService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

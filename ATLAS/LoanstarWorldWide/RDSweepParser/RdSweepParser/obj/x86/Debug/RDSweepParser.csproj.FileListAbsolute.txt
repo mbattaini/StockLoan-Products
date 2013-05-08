@@ -1,0 +1,16 @@
+C:\_dev\ATLAS\LoanstarWorldWide\RDSweepParser\RdSweepParser\bin\Debug\RDSweepParser.exe.config
+C:\_dev\ATLAS\LoanstarWorldWide\RDSweepParser\RdSweepParser\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\_dev\ATLAS\LoanstarWorldWide\RDSweepParser\RdSweepParser\obj\x86\Debug\StockLoan.InventoryService.Properties.Resources.resources
+C:\_dev\ATLAS\LoanstarWorldWide\RDSweepParser\RdSweepParser\obj\x86\Debug\RDSweepParserApp.RDSweepParserForm.resources
+C:\_dev\ATLAS\LoanstarWorldWide\RDSweepParser\RdSweepParser\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\_dev\ATLAS\LoanstarWorldWide\RDSweepParser\RdSweepParser\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\_dev\ATLAS\LoanstarWorldWide\RDSweepParser\RdSweepParser\bin\Debug\RDSweepParser.exe
+C:\_dev\ATLAS\LoanstarWorldWide\RDSweepParser\RdSweepParser\bin\Debug\RDSweepParser.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\RDSweepParser\RdSweepParser\bin\Debug\StockLoan.Common.dll
+C:\_dev\ATLAS\LoanstarWorldWide\RDSweepParser\RdSweepParser\bin\Debug\StockLoan.DataAccess.dll
+C:\_dev\ATLAS\LoanstarWorldWide\RDSweepParser\RdSweepParser\bin\Debug\StockLoan.Transport.dll
+C:\_dev\ATLAS\LoanstarWorldWide\RDSweepParser\RdSweepParser\bin\Debug\StockLoan.Common.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\RDSweepParser\RdSweepParser\bin\Debug\StockLoan.DataAccess.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\RDSweepParser\RdSweepParser\bin\Debug\StockLoan.Transport.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\RDSweepParser\RdSweepParser\obj\x86\Debug\RDSweepParser.exe
+C:\_dev\ATLAS\LoanstarWorldWide\RDSweepParser\RdSweepParser\obj\x86\Debug\RDSweepParser.pdb

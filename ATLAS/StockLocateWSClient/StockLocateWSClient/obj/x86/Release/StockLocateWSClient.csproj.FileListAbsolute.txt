@@ -1,0 +1,14 @@
+C:\_Dev\ATLAS\StockLocateWSClient\StockLocateWSClient\bin\Release\StockLocateWSClient.exe.config
+C:\_Dev\ATLAS\StockLocateWSClient\StockLocateWSClient\obj\x86\Release\Interop.CAPICOM.dll
+C:\_Dev\ATLAS\StockLocateWSClient\StockLocateWSClient\obj\x86\Release\StockLocateWSClient.csproj.ResolveComReference.cache
+C:\_Dev\ATLAS\StockLocateWSClient\StockLocateWSClient\bin\Release\StockLocateWSClient.exe
+C:\_Dev\ATLAS\StockLocateWSClient\StockLocateWSClient\bin\Release\StockLocateWSClient.pdb
+C:\_Dev\ATLAS\StockLocateWSClient\StockLocateWSClient\obj\x86\Release\ResolveAssemblyReference.cache
+C:\_Dev\ATLAS\StockLocateWSClient\StockLocateWSClient\obj\x86\Release\StockLocateWSClient.LocatesTestForm.resources
+C:\_Dev\ATLAS\StockLocateWSClient\StockLocateWSClient\obj\x86\Release\StockLocateWSClient.Properties.Resources.resources
+C:\_Dev\ATLAS\StockLocateWSClient\StockLocateWSClient\obj\x86\Release\GenerateResource.read.1.tlog
+C:\_Dev\ATLAS\StockLocateWSClient\StockLocateWSClient\obj\x86\Release\GenerateResource.write.1.tlog
+C:\_Dev\ATLAS\StockLocateWSClient\StockLocateWSClient\obj\x86\Release\StockLocateWSClient.exe.licenses
+C:\_Dev\ATLAS\StockLocateWSClient\StockLocateWSClient\obj\x86\Release\StockLocateWSClient.exe
+C:\_Dev\ATLAS\StockLocateWSClient\StockLocateWSClient\obj\x86\Release\StockLocateWSClient.pdb
+C:\_Dev\ATLAS\StockLocateWSClient\StockLocateWSClient\bin\Release\Interop.CAPICOM.dll

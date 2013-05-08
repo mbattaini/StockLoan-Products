@@ -1,0 +1,36 @@
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Filer\bin\Debug\StockLoan.Filer.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Filer\bin\Debug\StockLoan.Filer.pdb
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Filer\bin\Debug\Rebex.Net.Ftp.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Filer\bin\Debug\Rebex.Net.ProxySocket.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Filer\bin\Debug\StockLoan.Common.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Filer\bin\Debug\StockLoan.Common.pdb
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Filer\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Filer\obj\Debug\StockLoan.Filer.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Filer\obj\Debug\StockLoan.Filer.pdb
+U:\_Dev\ATLAS\Filer\bin\Debug\StockLoan.Filer.dll
+U:\_Dev\ATLAS\Filer\bin\Debug\StockLoan.Filer.pdb
+U:\_Dev\ATLAS\Filer\bin\Debug\Rebex.Net.Ftp.dll
+U:\_Dev\ATLAS\Filer\bin\Debug\Rebex.Net.ProxySocket.dll
+U:\_Dev\ATLAS\Filer\bin\Debug\StockLoan.Common.dll
+U:\_Dev\ATLAS\Filer\bin\Debug\StockLoan.Common.pdb
+U:\_Dev\ATLAS\Filer\obj\Debug\ResolveAssemblyReference.cache
+U:\_Dev\ATLAS\Filer\obj\Debug\StockLoan.Filer.dll
+U:\_Dev\ATLAS\Filer\obj\Debug\StockLoan.Filer.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Filer\bin\Debug\StockLoan.Filer.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Filer\bin\Debug\StockLoan.Filer.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Filer\bin\Debug\Rebex.Net.Ftp.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Filer\bin\Debug\Rebex.Net.ProxySocket.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Filer\bin\Debug\StockLoan.Common.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Filer\bin\Debug\StockLoan.Common.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Filer\obj\Debug\ResolveAssemblyReference.cache
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Filer\obj\Debug\StockLoan.Filer.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Filer\obj\Debug\StockLoan.Filer.pdb
+C:\_Dev\ATLAS\Filer\bin\Debug\StockLoan.Filer.dll
+C:\_Dev\ATLAS\Filer\bin\Debug\StockLoan.Filer.pdb
+C:\_Dev\ATLAS\Filer\bin\Debug\Rebex.Net.Ftp.dll
+C:\_Dev\ATLAS\Filer\bin\Debug\Rebex.Net.ProxySocket.dll
+C:\_Dev\ATLAS\Filer\bin\Debug\StockLoan.Common.dll
+C:\_Dev\ATLAS\Filer\bin\Debug\StockLoan.Common.pdb
+C:\_Dev\ATLAS\Filer\obj\Debug\StockLoan.Filer.dll
+C:\_Dev\ATLAS\Filer\obj\Debug\StockLoan.Filer.pdb
+C:\_dev\ATLAS\Filer\obj\Debug\Filer.csprojResolveAssemblyReference.cache

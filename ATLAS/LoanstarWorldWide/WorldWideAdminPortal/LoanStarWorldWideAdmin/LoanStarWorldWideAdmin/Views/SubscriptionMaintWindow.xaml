@@ -1,0 +1,78 @@
+﻿<UserControl 
+    x:Class="LoanStarWorldWideAdmin.Views.SubscriptionMaintWindow"
+	Name="SubscriptionAddWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+	xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"	
+    xmlns:c1="clr-namespace:C1.Silverlight;assembly=C1.Silverlight" 
+    xmlns:c1grid="clr-namespace:C1.Silverlight.DataGrid;assembly=C1.Silverlight.DataGrid" 
+    xmlns:c1chart="clr-namespace:C1.Silverlight.Chart;assembly=C1.Silverlight.Chart"
+	xmlns:c1datetime="clr-namespace:C1.Silverlight.DateTimeEditors;assembly=C1.Silverlight.DateTimeEditors"
+	mc:Ignorable="d" 
+    d:DesignHeight="335" d:DesignWidth="712">
+
+    <Grid x:Name="LayoutRoot" Height="335" Width="712" Background="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+        <Grid x:Name="DetailGrid" HorizontalAlignment="Left" Height="335" Width="712" VerticalAlignment="Top">
+            <Grid.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF325988" Offset="1" />
+                    <GradientStop Color="#FF1F3F68" />
+                </RadialGradientBrush>
+            </Grid.Background>
+            <TextBox x:Name="fileNameText" Height="23" HorizontalAlignment="Left" Margin="93,75,0,0" VerticalAlignment="Top" Width="606" />
+            
+            <TextBox x:Name="fileHostText" Height="23" HorizontalAlignment="Left" Margin="93,103,0,0" VerticalAlignment="Top" Width="152" />
+            <TextBox x:Name="userNameText" Height="23" HorizontalAlignment="Left" Margin="334,103,0,0" VerticalAlignment="Top" Width="143" />
+            <sdk:Label x:Name="fileNameLabel" FontWeight="Bold" Foreground="White" Content="File Name" FontSize="11" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                       Margin="27,78,0,0" Width="64" Height="21" />
+            <sdk:Label x:Name="label2" FontWeight="Bold" Foreground="White" Content="User Name" FontSize="11" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                       Margin="256,106,0,0" Width="76" Height="21" />
+            <sdk:Label x:Name="fileHostLabel" FontWeight="Bold" Foreground="White" Content="File: Host" FontSize="11" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                       Margin="30,106,0,0" Width="64" Height="21" />
+            <TextBox x:Name="userPasswordText" Height="23" HorizontalAlignment="Left" Margin="556,103,0,0" VerticalAlignment="Top" Width="143" />
+            <sdk:Label x:Name="label3" FontWeight="Bold" Foreground="White" Content="Password" FontSize="11" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                       Margin="486,108,0,0" Width="77" Height="21" />
+            <sdk:Label x:Name="label4" FontWeight="Bold" Foreground="White" Content="E Mail" FontSize="11" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                       Margin="49,135,0,0" Width="50" Height="21" />
+            <sdk:Label x:Name="label5" FontWeight="Bold" Foreground="White" Content="Subject" FontSize="11" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                       Margin="371,134,0,0" Width="56" Height="21" />
+            <sdk:Label x:Name="StatusLabel" Content="Status" FontSize="11" FontWeight="Bold" Foreground="White" Height="25"  
+                       Margin="5,298,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="535" />
+            <TextBox x:Name="addressText" Height="23" HorizontalAlignment="Left" Margin="93,131,0,0" VerticalAlignment="Top" Width="267" />
+
+            <TextBox x:Name="subjectText" Height="23" HorizontalAlignment="Left" Margin="423,131,0,0" VerticalAlignment="Top" Width="277" />
+            <sdk:Label x:Name="label6" FontWeight="Bold" Foreground="White" Content="Comments" FontSize="11" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                       Margin="21,196,0,0" Width="78" Height="21" />
+            <TextBox x:Name="commentText" Height="94" TextWrapping="Wrap" HorizontalAlignment="Left" Margin="93,197,0,0" VerticalAlignment="Top" Width="450" MaxLength="200" />
+            <CheckBox x:Name="DisableCheckBox" Content="Disable?" FontSize="12" FontWeight="Bold" Foreground="White" Height="16" HorizontalAlignment="Left" 
+                      Margin="514,165,0,0" VerticalAlignment="Top" IsEnabled="True" Checked="DisableCheckBox_Checked" />
+            <Button x:Name="SubscriptionConfirmButton" Content="Confirm Subscription" Height="25" HorizontalAlignment="Left" Margin="558,198,0,0" VerticalAlignment="Top" 
+                        Width="140" Click="confirmSubscription_Click"></Button>
+            <Button x:Name="buttonFileLayouts" Content="File Layouts" Height="25" HorizontalAlignment="Left" Margin="558,229,0,0" VerticalAlignment="Top" 
+                        Click="buttonFileLayouts_Click" Width="140"></Button>
+            <Button x:Name="cancelButton" Content="Cancel" Height="30" HorizontalAlignment="Left" Margin="558,261,0,0" VerticalAlignment="Top" 
+                        Width="140" Click="cancelButton_Click"></Button>
+            <sdk:Label x:Name="subscriptionInfoLabel" Content="Subscription Name" FontSize="11" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" 
+                       Margin="145,41,155,0" Width="412" Height="21" />
+            <c1:C1ComboBox x:Name="FirmCombo" FontSize="10.667" Height="25" HorizontalAlignment="Left" Margin="93,7,0,0" VerticalAlignment="Top" Width="164" SelectedItemChanged="FirmCombo_SelectedItemChanged" />
+            <sdk:Label x:Name="firmLabel" Content="Select Firm" FontSize="11" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                        Margin="19,11,0,0" Width="77" Height="21" />
+            <c1:C1ComboBox x:Name="CountryCombo" FontSize="10.667" Height="25" HorizontalAlignment="Left" Margin="333,7,0,0" VerticalAlignment="Top" Width="166" SelectedItemChanged="CountryCombo_SelectedItemChanged" />
+            <sdk:Label x:Name="countryLabel" Content="Country" FontSize="11" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                       Margin="280,11,0,0" Width="54" Height="21" />
+            <c1:C1ComboBox x:Name="DeskTypeCombo" FontSize="10.667" Height="25" HorizontalAlignment="Left" Margin="547,7,0,0" VerticalAlignment="Top" Width="149" SelectedItemChanged="DeskTypeCombo_SelectedItemChanged" />
+            <sdk:Label x:Name="deskTypeLabel" Content="Type" FontSize="11" FontWeight="Bold" Foreground="White" VerticalAlignment="Top" 
+                       Margin="510,10,0,0" Height="21" HorizontalAlignment="Left" Width="39" />
+            <RadioButton x:Name="radioButtonInventory" Content="Inventory File" FontSize="11" FontWeight="Bold" Foreground="White" Height="16" HorizontalAlignment="Left" 
+                         Margin="94,165,0,0" VerticalAlignment="Top" Checked="radioButtonInventory_Checked" />
+            <RadioButton x:Name="radioButtonRates" Content="Rates File" FontSize="11" FontWeight="Bold" Foreground="White" Height="16" HorizontalAlignment="Left" 
+                         Margin="266,165,0,0" VerticalAlignment="Top" Checked="radioButtonRates_Checked" />
+        </Grid>
+
+
+    </Grid>
+</UserControl>

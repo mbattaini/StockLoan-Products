@@ -1,0 +1,9 @@
+SCC = This is a Source Code Control file
+
+[CentralClient.csproj]
+SCC_Aux_Path = "\\rspen001\SourceSafe\PensonSource"
+SCC_Project_Name = "$/SourceCode/C#/0 Development/Atlas/LoanStar/CentralClient", BSKIAAAA
+
+[CentralClient.sln]
+SCC_Aux_Path = "\\rspen001\SourceSafe\PensonSource"
+SCC_Project_Name = "$/SourceCode/C#/0 Development/Atlas/LoanStar/CentralClient", BSKIAAAA

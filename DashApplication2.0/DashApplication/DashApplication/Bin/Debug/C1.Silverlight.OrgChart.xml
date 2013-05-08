@@ -1,0 +1,277 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Silverlight.OrgChart</name>
+    </assembly>
+    <members>
+        <member name="T:C1.Util.Licensing.C1ProductInfoAttribute">
+            <summary>
+            Attribute used to attach licensing/product information to assemblies.
+            </summary>
+        </member>
+        <member name="T:C1.Util.Licensing.LicenseMode">
+            <summary>
+            Provides the licensing mode connection between a control and its designer.
+            </summary>
+        </member>
+        <member name="M:C1.Util.Licensing.LicenseMode.GetEvaluation(System.Windows.DependencyObject)">
+            <summary>
+            This property is for internal use only.
+            </summary>
+        </member>
+        <member name="M:C1.Util.Licensing.LicenseMode.SetEvaluation(System.Windows.DependencyObject,System.Boolean)">
+            <summary>
+            This property is for internal use only.
+            </summary>
+        </member>
+        <member name="F:C1.Util.Licensing.LicenseMode.EvaluationProperty">
+            <summary>
+            This property is for internal use only.
+            </summary>
+        </member>
+        <member name="F:Public.RunTimeNameSuffix">
+            <summary>
+            Defines the WPF platform specific suffix of a run-time assembly name.
+            </summary>
+        </member>
+        <member name="F:Public.DesignTimeNet4NameSuffix">
+            <summary>
+            Defines the WPF platform specific suffix of a VS2010/Blend3-4 design-time assembly name.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.OrgChart.C1OrgChart">
+            <summary>
+            Control that displays Organizational Charts.
+            </summary>
+            <remarks>
+            <para>To use this control, set the following main properties:</para>
+            <para><b><see cref="!:ItemsSource"/></b>: a hierarchical list of items to be shown on the chart.</para>
+            <para><b><see cref="!:ItemTemplate"/></b>: template used to convert the items into visuals.</para>
+            <para><b><see cref="P:C1.Silverlight.OrgChart.C1OrgChart.ChildItemsPath"/></b>: property that contains the child items.</para>
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.OrgChart.C1OrgChart.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.OrgChart.C1OrgChart"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.OrgChart.C1OrgChart.OnApplyTemplate">
+            <summary>
+            Get element references from control template.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OrgChart.C1OrgChart.HeaderProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OrgChart.C1OrgChart.Header"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OrgChart.C1OrgChart.ChildSpacingProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OrgChart.C1OrgChart.ChildSpacing"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OrgChart.C1OrgChart.ConnectorThicknessProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OrgChart.C1OrgChart.ConnectorThickness"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OrgChart.C1OrgChart.ConnectorStrokeProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OrgChart.C1OrgChart.ConnectorStroke"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OrgChart.C1OrgChart.ConnectorDashArrayProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OrgChart.C1OrgChart.ConnectorDashArray"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OrgChart.C1OrgChart.ConnectorDashOffsetProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OrgChart.C1OrgChart.ConnectorDashOffset"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OrgChart.C1OrgChart.ConnectorDashCapProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OrgChart.C1OrgChart.ConnectorDashCap"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OrgChart.C1OrgChart.ConnectorEndLineCapProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OrgChart.C1OrgChart.ConnectorEndLineCap"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OrgChart.C1OrgChart.ConnectorStartLineCapProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OrgChart.C1OrgChart.ConnectorStartLineCap"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OrgChart.C1OrgChart.OrientationProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OrgChart.C1OrgChart.Orientation"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OrgChart.C1OrgChart.ChildItemsPathProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OrgChart.C1OrgChart.ChildItemsPath"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OrgChart.C1OrgChart.IsCollapsedProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OrgChart.C1OrgChart.IsCollapsed"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OrgChart.C1OrgChart.ItemTemplateSelectorProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OrgChart.C1OrgChart.ItemTemplateSelector"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OrgChart.C1OrgChart.Header">
+            <summary>
+            Gets or sets the parent item for this <see cref="T:C1.Silverlight.OrgChart.C1OrgChart"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OrgChart.C1OrgChart.ChildSpacing">
+            <summary>
+            Gets or sets the spacing between items, in pixels.
+            </summary>
+            <remarks>
+            In addition to changing this property, you may customize the spacing between
+            items using the <see cref="!:Margin"/> property on your <see cref="!:ItemTemplate"/>.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.OrgChart.C1OrgChart.ConnectorThickness">
+            <summary>
+            Gets or sets the thickness of the connecting lines.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OrgChart.C1OrgChart.ConnectorStroke">
+            <summary>
+            Gets or sets the brush used to paint the connecting lines.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OrgChart.C1OrgChart.ConnectorDashArray">
+            <summary>
+            Gets or sets the collection of values that define the pattern of dashes and gaps used to 
+            paint the connecting lines.
+            </summary>
+            <remarks>
+            The array specifies alternating lengths to stroke and leave blank. Values are expressed
+            as multiples of the <see cref="!:ConnectorWidth"/> property.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.OrgChart.C1OrgChart.ConnectorDashOffset">
+            <summary>
+            Gets or sets the distance within the dash pattern where a dash begins.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OrgChart.C1OrgChart.ConnectorDashCap">
+            <summary>
+            Gets or sets a <see cref="T:System.Windows.Media.PenLineCap"/> that specifies how to paint the ends of dashes
+            in the connecting lines.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OrgChart.C1OrgChart.ConnectorEndLineCap">
+            <summary>
+            Gets or sets a <see cref="T:System.Windows.Media.PenLineCap"/> that specifies how to paint the end of the 
+            connecting lines.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OrgChart.C1OrgChart.ConnectorStartLineCap">
+            <summary>
+            Gets or sets a <see cref="T:System.Windows.Media.PenLineCap"/> that specifies how to paint the start of the connecting lines.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OrgChart.C1OrgChart.Orientation">
+            <summary>
+            Gets or sets the direction in which child elements are laid out within the control.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OrgChart.C1OrgChart.ChildItemsPath">
+            <summary>
+            Gets or sets the name of the property that contains the collection of child objects.
+            </summary>
+            <remarks>
+            If you don't specify this property, the control will look for the first property 
+            that returns an enumeration of items of the same type as the root item.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.OrgChart.C1OrgChart.IsCollapsed">
+            <summary>
+            Gets or sets a value that determines whether the node is currently displaying its children.
+            </summary>
+            <remarks>
+            You may use this property to create organizational charts with nodes that can be 
+            collapsed or expanded by users. One simple way to do this is by adding a <see cref="T:System.Windows.Controls.CheckBox"/>
+            element to the item template and binding its <see cref="!:CheckBox.IsChecked"/> property
+            to the <see cref="P:C1.Silverlight.OrgChart.C1OrgChart.IsCollapsed"/> property of the <see cref="T:C1.Silverlight.OrgChart.C1OrgChart"/> that represents
+            the given item. For example:
+            <code>
+            &lt;c1:C1OrgChart&gt;
+              &lt;c1:C1OrgChart.ItemTemplate&gt;
+                &lt;DataTemplate&gt;
+                  &lt;StackPanel&gt;    
+                    &lt;TextBlock Text="{Binding Name}" /&gt;
+                    &lt;CheckBox 
+                      Margin="4 0" 
+                      IsChecked="{Binding IsCollapsed, 
+                        Mode=TwoWay, 
+                        RelativeSource={RelativeSource AncestorType=c1:C1OrgChart}}" /&gt;
+                  &lt;/StackPanel&gt;    
+                &lt;/DataTemplate&gt;
+              &lt;/c1:C1OrgChart.ItemTemplate&gt;
+            &lt;/c1:C1OrgChart&gt;
+            </code>
+            This XAML binds the <b>IsChecked</b> property of the <b>CheckBox</b> to the
+            <b>IsCollapsed</b> property of the <b>C1OrgChart</b> control that contains the
+            item. The user may then collapse or expand the chart by checking the <b>CheckBox</b>.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.OrgChart.C1OrgChart.ItemTemplateSelector">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.OrgChart.DataTemplateSelector"/> that determines the appearance
+            of items in the control.
+            </summary>
+            <remarks>
+            This property allows you to select different templates based on the items being
+            displayed. The <see cref="T:C1.Silverlight.OrgChart.DataTemplateSelector"/> class has a <b>SelectTemplate</b>
+            method that takes an item and returns a <see cref="T:System.Windows.DataTemplate"/> to be used for
+            creating that item's visual representation.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.OrgChart.C1OrgChart.ChildNodes">
+            <summary>
+            Gets a list of <see cref="T:C1.Silverlight.OrgChart.C1OrgChart"/> objects that represent the child nodes
+            under this <see cref="T:C1.Silverlight.OrgChart.C1OrgChart"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.OrgChart.DataTemplateSelector">
+            <summary>
+            Provides a way to choose a <see cref="T:System.Windows.DataTemplate"/> based on the data object and 
+            the data-bound element.
+            </summary>
+            <remarks>
+            Silverlight implementation of the class available in WPF.
+            </remarks>
+        </member>
+        <member name="T:C1.Silverlight.OrgChart.HierarchicalDataTemplate">
+            <summary>
+            Represents a data template that supports hierarchical data sources.
+            </summary>
+            <remarks>
+            Silverlight implementation of the class available in WPF.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.OrgChart.HierarchicalDataTemplate.ItemsSource">
+            <summary>
+            Gets or sets the binding for this data template, which indicates where to find the 
+            collection that represents the next level in the data hierarchy.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OrgChart.HierarchicalDataTemplate.ItemTemplate">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.DataTemplate"/> to apply to items at the current hierarchical
+            level in a <see cref="T:C1.Silverlight.OrgChart.HierarchicalDataTemplate"/>.
+            </summary>
+        </member>
+    </members>
+</doc>

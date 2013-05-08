@@ -1,0 +1,12 @@
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\StockLoan.LocateServer.dll
+bin\Debug\StockLoan.LocateServer.pdb
+bin\Debug\StockLoan.Common.dll
+bin\Debug\StockLoan.Locates.dll
+bin\Debug\StockLoan.Common.pdb
+bin\Debug\StockLoan.Locates.pdb
+obj\Debug\StockLoan.LocateServer.dll
+obj\Debug\StockLoan.LocateServer.pdb
+bin\Debug\Compression.dll
+bin\Debug\C1.C1Zip.2.dll
+bin\Debug\Compression.pdb

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e65d7ac7-1611-405f-aa28-c88fbb625c40" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://dalgsldev01:8080/StockLoan.WebServices.DChen/FundsService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="FundsService1.disco" MetadataType="Disco" ID="58cdd41f-bda1-432e-bbb3-5f5371476a00" SourceId="1" SourceUrl="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/FundsService.svc?disco" />
+    <MetadataFile FileName="FundsService2.xsd" MetadataType="Schema" ID="5bb89839-81e8-41a8-8ff2-6b2872651378" SourceId="1" SourceUrl="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/FundsService.svc?xsd=xsd1" />
+    <MetadataFile FileName="FundsService21.xsd" MetadataType="Schema" ID="cbd3b126-c3e6-40fd-be87-dd555c201588" SourceId="1" SourceUrl="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/FundsService.svc?xsd=xsd0" />
+    <MetadataFile FileName="FundsService1.wsdl" MetadataType="Wsdl" ID="6cb40bc8-d1b6-456f-82ae-1b721c281dcd" SourceId="1" SourceUrl="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/FundsService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

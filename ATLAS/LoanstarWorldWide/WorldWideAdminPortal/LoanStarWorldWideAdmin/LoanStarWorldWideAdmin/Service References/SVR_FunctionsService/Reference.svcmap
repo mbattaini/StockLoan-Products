@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9dc6625e-d34e-4dec-99c6-7490ed09bcf4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://dalgsldev01:8080/StockLoan.WebServices.DChen/FunctionsService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="FunctionsService.xsd" MetadataType="Schema" ID="8bb42448-1d9a-4f28-ba27-e2970fef76b7" SourceId="1" SourceUrl="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/FunctionsService.svc?xsd=xsd0" />
+    <MetadataFile FileName="FunctionsService.wsdl" MetadataType="Wsdl" ID="24b26a32-37d1-4b6b-ab10-b6130c095da7" SourceId="1" SourceUrl="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/FunctionsService.svc?wsdl" />
+    <MetadataFile FileName="FunctionsService1.xsd" MetadataType="Schema" ID="8cf1b91a-83ee-4df5-9d21-6842a05e3dba" SourceId="1" SourceUrl="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/FunctionsService.svc?xsd=xsd1" />
+    <MetadataFile FileName="FunctionsService.disco" MetadataType="Disco" ID="705cbca3-4c22-4032-aeac-2d680e6031aa" SourceId="1" SourceUrl="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/FunctionsService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

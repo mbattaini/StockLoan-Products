@@ -1,0 +1,2414 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Silverlight.Pdf</name>
+    </assembly>
+    <members>
+        <member name="T:C1.Silverlight.Pdf.CharWidths">
+            <summary>
+            Provides character width data for the built-in Acrobat Reader fonts.
+            These are based on a 750-point font, adjust as needed for actual font sizes.
+            </summary>
+            <remarks>
+            These values were copied from the debugger running the WinForms version
+            of C1Pdf, after a call to the GetCharWidths32 API.
+            Values less than 127 were taken instead from the Adobe official font metric files
+            at http://partners.adobe.com/public/developer/en/pdf/Core14_AFMs.zip
+            </remarks>
+        </member>
+        <member name="T:C1.Silverlight.Pdf.PdfAnnotationCollection">
+            <summary>
+            PdfAnnotationCollection
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Pdf.PdfAnnotation">
+            <summary>
+            Base class for PdfAttachment, PdfLink, and PdfTarget.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Pdf.AttachmentIconEnum">
+            <summary>
+            Specifies the type of attachment icon to use.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.AttachmentIconEnum.Paperclip">
+            <summary>
+            Paper Clip attachment icon.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.AttachmentIconEnum.PushPin">
+            <summary>
+            Pushpin attachment icon.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.AttachmentIconEnum.Tag">
+            <summary>
+            Tag attachment icon.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.AttachmentIconEnum.Graph">
+            <summary>
+            Graph attachment icon.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Pdf.PdfAttachment">
+            <summary>
+            Summary description for PdfAttachment.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Pdf.PdfBookmarkCollection">
+            <summary>
+            PdfBookmarkCollection
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Pdf.PdfBookmark">
+            <summary>
+            PdfBookmark
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Pdf.C1PdfDocument">
+            <summary>
+            Provides methods to create and save Pdf documents.
+            </summary>
+            <remarks>
+            <para>When you create an instance of the <see cref="T:C1.Silverlight.Pdf.C1PdfDocument"/> class, you 
+            get a Pdf document with a single blank page. You can then add content to the 
+            page using methods similar to those available in the .NET Graphics class 
+            (<see cref="M:C1.Silverlight.Pdf.C1PdfDocument.DrawRectangle(C1.Silverlight.Pdf.Pen,System.Double,System.Double,System.Double,System.Double)"/>, 
+            <see cref="M:C1.Silverlight.Pdf.C1PdfDocument.DrawString(System.String,C1.Silverlight.Pdf.Font,System.Windows.Media.Color,System.Windows.Rect,C1.Silverlight.Pdf.StringFormat)"/>, etc.).</para>
+            <para>You can add new pages using the <see cref="M:C1.Silverlight.Pdf.C1PdfDocumentBase.NewPage"/> method, 
+            and select the page size using the <see cref="P:C1.Silverlight.Pdf.C1PdfDocument.PaperKind"/> or <see cref="P:C1.Silverlight.Pdf.C1PdfDocument.PageSize"/> 
+            properties.</para>
+            <para>When the document is ready, you can save it to a file or a stream using the 
+            <see cref="M:C1.Silverlight.Pdf.C1PdfDocumentBase.Save(System.String)"/> method.</para>
+            <para>The coordinate system used by <see cref="T:C1.Silverlight.Pdf.C1PdfDocument"/> is based on 
+            points, with the origin located at the top left corner of the page. You can 
+            retrieve the page rectangle (measured in points) using the 
+            <see cref="P:C1.Silverlight.Pdf.C1PdfDocumentBase.PageRectangle"/> property.</para>
+            </remarks>
+        </member>
+        <member name="T:C1.Silverlight.Pdf.C1PdfDocumentBase">
+            <summary>
+            Provides low-level methods to create and save Pdf documents.
+            </summary>
+            <remarks>
+            This is the base for the <see cref="T:C1.Silverlight.Pdf.C1PdfDocument"/> class.
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Pdf.C1PdfDocument"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.Clear">
+            <summary>
+            Restores the document to its initial state.
+            </summary>
+            <remarks>
+            All current content and security settings are discarded, a single empty page is created, and 
+            the <see cref="P:C1.Silverlight.Pdf.C1PdfDocumentBase.CurrentPage"/> property is set to zero.
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.NewPage">
+            <summary>
+            Starts a new page.
+            </summary>
+            <remarks>
+            Adds a blank page to the document and sets the <see cref="P:C1.Silverlight.Pdf.C1PdfDocumentBase.CurrentPage"/> property 
+            to make it the currently active page.
+            <para>The size of the new page is defined by the value of the <see cref="P:C1.Silverlight.Pdf.C1PdfDocumentBase.PageSize"/> property.</para>
+            <para>If you want the new page to have a different size than the rest of the document, 
+            create the new page first, then set the <see cref="P:C1.Silverlight.Pdf.C1PdfDocumentBase.PageSize"/> property.</para>
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.Save(System.String)">
+            <summary>
+            Saves the Pdf document to a file.
+            </summary>
+            <param name="fileName">Name of the Pdf file to create.</param>
+            <remarks>
+            Saving the Pdf document to a file requires that the file be available 
+            for writing. If the file already exists and is in use by an application 
+            (such as the Adobe Acrobat Reader), the method will throw an exception.
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.Save(System.IO.Stream)">
+            <summary>
+            Saves the Pdf document to a <see cref="T:System.IO.Stream"/>.
+            </summary>
+            <param name="stream"><see cref="T:System.IO.Stream"/> object to use for saving the document.</param>
+            <remarks>
+            Saving the Pdf document to a <see cref="T:System.IO.Stream"/> object is often used in Web 
+            scenarios, when you are creating a Response object or storing the document in the 
+            a cache, and don't want to create temporary files.
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.ToPoints(System.Double)">
+            <summary>
+            Converts pixels to points.
+            </summary>
+            <param name="pixels">Measurement in pixels.</param>
+            <returns>Measurement in points.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.ToPoints(System.Windows.Size)">
+            <summary>
+            Converts pixels to points.
+            </summary>
+            <param name="szPixels"><see cref="T:System.Windows.Size"/> in pixels.</param>
+            <returns><see cref="T:System.Windows.Size"/> in points.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.ToPoints(System.Windows.Rect)">
+            <summary>
+            Converts pixels to points.
+            </summary>
+            <param name="rcPixels"><see cref="T:System.Windows.Rect"/> in pixels.</param>
+            <returns><see cref="T:System.Windows.Rect"/> in points.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.ToPixels(System.Double)">
+            <summary>
+            Converts points to pixels.
+            </summary>
+            <param name="points">Measurement in points.</param>
+            <returns>Measurement in pixels.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.ToPixels(System.Windows.Size)">
+            <summary>
+            Converts points to pixels.
+            </summary>
+            <param name="szPoints"><see cref="T:System.Windows.Size"/> in points.</param>
+            <returns><see cref="T:System.Windows.Size"/> in pixels.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.ToPixels(System.Windows.Rect)">
+            <summary>
+            Converts points to pixels.
+            </summary>
+            <param name="rcPoints"><see cref="T:System.Windows.Rect"/> in points.</param>
+            <returns><see cref="T:System.Windows.Rect"/> in pixels.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.OnGeneratingDocument(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:C1.Silverlight.Pdf.C1PdfDocumentBase.GeneratingDocument"/> event.
+            </summary>
+            <param name="e"><see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.OnSavingDocument(System.ComponentModel.ProgressChangedEventArgs)">
+            <summary>
+            Raises the <see cref="E:C1.Silverlight.Pdf.C1PdfDocumentBase.SavingDocument"/> event.
+            </summary>
+            <param name="e"><see cref="T:System.ComponentModel.ProgressChangedEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.FillStroke(System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            For internal use only. Strokes and fills the current path.
+            </summary>
+            <param name="close">Whether the path should be closed.</param>
+            <param name="fill">Whether the path should be filled.</param>
+            <param name="stroke">Whether the path should be stroked.</param>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.FillStroke(System.Boolean,System.Boolean,System.Boolean,System.Windows.Media.FillRule)">
+            <summary>
+            For internal use only. Strokes and fills the current path.
+            </summary>
+            <param name="close">Whether the path should be closed.</param>
+            <param name="fill">Whether the path should be filled.</param>
+            <param name="stroke">Whether the path should be stroked.</param>
+            <param name="fillRule">Whether to use alternate or winding rule when filling the path.</param>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.EndPage">
+            <summary>
+            For internal use only. Closes page stream, clears page pointer.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.StartPage">
+            <summary>
+            For internal use only. Adds a page to the page collection, opens stream writer on the new page.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.StartOverlay(System.Int32)">
+            <summary>
+            For internal use only. Reopens a page for additional output.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.SetFont(C1.Silverlight.Pdf.Font)">
+            <summary>
+            For internal use only. Sets the current font.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.GetFontSize">
+            <summary>
+            For internal use only. Gets the current font size.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.GetFontSize(C1.Silverlight.Pdf.Font)">
+            <summary>
+            For internal use only. Gets the size of a given font.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.SetPen(C1.Silverlight.Pdf.Pen)">
+            <summary>
+            For internal use only. Sets the current pen.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.SetBrush(System.Windows.Media.Color)">
+            <summary>
+            For internal use only. Sets the current brush color.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.ResetResourceState">
+            <summary>
+            For internal use only. Resets current font, pen, and brush state.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.TextOut(System.String,System.Windows.Point,System.Windows.HorizontalAlignment,System.Boolean)">
+            <summary>
+            For internal use only. Output text to current Pdf stream.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.MoveTo(System.Double,System.Double)">
+            <summary>
+            For internal use only. Moves cursor to a specified position.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.LineTo(System.Double,System.Double)">
+            <summary>
+            For internal use only. Draws a line from the cursor to the specified position.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.CurveTo(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            For internal use only. Draws a curve from the cursor to the specified position.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.CurveTo(System.Double,System.Single,System.Double,System.Double)">
+            <summary>
+            For internal use only. Draws a curve from the cursor to the specified position.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.Rectangle(System.Windows.Rect)">
+            <summary>
+            For internal use only. Draws a rectangle.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.PieArc(System.Windows.Rect,System.Double,System.Double,System.Boolean)">
+            <summary>
+            For internal use only. Draws a pie slice or an arc.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.PieArc(System.Windows.Rect,System.Double,System.Double,System.Boolean,System.Boolean)">
+            <summary>
+            For internal use only. Draws a pie slice or an arc.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.RoundRect(System.Windows.Rect,System.Windows.Size)">
+            <summary>
+            For internal use only. Draws a rounded rectangle.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.Ellipse(System.Windows.Rect)">
+            <summary>
+            For internal use only. Draws an ellipse.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.Polygon(System.Windows.Point[])">
+            <summary>
+            For internal use only. Draws a polygon.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.GetStreamPosition">
+            <summary>
+            For internal use only. Gets the Position on the page stream.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.GetCurrentID">
+            <summary>
+            For internal use only. Gets the ID of the last object.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.GetNewID">
+            <summary>
+            For internal use only. Increments the ID for the next object.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.Write(System.String,System.Object[])">
+            <summary>
+            Writes raw content into the Pdf stream for the current page.
+            </summary>
+            <param name="format">Format string, as in <see cref="M:System.String.Format(System.String,System.Object)"/>.</param>
+            <param name="args">Array of objects to write using <paramref name="format"/>.</param>
+            <remarks>
+            This is a low-level method that allows you to insert Pdf commands directly 
+            into the page stream. It is intended for use by derived classes and requires 
+            knowledge of the Pdf document structure and syntax.
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.Normalize(System.Windows.Rect)">
+            <summary>
+            For internal use only.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.MeasureText(System.String)">
+            <summary>
+            For internal use only.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocumentBase.MeasureText(System.String,C1.Silverlight.Pdf.Font)">
+            <summary>
+            For internal use only.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.C1PdfDocumentBase.DocumentInfo">
+            <summary>
+            Gets the <see cref="T:C1.Silverlight.Pdf.PdfDocumentInfo"/> object that contains information about 
+            this document (author, etc).
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.C1PdfDocumentBase.ViewerPreferences">
+            <summary>
+            Gets the <see cref="T:C1.Silverlight.Pdf.PdfViewerPreferences"/> object that contains information about 
+            how this document should be displayed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.C1PdfDocumentBase.Security">
+            <summary>
+            Gets the <see cref="T:C1.Silverlight.Pdf.PdfSecurity"/> object that manages security for this 
+            document (passwords, etc).
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.C1PdfDocumentBase.Compression">
+            <summary>
+            Gets or sets the compression level to use when saving the document.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.C1PdfDocumentBase.PageSize">
+            <summary>
+            Gets or sets the default page size for the document (in points).
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.C1PdfDocumentBase.PageRectangle">
+            <summary>
+            Gets a rectangle that represents the surface of the current page (in points).
+            </summary>
+            <remarks>
+            This property returns a <see cref="T:System.Windows.Rect"/> located at point (0,0) with 
+            size equal to the size of the current page. It can be used as a starting 
+            point for building rectangles that will be used for drawing on the page. 
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.C1PdfDocumentBase.CurrentPage">
+            <summary>
+            Gets or sets the index of the current page within the document.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.C1PdfDocumentBase.Pages">
+            <summary>
+            Gets the collection of <see cref="T:C1.Silverlight.Pdf.PdfPage"/> objects that make up the document.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Pdf.C1PdfDocumentBase.GeneratingDocument">
+            <summary>
+            Fires periodically while data is written into the PDF document.
+            </summary>
+            <remarks>
+            The event handler may check the number of pages created so far by 
+            accessing the <see cref="P:C1.Silverlight.Pdf.C1PdfDocumentBase.Pages"/> property.
+            </remarks>
+        </member>
+        <member name="E:C1.Silverlight.Pdf.C1PdfDocumentBase.SavingDocument">
+            <summary>
+            Fires while pages are written to the PDF stream after a call to the <see cref="M:C1.Silverlight.Pdf.C1PdfDocumentBase.Save(System.IO.Stream)"/> method.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.C1PdfDocumentBase.Fonts">
+            <summary>
+            For internal use only. Gets the font collection.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.C1PdfDocumentBase.Bookmarks">
+            <summary>
+            For internal use only. Gets the bookmarks collection.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.C1PdfDocumentBase.Links">
+            <summary>
+            For internal use only. Gets the links collection.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.C1PdfDocumentBase.Targets">
+            <summary>
+            For internal use only. Gets the targets collection.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.C1PdfDocumentBase.Attachments">
+            <summary>
+            For internal use only. Gets the attachments collection.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.#ctor">
+            <summary>
+            Creates a new instance of the <see cref="T:C1.Silverlight.Pdf.C1PdfDocument"/> class.
+            </summary>
+            <remarks>The new document contains a single empty page, and the
+            default page size is set to Letter (8.5 x 11 inches).</remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.#ctor(C1.Silverlight.Pdf.PaperKind)">
+            <summary>
+            Creates a new instance of the <see cref="T:C1.Silverlight.Pdf.C1PdfDocument"/> class.
+            </summary>
+            <param name="paperKind">The default paper size for the document.</param>
+            <remarks>The new document contains a single empty page, and the
+            default page size is set to the value of the <paramref>paperKind</paramref>
+            parameter.</remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.#ctor(C1.Silverlight.Pdf.PaperKind,System.Boolean)">
+            <summary>
+            Creates a new instance of the <see cref="T:C1.Silverlight.Pdf.C1PdfDocument"/> class.
+            </summary>
+            <param name="paperKind">The default paper size for the document.</param>
+            <param name="landscape">The default paper orientation for the document.</param>
+            <remarks>The new document contains a single empty page, and the
+            default page size is set to the value of the <paramref>paperKind</paramref>
+            and <paramref>landscape</paramref> parameters.</remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.#ctor(System.Windows.Size)">
+            <summary>
+            Creates a new instance of the <see cref="T:C1.Silverlight.Pdf.C1PdfDocument"/> class.
+            </summary>
+            <param name="pageSizeInPoints">The default paper size for the document, in points.</param>
+            <remarks>The new document contains a single empty page, and the
+            default page size is set to the value of the <paramref>pageSizeInPoints</paramref>
+            parameter.</remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.SetClipRect(System.Windows.Rect)">
+            <summary>
+            Sets the clipping area.
+            </summary>
+            <param name="rc"><see cref="T:System.Windows.Rect"/> that specifies the area to clip.</param>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.ResetClipRect">
+            <summary>
+            Restores the clipping area to the state before the last call to <see cref="M:C1.Silverlight.Pdf.C1PdfDocument.SetClipRect(System.Windows.Rect)"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.DrawRectangle(C1.Silverlight.Pdf.Pen,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Draws a rectangle specified by a coordinate pair, a width, and a height.
+            </summary>
+            <param name="pen"><see cref="T:C1.Silverlight.Pdf.Pen"/> object that determines the color, width, and style of the rectangle.</param>
+            <param name="x">x-coordinate of the upper-left corner of the rectangle to draw.</param>
+            <param name="y">x-coordinate of the upper-left corner of the rectangle to draw.</param>
+            <param name="width">Width of the rectangle to draw.</param>
+            <param name="height">Height of the rectangle to draw.</param>
+            <remarks>All coordinates are expressed in points, measured from the upper-left corner of the page.</remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.DrawRectangle(C1.Silverlight.Pdf.Pen,System.Windows.Rect)">
+            <summary>
+            Draws a rectangle specified by a <see cref="T:System.Windows.Rect"/> structure.
+            </summary>
+            <param name="pen"><see cref="T:C1.Silverlight.Pdf.Pen"/> object that determines the color, width, and style of the rectangle.</param>
+            <param name="rc">A <see cref="T:System.Windows.Rect"/> structure that represents the rectangle to draw.</param>
+            <remarks>All coordinates are expressed in points, measured from the upper-left corner of the page.</remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.FillRectangle(System.Windows.Media.Color,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Fills the interior of a rectangle specified by a coordinate pair, a width, and a height.
+            </summary>
+            <param name="color"><see cref="T:System.Windows.Media.Color"/> object that determines the color used to fill the rectangle.</param>
+            <param name="x">x-coordinate of the upper-left corner of the rectangle to fill.</param>
+            <param name="y">x-coordinate of the upper-left corner of the rectangle to fill.</param>
+            <param name="width">Width of the rectangle to fill.</param>
+            <param name="height">Height of the rectangle to fill.</param>
+            <remarks>All coordinates are expressed in points, measured from the upper-left corner of the page.</remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.FillRectangle(System.Windows.Media.Color,System.Windows.Rect)">
+            <summary>
+            Fills the interior of a rectangle specified by a <see cref="T:System.Windows.Rect"/> structure.
+            </summary>
+            <param name="color"><see cref="T:System.Windows.Media.Color"/> object that determines the color used to fill the rectangle.</param>
+            <param name="rc">A <see cref="T:System.Windows.Rect"/> structure that represents the rectangle to fill.</param>
+            <remarks>All coordinates are expressed in points, measured from the upper-left corner of the page.</remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.DrawRectangle(C1.Silverlight.Pdf.Pen,System.Windows.Rect,System.Windows.Size)">
+            <summary>
+            Draws a rounded rectangle specified by <see cref="T:System.Windows.Rect"/> and <see cref="T:System.Windows.Size"/> structures.
+            </summary>
+            <param name="pen"><see cref="T:C1.Silverlight.Pdf.Pen"/> object that determines the color, width, and style of the rectangle.</param>
+            <param name="rc">A <see cref="T:System.Windows.Rect"/> structure that represents the rectangle to draw.</param>
+            <param name="corners">A <see cref="T:System.Windows.Size"/> structure that contains the radius of the rectangle corners.</param>
+            <remarks>All coordinates are expressed in points, measured from the upper-left corner of the page.</remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.FillRectangle(System.Windows.Media.Color,System.Windows.Rect,System.Windows.Size)">
+            <summary>
+            Fills the interior of a rounded rectangle specified by <see cref="T:System.Windows.Rect"/> and <see cref="T:System.Windows.Size"/> structures.
+            </summary>
+            <param name="color"><see cref="T:System.Windows.Media.Color"/> object that determines the color used to fill the rectangle.</param>
+            <param name="rc">A <see cref="T:System.Windows.Rect"/> structure that represents the rectangle to fill.</param>
+            <param name="corners">A <see cref="T:System.Windows.Size"/> structure that contains the radius of the rectangle corners.</param>
+            <remarks>All coordinates are expressed in points, measured from the upper-left corner of the page.</remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.DrawLine(C1.Silverlight.Pdf.Pen,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Draws a line connecting the two points specified by coordinate pairs.
+            </summary>
+            <param name="pen"><see cref="T:C1.Silverlight.Pdf.Pen"/> object that determines the color, width, and style of the line.</param>
+            <param name="x1">x-coordinate of the first point.</param>
+            <param name="y1">y-coordinate of the first point.</param>
+            <param name="x2">x-coordinate of the second point.</param>
+            <param name="y2">y-coordinate of the second point.</param>
+            <remarks>All coordinates are expressed in points, measured from the upper-left corner of the page.</remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.DrawLine(C1.Silverlight.Pdf.Pen,System.Windows.Point,System.Windows.Point)">
+            <summary>
+            Draws a line connecting two <see cref="T:System.Windows.Point"/> structures.
+            </summary>
+            <param name="pen"><see cref="T:C1.Silverlight.Pdf.Pen"/> object that determines the color, width, and style of the line.</param>
+            <param name="pt1">The first point.</param>
+            <param name="pt2">The second point.</param>
+            <remarks>All coordinates are expressed in points, measured from the upper-left corner of the page.</remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.DrawLines(C1.Silverlight.Pdf.Pen,System.Windows.Point[])">
+            <summary>
+            Draws a series of line segments that connect an array of <see cref="T:System.Windows.Point"/> structures.
+            </summary>
+            <param name="pen"><see cref="T:C1.Silverlight.Pdf.Pen"/> object that determines the color, width, and style of the line segments.</param>
+            <param name="points">Array of <see cref="T:System.Windows.Point"/> structures that represent the points to connect.</param>
+            <remarks>All coordinates are expressed in points, measured from the upper-left corner of the page.</remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.DrawPolygon(C1.Silverlight.Pdf.Pen,System.Windows.Point[])">
+            <summary>
+            Draws a polygon defined by an array of <see cref="T:System.Windows.Point"/> structures.
+            </summary>
+            <param name="pen"><see cref="T:C1.Silverlight.Pdf.Pen"/> object that determines the color, width, and style of the polygon.</param>
+            <param name="points">Array of <see cref="T:System.Windows.Point"/> structures that represent the vertices of the polygon.</param>
+            <remarks>All coordinates are expressed in points, measured from the upper-left corner of the page.</remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.FillPolygon(System.Windows.Media.Color,System.Windows.Point[])">
+            <summary>
+            Fills a polygon defined by an array of <see cref="T:System.Windows.Point"/> structures.
+            </summary>
+            <param name="color"><see cref="T:System.Windows.Media.Color"/> object that determines the color used to fill the polygon.</param>
+            <param name="points">Array of <see cref="T:System.Windows.Point"/> structures that represent the vertices of the polygon.</param>
+            <remarks>All coordinates are expressed in points, measured from the upper-left corner of the page.</remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.FillPolygon(System.Windows.Media.Color,System.Windows.Point[],System.Windows.Media.FillRule)">
+            <summary>
+            Fills a polygon defined by an array of <see cref="T:System.Windows.Point"/> structures using the specified fill mode.
+            </summary>
+            <param name="color"><see cref="T:System.Windows.Media.Color"/> object that determines the color used to fill the polygon.</param>
+            <param name="points">Array of <see cref="T:System.Windows.Point"/> structures that represent the vertices of the polygon.</param>
+            <param name="fillRule"><see cref="T:System.Windows.Media.FillRule"/> parameter that determines how to handle overlapping areas within the polygon.</param>
+            <remarks>All coordinates are expressed in points, measured from the upper-left corner of the page.</remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.DrawBezier(C1.Silverlight.Pdf.Pen,System.Windows.Point,System.Windows.Point,System.Windows.Point,System.Windows.Point)">
+            <summary>
+            Draws a Bezier spline defined by four <see cref="T:System.Windows.Point"/> structures.
+            </summary>
+            <param name="pen"><see cref="T:C1.Silverlight.Pdf.Pen"/> object that determines the color, width, and style of the Bezier spline.</param>
+            <param name="start"><see cref="T:System.Windows.Point"/> structure that represents the starting point of the curve.</param>
+            <param name="ctl1"><see cref="T:System.Windows.Point"/> structure that represents the first control point for the curve.</param>
+            <param name="ctl2"><see cref="T:System.Windows.Point"/> structure that represents the second control point for the curve.</param>
+            <param name="end"><see cref="T:System.Windows.Point"/> structure that represents the ending point of the curve.</param>
+            <remarks>All coordinates are expressed in points, measured from the upper-left corner of the page.</remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.DrawBeziers(C1.Silverlight.Pdf.Pen,System.Windows.Point[])">
+            <summary>
+            Draws a series of Bezier splines from an array of <see cref="T:System.Windows.Point"/> structures.
+            </summary>
+            <param name="pen"><see cref="T:C1.Silverlight.Pdf.Pen"/> object that determines the color, width, and style of the Bezier splines.</param>
+            <param name="points">Array of <see cref="T:System.Windows.Point"/> structures that represent the points that determine the curve.</param>
+            <remarks>
+            <para>The first spline requires four points, and each additional spline requires
+            three additional points (it starts from the last point in the previous spline). 
+            Therefore, the <paramref name="points"/> array must contain at least four points,
+            and the total length minus one must be a multiple of three.</para>
+            <para>All coordinates are expressed in points, measured from the upper-left corner of the page.</para>
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.DrawEllipse(C1.Silverlight.Pdf.Pen,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Draws an ellipse defined by a bounding rectangle specified by a coordinate pair, a width, and a height.
+            </summary>
+            <param name="pen"><see cref="T:C1.Silverlight.Pdf.Pen"/> object that determines the color, width, and style of the ellipse.</param>
+            <param name="x">x-coordinate of the upper-left corner of the bounding rectangle.</param>
+            <param name="y">x-coordinate of the upper-left corner of the bounding rectangle.</param>
+            <param name="width">Width of the bounding rectangle.</param>
+            <param name="height">Height of the bounding rectangle.</param>
+            <remarks>All coordinates are expressed in points, measured from the upper-left corner of the page.</remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.DrawEllipse(C1.Silverlight.Pdf.Pen,System.Windows.Rect)">
+            <summary>
+            Draws an ellipse defined by a bounding rectangle specified by a <see cref="T:System.Windows.Rect"/> structure.
+            </summary>
+            <param name="pen"><see cref="T:C1.Silverlight.Pdf.Pen"/> object that determines the color, width, and style of the rectangle.</param>
+            <param name="rc"><see cref="T:System.Windows.Rect"/> structure that specifies the bounding rectangle.</param>
+            <remarks>All coordinates are expressed in points, measured from the upper-left corner of the page.</remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.FillEllipse(System.Windows.Media.Color,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Fills the interior of an ellipse defined by a bounding rectangle specified by a coordinate pair, a width, and a height.
+            </summary>
+            <param name="color"><see cref="T:System.Windows.Media.Color"/> object that determines the color used to fill the ellipse.</param>
+            <param name="x">x-coordinate of the upper-left corner of the bounding rectangle.</param>
+            <param name="y">x-coordinate of the upper-left corner of the bounding rectangle.</param>
+            <param name="width">Width of the bounding rectangle.</param>
+            <param name="height">Height of the bounding rectangle.</param>
+            <remarks>All coordinates are expressed in points, measured from the upper-left corner of the page.</remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.FillEllipse(System.Windows.Media.Color,System.Windows.Rect)">
+            <summary>
+            Fills the interior of an ellipse defined by a bounding rectangle specified by a <see cref="T:System.Windows.Rect"/> structure.
+            </summary>
+            <param name="color"><see cref="T:System.Windows.Media.Color"/> object that determines the color used to fill the ellipse.</param>
+            <param name="rc"><see cref="T:System.Windows.Rect"/> structure that specifies the bounding rectangle.</param>
+            <remarks>All coordinates are expressed in points, measured from the upper-left corner of the page.</remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.DrawPie(C1.Silverlight.Pdf.Pen,System.Windows.Rect,System.Double,System.Double)">
+            <summary>
+            Draws a pie shape defined by an ellipse specified by a <see cref="T:System.Windows.Rect"/> structure and two radial lines.
+            </summary>
+            <param name="pen"><see cref="T:C1.Silverlight.Pdf.Pen"/> object that determines the color, width, and style of the pie shape.</param>
+            <param name="rc"><see cref="T:System.Windows.Rect"/> structure that represents the bounding rectangle of the ellipse that contains the pie shape.</param>
+            <param name="startAngle">Angle measured in degrees clockwise from the x-axis to the first side of the pie shape.</param>
+            <param name="sweepAngle">Angle measured in degrees clockwise from the startAngle parameter to the second side of the pie shape.</param>
+            <remarks>All coordinates are expressed in points, measured from the upper-left corner of the page.</remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.FillPie(System.Windows.Media.Color,System.Windows.Rect,System.Double,System.Double)">
+            <summary>
+            Fills a pie shape defined by an ellipse specified by a <see cref="T:System.Windows.Rect"/> structure and two radial lines.
+            </summary>
+            <param name="color"><see cref="T:System.Windows.Media.Color"/> object that determines the color used to fill the pie shape.</param>
+            <param name="rc"><see cref="T:System.Windows.Rect"/> structure that represents the bounding rectangle of the ellipse that contains the pie shape.</param>
+            <param name="startAngle">Angle measured in degrees clockwise from the x-axis to the first side of the pie shape.</param>
+            <param name="sweepAngle">Angle measured in degrees clockwise from the startAngle parameter to the second side of the pie shape.</param>
+            <remarks>All coordinates are expressed in points, measured from the upper-left corner of the page.</remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.DrawArc(C1.Silverlight.Pdf.Pen,System.Windows.Rect,System.Double,System.Double)">
+            <summary>
+            Draws an arc defined by an ellipse specified by a <see cref="T:System.Windows.Rect"/> structure and two radial lines.
+            </summary>
+            <param name="pen"><see cref="T:C1.Silverlight.Pdf.Pen"/> object that determines the color, width, and style of the arc.</param>
+            <param name="rc"><see cref="T:System.Windows.Rect"/> structure that represents the bounding rectangle of the ellipse that contains the arc.</param>
+            <param name="startAngle">Angle measured in degrees clockwise from the x-axis to the first side of the pie shape.</param>
+            <param name="sweepAngle">Angle measured in degrees clockwise from the startAngle parameter to the second side of the pie shape.</param>
+            <remarks>All coordinates are expressed in points, measured from the upper-left corner of the page.</remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.FillArc(System.Windows.Media.Color,System.Windows.Rect,System.Double,System.Double)">
+            <summary>
+            Fills an arc defined by an ellipse specified by a <see cref="T:System.Windows.Rect"/> structure and two radial lines.
+            </summary>
+            <param name="color"><see cref="T:System.Windows.Media.Color"/> object that determines the color used to fill the arc.</param>
+            <param name="rc"><see cref="T:System.Windows.Rect"/> structure that represents the bounding rectangle of the ellipse that contains the pie shape.</param>
+            <param name="startAngle">Angle measured in degrees clockwise from the x-axis to the first side of the pie shape.</param>
+            <param name="sweepAngle">Angle measured in degrees clockwise from the startAngle parameter to the second side of the pie shape.</param>
+            <remarks>All coordinates are expressed in points, measured from the upper-left corner of the page.</remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.DrawImage(System.Windows.Media.Imaging.WriteableBitmap,System.Windows.Rect,C1.Silverlight.Pdf.ContentAlignment,System.Windows.Media.Stretch)">
+            <summary>
+            Draws the specified <see cref="T:System.Windows.Media.Imaging.WriteableBitmap"/> object at the specified location,
+            adjusting the image size as specified by the <paramref name="align"/> and 
+            <paramref name="stretch"/> parameters.
+            </summary>
+            <param name="img"><see cref="T:System.Windows.Media.Imaging.WriteableBitmap"/> object to draw.</param>
+            <param name="rc"><see cref="T:System.Windows.Rect"/> structure that specifies the location of the drawn image, in points from the top left corner of the page.</param>
+            <param name="align"><see cref="T:C1.Silverlight.Pdf.ContentAlignment"/> value that specifies how the image should be aligned within the rectangle.</param>
+            <param name="stretch"><see cref="T:System.Windows.Media.Stretch"/> value that specifies how the image should be sized to fit the rectangle.</param>
+            <example>
+            The code below shows how you can use the <b>DrawImage</b> method can be used to render any 
+            <see cref="T:System.Windows.UIElement"/>. The code creates a <see cref="T:System.Windows.Media.Imaging.WriteableBitmap"/> from the element, 
+            then calls the <b>DrawImage</b> method:
+            <code>
+            void DrawImage(UIElement e, Rect rc, ContentAlignment align, ImageSizeMode mode)
+            {
+              DrawImage(new WriteableBitmap(e, null), rc, align, mode);
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.DrawImage(System.Windows.Media.Imaging.WriteableBitmap,System.Windows.Rect)">
+            <summary>
+            Draws the specified <see cref="T:System.Windows.Media.Imaging.WriteableBitmap"/> object at the specified location,
+            stretching it to fit the destination rectangle.
+            </summary>
+            <param name="img"><see cref="T:System.Windows.Media.Imaging.WriteableBitmap"/> object to draw.</param>
+            <param name="rc"><see cref="T:System.Windows.Rect"/> structure that specifies the location of the drawn image, in points from the top left corner of the page.</param>
+            <example>
+            The code below shows how you can use the <b>DrawImage</b> method can be used to render any 
+            <see cref="T:System.Windows.UIElement"/>. The code creates a <see cref="T:System.Windows.Media.Imaging.WriteableBitmap"/> from the element, 
+            then calls the <b>DrawImage</b> method:
+            <code>
+            void DrawImage(UIElement e, Rect rc)
+            {
+              DrawImage(new WriteableBitmap(e, null), rc);
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.DrawImage(System.Windows.Media.Imaging.WriteableBitmap,System.Windows.Rect,System.Windows.Rect)">
+            <summary>
+            Draws the specified <see cref="T:System.Windows.Media.Imaging.WriteableBitmap"/> object at the specified location,
+            clipping the output to the given clipping rectangle.
+            </summary>
+            <param name="img"><see cref="T:System.Windows.Media.Imaging.WriteableBitmap"/> object to draw.</param>
+            <param name="rc"><see cref="T:System.Windows.Rect"/> structure that specifies the location of the drawn image, in points from the top left corner of the page.</param>
+            <param name="rcClip"><see cref="T:System.Windows.Rect"/> structure that specifies a clipping rectangle on the page. No part of the image is drawn outside the clipping rectangle.</param>
+            <example>
+            The code below shows how you can use the <b>DrawImage</b> method can be used to render any 
+            <see cref="T:System.Windows.UIElement"/>. The code creates a <see cref="T:System.Windows.Media.Imaging.WriteableBitmap"/> from the element, 
+            then calls the <b>DrawImage</b> method:
+            <code>
+            void DrawImage(UIElement e, Rect rc, Rect rcClip)
+            {
+              DrawImage(new WriteableBitmap(e, null), rc, rcClip);
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.DrawElement(System.Windows.FrameworkElement,System.Windows.Rect,C1.Silverlight.Pdf.ContentAlignment,System.Windows.Media.Stretch)">
+            <summary>
+            Draws the specified <see cref="T:System.Windows.Media.Imaging.WriteableBitmap"/> object at the specified location,
+            adjusting the image size as specified by the <paramref name="align"/> and 
+            <paramref name="stretch"/> parameters.
+            </summary>
+            <param name="e"><see cref="T:System.Windows.FrameworkElement"/> to render into the document.</param>
+            <param name="rc"><see cref="T:System.Windows.Rect"/> structure that specifies the location of the drawn element, in points from the top left corner of the page.</param>
+            <param name="align"><see cref="T:C1.Silverlight.Pdf.ContentAlignment"/> value that specifies how the element should be aligned within the rectangle.</param>
+            <param name="stretch"><see cref="T:System.Windows.Media.Stretch"/> value that specifies how the element should be sized to fit the rectangle.</param>
+            <remarks>
+            <para>This method must be called from the main thread. Calling it from a background thread will
+            raise a cross-thread exception when the method tries to access the properties of the
+            <see cref="T:System.Windows.FrameworkElement"/> being rendered.</para>
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.DrawElement(System.Windows.FrameworkElement,System.Windows.Rect,System.Windows.Rect)">
+            <summary>
+            Draws a <see cref="T:System.Windows.FrameworkElement"/> into the document at a specified position.
+            </summary>
+            <param name="e"><see cref="T:System.Windows.FrameworkElement"/> to render into the document.</param>
+            <param name="rc"><see cref="T:System.Windows.Rect"/> where the element will be rendered.</param>
+            <param name="rcClip"><see cref="T:System.Windows.Rect"/> that defines the clipping bounds.</param>
+            <remarks>
+            <para>This method uses a <see cref="T:System.Windows.Media.VisualTreeHelper"/> to render each of the 
+            primitives that compose the root element. It does not convert the element
+            into a bitmap. As a result, the output is smaller and resolution independent;
+            however, the result is not as faithful as a bitmap rendering. To render an
+            element as a bitmaps, create a <see cref="T:System.Windows.Media.Imaging.WriteableBitmap"/> and pass it to the
+            <see cref="M:C1.Silverlight.Pdf.C1PdfDocument.DrawImage(System.Windows.Media.Imaging.WriteableBitmap,System.Windows.Rect)"/> method.</para>
+            <para>This method must be called from the main thread. Calling it from a background thread will
+            raise a cross-thread exception when the method tries to access the properties of the
+            <see cref="T:System.Windows.FrameworkElement"/> being rendered.</para>
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.DrawElement(System.Windows.FrameworkElement,System.Windows.Rect)">
+            <summary>
+            Draws a <see cref="T:System.Windows.FrameworkElement"/> into the document at a specified position.
+            </summary>
+            <param name="e"><see cref="T:System.Windows.FrameworkElement"/> to render into the document.</param>
+            <param name="rc"><see cref="T:System.Windows.Rect"/> where the element will be rendered.</param>
+            <remarks>
+            <para>This method uses a <see cref="T:System.Windows.Media.VisualTreeHelper"/> to render each of the 
+            primitives that compose the root element. It does not convert the element
+            into a bitmap. As a result, the output is smaller and resolution independent;
+            however, the result is not as faithful as a bitmap rendering. To render an
+            element as a bitmaps, create a <see cref="T:System.Windows.Media.Imaging.WriteableBitmap"/> and pass it to the
+            <see cref="M:C1.Silverlight.Pdf.C1PdfDocument.DrawImage(System.Windows.Media.Imaging.WriteableBitmap,System.Windows.Rect)"/> method.</para>
+            <para>This method must be called from the main thread. Calling it from a background thread will
+            raise a cross-thread exception when the method tries to access the properties of the
+            <see cref="T:System.Windows.FrameworkElement"/> being rendered.</para>
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.DrawString(System.Windows.Controls.TextBlock,System.Windows.Rect)">
+            <summary>
+            Draws a string into the specified <see cref="T:System.Windows.Rect"/>.
+            </summary>
+            <param name="tb"><see cref="T:System.Windows.Controls.TextBlock"/> that contains the text and formatting options.</param>
+            <param name="rc"><see cref="T:System.Windows.Rect"/> that specifies the size and position of the text, in points.</param>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.DrawString(System.String,C1.Silverlight.Pdf.Font,System.Windows.Media.Color,System.Windows.Rect)">
+            <summary>
+            Draws a string into the specified <see cref="T:System.Windows.Rect"/>.
+            </summary>
+            <param name="text">Text to draw.</param>
+            <param name="font"><see cref="T:C1.Silverlight.Pdf.Font"/> to use for drawing the text.</param>
+            <param name="color"><see cref="T:System.Windows.Media.Color"/> of the text.</param>
+            <param name="rc"><see cref="T:System.Windows.Rect"/> that specifies the size and position of the text, in points.</param>
+            <returns>The index of the first character in the string that did not fit in the rectangle.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.DrawString(System.String,C1.Silverlight.Pdf.Font,System.Windows.Media.Color,System.Windows.Rect,C1.Silverlight.Pdf.StringFormat)">
+            <summary>
+            Draws a string into the specified <see cref="T:System.Windows.Rect"/>.
+            </summary>
+            <param name="text">Text to draw.</param>
+            <param name="font"><see cref="T:C1.Silverlight.Pdf.Font"/> to use for drawing the text.</param>
+            <param name="color"><see cref="T:System.Windows.Media.Color"/> of the text.</param>
+            <param name="rc"><see cref="T:System.Windows.Rect"/> that specifies the size and position of the text, in points.</param>
+            <param name="fmt"><see cref="T:C1.Silverlight.Pdf.StringFormat"/> that contains formatting options.</param>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.DrawString(System.String,C1.Silverlight.Pdf.Font,System.Windows.Media.Color,System.Windows.Rect,C1.Silverlight.Pdf.StringFormat,System.Int32)">
+            <summary>
+            Draws a string into the specified <see cref="T:System.Windows.Rect"/>.
+            </summary>
+            <param name="text">Text to draw.</param>
+            <param name="font"><see cref="T:C1.Silverlight.Pdf.Font"/> to use for drawing the text.</param>
+            <param name="color"><see cref="T:System.Windows.Media.Color"/> of the text.</param>
+            <param name="rc"><see cref="T:System.Windows.Rect"/> that specifies the size and position of the text, in points.</param>
+            <param name="fmt"><see cref="T:C1.Silverlight.Pdf.StringFormat"/> that contains formatting options.</param>
+            <param name="start">Index of the first character in the <paramref name="text"/> to draw.</param>
+            <returns>The index of the first character in the string that did not fit in the rectangle.</returns>
+            <remarks>
+            <para>The <paramref name="fmt"/> parameter contains properties that specify formatting options. Use the
+            <see cref="P:C1.Silverlight.Pdf.StringFormat.Alignment"/> property to specify horizontal alignment and the
+            <see cref="P:C1.Silverlight.Pdf.StringFormat.LineAlignment"/> property to specify vertical alignment.</para>
+            <para>Use the <see cref="P:C1.Silverlight.Pdf.StringFormat.FormatFlags"/> property to specify clipping and wrapping.</para>
+            <para>Use the <see cref="P:C1.Silverlight.Pdf.StringFormat.Angle"/> property to render text at an angle.</para>
+            <para>The <b>DrawString</b> method returns the index of the first character that was not 
+            printed because it did not fit the output rectangle. You can use this value to make text flow from 
+            page to page, or from one frame to another within a page.</para>
+            </remarks>
+            <example>
+            The code below renders a long string into several pages, using the return value
+            from the <b>DrawString</b> method to determine where to continue printing.
+            <code>
+            // render string spanning multiple pages
+            for (int start = 0; start &lt; int.MaxValue;)
+            {
+            	// render as much as will fit into the rectangle
+            	start = _c1pdf.DrawString(text, font, Brushes.Black, rcPage, start);
+            		
+            	// move on to the next page
+            	_c1pdf.NewPage();
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.MeasureString(System.String,C1.Silverlight.Pdf.Font,System.Double,C1.Silverlight.Pdf.StringFormat)">
+            <summary>
+            Measures the specified string when drawn with the specified <see cref="T:C1.Silverlight.Pdf.Font"/> 
+            object and formatted with the specified <see cref="T:C1.Silverlight.Pdf.StringFormat"/> object.
+            </summary>
+            <param name="text">String to measure.</param>
+            <param name="font"><see cref="T:C1.Silverlight.Pdf.Font"/> object that defines the appearance and size of the text.</param>
+            <param name="width">Maximum width of the string.</param>
+            <param name="fmt">A <see cref="T:C1.Silverlight.Pdf.StringFormat"/> object that determines whether word wrapping is allowed.</param>
+            <returns>The size of the string expressed in points.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.MeasureString(System.String,C1.Silverlight.Pdf.Font,System.Double)">
+            <summary>
+            Measures the specified string when drawn with a given <see cref="T:C1.Silverlight.Pdf.Font"/> object
+            into a rectangle with the specified width. 
+            </summary>
+            <param name="text">String to measure.</param>
+            <param name="font"><see cref="T:C1.Silverlight.Pdf.Font"/> object that defines the appearance and size of the text.</param>
+            <param name="width">Maximum width of the string.</param>
+            <returns>The size of the string expressed in points.</returns>
+            <remarks>This overload wraps the string to prevent any lines from getting
+            wider than the <paramref name="width"/> parameter. The value returned contains
+            the given width and the height needed to render the entire string.
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.MeasureString(System.String,C1.Silverlight.Pdf.Font)">
+            <summary>
+            Measures the specified string when drawn with a given <see cref="T:C1.Silverlight.Pdf.Font"/> object. 
+            </summary>
+            <param name="text">String to measure.</param>
+            <param name="font"><see cref="T:C1.Silverlight.Pdf.Font"/> object that defines the appearance and size of the text.</param>
+            <returns>The size of the string expressed in points.</returns>
+            <remarks>This overload returns the width and height of the string without wrapping.
+            Unless the <paramref name="text"/> parameter contains line break characters, the 
+            height returned corresponds to the font height.</remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.AddBookmark(System.String,System.Int32,System.Double)">
+            <summary>
+            Adds a bookmark to the current page.
+            </summary>
+            <param name="text">Text that appears on the outline tree.</param>
+            <param name="level">Outline level (zero is the top level).</param>
+            <param name="y">Position on the current page where the outline entry is located (in points).</param>
+            <remarks>
+            Most long Pdf documents contain an outline structure that is displayed on a pane 
+            on the left of the reader. The outline makes it easy to browse through a 
+            document's structure and find specific topics. The <b>AddBookmark</b>
+            method allows you to build this outline structure by adding outline entries
+            (bookmarks).</remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.AddBookmark(System.String,System.Int32,System.Int32,System.Double)">
+            <summary>
+            Adds a bookmark to the specified page.
+            </summary>
+            <param name="text">Text that appears on the outline tree.</param>
+            <param name="level">Outline level (zero is the top level).</param>
+            <param name="page">Index of the page that contains the bookmark.</param>
+            <param name="y">Position on the specified page where the outline entry is located (in points).</param>
+            <remarks>
+            Most long Pdf documents contain an outline structure that is displayed on a pane 
+            on the left of the reader. The outline makes it easy to browse through a 
+            document's structure and find specific topics. The <b>AddBookmark</b>
+            method allows you to build this outline structure by adding outline entries
+            (bookmarks).</remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.AddLink(System.String,System.Windows.Rect)">
+            <summary>
+            Adds a hyperlink to the current page.
+            </summary>
+            <param name="url">Link destination (can be a Url, a file name, or a local link destination).</param>
+            <param name="rc">Area on the page that will behave as a link (expressed in points, from the top-left corner of the page).</param>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.AddLink(System.String,System.Int32,System.Windows.Rect)">
+            <summary>
+            Adds a hyperlink to the document.
+            </summary>
+            <param name="url">Link destination (can be a Url, a file name, or a local link destination).</param>
+            <param name="page">Index of the page that contains the hyperlink</param>
+            <param name="rc">Area on the page that will behave as a link (expressed in points, from the top-left corner of the page).</param>
+            <remarks>
+            <para>Hyperlinks can be external (Urls and file names) or local (other locations within the same document).</para>
+            <para>Local links are useful when you want to implement some type of cross-referencing within the document, such 
+            as a table of contents or an index. Local links are identical to regular hyperlinks, except for two things:</para>
+            <para>1) The <paramref name="url"/> parameter must start with a "#", and </para>
+            <para>2) You must specify the target location for the link using the <see cref="M:C1.Silverlight.Pdf.C1PdfDocument.AddTarget(System.String,System.Windows.Rect)"/> method.</para>
+            <para>Note that the <b>AddLink</b> method does not add any visible content to the page, so you will 
+            usually need another command along with <b>AddLink</b> to specify some text or an image that the user 
+            can see, as the example below demonstrates.</para>
+            </remarks>
+            <example>
+            The code below adds a string that says "Visit ComponentOne" and a link that takes the user to the ComponentOne home page:
+            <code>
+            Rect rc = new Rect(50, 50, 100, 15);
+            Font font = new Font("Arial", 10, FontStyle.Underline);
+            _c1pdf.AddLink("http://www.componentone.com", rc);
+            _c1pdf.DrawString("Visit ComponentOne", font, Brushes.Blue, rc);
+            </code>
+            </example>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.AddTarget(System.String,System.Windows.Rect)">
+            <summary>
+            Adds a hyperlink target to the current page.
+            </summary>
+            <param name="name">Name of the target (used in the <see cref="M:C1.Silverlight.Pdf.C1PdfDocument.AddLink(System.String,System.Windows.Rect)"/> method).</param>
+            <param name="rc">Area on the page that will behave as a target (in points from the top-left corner of the page).</param>
+            <remarks>
+            This method is used to add targets for local hyperlinks. See the <see cref="M:C1.Silverlight.Pdf.C1PdfDocument.AddLink(System.String,System.Windows.Rect)"/> method for details and an example.
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.AddTarget(System.String,System.Int32,System.Windows.Rect)">
+            <summary>
+            Adds a hyperlink target to the document.
+            </summary>
+            <param name="name">Name of the target (used in the <see cref="M:C1.Silverlight.Pdf.C1PdfDocument.AddLink(System.String,System.Windows.Rect)"/> method).</param>
+            <param name="page">Index of the page that will contain the hyperlink target.</param>
+            <param name="rc">Area on the page that will behave as a target (in points from the top-left corner of the page).</param>
+            <remarks>
+            This method is used to add targets for local hyperlinks. See the <see cref="M:C1.Silverlight.Pdf.C1PdfDocument.AddLink(System.String,System.Windows.Rect)"/> method for details and an example.
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.AddAttachment(System.String,System.Byte[],System.Windows.Rect)">
+            <summary>
+            Adds a file attachment to the current page.
+            </summary>
+            <param name="fileName">Name of the attachment.</param>
+            <param name="data">Data contained in the attachment.</param>
+            <param name="rc">Area of the page that will contain the attachment (in points measured from the top-left corner of the page).</param>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.AddAttachment(System.String,System.Byte[],System.Windows.Rect,C1.Silverlight.Pdf.AttachmentIconEnum,System.Windows.Media.Color)">
+            <summary>
+            Adds a file attachment to the current page.
+            </summary>
+            <param name="fileName">Name of the attachment.</param>
+            <param name="data">Data contained in the attachment.</param>
+            <param name="rc">Area of the page that will contain the attachment (in points measured from the top-left corner of the page).</param>
+            <param name="icon"><see cref="T:C1.Silverlight.Pdf.AttachmentIconEnum"/> value that determines the appearance of the attachment icon.</param>
+            <param name="iconColor"><see cref="T:System.Windows.Media.Color"/> of the attachment icon.</param>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.C1PdfDocument.AddAttachment(System.String,System.Byte[],System.Windows.Rect,System.Int32,C1.Silverlight.Pdf.AttachmentIconEnum,System.Windows.Media.Color)">
+            <summary>
+            Adds a file attachment to the document.
+            </summary>
+            <param name="fileName">Name of the attachment.</param>
+            <param name="data">Data contained in the attachment.</param>
+            <param name="rc">Area of the page that will contain the attachment (in points measured from the top-left corner of the page).</param>
+            <param name="page">Index of the page that contains the attachment.</param>
+            <param name="icon"><see cref="T:C1.Silverlight.Pdf.AttachmentIconEnum"/> value that determines the appearance of the attachment icon.</param>
+            <param name="iconColor"><see cref="T:System.Windows.Media.Color"/> of the attachment icon.</param>
+            <remarks>
+            When the user moves the mouse over an area of the page that contains an attachment, 
+            the mouse pointer and tool tip change to indicate that the user can retrieve the attachment. 
+            The user can right-click the attachment area to open or save the attachment.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.C1PdfDocument.PaperKind">
+            <summary>
+            Gets or sets the default page size for the document.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.C1PdfDocument.Landscape">
+            <summary>
+            Gets or sets the default page orientation for the document.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.C1PdfDocument.PageSize">
+            <summary>
+            Gets or sets the default page size for the document (in points).
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.C1PdfDocument.CurrentPage">
+            <summary>
+            Gets or sets the index of the current page within the document.
+            </summary>
+            <remarks>
+            <para>The <see cref="P:C1.Silverlight.Pdf.C1PdfDocument.CurrentPage"/> property determines which page of the document should 
+            receive the output from the methods that generate content (e.g. <see cref="M:C1.Silverlight.Pdf.C1PdfDocument.DrawString(System.String,C1.Silverlight.Pdf.Font,System.Windows.Media.Color,System.Windows.Rect,C1.Silverlight.Pdf.StringFormat)"/>).</para>
+            <para>The value is an integer ranging from -1 (no active page) to <b>Pages.Count</b> - 1.</para>
+            <para>You rarely have to use the <see cref="P:C1.Silverlight.Pdf.C1PdfDocument.CurrentPage"/> property while creating a document. 
+            When a <see cref="T:C1.Silverlight.Pdf.C1PdfDocument"/> object is created, a blank page is automatically added 
+            and becomes the current page, so you can immediately start adding content to it.
+            When the <see cref="M:C1.Silverlight.Pdf.C1PdfDocumentBase.NewPage"/> method is invoked, a new page is added to the document 
+            and becomes the current page.</para>
+            <para>The <see cref="P:C1.Silverlight.Pdf.C1PdfDocument.CurrentPage"/> property is useful when you want to reopen pages that 
+            have already been generated and add content to them (for example, page headers and footers).</para>
+            </remarks>
+        </member>
+        <member name="T:C1.Silverlight.Pdf.PdfDocumentInfo">
+            <summary>
+            Contains information about the document. This information includes 
+            the document author, title, keywords, etc.
+            </summary>
+            <remarks>
+            <para>You don't have to provide this information, it is optional. If provided, 
+            it is saved with the document and is available to the reader application.</para>
+            <para>Some reader applications may allow users to search documents by author, 
+            subject, or keyword.</para>
+            <para>The Adobe Acrobat Reader 5 does not provide such search mechanism, 
+            but it does allow users to view the document information.</para>
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.PdfDocumentInfo.Title">
+            <summary>
+            Gets or sets the title of the Pdf document.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.PdfDocumentInfo.Creator">
+            <summary>
+            Gets or sets the name of the application that created the original document.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.PdfDocumentInfo.Producer">
+            <summary>
+            Gets or sets the name of the application that created the Pdf document.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.PdfDocumentInfo.Author">
+            <summary>
+            Gets or sets the name of the person that created the Pdf document.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.PdfDocumentInfo.Subject">
+            <summary>
+            Gets or sets the subject of the Pdf document.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.PdfDocumentInfo.Keywords">
+            <summary>
+            Gets or sets keywords associated with the Pdf document.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.PdfDocumentInfo.CreationDate">
+            <summary>
+            Gets or sets the creation date and time of the Pdf document.
+            </summary>
+            <remarks>
+            <para>The default value for this property is the <b>DateTime.MinValue</b>, which
+            causes <see cref="T:C1.Silverlight.Pdf.C1PdfDocument"/> to use the date and time when the document
+            is saved as the creation date.</para>
+            </remarks>
+        </member>
+        <member name="T:C1.Silverlight.Pdf.PdfFontCollection">
+            <summary>
+            PdfFontCollection
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Pdf.PdfFont">
+            <summary>
+            PdfFont
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Pdf.PdfImageCollection">
+            <summary>
+            PdfImageCollection
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Pdf.PdfImage">
+            <summary>
+            PdfImage
+            store an image to allow reuse, write it out to Pdf format
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Pdf.PdfLink">
+            <summary>
+            PdfLink
+            a link to an external document (URI) or to a location within
+            this document (PdfTarget).
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Pdf.PdfTarget">
+            <summary>
+            PdfTarget
+            target areas for internal links.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Pdf.PdfObjectCollection">
+            <summary>
+            PdfObjectCollection
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Pdf.PdfObject">
+            <summary>
+            PdfObject
+            simple class used to manage unique object IDs and the position
+            of each object in the output stream.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Pdf.PdfPageCollection">
+            <summary>
+            A collection of <see cref="T:C1.Silverlight.Pdf.PdfPage"/> objects that make up the document.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.PdfPageCollection.Add(C1.Silverlight.Pdf.PdfPage)">
+            <summary>
+            Adds a page to the document.
+            </summary>
+            <param name="page"><see cref="T:C1.Silverlight.Pdf.PdfPage"/> to add to the document.</param>
+            <returns>The index of the new page in the document.</returns>
+            <remarks>
+            <para>Since the <see cref="T:C1.Silverlight.Pdf.PdfPage"/> class has no public constructors, the only 
+            way to use this overload is to remove an existing page from the document 
+            first, then add that page back into the document.</para>
+            <para>Each page can appear only once in the document. Trying to add the same 
+            page twice will throw an exception.</para>
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.PdfPageCollection.Insert(System.Int32,C1.Silverlight.Pdf.PdfPage)">
+            <summary>
+            Inserts a page at a specific position in the document.
+            </summary>
+            <param name="index">Position where the new page will be inserted in the document.</param>
+            <param name="page"><see cref="T:C1.Silverlight.Pdf.PdfPage"/> to add to the document.</param>
+            <remarks>
+            <para>Since the <see cref="T:C1.Silverlight.Pdf.PdfPage"/> class has no public constructors, the only 
+            way to use this overload is to remove an existing page from the document 
+            first, then add that page back into the document.</para>
+            <para>Each page can appear only once in the document. Trying to add the same 
+            page twice will throw an exception.</para>
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.PdfPageCollection.Remove(C1.Silverlight.Pdf.PdfPage)">
+            <summary>
+            Removes a page from a document.
+            </summary>
+            <param name="page"><see cref="T:C1.Silverlight.Pdf.PdfPage"/> to remove from the document.</param>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.PdfPageCollection.RemoveAt(System.Int32)">
+            <summary>
+            Removes a page at a specific position from the document.
+            </summary>
+            <param name="index">Index of the page to be removed from the document.</param>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.PdfPageCollection.AddRange(System.Collections.ICollection)">
+            <summary>
+            Adds the elements of an <see cref="T:System.Collections.ICollection"/> to the end of the document.
+            </summary>
+            <param name="c">Collection of <see cref="T:C1.Silverlight.Pdf.PdfPage"/> objects to add to the document.</param>
+            <remarks>
+            <para>Since the <see cref="T:C1.Silverlight.Pdf.PdfPage"/> class has no public constructors, the only 
+            way to use this overload is to remove existing pages from the document 
+            first, then add them back into the document.</para>
+            <para>Each page can appear only once in the document. Trying to add the same 
+            page twice will throw an exception.</para>
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.PdfPageCollection.InsertRange(System.Int32,System.Collections.ICollection)">
+            <summary>
+            Inserts the elements of an <see cref="T:System.Collections.ICollection"/> at a specified position 
+            in the document.
+            </summary>
+            <param name="index">Position where the new pages will be inserted.</param>
+            <param name="c">Collection of <see cref="T:C1.Silverlight.Pdf.PdfPage"/> objects to add to the document.</param>
+            <remarks>
+            <para>Since the <see cref="T:C1.Silverlight.Pdf.PdfPage"/> class has no public constructors, the only 
+            way to use this overload is to remove existing pages from the document 
+            first, then add them back into the document.</para>
+            <para>Each page can appear only once in the document. Trying to add the same 
+            page twice will throw an exception.</para>
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.PdfPageCollection.RemoveRange(System.Int32,System.Int32)">
+            <summary>
+            Removes a range of pages from the document.
+            </summary>
+            <param name="index">Index of the first page to remove.</param>
+            <param name="count">Number of pages to remove from the document.</param>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.PdfPageCollection.Add">
+            <summary>
+            Creates a new <see cref="T:C1.Silverlight.Pdf.PdfPage"/> and adds it to the end of the document.
+            </summary>
+            <returns>The index of the new page.</returns>
+            <remarks>
+            <para>The size of the new page is determined by the <see cref="P:C1.Silverlight.Pdf.C1PdfDocument.PageSize"/> 
+            property of the parent document.</para>
+            <para>The new page becomes current after it is added to the document (see the 
+            <see cref="P:C1.Silverlight.Pdf.C1PdfDocument.CurrentPage"/> property).</para>
+            <para>You can also add pages to a <see cref="T:C1.Silverlight.Pdf.C1PdfDocument"/> by calling the 
+            <see cref="M:C1.Silverlight.Pdf.C1PdfDocumentBase.NewPage"/> method.</para>
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.PdfPageCollection.Add(System.Windows.Size)">
+            <summary>
+            Creates a new <see cref="T:C1.Silverlight.Pdf.PdfPage"/> with the specified size and adds it to 
+            the end of the document.
+            </summary>
+            <param name="pageSize">The size of the new page, in points.</param>
+            <returns>The index of the new page.</returns>
+            <remarks>
+            <para>The new page becomes current after it is added to the document (see the <see cref="P:C1.Silverlight.Pdf.C1PdfDocument.CurrentPage"/> property).</para>
+            <para>You can also add pages to a <see cref="T:C1.Silverlight.Pdf.C1PdfDocument"/> by calling the <see cref="M:C1.Silverlight.Pdf.C1PdfDocumentBase.NewPage"/> method.</para>
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.PdfPageCollection.Add(C1.Silverlight.Pdf.PaperKind)">
+            <summary>
+            Creates a new <see cref="T:C1.Silverlight.Pdf.PdfPage"/> with the specified size and adds it to 
+            the end of the document.
+            </summary>
+            <param name="paperKind">The size of the new page, expressed as a <see cref="T:C1.Silverlight.Pdf.PaperKind"/>.</param>
+            <returns>The index of the new page.</returns>
+            <remarks>
+            <para>The new page becomes current after it is added to the document (see the <see cref="P:C1.Silverlight.Pdf.C1PdfDocument.CurrentPage"/> property).</para>
+            <para>You can also add pages to a <see cref="T:C1.Silverlight.Pdf.C1PdfDocument"/> by calling the <see cref="M:C1.Silverlight.Pdf.C1PdfDocumentBase.NewPage"/> method.</para>
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.PdfPageCollection.Insert(System.Int32)">
+            <summary>
+            Creates a new page and inserts it at a specific position in the document.
+            </summary>
+            <param name="index">The position where the new page will be inserted.</param>
+            <remarks>
+            <para>The size of the new page is determined by the <see cref="P:C1.Silverlight.Pdf.C1PdfDocument.PageSize"/> property 
+            of the parent document.</para>
+            <para>The new page becomes current after it is added to the document (see the <see cref="P:C1.Silverlight.Pdf.C1PdfDocument.CurrentPage"/> property).</para>
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.PdfPageCollection.Insert(System.Int32,System.Windows.Size)">
+            <summary>
+            Creates a new page with the specified size and inserts it at a specific 
+            position in the document.
+            </summary>
+            <param name="index">The position where the new page will be inserted.</param>
+            <param name="pageSize">The size of the new page, expressed in points.</param>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.PdfPageCollection.Insert(System.Int32,C1.Silverlight.Pdf.PaperKind)">
+            <summary>
+            Creates a new page with the specified size and inserts it at a specific 
+            position in the document.
+            </summary>
+            <param name="index">The position where the new page will be inserted.</param>
+            <param name="paperKind">The size of the new page, expressed as a <see cref="T:C1.Silverlight.Pdf.PaperKind"/>.</param>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.PdfPageCollection.Clear">
+            <summary>
+            Removes all pages from the document.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.PdfPageCollection.Item(System.Int32)">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.Pdf.PdfPage"/> at a specific position in the document.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Pdf.PdfPage">
+            <summary>
+            PdfPage
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.PdfPage.Tag">
+            <summary>
+            Gets or sets an object associated with the page that contains data
+            useful to the application.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Pdf.PdfSecurity">
+            <summary>
+            Provides security and encryption services and manages permissions for 
+            <see cref="T:C1.Silverlight.Pdf.C1PdfDocument"/> objects.
+            </summary>
+            <remarks>
+            <para><see cref="T:C1.Silverlight.Pdf.PdfSecurity"/> has properties that allow you to specify 
+            owner and user passwords for a <see cref="T:C1.Silverlight.Pdf.C1PdfDocument"/>. 
+            The <see cref="P:C1.Silverlight.Pdf.PdfSecurity.OwnerPassword"/> is required to change passwords and permissions.
+            The <see cref="P:C1.Silverlight.Pdf.PdfSecurity.UserPassword"/>  is required to open the document.</para>
+            <para><see cref="T:C1.Silverlight.Pdf.PdfSecurity"/> also has properties that allow you to specify 
+            what permissions a regular user should have. For example, you may allow users 
+            to see the document but not to print or edit it.</para>
+            <para>You can specify permissions and set only the <see cref="P:C1.Silverlight.Pdf.PdfSecurity.OwnerPassword"/>, 
+            leaving the <see cref="P:C1.Silverlight.Pdf.PdfSecurity.UserPassword"/> empty. In this case, anyone will be 
+            allowed to open the document, but only the owner will be allowed to change 
+            the permissions. </para>
+            <para>Note that the encryption scheme used by Pdf is public and is not 100% 
+            secure. There are ways to crack encrypted Pdf documents. The security provided 
+            is adequate to protect your documents from most casual attacks, but if your 
+            data is truly sensitive you should not rely on Pdf encryption alone.</para>
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.PdfSecurity.OwnerPassword">
+            <summary>
+            Gets or sets the password required to change permissions for the <see cref="T:C1.Silverlight.Pdf.C1PdfDocument"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.PdfSecurity.UserPassword">
+            <summary>
+            Gets or sets the password required to open the <see cref="T:C1.Silverlight.Pdf.C1PdfDocument"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.PdfSecurity.AllowPrint">
+            <summary>
+            Gets or sets whether the user can print the <see cref="T:C1.Silverlight.Pdf.C1PdfDocument"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.PdfSecurity.AllowCopyContent">
+            <summary>
+            Gets or sets whether the user can copy contents from the <see cref="T:C1.Silverlight.Pdf.C1PdfDocument"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.PdfSecurity.AllowEditContent">
+            <summary>
+            Gets or sets whether the user can edit the contents of the <see cref="T:C1.Silverlight.Pdf.C1PdfDocument"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.PdfSecurity.AllowEditAnnotations">
+            <summary>
+            Gets or sets whether the user can edit annotations in the <see cref="T:C1.Silverlight.Pdf.C1PdfDocument"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Pdf.PageLayout">
+            <summary>
+            Specifies the page layout to be used when the document is opened.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PageLayout.ViewerDefault">
+            <summary>
+            Do not specify a layout and use the current viewer default.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PageLayout.SinglePage">
+            <summary>
+            Display one page at a time.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PageLayout.OneColumn">
+            <summary>
+            Display the pages in one column.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PageLayout.TwoColumnLeft">
+            <summary>
+            Display the pages in two columns, with odd-numbered pages on the left.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PageLayout.TwoColumnRight">
+            <summary>
+            Display the pages in two columns, with odd-numbered pages on the right.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Pdf.PageMode">
+            <summary>
+            Specifies how the document should be displayed when opened.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PageMode.Automatic">
+            <summary>
+            Document outline visible if available.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PageMode.UseNone">
+            <summary>
+            Neither document outline nor thumbnail images visible.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PageMode.UseOutlines">
+            <summary>
+            Document outline visible.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PageMode.UseThumbs">
+            <summary>
+            Thumbnail images visible.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PageMode.FullScreen">
+            <summary>
+            Full-screen mode, with no menu bar, window controls, or any other window visible.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Pdf.PdfViewerPreferences">
+            <summary>
+            Represents viewer preferences to be used when displaying the document.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.PdfViewerPreferences.PageMode">
+            <summary>
+            Gets or sets how the document should be displayed when opened.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.PdfViewerPreferences.PageLayout">
+            <summary>
+            Gets or sets the page layout to be used when the document is opened.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.PdfViewerPreferences.HideToolBar">
+            <summary>
+            Gets or sets whether to hide the viewer tool bars when the document is active.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.PdfViewerPreferences.HideMenuBar">
+            <summary>
+            Gets or sets whether to hide the viewer menu bar when the document is active.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.PdfViewerPreferences.FitWindow">
+            <summary>
+            Gets or sets whether to resize the document's window to fit the size of the first displayed page.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.PdfViewerPreferences.CenterWindow">
+            <summary>
+            Gets or sets whether to position the document's window in the center of the screen.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Pdf.DashStyle">
+            <summary>
+            Specifies the style of dashed lines drawn with a <see cref="T:C1.Silverlight.Pdf.Pen"/> object.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.DashStyle.Solid">
+            <summary>
+            Specifies a solid line.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.DashStyle.Dash">
+            <summary>
+            Specifies a line consisting of dashes.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.DashStyle.Dot">
+            <summary>
+            Specifies a line consisting of dots.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.DashStyle.DashDot">
+            <summary>
+            Specifies a line consisting of a repeating pattern of dash-dot.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.DashStyle.DashDotDot">
+            <summary>
+            Specifies a line consisting of a repeating pattern of dash-dot-dot.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.DashStyle.Custom">
+            <summary>
+            Specifies a user-defined custom dash style.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Pdf.ContentAlignment">
+            <summary>
+            Specifies alignment of content within a layout rectangle.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.ContentAlignment.TopLeft">
+            <summary>
+            Content is rendered on the top-left corner of the layout rectangle.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.ContentAlignment.TopCenter">
+            <summary>
+            Content is centered on the top edge of the layout rectangle.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.ContentAlignment.TopRight">
+            <summary>
+            Content is rendered on the top-right corner of the layout rectangle.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.ContentAlignment.MiddleLeft">
+            <summary>
+            Content is centered on the left edge of the layout rectangle.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.ContentAlignment.MiddleCenter">
+            <summary>
+            Content is centered on the layout rectangle.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.ContentAlignment.MiddleRight">
+            <summary>
+            Content is centered on the right edge of the layout rectangle.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.ContentAlignment.BottomLeft">
+            <summary>
+            Content is rendered on the bottom left corner of the layout rectangle.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.ContentAlignment.BottomCenter">
+            <summary>
+            Content is centered on the bottom edge of the layout rectangle.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.ContentAlignment.BottomRight">
+            <summary>
+            Content is rendered on the bottom right corner of the layout rectangle.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Pdf.PaperKind">
+            <summary>
+            Specifies the standard paper sizes.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.Custom">
+            <summary>
+            The paper size is defined by the user.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.Letter">
+            <summary>
+            Letter paper (8.5 in. by 11 in.).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.Legal">
+            <summary>
+            Legal paper (8.5 in. by 14 in.).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.A4">
+            <summary>
+            A4 paper (210 mm by 297 mm).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.CSheet">
+            <summary>
+            C paper (17 in. by 22 in.).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.DSheet">
+            <summary>
+            D paper (22 in. by 34 in.).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.ESheet">
+            <summary>
+            E paper (34 in. by 44 in.).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.LetterSmall">
+            <summary>
+            Letter small paper (8.5 in. by 11 in.).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.Tabloid">
+            <summary>
+            Tabloid paper (11 in. by 17 in.).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.Ledger">
+            <summary>
+            Ledger paper (17 in. by 11 in.).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.Statement">
+            <summary>
+            Statement paper (5.5 in. by 8.5 in.).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.Executive">
+            <summary>
+            Executive paper (7.25 in. by 10.5 in.).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.A3">
+            <summary>
+            A3 paper (297 mm by 420 mm).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.A4Small">
+            <summary>
+            A4 small paper (210 mm by 297 mm).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.A5">
+            <summary>
+            A5 paper (148 mm by 210 mm).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.B4">
+            <summary>
+            B4 paper (250 mm by 353 mm).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.B5">
+            <summary>
+            B5 paper (176 mm by 250 mm).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.Folio">
+            <summary>
+            Folio paper (8.5 in. by 13 in.).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.Quarto">
+            <summary>
+            Quarto paper (215 mm by 275 mm).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.Standard10x14">
+            <summary>
+            Standard paper (10 in. by 14 in.).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.Standard11x17">
+            <summary>
+            Standard paper (11 in. by 17 in.).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.Note">
+            <summary>
+            Note paper (8.5 in. by 11 in.).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.Number9Envelope">
+            <summary>
+            #9 envelope (3.875 in. by 8.875 in.).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.Number10Envelope">
+            <summary>
+            #10 envelope (4.125 in. by 9.5 in.).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.Number11Envelope">
+            <summary>
+            #11 envelope (4.5 in. by 10.375 in.).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.Number12Envelope">
+            <summary>
+            #12 envelope (4.75 in. by 11 in.).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.Number14Envelope">
+            <summary>
+            #14 envelope (5 in. by 11.5 in.).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.DLEnvelope">
+            <summary>
+            DL envelope (110 mm by 220 mm).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.C5Envelope">
+            <summary>
+            C5 envelope (162 mm by 229 mm).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.C3Envelope">
+            <summary>
+            C3 envelope (324 mm by 458 mm).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.C4Envelope">
+            <summary>
+            C4 envelope (229 mm by 324 mm).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.C6Envelope">
+            <summary>
+            C6 envelope (114 mm by 162 mm).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.C65Envelope">
+            <summary>
+            C65 envelope (114 mm by 229 mm).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.B4Envelope">
+            <summary>
+            B4 envelope (250 mm by 353 mm).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.B5Envelope">
+            <summary>
+            B5 envelope (176 mm by 250 mm).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.B6Envelope">
+            <summary>
+            B6 envelope (176 mm by 125 mm).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.ItalyEnvelope">
+            <summary>
+            Italy envelope (110 mm by 230 mm).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.MonarchEnvelope">
+            <summary>
+            Monarch envelope (3.875 in. by 7.5 in.).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.PersonalEnvelope">
+            <summary>
+            6 3/4 envelope (3.625 in. by 6.5 in.).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.USStandardFanfold">
+            <summary>
+            US standard fanfold (14.875 in. by 11 in.).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.GermanStandardFanfold">
+            <summary>
+            German standard fanfold (8.5 in. by 12 in.).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.GermanLegalFanfold">
+            <summary>
+            German legal fanfold (8.5 in. by 13 in.).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.IsoB4">
+            <summary>
+            ISO B4 (250 mm by 353 mm).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.JapanesePostcard">
+            <summary>
+            Japanese postcard (100 mm by 148 mm).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.Standard9x11">
+            <summary>
+            Standard paper (9 in. by 11 in.).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.Standard10x11">
+            <summary>
+            Standard paper (10 in. by 11 in.).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.Standard15x11">
+            <summary>
+            Standard paper (15 in. by 11 in.).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.InviteEnvelope">
+            <summary>
+            Invitation envelope (220 mm by 220 mm).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.LetterExtra">
+            <summary>
+            Letter extra paper (9.275 in. by 12 in.). This value is specific to the PostScript driver and is used only by Linotronic printers in order to conserve paper.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.LegalExtra">
+            <summary>
+            Legal extra paper (9.275 in. by 15 in.). This value is specific to the PostScript driver and is used only by Linotronic printers in order to conserve paper.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.TabloidExtra">
+            <summary>
+            Tabloid extra paper (11.69 in. by 18 in.). This value is specific to the PostScript driver and is used only by Linotronic printers in order to conserve paper.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.A4Extra">
+            <summary>
+            A4 extra paper (236 mm by 322 mm). This value is specific to the PostScript driver and is used only by Linotronic printers to help save paper.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.LetterTransverse">
+            <summary>
+            Letter transverse paper (8.275 in. by 11 in.).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.A4Transverse">
+            <summary>
+            A4 transverse paper (210 mm by 297 mm).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.LetterExtraTransverse">
+            <summary>
+            Letter extra transverse paper (9.275 in. by 12 in.).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.APlus">
+            <summary>
+            SuperA/SuperA/A4 paper (227 mm by 356 mm).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.BPlus">
+            <summary>
+            SuperB/SuperB/A3 paper (305 mm by 487 mm).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.LetterPlus">
+            <summary>
+            Letter plus paper (8.5 in. by 12.69 in.).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.A4Plus">
+            <summary>
+            A4 plus paper (210 mm by 330 mm).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.A5Transverse">
+            <summary>
+            A5 transverse paper (148 mm by 210 mm).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.B5Transverse">
+            <summary>
+            JIS B5 transverse paper (182 mm by 257 mm).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.A3Extra">
+            <summary>
+            A3 extra paper (322 mm by 445 mm).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.A5Extra">
+            <summary>
+            A5 extra paper (174 mm by 235 mm).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.B5Extra">
+            <summary>
+            ISO B5 extra paper (201 mm by 276 mm).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.A2">
+            <summary>
+            A2 paper (420 mm by 594 mm).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.A3Transverse">
+            <summary>
+            A3 transverse paper (297 mm by 420 mm).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.A3ExtraTransverse">
+            <summary>
+            A3 extra transverse paper (322 mm by 445 mm).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.JapaneseDoublePostcard">
+            <summary>
+            Japanese double postcard (200 mm by 148 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.A6">
+            <summary>
+            A6 paper (105 mm by 148 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.JapaneseEnvelopeKakuNumber2">
+            <summary>
+            Japanese Kaku #2 envelope. Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.JapaneseEnvelopeKakuNumber3">
+            <summary>
+            Japanese Kaku #3 envelope. Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.JapaneseEnvelopeChouNumber3">
+            <summary>
+            Japanese Chou #3 envelope. Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.JapaneseEnvelopeChouNumber4">
+            <summary>
+            Japanese Chou #4 envelope. Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.LetterRotated">
+            <summary>
+            Letter rotated paper (11 in. by 8.5 in.).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.A3Rotated">
+            <summary>
+            A3 rotated paper (420 mm by 297 mm).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.A4Rotated">
+            <summary>
+            A4 rotated paper (297 mm by 210 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.A5Rotated">
+            <summary>
+            A5 rotated paper (210 mm by 148 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.B4JisRotated">
+            <summary>
+            JIS B4 rotated paper (364 mm by 257 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.B5JisRotated">
+            <summary>
+            JIS B5 rotated paper (257 mm by 182 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.JapanesePostcardRotated">
+            <summary>
+            Japanese rotated postcard (148 mm by 100 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.JapaneseDoublePostcardRotated">
+            <summary>
+            Japanese rotated double postcard (148 mm by 200 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.A6Rotated">
+            <summary>
+            A6 rotated paper (148 mm by 105 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.JapaneseEnvelopeKakuNumber2Rotated">
+            <summary>
+            Japanese rotated Kaku #2 envelope. Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.JapaneseEnvelopeKakuNumber3Rotated">
+            <summary>
+            Japanese rotated Kaku #3 envelope. Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.JapaneseEnvelopeChouNumber3Rotated">
+            <summary>
+            Japanese rotated Chou #3 envelope. Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.JapaneseEnvelopeChouNumber4Rotated">
+            <summary>
+            Japanese rotated Chou #4 envelope. Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.B6Jis">
+            <summary>
+            JIS B6 paper (128 mm by 182 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.B6JisRotated">
+            <summary>
+            JIS B6 rotated paper (182 mm by 128 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.Standard12x11">
+            <summary>
+            Standard paper (12 in. by 11 in.). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.JapaneseEnvelopeYouNumber4">
+            <summary>
+            Japanese You #4 envelope. Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.JapaneseEnvelopeYouNumber4Rotated">
+            <summary>
+            Japanese You #4 rotated envelope. Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.Prc16K">
+            <summary>
+            People's Republic of China 16K paper (146 mm by 215 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.Prc32K">
+            <summary>
+            People's Republic of China 32K paper (97 mm by 151 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.Prc32KBig">
+            <summary>
+            People's Republic of China 32K big paper (97 mm by 151 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.PrcEnvelopeNumber1">
+            <summary>
+            People's Republic of China #1 envelope (102 mm by 165 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.PrcEnvelopeNumber2">
+            <summary>
+            People's Republic of China #2 envelope (102 mm by 176 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.PrcEnvelopeNumber3">
+            <summary>
+            People's Republic of China #3 envelope (125 mm by 176 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.PrcEnvelopeNumber4">
+            <summary>
+            People's Republic of China #4 envelope (110 mm by 208 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.PrcEnvelopeNumber5">
+            <summary>
+            People's Republic of China #5 envelope (110 mm by 220 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.PrcEnvelopeNumber6">
+            <summary>
+            People's Republic of China #6 envelope (120 mm by 230 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.PrcEnvelopeNumber7">
+            <summary>
+            People's Republic of China #7 envelope (160 mm by 230 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.PrcEnvelopeNumber8">
+            <summary>
+            People's Republic of China #8 envelope (120 mm by 309 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.PrcEnvelopeNumber9">
+            <summary>
+            People's Republic of China #9 envelope (229 mm by 324 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.PrcEnvelopeNumber10">
+            <summary>
+            People's Republic of China #10 envelope (324 mm by 458 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.Prc16KRotated">
+            <summary>
+            People's Republic of China 16K rotated paper (146 mm by 215 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.Prc32KRotated">
+            <summary>
+            People's Republic of China 32K rotated paper (97 mm by 151 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.Prc32KBigRotated">
+            <summary>
+            People's Republic of China 32K big rotated paper (97 mm by 151 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.PrcEnvelopeNumber1Rotated">
+            <summary>
+            People's Republic of China #1 rotated envelope (165 mm by 102 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.PrcEnvelopeNumber2Rotated">
+            <summary>
+            People's Republic of China #2 rotated envelope (176 mm by 102 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.PrcEnvelopeNumber3Rotated">
+            <summary>
+            People's Republic of China #3 rotated envelope (176 mm by 125 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.PrcEnvelopeNumber4Rotated">
+            <summary>
+            People's Republic of China #4 rotated envelope (208 mm by 110 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.PrcEnvelopeNumber5Rotated">
+            <summary>
+            People's Republic of China Envelope #5 rotated envelope (220 mm by 110 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.PrcEnvelopeNumber6Rotated">
+            <summary>
+            People's Republic of China #6 rotated envelope (230 mm by 120 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.PrcEnvelopeNumber7Rotated">
+            <summary>
+            People's Republic of China #7 rotated envelope (230 mm by 160 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.PrcEnvelopeNumber8Rotated">
+            <summary>
+            People's Republic of China #8 rotated envelope (309 mm by 120 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.PrcEnvelopeNumber9Rotated">
+            <summary>
+            People's Republic of China #9 rotated envelope (324 mm by 229 mm). Requires Windows 98, Windows NT 4.0, or later.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PaperKind.PrcEnvelopeNumber10Rotated">
+            <summary>
+            People's Republic of China #10 rotated envelope (458 mm by 324 mm). Requires Windows 98, Windows NT 4.0, or later.    }
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Pdf.PdfFontStyle">
+            <summary>
+            Specifies style information applied to text.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PdfFontStyle.Bold">
+            <summary>
+            Bold text.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PdfFontStyle.Italic">
+            <summary>
+            Italic text.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PdfFontStyle.Regular">
+            <summary>
+            Normal text.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PdfFontStyle.Strikeout">
+            <summary>
+            Text with a line through the middle.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.PdfFontStyle.Underline">
+            <summary>
+            Underlined text.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Pdf.Font">
+            <summary>
+            Defines a format for text, including font face, size, and style attributes.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.Font.#ctor(System.String,System.Double,C1.Silverlight.Pdf.PdfFontStyle)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Pdf.Font"/> object.
+            </summary>
+            <param name="name">Font face.</param>
+            <param name="sizeInPoints">Font size in points.</param>
+            <param name="style">Font style attributes.</param>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.Font.#ctor(System.String,System.Double)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Pdf.Font"/> object.
+            </summary>
+            <param name="name">Font face.</param>
+            <param name="sizeInPoints">Font size in points.</param>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.Font.#ctor(System.Windows.Controls.TextBlock,System.Windows.Documents.Inline)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Pdf.Font"/> object.
+            </summary>
+            <param name="tb"><see cref="T:System.Windows.Controls.TextBlock"/> that contains a scaling transform.</param>
+            <param name="inline"><see cref="T:System.Windows.Documents.Inline"/> that contains a font specification.</param>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.Font.Name">
+            <summary>
+            Gets the font name.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.Font.Size">
+            <summary>
+            Gets the font size in points.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.Font.Style">
+            <summary>
+            Gets the font style attributes.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.Font.Bold">
+            <summary>
+            Gets a value that determines whether this font is bold.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.Font.Italic">
+            <summary>
+            Gets a value that determines whether this font is italic.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.Font.Underline">
+            <summary>
+            Gets a value that determines whether this font is underlined.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.Font.Strikeout">
+            <summary>
+            Gets a value that determines whether this font has a horizontal line through it.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Pdf.Pen">
+            <summary>
+            Represents an object used to draw lines and curves.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.Pen.#ctor(System.Windows.Media.Color)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Pdf.Pen"/>.
+            </summary>
+            <param name="color">Color of the lines drawn with this pen.</param>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.Pen.#ctor(System.Windows.Media.Color,System.Double)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Pdf.Pen"/>.
+            </summary>
+            <param name="color">Color of the lines drawn with this pen.</param>
+            <param name="width">Width of the lines drawn with this pen in points.</param>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.Pen.op_Implicit(System.Windows.Media.Color)~C1.Silverlight.Pdf.Pen">
+            <summary>
+            Implicitly converts a <see cref="P:C1.Silverlight.Pdf.Pen.Color"/> to a <see cref="T:C1.Silverlight.Pdf.Pen"/>.
+            </summary>
+            <param name="color">The <see cref="P:C1.Silverlight.Pdf.Pen.Color"/> value.</param>
+            <returns>A <see cref="T:C1.Silverlight.Pdf.Pen"/> with the specified color.</returns>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.Pen.Color">
+            <summary>
+            Gets or sets the pen color.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.Pen.Width">
+            <summary>
+            Gets or sets the pen width.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.Pen.StartCap">
+            <summary>
+            Gets or sets the cap style used to draw line ends with this pen.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.Pen.LineJoin">
+            <summary>
+            Gets or sets the style used to join lines drawn with this pen.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.Pen.DashStyle">
+            <summary>
+            Gets or sets the style of dashed lines drawn with this pen.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.Pen.DashPattern">
+            <summary>
+            Gets or sets the custom dash pattern of lines drawn with this pen.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.Pen.DashOffset">
+            <summary>
+            Gets or sets the distance within the dash pattern where a dash begins. The default value is 0.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Pdf.StringFormatFlags">
+            <summary>
+            Specifies the display and layout information for strings.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.StringFormatFlags.DirectionRightToLeft">
+            <summary>
+            Text is displayed from right to left.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.StringFormatFlags.DirectionVertical">
+            <summary>
+            Text is displayed in the vertical direction.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.StringFormatFlags.DisplayFormatControl">
+            <summary>
+            Show control characters as glyphs.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.StringFormatFlags.FitBlackBox">
+            <summary>
+            Allow parts of characters to overhang the layout rectangle.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.StringFormatFlags.LineLimit">
+            <summary>
+            Only entire lines are laid out in the layout rectangle.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.StringFormatFlags.MeasureTrailingSpaces">
+            <summary>
+            Includes the whitespace at the end of lines when laying out the text.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.StringFormatFlags.NoClip">
+            <summary>
+            Allow text to render outside the layout rectangle.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.StringFormatFlags.NoFontFallback">
+            <summary>
+            Disable fallback to alternate fonts when requested font is not available.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Pdf.StringFormatFlags.NoWrap">
+            <summary>
+            Disable wrapping within the layout rectangle.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Pdf.StringFormat">
+            <summary>
+            Encapsulates text layout information.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.StringFormat.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Pdf.StringFormat"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Pdf.StringFormat.#ctor(System.Windows.Controls.TextBlock)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Pdf.StringFormat"/>.
+            </summary>
+            <param name="tb"><see cref="T:System.Windows.Controls.TextBlock"/> used to initialize the new <see cref="T:C1.Silverlight.Pdf.StringFormat"/>.</param>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.StringFormat.GenericDefault">
+            <summary>
+            Gets a reference to the default <see cref="T:C1.Silverlight.Pdf.StringFormat"/> object.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.StringFormat.Alignment">
+            <summary>
+            Gets or sets the horizontal alignment of text.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.StringFormat.LineAlignment">
+            <summary>
+            Gets or sets the vertical alignment of text.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.StringFormat.FormatFlags">
+            <summary>
+            Gets or sets a <see cref="T:C1.Silverlight.Pdf.StringFormatFlags"/> that contains formatting options.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.StringFormat.LineSpacing">
+            <summary>
+            Gets or sets the line spacing.
+            </summary>
+            <remarks>
+            Set this variable to zero to use the default line spacing. Set it to a positive
+            value to use an absolute line spacing in points. Set it to a negative value to
+            specify a multiple of the font height (e.g. -2 means double spacing).
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Pdf.StringFormat.Angle">
+            <summary>
+            Gets or sets the angle in degrees used to render the text.
+            </summary>
+            <remarks>
+            Angles are measured counter-clockwise from the left to right direction.
+            </remarks>
+        </member>
+    </members>
+</doc>

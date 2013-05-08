@@ -1,0 +1,17 @@
+C:\_dev\ATLAS\LoanstarWorldWide\DomesticBoxInformation\bin\Debug\StockLoan.DomesticBoxInformation.dll
+C:\_dev\ATLAS\LoanstarWorldWide\DomesticBoxInformation\bin\Debug\StockLoan.DomesticBoxInformation.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\DomesticBoxInformation\bin\Debug\StockLoan.Common.dll
+C:\_dev\ATLAS\LoanstarWorldWide\DomesticBoxInformation\bin\Debug\StockLoan.DataAccess.dll
+C:\_dev\ATLAS\LoanstarWorldWide\DomesticBoxInformation\bin\Debug\StockLoan.MQSeries.dll
+C:\_dev\ATLAS\LoanstarWorldWide\DomesticBoxInformation\bin\Debug\StockLoan.Transport.dll
+C:\_dev\ATLAS\LoanstarWorldWide\DomesticBoxInformation\bin\Debug\StockLoan.Common.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\DomesticBoxInformation\bin\Debug\StockLoan.MQSeries.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\DomesticBoxInformation\bin\Debug\StockLoan.DataAccess.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\DomesticBoxInformation\bin\Debug\StockLoan.Transport.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\DomesticBoxInformation\obj\Debug\StockLoan.DomesticBoxInformation.dll
+C:\_dev\ATLAS\LoanstarWorldWide\DomesticBoxInformation\obj\Debug\StockLoan.DomesticBoxInformation.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\DomesticBoxInformation\obj\Debug\DomesticBoxInformation.csprojResolveAssemblyReference.cache
+C:\_dev\ATLAS\LoanstarWorldWide\DomesticBoxInformation\bin\Debug\StockLoan.Filer.dll
+C:\_dev\ATLAS\LoanstarWorldWide\DomesticBoxInformation\bin\Debug\Rebex.Net.Ftp.dll
+C:\_dev\ATLAS\LoanstarWorldWide\DomesticBoxInformation\bin\Debug\Rebex.Net.ProxySocket.dll
+C:\_dev\ATLAS\LoanstarWorldWide\DomesticBoxInformation\bin\Debug\StockLoan.Filer.pdb

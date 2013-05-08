@@ -1,0 +1,661 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BE6AC28D-7353-4367-B72F-84FF7C9AA85F}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>globe.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>CentralClient</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CentralClient</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <ManifestCertificateThumbprint>1996F3A13B48D6021A859748225B5E15BB375C85</ManifestCertificateThumbprint>
+    <ManifestKeyFile>CentralClient_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <NoWin32Manifest>true</NoWin32Manifest>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <PublishUrl>\\sendero1\C%24\LoanstarClient\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.C1Excel.2, Version=2.1.20112.202, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for WinForms\bin\v2\C1.C1Excel.2.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.C1Pdf.2, Version=2.1.20112.175, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for WinForms\bin\v2\C1.C1Pdf.2.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Data.2, Version=2.0.20112.251, Culture=neutral, PublicKeyToken=900b028620cd3a1b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for WinForms\bin\v2\C1.Data.2.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Chart.2, Version=2.0.20112.21181, Culture=neutral, PublicKeyToken=a22e16972c085838, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for WinForms\bin\v2\C1.Win.C1Chart.2.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Command.2, Version=2.0.20112.19488, Culture=neutral, PublicKeyToken=e808566f358766d8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for WinForms\bin\v2\C1.Win.C1Command.2.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Input.2, Version=2.0.20112.33265, Culture=neutral, PublicKeyToken=7e7ff60f0c214f9a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for WinForms\bin\v2\C1.Win.C1Input.2.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1List.2, Version=2.1.20112.183, Culture=neutral, PublicKeyToken=6b24f8f981dbd7bc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for WinForms\bin\v2\C1.Win.C1List.2.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Ribbon.2, Version=2.0.20112.340, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for WinForms\bin\v2\C1.Win.C1Ribbon.2.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Schedule.2, Version=2.0.20112.169, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for WinForms\bin\v2\C1.Win.C1Schedule.2.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Sizer.2, Version=2.1.20112.60, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for WinForms\bin\v2\C1.Win.C1Sizer.2.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1SuperTooltip.2, Version=2.0.20112.90, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for WinForms\bin\v2\C1.Win.C1SuperTooltip.2.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1TrueDBGrid.2, Version=2.0.20112.61226, Culture=neutral, PublicKeyToken=75ae3fb0e2b1e0da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\ComponentOne\Studio for WinForms\bin\v2\C1.Win.C1TrueDBGrid.2.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicNP.ShellObjects, Version=10.0.0.0, Culture=neutral, PublicKeyToken=ff6f27194af4af75">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\LogicNP.ShellObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>.\Microsoft.Office.Interop.Outlook.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Office, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>.\Office.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminBookForm.Designer.cs">
+      <DependentUpon>AdminBookForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCountriesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminCountriesForm.Designer.cs">
+      <DependentUpon>AdminCountriesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCurrenciesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminCurrenciesForm.Designer.cs">
+      <DependentUpon>AdminCurrenciesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminHolidaysForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminHolidaysForm.Designer.cs">
+      <DependentUpon>AdminHolidaysForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminHolidaysInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminHolidaysInputForm.Designer.cs">
+      <DependentUpon>AdminHolidaysInputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminKeyValuesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminKeyValuesForm.Designer.cs">
+      <DependentUpon>AdminKeyValuesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminLoginForm.Designer.cs">
+      <DependentUpon>AdminLoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminRolesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminRolesForm.Designer.cs">
+      <DependentUpon>AdminRolesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSecMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSecMasterForm.Designer.cs">
+      <DependentUpon>AdminSecMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSecMasterItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSecMasterItemForm.Designer.cs">
+      <DependentUpon>AdminSecMasterItemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="AdminUsersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUsersForm.Designer.cs">
+      <DependentUpon>AdminUsersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractCOBFormat.cs" />
+    <Compile Include="Email.cs" />
+    <Compile Include="Excel.cs" />
+    <Compile Include="ExcelBillingFormat.cs" />
+    <Compile Include="ExcelCellStyle.cs" />
+    <Compile Include="AdminLoginPasswordChangeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminLoginPasswordChangeForm.Designer.cs">
+      <DependentUpon>AdminLoginPasswordChangeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSecMasterUploadPricingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSecMasterUploadPricingForm.Designer.cs">
+      <DependentUpon>AdminSecMasterUploadPricingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TradingBookCreditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TradingBookCreditForm.Designer.cs">
+      <DependentUpon>TradingBookCreditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpAboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpAboutForm.Designer.cs">
+      <DependentUpon>HelpAboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HistoryFundingRateResearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistoryFundingRateResearchForm.Designer.cs">
+      <DependentUpon>HistoryFundingRateResearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HistoryOnDemandForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistoryOnDemandForm.Designer.cs">
+      <DependentUpon>HistoryOnDemandForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryLookupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryLookupForm.Designer.cs">
+      <DependentUpon>InventoryLookupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryUploadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryUploadForm.Designer.cs">
+      <DependentUpon>InventoryUploadForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProcessStatusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProcessStatusForm.Designer.cs">
+      <DependentUpon>ProcessStatusForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecMasterResultsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecMasterResultsForm.Designer.cs">
+      <DependentUpon>SecMasterResultsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashStartUpInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashStartUpInfoForm.Designer.cs">
+      <DependentUpon>SplashStartUpInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventorySubscriptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventorySubscriptionsForm.Designer.cs">
+      <DependentUpon>InventorySubscriptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecMaster.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SecMaster.Designer.cs">
+      <DependentUpon>SecMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecurityMasterForm.Designer.cs">
+      <DependentUpon>SecurityMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashForm.Designer.cs">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TradingContractBlotterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TradingContractBlotterForm.Designer.cs">
+      <DependentUpon>TradingContractBlotterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TradingContractMaintenanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TradingContractMaintenanceForm.Designer.cs">
+      <DependentUpon>TradingContractMaintenanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TradingContractsMarksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TradingContractsMarksForm.Designer.cs">
+      <DependentUpon>TradingContractsMarksForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TradingContractSummaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TradingContractSummaryForm.Designer.cs">
+      <DependentUpon>TradingContractSummaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TradingDealMaintenanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TradingDealMaintenanceForm.Designer.cs">
+      <DependentUpon>TradingDealMaintenanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TradingDeskInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TradingDeskInputForm.Designer.cs">
+      <DependentUpon>TradingDeskInputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TradingFundingRatesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TradingFundingRatesForm.Designer.cs">
+      <DependentUpon>TradingFundingRatesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TradingRecallInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TradingRecallInputForm.Designer.cs">
+      <DependentUpon>TradingRecallInputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TradingReportingBillingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TradingReportingBillingForm.Designer.cs">
+      <DependentUpon>TradingReportingBillingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TradingReportingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TradingReportingForm.Designer.cs">
+      <DependentUpon>TradingReportingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TradingReturnInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TradingReturnInputForm.Designer.cs">
+      <DependentUpon>TradingReturnInputForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="TradingBookCreditForm.resx">
+      <DependentUpon>TradingBookCreditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminBookForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AdminBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminCountriesForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AdminCountriesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminCurrenciesForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AdminCurrenciesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminHolidaysForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AdminHolidaysForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminHolidaysInputForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AdminHolidaysInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminKeyValuesForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AdminKeyValuesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminLoginForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AdminLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminRolesForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AdminRolesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminSecMasterForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AdminSecMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminSecMasterItemForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AdminSecMasterItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUsersForm.resx">
+      <DependentUpon>AdminUsersForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminLoginPasswordChangeForm.resx">
+      <DependentUpon>AdminLoginPasswordChangeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminSecMasterUploadPricingForm.resx">
+      <DependentUpon>AdminSecMasterUploadPricingForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpAboutForm.resx">
+      <DependentUpon>HelpAboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistoryFundingRateResearchForm.resx">
+      <DependentUpon>HistoryFundingRateResearchForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistoryOnDemandForm.resx">
+      <DependentUpon>HistoryOnDemandForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryLookupForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InventoryLookupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryUploadForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InventoryUploadForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageForm.resx">
+      <DependentUpon>MessageForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcessStatusForm.resx">
+      <DependentUpon>ProcessStatusForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecMasterResultsForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SecMasterResultsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashStartUpInfoForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SplashStartUpInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventorySubscriptionsForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InventorySubscriptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="licenses.licx" />
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecMaster.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SecMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecurityMasterForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SecurityMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TradingContractBlotterForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TradingContractBlotterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TradingContractMaintenanceForm.resx">
+      <DependentUpon>TradingContractMaintenanceForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TradingContractsMarksForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TradingContractsMarksForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TradingContractSummaryForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TradingContractSummaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TradingDealMaintenanceForm.resx">
+      <DependentUpon>TradingDealMaintenanceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TradingDeskInputForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TradingDeskInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TradingFundingRatesForm.resx">
+      <DependentUpon>TradingFundingRatesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TradingRecallInputForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TradingRecallInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TradingReportingBillingForm.resx">
+      <DependentUpon>TradingReportingBillingForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TradingReportingForm.resx">
+      <DependentUpon>TradingReportingForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TradingReturnInputForm.resx">
+      <DependentUpon>TradingReturnInputForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="App.ico" />
+    <Content Include="globe.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Common.csproj">
+      <Project>{51D7F048-02E1-49F8-BA33-743E3E5373F7}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MainBusiness\MainBusiness.csproj">
+      <Project>{5E526E48-7F22-4A84-A8B3-35B74640FBFC}</Project>
+      <Name>MainBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MAIN\Main.csproj">
+      <Project>{FE13E31D-F44D-41B9-8C75-027D7E5AD5E6}</Project>
+      <Name>Main</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

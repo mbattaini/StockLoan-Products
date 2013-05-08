@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f7fb799a-1470-41d0-8664-45945147f5bc" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://dalgsldev01:8080/StockLoan.WebServices.DChen/InventoryService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="InventoryService2.xsd" MetadataType="Schema" ID="829cebb0-de5e-4fbf-a7fe-7a09dd7c9803" SourceId="1" SourceUrl="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/InventoryService.svc?xsd=xsd1" />
+    <MetadataFile FileName="InventoryService1.disco" MetadataType="Disco" ID="d24bfe60-9e16-41c6-983b-d1995786de4e" SourceId="1" SourceUrl="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/InventoryService.svc?disco" />
+    <MetadataFile FileName="InventoryService21.xsd" MetadataType="Schema" ID="aa437e09-715b-4e7c-ac44-6876e7a5e16e" SourceId="1" SourceUrl="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/InventoryService.svc?xsd=xsd0" />
+    <MetadataFile FileName="InventoryService1.wsdl" MetadataType="Wsdl" ID="d671eb1e-7922-4c1b-88b8-df79d3e88f5c" SourceId="1" SourceUrl="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/InventoryService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

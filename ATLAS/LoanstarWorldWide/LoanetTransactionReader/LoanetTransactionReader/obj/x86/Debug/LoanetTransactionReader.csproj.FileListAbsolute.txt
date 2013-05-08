@@ -1,0 +1,12 @@
+C:\_dev\ATLAS\LoanstarWorldWide\LoanetTransactionReader\LoanetTransactionReader\bin\Debug\LoanetTransactionReader.exe
+C:\_dev\ATLAS\LoanstarWorldWide\LoanetTransactionReader\LoanetTransactionReader\bin\Debug\LoanetTransactionReader.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\LoanetTransactionReader\LoanetTransactionReader\bin\Debug\C1.Win.C1TrueDBGrid.4.dll
+C:\_dev\ATLAS\LoanstarWorldWide\LoanetTransactionReader\LoanetTransactionReader\bin\Debug\C1.Win.C1TrueDBGrid.4.xml
+C:\_dev\ATLAS\LoanstarWorldWide\LoanetTransactionReader\LoanetTransactionReader\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\_dev\ATLAS\LoanstarWorldWide\LoanetTransactionReader\LoanetTransactionReader\obj\x86\Debug\LoanetTransactionReader.Form1.resources
+C:\_dev\ATLAS\LoanstarWorldWide\LoanetTransactionReader\LoanetTransactionReader\obj\x86\Debug\LoanetTransactionReader.Properties.Resources.resources
+C:\_dev\ATLAS\LoanstarWorldWide\LoanetTransactionReader\LoanetTransactionReader\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\_dev\ATLAS\LoanstarWorldWide\LoanetTransactionReader\LoanetTransactionReader\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\_dev\ATLAS\LoanstarWorldWide\LoanetTransactionReader\LoanetTransactionReader\obj\x86\Debug\LoanetTransactionReader.exe.licenses
+C:\_dev\ATLAS\LoanstarWorldWide\LoanetTransactionReader\LoanetTransactionReader\obj\x86\Debug\LoanetTransactionReader.exe
+C:\_dev\ATLAS\LoanstarWorldWide\LoanetTransactionReader\LoanetTransactionReader\obj\x86\Debug\LoanetTransactionReader.pdb

@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Silverlight.DataGrid.Excel</name>
+    </assembly>
+    <members>
+        <member name="T:C1.Silverlight.DataGrid.Excel.DataGridExtensions">
+            <summary>
+            Expose extensions method for the <see cref="T:C1.Silverlight.DataGrid.C1DataGrid"/>, to export to Excel.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Excel.DataGridExtensions.Save(C1.Silverlight.DataGrid.C1DataGrid,System.IO.Stream,C1.Silverlight.DataGrid.Excel.FileFormat)">
+            <summary>
+            Saves grid content to the specified stream using the specified file format.
+            </summary>
+            <param name="datagrid">The datagrid.</param>
+            <param name="stream">The stream to save to.</param>
+            <param name="format">The file format.</param>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Excel.DataGridExtensions.Save(C1.Silverlight.DataGrid.C1DataGrid,System.String,C1.Silverlight.DataGrid.Excel.FileFormat)">
+            <summary>
+            Saves grid content to the specified file using the specified file format.
+            </summary>
+            <param name="datagrid">The datagrid.</param>
+            <param name="fileName">The name of the file to save to.</param>
+            <param name="format">The file format.</param>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Excel.DataGridExtensions.Save(C1.Silverlight.DataGrid.C1DataGrid,System.IO.Stream,C1.Silverlight.DataGrid.Excel.ExcelSaveOptions)">
+            <summary>
+            Saves grid content to the specified stream using Excel file format.
+            </summary>
+            <param name="datagrid">The datagrid.</param>
+            <param name="stream">The stream to save to.</param>
+            <param name="options">Save options.</param>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Excel.DataGridExtensions.Save(C1.Silverlight.DataGrid.C1DataGrid,System.String,C1.Silverlight.DataGrid.Excel.ExcelSaveOptions)">
+            <summary>
+            Saves grid content to the specified Excel file.
+            </summary>
+            <param name="datagrid">The datagrid.</param>
+            <param name="fileName">The name of the file to save to.</param>
+            <param name="options">Save options.</param>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Excel.ExcelExporter.AdjustCollapsibleGroupingVisibility(C1.Silverlight.Excel.XLRow)">
+            <summary>
+            IMPORTANT: must be called after OutlineLevel is set up on a row.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Excel.ExcelSaveOptions">
+            <summary>
+            Defines possible options for saving the <see cref="T:C1.Silverlight.DataGrid.C1DataGrid"/> content to Excel file format.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Excel.SaveOptions">
+            <summary>
+            The base for all classes describing <see cref="T:C1.Silverlight.DataGrid.C1DataGrid"/> content save options.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Excel.ExcelSaveOptions.FileFormat">
+            <summary>
+            Gets or sets a specific Excel file format.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Excel.ExcelSaveOptions.KeepColumnWidths">
+            <summary>
+            Gets or sets a value indicating whether column widths should be kept in a saved file.
+            </summary>
+            <remarks>
+            If this property is set to True then column widths in a saved Excel file will be the same as in
+            the grid now; otherwise, column will have their default widths. The default value is true.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Excel.ExcelSaveOptions.KeepRowHeights">
+            <summary>
+            Gets or sets a value indicating whether row height should be kept in a saved file.
+            </summary>
+            <remarks>
+            If this property is set to True then row heights in a saved Excel file will be set to
+            the <see cref="P:C1.Silverlight.DataGrid.C1DataGrid.RowHeight"/> property value, in case if the latter is assigned with
+            an absolute value; otherwise, rows will have their default heights. The default value is false.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Excel.ExcelSaveOptions.CollapsibleGroups">
+            <summary>
+            Gets or sets a value indicating whether groups will be collapsible in a saved file for 
+            <see cref="T:C1.Silverlight.DataGrid.C1DataGrid"/> is in the grouping mode.
+            </summary>
+            <remarks>
+            See also the <see cref="P:C1.Silverlight.DataGrid.Excel.ExcelSaveOptions.CollapsedGroupLevel"/> property description.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Excel.ExcelSaveOptions.CollapsedGroupLevel">
+            <summary>
+            Defines the group level at which collapsible group headers will appear collapsed in a saved file.
+            </summary>
+            <remarks>
+            The level is a zero-based. Value 0 means that first-level group headers will be collapsed, 1 means
+            that first-level group headers will be expanded while second-level groups will be collapsed, and so on.
+            <para>
+            A negative value means that all groups at any level will be expanded.
+            </para>
+            <para>
+            The default value is 0.
+            </para>
+            </remarks>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Excel.ExcelFileFormat">
+            <summary>
+            Specifies Excel file format.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Excel.ExcelFileFormat.Xls">
+            <summary>
+            Excel 97/2003 format (Binary Interchange File Format revision 8). 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Excel.ExcelFileFormat.Xlsx">
+            <summary>
+            Excel OpenXml format.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Excel.ColumnValueAccessorFactory.CreateAccessor(C1.Silverlight.DataGrid.DataGridColumn)">
+            <summary>
+            Creates and returns a most appropriate <see cref="T:C1.Silverlight.DataGrid.Excel.ColumnValueAccessor"/> for the specified 
+            <see cref="T:C1.Silverlight.DataGrid.DataGridColumn"/>, or a null value if accessor can't be created.
+            </summary>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Excel.ExportColumn">
+            <summary>
+            Represents grid's <see cref="T:C1.Silverlight.DataGrid.DataGridColumn"/> in <see cref="T:C1.Silverlight.DataGrid.Excel.ExportSourceContext"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Excel.ExportUtils.IsAnyNull(System.Object)">
+            <summary>
+            Returns true if value is null or DbNull.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Excel.ExportUtils.GetExcelFont(System.Windows.Media.FontFamily,System.Double,System.Nullable{System.Windows.FontStretch},System.Nullable{System.Windows.FontStyle},System.Nullable{System.Windows.FontWeight},System.Windows.Media.Color)">
+            <summary>
+            Creates XLFont font based on WPF font specs. family and size are the must parameters.
+            </summary>
+            <param name="family"></param>
+            <param name="size"></param>
+            <param name="stretch"></param>
+            <param name="style"></param>
+            <param name="weight"></param>
+            <param name="color"></param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Excel.ExportUtils.MergePropertyBags(System.Collections.Generic.Dictionary{System.Windows.DependencyProperty,System.Object}[])">
+            <summary>
+            The property bags goes in the priority ascending order, i.e. a property in a bag with a higher
+            index overrides a property in a bag with a lower index.
+            </summary>
+            <param name="propertyBags"></param>
+            <returns></returns>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Excel.FileFormat">
+            <summary>
+            Specifies file formats available for saving the grid.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Excel.FileFormat.Xlsx">
+            <summary>
+            Excel OpenXml format.
+            </summary>
+            <remarks>
+            Creates an Excel xlsx file preserving all content and formatting information, 
+            including formatting, fonts, colors, and outline information.
+            </remarks>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Excel.FileFormat.Xls">
+            <summary>
+            Excel 97/2003 format (Binary Interchange File Format revision 8).
+            </summary>
+            <remarks>
+            Creates an Excel xls file preserving all content and formatting information, 
+            including formatting, fonts, colors, and outline information.
+            </remarks>
+        </member>
+    </members>
+</doc>

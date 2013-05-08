@@ -1,0 +1,12 @@
+C:\_Dev\ATLAS\BroadRidgeOptSegFileFormat\BroadRidgeOptSegFileFormat\bin\Debug\BroadRidgeOptSegFileFormat.exe
+C:\_Dev\ATLAS\BroadRidgeOptSegFileFormat\BroadRidgeOptSegFileFormat\bin\Debug\BroadRidgeOptSegFileFormat.pdb
+C:\_Dev\ATLAS\BroadRidgeOptSegFileFormat\BroadRidgeOptSegFileFormat\bin\Debug\C1.Win.C1Input.4.dll
+C:\_Dev\ATLAS\BroadRidgeOptSegFileFormat\BroadRidgeOptSegFileFormat\bin\Debug\C1.Win.C1Input.4.xml
+C:\_Dev\ATLAS\BroadRidgeOptSegFileFormat\BroadRidgeOptSegFileFormat\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\_Dev\ATLAS\BroadRidgeOptSegFileFormat\BroadRidgeOptSegFileFormat\obj\x86\Debug\BroadRidgeOptSegFileFormat.Properties.Resources.resources
+C:\_Dev\ATLAS\BroadRidgeOptSegFileFormat\BroadRidgeOptSegFileFormat\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\_Dev\ATLAS\BroadRidgeOptSegFileFormat\BroadRidgeOptSegFileFormat\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\_Dev\ATLAS\BroadRidgeOptSegFileFormat\BroadRidgeOptSegFileFormat\obj\x86\Debug\BroadRidgeOptSegFileFormat.exe
+C:\_Dev\ATLAS\BroadRidgeOptSegFileFormat\BroadRidgeOptSegFileFormat\obj\x86\Debug\BroadRidgeOptSegFileFormat.pdb
+C:\_Dev\ATLAS\BroadRidgeOptSegFileFormat\BroadRidgeOptSegFileFormat\obj\x86\Debug\BroadRidgeOptSegFileFormat.Form1.resources
+C:\_Dev\ATLAS\BroadRidgeOptSegFileFormat\BroadRidgeOptSegFileFormat\obj\x86\Debug\BroadRidgeOptSegFileFormat.exe.licenses

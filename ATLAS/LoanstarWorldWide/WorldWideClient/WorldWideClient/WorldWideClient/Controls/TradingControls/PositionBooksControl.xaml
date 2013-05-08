@@ -1,0 +1,37 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+	xmlns:local="clr-namespace:WorldWideClient"
+	mc:Ignorable="d"
+	x:Class="WorldWideClient.PositionBooksControl"
+	d:DesignWidth="640" d:DesignHeight="480" Loaded="UserControl_Loaded">
+        <Grid x:Name="LayoutRoot">
+		<Grid>           
+			<c1:C1DataGrid 
+			Margin="8,48,8,8"  			
+			x:Name="BooksGrid" 
+			AutoGenerateColumns="False" 						
+			Grid.Row="1" Style="{StaticResource TransparantGrid}" GridLinesVisibility="None" IsReadOnly="True" >
+                <c1:C1DataGrid.TopRows>
+                    <c1:DataGridFilterRow />                     
+                </c1:C1DataGrid.TopRows>
+                <c1:C1DataGrid.Columns>
+					<c1:DataGridBoundColumn  Header="Book Group" Binding="{Binding BookGroup}" CanUserFilter="True" FilterMemberPath="BookGroup" />
+                    <c1:DataGridBoundColumn Header="Parent" Binding="{Binding BookParent}" CanUserFilter="True" FilterMemberPath="BookParent" />
+                    <c1:DataGridBoundColumn Header="Book" Binding="{Binding Book}" CanUserFilter="True" FilterMemberPath="Book" />
+                    <c1:DataGridBoundColumn Header="Name" Binding="{Binding BookName}" CanUserFilter="True" FilterMemberPath="BookName" />
+                    <c1:DataGridBoundColumn Header="Address 1" Binding="{Binding AddressLine1}" CanUserFilter="True" FilterMemberPath="AddressLine1" />
+                    <c1:DataGridBoundColumn Header="Address 2" Binding="{Binding AddressLine2}"  CanUserFilter="True" FilterMemberPath="AddressLine2" />
+                    <c1:DataGridBoundColumn Header="Address 3" Binding="{Binding AddressLine3}"  CanUserFilter="True" FilterMemberPath="AddressLine3" />					
+				</c1:C1DataGrid.Columns>				
+			</c1:C1DataGrid>
+         
+			<local:BookGroupToolBar x:Name="booksBookGroupToolBar" Height="36" Margin="8,8,8,0" VerticalAlignment="Top"/>
+         
+        </Grid>
+        
+    </Grid>    
+</UserControl>

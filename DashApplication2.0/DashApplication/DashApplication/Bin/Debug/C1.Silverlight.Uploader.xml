@@ -1,0 +1,798 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Silverlight.Uploader</name>
+    </assembly>
+    <members>
+        <member name="T:C1.Silverlight.Uploader.C1Uploader">
+            <summary>
+            Represents an object that uploads files to a server.
+            </summary>
+            <remarks>
+            <see cref="T:C1.Silverlight.Uploader.C1Uploader"/> is the abstract base class of <see cref="T:C1.Silverlight.Uploader.C1UploaderPost"/>, which uploads files using multipart POST requests, and
+            <see cref="T:C1.Silverlight.Uploader.C1UploaderWebService"/>, which uploads files using web services.
+            </remarks>
+        </member>
+        <member name="F:C1.Silverlight.Uploader.C1Uploader._manager">
+            <summary>
+            Object responsible for packaging the files into requests and sending them to the server.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.C1Uploader.#ctor(C1.Silverlight.Uploader.UploadManagerSettings,C1.Silverlight.Uploader.FilePackager,C1.Silverlight.Uploader.IUploadManager)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Uploader.C1Uploader"/>. 
+            </summary>
+            <param name="settings"><see cref="T:C1.Silverlight.Uploader.UploadManagerSettings"/> that specifies how the upload should be performed.</param>
+            <param name="filePackager"><see cref="T:C1.Silverlight.Uploader.FilePackager"/> used to map files into server requests.</param>
+            <param name="uploadManager"><see cref="T:C1.Silverlight.Uploader.IUploadManager"/> object responsible for performing the upload.</param>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.C1Uploader.AddFile(System.IO.FileInfo)">
+            <summary>
+            Adds a file to the <see cref="P:C1.Silverlight.Uploader.C1Uploader.Files"/> collection that will be sent to the server when the <see cref="M:C1.Silverlight.Uploader.C1Uploader.BeginUploadFiles"/> method is invoked.
+            </summary>
+            <param name="file"><see cref="T:System.IO.FileInfo"/> that identifies the file to be uploaded.</param>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.C1Uploader.AddFile(System.String)">
+            <summary>
+            Adds a file to the <see cref="P:C1.Silverlight.Uploader.C1Uploader.Files"/> collection that will be sent to the server when the <see cref="M:C1.Silverlight.Uploader.C1Uploader.BeginUploadFiles"/> method is invoked.
+            </summary>
+            <param name="fileName">Name of the file (in the Silverlight Isolated Storage) to be uploaded.</param>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.C1Uploader.AddFile(System.String,System.IO.Stream)">
+            <summary>
+            Adds a <see cref="T:System.IO.Stream"/> to the <see cref="P:C1.Silverlight.Uploader.C1Uploader.Files"/> collection that will be sent to the server when the <see cref="M:C1.Silverlight.Uploader.C1Uploader.BeginUploadFiles"/> method is invoked.
+            </summary>
+            <param name="name">Name of the file as it will be seen by the server.</param>
+            <param name="file"><see cref="T:System.IO.Stream"/> that contains the data to be uploaded.</param>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.C1Uploader.AddFiles(System.Collections.Generic.IEnumerable{System.IO.FileInfo})">
+            <summary>
+            Adds a collection of files to the <see cref="P:C1.Silverlight.Uploader.C1Uploader.Files"/> collection that will be sent to the server when the <see cref="M:C1.Silverlight.Uploader.C1Uploader.BeginUploadFiles"/> method is invoked.
+            </summary>
+            <param name="files">Collection of <see cref="T:System.IO.FileInfo"/> objects that specify the files to be uploaded.</param>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.C1Uploader.BeginUploadFiles">
+            <summary>
+            Begins uploading the files specified in the <see cref="P:C1.Silverlight.Uploader.C1Uploader.Files"/> property.
+            </summary>
+            <exception cref="T:C1.Silverlight.Uploader.MaximumUploadSizeExceededException"/>
+            <exception cref="T:C1.Silverlight.Uploader.InvalidAddressException"/>
+            <returns>
+            <b>True</b> if the upload started successfully, 
+            <b>false</b> if the <see cref="T:C1.Silverlight.Uploader.C1Uploader"/> is busy or if there are no files to upload.
+            </returns>
+            <remarks>
+            You can check the <see cref="P:C1.Silverlight.Uploader.C1Uploader.IsBusy"/> property to determine whether the component is 
+            currently uploading files, and use the <see cref="M:C1.Silverlight.Uploader.C1Uploader.Cancel"/> method to cancel the current
+            upload process.
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.C1Uploader.Cancel">
+            <summary>
+            Cancels the current upload process.
+            </summary>
+            <returns>True if the current upload process has been canceled successfully.</returns>
+        </member>
+        <member name="E:C1.Silverlight.Uploader.C1Uploader.UploadProgressChanged">
+            <summary>
+            Event that fires when the upload process makes progress.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Uploader.C1Uploader.UploadCompleted">
+            <summary>
+            Event raised when the upload has completed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.C1Uploader.MaximumUploadSize">
+            <summary>
+            Gets or sets the maximum size in bytes allowed for each upload.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.C1Uploader.IsBusy">
+            <summary>
+            Gets whether the component is currently uploading files.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.C1Uploader.Files">
+            <summary>
+            Gets the collection of files that will be uploaded.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.C1Uploader.Parameters">
+            <summary>
+            Gets the parameters that will be sent to the server with each upload.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.C1Uploader.Headers">
+            <summary>
+            Gets the headers that will be sent to the server with each upload.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.C1Uploader.Settings">
+            <summary>
+            Gets the <see cref="T:C1.Silverlight.Uploader.UploadManagerSettings"/> that will be used to configure the <see cref="T:C1.Silverlight.Uploader.C1Uploader"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.C1Uploader.UserState">
+            <summary>
+            Gets or sets an arbitrary object that will be passed to the <see cref="E:C1.Silverlight.Uploader.C1Uploader.UploadCompleted"/> and <see cref="E:C1.Silverlight.Uploader.C1Uploader.UploadProgressChanged"/> events.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Uploader.InvalidAddressException">
+            <summary>
+            This exception is raised if the address of the service to be called is not correct.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.InvalidAddressException.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Uploader.InvalidAddressException"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.InvalidAddressException.#ctor(System.Exception)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Uploader.InvalidAddressException"/>.
+            </summary>
+            <param name="innerException">the exception that is the cause of the current exception</param>
+        </member>
+        <member name="T:C1.Silverlight.Uploader.MaximumUploadSizeExceededException">
+            <summary>
+            This exception is raised when the size needed to do the upload is greater than the size specified by the user.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.MaximumUploadSizeExceededException.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Uploader.MaximumUploadSizeExceededException"/>. 
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Uploader.IUploadManager">
+            <summary>
+            Interface implemented by classes that package files into server requests.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.IUploadManager.BeginUpload(C1.Silverlight.Uploader.UploadManagerSettings,C1.Silverlight.Uploader.UploadFilePartPackage,System.Collections.Generic.Dictionary{System.Net.HttpRequestHeader,System.String},System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Begins the upload of one <see cref="T:C1.Silverlight.Uploader.UploadFilePartPackage"/>
+            </summary>
+            <param name="settings"><see cref="T:C1.Silverlight.Uploader.UploadManagerSettings"/> that specify how to perform the upload.</param>
+            <param name="package"><see cref="T:C1.Silverlight.Uploader.UploadFilePartPackage"/> that contains file parts to be uploaded.</param>
+            <param name="headers">Headers that will be sent with the upload requests.</param>
+            <param name="parameters">Parameters that will be sent to the server with the upload requests.</param>
+            <returns>Returns <b>true</b> if the upload process started successfully.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.IUploadManager.Cancel">
+            <summary>
+            Cancels the current upload process.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Uploader.IUploadManager.UploadProgressChanged">
+            <summary>
+            Event that fires when the upload process makes progress.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Uploader.IUploadManager.UploadCompleted">
+            <summary>
+            Event that fires when the upload process has been completed.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Uploader.C1UploaderPost">
+            <summary>
+            Represents a class that uploads files to the server using multipart POST messages.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.C1UploaderPost.#ctor(System.Uri)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Uploader.C1UploaderPost"/>. 
+            </summary>
+            <param name="address"><see cref="T:System.Uri"/> that will receive the upload requests.</param>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.C1UploaderPost.#ctor(C1.Silverlight.Uploader.FilesPerRequest)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Uploader.C1UploaderPost"/>. 
+            </summary>
+            <param name="filePackager"><see cref="T:C1.Silverlight.Uploader.FilesPerRequest"/> value that specifies how files should be packaged into requests.</param>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.C1UploaderPost.#ctor(C1.Silverlight.Uploader.UploadManagerSettingsPost)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Uploader.C1UploaderPost"/>. 
+            </summary>
+            <param name="settings"><see cref="T:C1.Silverlight.Uploader.UploadManagerSettingsPost"/> that specifies how the upload process will be performed.</param>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.C1UploaderPost.#ctor(C1.Silverlight.Uploader.UploadManagerSettingsPost,C1.Silverlight.Uploader.FilePackager)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Uploader.C1UploaderPost"/>. 
+            </summary>
+            <param name="settings"><see cref="T:C1.Silverlight.Uploader.UploadManagerSettingsPost"/> that specifies how the upload process will be performed.</param>
+            <param name="filePackager"><see cref="T:C1.Silverlight.Uploader.FilesPerRequest"/> value that specifies how files should be packaged into requests.</param>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.C1UploaderPost.Settings">
+            <summary>
+            Gets the <see cref="T:C1.Silverlight.Uploader.UploadManagerSettingsPost"/> that specifies how the upload process should be performed.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Uploader.C1UploaderPost.MIMETypeRequested">
+            <summary>
+            This event will be raised for each file, to customize the Content-Type http header.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Uploader.C1UploaderPost.MIMETypeRequestedEventHandler">
+            <summary>
+            Represents the method that will handle the <see cref="E:C1.Silverlight.Uploader.C1UploaderPost.MIMETypeRequested"/> event.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Uploader.MIMETypeRequestedEventArgs">
+            <summary>
+            Provides data for the <see cref="E:C1.Silverlight.Uploader.C1UploaderPost.MIMETypeRequested"/> event.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.MIMETypeRequestedEventArgs.FileExtension">
+            <summary>
+            The extension requested, including the ".".
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Uploader.MultipartPostEncoding">
+            <summary>
+            Specifies the encoding of the data that will be sent in the post message.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Uploader.MultipartPostEncoding.Binary">
+            <summary>
+            Data encoded in binary format.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Uploader.MultipartPostEncoding.Base64">
+            <summary>
+            Data encoded in Base64 format
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Uploader.UploadManagerPost">
+            <summary>
+            Class that packages files into multipart POST requests.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.UploadManagerPost.BeginUpload(C1.Silverlight.Uploader.UploadManagerSettings,C1.Silverlight.Uploader.UploadFilePartPackage,System.Collections.Generic.Dictionary{System.Net.HttpRequestHeader,System.String},System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Begins the upload of a set of parts.
+            </summary>
+            <param name="settings">Settings used to upload the part.</param>
+            <param name="package">Package of file parts to be uploaded.</param>
+            <param name="headers">Headers that will be sent within the upload.</param>
+            <param name="parameters">Parameter that will be sent to the server together with the part.</param>
+            <returns>Returns True if the upload has been started correctly.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.UploadManagerPost.Cancel">
+            <summary>
+            Aborts the execution of the upload.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Uploader.UploadManagerPost.UploadProgressChanged">
+            <summary>
+            Event that fires when the upload process makes progress.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Uploader.UploadManagerPost.UploadCompleted">
+            <summary>
+            It is raised when the upload has been completed.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Uploader.UploadManagerSettingsPost">
+            <summary>
+            Contains parameters that specify the behavior of <see cref="T:C1.Silverlight.Uploader.UploadManagerPost" /> objects.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Uploader.UploadManagerSettings">
+            <summary>
+            Contains parameters that specify the behavior of <see cref="T:C1.Silverlight.Uploader.IUploadManager"/> objects.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.UploadManagerSettings.#ctor(System.Uri)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Uploader.UploadManagerSettings"/>. 
+            </summary>
+            <param name="address"><see cref="T:System.Uri"/> of the service that will receive the upload requests.</param>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.UploadManagerSettings.Address">
+            <summary>
+            Gets or sets the address of the service that will receive the upload
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.UploadManagerSettingsPost.#ctor(System.Uri)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Uploader.UploadManagerSettingsPost"/>. 
+            </summary>
+            <param name="address">Address of the service that will receive the upload</param>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.UploadManagerSettingsPost.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Uploader.UploadManagerSettingsPost"/>. 
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.UploadManagerSettingsPost.TransferEncoding">
+            <summary>
+            Gets or sets the encoding used to transfer the parts to the server.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.UploadManagerSettingsPost.Boundary">
+            <summary>
+            Gets or sets the boundary used to create the multipart post.
+            </summary>
+            <remarks>If no boundary is specified the system will generate one randomly (Recommended).</remarks>
+        </member>
+        <member name="T:C1.Silverlight.Uploader.UploadFileInfo">
+            <summary>
+            Wraps the information of files that comes from different sources.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.UploadFileInfo.#ctor(System.IO.FileInfo)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Uploader.UploadFileInfo"/>.
+            </summary>
+            <param name="file">File that comes from <see cref="T:System.Windows.Controls.OpenFileDialog"/></param>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.UploadFileInfo.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Uploader.UploadFileInfo"/>.
+            </summary>
+            <param name="fileName">Name of the file in the Isolated Storage</param>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.UploadFileInfo.#ctor(System.String,System.IO.Stream)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Uploader.UploadFileInfo"/>.
+            </summary>
+            <param name="name">Name of the file</param>
+            <param name="file">Stream that contains the data of the file</param>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.UploadFileInfo.Prepare">
+            <summary>
+            Opens the file if it is not opened.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.UploadFileInfo.GetSize">
+            <summary>
+            Gets the size in bytes of a file.
+            </summary>
+            <remarks>If the <see cref="M:C1.Silverlight.Uploader.UploadFileInfo.Prepare" /> method has not been called the size will be 0.</remarks>
+            <returns>Return the size in bytes of a file.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.UploadFileInfo.Close">
+            <summary>
+            Closes the file if it is opened.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.UploadFileInfo.Name">
+            <summary>
+            Name of the file.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.UploadFileInfo.File">
+            <summary>
+            Data of the file.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Uploader.UploadFilePartInfo">
+            <summary>
+            Represents a file part. It can be a file or a file segment.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.UploadFilePartInfo.#ctor(System.String,System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Uploader.UploadFilePartInfo"/>. 
+            </summary>
+            <param name="filePartName">Name of the file part</param>
+            <param name="filePartData">Data of the file part</param>
+            <param name="partNumber">Index of the file part in the file</param>
+            <param name="partCount">Total number of parts for the file</param>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.UploadFilePartInfo.#ctor(C1.Silverlight.Uploader.UploadFileInfo)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Uploader.UploadFilePartInfo"/>. 
+            </summary>
+            <param name="file">File that will be wrapped in a <see cref="T:C1.Silverlight.Uploader.UploadFilePartInfo"/></param>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.UploadFilePartInfo.GetSize">
+            <summary>
+            Gets the size of a file part.
+            </summary>
+            <returns>Size of the file part.</returns>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.UploadFilePartInfo.Name">
+            <summary>
+            Gets the name of the file part.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.UploadFilePartInfo.Data">
+            <summary>
+            Gets the data of the file part
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.UploadFilePartInfo.PartNumber">
+            <summary>
+            Gets the index of a part within the owner file.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.UploadFilePartInfo.PartCount">
+            <summary>
+            Gets the total number of parts associated with the owner file.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Uploader.UploadFilePartPackage">
+            <summary>
+            Contains a sets of <see cref="T:C1.Silverlight.Uploader.UploadFilePartInfo" />.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.UploadFilePartPackage.GetSize">
+            <summary>
+            Gets the size of the package.
+            </summary>
+            <returns>Size of the package.</returns>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.UploadFilePartPackage.ServerWaitForOneFile">
+            <summary>
+            Gets or sets whether the package should be uploaded as a one only file package.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Uploader.Resources.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.Resources.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.Resources.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.Resources.Resources.Uploader_Error_Message">
+            <summary>
+              Looks up a localized string similar to &quot;Internal Server Error in {0}.\n\nThe current Silverlight implementation doesn&apos;t allow to provide more detailed errors in POST method.&quot;.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Uploader.FilePackager">
+            <summary>
+            Represents an object that maps files into server requests.
+            </summary>
+            <remarks>
+            <see cref="T:C1.Silverlight.Uploader.FilePackager"/> is the abstract base class of 
+            <see cref="T:C1.Silverlight.Uploader.FilePackagerSingleFile"/>, which uploads one file per request, 
+            <see cref="T:C1.Silverlight.Uploader.FilePackagerMultiFile"/>, which uploads multiple files per request, and
+            <see cref="T:C1.Silverlight.Uploader.FilePackagerPartialFile"/>, which uploads partial files in each request.
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.FilePackager.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Uploader.FilePackager"/>. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.FilePackager.GetTotalSize">
+            <summary>
+            Gets the total size of all in the <see cref="P:C1.Silverlight.Uploader.FilePackager.Files"/> collection.
+            </summary>
+            <returns>Amount of size of all files</returns>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.FilePackager.GetMaxSizePerUpload">
+            <summary>
+            Gets the maximum size needed to upload the files.
+            </summary>
+            <returns>Maximum size needed to upload the files</returns>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.FilePackager.GetPackages">
+            <summary>
+            Gets a set of packages that should be uploaded
+            </summary>
+            <returns>Set of packages that should be uploaded</returns>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.FilePackager.Files">
+            <summary>
+            Gets or sets a list of files to be uploaded.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.FilePackager.MaximumUploadSize">
+            <summary>
+            Gets or sets the maximum size allowed per upload request.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Uploader.FilePackagerMultiFile">
+            <summary>
+            <see cref="T:C1.Silverlight.Uploader.FilePackager" /> that packages multiple files per request.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.FilePackagerMultiFile.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Uploader.FilePackagerMultiFile"/>. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.FilePackagerMultiFile.GetMaxSizePerUpload">
+            <summary>
+            Gets the maximum amount of size needed to upload the files
+            </summary>
+            <returns>Maximum amount of size needed to upload the files</returns>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.FilePackagerMultiFile.GetPackages">
+            <summary>
+            Gets a set of packages that should be uploaded
+            </summary>
+            <returns>Set of packages that should be uploaded</returns>
+        </member>
+        <member name="T:C1.Silverlight.Uploader.FilePackagerSingleFile">
+            <summary>
+            <see cref="T:C1.Silverlight.Uploader.FilePackager" /> that packages one file per request.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.FilePackagerSingleFile.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Uploader.FilePackagerSingleFile"/>. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.FilePackagerSingleFile.GetMaxSizePerUpload">
+            <summary>
+            Gets the maximum upload size needed to upload the files.
+            </summary>
+            <returns>Maximum amount of size needed to upload the files</returns>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.FilePackagerSingleFile.GetPackages">
+            <summary>
+            Gets a set of packages that should be uploaded
+            </summary>
+            <returns>Set of packages that should be uploaded</returns>
+        </member>
+        <member name="T:C1.Silverlight.Uploader.FilesPerRequest">
+            <summary>
+            Specifies how files are mapped into server requests.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Uploader.FilesPerRequest.OneFilePerRequest">
+            <summary>
+            Each request contains one file. This is the default setting.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Uploader.FilesPerRequest.AllFilesInOneRequest">
+            <summary>
+            All files will be uploaded in a single request. This is more efficient when uploading many small files.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Uploader.FilesPerRequest.SplitFilesIntoMultipleRequests">
+            <summary>
+            Each file will be split into multiple requests. Indicated when uploading very large files.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Uploader.FilePackagerFactory">
+            <summary>
+            Static class that creates <see cref="T:C1.Silverlight.Uploader.FilePackager" /> objects.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.FilePackagerFactory.Create(C1.Silverlight.Uploader.FilesPerRequest)">
+            <summary>
+            Creates <see cref="T:C1.Silverlight.Uploader.FilePackager" /> objects.
+            </summary>
+            <param name="mode">
+            <see cref="T:C1.Silverlight.Uploader.FilesPerRequest" /> value that specifies the type of <see cref="T:C1.Silverlight.Uploader.FilePackager" /> to create.</param>
+            <returns>A new <see cref="T:C1.Silverlight.Uploader.FilePackager" /> object.</returns>
+        </member>
+        <member name="T:C1.Silverlight.Uploader.FilePackagerPartialFile">
+            <summary>
+            <see cref="T:C1.Silverlight.Uploader.FilePackager" /> that breaks up files into multiple requests.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.FilePackagerPartialFile.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Uploader.FilePackagerPartialFile"/>. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.FilePackagerPartialFile.GetMaxSizePerUpload">
+            <summary>
+            Gets the size needed to upload the files.
+            </summary>
+            <returns>Maximum amount of size needed to upload the files</returns>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.FilePackagerPartialFile.GetPackages">
+            <summary>
+            Gets a set of packages that should be uploaded.
+            </summary>
+            <returns>Set of packages that should be uploaded.</returns>
+        </member>
+        <member name="T:C1.Silverlight.Uploader.UploadCompletedEventArgs">
+            <summary>
+            Contains data about upload completed event of the upload file
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.UploadCompletedEventArgs.#ctor(System.Boolean,System.Boolean,System.Exception,System.String[],System.Object,System.Object)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Uploader.UploadCompletedEventArgs"/>. 
+            </summary>
+            <param name="success">True if all the files were uploaded successfully</param>
+            <param name="cancelled">True if the user cancelled the request</param>
+            <param name="error">Exception returned if something was wrong</param>
+            <param name="files">Array of names of the files uploaded</param>
+            <param name="response">Response returned by the server in the message body</param>
+            <param name="userState">Additional information attached by the user</param>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.UploadCompletedEventArgs.Files">
+            <summary>
+            Array of names of the files uploaded
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.UploadCompletedEventArgs.Success">
+            <summary>
+            True if all the files were uploaded successfully.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.UploadCompletedEventArgs.Response">
+            <summary>
+            Response returned by the server in the message body.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Uploader.UploadProgressChangedEventArgs">
+            <summary>
+            Contains data about progress changed event of the upload file.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.UploadProgressChangedEventArgs.#ctor(System.Int64,System.Int64,System.Object)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Uploader.UploadProgressChangedEventArgs"/>. 
+            </summary>
+            <param name="bytesUploaded">Amount of bytes that were uploaded</param>
+            <param name="totalBytesToUpload">Amount of bytes that must be uploaded</param>
+            <param name="userState">Additional information attached by the user</param>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.UploadProgressChangedEventArgs.BytesUploaded">
+            <summary>
+            Amount of bytes that were uploaded.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.UploadProgressChangedEventArgs.ProgressPercentage">
+            <summary>
+            Percentage of bytes that were uploaded.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.UploadProgressChangedEventArgs.TotalBytesToUpload">
+            <summary>
+            Amount of bytes that must be uploaded.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.UploadProgressChangedEventArgs.UserState">
+            <summary>
+            Additional information attached by the user.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Uploader.C1UploaderWebService">
+            <summary>
+            Represents a class that uploads files to the server using Web services.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.C1UploaderWebService.#ctor(System.Uri)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Uploader.C1UploaderWebService"/>. 
+            </summary>
+            <param name="address">Address of the service that will receive the upload</param>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.C1UploaderWebService.#ctor(C1.Silverlight.Uploader.FilesPerRequest)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Uploader.C1UploaderWebService"/>. 
+            </summary>
+            <param name="splitter">Splitter mode used to upload the files</param>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.C1UploaderWebService.#ctor(C1.Silverlight.Uploader.UploadManagerSettingsWebService)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Uploader.C1UploaderWebService"/>. 
+            </summary>
+            <param name="settings">Settings that will be used by the upload algorithm to do the uploads</param>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.C1UploaderWebService.#ctor(C1.Silverlight.Uploader.UploadManagerSettingsWebService,C1.Silverlight.Uploader.FilePackager)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Uploader.C1UploaderWebService"/>. 
+            </summary>
+            <param name="settings">Settings that will be used by the upload algorithm to do the uploads</param>
+            <param name="algorithm"></param>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.C1UploaderWebService.Settings">
+            <summary>
+            Gets the settings that will be used by the upload algorithm to do the uploads.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Uploader.UploadManagerSettingsWebService">
+            <summary>
+            Contains parameters that specify the behavior of <see cref="T:C1.Silverlight.Uploader.UploadManagerWebService" /> objects.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.UploadManagerSettingsWebService.#ctor(System.Uri)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Uploader.UploadManagerSettingsWebService"/>. 
+            </summary>
+            <param name="address"><see cref="T:System.Uri"/> of the service that will receive the upload requests.</param>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.UploadManagerSettingsWebService.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Uploader.UploadManagerSettingsWebService"/>. 
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.UploadManagerSettingsWebService.Namespace">
+            <summary>
+            Gets or sets the namespace of the WebService which receive the upload.
+            </summary>
+            <remarks>Default value is http://tempuri.org/.</remarks>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.UploadManagerSettingsWebService.MethodOneFile">
+            <summary>
+            Gets or sets the name of the WebMethod which receives the upload.
+            </summary>
+            <remarks>Default value is UploadFile.</remarks>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.UploadManagerSettingsWebService.MethodManyFiles">
+            <summary>
+            Gets or sets the name of the WebMethod which receives the upload.
+            </summary>
+            <remarks>Default value is UploadFiles.</remarks>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.UploadManagerSettingsWebService.ParamFiles">
+            <summary>
+            Gets or sets the name of the parameter that receives the list of files.
+            </summary>
+            <remarks>Default value is files.</remarks>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.UploadManagerSettingsWebService.ParamFileName">
+            <summary>
+            Gets or sets the name of the parameter that receives the name of the part.
+            </summary>
+            <remarks>Default value is filename.</remarks>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.UploadManagerSettingsWebService.ParamFileData">
+            <summary>
+            Gets or sets the name of the parameter that receives the data of the part.
+            </summary>
+            <remarks>The data is received as a string formatted in base64.</remarks>
+            <remarks>Default value is fileData.</remarks>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.UploadManagerSettingsWebService.ParamParameters">
+            <summary>
+            Gets or sets the name of the parameter that receives optional parameters specified in the Uploader component.
+            </summary>
+            <remarks>Default value is parameters.</remarks>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.UploadManagerSettingsWebService.ParamPartCount">
+            <summary>
+            Gets or sets the name of the parameter that receives the number of parts.
+            </summary>
+            <remarks>Default value is partCount.</remarks>
+        </member>
+        <member name="P:C1.Silverlight.Uploader.UploadManagerSettingsWebService.ParamPartNumber">
+            <summary>
+            Gets or sets the name of the parameter that receives the index of the part.
+            </summary>
+            <remarks>Default value is partNumber.</remarks>
+        </member>
+        <member name="T:C1.Silverlight.Uploader.UploadManagerWebService">
+            <summary>
+            Class that packages files into Web Service requests.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.UploadManagerWebService.BeginUpload(C1.Silverlight.Uploader.UploadManagerSettings,C1.Silverlight.Uploader.UploadFilePartPackage,System.Collections.Generic.Dictionary{System.Net.HttpRequestHeader,System.String},System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Begins the upload of one part.
+            </summary>
+            <param name="settings">Settings used to upload the part.</param>
+            <param name="package">Package of file parts to be uploaded.</param>
+            <param name="headers">Headers that will be sent within the upload.</param>
+            <param name="parameters">Parameter that will be sent to the server together with the part.</param>
+            <returns>Returns True, if the upload has been started correctly.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Uploader.UploadManagerWebService.Cancel">
+            <summary>
+            Aborts the execution of the upload.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Uploader.UploadManagerWebService.UploadProgressChanged">
+            <summary>
+            It is raised when the progress of the upload has changed.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Uploader.UploadManagerWebService.UploadCompleted">
+            <summary>
+            It is raised when the upload has been completed.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <appSettings>
+    <add key="TempPath" value="C:\Sendero\Temp\" />
+    <add key="LogFilePath" value="C:\Sendero\Logs\" />
+    <add key="LogLevel" value="2" />
+    <!--
+    <add key="MainDatabase.User" value="pensonService" />
+    <add key="MainDatabase.Password" value="ps2005" />
+    -->
+    <add key="MainDatabase.Host" value="NEMESIS\Porky" />
+    <add key="MainDatabase.Name" value="Sendero" />
+    
+    <add key="PensonDatabase.Host" value="NEMESIS\PORKY" />
+    <add key="PensonDatabase.Name" value="Sendero" />  
+    
+    <!-- 
+    The BoxPosition[nnn] config item may be as many entries as necessary to fully identify
+    each BookGroup or broker number.  The first key must be BoxPosition[001].  Each subsequent
+    key must have the numeric value increment by one ([002], [003], et al).
+    
+    The BoxPosition[nnn] value is actually two values each delimited by a semicolon [;].
+		1 - The DTCC broker number (known in the application as the BookGroup).
+		2 - The Phase3 Firm number that corresponds to the DTCC broker number.
+    -->
+
+    <add key="BoxPosition[001]" value="0234;07;" />
+ 
+    <!-- 
+    The config items that follow must be represented once for each BoxPosition[nnn] key listed above. 
+    
+      BoxPositionCustomerAvailable[nnn]
+	    BoxPositionFirmAvailable[nnn]
+	    BoxPositionCustomerPledge[nnn]
+	    BoxPositionFirmPledge[nnn]
+	    BoxPositionDvpFail[nnn]
+		  BoxPositionBrokerFail[nnn]
+		  BoxPositionClearingFail[nnn]
+    
+    The value for each item is actually three values delimited by a semicolon [;].
+  		1 - The filter expression identifying Phase3 AccountNumber[s].
+	  	2 - The filter expression identifying Phase3 Location character[s].
+		  3 - The filter expression identifying Phase3 Memo character[s].
+    -->
+
+	<add key="BoxPositionCustomerAvailable[001]" value=";;LocMemo = 'C';" />
+	<add key="BoxPositionFirmAvailable[001]" value="AccountNumber Like '91%';;;" />
+	<add key="BoxPositionCustomerPledge[001]" value="AccountNumber = '99999997';LocLocation = '4';LocMemo = 'V';" />
+	<add key="BoxPositionFirmPledge[001]" value="AccountNumber = '99999997';LocLocation = '4';LocMemo = 'W';" />
+	<add key="BoxPositionDvpFail[001]" value="(AccountNumber Like '75%' Or AccountNumber Like '79%');;LocMemo = 'O';" />
+	<add key="BoxPositionBrokerFail[001]" value="AccountNumber Like '94%';;;" />
+	<add key="BoxPositionClearingFail[001]" value="AccountNumber = '93111128';;;" />
+	<add key="BoxPositionOtherFail[001]" value="AccountNumber &lt; '90000000' And AccountNumber Not Like '75%' And AccountNumber Not Like '79%';;LocMemo = 'O';" />
+  
+  <!-- 
+	<add key="BoxPositionOtherFail[001]" value="AccountNumber &lt; '90000000' And AccountNumber Not Like '75%' And AccountNumber Not Like '79%';;LocMemo = 'O';" />
+	<add key="BoxPositionOtherFail[001]" value="AccountNumber &lt; '00000000';;;" />
+  -->
+  
+      
+    <!-- 
+    The BoxLocation[nnn] config item may be as many entries as necessary to fully identify
+    the control location of each security in custody.  The first key must be BoxLocation[001].
+    Each subsequent key must have the numeric value increment by one ([002], [003], et al).
+    
+    The BoxLocation[nnn] value is actually six values each delimited by a semicolon [;].
+  		1 - The DTCC broker number (known in the application as the BookGroup).
+	  	2 - The Phase3 Firm number that corresponds to the DTCC broker number.
+		  3 - The name of the custodian.
+	  	4 - The Location character known in Phase3.
+		  5 - The Memo character known in Phase3.
+    -->
+
+	<add key="BoxLocation[001]" value="0234;07;DTCC;99999997;4;S;" />
+	<add key="BoxLocation[002]" value="0234;07;DTCC;93111144;;O;" />
+	<add key="BoxLocation[003]" value="0234;07;Euroclear;9300Ql08;;O;" />
+	<add key="BoxLocation[004]" value="0234;07;BoNY;99999997;1;S;" />
+	<add key="BoxLocation[005]" value="0234;07;BoNY;99999997;2;B;" />
+ 
+    <!-- 
+    --> 
+
+    <add key="SecurityTypeCodeList" value="('0','1','2','3','4','7','A','B','C','F','I','J','L','M','N','P','S','T','W')" />
+
+
+  </appSettings>
+</configuration>

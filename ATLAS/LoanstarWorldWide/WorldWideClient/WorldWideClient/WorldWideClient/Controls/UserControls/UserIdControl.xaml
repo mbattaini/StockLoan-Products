@@ -1,0 +1,19 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+	xmlns:ee="http://schemas.microsoft.com/expression/2010/effects"
+	mc:Ignorable="d"
+	x:Class="WorldWideClient.UserIdControl" Margin="0,4,0,-4" Style="{StaticResource TransparantUserControl}">
+
+	<Grid x:Name="LayoutRootControl" Style="{StaticResource TransparantLayoutGrid}">
+		<Grid x:Name="MainGrid" Style="{StaticResource TransparantLayoutGrid}" Margin="8,8,0,8" d:LayoutOverrides="Width">
+			<c1:C1TextBoxBase Margin="49,7,0,0" TextWrapping="Wrap" HorizontalContentAlignment="Left" Background="{x:Null}" BorderBrush="{x:Null}" x:Name="UserIdTextBox" FontWeight="Bold" Padding="0" IsReadOnly="True"  SelectionForeground="{x:Null}" SelectionBackground="{x:Null}" HorizontalAlignment="Left" Text="" VerticalScrollBarVisibility="Disabled" FontSize="12" VerticalContentAlignment="Center" Height="21" Style="{StaticResource TransparantTextBox}" VerticalAlignment="Top" />
+			<c1:C1Image x:Name="StatusImage" Width="20" MouseLeftButtonUp="StatusImage_MouseLeftButtonUp" HorizontalAlignment="Left" Margin="11,7,0,0" Source="/WorldWideClient;component/Images/Status-Offline.png" Height="22" VerticalAlignment="Top"/>
+			<c1:C1NumericBox x:Name="FontSizeNumericBox" Height="24" Margin="120,48,32,0" VerticalAlignment="Top" ValueChanged="FontSizeNumericBox_ValueChanged"/>
+			<sdk:Label HorizontalAlignment="Left" Height="16" Margin="11,52,0,0" VerticalAlignment="Top" Width="77" Content="FONT SIZE"/>
+		</Grid>
+	</Grid>
+</UserControl>

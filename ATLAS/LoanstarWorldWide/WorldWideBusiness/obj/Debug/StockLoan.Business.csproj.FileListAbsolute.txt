@@ -1,0 +1,14 @@
+C:\_Dev\ATLAS\LoanstarWorldWide\WorldWideBusiness\bin\Debug\StockLoan.Business.dll.config
+C:\_Dev\ATLAS\LoanstarWorldWide\WorldWideBusiness\bin\Debug\StockLoan.Business.dll
+C:\_Dev\ATLAS\LoanstarWorldWide\WorldWideBusiness\bin\Debug\StockLoan.Business.pdb
+C:\_Dev\ATLAS\LoanstarWorldWide\WorldWideBusiness\bin\Debug\StockLoan.Common.dll
+C:\_Dev\ATLAS\LoanstarWorldWide\WorldWideBusiness\bin\Debug\StockLoan.DataAccess.dll
+C:\_Dev\ATLAS\LoanstarWorldWide\WorldWideBusiness\bin\Debug\StockLoan.Transport.dll
+C:\_Dev\ATLAS\LoanstarWorldWide\WorldWideBusiness\bin\Debug\StockLoan.Common.pdb
+C:\_Dev\ATLAS\LoanstarWorldWide\WorldWideBusiness\bin\Debug\StockLoan.DataAccess.pdb
+C:\_Dev\ATLAS\LoanstarWorldWide\WorldWideBusiness\bin\Debug\StockLoan.Transport.pdb
+C:\_Dev\ATLAS\LoanstarWorldWide\WorldWideBusiness\obj\Debug\ResolveAssemblyReference.cache
+C:\_Dev\ATLAS\LoanstarWorldWide\WorldWideBusiness\obj\Debug\StockLoan.Business.dll
+C:\_Dev\ATLAS\LoanstarWorldWide\WorldWideBusiness\obj\Debug\StockLoan.Business.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideBusiness\bin\Debug\Encrypt.dll
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideBusiness\bin\Debug\Encrypt.pdb

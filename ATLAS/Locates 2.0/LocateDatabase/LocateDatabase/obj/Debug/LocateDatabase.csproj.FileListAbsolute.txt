@@ -1,0 +1,5 @@
+C:\_Dev\ATLAS\Locates 2.0\LocateDatabase\LocateDatabase\bin\Debug\LocateDatabase.dll
+C:\_Dev\ATLAS\Locates 2.0\LocateDatabase\LocateDatabase\bin\Debug\LocateDatabase.pdb
+C:\_Dev\ATLAS\Locates 2.0\LocateDatabase\LocateDatabase\obj\Debug\ResolveAssemblyReference.cache
+C:\_Dev\ATLAS\Locates 2.0\LocateDatabase\LocateDatabase\obj\Debug\LocateDatabase.dll
+C:\_Dev\ATLAS\Locates 2.0\LocateDatabase\LocateDatabase\obj\Debug\LocateDatabase.pdb

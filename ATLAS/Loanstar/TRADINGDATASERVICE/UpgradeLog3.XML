@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="TRADINGDATAservice">
+</Property><Property Name="Solution File" Value="C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVICE\TRADINGDATAservice.sln">
+</Property><Property Name="Date" Value="Tuesday, February 01, 2011">
+</Property><Property Name="Time" Value="15:01 PM">
+</Property><Property Name="Log Number" Value="3">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="TRADINGDATAservice.sln" Description="File successfully backed up as C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVICE\Backup2\TRADINGDATAservice.sln">
+</Event><Event ErrorLevel="1" Project="Common" Source="..\..\Common\Common.csproj" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\Common.csproj" Description="Project file successfully backed up as C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVICE\Backup2\Common\Common.csproj">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\Common.csproj.user" Description="Project user file successfully backed up as C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVICE\Backup2\Common\Common.csproj.user">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\AssemblyInfo.cs" Description="File successfully backed up as C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVICE\Backup2\Common\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\DealList.cs" Description="File successfully backed up as C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVICE\Backup2\Common\DealList.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\KeyValue.cs" Description="File successfully backed up as C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVICE\Backup2\Common\KeyValue.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\List.cs" Description="File successfully backed up as C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVICE\Backup2\Common\List.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\Log.cs" Description="File successfully backed up as C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVICE\Backup2\Common\Log.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\RegistryValue.cs" Description="File successfully backed up as C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVICE\Backup2\Common\RegistryValue.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\RemotingTools.cs" Description="File successfully backed up as C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVICE\Backup2\Common\RemotingTools.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\Security.cs" Description="File successfully backed up as C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVICE\Backup2\Common\Security.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\Standard.cs" Description="File successfully backed up as C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVICE\Backup2\Common\Standard.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\Tools.cs" Description="File successfully backed up as C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVICE\Backup2\Common\Tools.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\..\Common\Common.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Common" Source="..\..\Common\Common.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="2" Project="StaticDataService" Source="StaticDataService.csproj" Description="Unable to open project file to perform upgrade.  ">
+</Event><Event ErrorLevel="1" Project="StaticDataServer" Source="..\STATICDATASERVER\StaticDataServer.csproj" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="0" Project="StaticDataServer" Source="..\STATICDATASERVER\StaticDataServer.csproj" Description="Project file successfully backed up as C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVICE\Backup2\StaticDataServer\StaticDataServer.csproj">
+</Event><Event ErrorLevel="0" Project="StaticDataServer" Source="..\STATICDATASERVER\AssemblyInfo.cs" Description="File successfully backed up as C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVICE\Backup2\StaticDataServer\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="StaticDataServer" Source="..\STATICDATASERVER\Master.cs" Description="File successfully backed up as C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVICE\Backup2\StaticDataServer\Master.cs">
+</Event><Event ErrorLevel="0" Project="StaticDataServer" Source="..\STATICDATASERVER\StaticDataMain.cs" Description="File successfully backed up as C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVICE\Backup2\StaticDataServer\StaticDataMain.cs">
+</Event><Event ErrorLevel="0" Project="StaticDataServer" Source="..\STATICDATASERVER\StaticDataServer.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="StaticDataServer" Source="..\STATICDATASERVER\StaticDataServer.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="" Source="TRADINGDATAservice.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="TRADINGDATAservice.sln" Description="Converted">
+</Event></UpgradeLog>

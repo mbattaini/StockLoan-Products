@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MarksService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/MarksService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/MarksService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMarksService_GetSourceIP_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSourceIP" />
+  </wsdl:message>
+  <wsdl:message name="IMarksService_GetSourceIP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSourceIPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarksService_MarkAsOfSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:MarkAsOfSet" />
+  </wsdl:message>
+  <wsdl:message name="IMarksService_MarkAsOfSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MarkAsOfSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarksService_MarkIsExistGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:MarkIsExistGet" />
+  </wsdl:message>
+  <wsdl:message name="IMarksService_MarkIsExistGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MarkIsExistGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarksService_MarkSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:MarkSet" />
+  </wsdl:message>
+  <wsdl:message name="IMarksService_MarkSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MarkSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarksService_MarksGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:MarksGet" />
+  </wsdl:message>
+  <wsdl:message name="IMarksService_MarksGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MarksGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarksService_MarksSummaryByCashGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:MarksSummaryByCashGet" />
+  </wsdl:message>
+  <wsdl:message name="IMarksService_MarksSummaryByCashGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MarksSummaryByCashGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarksService_MarksSummaryGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:MarksSummaryGet" />
+  </wsdl:message>
+  <wsdl:message name="IMarksService_MarksSummaryGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MarksSummaryGetResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMarksService">
+    <wsdl:operation name="GetSourceIP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarksService/GetSourceIP" message="tns:IMarksService_GetSourceIP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarksService/GetSourceIPResponse" message="tns:IMarksService_GetSourceIP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MarkAsOfSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarksService/MarkAsOfSet" message="tns:IMarksService_MarkAsOfSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarksService/MarkAsOfSetResponse" message="tns:IMarksService_MarkAsOfSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MarkIsExistGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarksService/MarkIsExistGet" message="tns:IMarksService_MarkIsExistGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarksService/MarkIsExistGetResponse" message="tns:IMarksService_MarkIsExistGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MarkSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarksService/MarkSet" message="tns:IMarksService_MarkSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarksService/MarkSetResponse" message="tns:IMarksService_MarkSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MarksGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarksService/MarksGet" message="tns:IMarksService_MarksGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarksService/MarksGetResponse" message="tns:IMarksService_MarksGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MarksSummaryByCashGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarksService/MarksSummaryByCashGet" message="tns:IMarksService_MarksSummaryByCashGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarksService/MarksSummaryByCashGetResponse" message="tns:IMarksService_MarksSummaryByCashGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MarksSummaryGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarksService/MarksSummaryGet" message="tns:IMarksService_MarksSummaryGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarksService/MarksSummaryGetResponse" message="tns:IMarksService_MarksSummaryGet_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IMarksService" type="tns:IMarksService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSourceIP">
+      <soap:operation soapAction="http://tempuri.org/IMarksService/GetSourceIP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MarkAsOfSet">
+      <soap:operation soapAction="http://tempuri.org/IMarksService/MarkAsOfSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MarkIsExistGet">
+      <soap:operation soapAction="http://tempuri.org/IMarksService/MarkIsExistGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MarkSet">
+      <soap:operation soapAction="http://tempuri.org/IMarksService/MarkSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MarksGet">
+      <soap:operation soapAction="http://tempuri.org/IMarksService/MarksGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MarksSummaryByCashGet">
+      <soap:operation soapAction="http://tempuri.org/IMarksService/MarksSummaryByCashGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MarksSummaryGet">
+      <soap:operation soapAction="http://tempuri.org/IMarksService/MarksSummaryGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MarksService">
+    <wsdl:port name="BasicHttpBinding_IMarksService" binding="tns:BasicHttpBinding_IMarksService">
+      <soap:address location="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/MarksService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

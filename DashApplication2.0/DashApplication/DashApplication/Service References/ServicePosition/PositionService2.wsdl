@@ -1,0 +1,932 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PositionService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://d1watlappprd1.apexclearing.local:81/PositionService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://d1watlappprd1.apexclearing.local:81/PositionService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://d1watlappprd1.apexclearing.local:81/PositionService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DashBusiness" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPosition_MemoSegStartOfDaySet_InputMessage">
+    <wsdl:part name="parameters" element="tns:MemoSegStartOfDaySet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_MemoSegStartOfDaySet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MemoSegStartOfDaySetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_PenaltyBoxGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:PenaltyBoxGet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_PenaltyBoxGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PenaltyBoxGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_PenaltyBoxItemSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:PenaltyBoxItemSet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_PenaltyBoxItemSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PenaltyBoxItemSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_PenaltyBoxCommentSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:PenaltyBoxCommentSet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_PenaltyBoxCommentSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PenaltyBoxCommentSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_RecallTradingGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecallTradingGet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_RecallTradingGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecallTradingGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_RecallTradingSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecallTradingSet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_RecallTradingSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecallTradingSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_ShortSaleBillingBPSItemSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShortSaleBillingBPSItemSet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_ShortSaleBillingBPSItemSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShortSaleBillingBPSItemSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_CollateralizationUtilDetailGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:CollateralizationUtilDetailGet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_CollateralizationUtilDetailGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CollateralizationUtilDetailGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_CollateralizationUtilStartOfDayGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:CollateralizationUtilStartOfDayGet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_CollateralizationUtilStartOfDayGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CollateralizationUtilStartOfDayGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_CollateralizationUtilIntraDayGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:CollateralizationUtilIntraDayGet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_CollateralizationUtilIntraDayGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CollateralizationUtilIntraDayGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_BorrowsMorningGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:BorrowsMorningGet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_BorrowsMorningGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BorrowsMorningGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_BorrowsMorningSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:BorrowsMorningSet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_BorrowsMorningSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BorrowsMorningSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_BorrowsMorningPurge_InputMessage">
+    <wsdl:part name="parameters" element="tns:BorrowsMorningPurge" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_BorrowsMorningPurge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BorrowsMorningPurgeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_CheckListGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckListGet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_CheckListGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckListGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_CheckListItemSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckListItemSet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_CheckListItemSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckListItemSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_KeyValueGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:KeyValueGet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_KeyValueGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:KeyValueGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_KeyValueSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:KeyValueSet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_KeyValueSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:KeyValueSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_BookBalancesGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:BookBalancesGet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_BookBalancesGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BookBalancesGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_BookCreditLBookBalancesGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:BookCreditLBookBalancesGet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_BookCreditLBookBalancesGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BookCreditLBookBalancesGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_RecallTradingSupplementGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecallTradingSupplementGet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_RecallTradingSupplementGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecallTradingSupplementGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_UserValidationGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserValidationGet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_UserValidationGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserValidationGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_ContractDataGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:ContractDataGet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_ContractDataGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ContractDataGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_ContractSummaryByCashLoad_InputMessage">
+    <wsdl:part name="parameters" element="tns:ContractSummaryByCashLoad" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_ContractSummaryByCashLoad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ContractSummaryByCashLoadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_ContractSummaryBySecurity_InputMessage">
+    <wsdl:part name="parameters" element="tns:ContractSummaryBySecurity" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_ContractSummaryBySecurity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ContractSummaryBySecurityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_ContractsExcessCollateralSummaryLoad_InputMessage">
+    <wsdl:part name="parameters" element="tns:ContractsExcessCollateralSummaryLoad" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_ContractsExcessCollateralSummaryLoad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ContractsExcessCollateralSummaryLoadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_ContractSummaryByBooKGroupCashLoad_InputMessage">
+    <wsdl:part name="parameters" element="tns:ContractSummaryByBooKGroupCashLoad" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_ContractSummaryByBooKGroupCashLoad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ContractSummaryByBooKGroupCashLoadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_ContractSummaryByBooKGroupSharesCashLoad_InputMessage">
+    <wsdl:part name="parameters" element="tns:ContractSummaryByBooKGroupSharesCashLoad" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_ContractSummaryByBooKGroupSharesCashLoad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ContractSummaryByBooKGroupSharesCashLoadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_ContractsDetailByBookSummaryLoad_InputMessage">
+    <wsdl:part name="parameters" element="tns:ContractsDetailByBookSummaryLoad" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_ContractsDetailByBookSummaryLoad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ContractsDetailByBookSummaryLoadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_MarksGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:MarksGet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_MarksGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MarksGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_InventoryHistoryGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:InventoryHistoryGet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_InventoryHistoryGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InventoryHistoryGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_InventoryHistorySummaryGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:InventoryHistorySummaryGet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_InventoryHistorySummaryGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InventoryHistorySummaryGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_InventoryDeskGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:InventoryDeskGet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_InventoryDeskGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InventoryDeskGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_DeskListGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeskListGet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_DeskListGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeskListGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_BookGroupGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:BookGroupGet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_BookGroupGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BookGroupGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_HtbProfitabilityGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:HtbProfitabilityGet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_HtbProfitabilityGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HtbProfitabilityGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_HtbProfitabilitySpreadsGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:HtbProfitabilitySpreadsGet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_HtbProfitabilitySpreadsGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HtbProfitabilitySpreadsGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_HolidaysGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:HolidaysGet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_HolidaysGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HolidaysGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_UserCanView_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserCanView" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_UserCanView_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserCanViewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_WebSecurityProfileDataSetGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebSecurityProfileDataSetGet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_WebSecurityProfileDataSetGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebSecurityProfileDataSetGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_InventoryRateGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:InventoryRateGet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_InventoryRateGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InventoryRateGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_InventoryRateHistoryGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:InventoryRateHistoryGet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_InventoryRateHistoryGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InventoryRateHistoryGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_FileReader_InputMessage">
+    <wsdl:part name="parameters" element="tns:FileReader" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_FileReader_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FileReaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_WebReportsGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebReportsGet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_WebReportsGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebReportsGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_ReportValueSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReportValueSet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_ReportValueSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReportValueSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_StraddlesGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:StraddlesGet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_StraddlesGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StraddlesGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_ShortSaleLocatesSourceGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShortSaleLocatesSourceGet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_ShortSaleLocatesSourceGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShortSaleLocatesSourceGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_BankLoanReleaseReportGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:BankLoanReleaseReportGet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_BankLoanReleaseReportGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BankLoanReleaseReportGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_MemoSegLockupGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:MemoSegLockupGet" />
+  </wsdl:message>
+  <wsdl:message name="IPosition_MemoSegLockupGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MemoSegLockupGetResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPosition">
+    <wsdl:operation name="MemoSegStartOfDaySet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/MemoSegStartOfDaySet" message="tns:IPosition_MemoSegStartOfDaySet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/MemoSegStartOfDaySetResponse" message="tns:IPosition_MemoSegStartOfDaySet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PenaltyBoxGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/PenaltyBoxGet" message="tns:IPosition_PenaltyBoxGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/PenaltyBoxGetResponse" message="tns:IPosition_PenaltyBoxGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PenaltyBoxItemSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/PenaltyBoxItemSet" message="tns:IPosition_PenaltyBoxItemSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/PenaltyBoxItemSetResponse" message="tns:IPosition_PenaltyBoxItemSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PenaltyBoxCommentSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/PenaltyBoxCommentSet" message="tns:IPosition_PenaltyBoxCommentSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/PenaltyBoxCommentSetResponse" message="tns:IPosition_PenaltyBoxCommentSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecallTradingGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/RecallTradingGet" message="tns:IPosition_RecallTradingGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/RecallTradingGetResponse" message="tns:IPosition_RecallTradingGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecallTradingSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/RecallTradingSet" message="tns:IPosition_RecallTradingSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/RecallTradingSetResponse" message="tns:IPosition_RecallTradingSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShortSaleBillingBPSItemSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/ShortSaleBillingBPSItemSet" message="tns:IPosition_ShortSaleBillingBPSItemSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/ShortSaleBillingBPSItemSetResponse" message="tns:IPosition_ShortSaleBillingBPSItemSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CollateralizationUtilDetailGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/CollateralizationUtilDetailGet" message="tns:IPosition_CollateralizationUtilDetailGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/CollateralizationUtilDetailGetResponse" message="tns:IPosition_CollateralizationUtilDetailGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CollateralizationUtilStartOfDayGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/CollateralizationUtilStartOfDayGet" message="tns:IPosition_CollateralizationUtilStartOfDayGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/CollateralizationUtilStartOfDayGetResponse" message="tns:IPosition_CollateralizationUtilStartOfDayGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CollateralizationUtilIntraDayGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/CollateralizationUtilIntraDayGet" message="tns:IPosition_CollateralizationUtilIntraDayGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/CollateralizationUtilIntraDayGetResponse" message="tns:IPosition_CollateralizationUtilIntraDayGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BorrowsMorningGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/BorrowsMorningGet" message="tns:IPosition_BorrowsMorningGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/BorrowsMorningGetResponse" message="tns:IPosition_BorrowsMorningGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BorrowsMorningSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/BorrowsMorningSet" message="tns:IPosition_BorrowsMorningSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/BorrowsMorningSetResponse" message="tns:IPosition_BorrowsMorningSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BorrowsMorningPurge">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/BorrowsMorningPurge" message="tns:IPosition_BorrowsMorningPurge_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/BorrowsMorningPurgeResponse" message="tns:IPosition_BorrowsMorningPurge_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckListGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/CheckListGet" message="tns:IPosition_CheckListGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/CheckListGetResponse" message="tns:IPosition_CheckListGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckListItemSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/CheckListItemSet" message="tns:IPosition_CheckListItemSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/CheckListItemSetResponse" message="tns:IPosition_CheckListItemSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="KeyValueGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/KeyValueGet" message="tns:IPosition_KeyValueGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/KeyValueGetResponse" message="tns:IPosition_KeyValueGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="KeyValueSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/KeyValueSet" message="tns:IPosition_KeyValueSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/KeyValueSetResponse" message="tns:IPosition_KeyValueSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BookBalancesGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/BookBalancesGet" message="tns:IPosition_BookBalancesGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/BookBalancesGetResponse" message="tns:IPosition_BookBalancesGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BookCreditLBookBalancesGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/BookCreditLBookBalancesGet" message="tns:IPosition_BookCreditLBookBalancesGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/BookCreditLBookBalancesGetResponse" message="tns:IPosition_BookCreditLBookBalancesGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecallTradingSupplementGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/RecallTradingSupplementGet" message="tns:IPosition_RecallTradingSupplementGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/RecallTradingSupplementGetResponse" message="tns:IPosition_RecallTradingSupplementGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserValidationGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/UserValidationGet" message="tns:IPosition_UserValidationGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/UserValidationGetResponse" message="tns:IPosition_UserValidationGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContractDataGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/ContractDataGet" message="tns:IPosition_ContractDataGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/ContractDataGetResponse" message="tns:IPosition_ContractDataGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContractSummaryByCashLoad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/ContractSummaryByCashLoad" message="tns:IPosition_ContractSummaryByCashLoad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/ContractSummaryByCashLoadResponse" message="tns:IPosition_ContractSummaryByCashLoad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContractSummaryBySecurity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/ContractSummaryBySecurity" message="tns:IPosition_ContractSummaryBySecurity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/ContractSummaryBySecurityResponse" message="tns:IPosition_ContractSummaryBySecurity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContractsExcessCollateralSummaryLoad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/ContractsExcessCollateralSummaryLoad" message="tns:IPosition_ContractsExcessCollateralSummaryLoad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/ContractsExcessCollateralSummaryLoadResponse" message="tns:IPosition_ContractsExcessCollateralSummaryLoad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContractSummaryByBooKGroupCashLoad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/ContractSummaryByBooKGroupCashLoad" message="tns:IPosition_ContractSummaryByBooKGroupCashLoad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/ContractSummaryByBooKGroupCashLoadResponse" message="tns:IPosition_ContractSummaryByBooKGroupCashLoad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContractSummaryByBooKGroupSharesCashLoad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/ContractSummaryByBooKGroupSharesCashLoad" message="tns:IPosition_ContractSummaryByBooKGroupSharesCashLoad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/ContractSummaryByBooKGroupSharesCashLoadResponse" message="tns:IPosition_ContractSummaryByBooKGroupSharesCashLoad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContractsDetailByBookSummaryLoad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/ContractsDetailByBookSummaryLoad" message="tns:IPosition_ContractsDetailByBookSummaryLoad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/ContractsDetailByBookSummaryLoadResponse" message="tns:IPosition_ContractsDetailByBookSummaryLoad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MarksGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/MarksGet" message="tns:IPosition_MarksGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/MarksGetResponse" message="tns:IPosition_MarksGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InventoryHistoryGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/InventoryHistoryGet" message="tns:IPosition_InventoryHistoryGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/InventoryHistoryGetResponse" message="tns:IPosition_InventoryHistoryGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InventoryHistorySummaryGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/InventoryHistorySummaryGet" message="tns:IPosition_InventoryHistorySummaryGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/InventoryHistorySummaryGetResponse" message="tns:IPosition_InventoryHistorySummaryGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InventoryDeskGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/InventoryDeskGet" message="tns:IPosition_InventoryDeskGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/InventoryDeskGetResponse" message="tns:IPosition_InventoryDeskGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeskListGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/DeskListGet" message="tns:IPosition_DeskListGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/DeskListGetResponse" message="tns:IPosition_DeskListGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BookGroupGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/BookGroupGet" message="tns:IPosition_BookGroupGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/BookGroupGetResponse" message="tns:IPosition_BookGroupGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HtbProfitabilityGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/HtbProfitabilityGet" message="tns:IPosition_HtbProfitabilityGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/HtbProfitabilityGetResponse" message="tns:IPosition_HtbProfitabilityGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HtbProfitabilitySpreadsGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/HtbProfitabilitySpreadsGet" message="tns:IPosition_HtbProfitabilitySpreadsGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/HtbProfitabilitySpreadsGetResponse" message="tns:IPosition_HtbProfitabilitySpreadsGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HolidaysGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/HolidaysGet" message="tns:IPosition_HolidaysGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/HolidaysGetResponse" message="tns:IPosition_HolidaysGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserCanView">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/UserCanView" message="tns:IPosition_UserCanView_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/UserCanViewResponse" message="tns:IPosition_UserCanView_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebSecurityProfileDataSetGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/WebSecurityProfileDataSetGet" message="tns:IPosition_WebSecurityProfileDataSetGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/WebSecurityProfileDataSetGetResponse" message="tns:IPosition_WebSecurityProfileDataSetGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InventoryRateGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/InventoryRateGet" message="tns:IPosition_InventoryRateGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/InventoryRateGetResponse" message="tns:IPosition_InventoryRateGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InventoryRateHistoryGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/InventoryRateHistoryGet" message="tns:IPosition_InventoryRateHistoryGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/InventoryRateHistoryGetResponse" message="tns:IPosition_InventoryRateHistoryGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FileReader">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/FileReader" message="tns:IPosition_FileReader_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/FileReaderResponse" message="tns:IPosition_FileReader_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebReportsGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/WebReportsGet" message="tns:IPosition_WebReportsGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/WebReportsGetResponse" message="tns:IPosition_WebReportsGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReportValueSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/ReportValueSet" message="tns:IPosition_ReportValueSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/ReportValueSetResponse" message="tns:IPosition_ReportValueSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StraddlesGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/StraddlesGet" message="tns:IPosition_StraddlesGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/StraddlesGetResponse" message="tns:IPosition_StraddlesGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShortSaleLocatesSourceGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/ShortSaleLocatesSourceGet" message="tns:IPosition_ShortSaleLocatesSourceGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/ShortSaleLocatesSourceGetResponse" message="tns:IPosition_ShortSaleLocatesSourceGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BankLoanReleaseReportGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/BankLoanReleaseReportGet" message="tns:IPosition_BankLoanReleaseReportGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/BankLoanReleaseReportGetResponse" message="tns:IPosition_BankLoanReleaseReportGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MemoSegLockupGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPosition/MemoSegLockupGet" message="tns:IPosition_MemoSegLockupGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPosition/MemoSegLockupGetResponse" message="tns:IPosition_MemoSegLockupGet_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPosition" type="tns:IPosition">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="MemoSegStartOfDaySet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/MemoSegStartOfDaySet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PenaltyBoxGet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/PenaltyBoxGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PenaltyBoxItemSet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/PenaltyBoxItemSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PenaltyBoxCommentSet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/PenaltyBoxCommentSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecallTradingGet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/RecallTradingGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecallTradingSet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/RecallTradingSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShortSaleBillingBPSItemSet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/ShortSaleBillingBPSItemSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CollateralizationUtilDetailGet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/CollateralizationUtilDetailGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CollateralizationUtilStartOfDayGet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/CollateralizationUtilStartOfDayGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CollateralizationUtilIntraDayGet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/CollateralizationUtilIntraDayGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BorrowsMorningGet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/BorrowsMorningGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BorrowsMorningSet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/BorrowsMorningSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BorrowsMorningPurge">
+      <soap:operation soapAction="http://tempuri.org/IPosition/BorrowsMorningPurge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckListGet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/CheckListGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckListItemSet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/CheckListItemSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KeyValueGet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/KeyValueGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KeyValueSet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/KeyValueSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BookBalancesGet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/BookBalancesGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BookCreditLBookBalancesGet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/BookCreditLBookBalancesGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecallTradingSupplementGet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/RecallTradingSupplementGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserValidationGet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/UserValidationGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractDataGet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/ContractDataGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractSummaryByCashLoad">
+      <soap:operation soapAction="http://tempuri.org/IPosition/ContractSummaryByCashLoad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractSummaryBySecurity">
+      <soap:operation soapAction="http://tempuri.org/IPosition/ContractSummaryBySecurity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractsExcessCollateralSummaryLoad">
+      <soap:operation soapAction="http://tempuri.org/IPosition/ContractsExcessCollateralSummaryLoad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractSummaryByBooKGroupCashLoad">
+      <soap:operation soapAction="http://tempuri.org/IPosition/ContractSummaryByBooKGroupCashLoad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractSummaryByBooKGroupSharesCashLoad">
+      <soap:operation soapAction="http://tempuri.org/IPosition/ContractSummaryByBooKGroupSharesCashLoad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContractsDetailByBookSummaryLoad">
+      <soap:operation soapAction="http://tempuri.org/IPosition/ContractsDetailByBookSummaryLoad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MarksGet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/MarksGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InventoryHistoryGet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/InventoryHistoryGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InventoryHistorySummaryGet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/InventoryHistorySummaryGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InventoryDeskGet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/InventoryDeskGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeskListGet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/DeskListGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BookGroupGet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/BookGroupGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HtbProfitabilityGet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/HtbProfitabilityGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HtbProfitabilitySpreadsGet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/HtbProfitabilitySpreadsGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HolidaysGet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/HolidaysGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserCanView">
+      <soap:operation soapAction="http://tempuri.org/IPosition/UserCanView" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebSecurityProfileDataSetGet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/WebSecurityProfileDataSetGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InventoryRateGet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/InventoryRateGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InventoryRateHistoryGet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/InventoryRateHistoryGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FileReader">
+      <soap:operation soapAction="http://tempuri.org/IPosition/FileReader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebReportsGet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/WebReportsGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportValueSet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/ReportValueSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StraddlesGet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/StraddlesGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShortSaleLocatesSourceGet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/ShortSaleLocatesSourceGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BankLoanReleaseReportGet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/BankLoanReleaseReportGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MemoSegLockupGet">
+      <soap:operation soapAction="http://tempuri.org/IPosition/MemoSegLockupGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PositionService">
+    <wsdl:port name="BasicHttpBinding_IPosition" binding="tns:BasicHttpBinding_IPosition">
+      <soap:address location="http://d1watlappprd1.apexclearing.local:81/PositionService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

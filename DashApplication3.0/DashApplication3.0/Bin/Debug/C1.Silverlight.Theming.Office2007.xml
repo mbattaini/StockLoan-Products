@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Silverlight.Theming.Office2007</name>
+    </assembly>
+    <members>
+        <member name="T:C1.Silverlight.Theming.Office2007.C1ThemeOffice2007Blue">
+            <summary>
+            ContentControl defining the Office theme.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Theming.Office2007.C1ThemeOffice2007Base">
+            <summary>
+            ContentControl defining the Office theme.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Theming.Office2007.C1ThemeOffice2007Base.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Silverlight.Theming.Office2007.C1ThemeOffice2007Base"/> class.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Theming.Office2007.C1ThemeOffice2007Base.#ctor(System.Reflection.Assembly,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Silverlight.Theming.Office2007.C1ThemeOffice2007Base"/> class.
+            </summary>
+            <param name="assembly">The assembly containing the new overrides.</param>
+            <param name="overrides">The ResourceDictionary with the overrides.</param>
+        </member>
+        <member name="M:C1.Silverlight.Theming.Office2007.C1ThemeOffice2007Blue.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Silverlight.Theming.Office2007.C1ThemeOffice2007Black"/> class.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Theming.Office2007.C1ThemeOffice2007">
+            <summary>
+            ContentControl defining the Office theme.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Theming.Office2007.C1ThemeOffice2007Silver">
+            <summary>
+            ContentControl defining the Office theme.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Theming.Office2007.C1ThemeOffice2007Silver.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Silverlight.Theming.Office2007.C1ThemeOffice2007Silver"/> class.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Theming.Office2007.C1ThemeOffice2007Black">
+            <summary>
+            ContentControl defining the Office theme.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Theming.Office2007.C1ThemeOffice2007Black.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Silverlight.Theming.Office2007.C1ThemeOffice2007Black"/> class.
+            </summary>
+        </member>
+    </members>
+</doc>

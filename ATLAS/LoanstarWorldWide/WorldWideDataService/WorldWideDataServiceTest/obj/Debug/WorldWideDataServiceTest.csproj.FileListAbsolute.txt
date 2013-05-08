@@ -1,0 +1,17 @@
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideDataService\WorldWideDataServiceTest\bin\Debug\StockLoan.WorldWideDataServiceTest.exe.config
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideDataService\WorldWideDataServiceTest\bin\Debug\StockLoan.WorldWideDataServiceTest.exe.manifest
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideDataService\WorldWideDataServiceTest\bin\Debug\StockLoan.WorldWideDataServiceTest.application
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideDataService\WorldWideDataServiceTest\bin\Debug\StockLoan.WorldWideDataServiceTest.exe
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideDataService\WorldWideDataServiceTest\bin\Debug\StockLoan.WorldWideDataServiceTest.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideDataService\WorldWideDataServiceTest\bin\Debug\StockLoan.Common.dll
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideDataService\WorldWideDataServiceTest\bin\Debug\StockLoan.DataAccess.dll
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideDataService\WorldWideDataServiceTest\bin\Debug\StockLoan.WorldWideData.dll
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideDataService\WorldWideDataServiceTest\bin\Debug\StockLoan.Common.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideDataService\WorldWideDataServiceTest\bin\Debug\StockLoan.DataAccess.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideDataService\WorldWideDataServiceTest\bin\Debug\StockLoan.WorldWideData.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideDataService\WorldWideDataServiceTest\obj\Debug\ResolveAssemblyReference.cache
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideDataService\WorldWideDataServiceTest\obj\Debug\StockLoan.WorldWideDataServiceTest.TrustInfo.xml
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideDataService\WorldWideDataServiceTest\obj\Debug\StockLoan.WorldWideDataServiceTest.exe.manifest
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideDataService\WorldWideDataServiceTest\obj\Debug\StockLoan.WorldWideDataServiceTest.application
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideDataService\WorldWideDataServiceTest\obj\Debug\StockLoan.WorldWideDataServiceTest.exe
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideDataService\WorldWideDataServiceTest\obj\Debug\StockLoan.WorldWideDataServiceTest.pdb

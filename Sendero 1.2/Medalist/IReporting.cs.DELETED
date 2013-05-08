@@ -1,0 +1,26 @@
+// Licensed Materials - Property of Anetics, LLC.
+// Copyright (C) Anetics, LLC. 2005  All rights reserved.
+
+using System;
+using System.Data;
+
+namespace Anetics.Medalist
+{
+	public interface IReporting
+	{
+		DataSet ReportsGet(
+			string reportName,
+			short utcOffset);
+		
+		void ReportSet (
+			string reportName,
+			string reportStoredProc,
+			string reportDescription,
+			string actUserId
+			);		
+
+		DataSet ReportExecute (	
+			string reportName,
+			string reportStoredProc);
+	}
+}

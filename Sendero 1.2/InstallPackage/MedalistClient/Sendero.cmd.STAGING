@@ -1,0 +1,10 @@
+Rem To modify this script to work on your computer
+Rem  you must supply the network path 
+Rem  where the medalist client is stored 
+Rem  SERVER_NAME would become the network path
+Rem  Please create C:\SenderoTesting and C:\SenderoTesting\Logs folders 
+
+xcopy /a /y /q /r /I /E \\RSPEN001.PENSON.COM\Staging\Apps\Sendero\Client C:\SenderoTesting
+ 
+start C:\SenderoTesting\Anetics.MedalistClient.exe
+ 

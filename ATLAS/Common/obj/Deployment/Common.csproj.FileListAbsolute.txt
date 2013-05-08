@@ -1,0 +1,4 @@
+C:\_dev\ATLAS\Common\bin\Deployment\StockLoan.Common.dll
+C:\_dev\ATLAS\Common\bin\Deployment\StockLoan.Common.pdb
+C:\_dev\ATLAS\Common\obj\Deployment\StockLoan.Common.dll
+C:\_dev\ATLAS\Common\obj\Deployment\StockLoan.Common.pdb

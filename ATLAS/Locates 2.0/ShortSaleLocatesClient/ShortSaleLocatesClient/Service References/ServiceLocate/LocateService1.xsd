@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="LocateGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tradeDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="groupCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="locateId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="utcOffset" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocateGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LocateGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocateSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="locateId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="comment" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quantity" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocateSetResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeucrityIdInformationGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="secId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SeucrityIdInformationGetResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocateResearchGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="locateId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="stopDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clientId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="groupCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="secId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="source" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="actor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="comment" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clientQuantity" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clientQuantityOperator" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quantity" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quantityOperator" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="openTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="openTimeOperator" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="utcOffset" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocateResearchGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LocateResearchGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

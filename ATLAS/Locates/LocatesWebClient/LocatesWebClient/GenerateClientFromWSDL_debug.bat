@@ -1,0 +1,1 @@
+svcutil.exe http://localhost:2156/LocatesWebService/Service.svc?wsdl

@@ -1,0 +1,39 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"    
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" 
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+    x:Name="MainUserControl" x:Class="DashApplication.BorrowsMorningControl"
+    mc:Ignorable="d"
+    d:DesignHeight="300" Width="471">
+
+    <Grid x:Name="LayoutRoot">
+
+        <c1:C1DataGrid x:Name="BorrowsGrid" Margin="10,41,10,10" AutoGenerateColumns="False" CanUserAddRows="False" CanUserEditRows="False" CanUserRemoveRows="False" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False">
+            <c1:C1DataGrid.Effect>
+                <DropShadowEffect/>
+            </c1:C1DataGrid.Effect>
+            <c1:C1DataGrid.Columns>                
+                <c1:DataGridBoundColumn Header="BizDate" Binding="{Binding BizDate}"  CanUserFilter="True" CanUserSort="True" FilterMemberPath="BizDate" SortMemberPath="BizDate" Width="100px" Visibility="Collapsed"/>
+                <c1:DataGridBoundColumn Header="BookGroup" Binding="{Binding BookGroup}"  CanUserFilter="True" CanUserSort="True" FilterMemberPath="BookGroup" SortMemberPath="BookGroup" Width="100px" Visibility="Collapsed"/>
+                <c1:DataGridBoundColumn Header="CUSIP" Binding="{Binding SecId}"  CanUserFilter="True" CanUserSort="True" FilterMemberPath="SecId" SortMemberPath="SecId" Width="100px"/>
+                <c1:DataGridBoundColumn Header="Symbol" Binding="{Binding Symbol}"  CanUserFilter="True" CanUserSort="True" FilterMemberPath="Symbol" SortMemberPath="Symbol" Width="100px"/>
+                <c1:DataGridNumericColumn Header="Borrow" Binding="{Binding Borrow}"  Format="#,##0" CanUserFilter="True" CanUserSort="True" FilterMemberPath="Borrow" SortMemberPath="Borrow" Width="*"/>
+                <c1:DataGridNumericColumn Header="Delivered" Binding="{Binding Delivered}"  Format="#,##0" CanUserFilter="True" CanUserSort="True" FilterMemberPath="Delivered" SortMemberPath="Delivered" Width="*"/>            
+<c1:DataGridBoundColumn Header="Status" Binding="{Binding Status}"  CanUserFilter="True" CanUserSort="True" FilterMemberPath="Status" SortMemberPath="Status" Width="*"/>
+            </c1:C1DataGrid.Columns>
+        </c1:C1DataGrid>
+        <c1:C1ToolbarStrip x:Name="MainToolBarStrip" Height="31" Margin="10,5,10,0" VerticalAlignment="Top">
+            <c1:C1ToolbarStrip.Effect>
+                <DropShadowEffect/>
+            </c1:C1ToolbarStrip.Effect>
+            <sdk:Label Height="28" Width="88" Content="Business Date"/>
+            <sdk:DatePicker x:Name="BizDatePicker" />            
+            <c1:C1ToolbarButton  x:Name="LoadListButton" Height="26" Width="77" Content="Load List" VerticalContentAlignment="Center" Click="LoadListButton_Click"/>            
+            <c1:C1ToolbarButton x:Name="UploadListButton" Height="26" Width="77" Content="Upload List" VerticalContentAlignment="Center" Click="UploadListButton_Click"/>
+            <c1:C1ToolbarButton x:Name="PurgeListButton" Height="26" Width="77" Content="Purge List" VerticalContentAlignment="Center" Click="PurgeListButton_Click" />
+        </c1:C1ToolbarStrip>
+    </Grid>
+</UserControl>

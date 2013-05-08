@@ -1,0 +1,34 @@
+Sendero Deployment 
+-------------------------
+
+To Start:
+
+1)       You need to create a sendero folder on your c:\, C:\Sendero.
+
+2)       Also you need to create a C:\Sendero\Logs directory.
+
+3)       Next open an internet explorer window and type in the following address: \\SERVER_NAME\Bin\
+
+4)       Copy the file Sendero.cmd from SERVER_NAME to C:\Sendero\.
+
+5)       Next right click on C:\Sendero\Sendero.Cmd and click Create Shortcut.
+
+6)       Double click on C:\Sendero\Sendero.Cmd, this will run the script and downlaod the executable.
+
+7)       Now right-click on the shortcut just created. This will open the properties screen.
+
+8)       Click Change Icon…
+
+9)       Click Browse and open C:\Sendero\Anetics.MedalistClient.exe.
+
+10)       Select the medalist icon and click ok.
+
+11)       Now right click on the shortcut and select cut.
+
+12)     Paste the icon on your desktop.
+
+13)     Now double-click on the sendero shortcut.
+
+14)    This will download all the executable files to your computer and start Sendero.
+
+ 

@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="LoanStarWorldWideAdmin.Views.HolidayAddWindow"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+    xmlns:c1datetime="clr-namespace:C1.Silverlight.DateTimeEditors;assembly=C1.Silverlight.DateTimeEditors"
+    xmlns:c1grid="clr-namespace:C1.Silverlight.DataGrid;assembly=C1.Silverlight.DataGrid" 
+    xmlns:c1="clr-namespace:C1.Silverlight;assembly=C1.Silverlight"
+    Background="#FF374F5D"  
+    xmlns:c1sched="clr-namespace:C1.Silverlight.Schedule;assembly=C1.Silverlight.Schedule">
+   
+    <!-- d:DesignHeight="268" d:DesignWidth="730"> -->
+    
+    <Grid x:Name="LayoutRoot" Background="White" Height="238" Width="581">
+        <Grid Name="DetailGrid" HorizontalAlignment="Left" Width="581" Height="238" VerticalAlignment="Top">
+            <Grid.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF325988" Offset="1" />
+                    <GradientStop Color="#FF1F3F68" />
+                </RadialGradientBrush>
+            </Grid.Background>
+            <TextBox x:Name="CountryTextBox" Height="23" Width="300" Margin="109,42,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" />
+            <sdk:Label x:Name="BookGroupLabel" Content="Book Group " FontSize="11" Foreground="White" FontWeight="Bold" Width="75" HorizontalContentAlignment="Right" Margin="7,11,0,0" HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" />
+            <TextBox x:Name="BookGroupNameTextBox" Height="23" Width="100" Margin="88,8,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" TabIndex="0" />
+            <sdk:Label x:Name="CountryLabel" Content="Country " FontSize="11" Foreground="White" FontWeight="Bold" Width="55" HorizontalContentAlignment="Right" Margin="33,43,0,0" HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" />
+            <c1:C1ComboBox x:Name="CountryCombo" FontSize="10.667" Height="25" VerticalAlignment="Top" TabIndex="2" Width="360" SelectedItemChanged="CountryCombo_SelectedItemChanged" 
+                               AutoComplete="False" Margin="87,40,0,0" HorizontalAlignment="Left" />
+            <sdk:Label x:Name="DateLabel" Content="Date " Height="22" FontSize="11" Foreground="White" FontWeight="Bold" Width="35" HorizontalContentAlignment="Right" Margin="238,11,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" />
+            <TextBox x:Name="DateTextBox" Height="23" Width="100" Margin="276,8,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" TabIndex="1" />
+            <sdk:Label Content=" " Height="28" FontSize="11" Foreground="White" FontWeight="Bold" Width="15" HorizontalContentAlignment="Right" Margin="0,0,262,15" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
+            <sdk:Label x:Name="CountryCodeLabel" Content=" Code " Height="28" FontSize="11" Foreground="White" FontWeight="Bold" Visibility="Collapsed" Margin="19,102,0,0" HorizontalAlignment="Left" Width="52" VerticalAlignment="Top" />
+
+            <sdk:Label Name="ExplainLabel" Content="Explanation " FontSize="11" Foreground="White" FontWeight="Bold" Width="79" HorizontalContentAlignment="Right" Margin="7,76,0,0" HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" />
+            <TextBox x:Name="ExplainTextBox" Height="68" TextWrapping="Wrap" Margin="88,74,0,0" FontSize="12" Foreground="DarkBlue" FontWeight="Bold" VerticalAlignment="Top" HorizontalAlignment="Left" Width="483" TabIndex="3" />
+            <CheckBox x:Name="BankCheckBox" Content=" Is Bank Holiday " FontSize="11" Foreground="White" FontWeight="Bold" Width="130" Margin="23,151,0,0" HorizontalAlignment="Left" Height="16" VerticalAlignment="Top" TabIndex="4" />
+            <CheckBox x:Name="ExchangeCheckBox" Content=" Is Exchange Holiday " FontSize="11" Foreground="White" FontWeight="Bold" Margin="172,151,0,0" HorizontalAlignment="Left" Width="165" Height="16" VerticalAlignment="Top" TabIndex="5" />
+            <CheckBox x:Name="ActiveCheckBox" Content=" Is Active? " FontSize="11" Foreground="White" FontWeight="Bold" Margin="453,153,0,0" HorizontalAlignment="Left" Width="103" Height="16" VerticalAlignment="Top" TabIndex="6" />
+            <sdk:Label x:Name="InfoLabel" Content="Do not set these if this Holiday is not observed by Book Group" FontSize="11" Foreground="White" FontWeight="Bold" Width="385" HorizontalContentAlignment="Right" Margin="19,172,0,0" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" />
+            <Button x:Name="HolidaySaveButton" Content="Save/Update" Width="95" Click="HolidaySaveButton_Click" Margin="476,203,0,0" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" TabIndex="7" />
+            <sdk:Label x:Name="statusLabel" Content="" FontSize="11" Height="25" FontWeight="Bold" Foreground="White" HorizontalContentAlignment="Right" Margin="2,202,0,11" HorizontalAlignment="Left" Width="445" />
+
+        </Grid>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,97 @@
+C:\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.MainServerTest.exe.config
+C:\ATLAS\Loanstar\MAINSERVERTEST\obj\Debug\StockLoan.MainServerTest.exe
+C:\ATLAS\Loanstar\MAINSERVERTEST\obj\Debug\StockLoan.MainServerTest.pdb
+C:\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.MainServerTest.exe
+C:\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.MainServerTest.pdb
+C:\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.MainServer.dll
+C:\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.Common.dll
+C:\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.Main.dll
+C:\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.PushData.dll
+C:\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.BackOffice.dll
+C:\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\C1.C1Pdf.2.dll
+C:\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.Common.pdb
+C:\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.Main.pdb
+C:\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.PushData.pdb
+C:\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.BackOffice.pdb
+C:\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.MainServer.pdb
+C:\ATLAS\Loanstar\MAINSERVERTEST\obj\Debug\ResolveAssemblyReference.cache
+C:\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.MainBusiness.dll
+C:\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.MainBusiness.pdb
+C:\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\C1.C1Report.2.dll
+C:\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\C1.C1Report.2.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.MainServerTest.exe.config
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVERTEST\obj\Debug\StockLoan.MainServerTest.exe
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVERTEST\obj\Debug\StockLoan.MainServerTest.pdb
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.MainServerTest.exe
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.MainServerTest.pdb
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.MainServer.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\C1.C1Pdf.2.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.Common.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.MainBusiness.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.BackOffice.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.Main.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\C1.C1Report.2.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.PushData.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.Common.pdb
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.MainBusiness.pdb
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.BackOffice.pdb
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.Main.pdb
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.MainServer.pdb
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\C1.C1Report.2.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.PushData.pdb
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVERTEST\obj\Debug\ResolveAssemblyReference.cache
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.MainServerTest.exe.config
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MAINSERVERTEST\obj\Debug\StockLoan.MainServerTest.exe
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MAINSERVERTEST\obj\Debug\StockLoan.MainServerTest.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.MainServerTest.exe
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.MainServerTest.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.MainServer.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.Main.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.Common.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.BackOffice.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.MainBusiness.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.PushData.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\C1.C1Report.2.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\C1.C1Pdf.2.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.MainServer.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.Main.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.Common.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.BackOffice.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.MainBusiness.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.PushData.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\C1.C1Report.2.xml
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MAINSERVERTEST\obj\Debug\ResolveAssemblyReference.cache
+U:\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.MainServerTest.exe.config
+U:\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.MainServerTest.exe
+U:\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.MainServerTest.pdb
+U:\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.MainServer.dll
+U:\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.Main.dll
+U:\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.Common.dll
+U:\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\C1.C1Report.2.dll
+U:\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.MainBusiness.dll
+U:\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.MainServer.pdb
+U:\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.Main.pdb
+U:\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.Common.pdb
+U:\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\C1.C1Report.2.xml
+U:\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.MainBusiness.pdb
+U:\_Dev\ATLAS\Loanstar\MAINSERVERTEST\obj\Debug\ResolveAssemblyReference.cache
+U:\_Dev\ATLAS\Loanstar\MAINSERVERTEST\obj\Debug\StockLoan.MainServerTest.exe
+U:\_Dev\ATLAS\Loanstar\MAINSERVERTEST\obj\Debug\StockLoan.MainServerTest.pdb
+U:\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\System.Windows.Forms.DataVisualization.dll
+C:\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.MainServerTest.exe.config
+C:\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.MainServerTest.exe
+C:\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.MainServerTest.pdb
+C:\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.MainServer.dll
+C:\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.Main.dll
+C:\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.Common.dll
+C:\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.MainBusiness.dll
+C:\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\C1.C1Report.2.dll
+C:\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\System.Windows.Forms.DataVisualization.dll
+C:\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.MainServer.pdb
+C:\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.Main.pdb
+C:\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.Common.pdb
+C:\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\StockLoan.MainBusiness.pdb
+C:\_Dev\ATLAS\Loanstar\MAINSERVERTEST\bin\Debug\C1.C1Report.2.xml
+C:\_Dev\ATLAS\Loanstar\MAINSERVERTEST\obj\Debug\ResolveAssemblyReference.cache
+C:\_Dev\ATLAS\Loanstar\MAINSERVERTEST\obj\Debug\StockLoan.MainServerTest.exe
+C:\_Dev\ATLAS\Loanstar\MAINSERVERTEST\obj\Debug\StockLoan.MainServerTest.pdb

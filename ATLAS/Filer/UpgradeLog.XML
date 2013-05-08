@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Filer">
+</Property><Property Name="Solution File" Value="C:\_Dev\ATLAS\Filer\Filer.sln">
+</Property><Property Name="User Options File" Value="C:\_Dev\ATLAS\Filer\Filer.suo">
+</Property><Property Name="Date" Value="Tuesday, March 15, 2011">
+</Property><Property Name="Time" Value="9:24 AM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="Filer.sln" Description="File successfully backed up as C:\_Dev\ATLAS\Filer\Backup\Filer.sln">
+</Event><Event ErrorLevel="0" Project="" Source="Filer.suo" Description="File successfully backed up as C:\_Dev\ATLAS\Filer\Backup\Filer.suo">
+</Event><Event ErrorLevel="0" Project="Filer" Source="Filer.csproj" Description="Project file successfully backed up as C:\_Dev\ATLAS\Filer\Backup\Filer.csproj">
+</Event><Event ErrorLevel="0" Project="Filer" Source="Filer.csproj.user" Description="Project user file successfully backed up as C:\_Dev\ATLAS\Filer\Backup\Filer.csproj.user">
+</Event><Event ErrorLevel="0" Project="Filer" Source="AssemblyInfo.cs" Description="File successfully backed up as C:\_Dev\ATLAS\Filer\Backup\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Filer" Source="Filer.cs" Description="File successfully backed up as C:\_Dev\ATLAS\Filer\Backup\Filer.cs">
+</Event><Event ErrorLevel="0" Project="Filer" Source="GnuPG.cs" Description="File successfully backed up as C:\_Dev\ATLAS\Filer\Backup\GnuPG.cs">
+</Event><Event ErrorLevel="0" Project="Filer" Source="Filer.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Filer" Source="Filer.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="" Source="Filer.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="Filer.sln" Description="Converted">
+</Event></UpgradeLog>

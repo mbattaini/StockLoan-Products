@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BooksService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/BooksService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/BooksService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBooksService_GetSourceIP_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSourceIP" />
+  </wsdl:message>
+  <wsdl:message name="IBooksService_GetSourceIP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSourceIPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBooksService_BookClearingInstructionSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:BookClearingInstructionSet" />
+  </wsdl:message>
+  <wsdl:message name="IBooksService_BookClearingInstructionSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BookClearingInstructionSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBooksService_BookClearingInstructionsGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:BookClearingInstructionsGet" />
+  </wsdl:message>
+  <wsdl:message name="IBooksService_BookClearingInstructionsGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BookClearingInstructionsGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBooksService_BookContactSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:BookContactSet" />
+  </wsdl:message>
+  <wsdl:message name="IBooksService_BookContactSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BookContactSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBooksService_BookContactsGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:BookContactsGet" />
+  </wsdl:message>
+  <wsdl:message name="IBooksService_BookContactsGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BookContactsGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBooksService_BookCreditLimitSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:BookCreditLimitSet" />
+  </wsdl:message>
+  <wsdl:message name="IBooksService_BookCreditLimitSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BookCreditLimitSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBooksService_BookCreditLimitsGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:BookCreditLimitsGet" />
+  </wsdl:message>
+  <wsdl:message name="IBooksService_BookCreditLimitsGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BookCreditLimitsGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBooksService_BookFundSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:BookFundSet" />
+  </wsdl:message>
+  <wsdl:message name="IBooksService_BookFundSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BookFundSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBooksService_BookFundsGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:BookFundsGet" />
+  </wsdl:message>
+  <wsdl:message name="IBooksService_BookFundsGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BookFundsGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBooksService_BookGroupRoll_InputMessage">
+    <wsdl:part name="parameters" element="tns:BookGroupRoll" />
+  </wsdl:message>
+  <wsdl:message name="IBooksService_BookGroupRoll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BookGroupRollResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBooksService_BookGroupSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:BookGroupSet" />
+  </wsdl:message>
+  <wsdl:message name="IBooksService_BookGroupSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BookGroupSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBooksService_BookGroupsGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:BookGroupsGet" />
+  </wsdl:message>
+  <wsdl:message name="IBooksService_BookGroupsGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BookGroupsGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBooksService_BookGroupsGetAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:BookGroupsGetAll" />
+  </wsdl:message>
+  <wsdl:message name="IBooksService_BookGroupsGetAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BookGroupsGetAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBooksService_BookSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:BookSet" />
+  </wsdl:message>
+  <wsdl:message name="IBooksService_BookSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BookSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBooksService_BooksGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:BooksGet" />
+  </wsdl:message>
+  <wsdl:message name="IBooksService_BooksGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BooksGetResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBooksService">
+    <wsdl:operation name="GetSourceIP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBooksService/GetSourceIP" message="tns:IBooksService_GetSourceIP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBooksService/GetSourceIPResponse" message="tns:IBooksService_GetSourceIP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BookClearingInstructionSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBooksService/BookClearingInstructionSet" message="tns:IBooksService_BookClearingInstructionSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBooksService/BookClearingInstructionSetResponse" message="tns:IBooksService_BookClearingInstructionSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BookClearingInstructionsGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBooksService/BookClearingInstructionsGet" message="tns:IBooksService_BookClearingInstructionsGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBooksService/BookClearingInstructionsGetResponse" message="tns:IBooksService_BookClearingInstructionsGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BookContactSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBooksService/BookContactSet" message="tns:IBooksService_BookContactSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBooksService/BookContactSetResponse" message="tns:IBooksService_BookContactSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BookContactsGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBooksService/BookContactsGet" message="tns:IBooksService_BookContactsGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBooksService/BookContactsGetResponse" message="tns:IBooksService_BookContactsGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BookCreditLimitSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBooksService/BookCreditLimitSet" message="tns:IBooksService_BookCreditLimitSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBooksService/BookCreditLimitSetResponse" message="tns:IBooksService_BookCreditLimitSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BookCreditLimitsGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBooksService/BookCreditLimitsGet" message="tns:IBooksService_BookCreditLimitsGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBooksService/BookCreditLimitsGetResponse" message="tns:IBooksService_BookCreditLimitsGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BookFundSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBooksService/BookFundSet" message="tns:IBooksService_BookFundSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBooksService/BookFundSetResponse" message="tns:IBooksService_BookFundSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BookFundsGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBooksService/BookFundsGet" message="tns:IBooksService_BookFundsGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBooksService/BookFundsGetResponse" message="tns:IBooksService_BookFundsGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BookGroupRoll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBooksService/BookGroupRoll" message="tns:IBooksService_BookGroupRoll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBooksService/BookGroupRollResponse" message="tns:IBooksService_BookGroupRoll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BookGroupSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBooksService/BookGroupSet" message="tns:IBooksService_BookGroupSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBooksService/BookGroupSetResponse" message="tns:IBooksService_BookGroupSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BookGroupsGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBooksService/BookGroupsGet" message="tns:IBooksService_BookGroupsGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBooksService/BookGroupsGetResponse" message="tns:IBooksService_BookGroupsGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BookGroupsGetAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBooksService/BookGroupsGetAll" message="tns:IBooksService_BookGroupsGetAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBooksService/BookGroupsGetAllResponse" message="tns:IBooksService_BookGroupsGetAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BookSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBooksService/BookSet" message="tns:IBooksService_BookSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBooksService/BookSetResponse" message="tns:IBooksService_BookSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BooksGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBooksService/BooksGet" message="tns:IBooksService_BooksGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBooksService/BooksGetResponse" message="tns:IBooksService_BooksGet_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IBooksService" type="tns:IBooksService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSourceIP">
+      <soap:operation soapAction="http://tempuri.org/IBooksService/GetSourceIP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BookClearingInstructionSet">
+      <soap:operation soapAction="http://tempuri.org/IBooksService/BookClearingInstructionSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BookClearingInstructionsGet">
+      <soap:operation soapAction="http://tempuri.org/IBooksService/BookClearingInstructionsGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BookContactSet">
+      <soap:operation soapAction="http://tempuri.org/IBooksService/BookContactSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BookContactsGet">
+      <soap:operation soapAction="http://tempuri.org/IBooksService/BookContactsGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BookCreditLimitSet">
+      <soap:operation soapAction="http://tempuri.org/IBooksService/BookCreditLimitSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BookCreditLimitsGet">
+      <soap:operation soapAction="http://tempuri.org/IBooksService/BookCreditLimitsGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BookFundSet">
+      <soap:operation soapAction="http://tempuri.org/IBooksService/BookFundSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BookFundsGet">
+      <soap:operation soapAction="http://tempuri.org/IBooksService/BookFundsGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BookGroupRoll">
+      <soap:operation soapAction="http://tempuri.org/IBooksService/BookGroupRoll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BookGroupSet">
+      <soap:operation soapAction="http://tempuri.org/IBooksService/BookGroupSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BookGroupsGet">
+      <soap:operation soapAction="http://tempuri.org/IBooksService/BookGroupsGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BookGroupsGetAll">
+      <soap:operation soapAction="http://tempuri.org/IBooksService/BookGroupsGetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BookSet">
+      <soap:operation soapAction="http://tempuri.org/IBooksService/BookSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BooksGet">
+      <soap:operation soapAction="http://tempuri.org/IBooksService/BooksGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BooksService">
+    <wsdl:port name="BasicHttpBinding_IBooksService" binding="tns:BasicHttpBinding_IBooksService">
+      <soap:address location="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/BooksService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

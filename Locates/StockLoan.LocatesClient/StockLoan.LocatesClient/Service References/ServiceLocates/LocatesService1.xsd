@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="WebUserAuthorize">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WebUserAuthorizeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WebUserAuthorizeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TradingGroupsGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tradeDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="utcOffset" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TradingGroupsGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TradingGroupsGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocateListSubmit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="clientId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="groupCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clientComment" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="list" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocateListSubmitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LocateListSubmitResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InventoryGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="groupCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="secId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="utcOffset" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InventoryGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InventoryGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocateItemGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="groupCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="locateId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="utcOffset" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocateItemGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LocateItemGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocatesGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tradeDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="groupCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clientId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="utcOffset" type="xs:short" />
+        <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocatesGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LocatesGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocateSummaryGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tradeDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="secId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocateSummaryGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LocateSummaryGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocateGroupCodeSummaryGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tradeDate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocateGroupCodeSummaryGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LocateGroupCodeSummaryGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocateItemSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="locateId" type="xs:long" />
+        <xs:element minOccurs="0" name="quantity" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="source" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="feeRate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="preBorrow" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="comment" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="actUserId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocateItemSetResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SecMasterItemGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="secId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SecMasterItemGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SecMasterItemGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BoxPositionItemGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="secId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BoxPositionItemGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BoxPositionItemGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BookGroupsGet">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BookGroupsGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BookGroupsGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocatesMessageGet">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocatesMessageGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LocatesMessageGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocatesMessageSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocatesMessageSetResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

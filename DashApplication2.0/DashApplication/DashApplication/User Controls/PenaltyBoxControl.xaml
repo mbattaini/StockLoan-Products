@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="DashApplication.PenaltyBoxControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+    
+    <Grid x:Name="LayoutRoot" Background="White">
+        <c1:C1ToolbarStrip Margin="10,0" Style="{StaticResource C1ToolBarStyle}">
+            <sdk:Label HorizontalAlignment="Left" d:LayoutOverrides="Height" Content="CUSIP:" Foreground="White"/>
+            <c1:C1TextBoxBase x:Name="SecIdTextBox" HorizontalAlignment="Left"  TextWrapping="Wrap" Width="144"/>
+            <c1:C1TextBoxBase x:Name="CommentTextBox" TextWrapping="Wrap" HorizontalAlignment="Left" Width="210"/>
+            <Button x:Name="ButtonAdd" Content="Add"  Click="ButtonAdd_Click" HorizontalAlignment="Left" Width="36"/>                        
+            <CheckBox x:Name="CheckBoxShowHistory" Content="Show History" HorizontalAlignment="Right" d:LayoutOverrides="Height" Background="{x:Null}" Foreground="White" Checked="CheckBoxShowHistory_Checked"/>
+        </c1:C1ToolbarStrip>
+     <c1:C1DataGrid x:Name="PenaltyBoxGrid" Margin="10,29,10,0" CanUserEditRows="False" CanUserAddRows="False" AutoGenerateColumns="False" CanUserResizeColumns="False" SelectionMode="SingleRow" LoadedCellPresenter="PenaltyBoxGrid_LoadedCellPresenter" Style="{StaticResource C1GridStyle}">
+            <c1:C1DataGrid.Columns>
+                <c1:DataGridBoundColumn Header="Process ID" HorizontalAlignment="Right" AllowNull="True" Binding="{Binding ProcessId}" GroupHeader="Process ID" Name="ProcessId" Width="75"/>
+                <c1:DataGridBoundColumn Header="Security ID" HorizontalAlignment="Right" AllowNull="True" Binding="{Binding SecId}" GroupHeader="Security ID" Name="SecId"/>
+                <c1:DataGridBoundColumn Binding="{Binding Symbol}" GroupHeader="Symbol" Header="Symbol" Name="Symbol"/>
+                <c1:DataGridDateTimeColumn Binding="{Binding StartDate}" GroupHeader="Start" Header="Start" Name="StartDate"/>
+                <c1:DataGridBoundColumn Binding="{Binding StartDateActUserId}" GroupHeader="Actor" Header="Actor" Name="StartDateActUserId"/>
+                <c1:DataGridDateTimeColumn Binding="{Binding EndDate}" GroupHeader="End" Header="End" Name="EndDate"/>
+                <c1:DataGridBoundColumn Binding="{Binding EndDateActUserId}" GroupHeader="Actor" Header="Actor" Name="EndDateActUserId"/>
+                <c1:DataGridBoundColumn Binding="{Binding Comment}" GroupHeader="Comment" Header="Comment" Name="Comment"/>
+            </c1:C1DataGrid.Columns>
+        </c1:C1DataGrid>    
+    </Grid>
+</UserControl>

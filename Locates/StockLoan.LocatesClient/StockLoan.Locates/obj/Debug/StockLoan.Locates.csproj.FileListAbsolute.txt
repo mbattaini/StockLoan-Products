@@ -1,0 +1,4 @@
+C:\_dev\Locates\StockLoan.LocatesClient\StockLoan.Locates\bin\StockLoan.Locates.dll
+C:\_dev\Locates\StockLoan.LocatesClient\StockLoan.Locates\bin\StockLoan.Locates.pdb
+C:\_dev\Locates\StockLoan.LocatesClient\StockLoan.Locates\obj\Debug\StockLoan.Locates.dll
+C:\_dev\Locates\StockLoan.LocatesClient\StockLoan.Locates\obj\Debug\StockLoan.Locates.pdb

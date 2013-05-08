@@ -1,0 +1,156 @@
+// Licensed Materials - Property of Anetics, LLC.
+// (C) Copyright Anetics, LLC. 2005  All rights reserved.
+
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using Anetics.Common;
+using Anetics.Process;
+
+namespace Anetics.Loanet
+{
+  public class ProfitCenter_Change_SingleContract_Request
+  {
+    public ProfitCenter_Change_SingleContract_Request()
+    {
+    }
+
+    public ProcessStatusEventArgs Request(  
+      string bookGroup,
+      string contractType,
+      string book,
+      string contractId,
+      string newProfitCenter,
+      string batchCode,
+      string effectiveDate)
+    {
+      string message = "41";
+      string tempDate;
+
+      message += bookGroup.PadRight(4, '0');
+      message += contractType.Substring(0, 1);
+      message += book.PadRight(4, '0').Substring(0, 4);
+      message += contractId.PadLeft(9, '0').Substring(0, 9);
+      message += newProfitCenter.PadRight(1, ' ').Substring(0, 1);
+      message += batchCode.PadRight(1, ' ').Substring(0, 1);
+      
+      try
+      {
+        tempDate = DateTime.Parse(effectiveDate).ToString("MMddyy");       
+      }
+      catch (Exception error)
+      {
+        Log.Write(error.Message + ". Invalid effective date, " + effectiveDate + ", using, 000000. [ProfitCenter_Change_SingleContract_Request.Request]", Log.Error, 1);        
+        tempDate = new string('0', 6);
+      }
+
+      message += tempDate;
+
+      ProcessStatusEventArgs processStatusEventArgs = new ProcessStatusEventArgs(DateTime.Now.ToString(DateTime.Now.ToString("yyddmmssffffff")),
+        "L",
+        "PCC",
+        message,
+        DateTime.Now.ToString(),
+        "ADMIN",
+        false,
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "");
+      
+      
+      return processStatusEventArgs;
+    }
+
+    public ProcessStatusEventArgs Reply(string messageId, string messageText)
+    {
+      string status       = "";
+      string bookGroup    = "";
+      string contractId   = "";
+      string contractType = "";
+      string book         = "";
+      bool   isError      = false;
+
+      bookGroup    = messageText.Substring(11, 4);
+      contractId   = messageText.Substring(19, 9);
+      contractType = messageText.Substring(28, 1);
+      book         = messageText.Substring(15, 4);
+     
+      switch (messageText.Substring(2, 1))
+      {
+        case "A": status  = "OK";
+                  isError = false;
+                  break;
+        
+        case "X": status  = "System/Processing Error";
+                  isError = true;
+                  break;
+
+        case "R": status = ParseRejectedRequest(messageText);
+                  isError = true;
+                  break;
+      }
+
+      ProcessStatusEventArgs processStatusEventArgs = new ProcessStatusEventArgs(messageId,
+                                                                        "L",
+                                                                        "PCC",
+                                                                        "",
+                                                                        "",
+                                                                        "ADMIN",
+                                                                        isError,
+                                                                        bookGroup,
+                                                                        contractId,
+                                                                        contractType,
+                                                                        book,
+                                                                        "",
+                                                                        status,
+                                                                        DateTime.Now.ToString());
+      
+      
+      return processStatusEventArgs;
+    }
+
+    private string ParseRejectedRequest(string message)
+    {
+      string error = "";
+
+      for (int index = 0; index < message.Length; index ++)
+      {
+        if (message[index].Equals('X'))
+        {
+          switch (index)
+          {
+            case 30: error += "Invalid Message Type";
+              break;
+
+            case 31: error += "Invalid Client Id";
+              break;
+
+            case 32: error += "Invalid Borrow/Loan";
+              break;
+
+            case 33: error += "Contra Party Error";
+              break;
+
+            case 34: error += "Contract Number Error";
+              break;
+
+            case 35: error += "Invalid Profit Center";
+              break;
+
+            case 36: error += "Batch Code Error";
+              break;
+
+            case 37: error += "Effective Date Error";
+              break;
+          }
+          error += " ";
+        }
+      }
+      return error; 
+    }
+  }
+}

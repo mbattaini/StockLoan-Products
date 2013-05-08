@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DashBusiness" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DashBusiness" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="Locale">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Domestic" />
+      <xs:enumeration value="International" />
+      <xs:enumeration value="None" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Locale" nillable="true" type="tns:Locale" />
+  <xs:simpleType name="HtbLocale">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Penson" />
+      <xs:enumeration value="Bps" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="HtbLocale" nillable="true" type="tns:HtbLocale" />
+</xs:schema>

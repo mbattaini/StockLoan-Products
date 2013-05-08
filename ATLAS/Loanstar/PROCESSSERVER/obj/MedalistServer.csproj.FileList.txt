@@ -1,0 +1,16 @@
+bin\Release\StockLoan.MedalistServer.dll
+bin\Release\StockLoan.Common.dll
+bin\Release\StockLoan.Medalist.dll
+bin\Release\StockLoan.Common.pdb
+bin\Release\StockLoan.Medalist.pdb
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\StockLoan.MedalistServer.dll
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\StockLoan.MedalistServer.dll
+bin\Debug\StockLoan.MedalistServer.pdb
+bin\Debug\StockLoan.Common.dll
+bin\Debug\StockLoan.Medalist.dll
+bin\Debug\StockLoan.Common.pdb
+bin\Debug\StockLoan.Medalist.pdb
+obj\Debug\StockLoan.MedalistServer.dll
+obj\Debug\StockLoan.MedalistServer.pdb

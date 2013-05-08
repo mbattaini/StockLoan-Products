@@ -1,0 +1,1103 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Silverlight.Docking</name>
+    </assembly>
+    <members>
+        <member name="T:C1.Silverlight.Docking.C1DockTabControl">
+            <summary>
+            Represents a dockable, slideable, and floatable item in a <see cref="T:C1.Silverlight.Docking.C1DockControl"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockTabControl.OnCreateAutomationPeer">
+            <summary>
+            Gets an AutomationPeer object used for testing the control.
+            </summary>
+            <returns>An AutomationPeer object used for testing the control.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockTabControl.SlideOpen">
+            <summary>
+            Shows the <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/> when the <see cref="P:C1.Silverlight.Docking.C1DockTabControl.DockMode"/> is set to <see cref="P:DockMode.Sliding"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockTabControl.DockProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockTabControl.Dock"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockTabControl.DockMinWidthProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockTabControl.DockMinWidth"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockTabControl.DockMinHeightProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockTabControl.DockMinHeight"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockTabControl.DockWidthProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockTabControl.DockWidth"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockTabControl.DockHeightProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockTabControl.DockHeight"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockTabControl.HorizontalFillProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockTabControl.HorizontalFill"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockTabControl.VerticalFillProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockTabControl.VerticalFill"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockTabControl.GetDrag(System.Windows.UIElement)">
+            <summary>
+            Gets the value of the attached Drag property.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockTabControl.SetDrag(System.Windows.UIElement,C1.Silverlight.Docking.C1DockTabControl)">
+            <summary>
+            Sets the value of the attached Drag property.
+            </summary>
+            <remarks>
+            The UIElement becomes a drag handle to dock and move the C1DockTabControl.
+            </remarks>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockTabControl.DragProperty">
+            <summary>
+            Internal property used on the header element in the control's template.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockTabControl.OnItemsChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Called when the value of the <see cref="P:Items"/> property changes.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockTabControl.ChangeVisualStateDockMode(System.Boolean)">
+            <summary>
+            Updates the current visual state of the DockMode visual state group to match the object's properties.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockTabControl.DockModeProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockTabControl.DockMode"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockTabControl.ActualDockModeProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockTabControl.ActualDockMode"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockTabControl.ShowHeaderProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockTabControl.ShowHeader"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockTabControl.ShowMenuProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockTabControl.ShowMenu"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockTabControl.CanUserDockProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockTabControl.CanUserDock"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockTabControl.CanUserSlideProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockTabControl.CanUserSlide"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockTabControl.CanUserFloatProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockTabControl.CanUserFloat"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockTabControl.CanUserHideProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockTabControl.CanUserHide"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockTabControl.MouseOverBrushProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockTabControl.MouseOverBrush"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockTabControl.PressedBrushProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockTabControl.PressedBrush"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockTabControl.HeaderBackgroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockTabControl.HeaderBackground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockTabControl.HeaderForegroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockTabControl.HeaderForeground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockTabControl.SelectedBackgroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockTabControl.SelectedBackground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockTabControl.TabStripBackgroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockTabControl.TabStripBackground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockTabControl.TabStripForegroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockTabControl.TabStripForeground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockTabControl.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockTabControl.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockTabControl.Dock">
+            <summary>
+            Gets or sets the edge of the parent to which this element should be attached.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockTabControl.DockMinWidth">
+            <summary>
+            Gets or sets the minimum width constraint of the element.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockTabControl.DockMinHeight">
+            <summary>
+            Gets or sets the minimum height constraint of the element.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockTabControl.DockWidth">
+            <summary>
+            Gets or sets the desired horizontal size of the element.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockTabControl.DockHeight">
+            <summary>
+            Gets or sets the desired vertical size for this element.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockTabControl.HorizontalFill">
+            <summary>
+            Whether the control resizes to fill the remaining horizontal space.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockTabControl.VerticalFill">
+            <summary>
+            Whether the control resizes to fill the remaining vertical space.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockTabControl.DockMode">
+            <summary>
+            Gets or sets whether the C1DockTabControl floats, slides from the border of the C1DockControl, is hidden, or is docked.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockTabControl.ShowHeader">
+            <summary>
+            Gets or sets a value that determines whether the header of the currently selected <see cref="T:C1.Silverlight.Docking.C1DockTabItem"/> is visible.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockTabControl.ShowMenu">
+            <summary>
+            Gets or sets a value that determines whether the menu to set the <see cref="P:C1.Silverlight.Docking.C1DockTabControl.DockMode"/> is visible.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockTabControl.CanUserDock">
+            <summary>
+            Gets or sets a value that determines whether the user can change the <see cref="P:C1.Silverlight.Docking.C1DockTabControl.DockMode"/> property to <see cref="F:DockMode.Docked"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockTabControl.CanUserSlide">
+            <summary>
+            Gets or sets a value that determines whether the user can change the <see cref="P:C1.Silverlight.Docking.C1DockTabControl.DockMode"/> property to <see cref="F:DockMode.Sliding"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockTabControl.CanUserFloat">
+            <summary>
+            Gets or sets a value that determines whether the user can change the <see cref="P:C1.Silverlight.Docking.C1DockTabControl.DockMode"/> property to <see cref="F:DockMode.Floating"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockTabControl.CanUserHide">
+            <summary>
+            Gets or sets a value that determines whether the user can change the <see cref="P:C1.Silverlight.Docking.C1DockTabControl.DockMode"/> property to <see cref="F:DockMode.Hidden"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockTabControl.MouseOverBrush">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to highlight the control when it has the mouse over.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockTabControl.PressedBrush">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to paint a button when it is pressed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockTabControl.HeaderBackground">
+            <summary>
+            Gets or sets the background brush of the header.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockTabControl.HeaderForeground">
+            <summary>
+            Gets or sets the foreground brush of the header.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockTabControl.SelectedBackground">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to highlight the control when it is selected.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockTabControl.TabStripBackground">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> that will be assigned to the Background of the tab strip.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockTabControl.TabStripForeground">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> that will be assigned to the Foreground of the tab strip.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Docking.C1DockControl">
+            <summary>
+            C1DockControl is a control that allows you to dock, float, or tab windows.
+            </summary>
+            <remarks>
+            Contains <see cref="T:C1.Silverlight.Docking.C1DockGroup"/>s and
+            <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/>s with <see cref="T:C1DockTabItem"/>s.
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockControl.OnItemsChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Called when the value of the <see cref="P:Items"/> property changes.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockControl.CreateDockTabControlOverride">
+            <summary>
+            Factory method for <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/> instances.
+            </summary>
+            <remarks>
+            Override this method to customize the <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/> instances
+            created when the user moves <see cref="T:C1.Silverlight.Docking.C1DockTabItem"/> instances around.
+            </remarks>
+            <returns>A new instance of the <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/> class.</returns>
+            <seealso cref="P:DockTabControlStyle">
+            The <see cref="P:DockTabControlStyle"/> Style allows easier customization of most properties.
+            </seealso>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockControl.SlidingDurationProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockControl.SlidingDuration"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockControl.SlideClose(System.Boolean)">
+            <summary>
+            Hide the currently opened sliding <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/>.
+            </summary>
+            <param name="animate">Set animate to true to gradually hide the <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/>.</param>
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockControl.Save">
+            <summary>
+            Serialize a <see cref="T:C1DockControl" />
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockControl.Load(System.Xml.Linq.XElement)">
+            <summary>
+            Recreates the <see cref="T:C1.Silverlight.Docking.C1DockControl"/> from the saved settings.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockControl.PreviewStyleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockControl.PreviewStyle"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockControl.DockTabControlStyleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockControl.DockTabControlStyle"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockControl.SplitterStyleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockControl.SplitterStyle"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockControl.OuterPickerStyleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockControl.OuterPickerStyle"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockControl.InnerPickerStyleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockControl.InnerPickerStyle"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockControl.WindowStyleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockControl.WindowStyle"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockControl.MouseOverBrushProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockControl.MouseOverBrush"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockControl.PressedBrushProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockControl.PressedBrush"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockControl.HeaderBackgroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockControl.HeaderBackground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockControl.HeaderForegroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockControl.HeaderForeground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockControl.SelectedBackgroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockControl.SelectedBackground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockControl.TabStripBackgroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockControl.TabStripBackground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockControl.TabStripForegroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockControl.TabStripForeground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockControl.TabControlBackgroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockControl.TabControlBackground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockControl.TabControlForegroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockControl.TabControlForeground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockControl.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Docking.C1DockControl"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockControl.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.Docking.C1DockControl"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="E:C1.Silverlight.Docking.C1DockControl.PickerLoading">
+            <summary>
+            Allows you to customize which target directions are possible when docking a <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/>.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Docking.C1DockControl.ViewChanged">
+            <summary>
+            Fires when the children collection of the <see cref="T:C1.Silverlight.Docking.C1DockControl"/> or a descendant <see cref="T:C1.Silverlight.Docking.C1DockGroup"/> changes.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Docking.C1DockControl.SlidingOpening">
+            <summary>
+            Fires when a <see cref="T:C1.Silverlight.Docking.C1DockTabItem"/> begins to slide open.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Docking.C1DockControl.SlidingOpened">
+            <summary>
+            Fires when a <see cref="T:C1.Silverlight.Docking.C1DockTabItem"/> has opened fully.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Docking.C1DockControl.SlidingClosing">
+            <summary>
+            Fires when a <see cref="T:C1.Silverlight.Docking.C1DockTabItem"/> begins to close.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Docking.C1DockControl.SlidingClosed">
+            <summary>
+            Fires when a <see cref="T:C1.Silverlight.Docking.C1DockTabItem"/> finished closing or was substituted for another <see cref="T:C1.Silverlight.Docking.C1DockTabItem"/>.
+            </summary>
+            <remarks>
+            The <see cref="E:SlidingClosed"/> event for the old C1DockTabItem fires before <see cref="E:C1.Silverlight.Docking.C1DockControl.SlidingOpening"/> fires for the new one.
+            </remarks>
+        </member>
+        <member name="E:C1.Silverlight.Docking.C1DockControl.ItemDockModeChanged">
+            <summary>
+            Fires when the <see cref="T:C1.Silverlight.Docking.DockMode"/> of a descendant <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/> changes.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockControl.NestedItems">
+            <summary>
+            Gets all <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/> instances that are children of the <see cref="T:C1.Silverlight.Docking.C1DockControl"/> or a <see cref="T:C1.Silverlight.Docking.C1DockGroup"/>.
+            </summary>
+            <remarks>
+            This convenience property saves the user from recursively traversing the <see cref="P:Items"/> collections herself.
+            </remarks>        
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockControl.SlidingDuration">
+            <summary>
+            Gets or sets the time it takes a sliding <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/> to fully open or close.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockControl.PreviewStyle">
+            <summary>
+            Style applied to <see cref="T:C1.Silverlight.Docking.C1DockPreview" /> instances created by this <see cref="T:C1.Silverlight.Docking.C1DockControl" />.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockControl.DockTabControlStyle">
+            <summary>
+            Gets or sets the Style that is applied to the inner <see cref="T:C1.Silverlight.Docking.C1DockTabControl" /> instances.
+            </summary>
+            <remarks>
+            Most settings should be customized in this style and not directly in C1DockTabControl instances in the Xaml so that they are not lost when the user rearranges the window and new C1DockTabControls are created.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockControl.SplitterStyle">
+            <summary>
+            Gets or sets the Style applied to <see cref="T:C1.Silverlight.Docking.C1DockSplitter" /> instances created by this <see cref="T:C1.Silverlight.Docking.C1DockControl" />.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockControl.OuterPickerStyle">
+            <summary>
+            Gets or sets the Style applied to <see cref="T:C1.Silverlight.Docking.C1DockPicker" /> instances that are relative to the whole <see cref="T:C1.Silverlight.Docking.C1DockControl" />.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockControl.InnerPickerStyle">
+            <summary>
+            Gets or sets the Style applied to <see cref="T:C1.Silverlight.Docking.C1DockPicker" /> instances that are relative to individual <see cref="T:C1.Silverlight.Docking.C1DockTabControl" />s.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockControl.WindowStyle">
+            <summary>
+            Gets or sets the Style applied to <see cref="T:C1.Silverlight.Docking.C1DockWindow" /> instances created by this <see cref="T:C1.Silverlight.Docking.C1DockControl" />.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockControl.MouseOverBrush">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to highlight the control when it has the mouse over.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockControl.PressedBrush">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to paint a button when it is pressed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockControl.HeaderBackground">
+            <summary>
+            Gets or sets the background brush of the header.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockControl.HeaderForeground">
+            <summary>
+            Gets or sets the foreground brush of the header.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockControl.SelectedBackground">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to highlight the control when it is selected.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockControl.TabStripBackground">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> that will be assigned to the Background of the tab strip.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockControl.TabStripForeground">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> that will be assigned to the Foreground of the tab strip.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockControl.TabControlBackground">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used as background of the contained <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/>s.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockControl.TabControlForeground">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used as foreground of the contained <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/>s.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Docking.DockAdapter">
+            <summary>
+            Helper class to somewhat erase the difference between C1DockTabControl and C1DockGroup.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Docking.C1DockControlPanel">
+            <summary>
+            Internal class.  Use as <see cref="T:C1.Silverlight.Docking.C1DockControl"/>'s DockedHost template part only.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockControlPanel.MeasureOverride(System.Windows.Size)">
+            <summary>
+            Provides the behavior for the "Measure" pass of layout.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockControlPanel.ArrangeOverride(System.Windows.Size)">
+            <summary>
+            Provides the behavior for the "Arrange" pass of layout.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Docking.C1DockSplitter">
+            <summary>
+            Internal class. Override the style with the <see cref="P:C1.Silverlight.Docking.C1DockControl.SplitterStyle" /> property.
+            </summary>	
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockSplitter.ChangeVisualStateOrientation(System.Boolean)">
+            <summary>
+            Updates the current visual state of the Orientation visual state group to match the object's properties.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockSplitter.OrientationProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockSplitter.Orientation"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockSplitter.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Docking.C1DockSplitter"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockSplitter.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.Docking.C1DockSplitter"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockSplitter.Orientation">
+            <summary>
+            Gets or sets whether the splitter modifies columns or rows.
+            </summary>
+            <remarks>
+            When this property is set to Horizontal, the columns are resized.
+            </remarks>
+        </member>
+        <member name="T:C1.Silverlight.Docking.C1DockGroup">
+            <summary>
+            Use as a <see cref="T:C1.Silverlight.Docking.C1DockControl"/>
+            item to enclose <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/>s
+            in a sub-rectangle of the available space.
+            </summary>
+            <remarks>
+            Some layouts can only be obtained with the use of this class.
+            </remarks>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockGroup.DockProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockGroup.Dock"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockGroup.OnItemsChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Called when the value of the <see cref="P:Items"/> property changes.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockGroup.DockModeProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockGroup.DockMode"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockGroup.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Docking.C1DockGroup"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockGroup.Dock">
+            <summary>
+            Gets or sets the edge of the parent to which this element should be attached.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockGroup.DockMode">
+            <summary>
+            Gets or sets whether the C1DockGroup floats, slides from the border of the <see cref="T:C1.Silverlight.Docking.C1DockControl"/>, is hidden, or is docked.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Docking.C1DockTabItem">
+            <summary>
+            Represents a selectable item in a <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockTabItem.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Called before the <see cref="E:MouseLeftButtonDown"/> event occurs.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockTabItem.SelectedHeaderTemplateProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockTabItem.SelectedHeaderTemplate"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockTabItem.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Docking.C1DockTabItem"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockTabItem.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.Docking.C1DockTabItem"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockTabItem.SelectedHeaderTemplate">
+            <summary>
+            Gets or sets a data template that is used to display the <see cref="P:Header" /> in the context of the
+            <see cref="T:C1DockTabControl" /> header banner.
+            </summary>
+            <remarks>
+            When this property is null, <see cref="P:HeaderTemplate" /> is used instead.
+            </remarks>
+        </member>
+        <member name="T:C1.Silverlight.Docking.C1DockWindow">
+            <summary>
+            Internal class. Override the style with the <see cref="P:C1.Silverlight.Docking.C1DockControl.WindowStyle" /> property.
+            </summary>	
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockWindow.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Docking.C1DockWindow"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockWindow.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.Docking.C1DockWindow"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="T:C1.Silverlight.Docking.DockMode">
+            <summary>
+            Possible states of visualization for a <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.DockMode.Docked">
+            <summary>
+            The <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/> is pinned without overlap alongside other docked <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/>s.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.DockMode.Sliding">
+            <summary>
+            The <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/> auto hides in the border of the <see cref="T:C1.Silverlight.Docking.C1DockControl"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.DockMode.Floating">
+            <summary>
+            The <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/> hovers in a window over docked <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/>s.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.DockMode.Hidden">
+            <summary>
+            The <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/> is not visible.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Docking.DropPosition">
+            <summary>
+            The possible positions to drop a docking element relative to another.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.DropPosition.Left">
+            <summary>
+            The dragged element will take place to the left of the drop target.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.DropPosition.Top">
+            <summary>
+            The dragged element will take place at the top of the drop target.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.DropPosition.Right">
+            <summary>
+            The dragged element will take place to the right of the drop target.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.DropPosition.Bottom">
+            <summary>
+            The dragged element will take place at the bottom of the drop target.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.DropPosition.Over">
+            <summary>
+            The dragged <see cref="T:C1.Silverlight.Docking.C1DockTabItem"/> will be added to the <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/> drop target items.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Docking.PickerLoadingEventArgs">
+            <summary>
+            Event class for the <see cref="E:C1DockControl.PickerLoading"/> event.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.PickerLoadingEventArgs.Target">
+            <summary>
+            Gets the <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/> below the mouse.
+            </summary>
+            <remarks>
+            The value of this property may be null.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Docking.PickerLoadingEventArgs.Source">
+            <summary>
+            Gets the <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/> or <see cref="T:C1.Silverlight.Docking.C1DockTabItem"/> that is being dragged.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.PickerLoadingEventArgs.ShowLeftInnerPart">
+            <summary>
+            Gets or sets a value that determines whether
+            the left <see cref="T:C1.Silverlight.Docking.C1DockPickerPart"/> for the target <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/> is visible.
+            </summary>
+            <remarks>
+            The default value for this property is true.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Docking.PickerLoadingEventArgs.ShowLeftOuterPart">
+            <summary>
+            Gets or sets a value that determines whether
+            the left <see cref="T:C1.Silverlight.Docking.C1DockPickerPart"/> for the whole <see cref="T:C1.Silverlight.Docking.C1DockControl"/> is visible.
+            </summary>
+            <remarks>
+            The default value for this property is true.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Docking.PickerLoadingEventArgs.ShowTopInnerPart">
+            <summary>
+            Gets or sets a value that determines whether
+            the top <see cref="T:C1.Silverlight.Docking.C1DockPickerPart"/> for the target <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/> is visible.
+            </summary>
+            <remarks>
+            The default value for this property is true.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Docking.PickerLoadingEventArgs.ShowTopOuterPart">
+            <summary>
+            Gets or sets a value that determines whether
+            the top <see cref="T:C1.Silverlight.Docking.C1DockPickerPart"/> for the whole <see cref="T:C1.Silverlight.Docking.C1DockControl"/> is visible.
+            </summary>
+            <remarks>
+            The default value for this property is true.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Docking.PickerLoadingEventArgs.ShowRightInnerPart">
+            <summary>
+            Gets or sets a value that determines whether
+            the right <see cref="T:C1.Silverlight.Docking.C1DockPickerPart"/> for the target <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/> is visible.
+            </summary>
+            <remarks>
+            The default value for this property is true.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Docking.PickerLoadingEventArgs.ShowRightOuterPart">
+            <summary>
+            Gets or sets a value that determines whether
+            the right <see cref="T:C1.Silverlight.Docking.C1DockPickerPart"/> for the whole <see cref="T:C1.Silverlight.Docking.C1DockControl"/> is visible.
+            </summary>
+            <remarks>
+            The default value for this property is true.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Docking.PickerLoadingEventArgs.ShowBottomInnerPart">
+            <summary>
+            Gets or sets a value that determines whether
+            the bottom <see cref="T:C1.Silverlight.Docking.C1DockPickerPart"/> for the target <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/> is visible.
+            </summary>
+            <remarks>
+            The default value for this property is true.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Docking.PickerLoadingEventArgs.ShowBottomOuterPart">
+            <summary>
+            Gets or sets a value that determines whether
+            the bottom <see cref="T:C1.Silverlight.Docking.C1DockPickerPart"/> for the whole <see cref="T:C1.Silverlight.Docking.C1DockControl"/> is visible.
+            </summary>
+            <remarks>
+            The default value for this property is true.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Docking.PickerLoadingEventArgs.ShowOverInnerPart">
+            <summary>
+            Gets or sets a value that determines whether
+            the center <see cref="T:C1.Silverlight.Docking.C1DockPickerPart"/> for the target <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/> is visible.
+            </summary>
+            <remarks>
+            The default value for this property is true.
+            </remarks>
+        </member>
+        <member name="T:C1.Silverlight.Docking.C1DockPicker">
+            <summary>
+            An overlay that appears over <see cref="T:C1.Silverlight.Docking.C1DockTabControl" /> instances when the user is dragging a <see cref="T:C1.Silverlight.Docking.C1DockTabControl" /> or <see cref="T:C1.Silverlight.Docking.C1DockTabItem" />. Override the style with the <see cref="P:C1.Silverlight.Docking.C1DockControl.OuterPickerStyle" /> and <see cref="P:C1.Silverlight.Docking.C1DockControl.InnerPickerStyle" /> properties.
+            </summary>	
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockPicker.PickerStateProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockPicker.PickerState"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockPicker.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Docking.C1DockPicker"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockPicker.PickerState">
+            <summary>
+            Gets or sets the last result of raising the <see cref="E:C1.Silverlight.Docking.C1DockControl.PickerLoading" /> event. Forward the value to the picker parts so that they hide appropriately.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Docking.C1DockPickerPart">
+            <summary>
+            The areas to drop a grabbed <see cref="T:C1.Silverlight.Docking.C1DockTabControl" /> or <see cref="T:C1.Silverlight.Docking.C1DockTabItem" />.
+            </summary>	
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockPickerPart.ChangeVisualStateDropPosition(System.Boolean)">
+            <summary>
+            Updates the current visual state of the DropPosition visual state group to match the object's properties.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockPickerPart.ChangeVisualStateCommon(System.Boolean)">
+            <summary>
+            Updates the current visual state of the Common visual state group to match the object's properties.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockPickerPart.DropPositionProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockPickerPart.DropPosition"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockPickerPart.IsDragOverProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockPickerPart.IsDragOver"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockPickerPart.IsOuterProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockPickerPart.IsOuter"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockPickerPart.PickerStateProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockPickerPart.PickerState"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockPickerPart.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Docking.C1DockPickerPart"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockPickerPart.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.Docking.C1DockPickerPart"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockPickerPart.DropPosition">
+            <summary>
+            Gets or sets the desired target position for the dragged C1DockTabControl or C1DockTabItem.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockPickerPart.IsDragOver">
+            <summary>
+            Gets or sets a value that determines whether the user is dragging a <see cref="T:C1.Silverlight.Docking.C1DockTabItem"/> or <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/> over the element.
+            </summary>
+            <remarks>
+            The default value for this property is False.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockPickerPart.IsOuter">
+            <summary>
+            Gets or sets a value that determines whether the picker part signals that the desired position is relative to the whole <see cref="T:C1.Silverlight.Docking.C1DockControl"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockPickerPart.PickerState">
+            <summary>
+            Internal property. Bind it to the Picker property of the same name so that the picker part hides itself when necessary.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Docking.C1DockPreview">
+            <summary>
+            Represents a passive overlay signaling the relative projected destination of the grabbed <see cref="T:C1.Silverlight.Docking.C1DockTabControl" /> or <see cref="T:C1.Silverlight.Docking.C1DockTabItem" /> that appears when the mouse hovers over a <see cref="T:C1.Silverlight.Docking.C1DockPickerPart" />. 
+            </summary>	
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockPreview.ChangeVisualStatePreview(System.Boolean)">
+            <summary>
+            Updates the current visual state of the Preview visual state group to match the object's properties.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Docking.C1DockPreview.PreviewDropPositionProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Docking.C1DockPreview.PreviewDropPosition"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockPreview.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Docking.C1DockPreview"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockPreview.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.Docking.C1DockPreview"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockPreview.PreviewDropPosition">
+            <summary>
+            Gets or sets the target position for the dragged <see cref="T:C1.Silverlight.Docking.C1DockTabControl" /> or <see cref="T:C1.Silverlight.Docking.C1DockTabItem" />.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Docking.ItemDockModeChangedEventArgs">
+            <summary>
+            Event class for the <see cref="E:C1DockControl.DockModeChanged"/> event.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.ItemDockModeChangedEventArgs.TabControl">
+            <summary>
+            Gets the <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/> that is transitioning modes.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.ItemDockModeChangedEventArgs.OldValue">
+            <summary>
+            Gets the mode the <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/> is transitioning from.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.ItemDockModeChangedEventArgs.NewValue">
+            <summary>
+            Gets the mode the <see cref="T:C1.Silverlight.Docking.C1DockTabControl"/> is transitioning to.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Docking.SlidingEventArgs">
+            <summary>
+            Event class for the SlidingOpening, SlidingOpened, SlidingClosing, and SlidingClosed events.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.SlidingEventArgs.TabItem">
+            <summary>
+            Gets the <see cref="T:C1.Silverlight.Docking.C1DockTabItem"/> that is sliding.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Docking.C1DockSettings">
+            <summary>
+            Saves and restores the state of a <see cref="T:C1DockControl"/> to and from XML.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockSettings.Items">
+            <summary>
+            Gets a collection that relates a C1DockControl/C1DockGroup/C1DockTabControl with the corresponding XElement.
+            Use this property to save/load custom properties.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockSettings.Root">
+            <summary>
+            The <see cref="T:System.Xml.Linq.XElement"/> corresponding to the <see cref="T:C1DockControl"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Docking.DockSettingsItem">
+            <summary>
+            The object and xml node serialization/de-serialization images.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.DockSettingsItem.Object">
+            <summary>
+            The <see cref="T:C1DockControl"/>, <see cref="T:C1DockGroup"/>, <see cref="T:C1DockTabControl"/>, or <see cref="T:C1DockTabItem"/> saved/loaded.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.DockSettingsItem.Element">
+            <summary>
+            The XML node.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Docking.Resources.C1_Silverlight_Docking">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.Resources.C1_Silverlight_Docking.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.Resources.C1_Silverlight_Docking.Docked">
+            <summary>
+              Looks up a localized string similar to Docked.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.Resources.C1_Silverlight_Docking.Floating">
+            <summary>
+              Looks up a localized string similar to Floating.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.Resources.C1_Silverlight_Docking.Hidden">
+            <summary>
+              Looks up a localized string similar to Hidden.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.Resources.C1_Silverlight_Docking.MakeDocked">
+            <summary>
+              Looks up a localized string similar to Dock.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.Resources.C1_Silverlight_Docking.MakeHidden">
+            <summary>
+              Looks up a localized string similar to Hide.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.Resources.C1_Silverlight_Docking.MakeSliding">
+            <summary>
+              Looks up a localized string similar to Make Sliding.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.Resources.C1_Silverlight_Docking.Sliding">
+            <summary>
+              Looks up a localized string similar to Sliding.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Docking.C1DockSlidingPanel">
+            <summary>
+            Internal class.  Use as <see cref="T:C1.Silverlight.Docking.C1DockControl"/>'s SlidingHost template part only.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockSlidingPanel.MeasureOverride(System.Windows.Size)">
+            <summary>
+            Provides the behavior for the "Measure" pass of layout.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Docking.C1DockSlidingPanel.ArrangeOverride(System.Windows.Size)">
+            <summary>
+            Provides the behavior for the "Arrange" pass of layout.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Docking.C1DockSlidingPanel.Time">
+            <summary>
+            A factor between 0.0 and 1.0 that indicates how much to clip the contents.
+            0.0 means that the content is completely hidden.
+            1.0 means that the content is fully exposed.
+            </summary>
+        </member>
+    </members>
+</doc>

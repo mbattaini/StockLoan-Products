@@ -1,0 +1,18 @@
+BizDate										2009-04-24
+BizDateBank									2009-04-24
+BizDateExchange								2009-04-24
+BizDateNext									2009-04-25
+BizDateNextBank								2009-04-25
+BizDateNextExchange							2009-04-25
+BizDatePrior								2009-04-23
+BizDatePriorBank							2009-04-23
+BizDatePriorExchange						2009-04-23
+BizDateRollUtcOffsetMinutes					0
+ContractsBizDate							2001-01-01
+InventoryMainLoopRecycleIntervalBizDay		00:00:05.000
+InventoryMainLoopRecycleIntervalNonBizDay	00:00:15.000
+LocateMainCycleStartTime					2009-04-08 18:43:58.534
+LocateMainCycleStopTime						2009-04-08 18:43:59.815
+LocateMainLoopRecycleIntervalBizDay			0:15
+LocateServiceStartTime						2009-04-08 18:43:58.659
+LocateServiceStopTime						2009-04-08 18:44:16.550

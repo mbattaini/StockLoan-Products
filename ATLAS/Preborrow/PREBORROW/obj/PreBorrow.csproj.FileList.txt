@@ -1,0 +1,8 @@
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\StockLoan.PreBorrow.dll
+bin\Debug\StockLoan.PreBorrow.pdb
+obj\Debug\StockLoan.PreBorrow.dll
+obj\Debug\StockLoan.PreBorrow.pdb
+bin\Release\StockLoan.PreBorrow.dll
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\StockLoan.PreBorrow.dll

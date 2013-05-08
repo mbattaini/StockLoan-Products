@@ -1,0 +1,14 @@
+U:\_Dev\ATLAS\Loanstar\MAIN\bin\Debug\StockLoan.Main.dll
+U:\_Dev\ATLAS\Loanstar\MAIN\bin\Debug\StockLoan.Main.pdb
+U:\_Dev\ATLAS\Loanstar\MAIN\bin\Debug\StockLoan.Common.dll
+U:\_Dev\ATLAS\Loanstar\MAIN\bin\Debug\StockLoan.Common.pdb
+U:\_Dev\ATLAS\Loanstar\MAIN\obj\Debug\ResolveAssemblyReference.cache
+U:\_Dev\ATLAS\Loanstar\MAIN\obj\Debug\StockLoan.Main.dll
+U:\_Dev\ATLAS\Loanstar\MAIN\obj\Debug\StockLoan.Main.pdb
+C:\_Dev\ATLAS\Loanstar\MAIN\bin\Debug\StockLoan.Main.dll
+C:\_Dev\ATLAS\Loanstar\MAIN\bin\Debug\StockLoan.Main.pdb
+C:\_Dev\ATLAS\Loanstar\MAIN\bin\Debug\StockLoan.Common.dll
+C:\_Dev\ATLAS\Loanstar\MAIN\bin\Debug\StockLoan.Common.pdb
+C:\_Dev\ATLAS\Loanstar\MAIN\obj\Debug\ResolveAssemblyReference.cache
+C:\_Dev\ATLAS\Loanstar\MAIN\obj\Debug\StockLoan.Main.dll
+C:\_Dev\ATLAS\Loanstar\MAIN\obj\Debug\StockLoan.Main.pdb

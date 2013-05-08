@@ -1,0 +1,6 @@
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\DatabaseFunctions\bin\Release\DatabaseFunctions.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\DatabaseFunctions\bin\Release\DatabaseFunctions.pdb
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\DatabaseFunctions\bin\Release\StockLoan.Common.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\DatabaseFunctions\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\DatabaseFunctions\obj\Release\DatabaseFunctions.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\DatabaseFunctions\obj\Release\DatabaseFunctions.pdb

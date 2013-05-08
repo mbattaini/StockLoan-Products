@@ -1,0 +1,6 @@
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideTransport\Transport\Transport\bin\Release\StockLoan.Transport.dll
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideTransport\Transport\Transport\bin\Release\StockLoan.Transport.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideTransport\Transport\Transport\bin\Release\StockLoan.Common.dll
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideTransport\Transport\Transport\obj\Release\ResolveAssemblyReference.cache
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideTransport\Transport\Transport\obj\Release\StockLoan.Transport.dll
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideTransport\Transport\Transport\obj\Release\StockLoan.Transport.pdb

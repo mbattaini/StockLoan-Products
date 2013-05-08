@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fca6c119-2846-45ca-aa50-c59c4df9eeae" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://dalgsldev01:8080/StockLoan.WebServices.DChen/FunctionsService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="FunctionsService2.xsd" MetadataType="Schema" ID="859551be-a28d-4031-a0bd-775f649ecab6" SourceId="1" SourceUrl="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/FunctionsService.svc?xsd=xsd0" />
+    <MetadataFile FileName="FunctionsService1.wsdl" MetadataType="Wsdl" ID="293dde6d-dc99-40da-a988-a36b92983902" SourceId="1" SourceUrl="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/FunctionsService.svc?wsdl" />
+    <MetadataFile FileName="FunctionsService21.xsd" MetadataType="Schema" ID="0a2c9010-b011-41b7-8864-8d9a7f9586b9" SourceId="1" SourceUrl="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/FunctionsService.svc?xsd=xsd1" />
+    <MetadataFile FileName="FunctionsService1.disco" MetadataType="Disco" ID="46cce756-2158-441e-ab64-9744a3ee5c92" SourceId="1" SourceUrl="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/FunctionsService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

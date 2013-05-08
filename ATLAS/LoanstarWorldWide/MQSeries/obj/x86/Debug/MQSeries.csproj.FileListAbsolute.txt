@@ -1,0 +1,62 @@
+U:\_Dev\ATLAS\Loanstar\MQSeries\bin\Debug\MQSeries.dll
+U:\_Dev\ATLAS\Loanstar\MQSeries\bin\Debug\MQSeries.pdb
+U:\_Dev\ATLAS\Loanstar\MQSeries\bin\Debug\StockLoan.Common.dll
+U:\_Dev\ATLAS\Loanstar\MQSeries\bin\Debug\StockLoan.Common.pdb
+U:\_Dev\ATLAS\Loanstar\MQSeries\obj\x86\Debug\ResolveAssemblyReference.cache
+U:\_Dev\ATLAS\Loanstar\MQSeries\obj\x86\Debug\MQSeries.Properties.Resources.resources
+U:\_Dev\ATLAS\Loanstar\MQSeries\obj\x86\Debug\GenerateResource.read.1.tlog
+U:\_Dev\ATLAS\Loanstar\MQSeries\obj\x86\Debug\GenerateResource.write.1.tlog
+U:\_Dev\ATLAS\Loanstar\MQSeries\obj\x86\Debug\MQSeries.dll
+U:\_Dev\ATLAS\Loanstar\MQSeries\obj\x86\Debug\MQSeries.pdb
+U:\_Dev\ATLAS\Loanstar 2.0\MQSeries\bin\Debug\StockLoan.Common.dll
+U:\_Dev\ATLAS\Loanstar 2.0\MQSeries\bin\Debug\StockLoan.Common.pdb
+U:\_Dev\ATLAS\Loanstar 2.0\MQSeries\obj\x86\Debug\ResolveAssemblyReference.cache
+U:\_Dev\ATLAS\Loanstar 2.0\MQSeries\obj\x86\Debug\ResGen.read.1.tlog
+U:\_Dev\ATLAS\Loanstar 2.0\MQSeries\obj\x86\Debug\ResGen.write.1.tlog
+U:\_Dev\ATLAS\Loanstar 2.0\MQSeries\bin\Debug\StockLoan.MQSeries.dll
+U:\_Dev\ATLAS\Loanstar 2.0\MQSeries\bin\Debug\StockLoan.MQSeries.pdb
+U:\_Dev\ATLAS\Loanstar 2.0\MQSeries\obj\x86\Debug\StockLoan.MQSeries.Properties.Resources.resources
+U:\_Dev\ATLAS\Loanstar 2.0\MQSeries\obj\x86\Debug\StockLoan.MQSeries.dll
+U:\_Dev\ATLAS\Loanstar 2.0\MQSeries\obj\x86\Debug\StockLoan.MQSeries.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar 3.0\MQSeries\bin\Debug\StockLoan.MQSeries.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar 3.0\MQSeries\bin\Debug\StockLoan.MQSeries.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar 3.0\MQSeries\bin\Debug\StockLoan.Common.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar 3.0\MQSeries\bin\Debug\StockLoan.Common.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar 3.0\MQSeries\obj\x86\Debug\ResolveAssemblyReference.cache
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar 3.0\MQSeries\obj\x86\Debug\StockLoan.MQSeries.Properties.Resources.resources
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar 3.0\MQSeries\obj\x86\Debug\ResGen.read.1.tlog
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar 3.0\MQSeries\obj\x86\Debug\ResGen.write.1.tlog
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar 3.0\MQSeries\obj\x86\Debug\StockLoan.MQSeries.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar 3.0\MQSeries\obj\x86\Debug\StockLoan.MQSeries.pdb
+C:\_Dev\ATLAS\Loanstar\TradingGateway\MQSeries\bin\Debug\StockLoan.MQSeries.dll
+C:\_Dev\ATLAS\Loanstar\TradingGateway\MQSeries\bin\Debug\StockLoan.MQSeries.pdb
+C:\_Dev\ATLAS\Loanstar\TradingGateway\MQSeries\bin\Debug\StockLoan.Common.dll
+C:\_Dev\ATLAS\Loanstar\TradingGateway\MQSeries\bin\Debug\StockLoan.Common.pdb
+C:\_Dev\ATLAS\Loanstar\TradingGateway\MQSeries\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\_Dev\ATLAS\Loanstar\TradingGateway\MQSeries\obj\x86\Debug\StockLoan.MQSeries.Properties.Resources.resources
+C:\_Dev\ATLAS\Loanstar\TradingGateway\MQSeries\obj\x86\Debug\ResGen.read.1.tlog
+C:\_Dev\ATLAS\Loanstar\TradingGateway\MQSeries\obj\x86\Debug\ResGen.write.1.tlog
+C:\_Dev\ATLAS\Loanstar\TradingGateway\MQSeries\obj\x86\Debug\StockLoan.MQSeries.dll
+C:\_Dev\ATLAS\Loanstar\TradingGateway\MQSeries\obj\x86\Debug\StockLoan.MQSeries.pdb
+C:\_dev\ATLAS\Loanstar\MQSeries\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\_dev\ATLAS\Loanstar\MQSeries\obj\x86\Debug\MQSeries.Properties.Resources.resources
+C:\_dev\ATLAS\Loanstar\MQSeries\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\_dev\ATLAS\Loanstar\MQSeries\obj\x86\Debug\ResGen.read.1.tlog
+C:\_dev\ATLAS\Loanstar\MQSeries\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\_dev\ATLAS\Loanstar\MQSeries\obj\x86\Debug\ResGen.write.1.tlog
+C:\_dev\ATLAS\Loanstar\MQSeries\bin\Debug\MQSeries.dll
+C:\_dev\ATLAS\Loanstar\MQSeries\bin\Debug\MQSeries.pdb
+C:\_dev\ATLAS\Loanstar\MQSeries\bin\Debug\StockLoan.Common.dll
+C:\_dev\ATLAS\Loanstar\MQSeries\bin\Debug\StockLoan.Common.pdb
+C:\_dev\ATLAS\Loanstar\MQSeries\obj\x86\Debug\MQSeries.dll
+C:\_dev\ATLAS\Loanstar\MQSeries\obj\x86\Debug\MQSeries.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\MQSeries\bin\Debug\StockLoan.Common.dll
+C:\_dev\ATLAS\LoanstarWorldWide\MQSeries\bin\Debug\StockLoan.Common.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\MQSeries\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\_dev\ATLAS\LoanstarWorldWide\MQSeries\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\_dev\ATLAS\LoanstarWorldWide\MQSeries\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\_dev\ATLAS\LoanstarWorldWide\MQSeries\bin\Debug\StockLoan.MQSeries.dll
+C:\_dev\ATLAS\LoanstarWorldWide\MQSeries\bin\Debug\StockLoan.MQSeries.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\MQSeries\obj\x86\Debug\StockLoan.MQSeries.Properties.Resources.resources
+C:\_dev\ATLAS\LoanstarWorldWide\MQSeries\obj\x86\Debug\StockLoan.MQSeries.dll
+C:\_dev\ATLAS\LoanstarWorldWide\MQSeries\obj\x86\Debug\StockLoan.MQSeries.pdb

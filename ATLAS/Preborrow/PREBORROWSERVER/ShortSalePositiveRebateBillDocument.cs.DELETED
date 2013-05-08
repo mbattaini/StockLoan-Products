@@ -1,0 +1,780 @@
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using Anetics.Common;
+
+namespace Anetics.Medalist
+{
+	/// <summary>
+	/// Generates a loan Termination notice.
+	/// </summary>
+	public class ShortSalePositiveRebateBillDocument
+	{
+		const int LINES_PER_PAGE = 30;
+		
+		SqlConnection dbCn = null;
+		
+		string dbCnStr;
+		string startDate;
+		string stopDate;
+		string groupCode;		
+		string header = "";
+		string page = "";		
+
+		public ShortSalePositiveRebateBillDocument(string dbCnStr, string startDate, string stopDate, string groupCode)
+		{
+			this.dbCnStr = dbCnStr;
+			this.dbCn = new SqlConnection(dbCnStr);
+      
+			this.startDate = startDate;
+			this.stopDate = stopDate;
+			this.groupCode = groupCode;			
+		}				
+			
+		public string MasterBill()
+		{
+			SqlConnection dbCn = new SqlConnection(dbCnStr);
+			DataSet dataSet = new DataSet();
+			string masterBill = "";
+			int counter = 0;
+
+			try
+			{
+				SqlCommand dbCmd = new SqlCommand("spTradingGroupGet", dbCn);
+				dbCmd.CommandType = CommandType.StoredProcedure;
+				
+				SqlParameter paramTradeDate = dbCmd.Parameters.Add("@TradeDate", SqlDbType.DateTime);			
+				paramTradeDate.Value = Master.BizDateExchange;
+										
+				SqlDataAdapter dataAdapter = new SqlDataAdapter(dbCmd);
+				dataAdapter.Fill(dataSet, "TradingGroups");				
+				
+				dbCmd.Parameters.Remove(paramTradeDate);
+
+				groupCode	= "";
+				masterBill	 = "Master Bill - Short Rebate Credit\r\n";
+				masterBill	+= "Billing for " + DateTime.Parse(startDate).ToString(Standard.DateFormat) + " to " + DateTime.Parse(stopDate).ToString(Standard.DateFormat) + "\r\n\r\n";
+				masterBill	+= "!";
+				masterBill	+= "Master Bill\r\n";
+				masterBill  += MasterCorrespondentSummary(startDate, stopDate, "");
+
+				foreach (DataRow dr in dataSet.Tables["TradingGroups"].Rows)
+				{					
+
+					if (bool.Parse(dr["PositiveRebateBill"].ToString()))
+					{
+						SqlParameter paramStartDate;
+						SqlParameter paramStopDate;
+						SqlParameter paramGroupCode;					
+						DataSet tempDataSet = new DataSet();
+
+						try
+						{
+							groupCode		= dr["GroupCode"].ToString();					
+					
+							string page = "";
+						
+							dbCmd = new SqlCommand("spShortSaleBillingPositiveRebatesSummaryGet", dbCn);
+							dbCmd.CommandType = CommandType.StoredProcedure;
+							dbCmd.CommandTimeout = 600;    
+        
+							paramStartDate = dbCmd.Parameters.Add("@StartDate", SqlDbType.DateTime);
+							paramStartDate.Value = startDate;
+				
+							paramStopDate = dbCmd.Parameters.Add("@StopDate", SqlDbType.DateTime);
+							paramStopDate.Value = stopDate;
+
+							if (!groupCode.Equals(""))
+							{
+								paramGroupCode = dbCmd.Parameters.Add("@GroupCode", SqlDbType.VarChar, 5);			
+								paramGroupCode.Value = groupCode;
+							}
+
+							dataAdapter = new SqlDataAdapter(dbCmd);   
+							dataAdapter.Fill(tempDataSet, "BillingSummary");				
+										
+							
+							if (tempDataSet.Tables["BillingSummary"].Rows.Count  == 0)
+							{
+								masterBill += "";
+							}
+							else
+							{
+								header = groupCode.ToUpper() + " - " + TradingGroupNameGet(groupCode) + " - Short Rebate Credit\r\n";
+								masterBill	+= header;
+								counter ++;
+								if (counter > LINES_PER_PAGE)
+								{
+									page+="!";
+									page += header + "\r\n";
+									counter = 2;
+								}					
+								
+								
+								masterBill	+= "\r\nAccount(s) Summary \r\n\r\n";
+
+								counter += 2;
+								if (counter > LINES_PER_PAGE)
+								{
+									page+="!";
+									page += header + "\r\n";
+									counter = 2;
+								}					
+								
+								masterBill += "Summary for " + DateTime.Parse(startDate).ToString(Standard.DateFormat) + " to " + DateTime.Parse(stopDate).ToString(Standard.DateFormat) + "\r\n\r\n";
+								
+								counter += 2;
+								if (counter > LINES_PER_PAGE)
+								{
+									page+="!";
+									page += header + "\r\n";
+									counter = 2;
+								}					
+
+								int index  = 0;							
+								decimal contractualCharge = 0;
+								decimal houseCharge = 0;
+								decimal totalModifiedCharge = 0;
+								decimal differenceCharge = 0;
+								string officeCode = "";
+								string houseChargeString = "";
+								string contractualChargeString = "";
+								string marker;
+
+								foreach (DataRow tempDr in tempDataSet.Tables["BillingSummary"].Rows)
+								{
+									if (!officeCode.Equals(tempDr["OfficeCode"].ToString()))
+									{
+										officeCode = tempDr["OfficeCode"].ToString();
+										page += "\r\nOffice Code: " + officeCode + " " + tempDr["OfficeCodeMarkCode"].ToString() + " " + tempDr["OfficeCodeMarkUp"].ToString()+ "\r\n\r\n";										
+										counter +=4;
+										
+										if (counter > LINES_PER_PAGE)
+										{
+											page+="!";
+											page += header + "\r\n";
+											counter = 2;
+										}			
+
+
+										page	+="Group Code".PadRight(15, ' ') 
+											+ "Account Number".PadRight(16, ' ') 	
+											+ "Symbol".PadRight(9, ' ')		
+											+	"Contract Credit".PadLeft(21, ' ') 
+											+	"House Credit".PadLeft(14, ' ') 
+											+ "Difference".PadLeft(14, ' ') + "\r\n" ;
+
+										counter ++;
+
+										if (counter > LINES_PER_PAGE)
+										{
+											page+="!";
+											page += header + "\r\n";
+											counter = 2;
+										}		
+
+										page	+="----------".PadRight(15, ' ') 
+											+ "--------------".PadRight(16, ' ') 			
+											+ "------".PadRight(9, ' ')
+											+	"---------------------".PadLeft(21, ' ') 
+											+	"------------".PadLeft(14, ' ') 
+											+ "----------".PadLeft(14, ' ') + "\r\n" ;
+								
+										counter ++;
+										if (counter > LINES_PER_PAGE)
+										{
+											page+="!";
+											page += header + "\r\n";
+											counter = 2;
+										}		
+									}
+																	
+										if (bool.Parse(tempDr["IsContractRate"].ToString()))
+										{
+											contractualCharge = decimal.Parse(tempDr["ModifiedContractCharge"].ToString());
+											contractualChargeString = contractualCharge.ToString("#,##0.00");
+										}
+										else if (bool.Parse(tempDr["IsLiborRate"].ToString()))
+										{
+											contractualCharge = decimal.Parse(tempDr["ModifiedLiborCharge"].ToString());
+											contractualChargeString = contractualCharge.ToString("#,##0.00");																																				
+										}
+										else
+										{
+											contractualCharge = decimal.Parse(tempDr["ModifiedHouseCharge"].ToString());
+											contractualChargeString = contractualCharge.ToString("#,##0.00");
+										}
+						
+									if ((	(!tempDr["AccountMarkCode"].ToString().Equals(tempDr["OfficeCodeMarkCode"].ToString())) ||
+												(!tempDr["AccountMarkUp"].ToString().Equals(tempDr["OfficeCodeMarkUp"].ToString()))) &&
+												(!tempDr["AccountMarkCode"].ToString().Trim().Equals("")) && 
+												(!tempDr["AccountMarkUp"].ToString().Trim().Equals("")))
+									{
+										marker = (tempDr["AccountMarkCode"].ToString() + " " + decimal.Parse(tempDr["AccountMarkUp"].ToString()).ToString("#0.000"));										 
+									}
+									else
+									{
+										marker = "";
+									}						
+									
+									houseCharge = decimal.Parse(tempDr["ModifiedHouseCharge"].ToString());
+
+									differenceCharge = contractualCharge - houseCharge;
+
+									houseChargeString  = houseCharge.ToString("#,##0.00") + "    ";
+
+									if (long.Parse(tempDr["QuantityCovered"].ToString()) == 0)
+									{
+										houseChargeString  = houseCharge.ToString("#,##0.00") + "(NB)";
+									}								
+									
+									page +=	tempDr["GroupCode"].ToString().PadRight(15, ' ') +										
+										tempDr["AccountNumber"].ToString().PadRight(16, ' ') + 			
+										tempDr["Symbol"].ToString().PadRight(9, ' ') +																			
+										marker.PadRight(13, ' ') + contractualChargeString.PadLeft(8, ' ') + 
+										houseChargeString.PadLeft(14, ' ') + 
+										differenceCharge.ToString("#,##0.00").PadLeft(14, ' ') + "\r\n";								
+					
+									totalModifiedCharge += contractualCharge;	
+					
+									index++;
+									counter ++;	
+					
+									if (counter > LINES_PER_PAGE)
+									{
+										page+="!";
+										page += header + "\r\n";
+										counter = 2;
+									}								
+								}																					
+			 
+								page += ("\r\nTotal Credit: " + totalModifiedCharge.ToString("#,##0.00")).PadRight(103, ' ')+"\r\n\r\n";
+								counter += 2;
+								if (counter > LINES_PER_PAGE)
+								{
+									page+="!";
+									page += header + "\r\n";
+									counter = 2;
+								}																					
+								masterBill += page;															
+							}
+						}
+						catch (Exception error)
+						{
+							Log.Write(error.Message + " [ShortSalePositiveRebateBillDocument.MasterBill]", Log.Error, 1);
+						}						
+					}
+				}
+			}
+			catch (Exception e)
+			{
+				Log.Write(e.Message + " [ShortSalePositiveRebateBillDocument.MasterBill]", Log.Error, 1);
+			}
+
+			return masterBill;
+		}
+
+		public string CorresspondentBill(bool coverPage, bool accountSummary)
+		{
+			DataSet dataSet = new DataSet();
+	
+			int counter = 0;
+			bool summaryDone = false;
+			string rate = "";
+			decimal charge =  0;
+			decimal totalModifiedCharge = 0;
+			string accountNumber = "";
+			string header = "";
+
+			try
+			{
+				SqlCommand dbCmd = new SqlCommand("spShortSaleBillingPositiveRebatesSummaryGet", dbCn);
+				dbCmd.CommandType = CommandType.StoredProcedure;
+				
+				SqlParameter paramStartDate = dbCmd.Parameters.Add("@StartDate", SqlDbType.DateTime);			
+				paramStartDate.Value = startDate;
+				
+				SqlParameter paramStopDate = dbCmd.Parameters.Add("@StopDate", SqlDbType.DateTime);			
+				paramStopDate.Value = stopDate;
+						
+				SqlParameter paramGroupCode = dbCmd.Parameters.Add("@GroupCode", SqlDbType.VarChar, 5);			
+				paramGroupCode.Value = groupCode;
+				
+				SqlDataAdapter dataAdapter = new SqlDataAdapter(dbCmd);   
+				dataAdapter.Fill(dataSet, "BillingSummary");
+
+				dbCmd = new SqlCommand("spShortSaleBillingPositiveRebatesSummaryBySecurityGet", dbCn);
+				dbCmd.CommandType = CommandType.StoredProcedure;
+				
+				paramStartDate = dbCmd.Parameters.Add("@StartDate", SqlDbType.DateTime);			
+				paramStartDate.Value = startDate;
+				
+				paramStopDate = dbCmd.Parameters.Add("@StopDate", SqlDbType.DateTime);			
+				paramStopDate.Value = stopDate;
+				
+				paramGroupCode = dbCmd.Parameters.Add("@GroupCode", SqlDbType.VarChar, 5);			
+				paramGroupCode.Value = groupCode;
+				
+				dataAdapter = new SqlDataAdapter(dbCmd);   
+				dataAdapter.Fill(dataSet, "BillingSummaryBySecurity");			
+			}
+			catch (Exception e)
+			{
+				Log.Write(e.Message + " [ShortSalePositiveRebateBillDocument.ShortSaleBillingSummaryGet]", Log.Error, 1);
+			}
+
+			if (dataSet.Tables["BillingSummary"].Rows.Count == 0)
+			{
+				return "";
+			}
+		
+			try
+			{
+				page = "";
+				header = groupCode.ToUpper() + " - " + TradingGroupNameGet(groupCode) + " - Short Rebate Credit\r\n";
+			
+			
+				if (coverPage)
+				{
+					page += header;
+					page += "Billing for " + DateTime.Parse(startDate).ToString(Standard.DateFormat) + " to " + DateTime.Parse(stopDate).ToString(Standard.DateFormat) + "\r\n\r\n";
+					page += "!";
+				}
+										
+				page += header;
+				page += "\r\nSummary for " + DateTime.Parse(startDate).ToString(Standard.DateFormat) + " to " + DateTime.Parse(stopDate).ToString(Standard.DateFormat) + "\r\n\r\n";
+
+				page += "Date".PadRight(13, ' ') + 
+					"Group".PadRight(9, ' ') +							
+					"CUSIP".PadRight(12, ' ') + 
+					"Symbol".PadRight(10, ' ') + 
+					"Quantity".PadLeft(15, ' ').PadRight(18, ' ') +
+					"Amount".PadLeft(15, ' ').PadRight(18, ' ') +
+					"Rate".PadLeft(8, ' ').PadRight(11, ' ') +							
+					"Credit".PadLeft(10, ' ').PadRight(13, ' ') + "\r\n";
+			
+				page += "----".PadRight(13, ' ') + 
+					"-----".PadRight(9, ' ') +
+					"-----".PadRight(12, ' ') + 
+					"------".PadRight(10, ' ') + 
+					"--------".PadLeft(15, ' ').PadRight(18, ' ') +
+					"------".PadLeft(15, ' ').PadRight(18, ' ') +
+					"----".PadLeft(8, ' ').PadRight(11, ' ') +
+					"------".PadLeft(10, ' ').PadRight(13, ' ') + "\r\n";
+			
+			
+				foreach (DataRow dr in dataSet.Tables["BillingSummaryBySecurity"].Rows)
+				{
+			
+					if (bool.Parse(dr["IsContractRate"].ToString()))
+					{
+						rate = decimal.Parse(dr["ModifiedContractRate"].ToString()).ToString("##0.000");
+						charge = decimal.Parse(dr["ModifiedContractCharge"].ToString());		
+					}
+					else if (bool.Parse(dr["IsLiborRate"].ToString()))
+					{
+						rate = decimal.Parse(dr["ModifiedLiborRate"].ToString()).ToString("##0.000");
+						charge = decimal.Parse(dr["ModifiedLiborCharge"].ToString());		
+					}				
+					else
+					{
+						rate = decimal.Parse(dr["ModifiedHouseRate"].ToString()).ToString("##0.000");
+						charge = decimal.Parse(dr["ModifiedHouseCharge"].ToString());
+					}										
+					
+					page +=	DateTime.Parse(dr["BizDate"].ToString()).ToString(Standard.DateFormat).PadRight(13, ' ') + 
+						dr["GroupCode"].ToString().PadRight(9, ' ') +										
+						dr["SecId"].ToString().PadRight(12, ' ') + 
+						dr["Symbol"].ToString().PadRight(10, ' ') + 
+						dr["QuantityCovered"].ToString().PadLeft(15, ' ').PadRight(18, ' ') +																										
+						dr["QuantityShortedAmount"].ToString().PadLeft(15, ' ').PadRight(18, ' ') +		
+						rate.PadLeft(8, ' ').PadRight(11, ' ') +
+						charge.ToString("#,##0.00").PadLeft(10, ' ').PadRight(13, ' ') + "\r\n";								
+					
+					totalModifiedCharge += charge;			
+
+					counter ++;	
+					
+					if (counter > LINES_PER_PAGE)
+					{
+						page +="!";
+						page += header + "\r\n";
+						counter = 0;			
+					}
+				}																			
+			 
+				page	+= ("\r\nTotal Charge: " + totalModifiedCharge.ToString("#,##0.00")).PadRight(103, ' ')+"\r\n";
+				page	+= "!";
+
+			
+				if (accountSummary)
+				{
+					page += AccountSummary(startDate, stopDate, header);
+				}
+			
+				accountNumber = "";
+				totalModifiedCharge = 0;
+
+				counter = 0;
+
+				foreach (DataRow dr in dataSet.Tables["BillingSummary"].Rows)
+				{
+					if (!accountNumber.Equals(dr["AccountNumber"].ToString()))
+					{						
+						if (!summaryDone)
+						{
+							summaryDone = true;
+							accountNumber = dr["AccountNumber"].ToString();
+							page += header;
+							page += "\r\n" + groupCode + " - " + dr["AccountNumber"].ToString() + "\r\n\r\n";
+
+							page += "Date".PadRight(13, ' ') + 
+								"Group".PadRight(9, ' ') +							
+								"CUSIP".PadRight(12, ' ') + 
+								"Symbol".PadRight(10, ' ') + 
+								"Quantity".PadLeft(15, ' ').PadRight(18, ' ') +
+								"Amount".PadLeft(15, ' ').PadRight(18, ' ') +
+								"Rate".PadLeft(8, ' ').PadRight(11, ' ') +							
+								"Credit".PadLeft(10, ' ').PadRight(13, ' ') + "\r\n";
+			
+							page += "----".PadRight(13, ' ') + 
+								"-----".PadRight(9, ' ') +
+								"-----".PadRight(12, ' ') + 
+								"------".PadRight(10, ' ') + 
+								"--------".PadLeft(15, ' ').PadRight(18, ' ') +
+								"------".PadLeft(15, ' ').PadRight(18, ' ') +
+								"----".PadLeft(8, ' ').PadRight(11, ' ') +
+								"------".PadLeft(10, ' ').PadRight(13, ' ') + "\r\n";
+						}
+						else
+						{
+							accountNumber = dr["AccountNumber"].ToString();
+							page += ("\r\nTotal Charge: " + totalModifiedCharge.ToString("#,##0.00")).PadRight(103, ' ')+"\r\n";
+							page += "!";
+							page += header;
+							page += "\r\n" + groupCode + " - " + dr["AccountNumber"].ToString() + "\r\n\r\n";						
+
+							page += "Date".PadRight(13, ' ') + 
+								"Group".PadRight(9, ' ') +							
+								"CUSIP".PadRight(12, ' ') + 
+								"Symbol".PadRight(10, ' ') + 
+								"Quantity".PadLeft(15, ' ').PadRight(18, ' ') +
+								"Amount".PadLeft(15, ' ').PadRight(18, ' ') +
+								"Rate".PadLeft(8, ' ').PadRight(11, ' ') +							
+								"Credit".PadLeft(10, ' ').PadRight(13, ' ') + "\r\n";
+			
+							page += "----".PadRight(13, ' ') + 
+								"-----".PadRight(9, ' ') +
+								"-----".PadRight(12, ' ') + 
+								"------".PadRight(10, ' ') + 
+								"--------".PadLeft(15, ' ').PadRight(18, ' ') +
+								"------".PadLeft(15, ' ').PadRight(18, ' ') +
+								"----".PadLeft(8, ' ').PadRight(11, ' ') +
+								"------".PadLeft(10, ' ').PadRight(13, ' ') + "\r\n";
+
+							totalModifiedCharge = 0;
+							counter = 0;
+						}
+					}	
+
+					if (bool.Parse(dr["IsContractRate"].ToString()))
+					{
+						rate = decimal.Parse(dr["ModifiedContractRate"].ToString()).ToString("##0.000");
+						charge = decimal.Parse(dr["ModifiedContractCharge"].ToString());		
+					}
+					else if (bool.Parse(dr["IsLiborRate"].ToString()))
+					{
+						rate = decimal.Parse(dr["ModifiedLiborRate"].ToString()).ToString("##0.000");
+						charge = decimal.Parse(dr["ModifiedLiborCharge"].ToString());		
+					}			
+					else
+					{
+						rate = decimal.Parse(dr["ModifiedHouseRate"].ToString()).ToString("##0.000");
+						charge = decimal.Parse(dr["ModifiedHouseCharge"].ToString());
+					}										
+					
+					page +=	DateTime.Parse(dr["BizDate"].ToString()).ToString(Standard.DateFormat).PadRight(13, ' ') + 
+						dr["GroupCode"].ToString().PadRight(9, ' ') +										
+						dr["SecId"].ToString().PadRight(12, ' ') + 
+						dr["Symbol"].ToString().PadRight(10, ' ') + 
+						dr["QuantityCovered"].ToString().PadLeft(15, ' ').PadRight(18, ' ') +	
+						dr["QuantityShortedAmount"].ToString().PadLeft(15, ' ').PadRight(18, ' ') +																					
+						rate.PadLeft(8, ' ').PadRight(11, ' ') +
+						charge.ToString("#,##0.00").PadLeft(10, ' ').PadRight(13, ' ') + "\r\n";		
+
+					totalModifiedCharge += charge;			
+				
+					counter ++;	
+					
+					if (counter > LINES_PER_PAGE)
+					{
+						page+="!";
+						page += header;
+						page += "\r\n" + groupCode + " - " + dr["AccountNumber"].ToString() + "\r\n\r\n";
+						
+						page += "Date".PadRight(13, ' ') + 
+							"Group".PadRight(9, ' ') +							
+							"CUSIP".PadRight(12, ' ') + 
+							"Symbol".PadRight(10, ' ') + 
+							"Quantity".PadLeft(15, ' ').PadRight(18, ' ') +
+							"Amount".PadLeft(15, ' ').PadRight(18, ' ') +
+							"Rate".PadLeft(8, ' ').PadRight(11, ' ') +							
+							"Credit".PadLeft(10, ' ').PadRight(13, ' ') + "\r\n";
+			
+						page += "----".PadRight(13, ' ') + 
+							"-----".PadRight(9, ' ') +
+							"-----".PadRight(12, ' ') + 
+							"------".PadRight(10, ' ') + 
+							"--------".PadLeft(15, ' ').PadRight(18, ' ') +
+							"------".PadLeft(15, ' ').PadRight(18, ' ') +
+							"----".PadLeft(8, ' ').PadRight(11, ' ') +
+							"------".PadLeft(10, ' ').PadRight(13, ' ') + "\r\n";
+						
+						counter = 0;
+					}			
+				}	
+						
+				page += ("\r\nTotal Charge: " + totalModifiedCharge.ToString("#,##0.00")).PadLeft(102, ' ');		
+				page += "!";			
+			}
+			catch (Exception error)
+			{
+				Log.Write(error.Message + " [ShortSalePositiveRebateBillDocument.CorresspondentBill]", Log.Error, 1);	
+			}
+
+			return page;
+		}
+
+		public string TradingGroupNameGet(string groupCode)
+		{
+			SqlConnection localDbCn = new SqlConnection(dbCnStr);
+			DataSet dataSet = new DataSet();
+			string groupCodeName = "";
+
+			try
+			{
+				SqlCommand dbCmd = new SqlCommand("spTradingGroupGet", localDbCn);
+				dbCmd.CommandType = CommandType.StoredProcedure;
+				
+				SqlParameter paramTradeDate = dbCmd.Parameters.Add("@TradeDate", SqlDbType.DateTime);			
+				paramTradeDate.Value = Master.BizDateExchange;
+      	
+						
+				SqlDataAdapter dataAdapter = new SqlDataAdapter(dbCmd);
+				dataAdapter.Fill(dataSet, "TradingGroups");				
+			
+				foreach(DataRow dr in dataSet.Tables["TradingGroups"].Rows)
+				{
+					if (dr["GroupCode"].ToString().Equals(groupCode))
+					{
+						groupCodeName = dr["GroupName"].ToString();
+					}
+				}			
+			}
+			catch (Exception e)
+			{
+				Log.Write(e.Message + " [ShortSalePositiveRebateBillDocument.TradingGroupNameGet]", Log.Error, 1);
+			}
+
+			return groupCodeName;
+		}
+	
+		public string MasterCorrespondentSummary(string startDate, string stopDate, string header)
+		{				
+			string	page = "";
+			string	tempGroupCode = "";
+			decimal groupCodeTotal = 0;			
+			decimal actualTotal = 0;
+			decimal difference = 0;
+			int counter = 0;
+
+			DataSet dataSet = new DataSet();
+
+			try
+			{
+				SqlCommand dbCmd = new SqlCommand("spTradingGroupGet", dbCn);
+				dbCmd.CommandType = CommandType.StoredProcedure;
+				
+				SqlDataAdapter dataAdapter = new SqlDataAdapter(dbCmd);   
+				dataAdapter.Fill(dataSet, "TradingGroups");
+
+				dbCmd = new SqlCommand("spShortSaleBillingPositiveRebatesSummaryGet", dbCn);
+				dbCmd.CommandType = CommandType.StoredProcedure;
+				
+				SqlParameter paramStartDate = dbCmd.Parameters.Add("@StartDate", SqlDbType.DateTime);			
+				paramStartDate.Value = startDate;
+				
+				SqlParameter paramStopDate = dbCmd.Parameters.Add("@StopDate", SqlDbType.DateTime);			
+				paramStopDate.Value = stopDate;
+					
+				dataAdapter = new SqlDataAdapter(dbCmd);   
+				dataAdapter.Fill(dataSet, "BillingSummary");
+			}
+			catch (Exception e)
+			{
+				Log.Write(e.Message + " [ShortSalePositiveRebateBillDocument.MasterCorrespondentSummary]", Log.Error, 1);
+			}		
+
+			try
+			{
+				page	+= header;
+				page	+= "\r\nCorrespondent(s) Summary\r\n\r\n";
+				page += "Summary for " + DateTime.Parse(startDate).ToString(Standard.DateFormat) + " to " + DateTime.Parse(stopDate).ToString(Standard.DateFormat) + "\r\n\r\n";
+		
+				page	+="Group Code".PadRight(15, ' ') 				
+					+	"Contract Credit".PadLeft(14, ' ')
+					+ "House Credit".PadLeft(14, ' ') 
+					+ "Difference".PadLeft(14, ' ') + "\r\n" ;
+
+				page	+="----------".PadRight(15, ' ') 														
+					+	"---------------".PadLeft(14, ' ')
+					+ "------------".PadLeft(14, ' ') 
+					+ "----------".PadLeft(14, ' ') + "\r\n" ;				
+				
+				foreach(DataRow tempDr in dataSet.Tables["TradingGroups"].Rows)
+				{							
+					if (bool.Parse(tempDr["PositiveRebateBill"].ToString()))
+					{
+						tempGroupCode = tempDr["GroupCode"].ToString();
+					
+						foreach (DataRow tempDr2 in dataSet.Tables["BillingSummary"].Rows)
+						{
+							if (tempDr2["GroupCode"].ToString().Trim().Equals(tempGroupCode))
+							{
+							
+								if (bool.Parse(tempDr2["IsContractRate"].ToString()))
+								{
+									groupCodeTotal += decimal.Parse(tempDr2["ModifiedContractCharge"].ToString());
+								}
+								else if (bool.Parse(tempDr2["IsLiborRate"].ToString()))
+								{
+									groupCodeTotal += decimal.Parse(tempDr2["ModifiedLiborCharge"].ToString());
+								}
+								else
+								{
+									groupCodeTotal += decimal.Parse(tempDr2["ModifiedHouseCharge"].ToString());
+								}
+
+								actualTotal += decimal.Parse(tempDr2["ModifiedHouseCharge"].ToString());
+							}
+						}
+						
+						difference = groupCodeTotal - actualTotal;
+
+						page += tempGroupCode.PadRight(15, ' ') +																
+							groupCodeTotal.ToString("#,##0.00").PadLeft(14, ' ') + 
+							actualTotal.ToString("#,##0.00").PadLeft(14, ' ') +
+							difference.ToString("#,##0.00").PadLeft(14, ' ') +"\r\n";	
+						
+						groupCodeTotal = 0;
+						actualTotal = 0;
+
+						counter ++;
+					}
+
+					if (counter > LINES_PER_PAGE)
+					{
+						page+="!";
+						page += header + "\r\n";
+						counter = 0;
+					}								
+				}					
+
+				page += "!";
+			}
+			catch (Exception error)
+			{
+				Log.Write(error.Message + " [ShortSalePositiveRebateBillDocument.MasterCorrespondentSummary]", Log.Error, 1);
+			}
+	
+			return page;
+		}
+		
+		public string AccountSummary(string startDate, string stopDate, string header)
+		{
+			string page = "";
+			
+			SqlCommand dbCmd;
+			SqlParameter paramStartDate;
+			SqlParameter paramStopDate;
+			SqlParameter paramGroupCode;
+			SqlDataAdapter dataAdapter;
+			DataSet dataSet = new DataSet();
+
+			try
+			{
+				dbCmd = new SqlCommand("spShortSaleBillingPositiveRebatesSummaryAccountsSummary", dbCn);
+				dbCmd.CommandType = CommandType.StoredProcedure;
+				dbCmd.CommandTimeout = 600;    
+        
+				paramStartDate = dbCmd.Parameters.Add("@StartDate", SqlDbType.DateTime);
+				paramStartDate.Value = startDate;
+				
+				paramStopDate = dbCmd.Parameters.Add("@StopDate", SqlDbType.DateTime);
+				paramStopDate.Value = stopDate;
+
+				if (!groupCode.Equals(""))
+				{
+					paramGroupCode = dbCmd.Parameters.Add("@GroupCode", SqlDbType.VarChar, 5);			
+					paramGroupCode.Value = groupCode;
+				}
+
+				dataAdapter = new SqlDataAdapter(dbCmd);   
+				dataAdapter.Fill(dataSet, "BillingAccountsSummary");				
+			
+								
+				if (dataSet.Tables["BillingAccountsSummary"].Rows.Count  == 0)
+				{
+					return "";
+				}
+				
+				page	+= header;
+				page	+= "\r\nAccount(s) Summary\r\n\r\n";
+				page += "Summary for " + DateTime.Parse(startDate).ToString(Standard.DateFormat) + " to " + DateTime.Parse(stopDate).ToString(Standard.DateFormat) + "\r\n\r\n";
+		
+				page	+="Group Code".PadRight(15, ' ') 
+					+ "Account Number".PadRight(16, ' ') 												
+					+	"Credit".PadLeft(14, ' ')+ "\n" ;
+
+				page	+="----------".PadRight(15, ' ') 
+					+ "--------------".PadRight(16, ' ') 												
+					+	"------".PadLeft(14, ' ')+ "\n" ;
+		
+				int index  = 0;
+				int counter = 0;
+				decimal totalModifiedCharge = 0;
+
+				foreach (DataRow dr in dataSet.Tables["BillingAccountsSummary"].Rows)
+				{
+					if (!dr["Charge"].ToString().Equals(""))
+					{
+						page +=	dr["GroupCode"].ToString().PadRight(15, ' ') +										
+							dr["AccountNumber"].ToString().PadRight(16, ' ') + 						
+							decimal.Parse(dr["Charge"].ToString()).ToString("#,##0.00").PadLeft(14, ' ') + "\r\n";								
+					
+						totalModifiedCharge += decimal.Parse(dr["Charge"].ToString());			
+					
+						index++;
+						counter ++;	
+					
+						if (counter > LINES_PER_PAGE)
+						{
+							page+="!";
+							page += header + "\r\n";
+							counter = 0;
+						}
+					}
+				}																					
+			 
+				page += ("\r\nTotal Credit: " + totalModifiedCharge.ToString("#,##0.00")).PadRight(103, ' ')+"\r\n";
+				page += "!";									
+			}
+			catch (Exception error)
+			{
+				Log.Write(error.Message + " [ShortSalePositiveRebateBillDocument.AccountSummary]", Log.Error, 1);
+			}
+
+			return page;
+		}
+	}
+}

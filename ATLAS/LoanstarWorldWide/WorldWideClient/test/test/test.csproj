@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ExpressionBlendVersion>4.0.20525.0</ExpressionBlendVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ce1fa0fa-a6c4-4c1c-afe4-e2c7b1806765}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>test</RootNamespace>
+    <AssemblyName>test</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>test.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>test.App</SilverlightAppEntry>
+    <TestPageFileName>TestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>false</EnableOutOfBrowser>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>
+    </LinkedServerProject>
+    <Utf8Output>true</Utf8Output>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the
+		MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+		to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Blacklight.Controls, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\..\..\..\Users\mbattaini\Desktop\Blacklight.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight" />
+    <Reference Include="C1.Silverlight.Analytics" />
+    <Reference Include="C1.Silverlight.Carousel" />
+    <Reference Include="C1.Silverlight.Chart" />
+    <Reference Include="C1.Silverlight.Chart.Editor" />
+    <Reference Include="C1.Silverlight.Chart.Extended" />
+    <Reference Include="C1.Silverlight.Chart3D" />
+    <Reference Include="C1.Silverlight.Data" />
+    <Reference Include="C1.Silverlight.DataGrid" />
+    <Reference Include="C1.Silverlight.DataGrid.Analytics" />
+    <Reference Include="C1.Silverlight.DataGrid.Filters" />
+    <Reference Include="C1.Silverlight.DataGrid.Ria" />
+    <Reference Include="C1.Silverlight.DataGrid.Summaries" />
+    <Reference Include="C1.Silverlight.DateTimeEditors" />
+    <Reference Include="C1.Silverlight.Docking" />
+    <Reference Include="C1.Silverlight.Extended" />
+    <Reference Include="C1.Silverlight.Extended.Analytics" />
+    <Reference Include="C1.Silverlight.FlexGrid.4" />
+    <Reference Include="C1.Silverlight.FlexGridFilter.4" />
+    <Reference Include="C1.Silverlight.Gauge" />
+    <Reference Include="C1.Silverlight.Imaging" />
+    <Reference Include="C1.Silverlight.Legacy" />
+    <Reference Include="C1.Silverlight.Maps" />
+    <Reference Include="C1.Silverlight.MediaPlayer" />
+    <Reference Include="C1.Silverlight.Olap.4" />
+    <Reference Include="C1.Silverlight.Pdf" />
+    <Reference Include="C1.Silverlight.PdfViewer" />
+    <Reference Include="C1.Silverlight.ReportViewer" />
+    <Reference Include="C1.Silverlight.RichTextBox" />
+    <Reference Include="C1.Silverlight.RichTextBox.LegacyHtmlFilter" />
+    <Reference Include="C1.Silverlight.RichTextBox.PdfFilter" />
+    <Reference Include="C1.Silverlight.RichTextBox.RtfFilter" />
+    <Reference Include="C1.Silverlight.RichTextBox.Toolbar" />
+    <Reference Include="C1.Silverlight.Schedule" />
+    <Reference Include="C1.Silverlight.SpellChecker" />
+    <Reference Include="C1.Silverlight.Theming" />
+    <Reference Include="C1.Silverlight.Theming.BureauBlack" />
+    <Reference Include="C1.Silverlight.Theming.ExpressionDark" />
+    <Reference Include="C1.Silverlight.Theming.ExpressionLight" />
+    <Reference Include="C1.Silverlight.Theming.RainierOrange" />
+    <Reference Include="C1.Silverlight.Theming.ShinyBlue" />
+    <Reference Include="C1.Silverlight.Theming.WhistlerBlue" />
+    <Reference Include="C1.Silverlight.Toolbar" />
+    <Reference Include="C1.Silverlight.Uploader" />
+    <Reference Include="C1.Silverlight.Zip" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="blue-wallpapers-curved-space.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	     Other similar extension points exist, see Microsoft.Common.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>

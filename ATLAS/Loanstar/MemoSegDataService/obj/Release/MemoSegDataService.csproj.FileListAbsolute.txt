@@ -1,0 +1,10 @@
+U:\_Dev\ATLAS\Loanstar\MemoSegDataService\bin\Release\StockLoan.Common.dll
+U:\_Dev\ATLAS\Loanstar\MemoSegDataService\bin\Release\StockLoan.MemoSegData.dll
+U:\_Dev\ATLAS\Loanstar\MemoSegDataService\bin\Release\DatabaseFunctions.dll
+U:\_Dev\ATLAS\Loanstar\MemoSegDataService\bin\Release\DatabaseFunctions.pdb
+U:\_Dev\ATLAS\Loanstar\MemoSegDataService\obj\Release\ResolveAssemblyReference.cache
+U:\_Dev\ATLAS\Loanstar\MemoSegDataService\obj\Release\Anetics.Courier.ProjectInstaller.resources
+U:\_Dev\ATLAS\Loanstar\MemoSegDataService\obj\Release\StockLoan.MemoSegData.Service.resources
+U:\_Dev\ATLAS\Loanstar\MemoSegDataService\obj\Release\ResGen.read.1.tlog
+U:\_Dev\ATLAS\Loanstar\MemoSegDataService\obj\Release\ResGen.write.1.tlog
+U:\_Dev\ATLAS\Loanstar\MemoSegDataService\obj\Release\StockLoan.MemoSegDataService.exe

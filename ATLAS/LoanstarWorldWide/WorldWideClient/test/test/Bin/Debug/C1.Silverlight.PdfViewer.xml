@@ -1,0 +1,1040 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Silverlight.PdfViewer</name>
+    </assembly>
+    <members>
+        <member name="T:C1.Silverlight.PdfViewer.DocumentSource">
+            <summary>
+            Base class for <see cref="!:C1ReportViewer"/>'s document sources (internal use only).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.DocumentSource.ContentProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.DocumentSource.Content"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.DocumentSource.PageNumberProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.DocumentSource.PageNumber"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.DocumentSource.PageCountProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.DocumentSource.PageCount"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.DocumentSource.ZoomProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.DocumentSource.Zoom"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.DocumentSource.PageSizeProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.DocumentSource.PageSize"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.DocumentSource.PageMarginProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.DocumentSource.PageMargin"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.DocumentSource.ViewModeProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.DocumentSource.ViewMode"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.DocumentSource.SelectionBackgroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.DocumentSource.SelectionBackground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.DocumentSource.IsFlowingProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.DocumentSource.IsFlowing"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.DocumentSource.PageTemplateProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.DocumentSource.PageTemplate"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.DocumentSource.HorizontalScrollBarVisibilityProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.DocumentSource.HorizontalScrollBarVisibility"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.DocumentSource.VerticalScrollBarVisibilityProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.DocumentSource.VerticalScrollBarVisibility"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.DocumentSource.ComputedHorizontalScrollBarVisibilityProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.DocumentSource.ComputedHorizontalScrollBarVisibility"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.DocumentSource.ComputedVerticalScrollBarVisibilityProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.DocumentSource.ComputedVerticalScrollBarVisibility"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.DocumentSource.HorizontalOffsetProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.DocumentSource.HorizontalOffset"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.DocumentSource.VerticalOffsetProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.DocumentSource.VerticalOffset"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.DocumentSource.ScrollableWidthProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.DocumentSource.ScrollableWidth"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.DocumentSource.ScrollableHeightProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.DocumentSource.ScrollableHeight"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.DocumentSource.ExtentWidthProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.DocumentSource.ExtentWidth"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.DocumentSource.ExtentHeightProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.DocumentSource.ExtentHeight"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.DocumentSource.ViewportWidthProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.DocumentSource.ViewportWidth"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.DocumentSource.ViewportHeightProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.DocumentSource.ViewportHeight"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.DocumentSource.PageSeparationProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.DocumentSource.PageSeparation"/> dependency property. 
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.DocumentSource.HorizontalScrollBarVisibility">
+            <summary>
+            Gets or sets a value that indicates whether a horizontal <see cref="T:System.Windows.Controls.Primitives.ScrollBar"/> should be displayed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.DocumentSource.VerticalScrollBarVisibility">
+            <summary>
+            Gets or sets a value that indicates whether a horizontal <see cref="T:System.Windows.Controls.Primitives.ScrollBar"/> should be displayed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.DocumentSource.ComputedHorizontalScrollBarVisibility">
+            <summary>
+            Gets a value that indicates whether the horizontal <see cref="T:System.Windows.Controls.Primitives.ScrollBar"/> is visible.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.DocumentSource.ComputedVerticalScrollBarVisibility">
+            <summary>
+            Gets a value that indicates whether the vertical <see cref="T:System.Windows.Controls.Primitives.ScrollBar"/> is visible.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.DocumentSource.HorizontalOffset">
+            <summary>
+            Gets or sets a value that indicates the horizontal offset of the scrolled content.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.DocumentSource.VerticalOffset">
+            <summary>
+            Gets or sets a value that indicates the vertical offset of the scrolled content.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.DocumentSource.ScrollableWidth">
+            <summary>
+            Gets a value that represents the vertical size of the area that can be scrolled; the difference between the width of the extent and the width of the viewport.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.DocumentSource.ScrollableHeight">
+            <summary>
+            Gets a value that represents the horizontal size of the area that can be scrolled; the difference between the height of the extent and the height of the viewport.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.DocumentSource.ExtentWidth">
+            <summary>
+            Gets the horizontal size of all the content for display in the <see cref="T:C1.Silverlight.PdfViewer.C1PdfViewer"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.DocumentSource.ExtentHeight">
+            <summary>
+            Gets the vertical size of all the content for display in the <see cref="T:C1.Silverlight.PdfViewer.C1PdfViewer"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.DocumentSource.ViewportWidth">
+            <summary>
+            Gets a value that contains the horizontal size of the viewable content.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.DocumentSource.ViewportHeight">
+            <summary>
+            Gets a value that contains the vertical size of the viewable content.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.PdfViewer.TIFFFaxDecoder.#ctor(System.Int32,System.Int32,System.Int32)">
+            @param fillOrder   The fill order of the compressed data bytes.
+            @param w
+            @param h
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.TIFFFaxDecompressor.fillOrder">
+            The logical order of bits within a byte.
+            <pre>
+            1 = MSB-to-LSB
+            2 = LSB-to-MSB (flipped)
+            </pre>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.TIFFFaxDecompressor.uncompressedMode">
+            Uncompressed mode flag: 1 if uncompressed, 0 if not.
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.TIFFFaxDecompressor.fillBits">
+            EOL padding flag: 1 if fill bits have been added before an EOL such
+            that the EOL ends on a byte boundary, 0 otherwise.
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.TIFFFaxDecompressor.oneD">
+            Coding dimensionality: 1 for 2-dimensional, 0 for 1-dimensional.
+        </member>
+        <member name="M:C1.Silverlight.PdfViewer.TIFFFaxDecompressor.SetOptions(System.Int32,System.Int32,System.Int32,System.Int32)">
+            Invokes the superclass method and then sets instance variables on
+            the basis of the metadata set on this decompressor.
+        </member>
+        <member name="T:C1.Silverlight.PdfViewer.GraphicsState">
+            <summary>
+            Keeps the state of the objects used for generating graphics 
+            on the page (pen, brush, transforms, clipping region)
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.PdfViewer.PdfEncoding">
+            <summary>
+            Converts bytes into strings using Adobe's WinAnsiEncoding or special encodings
+            specified by the fonts.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.PdfViewer.PdfEncoding.#ctor(C1.Silverlight.PdfViewer.PdfObject)">
+            <summary>
+            Creates a new instance of a <see cref="T:C1.Silverlight.PdfViewer.PdfEncoding"/> based on a font object.
+            </summary>
+            <param name="fontObject">Font object as encoded in the pdf stream.</param>
+        </member>
+        <member name="M:C1.Silverlight.PdfViewer.PdfEncoding.ToString(System.Byte[])">
+            <summary>
+            Convert to text string array of bytes in pdf encoding.
+            </summary>
+            <param name="bytes">The array of bytes.</param>
+            <returns>The text string.</returns>
+        </member>
+        <member name="T:C1.Silverlight.PdfViewer.PdfImageDecoder">
+            <summary>
+            Converts PDF image streams into .NET image streams.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.PdfViewer.PdfImageDecoder.GetImage(C1.Silverlight.PdfViewer.PdfObject)">
+            <summary>
+            Gets an image from a Pdf object.
+            </summary>
+            <param name="obj">Pdf object that contains the image.</param>
+            <returns>ImageSource object that contains the image.</returns>
+        </member>
+        <member name="M:C1.Silverlight.PdfViewer.PdfImageDecoder.GetImageMask(C1.Silverlight.PdfViewer.PdfObject)">
+            <summary>
+            Gets an image that can be used as a 'soft mask'.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.PdfImageDecoder.ImageNotAvailable">
+            <summary>
+            Gets a stock ImageSource to indicate we failed to load an image.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.PdfViewer.PdfObject">
+            <summary>
+            Smallest unit of information in a PDF document 
+            (dictionary, stream, image, etc)
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.PdfViewer.PdfObjectWrapper">
+            <summary>
+            Base class for specialized objects such as <see cref="T:C1.Silverlight.PdfViewer.PdfPage"/>
+            and <see cref="T:C1.Silverlight.PdfViewer.PdfOutlineNode"/> that wrap low-level pdf objects.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.PdfViewer.PdfOutlineNode">
+            <summary>
+            Represents a node in a PDF document's outline tree.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.PdfViewer.PdfPage">
+            <summary>
+            Represents a page in a PDF document. Page objects contain the 
+            data needed to create visual representations of the page,
+            which is done by the <see cref="T:C1.Silverlight.PdfViewer.PdfPageElement"/> class.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.PdfPage.PageRectangle">
+            <summary>
+            Gets the rectangle that defines the page size in Points.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.PdfPage.PageText">
+            <summary>
+            Gets a string that contains the text on the page.
+            </summary>
+            <remarks>
+            This string is plain text. It is useful for searching and indexing.
+            </remarks>
+        </member>
+        <member name="T:C1.Silverlight.PdfViewer.PdfPageElement">
+            <summary>
+            Converts the data in a <see cref="T:C1.Silverlight.PdfViewer.PdfPage"/> object into a 
+            visual element that can be displayed on the screen.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.PdfViewer.PdfParser">
+            <summary>
+            Read a PDF file or stream and parse the contents into a list of
+            <see cref="T:C1.Silverlight.PdfViewer.PdfPage"/> and <see cref="T:C1.Silverlight.PdfViewer.PdfOutlineNode"/>objects.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.PdfViewer.PdfParser.Parse(System.String)">
+            <summary>
+            Parse the PDF document in a file and populate the <see cref="P:C1.Silverlight.PdfViewer.PdfParser.Pages"/>
+            and <see cref="P:C1.Silverlight.PdfViewer.PdfParser.Outline"/> collections.
+            </summary>
+            <param name="fileName">Name of the PDF file to parse.</param>
+        </member>
+        <member name="M:C1.Silverlight.PdfViewer.PdfParser.Parse(System.IO.Stream)">
+            <summary>
+            Parse the PDF document in a stream and populate the <see cref="P:C1.Silverlight.PdfViewer.PdfParser.Pages"/>
+            and <see cref="P:C1.Silverlight.PdfViewer.PdfParser.Outline"/> collections.
+            </summary>
+            <param name="stream">Stream that contains the PDF document.</param>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.PdfParser.Pages">
+            <summary>
+            Gets the collection of pages in the PDF document that was parsed
+            with a call to the <see cref="M:C1.Silverlight.PdfViewer.PdfParser.Parse(System.String)"/> method.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.PdfParser.Outline">
+            <summary>
+            Gets the collection of outline nodes in the PDF document that was parsed
+            with a call to the <see cref="M:C1.Silverlight.PdfViewer.PdfParser.Parse(System.String)"/> method.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.PdfParser.FastMode">
+            <summary>
+            Gets or sets a value that determines that the PDF file should
+            be rendered faster but with less accurate positioning.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.PdfParser.Search">
+            <summary>
+            Gets the <see cref="!:SearchEngine"/> used to search for strings in the
+            current document.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.PdfViewer.PdfParserException">
+            <summary>
+            Exception thrown when problems are detected while parsing PDF 
+            documents.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.PdfViewer.PdfSearchEngine">
+            <summary>
+            Performs searches within the current PDF document.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.PdfViewer.PdfSearchEngine.Clear">
+            <summary>
+            Clears the search engine.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.PdfViewer.PdfSearchEngine.Find(System.Int32,System.Boolean)">
+            <summary>
+            Looks for the next match.
+            </summary>
+            <param name="page">Index of the page where the search should start.</param>
+            <param name="forward">Whether to search forward or backward.</param>
+            <returns>True if a match was found, false otherwise.</returns>
+        </member>
+        <member name="M:C1.Silverlight.PdfViewer.PdfSearchEngine.HighlightMatches(C1.Silverlight.PdfViewer.PdfPageElement)">
+            <summary>
+            Highlight matches on a given page.
+            </summary>
+            <param name="pageElement"></param>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.PdfSearchEngine.StringComparison">
+            <summary>
+            Gets or sets how to look for matches.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.PdfSearchEngine.Text">
+            <summary>
+            Gets or sets the text to search for.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.PdfSearchEngine.PageIndex">
+            <summary>
+            Gets the index of the page where a match was found.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.PdfViewer.TextState">
+            <summary>
+            Keeps the current text state while generating PDF pages
+            (e.g. font, cursor position, transformations)
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.PdfViewer.TextState.EmbeddedFont">
+            <summary>
+            Class that contains font source information and encapsulates differences
+            between Silverlight and WPF.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.PdfViewer.C1PdfViewer">
+            <summary>
+            Displays PDF documents with navigation controls.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.PdfViewer.C1PdfViewer.LoadDocument(System.String)">
+            <summary>
+            Load a PDF document from a file.
+            </summary>
+            <param name="fileName">The name of the file that contains the PDF document.</param>
+        </member>
+        <member name="M:C1.Silverlight.PdfViewer.C1PdfViewer.LoadDocument(System.IO.Stream)">
+            <summary>
+            Load a PDF document from a <see cref="T:System.IO.Stream"/>.
+            </summary>
+            <param name="stream">A <see cref="T:System.IO.Stream"/> containing a PDF document.</param>
+        </member>
+        <member name="M:C1.Silverlight.PdfViewer.C1PdfViewer.SaveDocument(System.String)">
+            <summary>
+            Save the current document to a file.
+            </summary>
+            <param name="fileName">The name of the file where the current document is saved.</param>
+        </member>
+        <member name="M:C1.Silverlight.PdfViewer.C1PdfViewer.SaveDocument(System.IO.Stream)">
+            <summary>
+            Save the current document to a <see cref="T:System.IO.Stream"/>.
+            </summary>
+            <param name="stream">The stream where the current document is saved.</param>
+        </member>
+        <member name="M:C1.Silverlight.PdfViewer.C1PdfViewer.PrintDocument(System.String)">
+            <summary>
+            Print the current document.
+            </summary>
+            <param name="documentName">The name used when printing.</param>
+        </member>
+        <member name="M:C1.Silverlight.PdfViewer.C1PdfViewer.SaveDocument">
+            <summary>
+            Save the current document to a file.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.PdfViewer.C1PdfViewer.GoToPage(System.Int32)">
+            <summary>
+            Jump to a specified page number.
+            </summary>
+            <param name="pageNumber">The number of the page to jump to.</param>
+        </member>
+        <member name="M:C1.Silverlight.PdfViewer.C1PdfViewer.FindNext">
+            <summary>
+            Go to the next occurrence of <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.FindText"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.PdfViewer.C1PdfViewer.FindPrevious">
+            <summary>
+            Go to the previous occurrence of <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.FindText"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.PdfViewer.C1PdfViewer.ClipboardCopy">
+            <summary>
+            Copy the current selection to the clipboard.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.PdfViewer.C1PdfViewer.GetPages">
+            <summary>
+            Returns a copy of the <see cref="!:FrameworElement">FrameworkElements</see> that represent the document pages.
+            </summary>
+            <returns>A copy of the <see cref="!:FrameworElement">FrameworkElements</see> that represent the document pages.</returns>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.PageNumberProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.PageNumber"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.PageCountProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.PageCount"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.FirstPageCommandProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.FirstPageCommand"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.PreviousPageCommandProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.PreviousPageCommand"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.NextPageCommandProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.NextPageCommand"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.LastPageCommandProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.LastPageCommand"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.ZoomProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.Zoom"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.DecreaseZoomCommandProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.DecreaseZoomCommand"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.IncreaseZoomCommandProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.IncreaseZoomCommand"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.SaveCommandProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.SaveCommand"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.FindNextCommandProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.FindNextCommand"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.FindPreviousCommandProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.FindPreviousCommand"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.FindTextProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.FindText"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.FindCountProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.FindCount"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.FindNumberProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.FindNumber"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.PrintCommandProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.PrintCommand"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.PageSizeProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.PageSize"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.PageMarginProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.PageMargin"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.ViewModeProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.ViewMode"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.SelectionBackgroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.SelectionBackground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.IsFlowingProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.IsFlowing"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.PageTemplateProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.PageTemplate"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.HorizontalScrollBarVisibilityProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.HorizontalScrollBarVisibility"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.VerticalScrollBarVisibilityProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.VerticalScrollBarVisibility"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.ComputedHorizontalScrollBarVisibilityProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.ComputedHorizontalScrollBarVisibility"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.ComputedVerticalScrollBarVisibilityProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.ComputedVerticalScrollBarVisibility"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.HorizontalOffsetProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.HorizontalOffset"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.VerticalOffsetProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.VerticalOffset"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.ScrollableWidthProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.ScrollableWidth"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.ScrollableHeightProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.ScrollableHeight"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.ExtentWidthProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.ExtentWidth"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.ExtentHeightProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.ExtentHeight"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.ViewportWidthProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.ViewportWidth"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.ViewportHeightProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.ViewportHeight"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.PageSeparationProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.PageSeparation"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.ToolbarVisibilityProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.ToolbarVisibility"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.ToolbarStyleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.ToolbarStyle"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewer.ScrollBarStyleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.ScrollBarStyle"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.PdfViewer.C1PdfViewer.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.PdfViewer.C1PdfViewer"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.PdfViewer.C1PdfViewer.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.PdfViewer.C1PdfViewer"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="E:C1.Silverlight.PdfViewer.C1PdfViewer.RequestNavigate">
+            <summary>
+            Fired when a link from a document is clicked.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.PageNumber">
+            <summary>
+            Gets the page number for the currently displayed page.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.PdfViewer.C1PdfViewer.PageNumberChanged">
+            <summary> 
+            Event raised when the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.PageNumber"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.PageCount">
+            <summary>
+            Gets the current number of display pages for the content hosted by the <see cref="T:C1.Silverlight.PdfViewer.C1PdfViewer"/>.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.PdfViewer.C1PdfViewer.PageCountChanged">
+            <summary> 
+            Event raised when the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.PageCount"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.FirstPageCommand">
+            <summary>
+            Gets the <see cref="T:System.Windows.Input.ICommand"/> that goes to the first page.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.PreviousPageCommand">
+            <summary>
+            Gets the <see cref="T:System.Windows.Input.ICommand"/> that goes to the previous page.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.NextPageCommand">
+            <summary>
+            Gets the <see cref="T:System.Windows.Input.ICommand"/> that goes to the next page.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.LastPageCommand">
+            <summary>
+            Gets the <see cref="T:System.Windows.Input.ICommand"/> that goes to the last page.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.Zoom">
+            <summary>
+            Gets or sets the document zoom.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.PdfViewer.C1PdfViewer.ZoomChanged">
+            <summary> 
+            Event raised when the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.Zoom"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.DecreaseZoomCommand">
+            <summary>
+            Gets the <see cref="T:System.Windows.Input.ICommand"/> that decreases zoom.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.IncreaseZoomCommand">
+            <summary>
+            Gets the <see cref="T:System.Windows.Input.ICommand"/> that increases zoom.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.SaveCommand">
+            <summary>
+            Gets the <see cref="T:System.Windows.Input.ICommand"/> that saves the document using <see cref="T:System.Windows.Controls.SaveFileDialog"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.FindNextCommand">
+            <summary>
+            Gets the <see cref="T:System.Windows.Input.ICommand"/> that performs the <see cref="M:C1.Silverlight.PdfViewer.C1PdfViewer.FindNext"/> operation.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.FindPreviousCommand">
+            <summary>
+            Gets the <see cref="T:System.Windows.Input.ICommand"/> that performs the <see cref="M:C1.Silverlight.PdfViewer.C1PdfViewer.FindPrevious"/> operation.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.FindText">
+            <summary>
+            Gets or sets the text that will be searched by <see cref="M:C1.Silverlight.PdfViewer.C1PdfViewer.FindNext"/> and <see cref="M:C1.Silverlight.PdfViewer.C1PdfViewer.FindPrevious"/>.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.PdfViewer.C1PdfViewer.FindTextChanged">
+            <summary> 
+            Event raised when the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.FindText"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.FindCount">
+            <summary>
+            Gets the total number of occurrences of <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.FindText"/>.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.PdfViewer.C1PdfViewer.FindCountChanged">
+            <summary> 
+            Event raised when the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.FindCount"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.FindNumber">
+            <summary>
+            Gets the number of the currently selected occurrence of <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.FindText"/>.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.PdfViewer.C1PdfViewer.FindNumberChanged">
+            <summary> 
+            Event raised when the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.FindNumber"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.PrintCommand">
+            <summary>
+            Gets the <see cref="T:System.Windows.Input.ICommand"/> that performs the <see cref="M:C1.Silverlight.PdfViewer.C1PdfViewer.PrintDocument(System.String)"/> operation.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.PageSize">
+            <summary>
+            Gets or sets the size of the page used for displaying and printing HTML documents.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.PageMargin">
+            <summary>
+            Gets or sets the margin of the page used for displaying and printing HTML documents.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.ViewMode">
+            <summary>
+            Gets or sets the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.ViewMode"/> for this <see cref="T:C1.Silverlight.PdfViewer.C1PdfViewer"/>.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.PdfViewer.C1PdfViewer.ViewModeChanged">
+            <summary> 
+            Event raised when the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.ViewMode"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.SelectionBackground">
+            <summary>
+            Gets or sets a <see cref="T:System.Windows.Media.Brush"/> for this <see cref="T:C1.Silverlight.PdfViewer.C1PdfViewer"/>'s selection.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.IsFlowing">
+            <summary>
+            Gets whether the current document is displayed as a flowing document, instead of paged.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.PdfViewer.C1PdfViewer.IsFlowingChanged">
+            <summary> 
+            Event raised when the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewer.IsFlowing"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.PageTemplate">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.DataTemplate"/> used to display pages.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.HorizontalScrollBarVisibility">
+            <summary>
+            Gets or sets a value that indicates whether a horizontal <see cref="T:System.Windows.Controls.Primitives.ScrollBar"/> should be displayed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.VerticalScrollBarVisibility">
+            <summary>
+            Gets or sets a value that indicates whether a horizontal <see cref="T:System.Windows.Controls.Primitives.ScrollBar"/> should be displayed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.ComputedHorizontalScrollBarVisibility">
+            <summary>
+            Gets a value that indicates whether the horizontal <see cref="T:System.Windows.Controls.Primitives.ScrollBar"/> is visible.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.ComputedVerticalScrollBarVisibility">
+            <summary>
+            Gets a value that indicates whether the vertical <see cref="T:System.Windows.Controls.Primitives.ScrollBar"/> is visible.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.HorizontalOffset">
+            <summary>
+            Gets or sets a value that indicates the horizontal offset of the scrolled content.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.VerticalOffset">
+            <summary>
+            Gets or sets a value that indicates the vertical offset of the scrolled content.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.ScrollableWidth">
+            <summary>
+            Gets a value that represents the vertical size of the area that can be scrolled; the difference between the width of the extent and the width of the viewport.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.ScrollableHeight">
+            <summary>
+            Gets a value that represents the horizontal size of the area that can be scrolled; the difference between the height of the extent and the height of the viewport.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.ExtentWidth">
+            <summary>
+            Gets the horizontal size of all the content for display in the <see cref="T:C1.Silverlight.PdfViewer.C1PdfViewer"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.ExtentHeight">
+            <summary>
+            Gets the vertical size of all the content for display in the <see cref="T:C1.Silverlight.PdfViewer.C1PdfViewer"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.ViewportWidth">
+            <summary>
+            Gets a value that contains the horizontal size of the viewable content.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.ViewportHeight">
+            <summary>
+            Gets a value that contains the vertical size of the viewable content.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.PageSeparation">
+            <summary>
+            Gets or sets the separation between pages.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.ToolbarVisibility">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Visibility"/> of this <see cref="T:C1.Silverlight.PdfViewer.C1PdfViewer"/> toolbar.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewer.ToolbarStyle">
+            <summary>
+            Gets or set the style applied to this <see cref="T:C1.Silverlight.PdfViewer.C1PdfViewer"/>'s toolbar.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.PdfViewer.C1PdfViewerToolbar">
+            <summary>
+            Provides tools for controlling a <see cref="T:C1.Silverlight.PdfViewer.C1PdfViewer"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewerToolbar.ViewerProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewerToolbar.Viewer"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.C1PdfViewerToolbar.FindResultsProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.PdfViewer.C1PdfViewerToolbar.FindResults"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.PdfViewer.C1PdfViewerToolbar.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.PdfViewer.C1PdfViewerToolbar"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.PdfViewer.C1PdfViewerToolbar.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.PdfViewer.C1PdfViewerToolbar"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewerToolbar.Viewer">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.PdfViewer.C1PdfViewer"/> this toolbar controls.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.C1PdfViewerToolbar.FindResults">
+            <summary>
+            Gets a string to display the number of current find results.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.PdfViewer.RequestNavigateEventArgs">
+            <summary>
+            Provides data for the <see cref="E:C1.Silverlight.PdfViewer.C1PdfViewer.RequestNavigate"/> event. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.PdfViewer.RequestNavigateEventArgs.#ctor(System.String,System.Uri)">
+            <summary>
+            Initializes a new RequestNavigateEventArgs.
+            </summary>
+            <param name="target"></param>
+            <param name="uri"></param>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.RequestNavigateEventArgs.Target">
+            <summary>
+            Gets the target of the navigation request.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.RequestNavigateEventArgs.Uri">
+            <summary>
+            Gets the URI of the navigation request.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.PdfViewer.Resources.C1_Silverlight_PdfViewer">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.Resources.C1_Silverlight_PdfViewer.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.Resources.C1_Silverlight_PdfViewer.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.Resources.C1_Silverlight_PdfViewer.Copy">
+            <summary>
+              Looks up a localized string similar to Copy.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.Resources.C1_Silverlight_PdfViewer.FindResults">
+            <summary>
+              Looks up a localized string similar to {0} of {1}.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.Resources.C1_Silverlight_PdfViewer.ViewMode_FitWidth">
+            <summary>
+              Looks up a localized string similar to Fit Width.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.Resources.C1_Silverlight_PdfViewer.ViewMode_Normal">
+            <summary>
+              Looks up a localized string similar to Normal.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.Resources.C1_Silverlight_PdfViewer.ViewMode_OnePage">
+            <summary>
+              Looks up a localized string similar to One Page.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.PdfViewer.Resources.C1_Silverlight_PdfViewer.ViewMode_TwoPages">
+            <summary>
+              Looks up a localized string similar to Two Pages.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.PdfViewer.PrintPageVisual">
+            <summary>
+            Element that hosts a page visual for printing, with support for scaling and
+            mixed page orientation.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.PdfViewer.ViewMode">
+            <summary>
+            Describes view modes for <see cref="T:C1.Silverlight.PdfViewer.C1PdfViewer"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.ViewMode.Normal">
+            <summary>
+            Display pages using the current zoom value.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.ViewMode.OnePage">
+            <summary>
+            Automatically update the zoom value to fit one complete page inside the viewport.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.ViewMode.FitWidth">
+            <summary>
+            Automatically update the zoom value to fit the width of one page inside the viewport.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.PdfViewer.ViewMode.TwoPages">
+            Automatically update the zoom value to fit two complete pages, side by side, inside the viewport.
+        </member>
+    </members>
+</doc>

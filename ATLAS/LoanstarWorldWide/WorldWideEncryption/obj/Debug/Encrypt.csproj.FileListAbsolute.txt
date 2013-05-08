@@ -1,0 +1,5 @@
+C:\_Dev\ATLAS\LoanstarWorldWide\WorldWideEncryption\bin\Debug\Encrypt.dll
+C:\_Dev\ATLAS\LoanstarWorldWide\WorldWideEncryption\bin\Debug\Encrypt.pdb
+C:\_Dev\ATLAS\LoanstarWorldWide\WorldWideEncryption\obj\Debug\ResolveAssemblyReference.cache
+C:\_Dev\ATLAS\LoanstarWorldWide\WorldWideEncryption\obj\Debug\Encrypt.dll
+C:\_Dev\ATLAS\LoanstarWorldWide\WorldWideEncryption\obj\Debug\Encrypt.pdb

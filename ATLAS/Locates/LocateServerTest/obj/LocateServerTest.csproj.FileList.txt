@@ -1,0 +1,15 @@
+bin\Debug\StockLoan.LocateServerTest.exe.config
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\StockLoan.LocateServerTest.exe
+bin\Debug\StockLoan.LocateServerTest.pdb
+bin\Debug\StockLoan.Common.dll
+bin\Debug\StockLoan.Locates.dll
+bin\Debug\StockLoan.Common.pdb
+bin\Debug\StockLoan.LocateServer.pdb
+bin\Debug\StockLoan.Locates.pdb
+obj\Debug\StockLoan.LocateServerTest.exe
+obj\Debug\StockLoan.LocateServerTest.pdb
+bin\Debug\C1.C1Zip.2.dll
+bin\Debug\Compression.dll
+bin\Debug\Compression.pdb
+bin\Debug\StockLoan.LocateServer.dll

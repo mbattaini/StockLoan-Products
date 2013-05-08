@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="08d79bac-21b3-4aa7-9d1a-4242e8d65e31" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://dalatlprd01.penson.com:443/PositionService.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PositionService.xsd" MetadataType="Schema" ID="0c9c9f93-b3a9-47cd-b6ca-c614b2db2594" SourceId="1" SourceUrl="http://dalatlprd01.penson.com:443/PositionService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PositionService1.xsd" MetadataType="Schema" ID="0dcdd383-3b7b-4b1f-b6fe-58dbcfbb7d13" SourceId="1" SourceUrl="http://dalatlprd01.penson.com:443/PositionService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PositionService.wsdl" MetadataType="Wsdl" ID="d3ceba5a-178a-42e0-b922-9ded841ad3bf" SourceId="1" SourceUrl="http://dalatlprd01.penson.com:443/PositionService.svc?wsdl" />
+    <MetadataFile FileName="PositionService2.xsd" MetadataType="Schema" ID="babb9832-45cd-414e-b564-30dd48ec7096" SourceId="1" SourceUrl="http://dalatlprd01.penson.com:443/PositionService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Silverlight.RichTextBox.RtfFilter</name>
+    </assembly>
+    <members>
+        <member name="T:C1.Silverlight.RichTextBox.Documents.RtfFilter">
+            <summary>
+            Filter for converting <see cref="T:C1.Silverlight.RichTextBox.Documents.C1Document"/> objects to and from RTF strings.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.Documents.RtfFilter.ConvertToDocument(System.String)">
+            <summary>
+            Parses an RTF string into a <see cref="T:C1.Silverlight.RichTextBox.Documents.C1Document"/>.
+            </summary>
+            <param name="rtf">String containing the RTF document.</param>
+            <returns>A <see cref="T:C1.Silverlight.RichTextBox.Documents.C1Document"/> that represents the given string.</returns>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.Documents.RtfFilter.ConvertFromDocument(C1.Silverlight.RichTextBox.Documents.C1Document)">
+            <summary>
+            Creates a string representation of a <see cref="T:C1.Silverlight.RichTextBox.Documents.C1Document"/>.
+            </summary>
+            <param name="doc"><see cref="T:C1.Silverlight.RichTextBox.Documents.C1Document"/> to convert into an RTF string.</param>
+            <returns>A string containing an RTF representation of the document.</returns>
+        </member>
+    </members>
+</doc>

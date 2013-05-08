@@ -1,0 +1,24 @@
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\DatabaseFunctions\bin\Release\DatabaseFunctions.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\DatabaseFunctions\bin\Release\DatabaseFunctions.pdb
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\DatabaseFunctions\bin\Release\StockLoan.Common.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\DatabaseFunctions\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\DatabaseFunctions\obj\Release\DatabaseFunctions.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\DatabaseFunctions\obj\Release\DatabaseFunctions.pdb
+U:\_Dev\ATLAS\Loanstar\DatabaseFunctions\bin\Release\DatabaseFunctions.dll
+U:\_Dev\ATLAS\Loanstar\DatabaseFunctions\bin\Release\DatabaseFunctions.pdb
+U:\_Dev\ATLAS\Loanstar\DatabaseFunctions\bin\Release\StockLoan.Common.dll
+U:\_Dev\ATLAS\Loanstar\DatabaseFunctions\obj\Release\ResolveAssemblyReference.cache
+U:\_Dev\ATLAS\Loanstar\DatabaseFunctions\obj\Release\DatabaseFunctions.dll
+U:\_Dev\ATLAS\Loanstar\DatabaseFunctions\obj\Release\DatabaseFunctions.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\DatabaseFunctions\bin\Release\DatabaseFunctions.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\DatabaseFunctions\bin\Release\DatabaseFunctions.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\DatabaseFunctions\bin\Release\StockLoan.Common.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\DatabaseFunctions\obj\Release\ResolveAssemblyReference.cache
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\DatabaseFunctions\obj\Release\DatabaseFunctions.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\DatabaseFunctions\obj\Release\DatabaseFunctions.pdb
+C:\_Dev\DatabaseFunctions\obj\Release\ResolveAssemblyReference.cache
+C:\_Dev\DatabaseFunctions\obj\Release\DatabaseFunctions.dll
+C:\_Dev\DatabaseFunctions\obj\Release\DatabaseFunctions.pdb
+C:\_Dev\DatabaseFunctions\bin\Release\DatabaseFunctions.dll
+C:\_Dev\DatabaseFunctions\bin\Release\DatabaseFunctions.pdb
+C:\_Dev\DatabaseFunctions\bin\Release\StockLoan.Common.dll

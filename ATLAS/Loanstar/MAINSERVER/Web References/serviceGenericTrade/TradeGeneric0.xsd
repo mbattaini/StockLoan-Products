@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="TradeNewRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="correspondentCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contractId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="system" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sedol" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="exchangeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="book" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="counterParty" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="counterPartyCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="buySellCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quantity" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="price" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cancelledFlag" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="capacity" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="deliveryRisk" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clientMarketIndicator" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dealingCurrency" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="countryOfSettlement" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="placeOfSettlement" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="businessReason" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sourceEntity" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="marginRate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="endDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tradeDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fixedInterestRate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="collateralised" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clearingSystem" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TradeNewRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TradeNewRequestResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TradeReturnRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="correspondentCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contractId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="system" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sedol" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="exchangeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="book" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="counterParty" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="counterPartyCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="buySellCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quantity" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="price" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cancelledFlag" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="capacity" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="deliveryRisk" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clientMarketIndicator" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dealingCurrency" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="countryOfSettlement" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="placeOfSettlement" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="businessReason" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sourceEntity" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="marginRate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="endDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tradeDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fixedInterestRate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="collateralised" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clearingSystem" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TradeReturnRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TradeReturnRequestResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TradeNewResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TradeNewResponseResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TradeRevaluationRequest">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TradeRevaluationRequestResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TradeRevaluationResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TradeRevaluationResponseResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TradeSystemsGet">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TradeSystemsGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TradeSystemsGetResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TradeCounterPartiesGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="system" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TradeCounterPartiesGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TradeCounterPartiesGetResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

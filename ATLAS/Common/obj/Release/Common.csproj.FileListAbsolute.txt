@@ -1,0 +1,17 @@
+C:\ATLAS\Common\bin\Release\StockLoan.Common.dll
+C:\ATLAS\Common\bin\Release\System.Data.dll
+C:\ATLAS\Common\bin\Release\System.Data.xml
+C:\ATLAS\Common\obj\Release\ResolveAssemblyReference.cache
+C:\ATLAS\Common\obj\Release\StockLoan.Common.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Common\bin\Release\StockLoan.Common.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Common\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Common\obj\Release\StockLoan.Common.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Common\bin\Release\StockLoan.Common.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Common\obj\Release\ResolveAssemblyReference.cache
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Common\obj\Release\StockLoan.Common.dll
+U:\_Dev\ATLAS\Common\bin\Release\StockLoan.Common.dll
+U:\_Dev\ATLAS\Common\obj\Release\ResolveAssemblyReference.cache
+U:\_Dev\ATLAS\Common\obj\Release\StockLoan.Common.dll
+C:\_Dev\ATLAS\Common\bin\Release\StockLoan.Common.dll
+C:\_Dev\ATLAS\Common\obj\Release\StockLoan.Common.dll
+C:\_dev\ATLAS\Common\obj\Release\Common.csprojResolveAssemblyReference.cache

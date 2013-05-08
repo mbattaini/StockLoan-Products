@@ -1,0 +1,17 @@
+C:\ATLAS\Loanstar\PUSHDATA\bin\Debug\StockLoan.PushData.dll
+C:\ATLAS\Loanstar\PUSHDATA\bin\Debug\StockLoan.PushData.pdb
+C:\ATLAS\Loanstar\PUSHDATA\bin\Debug\C1.C1Pdf.2.dll
+C:\ATLAS\Loanstar\PUSHDATA\bin\Debug\StockLoan.Common.dll
+C:\ATLAS\Loanstar\PUSHDATA\bin\Debug\StockLoan.Common.pdb
+C:\ATLAS\Loanstar\PUSHDATA\bin\Debug\C1.C1Pdf.2.xml
+C:\ATLAS\Loanstar\PUSHDATA\obj\Debug\ResolveAssemblyReference.cache
+C:\ATLAS\Loanstar\PUSHDATA\obj\Debug\StockLoan.PushData.dll
+C:\ATLAS\Loanstar\PUSHDATA\obj\Debug\StockLoan.PushData.pdb
+C:\ATLAS\Loanstar\PUSHDATA\bin\Release\StockLoan.PushData.dll
+C:\ATLAS\Loanstar\PUSHDATA\bin\Release\StockLoan.PushData.pdb
+C:\ATLAS\Loanstar\PUSHDATA\bin\Release\C1.C1Pdf.2.dll
+C:\ATLAS\Loanstar\PUSHDATA\bin\Release\StockLoan.Common.dll
+C:\ATLAS\Loanstar\PUSHDATA\bin\Release\C1.C1Pdf.2.xml
+C:\ATLAS\Loanstar\PUSHDATA\obj\Release\ResolveAssemblyReference.cache
+C:\ATLAS\Loanstar\PUSHDATA\obj\Release\StockLoan.PushData.dll
+C:\ATLAS\Loanstar\PUSHDATA\obj\Release\StockLoan.PushData.pdb

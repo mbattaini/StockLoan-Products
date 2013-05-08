@@ -1,0 +1,84 @@
+C:\ATLAS\Loanstar\MAINSERVER\bin\Release\StockLoan.MainServer.dll
+C:\ATLAS\Loanstar\MAINSERVER\bin\Release\StockLoan.BackOffice.dll
+C:\ATLAS\Loanstar\MAINSERVER\bin\Release\StockLoan.Common.dll
+C:\ATLAS\Loanstar\MAINSERVER\bin\Release\StockLoan.Main.dll
+C:\ATLAS\Loanstar\MAINSERVER\bin\Release\StockLoan.PushData.dll
+C:\ATLAS\Loanstar\MAINSERVER\bin\Release\C1.C1Pdf.2.dll
+C:\ATLAS\Loanstar\MAINSERVER\bin\Release\StockLoan.PushData.pdb
+C:\ATLAS\Loanstar\MAINSERVER\obj\Release\ResolveAssemblyReference.cache
+C:\ATLAS\Loanstar\MAINSERVER\obj\Release\StockLoan.MainServer.dll
+C:\ATLAS\Loanstar\MAINSERVER\bin\Release\Layouts\contract-summary.xml
+C:\ATLAS\Loanstar\MAINSERVER\bin\Release\Layouts\mark-summary.xml
+C:\ATLAS\Loanstar\MAINSERVER\bin\Release\Layouts\recall-summary.xml
+C:\ATLAS\Loanstar\MAINSERVER\bin\Release\Layouts\return-summary.xml
+C:\ATLAS\Loanstar\MAINSERVER\bin\Release\StockLoan.MainBusiness.dll
+C:\ATLAS\Loanstar\MAINSERVER\bin\Release\StockLoan.MainBusiness.pdb
+C:\ATLAS\Loanstar\MAINSERVER\bin\Release\Layouts\BillingContractsDetails.xml
+C:\ATLAS\Loanstar\MAINSERVER\bin\Release\Layouts\BillingContracts.xml
+C:\ATLAS\Loanstar\MAINSERVER\bin\Release\Layouts\BillingContractsTop.xml
+C:\ATLAS\Loanstar\MAINSERVER\bin\Release\Layouts\MarksReport.xml
+C:\ATLAS\Loanstar\MAINSERVER\bin\Release\C1.C1Report.2.dll
+C:\ATLAS\Loanstar\MAINSERVER\bin\Release\C1.C1Report.2.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\Layouts\BillingContractsDetails.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\Layouts\BillingContracts.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\Layouts\BillingContractsTop.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\Layouts\contract-summary.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\Layouts\mark-summary.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\Layouts\recall-summary.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\Layouts\return-summary.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\Layouts\MarksReport.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\StockLoan.MainServer.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\C1.C1Report.2.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\StockLoan.BackOffice.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\StockLoan.Common.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\StockLoan.Main.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\StockLoan.MainBusiness.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\StockLoan.PushData.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\C1.C1Pdf.2.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\StockLoan.MainBusiness.pdb
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\C1.C1Report.2.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\StockLoan.PushData.pdb
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVER\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVER\obj\Release\StockLoan.MainServer.dll
+U:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\Layouts\BillingContractsDetails.xml
+U:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\Layouts\BillingContracts.xml
+U:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\Layouts\BillingContractsTop.xml
+U:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\Layouts\contract-summary.xml
+U:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\Layouts\mark-summary.xml
+U:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\Layouts\recall-summary.xml
+U:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\Layouts\return-summary.xml
+U:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\Layouts\MarksReport.xml
+U:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\StockLoan.MainServer.dll
+U:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\C1.C1Report.2.dll
+U:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\StockLoan.BackOffice.dll
+U:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\StockLoan.Common.dll
+U:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\StockLoan.Main.dll
+U:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\StockLoan.MainBusiness.dll
+U:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\StockLoan.PushData.dll
+U:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\C1.C1Pdf.2.dll
+U:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\StockLoan.MainBusiness.pdb
+U:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\StockLoan.PushData.pdb
+U:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\C1.C1Report.2.xml
+U:\_Dev\ATLAS\Loanstar\MAINSERVER\obj\Release\ResolveAssemblyReference.cache
+U:\_Dev\ATLAS\Loanstar\MAINSERVER\obj\Release\StockLoan.MainServer.dll
+C:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\Layouts\BillingContractsDetails.xml
+C:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\Layouts\BillingContracts.xml
+C:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\Layouts\BillingContractsTop.xml
+C:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\Layouts\contract-summary.xml
+C:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\Layouts\mark-summary.xml
+C:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\Layouts\recall-summary.xml
+C:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\Layouts\return-summary.xml
+C:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\Layouts\MarksReport.xml
+C:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\StockLoan.MainServer.dll
+C:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\C1.C1Report.2.dll
+C:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\StockLoan.Common.dll
+C:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\StockLoan.Main.dll
+C:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\StockLoan.MainBusiness.dll
+C:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\System.Windows.Forms.DataVisualization.dll
+C:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\StockLoan.MainBusiness.pdb
+C:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\C1.C1Report.2.xml
+C:\_Dev\ATLAS\Loanstar\MAINSERVER\obj\Release\ResolveAssemblyReference.cache
+C:\_Dev\ATLAS\Loanstar\MAINSERVER\obj\Release\StockLoan.MainServer.dll
+C:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\StockLoan.MainServer.dll.config
+C:\_Dev\ATLAS\Loanstar\MAINSERVER\bin\Release\StockLoan.MainServer.XmlSerializers.dll
+C:\_Dev\ATLAS\Loanstar\MAINSERVER\obj\Release\StockLoan.MainServer.XmlSerializers.dll

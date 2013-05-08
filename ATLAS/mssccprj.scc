@@ -1,0 +1,13 @@
+SCC = This is a Source Code Control file
+
+[StockLoanWebServices.sln]
+SCC_Aux_Path = "\\rspen001\SourceSafe\PensonSource"
+SCC_Project_Name = "$/SourceCode/C#/0 Development/Atlas/StockLoanWebServices", GVRPAAAA
+
+[GOlden.csproj]
+SCC_Aux_Path = "\\rspen001\SourceSafe\PensonSource"
+SCC_Project_Name = "$/SourceCode/C#/0 Development/Atlas/Golden", BSKNAAAA
+
+[Golden.sln]
+SCC_Aux_Path = "\\rspen001\SourceSafe\PensonSource"
+SCC_Project_Name = "$/SourceCode/C#/0 Development/Atlas/Golden", BSKNAAAA

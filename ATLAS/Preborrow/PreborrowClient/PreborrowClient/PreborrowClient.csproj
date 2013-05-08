@@ -1,0 +1,140 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0110CA01-51A4-4E79-A1D8-889C2D5C1D37}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PreborrowClient</RootNamespace>
+    <AssemblyName>PreborrowClient</AssemblyName>
+    <ApplicationIcon>3dsmaxSZ.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.Win.C1Command.2, Version=2.0.20082.19408, Culture=neutral, PublicKeyToken=e808566f358766d8, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1Input.2, Version=2.0.20082.33212, Culture=neutral, PublicKeyToken=7e7ff60f0c214f9a, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1List.2, Version=2.1.20082.139, Culture=neutral, PublicKeyToken=6b24f8f981dbd7bc, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1Ribbon.2, Version=2.0.20082.94, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1TrueDBGrid.2, Version=2.0.20082.61142, Culture=neutral, PublicKeyToken=75ae3fb0e2b1e0da, processorArchitecture=MSIL" />
+    <Reference Include="StockLoan.Common, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Common\bin\Debug\StockLoan.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="StockLoan.PreBorrow, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PREBORROW\bin\Debug\StockLoan.PreBorrow.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PreBorrowContactsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PreBorrowContactsForm.Designer.cs">
+      <DependentUpon>PreBorrowContactsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PreBorrowInputFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PreBorrowInputFrom.Designer.cs">
+      <DependentUpon>PreBorrowInputFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PreBorrowMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PreBorrowMainForm.Designer.cs">
+      <DependentUpon>PreBorrowMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PreBorrowMarksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PreBorrowMarksForm.Designer.cs">
+      <DependentUpon>PreBorrowMarksForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PreBorrowSummaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PreBorrowSummaryForm.Designer.cs">
+      <DependentUpon>PreBorrowSummaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PreBorrowContactsForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PreBorrowContactsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PreBorrowInputFrom.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PreBorrowInputFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PreBorrowMainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PreBorrowMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PreBorrowMarksForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PreBorrowMarksForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PreBorrowSummaryForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PreBorrowSummaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="3dsmaxSZ.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

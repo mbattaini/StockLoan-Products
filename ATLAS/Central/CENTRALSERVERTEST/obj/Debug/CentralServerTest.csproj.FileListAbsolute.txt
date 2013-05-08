@@ -1,0 +1,3 @@
+C:\_dev\ATLAS\Central\CENTRALSERVERTEST\bin\Debug\StockLoan.CentralServerTest.exe.config
+C:\_dev\ATLAS\Central\CENTRALSERVERTEST\obj\Debug\StockLoan.CentralServerTest.exe
+C:\_dev\ATLAS\Central\CENTRALSERVERTEST\obj\Debug\StockLoan.CentralServerTest.pdb

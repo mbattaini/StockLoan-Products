@@ -1,0 +1,14 @@
+C:\_dev\ATLAS\ComplianceDataService\bin\Debug\StockLoanComplianceDataService.exe.config
+C:\_dev\ATLAS\ComplianceDataService\bin\Debug\StockLoanComplianceDataService.exe
+C:\_dev\ATLAS\ComplianceDataService\bin\Debug\StockLoanComplianceDataService.pdb
+C:\_dev\ATLAS\ComplianceDataService\bin\Debug\StockLoan.Common.dll
+C:\_dev\ATLAS\ComplianceDataService\bin\Debug\StockLoan.ComplianceData.dll
+C:\_dev\ATLAS\ComplianceDataService\bin\Debug\StockLoan.Common.pdb
+C:\_dev\ATLAS\ComplianceDataService\bin\Debug\StockLoan.ComplianceData.pdb
+C:\_dev\ATLAS\ComplianceDataService\obj\Debug\ResolveAssemblyReference.cache
+C:\_dev\ATLAS\ComplianceDataService\obj\Debug\Anetics.Courier.ProjectInstaller.resources
+C:\_dev\ATLAS\ComplianceDataService\obj\Debug\StockLoan.ComplianceData.Service.resources
+C:\_dev\ATLAS\ComplianceDataService\obj\Debug\ResGen.read.1.tlog
+C:\_dev\ATLAS\ComplianceDataService\obj\Debug\ResGen.write.1.tlog
+C:\_dev\ATLAS\ComplianceDataService\obj\Debug\StockLoanComplianceDataService.exe
+C:\_dev\ATLAS\ComplianceDataService\obj\Debug\StockLoanComplianceDataService.pdb

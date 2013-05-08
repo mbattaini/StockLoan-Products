@@ -1,0 +1,31 @@
+\\penson.com\shares\users\mbattaini\visual studio 2010\Projects\DashBoardWebService\DashBoardWebService\bin\DashBoardWebService.dll
+\\penson.com\shares\users\mbattaini\visual studio 2010\Projects\DashBoardWebService\DashBoardWebService\bin\DashBoardWebService.pdb
+\\penson.com\shares\users\mbattaini\visual studio 2010\Projects\DashBoardWebService\DashBoardWebService\bin\StockLoan.Common.dll
+\\penson.com\shares\users\mbattaini\visual studio 2010\Projects\DashBoardWebService\DashBoardWebService\obj\Debug\ResolveAssemblyReference.cache
+\\penson.com\shares\users\mbattaini\visual studio 2010\Projects\DashBoardWebService\DashBoardWebService\obj\Debug\DashBoardWebService.dll
+\\penson.com\shares\users\mbattaini\visual studio 2010\Projects\DashBoardWebService\DashBoardWebService\obj\Debug\DashBoardWebService.pdb
+\\penson.com\shares\Users\MBattaini\Visual Studio 2010\Projects\DashBoardWebService\DashBoardWebService\bin\System.Data.dll
+C:\temp\DashBoardWebService\DashBoardWebService\bin\DashBoardWebService.dll
+C:\temp\DashBoardWebService\DashBoardWebService\bin\DashBoardWebService.pdb
+C:\temp\DashBoardWebService\DashBoardWebService\bin\Anetics.Filer.dll
+C:\temp\DashBoardWebService\DashBoardWebService\bin\DashBusiness.dll
+C:\temp\DashBoardWebService\DashBoardWebService\bin\StockLoan.Common.dll
+C:\temp\DashBoardWebService\DashBoardWebService\bin\System.Data.dll
+C:\temp\DashBoardWebService\DashBoardWebService\bin\Rebex.Net.Ftp.dll
+C:\temp\DashBoardWebService\DashBoardWebService\bin\Rebex.Net.ProxySocket.dll
+C:\temp\DashBoardWebService\DashBoardWebService\bin\StockLoan.Common.pdb
+C:\temp\DashBoardWebService\DashBoardWebService\bin\DashBusiness.pdb
+C:\temp\DashBoardWebService\DashBoardWebService\bin\Anetics.Filer.pdb
+C:\temp\DashBoardWebService\DashBoardWebService\obj\Debug\ResolveAssemblyReference.cache
+C:\temp\DashBoardWebService\DashBoardWebService\obj\Debug\DashBoardWebService.dll
+C:\temp\DashBoardWebService\DashBoardWebService\obj\Debug\DashBoardWebService.pdb
+C:\_dev\DashBoardWebService2.0\DashBoardWebService\bin\DashBoardWebService.dll
+C:\_dev\DashBoardWebService2.0\DashBoardWebService\bin\DashBoardWebService.pdb
+C:\_dev\DashBoardWebService2.0\DashBoardWebService\bin\DashBusiness.dll
+C:\_dev\DashBoardWebService2.0\DashBoardWebService\bin\StockLoan.Common.dll
+C:\_dev\DashBoardWebService2.0\DashBoardWebService\bin\System.Data.dll
+C:\_dev\DashBoardWebService2.0\DashBoardWebService\bin\StockLoan.Common.pdb
+C:\_dev\DashBoardWebService2.0\DashBoardWebService\bin\DashBusiness.pdb
+C:\_dev\DashBoardWebService2.0\DashBoardWebService\obj\Debug\DashBoardWebService.csprojResolveAssemblyReference.cache
+C:\_dev\DashBoardWebService2.0\DashBoardWebService\obj\Debug\DashBoardWebService.dll
+C:\_dev\DashBoardWebService2.0\DashBoardWebService\obj\Debug\DashBoardWebService.pdb

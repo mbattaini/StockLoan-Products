@@ -1,0 +1,11 @@
+C:\_dev\ATLAS\LoanstarWorldWide\CNSProjection0234\CNSProjection0234\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\_dev\ATLAS\LoanstarWorldWide\CNSProjection0234\CNSProjection0234\obj\x86\Debug\CNSProjection0234.Form1.resources
+C:\_dev\ATLAS\LoanstarWorldWide\CNSProjection0234\CNSProjection0234\obj\x86\Debug\CNSProjection0234.Properties.Resources.resources
+C:\_dev\ATLAS\LoanstarWorldWide\CNSProjection0234\CNSProjection0234\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\_dev\ATLAS\LoanstarWorldWide\CNSProjection0234\CNSProjection0234\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\_dev\ATLAS\LoanstarWorldWide\CNSProjection0234\CNSProjection0234\obj\x86\Debug\CNSProjection0234.exe.licenses
+C:\_dev\ATLAS\LoanstarWorldWide\CNSProjection0234\CNSProjection0234\bin\Debug\CNSProjection0234.exe
+C:\_dev\ATLAS\LoanstarWorldWide\CNSProjection0234\CNSProjection0234\bin\Debug\CNSProjection0234.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\CNSProjection0234\CNSProjection0234\bin\Debug\C1.Win.C1TrueDBGrid.4.xml
+C:\_dev\ATLAS\LoanstarWorldWide\CNSProjection0234\CNSProjection0234\obj\x86\Debug\CNSProjection0234.exe
+C:\_dev\ATLAS\LoanstarWorldWide\CNSProjection0234\CNSProjection0234\obj\x86\Debug\CNSProjection0234.pdb

@@ -1,0 +1,9 @@
+C:\_dev\ATLAS\LoanstarWorldWide\Bpsa_DataLoad\Bpsa_DataLoad\bin\Debug\Bpsa_DataLoad.exe
+C:\_dev\ATLAS\LoanstarWorldWide\Bpsa_DataLoad\Bpsa_DataLoad\bin\Debug\Bpsa_DataLoad.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\Bpsa_DataLoad\Bpsa_DataLoad\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\_dev\ATLAS\LoanstarWorldWide\Bpsa_DataLoad\Bpsa_DataLoad\obj\x86\Debug\Bpsa_DataLoad.Form1.resources
+C:\_dev\ATLAS\LoanstarWorldWide\Bpsa_DataLoad\Bpsa_DataLoad\obj\x86\Debug\Bpsa_DataLoad.Properties.Resources.resources
+C:\_dev\ATLAS\LoanstarWorldWide\Bpsa_DataLoad\Bpsa_DataLoad\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\_dev\ATLAS\LoanstarWorldWide\Bpsa_DataLoad\Bpsa_DataLoad\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\_dev\ATLAS\LoanstarWorldWide\Bpsa_DataLoad\Bpsa_DataLoad\obj\x86\Debug\Bpsa_DataLoad.exe
+C:\_dev\ATLAS\LoanstarWorldWide\Bpsa_DataLoad\Bpsa_DataLoad\obj\x86\Debug\Bpsa_DataLoad.pdb

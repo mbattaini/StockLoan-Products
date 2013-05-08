@@ -1,0 +1,14 @@
+bin\Debug\StockLoan.LocateService.exe
+bin\Debug\StockLoan.LocateService.pdb
+bin\Debug\StockLoan.LocateServer.dll
+bin\Debug\StockLoan.Common.dll
+bin\Debug\StockLoan.Locates.dll
+bin\Debug\StockLoan.Common.pdb
+bin\Debug\StockLoan.LocateServer.pdb
+bin\Debug\StockLoan.Locates.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Anetics.Locates.ProjectInstaller.resources
+obj\Debug\StockLoan.Locates.Service.resources
+obj\Debug\LocateService.csproj.GenerateResource.Cache
+obj\Debug\StockLoan.LocateService.exe
+obj\Debug\StockLoan.LocateService.pdb

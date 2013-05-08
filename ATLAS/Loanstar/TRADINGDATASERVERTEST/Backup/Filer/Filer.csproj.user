@@ -1,0 +1,48 @@
+<VisualStudioProject>
+    <CSHARP LastOpenVersion = "7.10.3077" >
+        <Build>
+            <Settings ReferencePath = "C:\Projects\Current\Filer\;C:\Anetics\Projects1.2\Filer\;C:\_DEV\Sendero\SENDERO.1.2.1\Filer\;\\Rspen001\develop\CHuff\Development\Sendero1.2\Filer\;C:\Sendero1.2\Filer\;C:\Sendero\C++\0 Development\Sendero1.2\Filer\;C:\SENDERO1.2.DEVELOPMENT\Email\bin\Debug\;C:\SENDERO1.2.DEVELOPMENT\Filer\" >
+                <Config
+                    Name = "Debug"
+                    EnableASPDebugging = "false"
+                    EnableASPXDebugging = "false"
+                    EnableUnmanagedDebugging = "false"
+                    EnableSQLServerDebugging = "false"
+                    RemoteDebugEnabled = "false"
+                    RemoteDebugMachine = ""
+                    StartAction = "Project"
+                    StartArguments = ""
+                    StartPage = ""
+                    StartProgram = ""
+                    StartURL = ""
+                    StartWorkingDirectory = ""
+                    StartWithIE = "false"
+                />
+                <Config
+                    Name = "Release"
+                    EnableASPDebugging = "false"
+                    EnableASPXDebugging = "false"
+                    EnableUnmanagedDebugging = "false"
+                    EnableSQLServerDebugging = "false"
+                    RemoteDebugEnabled = "false"
+                    RemoteDebugMachine = ""
+                    StartAction = "Project"
+                    StartArguments = ""
+                    StartPage = ""
+                    StartProgram = ""
+                    StartURL = ""
+                    StartWorkingDirectory = ""
+                    StartWithIE = "false"
+                />
+            </Settings>
+        </Build>
+        <OtherProjectSettings
+            CopyProjectDestinationFolder = ""
+            CopyProjectUncPath = ""
+            CopyProjectOption = "0"
+            ProjectView = "ShowAllFiles"
+            ProjectTrust = "0"
+        />
+    </CSHARP>
+</VisualStudioProject>
+

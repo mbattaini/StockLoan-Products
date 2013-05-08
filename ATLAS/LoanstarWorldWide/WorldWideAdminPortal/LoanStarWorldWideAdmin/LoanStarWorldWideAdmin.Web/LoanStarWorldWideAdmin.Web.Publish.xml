@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="\\DALGSLDev01\C$\StockLoan\WorldwideServices\StockLoanWorldWideAdminPortal\" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/LoanStarWorldWideAdmin.Web.pdb" publishTime="06/27/2011 13:51:19" />
+    <file relUrl="bin/LoanStarWorldWideAdmin.Web.dll" publishTime="06/27/2011 13:51:19" />
+    <file relUrl="LoanStarWorldWideAdminTestPage.aspx" publishTime="06/22/2011 07:33:15" />
+    <file relUrl="Web.config" publishTime="06/27/2011 13:51:53" />
+    <file relUrl="Silverlight.js" publishTime="06/22/2011 07:33:15" />
+    <file relUrl="LoanStarWorldWideAdminTestPage.html" publishTime="06/22/2011 07:33:15" />
+    <file relUrl="ClientBin/LoanStarWorldWideAdmin.xap" publishTime="06/27/2011 13:51:23" />
+  </publishProfile>
+</publishData>

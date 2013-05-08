@@ -1,0 +1,1041 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>C1.Win.C1Sizer.2</name>
+  </assembly>
+  <members>
+    <member name="T:C1.Win.C1Sizer.Border">
+      <summary>
+            Class that implements rounded borders and exposes properties
+            that control the appearance of the border.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Border.Corners">
+      <summary>
+            Gets or sets the radii of the control corners.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Border.Thickness">
+      <summary>
+            Gets or sets the thickness of the border around the control.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Border.Color">
+      <summary>
+            Gets or sets the <see cref="P:C1.Win.C1Sizer.Border.Color" /> used to draw the border around the control.
+            </summary>
+    </member>
+    <member name="T:C1.Win.C1Sizer.C1SizerEventHandler">
+      <summary>
+            Represents the methods that will handle the <see cref="E:C1.Win.C1Sizer.C1Sizer.SplitterMoving" /> and 
+            <see cref="E:C1.Win.C1Sizer.C1Sizer.SplitterMoved" /> events of a <see cref="T:C1.Win.C1Sizer.C1Sizer" /> control.
+            </summary>
+    </member>
+    <member name="T:C1.Win.C1Sizer.C1SizerEventArgs">
+      <summary>
+            Provides data for the <see cref="E:C1.Win.C1Sizer.C1Sizer.SplitterMoving" /> and 
+            <see cref="E:C1.Win.C1Sizer.C1Sizer.SplitterMoved" /> events of a <see cref="T:C1.Win.C1Sizer.C1Sizer" /> control.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.C1SizerEventArgs.X">
+      <summary>
+            Gets the X coordinate of the mouse when the event is fired.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.C1SizerEventArgs.Y">
+      <summary>
+            Gets the X coordinate of the mouse when the event is fired.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.C1SizerEventArgs.Band">
+      <summary>
+            Gets a reference to the band (row or column) that caused the event.
+            </summary>
+    </member>
+    <member name="T:C1.Win.C1Sizer.AutoSizeEnum">
+      <summary>
+            Represents the possible sizing modes.
+            </summary>
+    </member>
+    <member name="F:C1.Win.C1Sizer.AutoSizeEnum.None">
+      <summary>
+            No resizing.
+            </summary>
+    </member>
+    <member name="F:C1.Win.C1Sizer.AutoSizeEnum.Grid">
+      <summary>
+            Size child controls to snap to the sizer's <see cref="F:C1.Win.C1Sizer.AutoSizeEnum.Grid" />.
+            </summary>
+    </member>
+    <member name="T:C1.Win.C1Sizer.C1Sizer">
+      <summary>
+             A container control with a powerful grid layout manager that extends the basic 
+             layout capabilities provided by the .NET framework (Dock and Anchor properties).
+             </summary>
+      <remarks>
+        <para>The C1Sizer control allows you to define a grid made up of bands, then add 
+             controls that snap to these bands. When the C1Sizer control is resized, the bands 
+             are automatically recalculated, and contained controls move automatically to their new 
+             positions.</para>
+        <para>You can set up bands at design time and configure them to act as splitters or to 
+             keep their size constant when the control is resized.</para>
+        <para>You will rarely have to write any code in order to use the C1Sizer component. 
+             In most applications, you will follow these steps:</para>
+        <para>1) Add one or more C1Sizer controls to the form, and set their Dock property to fill the form,</para>
+        <para>2) Use the Grid Editor to set up a grid layout at design time, and add controls 
+             which will snap to the grid.</para>
+        <para>You can use the Grid Editor to set the number and dimension of the grid's bands 
+             (rows and columns), and also to specify which bands should act as splitters, and which 
+             should have fixed dimensions.</para>
+      </remarks>
+    </member>
+    <member name="M:C1.Win.C1Sizer.C1Sizer.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.C1Sizer.C1Sizer" /> control.
+            </summary>
+    </member>
+    <member name="M:C1.Win.C1Sizer.C1Sizer.SuspendLayout">
+      <summary>
+            Temporarily suspends the layout logic for the control.
+            </summary>
+    </member>
+    <member name="M:C1.Win.C1Sizer.C1Sizer.ResumeLayout">
+      <summary>
+            Resumes normal layout logic.
+            </summary>
+    </member>
+    <member name="M:C1.Win.C1Sizer.C1Sizer.ResumeLayout(System.Boolean)">
+      <summary>
+            Resumes normal layout logic. Optionally forces an immediate layout of pending layout requests.
+            </summary>
+      <param name="performLayout">True to execute pending layout requests; otherwise, False.</param>
+    </member>
+    <member name="M:C1.Win.C1Sizer.C1Sizer.AddControl(System.Windows.Forms.Control,System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+            Adds a child control to the <see cref="T:C1.Win.C1Sizer.C1Sizer" /> and positions it at a given cell on the grid.
+            </summary>
+      <param name="ctl">Child <see cref="T:System.Windows.Forms.Control" /> to add.</param>
+      <param name="row">Index of the row where the child control will be positioned.</param>
+      <param name="col">Index of the column where the child control will be positioned.</param>
+      <param name="rowSpan">Number of rows the child control should span.</param>
+      <param name="colSpan">Number of columns the child control should span.</param>
+    </member>
+    <member name="M:C1.Win.C1Sizer.C1Sizer.AddControl(System.Windows.Forms.Control,System.Int32,System.Int32)">
+      <summary>
+            Adds a child control to the <see cref="T:C1.Win.C1Sizer.C1Sizer" /> and positions it at a given cell on the grid.
+            </summary>
+      <param name="ctl">Child <see cref="T:System.Windows.Forms.Control" /> to add.</param>
+      <param name="row">Index of the row where the child control will be positioned.</param>
+      <param name="col">Index of the column where the child control will be positioned.</param>
+    </member>
+    <member name="M:C1.Win.C1Sizer.C1Sizer.GetCellBounds(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+            Gets the bounds of a cell range within the grid.
+            </summary>
+      <param name="row">Index of the first row in the range.</param>
+      <param name="col">Index of the first column in the range.</param>
+      <param name="rowSpan">Number or rows in the range.</param>
+      <param name="colSpan">Number or columns in the range.</param>
+      <returns>A <see cref="T:System.Drawing.Rectangle" /> that contains the bounds of the cell range.</returns>
+    </member>
+    <member name="M:C1.Win.C1Sizer.C1Sizer.GetCellBounds(System.Int32,System.Int32)">
+      <summary>
+            Gets the bounds of a cell within the grid.
+            </summary>
+      <param name="row">Index of the row that contains the cell.</param>
+      <param name="col">Index of the column that contains the cell.</param>
+      <returns>A <see cref="T:System.Drawing.Rectangle" /> that contains the bounds of the cell.</returns>
+    </member>
+    <member name="M:C1.Win.C1Sizer.C1Sizer.GetCellAtPoint(System.Drawing.Point)">
+      <summary>
+            Gets the cell at a given point on the control's client area.
+            </summary>
+      <param name="pt">
+        <see cref="T:System.Drawing.Point" /> that specifies the cell position.</param>
+      <returns>A <see cref="T:System.Drawing.Point" /> where the X and Y properties correspond to the column row indices of the cell at the given point.</returns>
+    </member>
+    <member name="M:C1.Win.C1Sizer.C1Sizer.GetCellAtPoint(System.Int32,System.Int32)">
+      <summary>
+            Gets the cell at a given point on the control's client area.
+            </summary>
+      <param name="x">X coordinate of the point.</param>
+      <param name="y">Y coordinate of the point.</param>
+      <returns>A <see cref="T:System.Drawing.Point" /> where the X and Y properties correspond to the column row indices of the cell at the given point.</returns>
+    </member>
+    <member name="M:C1.Win.C1Sizer.C1Sizer.GetControlAtCell(System.Int32,System.Int32)">
+      <summary>
+            Gets the first control at a given grid cell.
+            </summary>
+      <param name="row">Index of the row that contains the cell.</param>
+      <param name="col">Index of the column that contains the cell.</param>
+      <returns>The first control at the cell, or null if the cell is empty.</returns>
+    </member>
+    <member name="M:C1.Win.C1Sizer.C1Sizer.OnParentChanged(System.EventArgs)">
+      <summary>
+            Raises the <see cref="M:System.Windows.Forms.Control.OnParentChanged(System.EventArgs)" /> event.
+            </summary>
+      <param name="e">An <see cref="T:System.EventArgs" /> that contains the event data.</param>
+    </member>
+    <member name="M:C1.Win.C1Sizer.C1Sizer.OnPaint(System.Windows.Forms.PaintEventArgs)">
+      <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.Paint" /> event.
+            </summary>
+      <param name="e">A <see cref="T:System.Windows.Forms.PaintEventArgs" /> that contains the event data.</param>
+    </member>
+    <member name="M:C1.Win.C1Sizer.C1Sizer.OnSizeChanged(System.EventArgs)">
+      <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.SizeChanged" /> event.
+            </summary>
+      <param name="e">An <see cref="T:System.EventArgs" /> that contains the event data.</param>
+    </member>
+    <member name="M:C1.Win.C1Sizer.C1Sizer.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+      <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.MouseDown" /> event.
+            </summary>
+      <param name="e">A <see cref="T:System.Windows.Forms.MouseEventArgs" /> that contains the event data.</param>
+    </member>
+    <member name="M:C1.Win.C1Sizer.C1Sizer.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+      <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.MouseUp" /> event.
+            </summary>
+      <param name="e">A <see cref="T:System.Windows.Forms.MouseEventArgs" /> that contains the event data.</param>
+    </member>
+    <member name="M:C1.Win.C1Sizer.C1Sizer.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+      <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.MouseMove" /> event.
+            </summary>
+      <param name="e">A <see cref="T:System.Windows.Forms.MouseEventArgs" /> that contains the event data.</param>
+    </member>
+    <member name="M:C1.Win.C1Sizer.C1Sizer.OnMouseLeave(System.EventArgs)">
+      <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.MouseLeave" /> event.
+            </summary>
+      <param name="e">An <see cref="T:System.EventArgs" /> that contains the event data.</param>
+    </member>
+    <member name="M:C1.Win.C1Sizer.C1Sizer.OnControlAdded(System.Windows.Forms.ControlEventArgs)">
+      <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.ControlAdded" /> event.
+            </summary>
+      <param name="e">A <see cref="T:System.Windows.Forms.ControlEventArgs" /> that contains the event data.</param>
+    </member>
+    <member name="M:C1.Win.C1Sizer.C1Sizer.OnControlRemoved(System.Windows.Forms.ControlEventArgs)">
+      <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.ControlRemoved" /> event.
+            </summary>
+      <param name="e">A <see cref="T:System.Windows.Forms.ControlEventArgs" /> that contains the event data.</param>
+    </member>
+    <member name="M:C1.Win.C1Sizer.C1Sizer.OnSplitterMoving(C1.Win.C1Sizer.C1SizerEventArgs)">
+      <summary>
+            Raises the <see cref="M:C1.Win.C1Sizer.C1Sizer.OnSplitterMoving(C1.Win.C1Sizer.C1SizerEventArgs)" /> event.
+            </summary>
+      <param name="e">A <see cref="T:C1.Win.C1Sizer.C1SizerEventArgs" /> that contains the event data.</param>
+    </member>
+    <member name="M:C1.Win.C1Sizer.C1Sizer.OnSplitterMoved(C1.Win.C1Sizer.C1SizerEventArgs)">
+      <summary>
+            Raises the <see cref="M:C1.Win.C1Sizer.C1Sizer.OnSplitterMoved(C1.Win.C1Sizer.C1SizerEventArgs)" /> event.
+            </summary>
+      <param name="e">A <see cref="T:C1.Win.C1Sizer.C1SizerEventArgs" /> that contains the event data.</param>
+    </member>
+    <member name="M:C1.Win.C1Sizer.C1Sizer.OnPaddingChanged(System.EventArgs)">
+      <summary>
+            Overridden to update the control layout when the padding changes.
+            </summary>
+      <param name="e">
+        <see cref="T:System.EventArgs" /> that contains the event data.</param>
+    </member>
+    <member name="E:C1.Win.C1Sizer.C1Sizer.SplitterMoving">
+      <summary>
+            Fired when the user clicks a splitter and starts resizing a band (row or column) on the layout grid.
+            </summary>
+    </member>
+    <member name="E:C1.Win.C1Sizer.C1Sizer.SplitterMoved">
+      <summary>
+            Fired when the user finishes resizing a band (row or column) by dragging a splitter bar.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.C1Sizer.Grid">
+      <summary>
+            Returns a reference to a <see cref="T:C1.Win.C1Sizer.Grid" /> object that contains 
+            the layout information for the <see cref="T:C1.Win.C1Sizer.C1Sizer" /> control.
+            </summary>
+      <remarks>
+        <para>The Grid object contains collections of bands (<see cref="T:C1.Win.C1Sizer.Row" /> and 
+            <see cref="T:C1.Win.C1Sizer.Column" /> objects) that determine how the control 
+            adjusts its internal layout when it is resized.</para>
+        <para>All controls contained in a C1Sizer control are attached to specific bands in 
+            the Grid object.</para>
+      </remarks>
+    </member>
+    <member name="P:C1.Win.C1Sizer.C1Sizer.SplitterWidth">
+      <summary>
+            Gets or sets the width of the area between grid bands, in pixels.
+            </summary>
+      <remarks>
+            The splitter width determines the area between adjacent controls contained 
+            in the <see cref="T:C1.Win.C1Sizer.C1Sizer" /> control.
+            </remarks>
+    </member>
+    <member name="P:C1.Win.C1Sizer.C1Sizer.AutoSizeMode">
+      <summary>
+            Gets or sets the layout mode for the <see cref="T:C1.Win.C1Sizer.C1Sizer" /> control.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.C1Sizer.Gradient">
+      <summary>
+            Gets the <see cref="P:C1.Win.C1Sizer.C1Sizer.Gradient" /> object that controls gradient color, mode, blend, and gamma correction.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.C1Sizer.Border">
+      <summary>
+            Gets the <see cref="P:C1.Win.C1Sizer.C1Sizer.Border" /> object that controls border thickness, color, and corner radii.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.C1Sizer.BackColor">
+      <summary>
+            Gets or sets the <see cref="T:System.Drawing.Color" /> used to paint the background.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.C1Sizer.Padding">
+      <summary>
+            Gets or sets the padding between the control border and its content.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.C1Sizer.Cursor">
+      <summary>
+            Gets or sets the cursor that is displayed when the mouse pointer is over the control.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.C1Sizer.Image">
+      <summary>
+            Gets or sets the image displayed in the control.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.C1Sizer.ImageAlignment">
+      <summary>
+            Gets or sets the alignment used to render the image.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.C1Sizer.ImageScaling">
+      <summary>
+            Gets or sets the scaling used to render the image.
+            </summary>
+    </member>
+    <member name="T:C1.Win.C1Sizer.C1SizerLightEventHandler">
+      <summary>
+            Represents the method that will handle the <see cref="E:C1.Win.C1Sizer.C1SizerLight.ResizingFont" /> 
+            and <see cref="E:C1.Win.C1Sizer.C1SizerLight.ResizingControl" /> events of a <see cref="T:C1.Win.C1Sizer.C1SizerLight" />
+            component.
+            </summary>
+    </member>
+    <member name="T:C1.Win.C1Sizer.C1SizerLightEventArgs">
+      <summary>
+            Provides data for the <see cref="E:C1.Win.C1Sizer.C1SizerLight.ResizingFont" /> 
+            event of a <see cref="T:C1.Win.C1Sizer.C1SizerLight" /> component.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.C1SizerLightEventArgs.Control">
+      <summary>
+            Gets a reference to the control whose font is about to be resized by the 
+            <see cref="T:C1.Win.C1Sizer.C1SizerLight" /> component.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.C1SizerLightEventArgs.Cancel">
+      <summary>
+            Determines whether the font for this control should be resized.
+            </summary>
+    </member>
+    <member name="T:C1.Win.C1Sizer.C1SizerLight">
+      <summary>
+            Component that resizes all controls on a form when the form is resized.
+            </summary>
+      <remarks>
+        <para>When you add a <see cref="T:C1.Win.C1Sizer.C1SizerLight" /> component to a form, it keeps 
+            track of the forms' size and position. When the form is resized, <see cref="T:C1.Win.C1Sizer.C1SizerLight" /> 
+            resizes all contained controls proportionally, so the form retains its appearance at any 
+            resolution.</para>
+        <para>
+          <see cref="T:C1.Win.C1Sizer.C1SizerLight" /> can also resize the fonts on all or some of the contained controls.</para>
+        <para>You will rarely have to write any code in order to use the <see cref="T:C1.Win.C1Sizer.C1SizerLight" /> component. 
+            In most applications, you will simply design forms as usual, then add a <see cref="T:C1.Win.C1Sizer.C1SizerLight" /> 
+            component to the form and let it resize all controls on the form automatically, when the form is resized.</para>
+        <para>In some cases, you may want to control how fonts are resized when the form dimensions change. 
+            You can prevent all font resizing by setting the <see cref="P:C1.Win.C1Sizer.C1SizerLight.ResizeFonts" /> property to false. Or you 
+            can keep the font size constant for certain controls by handling the <see cref="E:C1.Win.C1Sizer.C1SizerLight.ResizingFont" /> event.</para>
+        <para>Note that the <see cref="T:C1.Win.C1Sizer.C1SizerLight" /> component does not work at design time. This allows you 
+            to resize your form without affecting the layout of the controls on the form.</para>
+      </remarks>
+    </member>
+    <member name="M:C1.Win.C1Sizer.C1SizerLight.#ctor(System.ComponentModel.IContainer)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.Win.C1Sizer.C1SizerLight" /> component in a given <see cref="T:System.ComponentModel.IContainer" />.
+            </summary>
+      <param name="container">The IContainer that contains the component.</param>
+    </member>
+    <member name="M:C1.Win.C1Sizer.C1SizerLight.#ctor">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.Win.C1Sizer.C1SizerLight" />.
+            </summary>
+    </member>
+    <member name="M:C1.Win.C1Sizer.C1SizerLight.Dispose(System.Boolean)">
+      <summary>
+            Releases the resources used by the <see cref="T:C1.Win.C1Sizer.C1SizerLight" />.
+            </summary>
+      <param name="disposing">True to release both managed and unmanaged resources; 
+            False to release only unmanaged resources.</param>
+    </member>
+    <member name="M:C1.Win.C1Sizer.C1SizerLight.GetAutoResize(System.Windows.Forms.Form)">
+      <summary>
+            For internal use.
+            </summary>
+    </member>
+    <member name="M:C1.Win.C1Sizer.C1SizerLight.SetAutoResize(System.Windows.Forms.Form,System.Boolean)">
+      <summary>
+            For internal use.
+            </summary>
+    </member>
+    <member name="M:C1.Win.C1Sizer.C1SizerLight.OnResizingFont(C1.Win.C1Sizer.C1SizerLightEventArgs)">
+      <summary>
+            Raises the <see cref="E:C1.Win.C1Sizer.C1SizerLight.ResizingFont" /> event.
+            </summary>
+      <param name="e">A <see cref="T:C1.Win.C1Sizer.C1SizerLightEventArgs" /> that contains the event data.</param>
+    </member>
+    <member name="M:C1.Win.C1Sizer.C1SizerLight.OnResizingControl(C1.Win.C1Sizer.C1SizerLightEventArgs)">
+      <summary>
+            Raises the <see cref="E:C1.Win.C1Sizer.C1SizerLight.ResizingControl" /> event.
+            </summary>
+      <param name="e">A <see cref="T:C1.Win.C1Sizer.C1SizerLightEventArgs" /> that contains the event data.</param>
+    </member>
+    <member name="E:C1.Win.C1Sizer.C1SizerLight.ResizingFont">
+      <summary>
+            Fires before the <see cref="T:C1.Win.C1Sizer.C1SizerLight" /> resizes the font in a control in response to the form being resized.
+            </summary>
+      <remarks>
+        <para>By default, <see cref="T:C1.Win.C1Sizer.C1SizerLight" /> will resize all child controls on a form and will also 
+            update their fonts when the form is resized.</para>
+        <para>In some cases, you may want to prevent the <see cref="T:C1.Win.C1Sizer.C1SizerLight" /> 
+            from resizing the font for certain controls on the form. For example, scrollable controls 
+            often don't need font resizing. When their dimensions change, the user can still scroll to 
+            view their contents.</para>
+      </remarks>
+      <example>
+            For example, the code below prevents the <see cref="T:C1.Win.C1Sizer.C1SizerLight" /> from resizing the font
+            on any controls that are not Buttons:
+            <code>
+            private void c1SizerLight1_ResizingFont(object sender, C1SizerLightEventArgs e)
+            {
+                if (!(e.Control is Button))
+                    e.Cancel = true;
+            }
+            </code></example>
+    </member>
+    <member name="E:C1.Win.C1Sizer.C1SizerLight.ResizingControl">
+      <summary>
+            Fires before the <see cref="T:C1.Win.C1Sizer.C1SizerLight" /> resizes a control in response to the form being resized.
+            </summary>
+      <remarks>
+        <para>By default, <see cref="T:C1.Win.C1Sizer.C1SizerLight" /> will resize all child controls on a form when the form is resized
+            (except controls that are docked or contained in a C1Sizer control).</para>
+        <para>In some cases, you may want to prevent the <see cref="T:C1.Win.C1Sizer.C1SizerLight" /> from resizing certain controls 
+            on the form. For example, you may have a an event handler that takes care of resizing specific controls on
+            the form using specialized logic.</para>
+      </remarks>
+    </member>
+    <member name="P:C1.Win.C1Sizer.C1SizerLight.Enabled">
+      <summary>
+            Determines whether the <see cref="T:C1.Win.C1Sizer.C1SizerLight" /> should resize the controls 
+            on the form when the form is resized.
+            </summary>
+      <remarks>
+        <para>This property has no effect at design time. Child controls are automatically 
+            resized at run time only.</para>
+        <para>If you need to create controls at run time, you should set the Enabled 
+            property to false, create the controls, then set it back to true. This will allow 
+            <see cref="T:C1.Win.C1Sizer.C1SizerLight" /> to update its internal layout information.</para>
+      </remarks>
+    </member>
+    <member name="P:C1.Win.C1Sizer.C1SizerLight.ResizeFonts">
+      <summary>
+            Determines whether the <see cref="T:C1.Win.C1Sizer.C1SizerLight" /> should resize control fonts in addition 
+            to the controls themselves.
+            </summary>
+    </member>
+    <member name="T:C1.Win.C1Sizer.Gradient">
+      <summary>
+            Class that implements gradient backgrounds and exposes properties
+            that control the appearance of the gradient.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Gradient.BackColor2">
+      <summary>
+            Gets or sets the secondary color used to build the background gradient.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Gradient.Mode">
+      <summary>
+            Gets or sets the <see cref="T:C1.Win.C1Sizer.GradientMode" /> used to paint the background.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Gradient.GammaCorrection">
+      <summary>
+            Gets or sets whether to apply gamma correction to the background gradient.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Gradient.Blend">
+      <summary>
+            Gets or sets the <see cref="P:C1.Win.C1Sizer.Gradient.Blend" /> used to paint the background gradient.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Gradient.Center">
+      <summary>
+            Gets or sets the <see cref="T:System.Drawing.Point" /> that represents the center of a radial gradient background in percentage units.
+            </summary>
+    </member>
+    <member name="T:C1.Win.C1Sizer.Grid">
+      <summary>
+            Summary description for Grid.
+            </summary>
+    </member>
+    <member name="M:C1.Win.C1Sizer.Grid.Clear">
+      <summary>
+            Resets the <see cref="T:C1.Win.C1Sizer.Grid" /> object so it contains one row and one column.
+            </summary>
+    </member>
+    <member name="M:C1.Win.C1Sizer.Grid.AutoGenerate">
+      <summary>
+            Resets the <see cref="T:C1.Win.C1Sizer.Grid" /> object and creates new rows and columns based on 
+            the child controls within the <see cref="T:C1.Win.C1Sizer.C1Sizer" />.
+            </summary>
+      <remarks>
+            You will rarely have to call this method from your code. It is more commonly used internally 
+            (at design time) by the grid designer.
+            </remarks>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Grid.Sizer">
+      <summary>
+            Gets a reference to the <see cref="T:C1.Win.C1Sizer.C1Sizer" /> control that owns this <see cref="T:C1.Win.C1Sizer.Grid" />.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Grid.Rows">
+      <summary>
+            Gets a reference to the <see cref="T:C1.Win.C1Sizer.RowCollection" /> that contains the rows in the layout grid.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Grid.Columns">
+      <summary>
+            Gets a reference to the <see cref="T:C1.Win.C1Sizer.ColumnCollection" /> that contains the columns in the layout grid.
+            </summary>
+    </member>
+    <member name="T:C1.Win.C1Sizer.BandCollection">
+      <summary>
+            Abstract class that serves as a base for the <see cref="T:C1.Win.C1Sizer.RowCollection" />
+            and <see cref="T:C1.Win.C1Sizer.ColumnCollection" /> classes.
+            </summary>
+    </member>
+    <member name="M:C1.Win.C1Sizer.BandCollection.Insert(System.Int32)">
+      <summary>
+            Inserts a new <see cref="T:C1.Win.C1Sizer.Band" /> at a specified position in the collection.
+            </summary>
+      <param name="index">Position where the new band will be inserted.</param>
+    </member>
+    <member name="M:C1.Win.C1Sizer.BandCollection.Remove(System.Int32)">
+      <summary>
+            Removes a <see cref="T:C1.Win.C1Sizer.Band" /> from the collection.
+            </summary>
+      <param name="index">Index of the band that will be removed from the collection.</param>
+    </member>
+    <member name="M:C1.Win.C1Sizer.BandCollection.SetSizes(System.Int32[])">
+      <summary>
+            Sets the size of multiple bands in the collection.
+            </summary>
+      <param name="sizes">A vector containing the new sizes for each band in the collection.</param>
+      <remarks>
+        <para>You can set the size of a <see cref="T:C1.Win.C1Sizer.Band" /> object by setting its <see cref="P:C1.Win.C1Sizer.Band.Size" />
+            property. However, this will cause other bands to resize immediately, so the collection 
+            always fills the client area of the <see cref="T:C1.Win.C1Sizer.C1Sizer" /> control.</para>
+        <para>This method allows you to set the size of multiple bands simultaneously, with a single call.</para>
+        <para>Any negative dimensions in the sizes array will be ignored, and the corresponding bands will 
+            retain their current dimension.</para>
+      </remarks>
+    </member>
+    <member name="P:C1.Win.C1Sizer.BandCollection.Count">
+      <summary>
+            Gets or sets the number of bands in the collection.
+            </summary>
+    </member>
+    <member name="T:C1.Win.C1Sizer.RowCollection">
+      <summary>
+            Collection of <see cref="T:C1.Win.C1Sizer.Row" /> objects.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.RowCollection.Item(System.Int32)">
+      <summary>
+            Gets the <see cref="T:C1.Win.C1Sizer.Row" /> object at a given index in the collection.
+            </summary>
+    </member>
+    <member name="T:C1.Win.C1Sizer.ColumnCollection">
+      <summary>
+            Collection of <see cref="T:C1.Win.C1Sizer.Column" /> objects.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.ColumnCollection.Item(System.Int32)">
+      <summary>
+            Gets the <see cref="T:C1.Win.C1Sizer.Column" /> object at a given index in the collection.
+            </summary>
+    </member>
+    <member name="T:C1.Win.C1Sizer.Band">
+      <summary>
+            Abstract class that serves as a base for the <see cref="T:C1.Win.C1Sizer.Row" /> and <see cref="T:C1.Win.C1Sizer.Column" /> classes.
+            </summary>
+    </member>
+    <member name="M:C1.Win.C1Sizer.Band.SetSize(System.Int32,System.Boolean)">
+      <summary>
+            Sets the size of the band and optionally adjusts the other bands so the collection fills the control.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Band.IsFixedSize">
+      <summary>
+            Determines whether the <see cref="T:C1.Win.C1Sizer.Band" /> should retain its size when the control is resized.
+            </summary>
+      <remarks>
+        <para>When the control is resized, it updates the layout grid so it always fills the control's 
+            client area. Normally, this is done by scaling every band and keeping their proportion constant.</para>
+        <para>In some cases, however, you may want to keep the size of a band constant, and let the other 
+            bands shrink or expand to accommodate the new control dimensions. For example, you may have a 
+            row that contains constant-size headings, and should not be resized with the control. 
+            In these cases, set the IsFixedSize property to true and the band will not be resized when 
+            the control dimensions change.</para>
+        <para>The IsFixedSize property prevents the control from resizing the band when the control is 
+            resized. It does not prevent the user from resizing the band with the mouse if the 
+            <see cref="P:C1.Win.C1Sizer.Band.IsSplitter" /> property is set to true.</para>
+      </remarks>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Band.IsSplitter">
+      <summary>
+            Determines whether the band acts like a splitter (can be resized with the mouse at run time).
+            </summary>
+      <remarks>
+        <para>The IsSplitter property controls the splitter bar below each row and to the right of each column.</para>
+        <para>IsSplitter has no effect on the last band in a collection, because the last band always ends at 
+            the edge of the control and thus cannot be resized with the mouse.</para>
+      </remarks>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Band.Index">
+      <summary>
+            Gets the index of the <see cref="T:C1.Win.C1Sizer.Band" /> in the owner collection.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Band.Bounds">
+      <summary>
+            Gets a <see cref="T:System.Drawing.Rectangle" /> that represents the size and location of the band 
+            within the parent <see cref="T:C1.Win.C1Sizer.C1Sizer" /> control.
+            </summary>
+      <remarks>
+            You can use the Bounds property to determine the position of specific grid cells.
+            For example, the code below moves a button control into cell 1,1 of the layout grid:
+            <code>
+            Rectangle bounds = Rectangle.Intersect(g.Rows[1].Bounds, g.Columns[1].Bounds);
+            button1.Bounds = bounds;
+            </code></remarks>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Band.Size">
+      <summary>
+            Gets or sets the size of this <see cref="T:C1.Win.C1Sizer.Band" /> object.
+            </summary>
+      <remarks>
+        <para>If the Band is a <see cref="T:C1.Win.C1Sizer.Row" /> object, the size represents the row height in pixels.</para>
+        <para>If the Band is a <see cref="T:C1.Win.C1Sizer.Column" /> object, the size represents the column width in pixels.</para>
+      </remarks>
+    </member>
+    <member name="T:C1.Win.C1Sizer.Row">
+      <summary>
+            Represents a row in the Sizer grid.
+            </summary>
+    </member>
+    <member name="M:C1.Win.C1Sizer.Row.ToString">
+      <summary>
+            Returns a string representation of the <see cref="T:C1.Win.C1Sizer.Row" /> object.
+            </summary>
+      <returns>A string representation of the <see cref="T:C1.Win.C1Sizer.Row" /> object</returns>
+    </member>
+    <member name="M:C1.Win.C1Sizer.Row.SetSize(System.Int32,System.Boolean)">
+      <summary>
+            Gets or sets the size of the <see cref="T:C1.Win.C1Sizer.Row" /> as a percentage of the grid's height.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Row.Size">
+      <summary>
+            Gets or sets the height of the <see cref="T:C1.Win.C1Sizer.Row" /> in pixels.
+            </summary>
+      <remarks>
+        <para>The Size property is updated whenever the control is resized, so that the 
+            rows take up the entire height of the control.</para>
+        <para>You can prevent specific rows from being resized with the form by setting 
+            their <see cref="P:C1.Win.C1Sizer.Band.IsFixedSize" /> property. You can also set the size of multiple 
+            rows with a single call using the <see cref="M:C1.Win.C1Sizer.BandCollection.SetSizes(System.Int32[])" /> method in the 
+            <see cref="T:C1.Win.C1Sizer.RowCollection" /> class.</para>
+        <para>When entering row heights or column widths into the PropertyGrid, you may
+            also specify values as percentages of the control size (e.g. "25%").</para>
+      </remarks>
+    </member>
+    <member name="T:C1.Win.C1Sizer.Column">
+      <summary>
+            Represents a column in the Sizer grid.
+            </summary>
+    </member>
+    <member name="M:C1.Win.C1Sizer.Column.ToString">
+      <summary>
+            Returns a string representation of the <see cref="T:C1.Win.C1Sizer.Column" /> object.
+            </summary>
+      <returns>A string representation of the <see cref="T:C1.Win.C1Sizer.Column" /> object</returns>
+    </member>
+    <member name="M:C1.Win.C1Sizer.Column.SetSize(System.Int32,System.Boolean)">
+      <summary>
+            Gets or sets the size of the <see cref="T:C1.Win.C1Sizer.Column" /> as a percentage of the grid's width.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Column.Size">
+      <summary>
+            Gets or sets the width of the <see cref="T:C1.Win.C1Sizer.Column" /> in pixels.
+            </summary>
+      <remarks>
+        <para>The Size property is updated whenever the control is resized, so that the 
+            columns take up the entire width of the control.</para>
+        <para>You can prevent specific columns from being resized with the form by setting 
+            their <see cref="P:C1.Win.C1Sizer.Band.IsFixedSize" /> property. You can also set the size of multiple 
+            columns with a single call using the <see cref="M:C1.Win.C1Sizer.BandCollection.SetSizes(System.Int32[])" /> method in the 
+            <see cref="T:C1.Win.C1Sizer.ColumnCollection" /> class.</para>
+        <para>When entering row heights or column widths into the PropertyGrid, you may
+            also specify values as percentages of the control size (e.g. "25%").</para>
+      </remarks>
+    </member>
+    <member name="T:C1.Win.C1Sizer.Splitter">
+      <summary>
+            Splitter.
+            </summary>
+    </member>
+    <member name="T:C1.Win.C1Sizer.Corners">
+      <summary>
+            Represents corners associated with a user interface (UI) element.
+            </summary>
+    </member>
+    <member name="M:C1.Win.C1Sizer.Corners.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.Win.C1Sizer.Corners" /> object. 
+            </summary>
+      <param name="leftTop">Radius of the left top corner, in pixels.</param>
+      <param name="rightTop">Radius of the right top corner, in pixels.</param>
+      <param name="leftBottom">Radius of the left bottom corner, in pixels.</param>
+      <param name="rightBottom">Radius of the right bottom corner, in pixels.</param>
+    </member>
+    <member name="M:C1.Win.C1Sizer.Corners.#ctor(System.Int32)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.Win.C1Sizer.Corners" /> object.
+            </summary>
+      <param name="radius">Radius of all corners, in pixels.</param>
+    </member>
+    <member name="M:C1.Win.C1Sizer.Corners.GetHashCode">
+      <summary>
+            Generates a hash code for the current <see cref="T:C1.Win.C1Sizer.Corners" />. 
+            </summary>
+      <returns>A 32-bit signed integer hash code.</returns>
+    </member>
+    <member name="M:C1.Win.C1Sizer.Corners.Equals(System.Object)">
+      <summary>
+            Determines whether the value of the specified object is equivalent 
+            to the current <see cref="T:C1.Win.C1Sizer.Corners" />. 
+            </summary>
+      <param name="obj">The object to compare to the current <see cref="T:C1.Win.C1Sizer.Corners" />.</param>
+      <returns>true if the two <see cref="T:C1.Win.C1Sizer.Corners" /> objects are equal; 
+            otherwise, false. </returns>
+    </member>
+    <member name="M:C1.Win.C1Sizer.Corners.op_Equality(C1.Win.C1Sizer.Corners,C1.Win.C1Sizer.Corners)">
+      <summary>
+            Tests whether two specified <see cref="T:C1.Win.C1Sizer.Corners" /> objects are equivalent. 
+            </summary>
+      <param name="c1">A <see cref="T:C1.Win.C1Sizer.Corners" /> to test.</param>
+      <param name="c2">A <see cref="T:C1.Win.C1Sizer.Corners" /> to test.</param>
+      <returns>true if the two <see cref="T:C1.Win.C1Sizer.Corners" /> objects are equal; 
+            otherwise, false. </returns>
+    </member>
+    <member name="M:C1.Win.C1Sizer.Corners.op_Inequality(C1.Win.C1Sizer.Corners,C1.Win.C1Sizer.Corners)">
+      <summary>
+            Tests whether two specified <see cref="T:C1.Win.C1Sizer.Corners" /> objects are not equivalent. 
+            </summary>
+      <param name="c1">A <see cref="T:C1.Win.C1Sizer.Corners" /> to test.</param>
+      <param name="c2">A <see cref="T:C1.Win.C1Sizer.Corners" /> to test.</param>
+      <returns>True if the two <see cref="T:C1.Win.C1Sizer.Corners" /> objects are different; 
+            otherwise, false. </returns>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Corners.Empty">
+      <summary>
+            Provides a <see cref="T:C1.Win.C1Sizer.Corners" /> object with no thickness.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Corners.LeftTop">
+      <summary>
+            Gets or sets the radius for the left top corner. 
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Corners.RightTop">
+      <summary>
+            Gets or sets the radius for the right top corner. 
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Corners.LeftBottom">
+      <summary>
+            Gets or sets the radius for the left bottom corner. 
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Corners.RightBottom">
+      <summary>
+            Gets or sets the radius for the right bottom corner. 
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Corners.IsEmpty">
+      <summary>
+            Returns true if the <see cref="T:C1.Win.C1Sizer.Corners" /> object is empty. 
+            </summary>
+    </member>
+    <member name="T:C1.Win.C1Sizer.ImageAlignment">
+      <summary>
+            Specifies the image alignment.
+            </summary>
+    </member>
+    <member name="F:C1.Win.C1Sizer.ImageAlignment.LeftTop">
+      <summary>
+            Image is vertically aligned at the top and horizontally aligned on the left. 
+            </summary>
+    </member>
+    <member name="F:C1.Win.C1Sizer.ImageAlignment.CenterTop">
+      <summary>
+            Image is vertically aligned at the top and horizontally aligned at the center.
+            </summary>
+    </member>
+    <member name="F:C1.Win.C1Sizer.ImageAlignment.RightTop">
+      <summary>
+            Image is vertically aligned at the top and horizontally aligned on the right. 
+            </summary>
+    </member>
+    <member name="F:C1.Win.C1Sizer.ImageAlignment.LeftCenter">
+      <summary>
+            Image is vertically aligned in the middle and horizontally aligned on the left. 
+            </summary>
+    </member>
+    <member name="F:C1.Win.C1Sizer.ImageAlignment.CenterCenter">
+      <summary>
+            Image is vertically aligned in the middle and horizontally aligned at the center. 
+            </summary>
+    </member>
+    <member name="F:C1.Win.C1Sizer.ImageAlignment.RightCenter">
+      <summary>
+            Image is vertically aligned in the middle and horizontally aligned on the right. 
+            </summary>
+    </member>
+    <member name="F:C1.Win.C1Sizer.ImageAlignment.LeftBottom">
+      <summary>
+            Image is vertically aligned at the bottom and horizontally aligned on the left. 		
+            </summary>
+    </member>
+    <member name="F:C1.Win.C1Sizer.ImageAlignment.CenterBottom">
+      <summary>
+            Image is vertically aligned at the bottom and horizontally aligned at the center.
+            </summary>
+    </member>
+    <member name="F:C1.Win.C1Sizer.ImageAlignment.RightBottom">
+      <summary>
+            Image is vertically aligned at the bottom and horizontally aligned on the right. 
+            </summary>
+    </member>
+    <member name="T:C1.Win.C1Sizer.ImageScaling">
+      <summary>
+            Specifies the image scaling.
+            </summary>
+    </member>
+    <member name="F:C1.Win.C1Sizer.ImageScaling.Clip">
+      <summary>
+            Use the image's original size, clipping it to the display area if necessary.
+            </summary>
+    </member>
+    <member name="F:C1.Win.C1Sizer.ImageScaling.Stretch">
+      <summary>
+            Stretch the image to fill the display area. 
+            This mode will usually change the image's aspect ratio.
+            </summary>
+    </member>
+    <member name="F:C1.Win.C1Sizer.ImageScaling.Scale">
+      <summary>
+            Scale the image to fit the display area. 
+            This mode may increase or reduce the size of the image 
+            while maintaining its aspect ratio.
+            </summary>
+    </member>
+    <member name="F:C1.Win.C1Sizer.ImageScaling.Tile">
+      <summary>
+            Tile the image to fill the display area.
+            </summary>
+    </member>
+    <member name="F:C1.Win.C1Sizer.ImageScaling.TileStretch">
+      <summary>
+            Tile the image into a 3x3 matrix and stretch it to fill the display area.
+            This mode preserves the size of the four corners of the image.
+            </summary>
+    </member>
+    <member name="F:C1.Win.C1Sizer.ImageScaling.TileStretchHorizontal">
+      <summary>
+            Tile the image into a row of 3 images and stretch it to fill the display area.
+            This mode preserves the size of the left and right parts of the image.
+            </summary>
+    </member>
+    <member name="F:C1.Win.C1Sizer.ImageScaling.TileStretchVertical">
+      <summary>
+            Tile the image into a column of 3 images and stretch it to fill the display area.
+            This mode preserves the size of the top and bottom parts of the image.
+            </summary>
+    </member>
+    <member name="F:C1.Win.C1Sizer.ImageScaling.Hide">
+      <summary>
+            Hide the image.
+            </summary>
+    </member>
+    <member name="T:C1.Win.C1Sizer.GradientMode">
+      <summary>
+            Specifies the background gradient mode.
+            </summary>
+    </member>
+    <member name="F:C1.Win.C1Sizer.GradientMode.None">
+      <summary>
+            No gradient.
+            </summary>
+    </member>
+    <member name="F:C1.Win.C1Sizer.GradientMode.Horizontal">
+      <summary>
+            Horizontal gradient (from BackColor on the left to BackColor2 on the right).
+            </summary>
+    </member>
+    <member name="F:C1.Win.C1Sizer.GradientMode.Vertical">
+      <summary>
+            Vertical gradient (from BackColor on the top to BackColor2 on the bottom).
+            </summary>
+    </member>
+    <member name="F:C1.Win.C1Sizer.GradientMode.DiagonalDown">
+      <summary>
+            Diagonal gradient (from BackColor on the left-top to BackColor2 on the right-bottom).
+            </summary>
+    </member>
+    <member name="F:C1.Win.C1Sizer.GradientMode.DiagonalUp">
+      <summary>
+            Diagonal gradient (from BackColor on the left-bottom to BackColor2 on the right-top).
+            </summary>
+    </member>
+    <member name="F:C1.Win.C1Sizer.GradientMode.Radial">
+      <summary>
+            Radial gradient (from BackColor on the edges to BackColor2 on the center).
+            </summary>
+    </member>
+    <member name="T:C1.Win.C1Sizer.Style">
+      <summary>
+        <para>The <see cref="T:C1.Win.C1Sizer.Style" /> class contains display attributes that 
+            determine the appearance of content on the screen/printer. 
+            It includes most elements found in Css styles.</para>
+        <para>The <see cref="T:C1.Win.C1Sizer.Style" /> class also contains methods for rendering 
+            and measuring content (strings and images) based on the style settings 
+            (fonts, margins, etc).</para>
+        <para>The <see cref="T:C1.Win.C1Sizer.Style" /> objects are not hierarchical in the sense 
+            that they don't have parent styles and don't inherit attributes 
+            from the parent style. To create a new style based on an existing one, 
+            you would clone the original style, then apply whatever attributes 
+            you want to the new style.</para>
+      </summary>
+    </member>
+    <member name="M:C1.Win.C1Sizer.Style.#ctor">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.Win.C1Sizer.Style" />.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Style.BackBrush">
+      <summary>
+            Gets or sets the brush used to render the element background.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Style.BackImage">
+      <summary>
+            Gets or sets the background image for the element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Style.BackImageAlignment">
+      <summary>
+            Gets or sets the alignment used to render the background image.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Style.BackImageScaling">
+      <summary>
+            Gets or sets the scaling used to render the background image.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Style.BorderBrush">
+      <summary>
+            Gets or sets the brush used to paint the borders around the element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Style.Padding">
+      <summary>
+            Gets or sets the thickness of the padding between the element edges and its content.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Style.Border">
+      <summary>
+            Gets or sets the thickness of the border around the element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Style.BorderColor">
+      <summary>
+            Gets or sets the <see cref="T:System.Drawing.Color" /> used to draw the border around the element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Style.Corners">
+      <summary>
+            Gets or sets the radii of the element corners.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Style.ImageAlignment">
+      <summary>
+            Gets or sets how images should be aligned within the element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Style.ImageScaling">
+      <summary>
+            Gets or sets how images should be scaled within the element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Style.BackColor">
+      <summary>
+            Gets or sets the <see cref="T:System.Drawing.Color" /> used to paint the background.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Style.GradientMode">
+      <summary>
+            Gets or sets the <see cref="P:C1.Win.C1Sizer.Style.GradientMode" /> used to paint the background.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Style.GradientBlend">
+      <summary>
+            Gets or sets the <see cref="T:System.Drawing.Drawing2D.Blend" /> used to paint the background gradient.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Style.GradientCenter">
+      <summary>
+            Gets or sets the <see cref="T:System.Drawing.PointF" /> that represents the center of a radial gradient background in percentage units.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Style.BackColor2">
+      <summary>
+            Gets or sets the secondary color used to build the background gradient.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1Sizer.Style.GammaCorrection">
+      <summary>
+            Gets or sets whether to apply gamma correction to the background gradient.
+            </summary>
+    </member>
+  </members>
+</doc>

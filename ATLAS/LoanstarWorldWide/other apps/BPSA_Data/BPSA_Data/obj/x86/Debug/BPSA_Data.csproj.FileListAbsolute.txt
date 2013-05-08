@@ -1,0 +1,12 @@
+C:\_dev\ATLAS\LoanstarWorldWide\BPSA_Data\BPSA_Data\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\_dev\ATLAS\LoanstarWorldWide\BPSA_Data\BPSA_Data\obj\x86\Debug\BPSA_Data.Form1.resources
+C:\_dev\ATLAS\LoanstarWorldWide\BPSA_Data\BPSA_Data\obj\x86\Debug\BPSA_Data.Properties.Resources.resources
+C:\_dev\ATLAS\LoanstarWorldWide\BPSA_Data\BPSA_Data\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\_dev\ATLAS\LoanstarWorldWide\BPSA_Data\BPSA_Data\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\_dev\ATLAS\LoanstarWorldWide\BPSA_Data\BPSA_Data\obj\x86\Debug\BPSA_Data.exe.licenses
+C:\_dev\ATLAS\LoanstarWorldWide\BPSA_Data\BPSA_Data\bin\Debug\BPSA_Data.exe
+C:\_dev\ATLAS\LoanstarWorldWide\BPSA_Data\BPSA_Data\bin\Debug\BPSA_Data.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\BPSA_Data\BPSA_Data\bin\Debug\C1.Win.C1TrueDBGrid.4.dll
+C:\_dev\ATLAS\LoanstarWorldWide\BPSA_Data\BPSA_Data\bin\Debug\C1.Win.C1TrueDBGrid.4.xml
+C:\_dev\ATLAS\LoanstarWorldWide\BPSA_Data\BPSA_Data\obj\x86\Debug\BPSA_Data.exe
+C:\_dev\ATLAS\LoanstarWorldWide\BPSA_Data\BPSA_Data\obj\x86\Debug\BPSA_Data.pdb

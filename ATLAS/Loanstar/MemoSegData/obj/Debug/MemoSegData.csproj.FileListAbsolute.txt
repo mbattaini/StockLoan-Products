@@ -1,0 +1,32 @@
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MemoSegData\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MemoSegData\bin\Debug\StockLoan.MemoSegData.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MemoSegData\bin\Debug\StockLoan.MemoSegData.pdb
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MemoSegData\bin\Debug\DatabaseFunctions.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MemoSegData\bin\Debug\iConnectNet.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MemoSegData\bin\Debug\StockLoan.Common.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MemoSegData\bin\Debug\StockLoan.Filer.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MemoSegData\bin\Debug\Rebex.Net.Ftp.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MemoSegData\bin\Debug\Rebex.Net.ProxySocket.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MemoSegData\bin\Debug\StockLoan.Common.pdb
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MemoSegData\bin\Debug\StockLoan.Filer.pdb
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MemoSegData\bin\Debug\DatabaseFunctions.pdb
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MemoSegData\obj\Debug\StockLoan.MemoSegData.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MemoSegData\obj\Debug\StockLoan.MemoSegData.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MemoSegData\bin\Debug\StockLoan.MemoSegData.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MemoSegData\bin\Debug\StockLoan.MemoSegData.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MemoSegData\bin\Debug\DatabaseFunctions.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MemoSegData\bin\Debug\StockLoan.Common.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MemoSegData\bin\Debug\StockLoan.Common.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MemoSegData\bin\Debug\DatabaseFunctions.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MemoSegData\obj\Debug\ResolveAssemblyReference.cache
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MemoSegData\obj\Debug\StockLoan.MemoSegData.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MemoSegData\obj\Debug\StockLoan.MemoSegData.pdb
+U:\_Dev\ATLAS\Loanstar\MemoSegData\bin\Debug\StockLoan.MemoSegData.dll
+U:\_Dev\ATLAS\Loanstar\MemoSegData\bin\Debug\StockLoan.MemoSegData.pdb
+U:\_Dev\ATLAS\Loanstar\MemoSegData\bin\Debug\DatabaseFunctions.dll
+U:\_Dev\ATLAS\Loanstar\MemoSegData\bin\Debug\StockLoan.Common.dll
+U:\_Dev\ATLAS\Loanstar\MemoSegData\bin\Debug\StockLoan.Common.pdb
+U:\_Dev\ATLAS\Loanstar\MemoSegData\bin\Debug\DatabaseFunctions.pdb
+U:\_Dev\ATLAS\Loanstar\MemoSegData\obj\Debug\ResolveAssemblyReference.cache
+U:\_Dev\ATLAS\Loanstar\MemoSegData\obj\Debug\StockLoan.MemoSegData.dll
+U:\_Dev\ATLAS\Loanstar\MemoSegData\obj\Debug\StockLoan.MemoSegData.pdb

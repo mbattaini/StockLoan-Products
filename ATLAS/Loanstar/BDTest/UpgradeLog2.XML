@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="BDDataTest">
+</Property><Property Name="Solution File" Value="C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\BDDataTest.sln">
+</Property><Property Name="Date" Value="Tuesday, March 23, 2010">
+</Property><Property Name="Time" Value="9:19:40 AM">
+</Property><Property Name="Log Number" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="Filer" Source="..\..\Filer\Filer.csproj" Description="Project file successfully backed up as C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\Backup1\Filer.csproj">
+</Event><Event ErrorLevel="0" Project="Filer" Source="..\..\Filer\Filer.csproj.user" Description="Project user file successfully backed up as C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\Backup1\Filer.csproj.user">
+</Event><Event ErrorLevel="0" Project="Filer" Source="..\..\Filer\AssemblyInfo.cs" Description="File successfully backed up as C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\Backup1\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Filer" Source="..\..\Filer\Filer.cs" Description="File successfully backed up as C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\Backup1\Filer.cs">
+</Event><Event ErrorLevel="0" Project="Filer" Source="..\..\Filer\GnuPG.cs" Description="File successfully backed up as C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\Backup1\GnuPG.cs">
+</Event><Event ErrorLevel="0" Project="Filer" Source="..\..\Filer\Filer.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Filer" Source="..\..\Filer\Filer.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Filer" Source="..\..\Filer\Filer.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

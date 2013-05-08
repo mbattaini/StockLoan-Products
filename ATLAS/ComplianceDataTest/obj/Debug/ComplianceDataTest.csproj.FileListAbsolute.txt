@@ -1,0 +1,12 @@
+C:\_dev\ATLAS\ComplianceDataTest\bin\Debug\StockLoan.ComplianceDataTest.exe.config
+C:\_dev\ATLAS\ComplianceDataTest\bin\Debug\StockLoan.ComplianceDataTest.exe
+C:\_dev\ATLAS\ComplianceDataTest\bin\Debug\StockLoan.ComplianceDataTest.pdb
+C:\_dev\ATLAS\ComplianceDataTest\bin\Debug\StockLoan.ComplianceData.dll
+C:\_dev\ATLAS\ComplianceDataTest\bin\Debug\StockLoan.Common.dll
+C:\_dev\ATLAS\ComplianceDataTest\bin\Debug\StockLoan.ComplianceData.pdb
+C:\_dev\ATLAS\ComplianceDataTest\bin\Debug\StockLoan.Common.pdb
+C:\_dev\ATLAS\ComplianceDataTest\obj\Debug\StockLoan.ComplianceDataTest.exe
+C:\_dev\ATLAS\ComplianceDataTest\obj\Debug\StockLoan.ComplianceDataTest.pdb
+C:\_dev\ATLAS\ComplianceDataTest\obj\Debug\ComplianceDataTest.csprojResolveAssemblyReference.cache
+C:\_dev\ATLAS\ComplianceDataTest\bin\Debug\C1.C1Excel.2.dll
+C:\_dev\ATLAS\ComplianceDataTest\bin\Debug\C1.C1Excel.2.xml

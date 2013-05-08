@@ -1,0 +1,9 @@
+C:\_Dev\ATLAS\StockLoanGPGEncryption\StockLoanGPGEncryption\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\_Dev\ATLAS\StockLoanGPGEncryption\StockLoanGPGEncryption\obj\x86\Debug\StockLoanGPGEncryption.Form1.resources
+C:\_Dev\ATLAS\StockLoanGPGEncryption\StockLoanGPGEncryption\obj\x86\Debug\StockLoanGPGEncryption.Properties.Resources.resources
+C:\_Dev\ATLAS\StockLoanGPGEncryption\StockLoanGPGEncryption\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\_Dev\ATLAS\StockLoanGPGEncryption\StockLoanGPGEncryption\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\_Dev\ATLAS\StockLoanGPGEncryption\StockLoanGPGEncryption\bin\Debug\StockLoanGPGEncryption.exe
+C:\_Dev\ATLAS\StockLoanGPGEncryption\StockLoanGPGEncryption\bin\Debug\StockLoanGPGEncryption.pdb
+C:\_Dev\ATLAS\StockLoanGPGEncryption\StockLoanGPGEncryption\obj\x86\Debug\StockLoanGPGEncryption.exe
+C:\_Dev\ATLAS\StockLoanGPGEncryption\StockLoanGPGEncryption\obj\x86\Debug\StockLoanGPGEncryption.pdb

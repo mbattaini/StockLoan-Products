@@ -1,0 +1,10 @@
+C:\ATLAS\Loanstar\STATICDATASERVER\bin\Release\StockLoan.StaticDataServer.dll
+C:\ATLAS\Loanstar\STATICDATASERVER\bin\Release\StockLoan.Common.dll
+C:\ATLAS\Loanstar\STATICDATASERVER\bin\Release\StockLoan.Common.pdb
+C:\ATLAS\Loanstar\STATICDATASERVER\obj\Release\ResolveAssemblyReference.cache
+C:\ATLAS\Loanstar\STATICDATASERVER\obj\Release\StockLoan.StaticDataServer.dll
+\\penson.com\shares\users\MBattaini\_Dev\ATLAS\Loanstar\STATICDATASERVER\bin\Release\StockLoan.StaticDataServer.dll
+\\penson.com\shares\users\MBattaini\_Dev\ATLAS\Loanstar\STATICDATASERVER\bin\Release\StockLoan.Common.dll
+\\penson.com\shares\users\MBattaini\_Dev\ATLAS\Loanstar\STATICDATASERVER\bin\Release\StockLoan.Common.pdb
+\\penson.com\shares\users\MBattaini\_Dev\ATLAS\Loanstar\STATICDATASERVER\obj\Release\ResolveAssemblyReference.cache
+\\penson.com\shares\users\MBattaini\_Dev\ATLAS\Loanstar\STATICDATASERVER\obj\Release\StockLoan.StaticDataServer.dll

@@ -1,0 +1,619 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.30319</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1E178603-C675-484C-8FEB-050AA223B102}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>.\medalist.ico</ApplicationIcon>
+    <AssemblyKeyContainerName />
+    <AssemblyName>Anetics.MedalistClient</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Anetics.Medalist</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Private>True</Private>
+    </COMReference>
+    <COMReference Include="Redemption">
+      <Guid>{2D5E2D34-BED5-4B9F-9793-A31E26E6806E}</Guid>
+      <VersionMajor>3</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+    </COMReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Name>Common</Name>
+      <Project>{51D7F048-02E1-49F8-BA33-743E3E5373F7}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <Reference Include="Anetics.Medalist, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Anetics.Medalist.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.C1Excel.2, Version=2.1.20112.202, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.C1Pdf.2, Version=2.1.20112.175, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1Command.2, Version=2.0.20112.19488, Culture=neutral, PublicKeyToken=e808566f358766d8, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1Input.2, Version=2.0.20112.33265, Culture=neutral, PublicKeyToken=7e7ff60f0c214f9a, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1List.2, Version=2.1.20112.183, Culture=neutral, PublicKeyToken=6b24f8f981dbd7bc, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1Report.2, Version=2.6.20112.54408, Culture=neutral, PublicKeyToken=41780e2fc605e636, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1TrueDBGrid.2, Version=2.0.20112.61226, Culture=neutral, PublicKeyToken=75ae3fb0e2b1e0da, processorArchitecture=MSIL" />
+    <Reference Include="Interop.Redemption">
+      <HintPath>obj\Interop.Redemption.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.mshtml">
+      <Name>Microsoft.mshtml</Name>
+      <HintPath>..\..\Program Files\Microsoft.NET\Primary Interop Assemblies\Microsoft.mshtml.dll</HintPath>
+      <AssemblyFolderKey>hklm\primary interop assemblies</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Outlook">
+      <Name>Microsoft.Office.Interop.Outlook</Name>
+      <HintPath>Microsoft.Office.Interop.Outlook.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.DirectoryServices">
+      <Name>System.DirectoryServices</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Runtime.Remoting">
+      <Name>System.Runtime.Remoting</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminBooksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminHolidaysForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminKeyValuesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUserPersonnelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUserRolesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractInformationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CreditControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DealsInformationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Email.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Excel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="InventoryDataMaskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryDeskInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryLookupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryPublisherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryRatesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventorySubscriberForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotifyWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pilot.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PositionABRForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PositionAccountsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PositionAutoBorrowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PositionBankLoanDocuments.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PositionBankLoanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PositionBankLoanPledgeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PositionBankLoanPledgeInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PositionBankLoanReleaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PositionBankLoanReleaseInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PositionBankLoanReleaseReportsDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PositionBankLoanReleaseReportsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PositionBoxFailHistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PositionBoxSummaryExpandedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PositionBoxSummaryExpandedForm.Designer.cs">
+      <DependentUpon>PositionBoxSummaryExpandedForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PositionBoxSummaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PositionContractBlotterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PositionContractRateComparisonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PositionContractRateHistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PositionDealBlotterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PositionDeficitBuyInsAccountsBorrowedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PositionDeficitBuyInsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PositionOpenContractsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PositionPcChangeInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PositionRateChangeInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PositionRecallInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PositionRecallsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PositionReturnInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProcessStatusDropdownForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecMasterControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ShortSaleBillingBillsAccountsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShortSaleBillingBillsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShortSaleBillingDatesLockInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShortSaleBillingMarksInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShortSaleBillingSummaryActivityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShortSaleBillingSummaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShortSaleListsEasyBorrowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShortSaleListsHardBorrowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShortSaleListsNoLendForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShortSaleListsThresholdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShortSaleLocateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShortSaleLocatesPreBorrowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShortSaleTradingGroupsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShortSaleTradingGroupsNegativeRebatesAccountManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShortSaleTradingGroupsNegativeRebatesBillingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShortSaleTradingGroupsNegativeRebatesOfficeCodeManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubstitutionInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubstitutionInventoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubstitutionSegEntriesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubstitutionStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubstitutionUpdatedDeficitExcessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="AdminBooksForm.resx">
+      <DependentUpon>AdminBooksForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminHolidaysForm.resx">
+      <DependentUpon>AdminHolidaysForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminKeyValuesForm.resx">
+      <DependentUpon>AdminKeyValuesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUserPersonnelForm.resx">
+      <DependentUpon>AdminUserPersonnelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUserRolesForm.resx">
+      <DependentUpon>AdminUserRolesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractInformationControl.resx">
+      <DependentUpon>ContractInformationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreditControl.resx">
+      <DependentUpon>CreditControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DealsInformationControl.resx">
+      <DependentUpon>DealsInformationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryDataMaskForm.resx">
+      <DependentUpon>InventoryDataMaskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryDeskInputForm.resx">
+      <DependentUpon>InventoryDeskInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryLookupForm.resx">
+      <DependentUpon>InventoryLookupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryPublisherForm.resx">
+      <DependentUpon>InventoryPublisherForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryRatesForm.resx">
+      <DependentUpon>InventoryRatesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventorySubscriberForm.resx">
+      <DependentUpon>InventorySubscriberForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="licenses.licx" />
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="medalist.ico" />
+    <EmbeddedResource Include="NotifyWindow.resx">
+      <DependentUpon>NotifyWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pilot.resx">
+      <DependentUpon>Pilot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionABRForm.resx">
+      <DependentUpon>PositionABRForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionAccountsForm.resx">
+      <DependentUpon>PositionAccountsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionAutoBorrowForm.resx">
+      <DependentUpon>PositionAutoBorrowForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionBankLoanForm.resx">
+      <DependentUpon>PositionBankLoanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionBankLoanPledgeForm.resx">
+      <DependentUpon>PositionBankLoanPledgeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionBankLoanPledgeInputForm.resx">
+      <DependentUpon>PositionBankLoanPledgeInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionBankLoanReleaseForm.resx">
+      <DependentUpon>PositionBankLoanReleaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionBankLoanReleaseInputForm.resx">
+      <DependentUpon>PositionBankLoanReleaseInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionBankLoanReleaseReportsDataForm.resx">
+      <DependentUpon>PositionBankLoanReleaseReportsDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionBankLoanReleaseReportsForm.resx">
+      <DependentUpon>PositionBankLoanReleaseReportsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionBoxFailHistoryForm.resx">
+      <DependentUpon>PositionBoxFailHistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionBoxSummaryExpandedForm.resx">
+      <DependentUpon>PositionBoxSummaryExpandedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionBoxSummaryForm.resx">
+      <DependentUpon>PositionBoxSummaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionContractBlotterForm.resx">
+      <DependentUpon>PositionContractBlotterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionContractRateComparisonForm.resx">
+      <DependentUpon>PositionContractRateComparisonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionContractRateHistoryForm.resx">
+      <DependentUpon>PositionContractRateHistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionDealBlotterForm.resx">
+      <DependentUpon>PositionDealBlotterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionDeficitBuyInsAccountsBorrowedForm.resx">
+      <DependentUpon>PositionDeficitBuyInsAccountsBorrowedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionDeficitBuyInsForm.resx">
+      <DependentUpon>PositionDeficitBuyInsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionOpenContractsForm.resx">
+      <DependentUpon>PositionOpenContractsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionPcChangeInputForm.resx">
+      <DependentUpon>PositionPcChangeInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionRateChangeInputForm.resx">
+      <DependentUpon>PositionRateChangeInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionRecallInputForm.resx">
+      <DependentUpon>PositionRecallInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionRecallsForm.resx">
+      <DependentUpon>PositionRecallsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionReturnInputForm.resx">
+      <DependentUpon>PositionReturnInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcessStatusDropdownForm.resx">
+      <DependentUpon>ProcessStatusDropdownForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecMasterControl.resx">
+      <DependentUpon>SecMasterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShortSaleBillingBillsAccountsForm.resx">
+      <DependentUpon>ShortSaleBillingBillsAccountsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShortSaleBillingBillsForm.resx">
+      <DependentUpon>ShortSaleBillingBillsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShortSaleBillingDatesLockInputForm.resx">
+      <DependentUpon>ShortSaleBillingDatesLockInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShortSaleBillingMarksInputForm.resx">
+      <DependentUpon>ShortSaleBillingMarksInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShortSaleBillingSummaryActivityForm.resx">
+      <DependentUpon>ShortSaleBillingSummaryActivityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShortSaleBillingSummaryForm.resx">
+      <DependentUpon>ShortSaleBillingSummaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShortSaleListsEasyBorrowForm.resx">
+      <DependentUpon>ShortSaleListsEasyBorrowForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShortSaleListsHardBorrowForm.resx">
+      <DependentUpon>ShortSaleListsHardBorrowForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShortSaleListsNoLendForm.resx">
+      <DependentUpon>ShortSaleListsNoLendForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShortSaleListsThresholdForm.resx">
+      <DependentUpon>ShortSaleListsThresholdForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShortSaleLocateForm.resx">
+      <DependentUpon>ShortSaleLocateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShortSaleLocatesPreBorrowForm.resx">
+      <DependentUpon>ShortSaleLocatesPreBorrowForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShortSaleTradingGroupsForm.resx">
+      <DependentUpon>ShortSaleTradingGroupsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShortSaleTradingGroupsNegativeRebatesAccountManagementForm.resx">
+      <DependentUpon>ShortSaleTradingGroupsNegativeRebatesAccountManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShortSaleTradingGroupsNegativeRebatesBillingForm.resx">
+      <DependentUpon>ShortSaleTradingGroupsNegativeRebatesBillingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShortSaleTradingGroupsNegativeRebatesOfficeCodeManagementForm.resx">
+      <DependentUpon>ShortSaleTradingGroupsNegativeRebatesOfficeCodeManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashForm.resx">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubstitutionInputForm.resx">
+      <DependentUpon>SubstitutionInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubstitutionInventoryForm.resx">
+      <DependentUpon>SubstitutionInventoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubstitutionSegEntriesForm.resx">
+      <DependentUpon>SubstitutionSegEntriesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubstitutionStatus.resx">
+      <DependentUpon>SubstitutionStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubstitutionUpdatedDeficitExcessForm.resx">
+      <DependentUpon>SubstitutionUpdatedDeficitExcessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Layouts\boxsummary-204.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Layouts\boxsummary-normal.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>

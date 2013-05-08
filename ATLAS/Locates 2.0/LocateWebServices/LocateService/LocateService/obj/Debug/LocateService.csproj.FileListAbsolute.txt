@@ -1,0 +1,13 @@
+C:\_Dev\ATLAS\Locates 2.0\LocateWebServices\LocateService\LocateService\obj\Debug\ResolveAssemblyReference.cache
+C:\_Dev\ATLAS\Locates 2.0\LocateWebServices\LocateService\LocateService\bin\LocateService.dll
+C:\_Dev\ATLAS\Locates 2.0\LocateWebServices\LocateService\LocateService\bin\LocateService.pdb
+C:\_Dev\ATLAS\Locates 2.0\LocateWebServices\LocateService\LocateService\bin\LocateBusiness.dll
+C:\_Dev\ATLAS\Locates 2.0\LocateWebServices\LocateService\LocateService\bin\LocateDatabase.dll
+C:\_Dev\ATLAS\Locates 2.0\LocateWebServices\LocateService\LocateService\bin\StockLoan.Common.dll
+C:\_Dev\ATLAS\Locates 2.0\LocateWebServices\LocateService\LocateService\bin\WCFFunctions.dll
+C:\_Dev\ATLAS\Locates 2.0\LocateWebServices\LocateService\LocateService\bin\StockLoan.Common.pdb
+C:\_Dev\ATLAS\Locates 2.0\LocateWebServices\LocateService\LocateService\bin\WCFFunctions.pdb
+C:\_Dev\ATLAS\Locates 2.0\LocateWebServices\LocateService\LocateService\bin\LocateBusiness.pdb
+C:\_Dev\ATLAS\Locates 2.0\LocateWebServices\LocateService\LocateService\bin\LocateDatabase.pdb
+C:\_Dev\ATLAS\Locates 2.0\LocateWebServices\LocateService\LocateService\obj\Debug\LocateService.dll
+C:\_Dev\ATLAS\Locates 2.0\LocateWebServices\LocateService\LocateService\obj\Debug\LocateService.pdb

@@ -1,0 +1,1 @@
+C:\_Dev\ATLAS\LoanstarWorldWide\OCC_DTC_Tool\OCC_DTC_Tool\bin\Debug\OCC_DTC_Tool.exe.config

@@ -1,0 +1,15 @@
+U:\_Dev\ATLAS\Loanstar 2.0\TradingGatewayWS\TradingGatewayWCF\TgDatabaseFunctions\bin\Debug\TgDatabaseFunctions.dll
+U:\_Dev\ATLAS\Loanstar 2.0\TradingGatewayWS\TradingGatewayWCF\TgDatabaseFunctions\bin\Debug\TgDatabaseFunctions.pdb
+U:\_Dev\ATLAS\Loanstar 2.0\TradingGatewayWS\TradingGatewayWCF\TgDatabaseFunctions\obj\Debug\ResolveAssemblyReference.cache
+U:\_Dev\ATLAS\Loanstar 2.0\TradingGatewayWS\TradingGatewayWCF\TgDatabaseFunctions\obj\Debug\TgDatabaseFunctions.dll
+U:\_Dev\ATLAS\Loanstar 2.0\TradingGatewayWS\TradingGatewayWCF\TgDatabaseFunctions\obj\Debug\TgDatabaseFunctions.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar 3.0\TgDatabaseFunctions\bin\Debug\TgDatabaseFunctions.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar 3.0\TgDatabaseFunctions\bin\Debug\TgDatabaseFunctions.pdb
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar 3.0\TgDatabaseFunctions\obj\Debug\ResolveAssemblyReference.cache
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar 3.0\TgDatabaseFunctions\obj\Debug\TgDatabaseFunctions.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar 3.0\TgDatabaseFunctions\obj\Debug\TgDatabaseFunctions.pdb
+C:\_Dev\ATLAS\Loanstar\TgDatabaseFunctions\bin\Debug\TgDatabaseFunctions.dll
+C:\_Dev\ATLAS\Loanstar\TgDatabaseFunctions\bin\Debug\TgDatabaseFunctions.pdb
+C:\_Dev\ATLAS\Loanstar\TgDatabaseFunctions\obj\Debug\ResolveAssemblyReference.cache
+C:\_Dev\ATLAS\Loanstar\TgDatabaseFunctions\obj\Debug\TgDatabaseFunctions.dll
+C:\_Dev\ATLAS\Loanstar\TgDatabaseFunctions\obj\Debug\TgDatabaseFunctions.pdb

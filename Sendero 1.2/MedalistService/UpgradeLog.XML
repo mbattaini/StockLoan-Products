@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="MedalistService">
+</Property><Property Name="Solution File" Value="C:\_dev\Sendero 1.2\MedalistService\MedalistService.sln">
+</Property><Property Name="Date" Value="Monday, July 23, 2012">
+</Property><Property Name="Time" Value="12:00 PM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="MedalistService.sln" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\MedalistService.sln">
+</Event><Event ErrorLevel="0" Project="MedalistService" Source="MedalistService.csproj" Description="Project file successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\MedalistService.csproj">
+</Event><Event ErrorLevel="0" Project="MedalistService" Source="MedalistService.csproj.user" Description="Project user file successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\MedalistService.csproj.user">
+</Event><Event ErrorLevel="0" Project="MedalistService" Source="AssemblyInfo.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="MedalistService" Source="ProjectInstaller.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\ProjectInstaller.cs">
+</Event><Event ErrorLevel="0" Project="MedalistService" Source="Service.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Service.cs">
+</Event><Event ErrorLevel="0" Project="MedalistService" Source="ProjectInstaller.resx" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\ProjectInstaller.resx">
+</Event><Event ErrorLevel="0" Project="MedalistService" Source="Service.resx" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Service.resx">
+</Event><Event ErrorLevel="1" Project="MedalistService" Source="MedalistService.csproj" Description="Your project is targeting .NET Framework 2.0 or 3.0. If your project uses assemblies requiring a newer .NET Framework, your project will fail to build. You can change the .NET Framework version by clicking Properties on the project menu and then selecting a new version in the '.NET Framework' dropdown box. (In Visual Basic, this is located on the Compile tab by clicking the 'Advanced Compiler Options...' button.)">
+</Event><Event ErrorLevel="0" Project="MedalistService" Source="MedalistService.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="MedalistService" Source="MedalistService.csproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="MedalistServer" Source="..\MedalistServer\MedalistServer.csproj" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="0" Project="MedalistServer" Source="..\MedalistServer\MedalistServer.csproj" Description="Project file successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\MedalistServer\MedalistServer.csproj">
+</Event><Event ErrorLevel="0" Project="MedalistServer" Source="..\MedalistServer\MedalistServer.csproj.user" Description="Project user file successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\MedalistServer\MedalistServer.csproj.user">
+</Event><Event ErrorLevel="0" Project="MedalistServer" Source="..\MedalistServer\AdminAgent.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\MedalistServer\AdminAgent.cs">
+</Event><Event ErrorLevel="0" Project="MedalistServer" Source="..\MedalistServer\AssemblyInfo.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\MedalistServer\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="MedalistServer" Source="..\MedalistServer\BankLoanDtc.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\MedalistServer\BankLoanDtc.cs">
+</Event><Event ErrorLevel="0" Project="MedalistServer" Source="..\MedalistServer\BankLoanReports.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\MedalistServer\BankLoanReports.cs">
+</Event><Event ErrorLevel="0" Project="MedalistServer" Source="..\MedalistServer\Email.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\MedalistServer\Email.cs">
+</Event><Event ErrorLevel="0" Project="MedalistServer" Source="..\MedalistServer\Master.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\MedalistServer\Master.cs">
+</Event><Event ErrorLevel="0" Project="MedalistServer" Source="..\MedalistServer\MedalistMain.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\MedalistServer\MedalistMain.cs">
+</Event><Event ErrorLevel="0" Project="MedalistServer" Source="..\MedalistServer\PositionAgent.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\MedalistServer\PositionAgent.cs">
+</Event><Event ErrorLevel="0" Project="MedalistServer" Source="..\MedalistServer\RebateAgent.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\MedalistServer\RebateAgent.cs">
+</Event><Event ErrorLevel="0" Project="MedalistServer" Source="..\MedalistServer\RecallDocument.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\MedalistServer\RecallDocument.cs">
+</Event><Event ErrorLevel="0" Project="MedalistServer" Source="..\MedalistServer\ServiceAgent.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\MedalistServer\ServiceAgent.cs">
+</Event><Event ErrorLevel="0" Project="MedalistServer" Source="..\MedalistServer\ShortSaleAgent.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\MedalistServer\ShortSaleAgent.cs">
+</Event><Event ErrorLevel="0" Project="MedalistServer" Source="..\MedalistServer\ShortSaleNegativeRebateBillDocument.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\MedalistServer\ShortSaleNegativeRebateBillDocument.cs">
+</Event><Event ErrorLevel="0" Project="MedalistServer" Source="..\MedalistServer\SubstitutionAgent.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\MedalistServer\SubstitutionAgent.cs">
+</Event><Event ErrorLevel="0" Project="MedalistServer" Source="..\MedalistServer\Web References\SungardWS\Reference.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\MedalistServer\Web References\SungardWS\Reference.cs">
+</Event><Event ErrorLevel="2" Project="MedalistServer" Source="..\MedalistServer\Web References\SungardWS\Reference.map" Description="Failed to backup file as C:\_dev\Sendero 1.2\MedalistService\Backup\MedalistServer\Web References\SungardWS\Reference.map">
+</Event><Event ErrorLevel="2" Project="MedalistServer" Source="..\MedalistServer\Web References\SungardWS\SunGard.wsdl" Description="Failed to backup file as C:\_dev\Sendero 1.2\MedalistService\Backup\MedalistServer\Web References\SungardWS\SunGard.wsdl">
+</Event><Event ErrorLevel="0" Project="MedalistServer" Source="..\MedalistServer\MedalistServer.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="MedalistServer" Source="..\MedalistServer\MedalistServer.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="1" Project="Common" Source="..\Common\Common.csproj" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\Common\Common.csproj" Description="Project file successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Common\Common.csproj">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\Common\Common.csproj.user" Description="Project user file successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Common\Common.csproj.user">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\Common\AssemblyInfo.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Common\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\Common\DealList.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Common\DealList.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\Common\KeyValue.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Common\KeyValue.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\Common\List.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Common\List.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\Common\Log.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Common\Log.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\Common\RegistryValue.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Common\RegistryValue.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\Common\RemotingTools.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Common\RemotingTools.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\Common\Security.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Common\Security.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\Common\Standard.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Common\Standard.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\Common\Tools.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Common\Tools.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\Common\Common.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Common" Source="..\Common\Common.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="1" Project="Filer" Source="..\Filer\Filer.csproj" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="0" Project="Filer" Source="..\Filer\Filer.csproj" Description="Project file successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Filer\Filer.csproj">
+</Event><Event ErrorLevel="0" Project="Filer" Source="..\Filer\Filer.csproj.user" Description="Project user file successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Filer\Filer.csproj.user">
+</Event><Event ErrorLevel="0" Project="Filer" Source="..\Filer\AssemblyInfo.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Filer\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Filer" Source="..\Filer\Filer.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Filer\Filer.cs">
+</Event><Event ErrorLevel="0" Project="Filer" Source="..\Filer\GnuPG.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Filer\GnuPG.cs">
+</Event><Event ErrorLevel="0" Project="Filer" Source="..\Filer\Filer.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Filer" Source="..\Filer\Filer.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="1" Project="Medalist" Source="..\Medalist\Medalist.csproj" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="0" Project="Medalist" Source="..\Medalist\Medalist.csproj" Description="Project file successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Medalist\Medalist.csproj">
+</Event><Event ErrorLevel="0" Project="Medalist" Source="..\Medalist\Medalist.csproj.user" Description="Project user file successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Medalist\Medalist.csproj.user">
+</Event><Event ErrorLevel="0" Project="Medalist" Source="..\Medalist\AssemblyInfo.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Medalist\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Medalist" Source="..\Medalist\IAdmin.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Medalist\IAdmin.cs">
+</Event><Event ErrorLevel="0" Project="Medalist" Source="..\Medalist\IPosition.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Medalist\IPosition.cs">
+</Event><Event ErrorLevel="0" Project="Medalist" Source="..\Medalist\IRebate.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Medalist\IRebate.cs">
+</Event><Event ErrorLevel="0" Project="Medalist" Source="..\Medalist\IService.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Medalist\IService.cs">
+</Event><Event ErrorLevel="0" Project="Medalist" Source="..\Medalist\IShortSale.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Medalist\IShortSale.cs">
+</Event><Event ErrorLevel="0" Project="Medalist" Source="..\Medalist\ISubstitution.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Medalist\ISubstitution.cs">
+</Event><Event ErrorLevel="0" Project="Medalist" Source="..\Medalist\Medalist.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Medalist" Source="..\Medalist\Medalist.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="1" Project="Process" Source="..\Process\Process.csproj" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\Process\Process.csproj" Description="Project file successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Process\Process.csproj">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\Process\Process.csproj.user" Description="Project user file successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Process\Process.csproj.user">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\Process\AssemblyInfo.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Process\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\Process\IProcess.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Process\IProcess.cs">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\Process\Process.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Process" Source="..\Process\Process.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="1" Project="Services" Source="..\Services\Services.csproj" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="0" Project="Services" Source="..\Services\Services.csproj" Description="Project file successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Services\Services.csproj">
+</Event><Event ErrorLevel="0" Project="Services" Source="..\Services\Services.csproj.user" Description="Project user file successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Services\Services.csproj.user">
+</Event><Event ErrorLevel="0" Project="Services" Source="..\Services\AssemblyInfo.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Services\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Services" Source="..\Services\Countries.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Services\Countries.cs">
+</Event><Event ErrorLevel="0" Project="Services" Source="..\Services\Currencies.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Services\Currencies.cs">
+</Event><Event ErrorLevel="0" Project="Services" Source="..\Services\Desks.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Services\Desks.cs">
+</Event><Event ErrorLevel="0" Project="Services" Source="..\Services\DeskTypes.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Services\DeskTypes.cs">
+</Event><Event ErrorLevel="0" Project="Services" Source="..\Services\Email.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Services\Email.cs">
+</Event><Event ErrorLevel="0" Project="Services" Source="..\Services\Fax.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Services\Fax.cs">
+</Event><Event ErrorLevel="0" Project="Services" Source="..\Services\Filer.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Services\Filer.cs">
+</Event><Event ErrorLevel="0" Project="Services" Source="..\Services\Firms.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Services\Firms.cs">
+</Event><Event ErrorLevel="0" Project="Services" Source="..\Services\Holidays.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Services\Holidays.cs">
+</Event><Event ErrorLevel="0" Project="Services" Source="..\Services\WebService.cs" Description="File successfully backed up as C:\_dev\Sendero 1.2\MedalistService\Backup\Services\WebService.cs">
+</Event><Event ErrorLevel="1" Project="Services" Source="..\Services\Services.csproj" Description="Your project is targeting .NET Framework 2.0 or 3.0. If your project uses assemblies requiring a newer .NET Framework, your project will fail to build. You can change the .NET Framework version by clicking Properties on the project menu and then selecting a new version in the '.NET Framework' dropdown box. (In Visual Basic, this is located on the Compile tab by clicking the 'Advanced Compiler Options...' button.)">
+</Event><Event ErrorLevel="0" Project="Services" Source="..\Services\Services.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Services" Source="..\Services\Services.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="MedalistService.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="MedalistService.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="MedalistService" Source="MedalistService.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Services" Source="..\Services\Services.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

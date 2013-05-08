@@ -1,0 +1,1266 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Silverlight.ReportViewer</name>
+    </assembly>
+    <members>
+        <member name="M:C1.Silverlight.ReportViewer.TIFFFaxDecoder.#ctor(System.Int32,System.Int32,System.Int32)">
+            @param fillOrder   The fill order of the compressed data bytes.
+            @param w
+            @param h
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.TIFFFaxDecompressor.fillOrder">
+            The logical order of bits within a byte.
+            <pre>
+            1 = MSB-to-LSB
+            2 = LSB-to-MSB (flipped)
+            </pre>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.TIFFFaxDecompressor.uncompressedMode">
+            Uncompressed mode flag: 1 if uncompressed, 0 if not.
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.TIFFFaxDecompressor.fillBits">
+            EOL padding flag: 1 if fill bits have been added before an EOL such
+            that the EOL ends on a byte boundary, 0 otherwise.
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.TIFFFaxDecompressor.oneD">
+            Coding dimensionality: 1 for 2-dimensional, 0 for 1-dimensional.
+        </member>
+        <member name="M:C1.Silverlight.ReportViewer.TIFFFaxDecompressor.SetOptions(System.Int32,System.Int32,System.Int32,System.Int32)">
+            Invokes the superclass method and then sets instance variables on
+            the basis of the metadata set on this decompressor.
+        </member>
+        <member name="T:C1.Silverlight.ReportViewer.C1ReportViewer">
+            <summary>
+            Displays PDF and HTML documents with navigation controls.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.ReportViewer.C1ReportViewer.LoadDocument(System.String)">
+            <summary>
+            Load a PDF or HMTL document from a file.
+            </summary>
+            <param name="fileName">The name of the file that contains the PDF or HTML document.</param>
+            <remarks>
+            To load a document from an HTML string, use the <see cref="M:C1.Silverlight.ReportViewer.C1ReportViewer.LoadDocumentFromString(System.String)"/> method.
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.ReportViewer.C1ReportViewer.LoadDocument(System.IO.Stream)">
+            <summary>
+            Load a PDF or HTML document from a <see cref="T:System.IO.Stream"/>.
+            </summary>
+            <param name="stream">A <see cref="T:System.IO.Stream"/> containing a PDF or HTML document.</param>
+        </member>
+        <member name="M:C1.Silverlight.ReportViewer.C1ReportViewer.CloseDocument">
+            <summary>
+            Closes the current document.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.ReportViewer.C1ReportViewer.LoadDocumentFromString(System.String)">
+            <summary>
+            Load an HTML document from a <see cref="T:System.String"/>.
+            </summary>
+            <param name="htmlString">A <see cref="T:System.String"/> containing an HTML document.</param>
+            <example>
+            The code below loads a simple HTML document into the control:
+            <code>
+            _c1ReportViewer.LoadDocumentFromString("&lt;html&gt;Hello &lt;b&gt;World&lt;/b&gt;!&lt;/html&gt;");
+            </code>
+            </example>
+        </member>
+        <member name="M:C1.Silverlight.ReportViewer.C1ReportViewer.SaveDocument(System.String)">
+            <summary>
+            Save the current document to a file.
+            </summary>
+            <param name="fileName">The name of the file where the current document is saved.</param>
+        </member>
+        <member name="M:C1.Silverlight.ReportViewer.C1ReportViewer.SaveDocument(System.IO.Stream)">
+            <summary>
+            Save the current document to a <see cref="T:System.IO.Stream"/>.
+            </summary>
+            <param name="stream">The stream where the current document is saved.</param>
+        </member>
+        <member name="M:C1.Silverlight.ReportViewer.C1ReportViewer.PrintDocument(System.String)">
+            <summary>
+            Print the current document.
+            </summary>
+            <param name="documentName">The name used when printing.</param>
+        </member>
+        <member name="M:C1.Silverlight.ReportViewer.C1ReportViewer.SaveDocument">
+            <summary>
+            Save the current document to a file.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.ReportViewer.C1ReportViewer.GoToPage(System.Int32)">
+            <summary>
+            Jump to a specified page number.
+            </summary>
+            <param name="pageNumber">The number of the page to jump to.</param>
+        </member>
+        <member name="M:C1.Silverlight.ReportViewer.C1ReportViewer.FindNext">
+            <summary>
+            Go to the next occurrence of <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.FindText"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.ReportViewer.C1ReportViewer.FindPrevious">
+            <summary>
+            Go to the previous occurrence of <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.FindText"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.ReportViewer.C1ReportViewer.ClipboardCopy">
+            <summary>
+            Copy the current selection to the clipboard.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.ReportViewer.C1ReportViewer.GetPages">
+            <summary>
+            Returns a copy of the <see cref="T:System.Windows.FrameworkElement">FrameworkElements</see> that represent the document pages.
+            </summary>
+            <returns>A copy of the <see cref="T:System.Windows.FrameworkElement">FrameworkElements</see> that represent the document pages.</returns>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.PageNumberProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.PageNumber"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.PageCountProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.PageCount"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.FirstPageCommandProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.FirstPageCommand"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.PreviousPageCommandProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.PreviousPageCommand"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.NextPageCommandProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.NextPageCommand"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.LastPageCommandProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.LastPageCommand"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.ZoomProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.Zoom"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.DecreaseZoomCommandProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.DecreaseZoomCommand"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.IncreaseZoomCommandProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.IncreaseZoomCommand"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.SaveCommandProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.SaveCommand"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.FindNextCommandProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.FindNextCommand"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.FindPreviousCommandProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.FindPreviousCommand"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.FindTextProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.FindText"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.FindCountProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.FindCount"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.FindNumberProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.FindNumber"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.PrintCommandProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.PrintCommand"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.PageSizeProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.PageSize"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.PageMarginProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.PageMargin"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.ViewModeProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.ViewMode"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.SelectionBackgroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.SelectionBackground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.IsFlowingProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.IsFlowing"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.PageTemplateProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.PageTemplate"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.HorizontalScrollBarVisibilityProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.HorizontalScrollBarVisibility"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.VerticalScrollBarVisibilityProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.VerticalScrollBarVisibility"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.ComputedHorizontalScrollBarVisibilityProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.ComputedHorizontalScrollBarVisibility"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.ComputedVerticalScrollBarVisibilityProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.ComputedVerticalScrollBarVisibility"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.HorizontalOffsetProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.HorizontalOffset"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.VerticalOffsetProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.VerticalOffset"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.ScrollableWidthProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.ScrollableWidth"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.ScrollableHeightProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.ScrollableHeight"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.ExtentWidthProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.ExtentWidth"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.ExtentHeightProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.ExtentHeight"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.ViewportWidthProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.ViewportWidth"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.ViewportHeightProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.ViewportHeight"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.PageSeparationProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.PageSeparation"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.ToolbarVisibilityProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.ToolbarVisibility"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.ToolbarStyleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.ToolbarStyle"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewer.ScrollBarStyleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.ScrollBarStyle"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.ReportViewer.C1ReportViewer.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.ReportViewer.C1ReportViewer"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.ReportViewer.C1ReportViewer.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.ReportViewer.C1ReportViewer"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="E:C1.Silverlight.ReportViewer.C1ReportViewer.RequestNavigate">
+            <summary>
+            Fired when a link from a document is clicked.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.PageNumber">
+            <summary>
+            Gets the page number for the currently displayed page.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.ReportViewer.C1ReportViewer.PageNumberChanged">
+            <summary> 
+            Event raised when the <see cref="P:PageNumber"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.PageCount">
+            <summary>
+            Gets the current number of display pages for the content hosted by the <see cref="T:C1.Silverlight.ReportViewer.C1ReportViewer"/>.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.ReportViewer.C1ReportViewer.PageCountChanged">
+            <summary> 
+            Event raised when the <see cref="P:PageCount"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.FirstPageCommand">
+            <summary>
+            Gets the <see cref="T:System.Windows.Input.ICommand"/> that goes to the first page.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.PreviousPageCommand">
+            <summary>
+            Gets the <see cref="T:System.Windows.Input.ICommand"/> that goes to the previous page.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.NextPageCommand">
+            <summary>
+            Gets the <see cref="T:System.Windows.Input.ICommand"/> that goes to the next page.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.LastPageCommand">
+            <summary>
+            Gets the <see cref="T:System.Windows.Input.ICommand"/> that goes to the last page.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.Zoom">
+            <summary>
+            Gets or sets the document zoom.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.ReportViewer.C1ReportViewer.ZoomChanged">
+            <summary> 
+            Event raised when the <see cref="P:Zoom"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.DecreaseZoomCommand">
+            <summary>
+            Gets the <see cref="T:System.Windows.Input.ICommand"/> that decreases zoom.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.IncreaseZoomCommand">
+            <summary>
+            Gets the <see cref="T:System.Windows.Input.ICommand"/> that increases zoom.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.SaveCommand">
+            <summary>
+            Gets the <see cref="T:System.Windows.Input.ICommand"/> that saves the document using <see cref="T:System.Windows.Controls.SaveFileDialog"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.FindNextCommand">
+            <summary>
+            Gets the <see cref="T:System.Windows.Input.ICommand"/> that performs the <see cref="M:C1.Silverlight.ReportViewer.C1ReportViewer.FindNext"/> operation.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.FindPreviousCommand">
+            <summary>
+            Gets the <see cref="T:System.Windows.Input.ICommand"/> that performs the <see cref="M:C1.Silverlight.ReportViewer.C1ReportViewer.FindPrevious"/> operation.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.FindText">
+            <summary>
+            Gets or sets the text that will be searched by <see cref="M:C1.Silverlight.ReportViewer.C1ReportViewer.FindNext"/> and <see cref="M:C1.Silverlight.ReportViewer.C1ReportViewer.FindPrevious"/>.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.ReportViewer.C1ReportViewer.FindTextChanged">
+            <summary> 
+            Event raised when the <see cref="P:FindText"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.FindCount">
+            <summary>
+            Gets the total number of occurrences of <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.FindText"/>.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.ReportViewer.C1ReportViewer.FindCountChanged">
+            <summary> 
+            Event raised when the <see cref="P:FindCount"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.FindNumber">
+            <summary>
+            Gets the number of the currently selected occurrence of <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.FindText"/>.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.ReportViewer.C1ReportViewer.FindNumberChanged">
+            <summary> 
+            Event raised when the <see cref="P:FindNumber"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.PrintCommand">
+            <summary>
+            Gets the <see cref="T:System.Windows.Input.ICommand"/> that performs the <see cref="M:C1.Silverlight.ReportViewer.C1ReportViewer.PrintDocument(System.String)"/> operation.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.PageSize">
+            <summary>
+            Gets or sets the size of the page used for displaying and printing HTML documents.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.PageMargin">
+            <summary>
+            Gets or sets the margin of the page used for displaying and printing HTML documents.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.ViewMode">
+            <summary>
+            Gets or sets the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewer.ViewMode"/> for this <see cref="T:C1.Silverlight.ReportViewer.C1ReportViewer"/>.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.ReportViewer.C1ReportViewer.ViewModeChanged">
+            <summary> 
+            Event raised when the <see cref="P:ViewMode"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.SelectionBackground">
+            <summary>
+            Gets or sets a <see cref="T:System.Windows.Media.Brush"/> for this <see cref="T:C1.Silverlight.ReportViewer.C1ReportViewer"/>'s selection.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.IsFlowing">
+            <summary>
+            Gets whether the current document is displayed as a flowing document, instead of paged.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.ReportViewer.C1ReportViewer.IsFlowingChanged">
+            <summary> 
+            Event raised when the <see cref="P:IsFlowing"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.PageTemplate">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.DataTemplate"/> used to display pages.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.HorizontalScrollBarVisibility">
+            <summary>
+            Gets or sets a value that indicates whether a horizontal <see cref="T:System.Windows.Controls.Primitives.ScrollBar"/> should be displayed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.VerticalScrollBarVisibility">
+            <summary>
+            Gets or sets a value that indicates whether a horizontal <see cref="T:System.Windows.Controls.Primitives.ScrollBar"/> should be displayed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.ComputedHorizontalScrollBarVisibility">
+            <summary>
+            Gets a value that indicates whether the horizontal <see cref="T:System.Windows.Controls.Primitives.ScrollBar"/> is visible.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.ComputedVerticalScrollBarVisibility">
+            <summary>
+            Gets a value that indicates whether the vertical <see cref="T:System.Windows.Controls.Primitives.ScrollBar"/> is visible.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.HorizontalOffset">
+            <summary>
+            Gets or sets a value that indicates the horizontal offset of the scrolled content.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.VerticalOffset">
+            <summary>
+            Gets or sets a value that indicates the vertical offset of the scrolled content.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.ScrollableWidth">
+            <summary>
+            Gets a value that represents the vertical size of the area that can be scrolled; the difference between the width of the extent and the width of the viewport.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.ScrollableHeight">
+            <summary>
+            Gets a value that represents the horizontal size of the area that can be scrolled; the difference between the height of the extent and the height of the viewport.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.ExtentWidth">
+            <summary>
+            Gets the horizontal size of all the content for display in the <see cref="T:C1.Silverlight.ReportViewer.C1ReportViewer"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.ExtentHeight">
+            <summary>
+            Gets the vertical size of all the content for display in the <see cref="T:C1.Silverlight.ReportViewer.C1ReportViewer"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.ViewportWidth">
+            <summary>
+            Gets a value that contains the horizontal size of the viewable content.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.ViewportHeight">
+            <summary>
+            Gets a value that contains the vertical size of the viewable content.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.PageSeparation">
+            <summary>
+            Gets or sets the separation between pages.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.ToolbarVisibility">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Visibility"/> of this <see cref="T:C1.Silverlight.ReportViewer.C1ReportViewer"/> toolbar.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.ToolbarStyle">
+            <summary>
+            Gets or set the style applied to this <see cref="T:C1.Silverlight.ReportViewer.C1ReportViewer"/>'s toolbar.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewer.ScrollBarStyle">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Style"/> used by the <see cref="T:System.Windows.Controls.Primitives.ScrollBar"/> control contained in the default template.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.ReportViewer.C1ReportViewerToolbar">
+            <summary>
+            Provides tools for controlling a <see cref="T:C1.Silverlight.ReportViewer.C1ReportViewer"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewerToolbar.ViewerProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewerToolbar.Viewer"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.C1ReportViewerToolbar.FindResultsProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.C1ReportViewerToolbar.FindResults"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.ReportViewer.C1ReportViewerToolbar.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.ReportViewer.C1ReportViewerToolbar"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.ReportViewer.C1ReportViewerToolbar.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.ReportViewer.C1ReportViewerToolbar"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewerToolbar.Viewer">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.ReportViewer.C1ReportViewer"/> this toolbar controls.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.C1ReportViewerToolbar.FindResults">
+            <summary>
+            Gets a string to display the number of current find results.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.ReportViewer.DocumentSource">
+            <summary>
+            Base class for document sources (internal use only).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.DocumentSource.CacheModeProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.DocumentSource.CacheMode"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.ReportViewer.DocumentSource.OnRequestNavigate(C1.Silverlight.ReportViewer.RequestNavigateEventArgs)">
+            <summary>
+            Raises the internal <see cref="E:RequestNavigate"/> event.
+            </summary>
+            <param name="args">The <see cref="T:C1.Silverlight.ReportViewer.RequestNavigateEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.DocumentSource.ContentProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.DocumentSource.Content"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.DocumentSource.PageNumberProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.DocumentSource.PageNumber"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.DocumentSource.PageCountProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.DocumentSource.PageCount"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.DocumentSource.ZoomProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.DocumentSource.Zoom"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.DocumentSource.PageSizeProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.DocumentSource.PageSize"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.DocumentSource.PageMarginProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.DocumentSource.PageMargin"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.DocumentSource.ViewModeProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.DocumentSource.ViewMode"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.DocumentSource.SelectionBackgroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.DocumentSource.SelectionBackground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.DocumentSource.IsFlowingProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.DocumentSource.IsFlowing"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.DocumentSource.PageTemplateProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.DocumentSource.PageTemplate"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.DocumentSource.HorizontalScrollBarVisibilityProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.DocumentSource.HorizontalScrollBarVisibility"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.DocumentSource.VerticalScrollBarVisibilityProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.DocumentSource.VerticalScrollBarVisibility"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.DocumentSource.ComputedHorizontalScrollBarVisibilityProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.DocumentSource.ComputedHorizontalScrollBarVisibility"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.DocumentSource.ComputedVerticalScrollBarVisibilityProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.DocumentSource.ComputedVerticalScrollBarVisibility"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.DocumentSource.HorizontalOffsetProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.DocumentSource.HorizontalOffset"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.DocumentSource.VerticalOffsetProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.DocumentSource.VerticalOffset"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.DocumentSource.ScrollableWidthProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.DocumentSource.ScrollableWidth"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.DocumentSource.ScrollableHeightProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.DocumentSource.ScrollableHeight"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.DocumentSource.ExtentWidthProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.DocumentSource.ExtentWidth"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.DocumentSource.ExtentHeightProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.DocumentSource.ExtentHeight"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.DocumentSource.ViewportWidthProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.DocumentSource.ViewportWidth"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.DocumentSource.ViewportHeightProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.DocumentSource.ViewportHeight"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.DocumentSource.PageSeparationProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.ReportViewer.DocumentSource.PageSeparation"/> dependency property. 
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.DocumentSource.CacheMode">
+            <summary>
+            Gets or sets a value that indicates that rendered content should be cached when possible.
+            </summary>
+            <remarks>In order to enable caching, you must enable composition caching at the plug-in level by setting the value of an EnableGPUAcceleration param element to true as part of the object tag that declares the Silverlight plug-in.</remarks>
+            <value>The cache mode.</value>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.DocumentSource.Content">
+            <summary>
+            Gets a content of the document.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.DocumentSource.PageNumber">
+            <summary>
+            Gets a value that indicates the current page number.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.DocumentSource.PageCount">
+            <summary>
+            Gets a value that indicates the total page count.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.DocumentSource.Zoom">
+            <summary>
+            Gets the current zoom value.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.DocumentSource.PageSize">
+            <summary>
+            Gets a value that indicates the current page size.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.DocumentSource.PageMargin">
+            <summary>
+            Gets a value that indicates the <see cref="T:System.Windows.Thickness"/> used as margin for each page.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.DocumentSource.ViewMode">
+            <summary>
+            Gets a value that indicates the current view mode.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.DocumentSource.SelectionBackground">
+            <summary>
+            Gets a value that indicates the <see cref="T:System.Windows.Media.Brush"/> used for Selection.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.DocumentSource.IsFlowing">
+            <summary>
+            Gets a value that indicates if the document is flowing (i.e. in HTML documents).
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.DocumentSource.PageTemplate">
+            <summary>
+            Gets a value that indicates the PageTemplate.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.DocumentSource.HorizontalScrollBarVisibility">
+            <summary>
+            Gets or sets a value that indicates whether a horizontal <see cref="T:System.Windows.Controls.Primitives.ScrollBar"/> should be displayed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.DocumentSource.VerticalScrollBarVisibility">
+            <summary>
+            Gets or sets a value that indicates whether a horizontal <see cref="T:System.Windows.Controls.Primitives.ScrollBar"/> should be displayed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.DocumentSource.ComputedHorizontalScrollBarVisibility">
+            <summary>
+            Gets a value that indicates whether the horizontal <see cref="T:System.Windows.Controls.Primitives.ScrollBar"/> is visible.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.DocumentSource.ComputedVerticalScrollBarVisibility">
+            <summary>
+            Gets a value that indicates whether the vertical <see cref="T:System.Windows.Controls.Primitives.ScrollBar"/> is visible.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.DocumentSource.HorizontalOffset">
+            <summary>
+            Gets or sets a value that indicates the horizontal offset of the scrolled content.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.DocumentSource.VerticalOffset">
+            <summary>
+            Gets or sets a value that indicates the vertical offset of the scrolled content.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.DocumentSource.ScrollableWidth">
+            <summary>
+            Gets a value that represents the vertical size of the area that can be scrolled; the difference between the width of the extent and the width of the viewport.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.DocumentSource.ScrollableHeight">
+            <summary>
+            Gets a value that represents the horizontal size of the area that can be scrolled; the difference between the height of the extent and the height of the viewport.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.DocumentSource.ExtentWidth">
+            <summary>
+            Gets the horizontal size of all the content for display in the <see cref="T:C1.Silverlight.ReportViewer.C1ReportViewer"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.DocumentSource.ExtentHeight">
+            <summary>
+            Gets the vertical size of all the content for display in the <see cref="T:C1.Silverlight.ReportViewer.C1ReportViewer"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.DocumentSource.ViewportWidth">
+            <summary>
+            Gets a value that contains the horizontal size of the viewable content.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.DocumentSource.ViewportHeight">
+            <summary>
+            Gets a value that contains the vertical size of the viewable content.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.DocumentSource.PageSeparation">
+            <summary>
+            Gets a value that indicates the <see cref="T:System.Windows.Thickness"/> used as separation between pages.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.ReportViewer.PageContext">
+            <summary>
+            Class used as DataContext for each page <see cref="T:System.Windows.UIElement"/>.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.ReportViewer.PageContext.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.PageContext.Source">
+            <summary>
+            Gets a specialized subclass of <see cref="T:C1.Silverlight.ReportViewer.DocumentSource"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.PageContext.Content">
+            <summary>
+            Gets the content that will be shown in the page <see cref="T:System.Windows.UIElement"/>.
+            Typically a <see cref="T:System.Windows.UIElement"/> itself, or to be used as Content of a <see cref="T:System.Windows.Controls.ContentControl"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.ReportViewer.GraphicsState">
+            <summary>
+            Keeps the state of the objects used for generating graphics 
+            on the page (pen, brush, transforms, clipping region)
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.ReportViewer.PdfEncoding">
+            <summary>
+            Converts bytes into strings using Adobe's WinAnsiEncoding or special encodings
+            specified by the fonts.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.ReportViewer.PdfEncoding.#ctor(C1.Silverlight.ReportViewer.PdfObject)">
+            <summary>
+            Creates a new instance of a <see cref="T:C1.Silverlight.ReportViewer.PdfEncoding"/> based on a font object.
+            </summary>
+            <param name="fontObject">Font object as encoded in the pdf stream.</param>
+        </member>
+        <member name="M:C1.Silverlight.ReportViewer.PdfEncoding.ToString(System.Byte[])">
+            <summary>
+            Convert to text string array of bytes in pdf encoding.
+            </summary>
+            <param name="bytes">The array of bytes.</param>
+            <returns>The text string.</returns>
+        </member>
+        <member name="T:C1.Silverlight.ReportViewer.PdfImageDecoder">
+            <summary>
+            Converts PDF image streams into .NET image streams.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.ReportViewer.PdfImageDecoder.GetImage(C1.Silverlight.ReportViewer.PdfObject)">
+            <summary>
+            Gets an image from a Pdf object.
+            </summary>
+            <param name="obj">Pdf object that contains the image.</param>
+            <returns>ImageSource object that contains the image.</returns>
+        </member>
+        <member name="M:C1.Silverlight.ReportViewer.PdfImageDecoder.GetImageMask(C1.Silverlight.ReportViewer.PdfObject)">
+            <summary>
+            Gets an image that can be used as a 'soft mask'.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.PdfImageDecoder.ImageNotAvailable">
+            <summary>
+            Gets a stock ImageSource to indicate we failed to load an image.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.ReportViewer.PdfObject">
+            <summary>
+            Smallest unit of information in a PDF document 
+            (dictionary, stream, image, etc)
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.ReportViewer.PdfObjectWrapper">
+            <summary>
+            Base class for specialized objects such as <see cref="T:C1.Silverlight.ReportViewer.PdfPage"/>
+            and <see cref="T:C1.Silverlight.ReportViewer.PdfOutlineNode"/> that wrap low-level pdf objects.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.ReportViewer.PdfOutlineNode">
+            <summary>
+            Represents a node in a PDF document's outline tree.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.ReportViewer.PdfPage">
+            <summary>
+            Represents a page in a PDF document. Page objects contain the 
+            data needed to create visual representations of the page,
+            which is done by the <see cref="T:C1.Silverlight.ReportViewer.PdfPageElement"/> class.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.PdfPage.PageRectangle">
+            <summary>
+            Gets the rectangle that defines the page size in Points.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.PdfPage.Rotate">
+            <summary>
+            Gets the angle to be applied to the page when rendering it.
+            </summary>
+            <remarks>
+            The angle is expressed in degrees and should be a multiple of 90.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.PdfPage.PageText">
+            <summary>
+            Gets a string that contains the text on the page.
+            </summary>
+            <remarks>
+            This string is plain text. It is useful for searching and indexing.
+            </remarks>
+        </member>
+        <member name="T:C1.Silverlight.ReportViewer.PdfPageElement">
+            <summary>
+            Converts the data in a <see cref="T:C1.Silverlight.ReportViewer.PdfPage"/> object into a 
+            visual element that can be displayed on the screen.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.ReportViewer.PdfParser">
+            <summary>
+            Read a PDF file or stream and parse the contents into a list of
+            <see cref="T:C1.Silverlight.ReportViewer.PdfPage"/> and <see cref="T:C1.Silverlight.ReportViewer.PdfOutlineNode"/>objects.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.ReportViewer.PdfParser.Parse(System.String)">
+            <summary>
+            Parse the PDF document in a file and populate the <see cref="P:C1.Silverlight.ReportViewer.PdfParser.Pages"/>
+            and <see cref="P:C1.Silverlight.ReportViewer.PdfParser.Outline"/> collections.
+            </summary>
+            <param name="fileName">Name of the PDF file to parse.</param>
+        </member>
+        <member name="M:C1.Silverlight.ReportViewer.PdfParser.Parse(System.IO.Stream)">
+            <summary>
+            Parse the PDF document in a stream and populate the <see cref="P:C1.Silverlight.ReportViewer.PdfParser.Pages"/>
+            and <see cref="P:C1.Silverlight.ReportViewer.PdfParser.Outline"/> collections.
+            </summary>
+            <param name="stream">Stream that contains the PDF document.</param>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.PdfParser.Pages">
+            <summary>
+            Gets the collection of pages in the PDF document that was parsed
+            with a call to the <see cref="M:C1.Silverlight.ReportViewer.PdfParser.Parse(System.String)"/> method.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.PdfParser.Outline">
+            <summary>
+            Gets the collection of outline nodes in the PDF document that was parsed
+            with a call to the <see cref="M:C1.Silverlight.ReportViewer.PdfParser.Parse(System.String)"/> method.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.PdfParser.FastMode">
+            <summary>
+            Gets or sets a value that determines that the PDF file should
+            be rendered faster but with less accurate positioning.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.PdfParser.Search">
+            <summary>
+            Gets the <see cref="T:C1.Silverlight.ReportViewer.PdfSearchEngine"/> used to search for strings in the
+            current document.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.ReportViewer.PdfParserException">
+            <summary>
+            Exception thrown when problems are detected while parsing PDF 
+            documents.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.ReportViewer.PdfSearchEngine">
+            <summary>
+            Performs searches within the current PDF document.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.ReportViewer.PdfSearchEngine.Clear">
+            <summary>
+            Clears the search engine.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.ReportViewer.PdfSearchEngine.Find(System.Int32,System.Boolean)">
+            <summary>
+            Looks for the next match.
+            </summary>
+            <param name="page">Index of the page where the search should start.</param>
+            <param name="forward">Whether to search forward or backward.</param>
+            <returns>True if a match was found, false otherwise.</returns>
+        </member>
+        <member name="M:C1.Silverlight.ReportViewer.PdfSearchEngine.HighlightMatches(C1.Silverlight.ReportViewer.PdfPageElement)">
+            <summary>
+            Highlight matches on a given page.
+            </summary>
+            <param name="pageElement"></param>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.PdfSearchEngine.StringComparison">
+            <summary>
+            Gets or sets how to look for matches.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.PdfSearchEngine.Text">
+            <summary>
+            Gets or sets the text to search for.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.PdfSearchEngine.PageIndex">
+            <summary>
+            Gets the index of the page where a match was found.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.ReportViewer.TextState">
+            <summary>
+            Keeps the current text state while generating PDF pages
+            (e.g. font, cursor position, transformations)
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.ReportViewer.TextState.EmbeddedFont">
+            <summary>
+            Class that contains font source information and encapsulates differences
+            between Silverlight and WPF.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.ReportViewer.RequestNavigateEventArgs">
+            <summary>
+            Provides data for the <see cref="E:RequestNavigate"/> event. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.ReportViewer.RequestNavigateEventArgs.#ctor(System.String,System.Uri)">
+            <summary>
+            Initializes a new RequestNavigateEventArgs.
+            </summary>
+            <param name="target"></param>
+            <param name="uri"></param>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.RequestNavigateEventArgs.Target">
+            <summary>
+            Gets the target of the navigation request.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.RequestNavigateEventArgs.Uri">
+            <summary>
+            Gets the URI of the navigation request.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.ReportViewer.Resources.C1_Silverlight_ReportViewer">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.Resources.C1_Silverlight_ReportViewer.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.Resources.C1_Silverlight_ReportViewer.Copy">
+            <summary>
+              Looks up a localized string similar to Copy.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.Resources.C1_Silverlight_ReportViewer.FindNextTooltip">
+            <summary>
+              Looks up a localized string similar to Find Next.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.Resources.C1_Silverlight_ReportViewer.FindPreviousTooltip">
+            <summary>
+              Looks up a localized string similar to Find Previous.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.Resources.C1_Silverlight_ReportViewer.FindResults">
+            <summary>
+              Looks up a localized string similar to {0} of {1}.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.Resources.C1_Silverlight_ReportViewer.FindWatermark">
+            <summary>
+              Looks up a localized string similar to Find.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.Resources.C1_Silverlight_ReportViewer.FirstPageTooltip">
+            <summary>
+              Looks up a localized string similar to First Page.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.Resources.C1_Silverlight_ReportViewer.FitWidthTooltip">
+            <summary>
+              Looks up a localized string similar to Fit Width.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.Resources.C1_Silverlight_ReportViewer.LastPageTooltip">
+            <summary>
+              Looks up a localized string similar to Last Page.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.Resources.C1_Silverlight_ReportViewer.NextPageTooltip">
+            <summary>
+              Looks up a localized string similar to Next Page.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.Resources.C1_Silverlight_ReportViewer.OnePageTooltip">
+            <summary>
+              Looks up a localized string similar to One Page.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.Resources.C1_Silverlight_ReportViewer.PageLabel">
+            <summary>
+              Looks up a localized string similar to Page.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.Resources.C1_Silverlight_ReportViewer.PreviousPageTooltip">
+            <summary>
+              Looks up a localized string similar to Previous Page.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.Resources.C1_Silverlight_ReportViewer.PrintTooltip">
+            <summary>
+              Looks up a localized string similar to Print.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.Resources.C1_Silverlight_ReportViewer.SaveTooltip">
+            <summary>
+              Looks up a localized string similar to Save.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.Resources.C1_Silverlight_ReportViewer.TwoPagesTooltip">
+            <summary>
+              Looks up a localized string similar to Two Pages.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.Resources.C1_Silverlight_ReportViewer.ViewMode_FitWidth">
+            <summary>
+              Looks up a localized string similar to Fit Width.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.Resources.C1_Silverlight_ReportViewer.ViewMode_Normal">
+            <summary>
+              Looks up a localized string similar to Normal.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.Resources.C1_Silverlight_ReportViewer.ViewMode_OnePage">
+            <summary>
+              Looks up a localized string similar to One Page.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.Resources.C1_Silverlight_ReportViewer.ViewMode_TwoPages">
+            <summary>
+              Looks up a localized string similar to Two Pages.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.Resources.C1_Silverlight_ReportViewer.ZoomInTooltip">
+            <summary>
+              Looks up a localized string similar to Zoom In.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.ReportViewer.Resources.C1_Silverlight_ReportViewer.ZoomOutTooltip">
+            <summary>
+              Looks up a localized string similar to Zoom Out.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.ReportViewer.PrintPageVisual">
+            <summary>
+            Element that hosts a page visual for printing, with support for scaling and
+            mixed page orientation.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.ReportViewer.ViewMode">
+            <summary>
+            Describes view modes for <see cref="T:C1.Silverlight.ReportViewer.C1ReportViewer"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.ViewMode.Normal">
+            <summary>
+            Display pages using the current zoom value.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.ViewMode.OnePage">
+            <summary>
+            Automatically update the zoom value to fit one complete page inside the viewport.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.ViewMode.FitWidth">
+            <summary>
+            Automatically update the zoom value to fit the width of one page inside the viewport.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.ReportViewer.ViewMode.TwoPages">
+            Automatically update the zoom value to fit two complete pages, side by side, inside the viewport.
+        </member>
+        <member name="T:C1.Silverlight.ReportViewer.ZoomConverter">
+            <summary>
+            Converter used to show the Zoom value as text.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.ReportViewer.ZoomConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Modifies the source data before passing it to the target for display in the UI.
+            </summary>
+            <param name="value">The double or ViewMode value being passed to the target.</param>
+            <param name="targetType">The <see cref="T:System.Type"/> of data expected by the target dependency property.</param>
+            <param name="parameter">An optional parameter to be used in the converter logic.</param>
+            <param name="culture">The culture of the conversion.</param>
+            <returns>
+            The string value to be passed to the target dependency property. 
+            </returns>
+        </member>
+        <member name="M:C1.Silverlight.ReportViewer.ZoomConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Modifies the target data before passing it to the source object.  This method is called only in <see cref="F:System.Windows.Data.BindingMode.TwoWay"/> bindings.
+            </summary>
+            <param name="value">The target data being passed to the source.</param>
+            <param name="targetType">The <see cref="T:System.Type"/> of data expected by the source object.</param>
+            <param name="parameter">An optional parameter to be used in the converter logic.</param>
+            <param name="culture">The culture of the conversion.</param>
+            <returns>
+            The value to be passed to the source object.
+            </returns>
+        </member>
+    </members>
+</doc>

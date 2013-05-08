@@ -1,0 +1,181 @@
+// Licensed Materials - Property of Anetics, LLC.
+// (C) Copyright Anetics, LLC. 2005  All rights reserved.
+
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using Anetics.Common;
+
+namespace Anetics.Loanet
+{
+  public class ContractMaintenance
+  {
+    public ContractMaintenance()
+    {
+    }
+
+    public string Request(
+      string version,
+      string clientId,
+      string contractType,
+      string contractId,
+      string batchCode,
+      string deliveryDateUpdateIndicator,
+      string deliveryDate,
+      string markParameterUpdateIndicator,
+      string markParameterType,
+      long   markParameterAmount,
+      string divRateUpdateIndicator,
+      double divRate,
+      string imcomeTrackedUpdateIndicator,
+      string incomeTracked,
+      string expiryDateUpdateIndicator,
+      string expiryDate,
+      string commentUpdateIndicator,
+      string comment)
+    {
+      string message = "51";
+      message += version.PadLeft(5, ' ').Substring(0, 5);
+      message += clientId.PadLeft(4, ' ').Substring(0, 4);
+      message += contractType.PadLeft(1, ' ').Substring(0, 1);
+      message += contractId.PadLeft(9, ' ').Substring(0, 9);
+      message += batchCode.PadRight(1, ' ').Substring(0, 1);
+      message += deliveryDateUpdateIndicator.PadRight(1, ' ').Substring(0, 1);
+      
+      try
+      {
+        message += DateTime.Parse(deliveryDate).ToString("mmddyy");
+      }
+      catch
+      {
+        message += new string(' ', 6);
+      }
+
+      message += markParameterUpdateIndicator.PadRight(1, ' ').Substring(0, 1);
+      message += markParameterType.PadRight(1, ' ').Substring(0, 1);
+     
+      
+      switch(markParameterType)
+      {
+        case " ":
+        case "I": message += "000";
+          break;
+
+        case "D":
+        case "%": message += markParameterAmount.ToString("000");
+          break;
+      }
+
+      message += divRateUpdateIndicator.PadRight(1, ' ').Substring(0, 1);
+      message += divRate.ToString("000.000");
+
+      message += imcomeTrackedUpdateIndicator.PadRight(1, ' ').Substring(0, 1);
+      message += incomeTracked.PadRight(1, ' ').Substring(0, 1);
+
+      message += expiryDateUpdateIndicator.PadRight(1, ' ').Substring(0, 1);
+      
+      try
+      {
+        message += DateTime.Parse(expiryDate).ToString("mmddyy");
+      }
+      catch
+      {
+        message += new string(' ', 6);
+      }
+
+      message += commentUpdateIndicator.PadRight(1, ' ').Substring(0, 1);
+      message += comment.PadRight(20, ' ').Substring(0, 20);
+
+      return message;
+    }
+
+    public string Reply(string message)
+    {
+      string status = "";
+
+      switch(message.Substring(2, 1))
+      {
+        case "A": status = "";
+          break;
+        
+        case "X": status = "System/Processing Error";
+          break;
+
+        case "R": status = ParseRejectedRequest(message);
+          break;
+      }
+
+      return status;
+    }
+
+    public string ParseRejectedRequest(string message)
+    {
+      string error = "";
+
+      for(int index = 0; index < message.Length; index ++)
+      {
+        if (message[index].Equals('X'))
+        {
+          switch(index)
+          {
+            case 30: error += "Invalid Version";
+              break;
+
+            case 31: error += "Invalid Client Id";
+              break;
+
+            case 32: error += "Invalid Borrow/Loan";
+              break;
+
+            case 33: error += "Invalid Contract Id";
+              break;
+
+            case 34: error += "Invalid Batch Code";
+              break;
+
+            case 35: error += "Invalid Delivery Date";
+              break;
+
+            case 36: error += "Invalid Mark Parameter Type";
+              break;
+
+            case 37: error += "Invalid Mark Parameter Amount";
+              break;
+
+            case 38: error += "Invalid Dividend Flow Thru Rate";
+              break;
+
+            case 39: error += "Invalid Tracking Indicator";
+              break;
+
+            case 40: error += "Invalid Expiration Date";
+              break;
+
+            case 41: error += "Security Violation";
+              break;
+
+            case 42: error += "Contract Not Found";
+              break;
+
+            case 43: error += "Future Delivery Date";
+              break;
+
+            case 44: error += "Mark Parameter Amount not valid for specified Mark Parameter Type";
+              break;
+
+            case 45: error += "Expiration Date Required";
+              break;
+
+            case 46: error += "Expiration Date prior to Delivery Date";
+              break;
+
+            case 47: error += "No Updates Requested";
+              break;
+          }
+          error += " ";
+        }
+      }
+      return error; 
+    }
+  }
+}

@@ -1,0 +1,13 @@
+C:\_Dev\ATLAS\Locates 2.0\LocateWebServices\FTPClient\FTPClient\bin\Debug\FTPClient.exe
+C:\_Dev\ATLAS\Locates 2.0\LocateWebServices\FTPClient\FTPClient\bin\Debug\FTPClient.pdb
+C:\_Dev\ATLAS\Locates 2.0\LocateWebServices\FTPClient\FTPClient\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\_Dev\ATLAS\Locates 2.0\LocateWebServices\FTPClient\FTPClient\obj\x86\Debug\FTPClient.Form1.resources
+C:\_Dev\ATLAS\Locates 2.0\LocateWebServices\FTPClient\FTPClient\obj\x86\Debug\FTPClient.Properties.Resources.resources
+C:\_Dev\ATLAS\Locates 2.0\LocateWebServices\FTPClient\FTPClient\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\_Dev\ATLAS\Locates 2.0\LocateWebServices\FTPClient\FTPClient\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\_Dev\ATLAS\Locates 2.0\LocateWebServices\FTPClient\FTPClient\obj\x86\Debug\FTPClient.exe
+C:\_Dev\ATLAS\Locates 2.0\LocateWebServices\FTPClient\FTPClient\obj\x86\Debug\FTPClient.pdb
+C:\_Dev\ATLAS\Locates 2.0\LocateWebServices\FTPClient\FTPClient\bin\Debug\StockLoan.Transport.dll
+C:\_Dev\ATLAS\Locates 2.0\LocateWebServices\FTPClient\FTPClient\bin\Debug\StockLoan.Common.dll
+C:\_Dev\ATLAS\Locates 2.0\LocateWebServices\FTPClient\FTPClient\bin\Debug\StockLoan.Transport.pdb
+C:\_Dev\ATLAS\Locates 2.0\LocateWebServices\FTPClient\FTPClient\bin\Debug\StockLoan.Common.pdb

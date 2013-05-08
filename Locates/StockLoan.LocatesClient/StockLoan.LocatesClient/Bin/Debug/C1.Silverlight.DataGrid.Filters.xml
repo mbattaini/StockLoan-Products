@@ -1,0 +1,1001 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Silverlight.DataGrid.Filters</name>
+    </assembly>
+    <members>
+        <member name="T:C1.Silverlight.DataGrid.Filters.DataGridContentFilter">
+            <summary>
+            Content control that displays a filter unity (which can be a list of filters) 
+            as well as the buttons Filter and Clear.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridContentFilter.OnContentChanged(System.Object,System.Object)">
+            <summary>
+            Called when the value of the <see cref="P:System.Windows.Controls.ContentControl.Content"/> property changes.
+            </summary>
+            <param name="oldContent">The old value of the <see cref="P:System.Windows.Controls.ContentControl.Content"/> property.</param>
+            <param name="newContent">The new value of the <see cref="P:System.Windows.Controls.ContentControl.Content"/> property.</param>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridContentFilter.FilterCommandProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridContentFilter.FilterCommand"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridContentFilter.ClearCommandProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridContentFilter.ClearCommand"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridContentFilter.MouseOverBrushProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridContentFilter.MouseOverBrush"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridContentFilter.PressedBrushProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridContentFilter.PressedBrush"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridContentFilter.FocusBrushProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridContentFilter.FocusBrush"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridContentFilter.SelectedBackgroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridContentFilter.SelectedBackground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridContentFilter.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.DataGrid.Filters.DataGridContentFilter"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridContentFilter.FilterCommand">
+            <summary>
+            Gets or sets the filter command.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridContentFilter.ClearCommand">
+            <summary>
+            Gets or sets the clear command.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridContentFilter.MouseOverBrush">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to highlight the control when it has the mouse over.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridContentFilter.PressedBrush">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to paint a button when it is pressed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridContentFilter.FocusBrush">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to highlight the focused control.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridContentFilter.SelectedBackground">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to highlight the control when it is selected.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Filters.DataGridFilterItem">
+            <summary>
+            Visual element which is displayed along with the <see cref="T:C1.Silverlight.DataGrid.Filters.DataGridFilterList"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridFilterItem.ChangeVisualStateCurrency(System.Boolean)">
+            <summary>
+            Updates the current visual state of the Currency visual state group to match the object's properties.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridFilterItem.IsCurrentProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridFilterItem.IsCurrent"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridFilterItem.SelectedBackgroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridFilterItem.SelectedBackground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridFilterItem.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.DataGrid.Filters.DataGridFilterItem"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridFilterItem.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.DataGrid.Filters.DataGridFilterItem"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridFilterItem.IsCurrent">
+            <summary>
+            Gets or sets a value indicating when this item is the current one.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridFilterItem.SelectedBackground">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to highlight the control when it is selected.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Filters.DataGridFilterList">
+            <summary>
+            Visual element which displays a list of filters.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridFilterList.IsItemItsOwnContainerOverride(System.Object)">
+            <summary>
+            Determines if the specified item is (or is eligible to be) its own container.
+            </summary>
+            <param name="item">The item to check.</param>
+            <returns>
+            true if the item is (or is eligible to be) its own container; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridFilterList.GetContainerForItemOverride">
+            <summary>
+            Creates or identifies the element that is used to display the given item.
+            </summary>
+            <returns>
+            The element that is used to display the given item.
+            </returns>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridFilterList.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Prepares the specified element to display the specified item.
+            </summary>
+            <param name="element">The element used to display the specified item.</param>
+            <param name="item">The item to display.</param>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridFilterList.ClearContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Undoes the effects of the <see cref="M:System.Windows.Controls.ItemsControl.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)"/> method.
+            </summary>
+            <param name="element">The container element.</param>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridFilterList.RaisePropertyChanged(System.String)">
+            <summary>
+            Raises the <see cref="e:PropertyChanged"/> event.
+            </summary>
+            <param name="propertyName">Name of the property that was changed.</param>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridFilterList.CurrentItemProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridFilterList.CurrentItem"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridFilterList.ItemsProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridFilterList.Items"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridFilterList.MouseOverBrushProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridFilterList.MouseOverBrush"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridFilterList.PressedBrushProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridFilterList.PressedBrush"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridFilterList.FocusBrushProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridFilterList.FocusBrush"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridFilterList.SelectedBackgroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridFilterList.SelectedBackground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridFilterList.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.DataGrid.Filters.DataGridFilterList"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridFilterList.Filter">
+            <summary>
+            Gets or sets the filter shown in the unity.
+            </summary>
+            <value></value>
+        </member>
+        <member name="E:C1.Silverlight.DataGrid.Filters.DataGridFilterList.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridFilterList.CurrentItem">
+            <summary>
+            Gets or sets the current filter.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridFilterList.Items">
+            <summary>
+            Gets or sets the collection of filter that the list will show.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridFilterList.MouseOverBrush">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to highlight the control when it has the mouse over.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridFilterList.PressedBrush">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to paint a button when it is pressed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridFilterList.FocusBrush">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to highlight the focused control.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridFilterList.SelectedBackground">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to highlight the control when it is selected.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Filters.DataGridMultiLineCombinationsItem">
+            <summary>
+            Visual element that shows three radio buttons None, And, and Or, to combine filters.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridMultiLineCombinationsItem.RaisePropertyChanged(System.String)">
+            <summary>
+            Raises the property changed event.
+            </summary>
+            <param name="propertyName">Name of the property that changed.</param>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridMultiLineCombinationsItem.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.DataGrid.Filters.DataGridMultiLineCombinationsItem"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineCombinationsItem.Value">
+            <summary>
+            Gets or sets the value that represent the logic combination between filters.
+            </summary>
+            <remarks>
+            <list type="bullets">
+            <item><term><c>null</c></term><description>None</description></item>
+            <item><term><c>true</c></term><description>And</description></item>
+            <item><term><c>false</c></term><description>Or</description></item>
+            </list>
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineCombinationsItem.IsNone">
+            <summary>
+            Gets or sets a value indicating whether "none" is selected.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineCombinationsItem.IsOr">
+            <summary>
+            Gets or sets a value indicating whether "or" is selected.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineCombinationsItem.IsAnd">
+            <summary>
+            Gets or sets a value indicating whether "and" is selected.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineCombinationsItem.NoneText">
+            <summary>
+            Gets the localized "none" text.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineCombinationsItem.OrText">
+            <summary>
+            Gets the localized "or" text.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineCombinationsItem.AndText">
+            <summary>
+            Gets the localized "and" text.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineCombinationsItem.IsNoneEnabled">
+            <summary>
+            Gets or sets a value indicating whether the option "none" is enabled.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.DataGrid.Filters.DataGridMultiLineCombinationsItem.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Filters.DataGridMultiLineDateTimeFilter">
+            <summary>
+            Display a list of date operations that can be changed by the user.
+            the user has the ability of adding and removing operations by changing the combinations between filters.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter">
+            <summary>
+            When overridden it shows a list of operations and combination between operations, 
+            allowing the user to add more operations interactively.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.SetCustomDefaultValues">
+            <summary>
+            Sets the custom default values.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.GetFilter">
+            <summary>
+            Gets the filter state object from the information gathered in the control.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.CreateNewItem(C1.Silverlight.DataGrid.DataGridFilterInfo)">
+            <summary>
+            When inherited, creates an initializes new item.
+            </summary>
+            <param name="filterInfo">The filter info that the new item will show.</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.ReleaseItem(System.Object)">
+            <summary>
+            Called when an item is not longer used in order to releases the resources that the item uses.
+            </summary>
+            <param name="item">The item to be released.</param>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.GetFilterInfoFromItem(System.Object)">
+            <summary>
+            Gets the operation information gathered in the item object.
+            </summary>
+            <param name="item">Object that contains the information entered by the user for this particular item.</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.SetFilter(C1.Silverlight.DataGrid.DataGridFilterState)">
+            <summary>
+            Sets the filter into the control.
+            </summary>
+            <param name="filterState">State of the filter.</param>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.CanSetFilter(C1.Silverlight.DataGrid.DataGridFilterState)">
+            <summary>
+            Determines whether this the specified filter state can be set in this filter.
+            </summary>
+            <param name="filterState">State of the filter.</param>
+            <returns>
+              <c>true</c> if the specified filter state can be set in this filter; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.UpdateFilter">
+            <summary>
+            Updates the filter information.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.RaisePropertyChanged(System.String)">
+            <summary>
+            Raises the property changed event.
+            </summary>
+            <param name="propertyName">Name of the property that has changed.</param>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.MaxLinesProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.MaxLines"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.FormatProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.Format"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.MouseOverBrushProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.MouseOverBrush"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.PressedBrushProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.PressedBrush"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.InputBackgroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.InputBackground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.InputForegroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.InputForeground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.FocusBrushProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.FocusBrush"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.SelectedBackgroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.SelectedBackground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.Filter">
+            <summary>
+            Gets or sets the filter shown in the unity.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.MaxLines">
+            <summary>
+            Gets or sets the maximum number of lines that can be shown in the filter.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.Format">
+            <summary>
+            Gets or sets the format used in each item.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.MouseOverBrush">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to highlight the control when it has the mouse over.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.PressedBrush">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to paint a button when it is pressed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.InputBackground">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> that fills the background of the input control.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.InputForeground">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> applied to the text inside an input control when this text is not selected.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.FocusBrush">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to highlight the focused control.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter.SelectedBackground">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to highlight the control when it is selected.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineDateTimeFilter.DateFormat">
+            <summary>
+            Specifies the DatePickerFormat format that is used to display the selected date.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineDateTimeFilter.TimeFormat">
+            <summary>
+            Specifies the C1TimeEditorFormat format that is used to display the selected time.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineDateTimeFilter.EditMode">
+            <summary>
+            Defines edit mode.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineDateTimeFilter.FirstDayOfWeek">
+            <summary>
+            Gets or sets the day that is considered the beginning of the week.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Filters.DataGridMultiLineDateTimeItem">
+            <summary>
+            Represent one item of the <see cref="T:C1.Silverlight.DataGrid.Filters.DataGridMultiLineDateTimeFilter"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Filters.DataGridMultiLineItem">
+            <summary>
+            Base class for each item of a <see cref="T:C1.Silverlight.DataGrid.Filters.DataGridMultiLineFilter"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridMultiLineItem.FormatProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineItem.Format"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridMultiLineItem.MouseOverBrushProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineItem.MouseOverBrush"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridMultiLineItem.PressedBrushProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineItem.PressedBrush"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridMultiLineItem.InputBackgroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineItem.InputBackground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridMultiLineItem.InputForegroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineItem.InputForeground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridMultiLineItem.FocusBrushProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineItem.FocusBrush"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridMultiLineItem.SelectedBackgroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineItem.SelectedBackground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridMultiLineItem.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.DataGrid.Filters.DataGridMultiLineItem"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineItem.Format">
+            <summary>
+            Gets or sets the format used to display formatable objects.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineItem.MouseOverBrush">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to highlight the control when it has the mouse over.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineItem.PressedBrush">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to paint a button when it is pressed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineItem.InputBackground">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> that fills the background of the input control.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineItem.InputForeground">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> applied to the text inside an input control when this text is not selected.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineItem.FocusBrush">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to highlight the focused control.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineItem.SelectedBackground">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to highlight the control when it is selected.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridMultiLineDateTimeItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Silverlight.DataGrid.Filters.DataGridMultiLineNumericItem"/> class.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridMultiLineDateTimeItem.DateFormatProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineDateTimeItem.DateFormat"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridMultiLineDateTimeItem.TimeFormatProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineDateTimeItem.TimeFormat"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridMultiLineDateTimeItem.EditModeProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineDateTimeItem.EditMode"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridMultiLineDateTimeItem.FirstDayOfWeekProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineDateTimeItem.FirstDayOfWeek"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridMultiLineDateTimeItem.RaisePropertyChanged(System.String)">
+            <summary>
+            Raises the property changed event.
+            </summary>
+            <param name="propertyName">Name of the property that changed.</param>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineDateTimeItem.Value">
+            <summary>
+            Gets or sets the value in the operand on the right of the operation.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineDateTimeItem.Operation">
+            <summary>
+            Gets or sets the operation.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineDateTimeItem.DateFormat">
+            <summary>
+            Specifies the DatePickerFormat format that is used to display the selected date.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineDateTimeItem.TimeFormat">
+            <summary>
+            Specifies the C1TimeEditorFormat format that is used to display the selected time.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineDateTimeItem.EditMode">
+            <summary>
+            Defines edit mode.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineDateTimeItem.FirstDayOfWeek">
+            <summary>
+            Gets or sets the day that is considered the beginning of the week.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineDateTimeItem.Operations">
+            <summary>
+            Gets the operations available for this item.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.DataGrid.Filters.DataGridMultiLineDateTimeItem.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Filters.DataGridMultiLineNumericFilter">
+            <summary>
+            Display a list of numeric operations that can be changed by the user.
+            the user has the ability of adding and removing operations by changing the combinations between filters.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridMultiLineNumericFilter.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Silverlight.DataGrid.Filters.DataGridMultiLineNumericFilter"/> class.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Filters.DataGridMultiLineNumericItem">
+            <summary>
+            Represent one item of the <see cref="T:C1.Silverlight.DataGrid.Filters.DataGridMultiLineNumericFilter"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridMultiLineNumericItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Silverlight.DataGrid.Filters.DataGridMultiLineNumericItem"/> class.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridMultiLineNumericItem.RaisePropertyChanged(System.String)">
+            <summary>
+            Raises the property changed event.
+            </summary>
+            <param name="propertyName">Name of the property that changed.</param>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineNumericItem.Value">
+            <summary>
+            Gets or sets the value in the operand on the right of the operation.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineNumericItem.Operation">
+            <summary>
+            Gets or sets the operation.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineNumericItem.Operations">
+            <summary>
+            Gets the operations available for this item.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.DataGrid.Filters.DataGridMultiLineNumericItem.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Filters.DataGridMultiLineTextFilter">
+            <summary>
+            Display a list of text operations that can be changed by the user.
+            the user has the ability of adding and removing operations by changing the combinations between filters.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Filters.DataGridMultiLineTextItem">
+            <summary>
+            Represent one item of the <see cref="T:C1.Silverlight.DataGrid.Filters.DataGridMultiLineTextFilter"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridMultiLineTextItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Silverlight.DataGrid.Filters.DataGridMultiLineNumericItem"/> class.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridMultiLineTextItem.RaisePropertyChanged(System.String)">
+            <summary>
+            Raises the property changed event.
+            </summary>
+            <param name="propertyName">Name of the property that changed.</param>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineTextItem.Value">
+            <summary>
+            Gets or sets the value in the operand on the right of the operation.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineTextItem.Operation">
+            <summary>
+            Gets or sets the operation.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridMultiLineTextItem.Operations">
+            <summary>
+            Gets the operations available for this item.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.DataGrid.Filters.DataGridMultiLineTextItem.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Filters.Resources.C1_Silverlight_DataGrid_Filters">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.Resources.C1_Silverlight_DataGrid_Filters.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.Resources.C1_Silverlight_DataGrid_Filters.FilterRow_Watermark">
+            <summary>
+              Looks up a localized string similar to Type here to filter.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Filters.C1AdvancedFiltersBehavior">
+            <summary>
+            Adds a range of advanced filters to the <see cref="T:C1.Silverlight.DataGrid.C1DataGrid"/> built-in columns.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.C1AdvancedFiltersBehavior.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Silverlight.DataGrid.Filters.C1AdvancedFiltersBehavior"/> class.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.C1AdvancedFiltersBehavior.GetAdvancedFiltersBehavior(C1.Silverlight.DataGrid.C1DataGrid)">
+            <summary>
+            Gets the advanced filters behavior.
+            </summary>
+            <param name="obj">The data grid to which the filters are applied.</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.C1AdvancedFiltersBehavior.SetAdvancedFiltersBehavior(C1.Silverlight.DataGrid.C1DataGrid,C1.Silverlight.DataGrid.Filters.C1AdvancedFiltersBehavior)">
+            <summary>
+            Sets the advanced filters behavior.
+            </summary>
+            <param name="obj">The data grid to which the filters will be applied.</param>
+            <param name="value">The behavior.</param>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.C1AdvancedFiltersBehavior.AdvancedFiltersBehaviorProperty">
+            <summary>
+            Attached advanced filters behavior.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Filters.DataGridComboBoxTextFilter">
+            <summary>
+            Visual element that allows the user to select an operation like 
+            contains, starts with, etc. and a textbox to enter a matching value.
+            The filter state built by this control will be of the 
+            type multi-value and the operation will be "IsOneOf".
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridComboBoxTextFilter.ItemsSourceProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridComboBoxTextFilter.ItemsSource"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridComboBoxTextFilter.DisplayMemberPathProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridComboBoxTextFilter.DisplayMemberPath"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridComboBoxTextFilter.ValueMemberPathProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridComboBoxTextFilter.ValueMemberPath"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridComboBoxTextFilter.GetFilter">
+            <summary>
+            Gets the filter from the control.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridComboBoxTextFilter.SetFilter(C1.Silverlight.DataGrid.DataGridFilterState)">
+            <summary>
+            Sets the filter into the control.
+            </summary>
+            <param name="filterState">State of the filter.</param>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridComboBoxTextFilter.ItemsSource">
+            <summary>
+            Gets or sets the collection of items that will be used to built the list of matching values.
+            </summary>
+            <example>
+            If this property contains the values Red, Yellow, Orange and Black and the user selects 
+            the operation 'contains' with value 'R' a filter state object will be built containing 
+            the predicate IsOneOf [Red,Orange] that are the values that contains the character 'R'
+            </example>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridComboBoxTextFilter.DisplayMemberPath">
+            <summary>
+            Gets or sets the display member path used to display the list of values.
+            </summary>
+            <value>The display member path.</value>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridComboBoxTextFilter.ValueMemberPath">
+            <summary>
+            Gets or sets the value member path used to build the list of values of the predicate.
+            </summary>
+            <value>The value member path.</value>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Filters.DataGridFilterRowHeaderPresenter">
+            <summary>
+            Row header of a filter row.
+            This header shows a funnel to be differentiated from the other rows.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRowHeaderPresenter.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Silverlight.DataGrid.Filters.DataGridFilterRowHeaderPresenter"/> class.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Filters.DelayHelper">
+            <summary>
+            Allow to execute an action delayed a specified amount of time.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Filters.C1FullTextSearchBehavior">
+            <summary>
+            Configure <see cref="T:C1.Silverlight.DataGrid.C1DataGrid"/> to be filtered from a string 
+            which can be entered using a textbox,
+            and highlights the matched text in the cells foreground and background.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.C1FullTextSearchBehavior.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Silverlight.DataGrid.Filters.C1FullTextSearchBehavior"/> class.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.C1FullTextSearchBehavior.GetFullTextSearchBehavior(C1.Silverlight.DataGrid.C1DataGrid)">
+            <summary>
+            Gets the full text search behavior.
+            </summary>
+            <param name="obj">The data grid to which the filter is applied.</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.C1FullTextSearchBehavior.SetFullTextSearchBehavior(C1.Silverlight.DataGrid.C1DataGrid,C1.Silverlight.DataGrid.Filters.C1FullTextSearchBehavior)">
+            <summary>
+            Sets the full text search behavior.
+            </summary>
+            <param name="obj">The data grid to which the filter will be applied.</param>
+            <param name="value">The behavior.</param>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.C1FullTextSearchBehavior.FullTextSearchBehaviorProperty">
+            <summary>
+            Attached full text search behavior.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.C1FullTextSearchBehavior.TextChangedDelayProperty">
+            <summary>
+            Gets or sets the delay time used to filter after the last typed character.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.C1FullTextSearchBehavior.FilterProperty">
+            <summary>
+            Gets or sets the filter string.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.C1FullTextSearchBehavior.HighlightedBackgroundProperty">
+            <summary>
+            Gets or sets the brush used to highlight the cell background that matches the searched text.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.C1FullTextSearchBehavior.HighlightedForegroundProperty">
+            <summary>
+            Gets or sets the brush used to highlight the cell foreground that matches the searched text.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.C1FullTextSearchBehavior.Delay">
+            <summary>
+            Gets or sets the delay time used to filter after the last typed character.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.C1FullTextSearchBehavior.Filter">
+            <summary>
+            Gets or sets the filter string.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.C1FullTextSearchBehavior.HighlightedBackground">
+            <summary>
+            Gets or sets the brush used to highlight the cell background that matches the searched text.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.C1FullTextSearchBehavior.HighlightedForeground">
+            <summary>
+            Gets or sets the brush used to highlight the cell foreground that matches the searched text.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Filters.DataGridFilterRow">
+            <summary>
+            Row that shows one textbox per column and the data is filtered 
+            as the user type in one of the textbox's.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.OnLoaded">
+            <summary>
+            Called after the row is added to the row collection.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.CellPaddingProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.CellPadding"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.DelayProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.Delay"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.CreateTextBoxFilter(C1.Silverlight.DataGrid.DataGridColumn)">
+            <summary>
+            Creates the text box filter that will be located inside each cell of the filter row.
+            </summary>
+            <param name="column">The column to which the textbox is created.</param>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.CellPadding">
+            <summary>
+            Gets or sets the cell padding.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.Delay">
+            <summary>
+            Gets or sets the delay time used to filter after the last typed character.
+            </summary>
+            <remarks>
+            Setting this property to <c>null</c> will cause the filter will not be executed while the user types.
+            </remarks>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Filters.DataGridTextFilterHelper">
+            <summary>
+            Helps translating from text to <see cref="T:C1.Silverlight.DataGrid.DataGridFilterInfo"/> and vice-versa.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridTextFilterHelper.BuildFilterState(C1.Silverlight.DataGrid.DataGridColumn,System.String)">
+            <summary>
+            Builds the filter state from a string.
+            </summary>
+            <param name="column">The column target of the filter state.</param>
+            <param name="text">The filter criteria.</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridTextFilterHelper.GetTextFromState(C1.Silverlight.DataGrid.DataGridColumn)">
+            <summary>
+            Gets a text that represent the state of the filter of the specified column.
+            </summary>
+            <param name="column">The column whose filter state will be converted to text.</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridTextFilterHelper.GetMatchingValues(System.String,C1.Silverlight.DataGrid.DataGridComboBoxColumn)">
+            <summary>
+            Retrieves all the ids whose display label contains the desired text.
+            (Uses the same properties used by the combo column itself)
+            </summary>
+            <param name="text">The text.</param>
+            <param name="column">The column.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

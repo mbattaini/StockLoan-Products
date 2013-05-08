@@ -1,0 +1,448 @@
+﻿<Theme>
+  <Theme name="Aero (modified)" componentType="C1Schedule">
+    <Styles>
+      <Style name="Common">
+        <Font>Arial, 9pt</Font>
+        <Border>0, 0, 1, 1</Border>
+        <BorderColor>ControlDarkDark</BorderColor>
+        <HorizontalAlignment>Spread</HorizontalAlignment>
+        <ForeColor>Black</ForeColor>
+        <BackColor>PaleGoldenrod</BackColor>
+      </Style>
+      <Style name="Button">
+        <Font>Wingdings, 8pt, style=Bold</Font>
+        <Padding>2</Padding>
+        <Border>1</Border>
+        <BorderColor>ControlDark</BorderColor>
+        <HorizontalAlignment>Center</HorizontalAlignment>
+        <VerticalAlignment>Center</VerticalAlignment>
+        <WordWrap>False</WordWrap>
+        <Format>dddd</Format>
+        <ForeColor>DarkGray</ForeColor>
+        <BackColor>230, 230, 210</BackColor>
+      </Style>
+      <Style name="Header">
+        <Border>0, 0, 0, 1</Border>
+        <BorderColor>ControlDarkDark</BorderColor>
+        <HorizontalAlignment>Spread</HorizontalAlignment>
+        <VerticalAlignment>Center</VerticalAlignment>
+        <ChildSpacing>2, 2</ChildSpacing>
+        <ForeColor>DarkGray</ForeColor>
+        <BackColor>Beige</BackColor>
+      </Style>
+      <Style name="Title">
+        <Font>Arial, 12pt, style=Bold</Font>
+        <HorizontalAlignment>Spread</HorizontalAlignment>
+        <VerticalAlignment>Center</VerticalAlignment>
+        <ChildSpacing>2, 2</ChildSpacing>
+        <ForeColor>DarkGray</ForeColor>
+      </Style>
+      <Style name="Info">
+        <Font>Arial, 9pt, style=Bold</Font>
+        <HorizontalAlignment>Far</HorizontalAlignment>
+        <VerticalAlignment>Center</VerticalAlignment>
+        <Format>MMMM d, yyy</Format>
+        <ForeColor>DarkGray</ForeColor>
+      </Style>
+      <Style name="WeekDayHeader">
+        <Font>Arial, 9pt, style=Bold</Font>
+        <Padding>4, 0</Padding>
+        <Border>0, 0, 1, 1</Border>
+        <BorderColor>ControlDarkDark</BorderColor>
+        <HorizontalAlignment>Far</HorizontalAlignment>
+        <VerticalAlignment>Near</VerticalAlignment>
+        <WordWrap>False</WordWrap>
+        <Format>dddd, MMMM dd</Format>
+        <ForeColor>DarkRed</ForeColor>
+        <BackColor>230, 230, 210</BackColor>
+      </Style>
+      <Style name="WeekDayHeaderSelected">
+        <Font>Arial, 9pt, style=Bold</Font>
+        <Padding>4, 0</Padding>
+        <Border>0, 0, 1, 1</Border>
+        <BorderColor>ActiveBorder</BorderColor>
+        <HorizontalAlignment>Far</HorizontalAlignment>
+        <VerticalAlignment>Near</VerticalAlignment>
+        <WordWrap>False</WordWrap>
+        <Format>dddd, MMMM dd</Format>
+        <ForeColor>White</ForeColor>
+        <BackColor>DarkRed</BackColor>
+      </Style>
+      <Style name="MonthViewGridHeader">
+        <Font>Arial, 9pt, style=Bold</Font>
+        <Padding>2, 2, 2, 4</Padding>
+        <Border>0, 0, 1, 1</Border>
+        <BorderColor>ControlDark</BorderColor>
+        <HorizontalAlignment>Center</HorizontalAlignment>
+        <VerticalAlignment>Center</VerticalAlignment>
+        <WordWrap>False</WordWrap>
+        <Format>dddd</Format>
+        <ForeColor>DarkGray</ForeColor>
+        <BackColor>230, 230, 210</BackColor>
+      </Style>
+      <Style name="MonthDayHeader">
+        <Font>Arial, 9pt, style=Bold</Font>
+        <Padding>4, 0</Padding>
+        <Border>0, 0, 1, 0</Border>
+        <BorderColor>ControlDarkDark</BorderColor>
+        <HorizontalAlignment>Far</HorizontalAlignment>
+        <VerticalAlignment>Near</VerticalAlignment>
+        <Format>MMMM d</Format>
+        <ForeColor>DarkRed</ForeColor>
+      </Style>
+      <Style name="Today">
+        <Font>Arial, 9pt, style=Bold</Font>
+        <BackImage>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAjwAAAAKJUE5HDQoaCgAAAA1JSERSAAAAAQAAAAEIBgAAAB8VxIkAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAADUlEQVQYV2P4//8/AwAI/AL+iF8G4AAAAABJRU5ErkJgggs=</BackImage>
+        <Padding>4, 0</Padding>
+        <Border>1, 0, 1, 2</Border>
+        <BorderColor>ControlDarkDark</BorderColor>
+        <BorderEdges>Transparent;Transparent;Transparent;DarkRed</BorderEdges>
+        <HorizontalAlignment>Far</HorizontalAlignment>
+        <VerticalAlignment>Near</VerticalAlignment>
+        <Format>MMMM d</Format>
+        <ForeColor>DarkRed</ForeColor>
+        <BackColor>230, 230, 210</BackColor>
+      </Style>
+      <Style name="MonthDayHeaderSelected">
+        <Font>Arial, 9pt, style=Bold</Font>
+        <Padding>4, 0</Padding>
+        <Border>0, 0, 1, 0</Border>
+        <BorderColor>ControlDarkDark</BorderColor>
+        <HorizontalAlignment>Far</HorizontalAlignment>
+        <VerticalAlignment>Near</VerticalAlignment>
+        <Format>MMMM d</Format>
+        <ForeColor>White</ForeColor>
+        <BackColor>DarkRed</BackColor>
+      </Style>
+      <Style name="Appointment">
+        <Cursor>Arrow</Cursor>
+        <Hot>
+          <BackColor>White</BackColor>
+        </Hot>
+        <Shadow>True</Shadow>
+        <ForeColor>WindowText</ForeColor>
+      </Style>
+      <Style name="DayViewHeader">
+        <Border>1, 0, 0, 1</Border>
+        <BorderColor>ControlDarkDark</BorderColor>
+        <HorizontalAlignment>Spread</HorizontalAlignment>
+        <VerticalAlignment>Near</VerticalAlignment>
+        <ForeColor>DarkGray</ForeColor>
+        <BackColor>Beige</BackColor>
+      </Style>
+      <Style name="DayViewHeaderSelected">
+        <Border>1, 0, 0, 1</Border>
+        <BorderColor>ControlDarkDark</BorderColor>
+        <HorizontalAlignment>Spread</HorizontalAlignment>
+        <VerticalAlignment>Near</VerticalAlignment>
+        <BackColor>DarkRed</BackColor>
+      </Style>
+      <Style name="TimeRuler">
+        <Font>Arial, 14pt, style=Bold</Font>
+        <Padding>3, 2</Padding>
+        <Border>0, 0, 0, 1</Border>
+        <BorderColor>ControlDark</BorderColor>
+        <HorizontalAlignment>Far</HorizontalAlignment>
+        <VerticalAlignment>Center</VerticalAlignment>
+        <WordWrap>False</WordWrap>
+        <Format>h tt</Format>
+        <ForeColor>DarkGray</ForeColor>
+        <BackColor>230, 230, 210</BackColor>
+      </Style>
+      <Style name="CurrentTime">
+        <Font>Tahoma, 12pt</Font>
+        <Padding>3, 2</Padding>
+        <Border>0, 0, 0, 2</Border>
+        <BorderColor>DarkRed</BorderColor>
+        <HorizontalAlignment>Far</HorizontalAlignment>
+        <VerticalAlignment>Center</VerticalAlignment>
+        <WordWrap>False</WordWrap>
+        <Format>h tt</Format>
+        <ForeColor>ControlText</ForeColor>
+      </Style>
+      <Style name="DayViewDayName">
+        <Font>Arial, 9pt, style=Bold</Font>
+        <Padding>3, 2</Padding>
+        <Border>1, 1, 0, 1</Border>
+        <BorderColor>ControlDark</BorderColor>
+        <HorizontalAlignment>Center</HorizontalAlignment>
+        <VerticalAlignment>Near</VerticalAlignment>
+        <WordWrap>False</WordWrap>
+        <Format>MMMM dd</Format>
+        <ForeColor>DarkGray</ForeColor>
+        <BackColor>230, 230, 210</BackColor>
+      </Style>
+      <Style name="WorkHour">
+        <Border>1, 0, 0, 1</Border>
+        <BorderColor>ControlDarkDark</BorderColor>
+        <BackColor>255, 255, 213</BackColor>
+      </Style>
+      <Style name="FreeHour">
+        <Border>1, 0, 0, 1</Border>
+        <BorderColor>ControlDarkDark</BorderColor>
+        <BackColor>PaleGoldenrod</BackColor>
+      </Style>
+    </Styles>
+    <TitleImage>AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJhd2luZy5CaXRtYXABAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAPgIAAAKJUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABvElEQVQ4T6VS3SuDYRR//hKu/AWu3Ll2qcglVi4QIcWNUpIobkbUFGlCTT6mRs0aGcvHNsa0xIghi5qPNl8/fofnbWNz49TZed697+/jnOcofEZOXi4ip6dpNXp5Jc+BfX9ajcVixnejY2NQ/GF09fT8Wesb6+S9yWSSWlJRIeTK6TmGw3MIx0oYC64Q7O4gph1+TNm9GJ/1wjq9BsukG4NWJ8wjDvRZ7OjstxmpCHaG4sCQAubzpdr27mHde8Dw7iPMgQS6fUm0+17QsvOKhu13yaotoKnDAiFgphLMLgd+OaC6dqBdCAEt61gLRo2zyxcxziLwHSS/T7zhOv785SCVYGkjbHyYetYEyZd3kIDgs9vkFwH/yOQglUCLaAKCDQJOm1NlZHNAAoKpbFvcRvg6IRhxwKvSBC7/+a++CSQBwUwKphHwnjM5yNY3CYIXT4KpbRuA4pLo+Nk31Tlx2mbPVJ6YW8fmySNWjx5Q2dwLxQ3LRqCvS/dN5fGZdQFz+UqrO6C4HNFYXJIOWCPRO+n74ORGkra5I5wRW7ZvnGHGE0FReSuUniYnmi3ZK+1SkaDCsgYUFNdIqv/GB120FQkAfiADAAAAAElFTkSuQmCCCw==</TitleImage>
+    <TitleText> Calendar</TitleText>
+    <ShowDayStatus>True</ShowDayStatus>
+    <HighlightDayStatus>False</HighlightDayStatus>
+    <BubbleLook>False</BubbleLook>
+    <ShowMinuteLine>True</ShowMinuteLine>
+    <TimeRulerMinutesFont>Arial, 9pt, style=Bold</TimeRulerMinutesFont>
+    <ToolTipRoundedCorners>False</ToolTipRoundedCorners>
+    <ToolTipBackgroundGradient>1</ToolTipBackgroundGradient>
+    <ShowTodayBorder>False</ShowTodayBorder>
+    <ShowWeekTabs>False</ShowWeekTabs>
+    <Office2007GroupTabs>False</Office2007GroupTabs>
+    <UseOffice2007Pallettes>False</UseOffice2007Pallettes>
+    <ShowBrowseButtons>False</ShowBrowseButtons>
+    <ShowNavigationPanels>False</ShowNavigationPanels>
+    <ShowEndTimeMonthView>True</ShowEndTimeMonthView>
+    <ShowEndTimeWeekView>True</ShowEndTimeWeekView>
+    <PrevChar></PrevChar>
+    <NextChar></NextChar>
+    <PaletteType>1</PaletteType>
+    <FreeHourLightBorder>218, 212, 150</FreeHourLightBorder>
+    <WorkHourLightBorder>255, 239, 199</WorkHourLightBorder>
+    <SelectedDay>246, 243, 191</SelectedDay>
+    <AlternateMonth>PaleGoldenrod</AlternateMonth>
+    <WorkHour>255, 255, 213</WorkHour>
+    <FreeHour>PaleGoldenrod</FreeHour>
+    <FreeHourBorder>188, 182, 120</FreeHourBorder>
+    <WorkHourBorder>246, 219, 162</WorkHourBorder>
+  </Theme>
+  <Theme name="Office 2007 Silver (modified)" componentType="C1Schedule">
+    <Styles>
+      <Style name="Common">
+        <Font>Microsoft Sans Serif, 8pt</Font>
+        <Border>0, 0, 1, 1</Border>
+        <BorderColor>148, 154, 165</BorderColor>
+        <HorizontalAlignment>Spread</HorizontalAlignment>
+        <BackColor>198, 203, 214</BackColor>
+      </Style>
+      <Style name="Button">
+        <Font>Wingdings, 8pt, style=Bold</Font>
+        <Padding>2</Padding>
+        <Border>1</Border>
+        <BorderColor>148, 154, 165</BorderColor>
+        <HorizontalAlignment>Center</HorizontalAlignment>
+        <VerticalAlignment>Center</VerticalAlignment>
+        <WordWrap>False</WordWrap>
+        <Format>MMMM dd</Format>
+        <Hot>
+          <BackColor>255, 251, 214</BackColor>
+          <GradientBlend>0,0.1;0.35,0.3;0.48,1;1,0.55</GradientBlend>
+          <BackColor2>255, 219, 107</BackColor2>
+        </Hot>
+        <ForeColor>107, 113, 115</ForeColor>
+        <BackColor>231, 227, 239</BackColor>
+        <GradientMode>Vertical</GradientMode>
+        <GradientBlend>0,0.1;0.45,0.3;0.58,1;1,0.55</GradientBlend>
+        <BackColor2>181, 186, 198</BackColor2>
+      </Style>
+      <Style name="Header">
+        <Font>Microsoft Sans Serif, 8pt</Font>
+        <Padding>0, 0, 0, 4</Padding>
+        <HorizontalAlignment>Spread</HorizontalAlignment>
+        <VerticalAlignment>Center</VerticalAlignment>
+        <ChildSpacing>2, 2</ChildSpacing>
+        <BackColor>247, 243, 247</BackColor>
+      </Style>
+      <Style name="Title">
+        <Font>Courier New, 12pt, style=Bold</Font>
+        <HorizontalAlignment>Spread</HorizontalAlignment>
+        <VerticalAlignment>Center</VerticalAlignment>
+        <ChildSpacing>2, 2</ChildSpacing>
+        <ForeColor>Black</ForeColor>
+      </Style>
+      <Style name="Info">
+        <Font>Courier New, 12pt</Font>
+        <HorizontalAlignment>Near</HorizontalAlignment>
+        <VerticalAlignment>Center</VerticalAlignment>
+        <Format>MMMM d, yyy</Format>
+        <ForeColor>Black</ForeColor>
+      </Style>
+      <Style name="WeekDayHeader">
+        <Font>Microsoft Sans Serif, 8pt, style=Bold</Font>
+        <Padding>4, 0</Padding>
+        <Border>0, 1, 1, 1</Border>
+        <BorderColor>181, 182, 189</BorderColor>
+        <HorizontalAlignment>Near</HorizontalAlignment>
+        <VerticalAlignment>Near</VerticalAlignment>
+        <WordWrap>False</WordWrap>
+        <Format>MMM d</Format>
+        <BackColor>231, 227, 239</BackColor>
+        <GradientMode>Vertical</GradientMode>
+        <GradientBlend>0,0.1;0.45,0.3;0.58,1;1,0.55</GradientBlend>
+        <BackColor2>181, 186, 198</BackColor2>
+      </Style>
+      <Style name="WeekDayHeaderSelected">
+        <Font>Microsoft Sans Serif, 8pt, style=Bold</Font>
+        <Padding>4, 0</Padding>
+        <Border>0, 1, 1, 1</Border>
+        <BorderColor>181, 182, 189</BorderColor>
+        <HorizontalAlignment>Near</HorizontalAlignment>
+        <VerticalAlignment>Near</VerticalAlignment>
+        <WordWrap>False</WordWrap>
+        <Format>MMM d</Format>
+        <BackColor>231, 227, 239</BackColor>
+        <GradientMode>Vertical</GradientMode>
+        <GradientBlend>0,0.1;0.45,0.3;0.58,1;1,0.55</GradientBlend>
+        <BackColor2>181, 186, 198</BackColor2>
+      </Style>
+      <Style name="MonthViewGridHeader">
+        <Font>Microsoft Sans Serif, 8pt</Font>
+        <Padding>2, 2, 2, 4</Padding>
+        <Border>0, 0, 1, 0</Border>
+        <BorderColor>148, 154, 165</BorderColor>
+        <HorizontalAlignment>Center</HorizontalAlignment>
+        <VerticalAlignment>Center</VerticalAlignment>
+        <WordWrap>False</WordWrap>
+        <Format>dddd</Format>
+        <ForeColor>107, 113, 115</ForeColor>
+        <BackColor>247, 243, 247</BackColor>
+      </Style>
+      <Style name="MonthDayHeader">
+        <Font>Microsoft Sans Serif, 8pt, style=Bold</Font>
+        <Border>0, 1, 1, 1</Border>
+        <BorderColor>181, 182, 189</BorderColor>
+        <HorizontalAlignment>Near</HorizontalAlignment>
+        <Format>MMM d</Format>
+        <BackColor>231, 227, 239</BackColor>
+        <GradientMode>Vertical</GradientMode>
+        <GradientBlend>0,0.1;0.45,0.3;0.58,1;1,0.55</GradientBlend>
+        <BackColor2>181, 186, 198</BackColor2>
+      </Style>
+      <Style name="Today">
+        <Font>Microsoft Sans Serif, 8pt</Font>
+        <Border>1</Border>
+        <BorderColor>239, 146, 16</BorderColor>
+        <ForeColor>WindowText</ForeColor>
+        <BackColor>255, 215, 123</BackColor>
+        <GradientMode>Vertical</GradientMode>
+        <GradientBlend>0,0.1;0.45,0.3;0.58,1;1,0.55</GradientBlend>
+        <BackColor2>247, 158, 33</BackColor2>
+      </Style>
+      <Style name="MonthDayHeaderSelected">
+        <Font>Microsoft Sans Serif, 8pt, style=Bold</Font>
+        <Border>0, 1, 1, 1</Border>
+        <BorderColor>181, 182, 189</BorderColor>
+        <HorizontalAlignment>Near</HorizontalAlignment>
+        <Format>MMM d</Format>
+        <BackColor>231, 227, 239</BackColor>
+        <GradientMode>Vertical</GradientMode>
+        <GradientBlend>0,0.1;0.45,0.3;0.58,1;1,0.55</GradientBlend>
+        <BackColor2>181, 186, 198</BackColor2>
+      </Style>
+      <Style name="Appointment">
+        <Font>Microsoft Sans Serif, 8pt</Font>
+        <Cursor>Arrow</Cursor>
+        <Hot>
+          <BackColor>White</BackColor>
+        </Hot>
+        <Shadow>True</Shadow>
+        <ForeColor>WindowText</ForeColor>
+      </Style>
+      <Style name="DayViewHeader">
+        <Font>Microsoft Sans Serif, 8pt</Font>
+        <Border>1, 0, 1, 2</Border>
+        <BorderColor>148, 154, 165</BorderColor>
+        <HorizontalAlignment>Spread</HorizontalAlignment>
+        <VerticalAlignment>Near</VerticalAlignment>
+        <BackColor>198, 203, 214</BackColor>
+      </Style>
+      <Style name="DayViewHeaderSelected">
+        <Font>Microsoft Sans Serif, 8pt</Font>
+        <Border>1, 0, 1, 2</Border>
+        <BorderColor>148, 154, 165</BorderColor>
+        <BackColor>74, 81, 90</BackColor>
+      </Style>
+      <Style name="TimeRuler">
+        <Font>Microsoft Sans Serif, 12pt</Font>
+        <Padding>3, 2</Padding>
+        <Border>0, 0, 0, 1</Border>
+        <BorderColor>107, 113, 115</BorderColor>
+        <HorizontalAlignment>Far</HorizontalAlignment>
+        <VerticalAlignment>Center</VerticalAlignment>
+        <WordWrap>False</WordWrap>
+        <Format>h tt</Format>
+        <ForeColor>107, 113, 115</ForeColor>
+        <BackColor>247, 243, 247</BackColor>
+      </Style>
+      <Style name="CurrentTime">
+        <Font>Microsoft Sans Serif, 8pt</Font>
+        <Padding>3, 2</Padding>
+        <Border>0, 0, 0, 1</Border>
+        <BorderColor>189, 85, 0</BorderColor>
+        <HorizontalAlignment>Far</HorizontalAlignment>
+        <VerticalAlignment>Center</VerticalAlignment>
+        <WordWrap>False</WordWrap>
+        <Format>h tt</Format>
+        <ForeColor>ControlText</ForeColor>
+        <GradientMode>Vertical</GradientMode>
+        <BackColor2>255, 207, 99</BackColor2>
+      </Style>
+      <Style name="DayViewDayName">
+        <Font>Microsoft Sans Serif, 8pt</Font>
+        <Border>1</Border>
+        <BorderColor>181, 182, 189</BorderColor>
+        <HorizontalAlignment>Center</HorizontalAlignment>
+        <VerticalAlignment>Near</VerticalAlignment>
+        <WordWrap>False</WordWrap>
+        <Format>MMMM dd</Format>
+        <BackColor>231, 227, 239</BackColor>
+        <GradientMode>Vertical</GradientMode>
+        <GradientBlend>0,0.1;0.45,0.3;0.58,1;1,0.55</GradientBlend>
+        <BackColor2>181, 186, 198</BackColor2>
+      </Style>
+      <Style name="WorkHour">
+        <Font>Microsoft Sans Serif, 8pt</Font>
+        <Border>1, 0, 1, 1</Border>
+        <BorderColor>148, 154, 165</BorderColor>
+        <BorderEdges>Transparent;Transparent;Transparent;198, 203, 214</BorderEdges>
+        <BackColor>White</BackColor>
+      </Style>
+      <Style name="FreeHour">
+        <Font>Microsoft Sans Serif, 8pt</Font>
+        <Border>1, 0, 1, 1</Border>
+        <BorderColor>148, 154, 165</BorderColor>
+        <BorderEdges>Transparent;Transparent;Transparent;198, 203, 214</BorderEdges>
+        <BackColor>239, 235, 239</BackColor>
+      </Style>
+    </Styles>
+    <ShowDayStatus>False</ShowDayStatus>
+    <HighlightDayStatus>True</HighlightDayStatus>
+    <BubbleLook>True</BubbleLook>
+    <ShowMinuteLine>False</ShowMinuteLine>
+    <TimeRulerMinutesFont>Microsoft Sans Serif, 8pt</TimeRulerMinutesFont>
+    <ToolTipRoundedCorners>True</ToolTipRoundedCorners>
+    <ToolTipBackgroundGradient>6</ToolTipBackgroundGradient>
+    <ShowTodayBorder>True</ShowTodayBorder>
+    <ShowWeekTabs>True</ShowWeekTabs>
+    <Office2007GroupTabs>True</Office2007GroupTabs>
+    <UseOffice2007Pallettes>True</UseOffice2007Pallettes>
+    <ShowBrowseButtons>True</ShowBrowseButtons>
+    <ShowNavigationPanels>True</ShowNavigationPanels>
+    <ShowEndTimeMonthView>True</ShowEndTimeMonthView>
+    <ShowEndTimeWeekView>True</ShowEndTimeWeekView>
+    <PrevChar></PrevChar>
+    <NextChar></NextChar>
+    <PaletteType>0</PaletteType>
+    <FreeHourLightBorder>222, 227, 231</FreeHourLightBorder>
+    <WorkHourLightBorder>239, 235, 239</WorkHourLightBorder>
+    <SelectedSlot>74, 81, 90</SelectedSlot>
+    <MonthGridBorder>99, 105, 115</MonthGridBorder>
+    <SelectedDay>239, 235, 239</SelectedDay>
+    <MonthGridText>123, 105, 115</MonthGridText>
+    <AlternateMonth>198, 203, 214</AlternateMonth>
+    <WorkHour>White</WorkHour>
+    <FreeHour>239, 235, 239</FreeHour>
+    <FreeHourBorder>198, 203, 214</FreeHourBorder>
+    <WorkHourBorder>198, 203, 214</WorkHourBorder>
+    <DayHeaderBorder>181, 182, 189</DayHeaderBorder>
+    <DayHeaderBackground>231, 227, 239</DayHeaderBackground>
+    <DayHeaderBackground2>181, 186, 198</DayHeaderBackground2>
+    <Border>148, 154, 165</Border>
+  </Theme>
+</Theme>

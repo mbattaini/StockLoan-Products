@@ -1,0 +1,12 @@
+Courier Service
+
+
+As Deployed in Staging Environment: 
+
+Files and DLLs: 
+	\\devweb1\c$\Sendero\Courier
+
+
+In production:
+Must modify the .config file to point to 
+the correct folders and locations for production. 

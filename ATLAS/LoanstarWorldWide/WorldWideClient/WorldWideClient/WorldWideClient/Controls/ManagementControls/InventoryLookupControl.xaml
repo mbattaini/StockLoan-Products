@@ -1,0 +1,45 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"	
+	xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+	xmlns:local="clr-namespace:WorldWideClient"
+	mc:Ignorable="d"
+	x:Class="WorldWideClient.InventoryLookupControl">
+
+	<Grid x:Name="LayoutRoot">
+		<Grid Margin="4,16,4,8" RenderTransformOrigin="0.499,0.475" Loaded="Grid_Loaded">
+            <c1:C1DataGrid x:Name="InventoryGrid" Margin="0,58,0,294" CanUserAddRows="False" CanUserEditRows="False" CanUserRemoveRows="False" CanUserReorderColumns="False" CanUserResizeRows="False" AutoGenerateColumns="False" RowHeaderWidth="0" Style="{StaticResource TransparantGrid}">            
+				<c1:C1DataGrid.Columns>
+					<c1:DataGridBoundColumn Format="yyyy-MM-dd" Header="BizDate" Binding="{Binding BizDate}"/>
+					<c1:DataGridBoundColumn Header="Security ID" Binding="{Binding SecId}"/>
+					<c1:DataGridBoundColumn Header="Symbol" Binding="{Binding Symbol}"/>
+					<c1:DataGridBoundColumn Header="Desk" Binding="{Binding Desk}"/>
+					<c1:DataGridNumericColumn Format="#,##0" Header="Quantity" Binding="{Binding Quantity}"/>
+				</c1:C1DataGrid.Columns>
+			</c1:C1DataGrid>
+            <c1:C1ToolbarStrip x:Name="MainToolbarStrip" d:LayoutOverrides="VerticalAlignment" Style="{StaticResource TransparantToolBarStrip}" Height="32" Margin="0,22,0,0">
+				<sdk:Label x:Name="BookGroupLabel" Content="Security ID" Width="71" Style="{StaticResource TransparantLabel}"/>
+				<c1:C1TextBoxBase x:Name="SecurityIDTextBox" Width="96" Height="23" TextWrapping="NoWrap" VerticalScrollBarVisibility="Disabled" AcceptsReturn="False" HorizontalScrollBarVisibility="Disabled" Style="{StaticResource TransparantTextBox}"/>
+				<c1:C1ToolbarButton x:Name="LookupButton" ToolTipService.ToolTip="Login" Height="24" Width="24" Click="LookupButton_Click" Style="{StaticResource TransparantToolBarStripButton}">
+					<Image Stretch="Fill" Source="/WorldWideClient;component/Images/Magnifier.png" />
+				</c1:C1ToolbarButton>
+            </c1:C1ToolbarStrip>
+            <c1:C1Chart x:Name="InventoryChart" ChartType="LineStacked" Margin="4,0,4,9" Style="{StaticResource TransparantChart}" Height="200" VerticalAlignment="Bottom" d:LayoutOverrides="Height" AutoGenerateSeries="False" CornerRadius="5">
+				<c1:C1Chart.VisualEffect>
+					<c1:BorderEffect/>
+				</c1:C1Chart.VisualEffect>
+				<c1:C1Chart.Data>
+					<c1:ChartData ItemNames="P1 P2 P3 P4 P5">
+						<c1:DataSeries Label="s1" Values="20, 22, 19, 24, 25"/>
+						<c1:DataSeries Label="s2" Values="8, 12, 10, 12, 15"/>
+					</c1:ChartData>
+				</c1:C1Chart.Data>
+				<c1:C1ChartLegend/>
+			</c1:C1Chart>
+		</Grid>
+		<local:BookGroupToolBar x:Name="InventoryBookGroupToolBar" Margin="4,0,0,0" VerticalAlignment="Top" d:LayoutOverrides="Height" HorizontalAlignment="Left" Width="421"/>
+	</Grid>
+</UserControl>

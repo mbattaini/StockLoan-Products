@@ -1,0 +1,916 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Silverlight.MediaPlayer</name>
+    </assembly>
+    <members>
+        <member name="T:C1.Silverlight.MediaPlayer.C1MediaChapter">
+            <summary>
+            A distinct segment of a <see cref="T:C1.Silverlight.MediaPlayer.C1MediaItem"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.MediaPlayer.C1MediaChapter.OnPropertyChanged(System.String)">
+            <summary>
+            Raises the <see cref="E:C1.Silverlight.MediaPlayer.C1MediaChapter.PropertyChanged"/> event with the provided arguments.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaChapter._InternalCommandTarget">
+            <summary>
+            Internal. Use only in template.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaChapter.Position">
+            <summary>
+            Gets or sets the Position where the chapter starts.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaChapter.ThumbnailSource">
+            <summary>
+            Gets or sets the image that represents the chapter in the chapter list.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaChapter.Title">
+            <summary>
+            Gets or sets the name of the chapter.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.MediaPlayer.C1MediaChapter.PropertyChanged">
+            <summary>
+            Occurs when the items list of the collection has changed, or the collection is reset.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.MediaPlayer.C1MediaItem">
+            <summary>
+            A media file that can be played by <see cref="T:C1.Silverlight.MediaPlayer.C1MediaPlayer"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.MediaPlayer.C1MediaItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Silverlight.MediaPlayer.C1MediaItem"/>  class.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.MediaPlayer.C1MediaItem.OnPropertyChanged(System.String)">
+            <summary>
+            Raises the <see cref="E:C1.Silverlight.MediaPlayer.C1MediaItem.PropertyChanged"/> event with the provided arguments.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaItem.Chapters">
+            <summary>
+            Gets the list of <see cref="T:C1.Silverlight.MediaPlayer.C1MediaChapter"/> for this media item.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaItem._InternalCommandTarget">
+            <summary>
+            Internal. Use only in template.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaItem.Title">
+            <summary>
+            Gets or sets the name of the media item.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaItem.MediaSource">
+            <summary>
+            Gets or sets the address of the media file.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaItem.MediaStream">
+            <summary>
+            Gets or sets a stream with the media..
+            Only one of <see cref="P:MediaSource"/> and <see cref="P:MediaStream"/> can be used.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaItem.NaturalDuration">
+            <summary>
+            Gets or sets the duration to show for this item in the item list.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaItem.ThumbnailSource">
+            <summary>
+            Gets or sets the image that represents the item in the item list.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.MediaPlayer.C1MediaItem.PropertyChanged">
+            <summary>
+            Occurs when the items list of the collection has changed, or the collection is reset.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.MediaPlayer.C1MediaPlayer">
+            <summary>
+            The <see cref="T:C1.Silverlight.MediaPlayer.C1MediaPlayer"/> plays video and audio from the internet.
+            </summary>	
+        </member>
+        <member name="M:C1.Silverlight.MediaPlayer.C1MediaPlayer.Play">
+            <summary>
+            Plays media from the current position.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.MediaPlayer.C1MediaPlayer.Pause">
+            <summary>
+            Pauses media at the current position.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.MediaPlayer.C1MediaPlayer.Stop">
+            <summary>
+            Stops and resets media to be played from the beginning of the current item.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.BufferingTimeProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.BufferingTime"/> dependency property.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.MediaPlayer.C1MediaPlayer.OnMouseMove(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Called before the <see cref="E:MouseMove"/> event occurs.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.MediaPlayer.C1MediaPlayer.ChangeVisualStateIdle(System.Boolean)">
+            <summary>
+            Updates the current visual state of the Idle visual state group to match the object's properties.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.MediaPlayer.C1MediaPlayer.ChangeVisualStateMedia(System.Boolean)">
+            <summary>
+            Updates the current visual state of the Media visual state group to match the object's properties.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.MediaPlayer.C1MediaPlayer.ChangeVisualStateCommon(System.Boolean)">
+            <summary>
+            Updates the current visual state of the Common visual state group to match the object's properties.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsFullScreenProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsFullScreen"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.AutoPlayProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.AutoPlay"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.NaturalDurationProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.NaturalDuration"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.BufferingProgressProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.BufferingProgress"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.DownloadProgressProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.DownloadProgress"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsChapterListVisibleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsChapterListVisible"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsItemListVisibleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsItemListVisible"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsMutedProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsMuted"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsPlayingProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsPlaying"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.PositionProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.Position"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.VolumeProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.Volume"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsLoopingProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsLooping"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsIdleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsIdle"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.ToolBarExtensionProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.ToolBarExtension"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.ToolBarButtonBaseStyleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.ToolBarButtonBaseStyle"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.ScreenExtensionProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.ScreenExtension"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsItemListButtonVisibleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsItemListButtonVisible"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsChapterListButtonVisibleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsChapterListButtonVisible"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.UnstartedTemplateProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.UnstartedTemplate"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.BufferingTemplateProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.BufferingTemplate"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.PausedTemplateProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.PausedTemplate"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsStopButtonVisibleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsStopButtonVisible"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsNextButtonVisibleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsNextButtonVisible"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsPreviousButtonVisibleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsPreviousButtonVisible"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsFullScreenButtonVisibleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsFullScreenButtonVisible"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsVolumeControlVisibleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsVolumeControlVisible"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsLoopButtonVisibleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsLoopButtonVisible"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsPositionSliderVisibleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsPositionSliderVisible"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsTimePresenterVisibleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsTimePresenterVisible"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.MediaStateProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.MediaState"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsTitleVisibleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsTitleVisible"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsPlayButtonVisibleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsPlayButtonVisible"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.SuperimposeButtonsWindowedProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.SuperimposeButtonsWindowed"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.SuperimposeButtonsFullScreenProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.SuperimposeButtonsFullScreen"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.MediaTransformProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.MediaTransform"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsMouseOverProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsMouseOver"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.ForceMouseOverProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.ForceMouseOver"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.MouseOverBrushProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.MouseOverBrush"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.PressedBrushProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.PressedBrush"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.FocusBrushProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.FocusBrush"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.ButtonBackgroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.ButtonBackground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MediaPlayer.ButtonForegroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.ButtonForeground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.MediaPlayer.C1MediaPlayer.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.MediaPlayer.C1MediaPlayer"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.MediaPlayer.C1MediaPlayer.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.MediaPlayer.C1MediaPlayer"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.PlayCommand">
+            <summary>
+            Gets the value that represents the Play command.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.PauseCommand">
+            <summary>
+            Gets the value that represents the Pause command.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.StopCommand">
+            <summary>
+            Gets the value that represents the Stop command.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.SeekCommand">
+            <summary>
+            Gets the value that represents the Seek command.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.PreviousCommand">
+            <summary>
+            Gets the value that represents the Previous command.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.NextCommand">
+            <summary>
+            Gets the value that represents the Next command.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.MoveCurrentToCommand">
+            <summary>
+            Gets the value that represents the MoveCurrentTo command.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.VideoBrush">
+            <summary>
+            Gets a Brush that paints an area with video content.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.Items">
+            <summary>
+            List of <see cref="T:C1.Silverlight.MediaPlayer.C1MediaItem"/> to play.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.ItemsView">
+            <summary>
+            Collection view that mantains the current item for <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.Items"/>.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.MediaPlayer.C1MediaPlayer.MarkerReached">
+            <summary>
+            Occurs when a timeline marker is encountered during media playback.
+            </summary>        
+        </member>
+        <member name="E:C1.Silverlight.MediaPlayer.C1MediaPlayer.MediaFailed">
+            <summary>
+            Occurs when there is an error associated with the MediaSource of the current <see cref="T:C1.Silverlight.MediaPlayer.C1MediaItem"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.BufferingTime">
+            <summary>
+            Gets or sets the amount of time to buffer.  The default is 5 seconds.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsFullScreen">
+            <summary>
+            Gets or sets a value indicating whether the player is running maximized.
+            </summary>
+            <remarks>
+            When full screen is abandoned this property resets to false automatically. It’s possible for the application to be maximized and this property to be false, for example an application containing several media players can only maximize one at a time.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.AutoPlay">
+            <summary>
+            Gets or sets a value indicating whether media begins to play automatically when the player starts or the current media item changes.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.NaturalDuration">
+            <summary>
+            Gets the natural duration of the current media item.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.BufferingProgress">
+            <summary>
+            Gets a value that indicates the percentage of buffering progress made.
+            </summary>
+            <remarks>
+            The value ranges from 0 to 1.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.DownloadProgress">
+            <summary>
+            Gets a percentage value indicating the amount of download completed for content located on a remote server.
+            </summary>
+            <remarks>
+            The value ranges from 0 to 1. The default value is 0.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsChapterListVisible">
+            <summary>
+            Gets or sets a value indicating whether the list of chapters for the current media item is visible.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsItemListVisible">
+            <summary>
+            Gets or sets a value indicating whether the list of media items is visible.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsMuted">
+            <summary>
+            Gets or sets a value indicating whether the audio is muted.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsPlaying">
+            <summary>
+            Gets or sets a value indicating whether media advances.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.Position">
+            <summary>
+            Gets or sets the current position of the current media item.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.Volume">
+            <summary>
+            Gets or sets the media's volume.
+            </summary>
+            <remarks>
+            The media's volume represented on a linear scale between 0 and 1. The default is 1.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsLooping">
+            <summary>
+            Gets or sets a value indicating whether the first media item should play after the last finishes.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsIdle">
+            <summary>
+            Private property for the Idle state group.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.ToolBarExtension">
+            <summary>
+            Gets or sets the template for an optional extension of the ToolBar that contains the show/hide items/chapter list.
+            </summary>
+            <remarks>
+            Allows adding more buttons or other content next to the chapter and items buttons. This is a Template because separate instances are needed for fullscreen and normal mode. Use ToolBarButtonBaseStyle as the style of buttons placed here to match the style of the template.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.ToolBarButtonBaseStyle">
+            <summary>
+            Gets the style of the ToolBat buttons, so that the theme can be matched by user controls in the ToolBarExtension template.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.ScreenExtension">
+            <summary>
+            Gets or sets the template for an optional overlay of the video area.
+            </summary>
+            <remarks>
+            This is a Template because separate instances are needed for fullscreen and normal mode.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsItemListButtonVisible">
+            <summary>
+            Gets or sets a value indicating whether the button that toggles the visibility of list of media items is visible.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsChapterListButtonVisible">
+            <summary>
+            Gets or sets a value indicating whether the button that toggles the visibility of list of chapter items is visible.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.UnstartedTemplate">
+            <summary>
+            Gets or sets the template for an overlay over the screen when the state is Unstarted.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.BufferingTemplate">
+            <summary>
+            Gets or sets the template for an overlay over the screen when the state is Buffering.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.PausedTemplate">
+            <summary>
+            Gets or sets the template for an overlay over the screen when the state is Paused.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsStopButtonVisible">
+            <summary>
+            Gets or sets a value indicating whether the button that stops the media is visible.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsNextButtonVisible">
+            <summary>
+            Gets or sets a value indicating whether the button that advances to the next media item is visible.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsPreviousButtonVisible">
+            <summary>
+            Gets or sets a value indicating whether the button that advances to the previous media item is visible.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsFullScreenButtonVisible">
+            <summary>
+            Gets or sets a value indicating whether the button that toggles full screen mode is visible.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsVolumeControlVisible">
+            <summary>
+            Gets or sets a value indicating whether the control that controls the media's volume is visible.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsLoopButtonVisible">
+            <summary>
+            Gets or sets a value indicating whether the button that toggles media item list looping is visible.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsPositionSliderVisible">
+            <summary>
+            Gets or sets a value indicating whether the slider that shows and controls the current position is visible.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsTimePresenterVisible">
+            <summary>
+            Gets or sets a value indicating whether the widget that shows the current and total time of the media is visible.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.MediaState">
+            <summary>
+            The current playing state of the video or audio file.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.MediaPlayer.C1MediaPlayer.MediaStateChanged">
+            <summary> 
+            Event raised when the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.MediaState"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsTitleVisible">
+            <summary>
+            Gets or sets a value indicating whether the text block that shows the title of the current item is visible.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsPlayButtonVisible">
+            <summary>
+            Gets or sets a value indicating whether the button that starts and stops media playing is visible.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.SuperimposeButtonsWindowed">
+            <summary>
+            Set to true to show the buttons over the video when the player is not in full screen mode.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.SuperimposeButtonsFullScreen">
+            <summary>
+            Set to true to show the buttons over the video when the player is in full screen mode.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.MediaTransform">
+            <summary>
+            Gets or sets a graphics transformation that should apply to the media rectangle when layout is performed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsMouseOver">
+            <summary>
+            Returns true if the mouse is over the control.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsMouseOverChanged">
+            <summary> 
+            Event raised when the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.IsMouseOver"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.ForceMouseOver">
+            <summary>
+            Set to true to force the mouse over visual state.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.MouseOverBrush">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to highlight the control when it has the mouse over.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.PressedBrush">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to paint a button when it is pressed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.FocusBrush">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to highlight the focused control.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.ButtonBackground">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> that will be assigned to the Background of the buttons inside the control.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MediaPlayer.ButtonForeground">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> that will be assigned to the Foreground of the buttons inside the control.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.MediaPlayer.MediaState">
+            <summary>
+            Defines the potential states of a <see cref="T:C1.Silverlight.MediaPlayer.C1MediaPlayer"/> object.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.MediaState.NoMedia">
+            <summary>
+            The <see cref="T:C1.Silverlight.MediaPlayer.C1MediaPlayer"/> contains no media.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.MediaState.Unstarted">
+            <summary>
+            The <see cref="T:C1.Silverlight.MediaPlayer.C1MediaPlayer"/> is stopped at the beginning of the file.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.MediaState.Buffering">
+            <summary>
+            The <see cref="T:C1.Silverlight.MediaPlayer.C1MediaPlayer"/> is loading the media for playback.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.MediaState.Playing">
+            <summary>
+            The <see cref="T:C1.Silverlight.MediaPlayer.C1MediaPlayer"/> is playing the media specified by the <see cref="P:C1.Silverlight.MediaPlayer.C1MediaItem.MediaSource"/> property of the current <see cref="T:C1.Silverlight.MediaPlayer.C1MediaItem"/>-
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.MediaState.Paused">
+            <summary>
+            The <see cref="T:C1.Silverlight.MediaPlayer.C1MediaPlayer"/> does not advance its position.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.MediaPlayer.HoursMinutesSecondsConverter">
+            <summary>
+            Converts TimeSpan values to the hh:mm:ss string format.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.MediaPlayer.ToVisibilityConverter">
+            <summary>
+            Converts Boolean values to Visibility enumeration values.  true becomes Visible and false becomes Collapsed.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.MediaPlayer.InverseToVisibilityConverter">
+            <summary>
+            Converts Boolean values to Visibility enumeration values.  true becomes Collapsed and false becomes Visible.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.MediaPlayer.InverseToOpacityConverter">
+            <summary>
+            Converts Boolean values to [0..1] opacity double  values.  true becomes 0.0 and false becomes 1.0.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.MediaPlayer.FallbackConverter">
+            <summary>
+            Converter that returns the value unchanged if the value is not null or the parameter otherwise.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.MediaPlayer.TemplateControl">
+            <summary>
+            Control that loads a DataTemplate, forwarding its own DataContext.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.MediaPlayer.TemplateControl.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.MediaPlayer.TemplateControl"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.TemplateControl.DataTemplateProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.TemplateControl.DataTemplate"/> dependency property. 
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.TemplateControl.DataTemplate">
+            <summary>
+            Gets or sets the template to load.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.MediaPlayer.C1MoveToPointSlider">
+            <summary>
+            A slider that jumps where clicked, without dragging.
+            </summary>	
+        </member>
+        <member name="M:C1.Silverlight.MediaPlayer.C1MoveToPointSlider.OnMinimumChanged(System.Double,System.Double)">
+            <summary>
+            Called when the <see cref="P:Minimum"/> property changes.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.MediaPlayer.C1MoveToPointSlider.OnMaximumChanged(System.Double,System.Double)">
+            <summary>
+            Called when the <see cref="P:Maximum"/> property changes.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.MediaPlayer.C1MoveToPointSlider.OnValueChanged(System.Double,System.Double)">
+            <summary>
+            Raises <see cref="P:ValueChanged"/> routed event.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.MediaPlayer.C1MoveToPointSlider.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Called before the <see cref="E:MouseLeftButtonDown"/> event occurs.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.MediaPlayer.C1MoveToPointSlider.OnMouseMove(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Called before the <see cref="E:MouseMove"/> event occurs.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.MediaPlayer.C1MoveToPointSlider.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Called before the <see cref="E:MouseLeftButtonUp"/> event occurs.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.MediaPlayer.C1MoveToPointSlider.OnLostMouseCapture(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Called before the <see cref="E:LostMouseCapture"/> event occurs
+            to provide handling for the event in a derived class without attaching a
+            delegate.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.MediaPlayer.C1MoveToPointSlider.OnMouseEnter(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Called before the <see cref="E:MouseEnter"/> event occurs.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.MediaPlayer.C1MoveToPointSlider.OnMouseLeave(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Called before the <see cref="E:MouseLeave"/> event occurs.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.MediaPlayer.C1MoveToPointSlider.ChangeVisualStateCommon(System.Boolean)">
+            <summary>
+            Updates the current visual state of the Common visual state group to match the object's properties.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MoveToPointSlider.IsMouseOverProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MoveToPointSlider.IsMouseOver"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.MediaPlayer.C1MoveToPointSlider.ForceMouseOverProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.MediaPlayer.C1MoveToPointSlider.ForceMouseOver"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.MediaPlayer.C1MoveToPointSlider.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.MediaPlayer.C1MoveToPointSlider"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.MediaPlayer.C1MoveToPointSlider.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.MediaPlayer.C1MoveToPointSlider"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MoveToPointSlider.IsMouseOver">
+            <summary>
+            Returns true if the mouse is over the control.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.MediaPlayer.C1MoveToPointSlider.IsMouseOverChanged">
+            <summary> 
+            Event raised when the <see cref="P:C1.Silverlight.MediaPlayer.C1MoveToPointSlider.IsMouseOver"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.C1MoveToPointSlider.ForceMouseOver">
+            <summary>
+            Set to true to force the mouse over visual state.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.MediaPlayer.Resources.C1_Silverlight_MediaPlayer">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.MediaPlayer.Resources.C1_Silverlight_MediaPlayer.#ctor">
+            <summary>
+            Public constructor needed to create an object of the class as a Xaml resource.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.Resources.C1_Silverlight_MediaPlayer.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.Resources.C1_Silverlight_MediaPlayer.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.Resources.C1_Silverlight_MediaPlayer.ChapterListToolTip">
+            <summary>
+              Looks up a localized string similar to Chapter List.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.Resources.C1_Silverlight_MediaPlayer.FullScreenToolTip">
+            <summary>
+              Looks up a localized string similar to Full Screen.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.Resources.C1_Silverlight_MediaPlayer.ItemListToolTip">
+            <summary>
+              Looks up a localized string similar to Item List.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.Resources.C1_Silverlight_MediaPlayer.LoopToolTip">
+            <summary>
+              Looks up a localized string similar to Loop Item List.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.Resources.C1_Silverlight_MediaPlayer.MuteToolTip">
+            <summary>
+              Looks up a localized string similar to Mute Sound.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.Resources.C1_Silverlight_MediaPlayer.NextToolTip">
+            <summary>
+              Looks up a localized string similar to Next.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.Resources.C1_Silverlight_MediaPlayer.PlayPauseToolTip">
+            <summary>
+              Looks up a localized string similar to Play/Pause.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.Resources.C1_Silverlight_MediaPlayer.PreviousToolTip">
+            <summary>
+              Looks up a localized string similar to Previous.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.Resources.C1_Silverlight_MediaPlayer.StopToolTip">
+            <summary>
+              Looks up a localized string similar to Stop.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.MediaPlayer.Resources.C1_Silverlight_MediaPlayer.VolumeToolTip">
+            <summary>
+              Looks up a localized string similar to Adjust Volume.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.MediaPlayer.TimeSpanConverter">
+            <summary>
+            Converts TimeSpan values to and from whole and fractional seconds.
+            </summary>
+        </member>
+    </members>
+</doc>

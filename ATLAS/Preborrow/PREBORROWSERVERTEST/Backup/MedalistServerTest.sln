@@ -1,0 +1,69 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedalistServer", "..\MedalistServer\MedalistServer.csproj", "{DB3234F9-404D-4297-8A94-35E9536F0348}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "..\Common\Common.csproj", "{51D7F048-02E1-49F8-BA33-743E3E5373F7}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedalistServerTest", "MedalistServerTest.csproj", "{0346E9EA-6DA6-454B-8294-0729595586FD}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medalist", "..\Medalist\Medalist.csproj", "{FE13E31D-F44D-41B9-8C75-027D7E5AD5E6}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Filer", "..\Filer\Filer.csproj", "{BADFA01C-F61F-48A0-B785-033BBE0364DC}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Process", "..\Process\Process.csproj", "{E80C0B0F-DA0D-4B72-85A2-183D96613175}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartSeg", "..\SmartSeg\SmartSeg.csproj", "{0D20B5F5-279D-43B1-B761-F1469A55B941}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{DB3234F9-404D-4297-8A94-35E9536F0348}.Debug.ActiveCfg = Debug|.NET
+		{DB3234F9-404D-4297-8A94-35E9536F0348}.Debug.Build.0 = Debug|.NET
+		{DB3234F9-404D-4297-8A94-35E9536F0348}.Release.ActiveCfg = Release|.NET
+		{DB3234F9-404D-4297-8A94-35E9536F0348}.Release.Build.0 = Release|.NET
+		{51D7F048-02E1-49F8-BA33-743E3E5373F7}.Debug.ActiveCfg = Debug|.NET
+		{51D7F048-02E1-49F8-BA33-743E3E5373F7}.Debug.Build.0 = Debug|.NET
+		{51D7F048-02E1-49F8-BA33-743E3E5373F7}.Release.ActiveCfg = Release|.NET
+		{51D7F048-02E1-49F8-BA33-743E3E5373F7}.Release.Build.0 = Release|.NET
+		{0346E9EA-6DA6-454B-8294-0729595586FD}.Debug.ActiveCfg = Debug|.NET
+		{0346E9EA-6DA6-454B-8294-0729595586FD}.Debug.Build.0 = Debug|.NET
+		{0346E9EA-6DA6-454B-8294-0729595586FD}.Release.ActiveCfg = Release|.NET
+		{0346E9EA-6DA6-454B-8294-0729595586FD}.Release.Build.0 = Release|.NET
+		{FE13E31D-F44D-41B9-8C75-027D7E5AD5E6}.Debug.ActiveCfg = Debug|.NET
+		{FE13E31D-F44D-41B9-8C75-027D7E5AD5E6}.Debug.Build.0 = Debug|.NET
+		{FE13E31D-F44D-41B9-8C75-027D7E5AD5E6}.Release.ActiveCfg = Release|.NET
+		{FE13E31D-F44D-41B9-8C75-027D7E5AD5E6}.Release.Build.0 = Release|.NET
+		{BADFA01C-F61F-48A0-B785-033BBE0364DC}.Debug.ActiveCfg = Debug|.NET
+		{BADFA01C-F61F-48A0-B785-033BBE0364DC}.Debug.Build.0 = Debug|.NET
+		{BADFA01C-F61F-48A0-B785-033BBE0364DC}.Release.ActiveCfg = Release|.NET
+		{BADFA01C-F61F-48A0-B785-033BBE0364DC}.Release.Build.0 = Release|.NET
+		{E80C0B0F-DA0D-4B72-85A2-183D96613175}.Debug.ActiveCfg = Debug|.NET
+		{E80C0B0F-DA0D-4B72-85A2-183D96613175}.Debug.Build.0 = Debug|.NET
+		{E80C0B0F-DA0D-4B72-85A2-183D96613175}.Release.ActiveCfg = Release|.NET
+		{E80C0B0F-DA0D-4B72-85A2-183D96613175}.Release.Build.0 = Release|.NET
+		{0D20B5F5-279D-43B1-B761-F1469A55B941}.Debug.ActiveCfg = Debug|.NET
+		{0D20B5F5-279D-43B1-B761-F1469A55B941}.Debug.Build.0 = Debug|.NET
+		{0D20B5F5-279D-43B1-B761-F1469A55B941}.Release.ActiveCfg = Release|.NET
+		{0D20B5F5-279D-43B1-B761-F1469A55B941}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

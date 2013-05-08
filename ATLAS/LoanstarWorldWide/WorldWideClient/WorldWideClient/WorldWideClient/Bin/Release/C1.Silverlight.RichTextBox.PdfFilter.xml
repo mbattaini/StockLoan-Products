@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Silverlight.RichTextBox.PdfFilter</name>
+    </assembly>
+    <members>
+        <member name="T:C1.Silverlight.RichTextBox.PdfFilter.PdfFilter">
+            <summary>
+            Provides extension methods to export <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/> content to PDF.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.PdfFilter.PdfFilter.PrintDocument(C1.Silverlight.RichTextBox.Documents.C1Document,C1.Silverlight.Pdf.C1PdfDocument,System.Windows.Thickness)">
+            <summary>
+            Prints the <see cref="T:C1.Silverlight.RichTextBox.Documents.C1Document"/> into a <see cref="T:C1.Silverlight.Pdf.C1PdfDocument"/>.
+            </summary>
+            <param name="document">The source document.</param>
+            <param name="pdf">The PDF document.</param>
+            <param name="marginInPoints">The margin in points.</param>
+            <returns>True if the print was successful</returns>
+        </member>
+    </members>
+</doc>

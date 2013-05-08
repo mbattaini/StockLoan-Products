@@ -1,0 +1,12 @@
+U:\_Dev\ATLAS\Loanstar\MemoSegDataTest\bin\Debug\StockLoan.MemoSegDataTest.exe.config
+U:\_Dev\ATLAS\Loanstar\MemoSegDataTest\bin\Debug\StockLoan.MemoSegDataTest.exe
+U:\_Dev\ATLAS\Loanstar\MemoSegDataTest\bin\Debug\StockLoan.MemoSegDataTest.pdb
+U:\_Dev\ATLAS\Loanstar\MemoSegDataTest\bin\Debug\StockLoan.MemoSegData.dll
+U:\_Dev\ATLAS\Loanstar\MemoSegDataTest\bin\Debug\StockLoan.Common.dll
+U:\_Dev\ATLAS\Loanstar\MemoSegDataTest\bin\Debug\DatabaseFunctions.dll
+U:\_Dev\ATLAS\Loanstar\MemoSegDataTest\bin\Debug\StockLoan.MemoSegData.pdb
+U:\_Dev\ATLAS\Loanstar\MemoSegDataTest\bin\Debug\StockLoan.Common.pdb
+U:\_Dev\ATLAS\Loanstar\MemoSegDataTest\bin\Debug\DatabaseFunctions.pdb
+U:\_Dev\ATLAS\Loanstar\MemoSegDataTest\obj\Debug\ResolveAssemblyReference.cache
+U:\_Dev\ATLAS\Loanstar\MemoSegDataTest\obj\Debug\StockLoan.MemoSegDataTest.exe
+U:\_Dev\ATLAS\Loanstar\MemoSegDataTest\obj\Debug\StockLoan.MemoSegDataTest.pdb

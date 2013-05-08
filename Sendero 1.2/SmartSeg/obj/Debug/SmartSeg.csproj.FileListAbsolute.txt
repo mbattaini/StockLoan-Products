@@ -1,0 +1,5 @@
+C:\_dev\Sendero 1.2\SmartSeg\bin\Debug\Anetics.SmartSeg.dll
+C:\_dev\Sendero 1.2\SmartSeg\bin\Debug\Anetics.SmartSeg.pdb
+C:\_dev\Sendero 1.2\SmartSeg\obj\Debug\ResolveAssemblyReference.cache
+C:\_dev\Sendero 1.2\SmartSeg\obj\Debug\Anetics.SmartSeg.dll
+C:\_dev\Sendero 1.2\SmartSeg\obj\Debug\Anetics.SmartSeg.pdb

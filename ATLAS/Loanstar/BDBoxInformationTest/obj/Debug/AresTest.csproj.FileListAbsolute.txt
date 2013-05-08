@@ -1,0 +1,13 @@
+C:\ATLAS\Loanstar\AresTest\bin\Debug\StockLoan.AresTest.exe.config
+C:\ATLAS\Loanstar\AresTest\obj\Debug\ResolveAssemblyReference.cache
+C:\ATLAS\Loanstar\AresTest\bin\Debug\StockLoan.AresTest.exe
+C:\ATLAS\Loanstar\AresTest\bin\Debug\StockLoan.AresTest.pdb
+C:\ATLAS\Loanstar\AresTest\bin\Debug\StockLoan.Ares.dll
+C:\ATLAS\Loanstar\AresTest\bin\Debug\StockLoan.Common.dll
+C:\ATLAS\Loanstar\AresTest\bin\Debug\StockLoan.Common.pdb
+C:\ATLAS\Loanstar\AresTest\bin\Debug\StockLoan.Ares.pdb
+C:\ATLAS\Loanstar\AresTest\obj\Debug\StockLoan.AresTest.exe
+C:\ATLAS\Loanstar\AresTest\obj\Debug\StockLoan.AresTest.pdb
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\AresTest\bin\Debug\StockLoan.AresTest.exe.config
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\AresTest\obj\Debug\StockLoan.AresTest.exe
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\AresTest\obj\Debug\StockLoan.AresTest.pdb

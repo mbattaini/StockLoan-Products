@@ -1,0 +1,7 @@
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideTransport\Transport\Transport\bin\Debug\StockLoan.Transport.dll
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideTransport\Transport\Transport\bin\Debug\StockLoan.Transport.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideTransport\Transport\Transport\bin\Debug\StockLoan.Common.dll
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideTransport\Transport\Transport\bin\Debug\StockLoan.Common.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideTransport\Transport\Transport\obj\Debug\ResolveAssemblyReference.cache
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideTransport\Transport\Transport\obj\Debug\StockLoan.Transport.dll
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideTransport\Transport\Transport\obj\Debug\StockLoan.Transport.pdb

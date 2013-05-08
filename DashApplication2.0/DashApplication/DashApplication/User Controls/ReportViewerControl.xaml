@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="DashApplication.ReportViewerControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+    mc:Ignorable="d"
+    d:DesignHeight="300">
+    
+    <Grid x:Name="LayoutRoot" Background="White">
+        <c1:C1ToolbarStrip Height="24" Background="#FFB2E0F4" Margin="10,5,10,0">
+            <sdk:Label Content="Business Date:" Height="18" VerticalAlignment="Center" HorizontalAlignment="Right" Width="78" Style="{StaticResource LabelStyle}"/>
+            <c1:C1DateTimePicker x:Name="ReportDatePicker" Width="134" EditMode="Date" HorizontalAlignment="Right" Margin="0" Padding="0" Style="{StaticResource C1BizDatePickerStyle}"/>    
+            <sdk:Label Content="" Height="18" VerticalAlignment="Center" HorizontalAlignment="Right" Width="21" Style="{StaticResource LabelStyle}"/>
+            <sdk:Label Content="File:" Height="18" VerticalAlignment="Center" HorizontalAlignment="Right" Width="28" Style="{StaticResource LabelStyle}"/>
+            <c1:C1ComboBox x:Name="ReportComboBox" HorizontalAlignment="Left" Width="335" Height="18"/>
+            <c1:C1ToolbarButton HorizontalAlignment="Left" Name="LookupButton" Style="{StaticResource C1ToolBarButtonStyle}" Click="LookupButton_Click">
+                <Image Width="22" Source="/DashApplication;component/Image/White/MS_0000s_0036_search.png"/>
+            </c1:C1ToolbarButton>
+        </c1:C1ToolbarStrip>
+        <c1:C1TextBoxBase x:Name="ReportViewerTextBox" Margin="10,34,10,8" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" Style="{StaticResource C1TextBoxBaseStyle}" FontFamily="Courier New" VerticalContentAlignment="Top"/>
+    </Grid>
+</UserControl>

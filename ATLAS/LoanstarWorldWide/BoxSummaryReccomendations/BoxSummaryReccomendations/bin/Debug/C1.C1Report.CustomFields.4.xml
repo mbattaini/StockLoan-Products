@@ -1,0 +1,435 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>C1.C1Report.CustomFields.4</name>
+  </assembly>
+  <members>
+    <member name="T:C1.C1Report.CustomFields.Chart">
+      <summary>
+            The Chart Class inherits from <see cref="T:C1.C1Report.Field" /> and uses the 
+            <c>C1Chart</c> control to embed data bound charts in reports.
+            </summary>
+    </member>
+    <member name="M:C1.C1Report.CustomFields.Chart.#ctor">
+      <summary>
+            Initializes a new instance of the <c>C1Chart</c> class.
+            </summary>
+    </member>
+    <member name="M:C1.C1Report.CustomFields.Chart.Clone">
+      <summary>
+            Overridden to clone the inner C1Chart control in the field so the 
+            clone doesn't reference the original field's chart.
+            </summary>
+      <returns>A deep clone of the <see cref="T:C1.C1Report.CustomFields.Chart" /> field.</returns>
+    </member>
+    <member name="M:C1.C1Report.CustomFields.Chart.GetRenderContent(System.String@,System.Drawing.Image@,System.Boolean)">
+      <summary>
+            Selects the text or image that will be rendered by the field.
+            </summary>
+      <param name="value">Field text.</param>
+      <param name="img">Chart image.</param>
+      <param name="designTime">Whether we in design time or runtime.</param>
+    </member>
+    <member name="M:C1.C1Report.CustomFields.Chart.OnPropertyChanged">
+      <summary>
+            Marks the owner report as dirty so it will clear the internal 
+            cache and render again (useful for implementing custom fields).
+            </summary>
+    </member>
+    <member name="P:C1.C1Report.CustomFields.Chart.ChartType">
+      <summary>
+            Gets or sets the chart type. Available types are Area, Bar, Pie, Scatter, Line and Column.
+            </summary>
+    </member>
+    <member name="P:C1.C1Report.CustomFields.Chart.RadialLabels">
+      <summary>
+            This property only applies to Pie charts. 
+            It causes the field to add radial labels attached to the pie slices 
+            instead of a legend.
+            </summary>
+    </member>
+    <member name="P:C1.C1Report.CustomFields.Chart.ShowPercentages">
+      <summary>
+            This property only applies to Pie charts. 
+            It causes the field to add percentage labels to the pie slices.
+            </summary>
+    </member>
+    <member name="P:C1.C1Report.CustomFields.Chart.RecordSource">
+      <summary>
+            Gets or sets a Sql statement to use and retrieve data for the chart.
+            </summary>
+      <remarks>
+            If provided, data is retrieved using the parent report's ConnectionString. 
+            If omitted, data is retrieved directly from the parent report. 
+            In this latter case, the data is automatically filtered according 
+            to the current grouping scope (e.g. a chart in a 'Category' 
+            group header would contain data only for the current category).
+            </remarks>
+    </member>
+    <member name="P:C1.C1Report.CustomFields.Chart.DataX">
+      <summary>
+            Gets or sets a string containing one field with the chart labels.
+            </summary>
+      <remarks>
+            Labels are displayed along the X axis or along with pie slices. For example:
+            <example>chartField.DataX = "ProductName"</example></remarks>
+    </member>
+    <member name="P:C1.C1Report.CustomFields.Chart.DataY">
+      <summary>
+            Gets or sets a string containing one or more fields with the data to plot on the chart.
+            </summary>
+      <remarks>
+            If multiple fields are provided, they must be separated with semicolons. For example:
+            <example>chartField.DataY = "UnitPrice;UnitsInStock"</example>
+            You can also use regular VBScript expressions instead of simple field names. 
+            For example, to plot sales and sales taxes as two separate series, you could use:
+            <example>chartField.DataY = "Sales;Sales * 0.085"</example></remarks>
+    </member>
+    <member name="P:C1.C1Report.CustomFields.Chart.DataColor">
+      <summary>
+            Specifies the color for the chart bars, lines, symbols, or pie slices.
+            </summary>
+      <remarks>
+            If the chart contains more than one series (or pie slices) 
+            then additional colors are generated automatically by making 
+            the base color lighter. To control the color of each series in 
+            a multi-series chart, use the <see cref="P:C1.C1Report.CustomFields.Chart.Palette" /> property instead.
+            </remarks>
+    </member>
+    <member name="P:C1.C1Report.CustomFields.Chart.Palette">
+      <summary>
+            Specifies a collection of colors to be used for each series (or pie slices).
+            </summary>
+      <remarks>
+            The collection is specified as a string containing a list of color names, 
+            delimited by semicolons. For example:
+            <example>chartField.Palette = "Red;Green;Blue"</example></remarks>
+    </member>
+    <member name="P:C1.C1Report.CustomFields.Chart.GridLines">
+      <summary>
+            Adds gridlines to charts. This property does not apply to Pie charts.
+            </summary>
+    </member>
+    <member name="P:C1.C1Report.CustomFields.Chart.Boxed">
+      <summary>
+            Draws a box around the plot area.
+            </summary>
+    </member>
+    <member name="P:C1.C1Report.CustomFields.Chart.Use3D">
+      <summary>
+            Applies 3D effects to the charts.
+            </summary>
+    </member>
+    <member name="P:C1.C1Report.CustomFields.Chart.XMin">
+      <summary>
+            Minimum for X axis.
+            </summary>
+    </member>
+    <member name="P:C1.C1Report.CustomFields.Chart.XMax">
+      <summary>
+            Maximum value for X axis.
+            </summary>
+    </member>
+    <member name="P:C1.C1Report.CustomFields.Chart.YMin">
+      <summary>
+            Minimum for Y axis.
+            </summary>
+    </member>
+    <member name="P:C1.C1Report.CustomFields.Chart.YMax">
+      <summary>
+            Maximum value for Y axis.
+            </summary>
+    </member>
+    <member name="P:C1.C1Report.CustomFields.Chart.FormatX">
+      <summary>
+            Gets or sets the annotation format for the X axis.
+            </summary>
+      <remarks>
+        <para>This property controls the format used to display values along the X axis of the chart.</para>
+        <para>The value is a regular .NET format string that is used to format numeric or <see cref="T:System.DateTime" /> 
+            values. For details on how to specify format strings, see the <see cref="T:System.IFormattable" /> interface.</para>
+        <para>Typical values used for formatting numeric values are "F2" (floating point with two decimals),
+            "C" (currency), and "#,##0.00" (thousand-separated values with two decimals).</para>
+      </remarks>
+    </member>
+    <member name="P:C1.C1Report.CustomFields.Chart.FormatY">
+      <summary>
+            Gets or sets the annotation format for the Y axis. 
+            </summary>
+      <remarks>
+        <para>This property controls the format used to display values along the Y axis of the chart.</para>
+        <para>The value is a regular .NET format string that is used to format numeric or <see cref="T:System.DateTime" /> 
+            values. For details on how to specify format strings, see the <see cref="T:System.IFormattable" /> interface.</para>
+        <para>Typical values used for formatting numeric values are "F2" (floating point with two decimals),
+            "C" (currency), and "#,##0.00" (thousand-separated values with two decimals).</para>
+      </remarks>
+    </member>
+    <member name="P:C1.C1Report.CustomFields.Chart.ChartControl">
+      <summary>
+            Gets a reference to the underlying <c>C1Chart</c> control. 
+            </summary>
+      <remarks>
+            You can set properties in the underlying <c>C1Chart</c> control using script or code, 
+            but these properties are not persisted when the report is saved.
+            </remarks>
+    </member>
+    <member name="P:C1.C1Report.CustomFields.Chart.ImageType">
+      <summary>
+            Gets or sets the type of image to use when exporting the chart to html. 
+            </summary>
+      <remarks>Because of GDI+ limitation, this conversion does not support transparency.</remarks>
+    </member>
+    <member name="P:C1.C1Report.CustomFields.Chart.ShowLegend">
+      <summary>
+            Gets or sets whether the chart should include a legend.
+            </summary>
+    </member>
+    <member name="P:C1.C1Report.CustomFields.Chart.Aggregate">
+      <summary>
+            Gets or sets how values should be aggregated on the chart.
+            </summary>
+    </member>
+    <member name="T:C1.C1Report.CustomFields.Chart.ChartTypeEnum">
+      <summary>
+            Specifies the type of chart to display.
+            </summary>
+    </member>
+    <member name="F:C1.C1Report.CustomFields.Chart.ChartTypeEnum.Bar">
+      <summary>
+            A chart that draws each series as a bar in a cluster.
+            </summary>
+    </member>
+    <member name="F:C1.C1Report.CustomFields.Chart.ChartTypeEnum.Area">
+      <summary>
+            A chart that draws each series as connected points of data, 
+            filled below the points.
+            </summary>
+    </member>
+    <member name="F:C1.C1Report.CustomFields.Chart.ChartTypeEnum.Scatter">
+      <summary>
+            A chart that uses two values to represent each data point.
+            </summary>
+    </member>
+    <member name="F:C1.C1Report.CustomFields.Chart.ChartTypeEnum.Pie">
+      <summary>
+            A chart that draws each series as a slice in a pie.
+            </summary>
+    </member>
+    <member name="F:C1.C1Report.CustomFields.Chart.ChartTypeEnum.Line">
+      <summary>
+            A chart that represents data as data points connected with line.
+            </summary>
+    </member>
+    <member name="F:C1.C1Report.CustomFields.Chart.ChartTypeEnum.Column">
+      <summary>
+            A chart that draws each series as a vertical bar in a cluster.
+            </summary>
+    </member>
+    <member name="T:C1.C1Report.CustomFields.Chart.ImageTypeEnum">
+      <summary>
+            Specifies the type of image to generate.
+            </summary>
+    </member>
+    <member name="F:C1.C1Report.CustomFields.Chart.ImageTypeEnum.Emf">
+      <summary>
+            Enhanced Windows metafile image format (EMF).
+            </summary>
+    </member>
+    <member name="F:C1.C1Report.CustomFields.Chart.ImageTypeEnum.Png">
+      <summary>
+            W3C Portable Network Graphics (PNG) image format.
+            </summary>
+    </member>
+    <member name="F:C1.C1Report.CustomFields.Chart.ImageTypeEnum.Gif">
+      <summary>
+            Graphics Interchange Format (GIF) image format.
+            </summary>
+    </member>
+    <member name="F:C1.C1Report.CustomFields.Chart.ImageTypeEnum.Jpeg">
+      <summary>
+            Joint Photographic Experts Group (JPEG) image format.
+            </summary>
+    </member>
+    <member name="F:C1.C1Report.CustomFields.Chart.ImageTypeEnum.Bmp">
+      <summary>
+            Bitmap image format (BMP).
+            </summary>
+    </member>
+    <member name="T:C1.C1Report.CustomFields.Chart.ShowLegendEnum">
+      <summary>
+            Specifies whether a legend should be displayed.
+            </summary>
+    </member>
+    <member name="F:C1.C1Report.CustomFields.Chart.ShowLegendEnum.Automatic">
+      <summary>
+            Show legend if there are two or more series.
+            </summary>
+    </member>
+    <member name="F:C1.C1Report.CustomFields.Chart.ShowLegendEnum.Always">
+      <summary>
+            Always show legend.
+            </summary>
+    </member>
+    <member name="F:C1.C1Report.CustomFields.Chart.ShowLegendEnum.Never">
+      <summary>
+            Never show legend.
+            </summary>
+    </member>
+    <member name="T:C1.C1Report.CustomFields.Chart.AggregateEnum">
+      <summary>
+            Specifies how data should be aggregated for charting.
+            </summary>
+    </member>
+    <member name="F:C1.C1Report.CustomFields.Chart.AggregateEnum.None">
+      <summary>
+            Raw values (no aggregation).
+            </summary>
+    </member>
+    <member name="F:C1.C1Report.CustomFields.Chart.AggregateEnum.Sum">
+      <summary>
+            Sum all values for each point.
+            </summary>
+    </member>
+    <member name="F:C1.C1Report.CustomFields.Chart.AggregateEnum.Count">
+      <summary>
+            Number of values for each point.
+            </summary>
+    </member>
+    <member name="F:C1.C1Report.CustomFields.Chart.AggregateEnum.Average">
+      <summary>
+            Average all values for each point.
+            </summary>
+    </member>
+    <member name="F:C1.C1Report.CustomFields.Chart.AggregateEnum.Minimum">
+      <summary>
+            Get the minimum value for each point.
+            </summary>
+    </member>
+    <member name="F:C1.C1Report.CustomFields.Chart.AggregateEnum.Maximum">
+      <summary>
+            Get the maximum value for each point.
+            </summary>
+    </member>
+    <member name="F:C1.C1Report.CustomFields.Chart.AggregateEnum.Variance">
+      <summary>
+            Gets the variance of the values for each point (sample).
+            </summary>
+    </member>
+    <member name="F:C1.C1Report.CustomFields.Chart.AggregateEnum.VariancePop">
+      <summary>
+            Gets the variance of the values for each point (population).
+            </summary>
+    </member>
+    <member name="F:C1.C1Report.CustomFields.Chart.AggregateEnum.StandardDeviation">
+      <summary>
+            Gets the standard deviation of the values for each point (sample).
+            </summary>
+    </member>
+    <member name="F:C1.C1Report.CustomFields.Chart.AggregateEnum.StandardDeviationPop">
+      <summary>
+            Gets the standard deviation of the values for each point (population).
+            </summary>
+    </member>
+    <member name="T:C1.C1Report.CustomFields.Gradient">
+      <summary>
+            This class inherits from <see cref="T:C1.C1Report.Field" /> and uses a LinearGradient brush
+            to draw a gradient background. If the field contains text, that is also displayed.
+            </summary>
+    </member>
+    <member name="M:C1.C1Report.CustomFields.Gradient.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.C1Report.CustomFields.Gradient" /> class.
+            </summary>
+    </member>
+    <member name="M:C1.C1Report.CustomFields.Gradient.GetRenderContent(System.String@,System.Drawing.Image@,System.Boolean)">
+      <summary>
+            Selects the text or image that will be rendered by the field.
+            </summary>
+      <param name="value">Field text.</param>
+      <param name="img">Field image.</param>
+      <param name="designTime">Whether we in design time or runtime.</param>
+    </member>
+    <member name="M:C1.C1Report.CustomFields.Gradient.DrawRoundRect(System.Drawing.Graphics,System.Drawing.Pen,System.Drawing.Rectangle,System.Int32,System.Int32)">
+      <summary>
+            Draw rounded rectangle.
+            </summary>
+    </member>
+    <member name="M:C1.C1Report.CustomFields.Gradient.FillRoundRect(System.Drawing.Graphics,System.Drawing.Brush,System.Drawing.Rectangle,System.Int32,System.Int32)">
+      <summary>
+            Fill rounded rectangle.
+            </summary>
+      <param name="g">
+      </param>
+      <param name="brush">
+      </param>
+      <param name="rc">
+      </param>
+      <param name="radiusX">
+      </param>
+      <param name="radiusY">
+      </param>
+    </member>
+    <member name="M:C1.C1Report.CustomFields.Gradient.RoundRect(System.Drawing.Graphics,System.Drawing.Brush,System.Drawing.Pen,System.Drawing.Rectangle,System.Int32,System.Int32)">
+      <summary>
+            Draw and fill rounded rectangle.
+            </summary>
+      <param name="g">
+      </param>
+      <param name="brush">
+      </param>
+      <param name="pen">
+      </param>
+      <param name="rc">
+      </param>
+      <param name="radiusX">
+      </param>
+      <param name="radiusY">
+      </param>
+    </member>
+    <member name="P:C1.C1Report.CustomFields.Gradient.ColorFrom">
+      <summary>
+            Initial color for the gradient background.
+            </summary>
+    </member>
+    <member name="P:C1.C1Report.CustomFields.Gradient.ColorTo">
+      <summary>
+            Final color for the gradient background.
+            </summary>
+    </member>
+    <member name="P:C1.C1Report.CustomFields.Gradient.Angle">
+      <summary>
+            Angle for the gradient pattern, in degrees.
+            </summary>
+    </member>
+    <member name="P:C1.C1Report.CustomFields.Gradient.BorderRadius">
+      <summary>
+            This property allows you to specify a rounded radius for the field background in twips.
+            </summary>
+      <remarks>
+            The rounded gradients are not exported correctly to pdf (they are rendered 
+            as regular rectangles). If you specify a BorderRadius, LineWidth, and Color, then
+            the field will render a rounded border as well. 
+            The rounded border is exported to pdf correctly.
+            </remarks>
+    </member>
+    <member name="T:C1.C1Report.CustomFields.SuperLabel">
+      <summary>
+            Inherits from <see cref="T:C1.C1Report.Field" /> and uses an instance of
+            <b>C1.Win.C1SuperTooltip.C1SuperLabel</b> component to draw HTML content.
+            </summary>
+    </member>
+    <member name="M:C1.C1Report.CustomFields.SuperLabel.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.C1Report.CustomFields.SuperLabel" /> class.
+            </summary>
+    </member>
+    <member name="M:C1.C1Report.CustomFields.SuperLabel.GetRenderContent(System.String@,System.Drawing.Image@,System.Boolean)">
+      <summary>
+            Renders HTML content using the <b>C1SuperLabel</b> component.
+            </summary>
+      <param name="value">Field text.</param>
+      <param name="img">Field image.</param>
+      <param name="designTime">Whether we in design time or runtime.</param>
+    </member>
+  </members>
+</doc>

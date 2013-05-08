@@ -1,0 +1,46 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+	mc:Ignorable="d"
+	x:Class="DashApplication.CollateralUtilizationShellControl"
+	d:DesignWidth="640" d:DesignHeight="480">
+
+	<Grid x:Name="LayoutRoot">
+		<c1:C1DataGrid Margin="8,37,8,10" Name="CollateralGrid" FrozenBottomRowsCount="1" FrozenTopRowsCount="1" AutoGeneratingColumn="CollateralGrid_AutoGeneratingColumn" Style="{StaticResource C1GridStyle}">       
+            <c1:C1DataGrid.BottomRows>
+				<c1:DataGridSummaryRow/>
+			</c1:C1DataGrid.BottomRows>
+			<c1:C1DataGrid.TopRows>
+				<c1:DataGridFilterRow/>
+			</c1:C1DataGrid.TopRows>
+				<c1:C1DataGrid.Columns>						
+						<c1:DataGridBoundColumn Header="Classification" Binding="{Binding Class}"  CanUserFilter="True" CanUserSort="True" FilterMemberPath="Class" SortMemberPath="Class" Width="100px"/>
+						<c1:DataGridNumericColumn Header="Margin Debit" Binding="{Binding MarginDebitBalance}" Format="#,##0" CanUserFilter="True" CanUserSort="True" FilterMemberPath="MarginDebitBalance" SortMemberPath="MarginDebitBalance" Width="*"/>
+						<c1:DataGridNumericColumn Header="Amount" Binding="{Binding MarginDebitBalanceAmt}" Format="#,##0.00" CanUserFilter="True" CanUserSort="True" FilterMemberPath="MarginDebitBalanceAmt" SortMemberPath="MarginDebitBalanceAmt" Width="*"/>						
+						<c1:DataGridNumericColumn Header="Margin Debit * 140" Binding="{Binding MarginDebitBalance140Amt}" Format="#,##0.00" CanUserFilter="True" CanUserSort="True" FilterMemberPath="MarginDebitBalance140Amt" SortMemberPath="MarginDebitBalance140Amt" Width="*"/>                    	
+                    	<c1:DataGridNumericColumn Header="Borrow" Binding="{Binding BorrowQuantity}" Format="#,##0" CanUserFilter="True" CanUserSort="True" FilterMemberPath="BorrowQuantity" SortMemberPath="BorrowQuantity" Width="*"/>
+						<c1:DataGridNumericColumn Header="Amount" Binding="{Binding BorrowAmount}" Format="#,##0.00" CanUserFilter="True" CanUserSort="True" FilterMemberPath="BorrowAmount" SortMemberPath="BorrowAmount" Width="*"/>
+                		<c1:DataGridNumericColumn Header="Loan" Binding="{Binding LoanQuantity}"  Format="#,##0" CanUserFilter="True" CanUserSort="True" FilterMemberPath="LoanQuantity" SortMemberPath="LoanQuantity" Width="*"/>
+						<c1:DataGridNumericColumn Header="Amount" Binding="{Binding LoanAmount}"  Format="#,##0.00" CanUserFilter="True" CanUserSort="True" FilterMemberPath="LoanAmount" SortMemberPath="LoanAmount" Width="*"/>
+                		<c1:DataGridNumericColumn Header="Bony" Binding="{Binding BonyBank}"  Format="#,##0" CanUserFilter="True" CanUserSort="True" FilterMemberPath="BonyBank" SortMemberPath="BonyBank" Width="*"/>						
+						<c1:DataGridNumericColumn Header="Amount" Binding="{Binding BonyBankAmt}"  Format="#,##0.00" CanUserFilter="True" CanUserSort="True" FilterMemberPath="BonyAmt" SortMemberPath="BonyBankAmt" Width="*"/>												
+						<c1:DataGridNumericColumn Header="JP Morgan Bank" Binding="{Binding JPMBank}"  Format="#,##0" CanUserFilter="True" CanUserSort="True" FilterMemberPath="JPMBank" SortMemberPath="JPMBank" Width="*"/>						
+						<c1:DataGridNumericColumn Header="Amount" Binding="{Binding JPMBankAmt}"  Format="#,##0.00" CanUserFilter="True" CanUserSort="True" FilterMemberPath="JPMBankAmt" SortMemberPath="JPMBankAmt" Width="*"/>						
+						<c1:DataGridNumericColumn Header="US Bank" Binding="{Binding USBank}"  Format="#,##0" CanUserFilter="True" CanUserSort="True" FilterMemberPath="USBank" SortMemberPath="USBank" Width="*"/>						
+						<c1:DataGridNumericColumn Header="Amount" Binding="{Binding USBankAmt}"  Format="#,##0" CanUserFilter="True" CanUserSort="True" FilterMemberPath="USBankAmt" SortMemberPath="USBankAmt" Width="*"/>						
+						<c1:DataGridNumericColumn Header="Harris Bank" Binding="{Binding HarrisBank}"  Format="#,##0" CanUserFilter="True" CanUserSort="True" FilterMemberPath="HarrisBank" SortMemberPath="HarrisBank" Width="*"/>						
+						<c1:DataGridNumericColumn Header="Amount" Binding="{Binding HarrisBankAmt}"  Format="#,##0.00" CanUserFilter="True" CanUserSort="True" FilterMemberPath="HarrisBankAmt" SortMemberPath="HarrisBankAmt" Width="*"/>						
+						<c1:DataGridNumericColumn Header="OCC" Binding="{Binding OCC}"  Format="#,##0" CanUserFilter="True" CanUserSort="True" FilterMemberPath="OCC" SortMemberPath="OCC" Width="*"/>						
+						<c1:DataGridNumericColumn Header="Amount" Binding="{Binding OCCAmt}"  Format="#,##0.00" CanUserFilter="True" CanUserSort="True" FilterMemberPath="OCCAmt" SortMemberPath="OCCAmt" Width="*"/>						
+				</c1:C1DataGrid.Columns>			
+		</c1:C1DataGrid>
+        <c1:C1ToolbarStrip Style="{StaticResource C1ToolBarStyle}">
+            <c1:C1ToolbarButton x:Name="ExportToExcelButton" ToolTipService.ToolTip="Collateral Utilization"  Background="#00D1DCE8" Click="ExportToExcelButton_Click">
+                <Image Width="22" Source="/DashApplication;component/Image/White/MB_0008_Excel.png"/>
+            </c1:C1ToolbarButton>
+        </c1:C1ToolbarStrip>
+    </Grid>
+</UserControl>

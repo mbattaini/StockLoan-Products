@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="TradingDataServerTest">
+</Property><Property Name="Solution File" Value="C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVERTEST\TradingDataServerTest.sln">
+</Property><Property Name="Date" Value="Friday, January 28, 2011">
+</Property><Property Name="Time" Value="9:08:22 AM">
+</Property><Property Name="Log Number" Value="5">
+</Property></Properties><Event ErrorLevel="0" Project="TradingDataServerTest" Source="TradingDataServerTest.csproj" Description="Project file successfully backed up as C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVERTEST\Backup4\TradingDataServerTest.csproj">
+</Event><Event ErrorLevel="0" Project="TradingDataServerTest" Source="AssemblyInfo.cs" Description="File successfully backed up as C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVERTEST\Backup4\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="TradingDataServerTest" Source="TestHarness.cs" Description="File successfully backed up as C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVERTEST\Backup4\TestHarness.cs">
+</Event><Event ErrorLevel="0" Project="TradingDataServerTest" Source="App.config" Description="File successfully backed up as C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVERTEST\Backup4\App.config">
+</Event><Event ErrorLevel="1" Project="TradingDataServerTest" Source="TradingDataServerTest.csproj" Description="Your project is targeting .NET Framework 2.0 or 3.0. If your project uses assemblies requiring a newer .NET Framework, your project will fail to build. You can change the .NET Framework version by clicking Properties on the project menu and then selecting a new version in the '.NET Framework' dropdown box. (In Visual Basic, this is located on the Compile tab by clicking the 'Advanced Compiler Options...' button.)">
+</Event><Event ErrorLevel="0" Project="TradingDataServerTest" Source="TradingDataServerTest.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="TradingDataServerTest" Source="TradingDataServerTest.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="TradingDataServerTest" Source="TradingDataServerTest.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

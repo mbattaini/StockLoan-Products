@@ -1,0 +1,13 @@
+﻿Installing assembly 'C:\ATLAS\Preborrow\PREBORROWSERVICE\bin\Release\StockLoan.PreBorrowService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\ATLAS\Preborrow\PREBORROWSERVICE\bin\Release\StockLoan.PreBorrowService.exe
+   logfile = C:\ATLAS\Preborrow\PREBORROWSERVICE\bin\Release\StockLoan.PreBorrowService.InstallLog
+Installing service StockLoan.PreBorrow...
+Service StockLoan.PreBorrow has been successfully installed.
+Creating EventLog source StockLoan.PreBorrow in log Application...
+Committing assembly 'C:\ATLAS\Preborrow\PREBORROWSERVICE\bin\Release\StockLoan.PreBorrowService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\ATLAS\Preborrow\PREBORROWSERVICE\bin\Release\StockLoan.PreBorrowService.exe
+   logfile = C:\ATLAS\Preborrow\PREBORROWSERVICE\bin\Release\StockLoan.PreBorrowService.InstallLog

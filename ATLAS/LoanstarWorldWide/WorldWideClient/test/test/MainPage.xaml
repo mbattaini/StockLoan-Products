@@ -1,0 +1,18 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+	xmlns:Blacklight_Controls="clr-namespace:Blacklight.Controls;assembly=Blacklight.Controls" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+	x:Class="test.MainPage" d:DesignWidth="1491" d:DesignHeight="596">
+	<UserControl.Background>
+		<ImageBrush Stretch="UniformToFill" ImageSource="blue-wallpapers-curved-space.jpg"/>
+	</UserControl.Background>
+
+	<Grid x:Name="LayoutRoot">
+		<Grid.Background>
+			<ImageBrush Stretch="Fill" ImageSource="blue-wallpapers-curved-space.jpg"/>
+		</Grid.Background>
+		<Blacklight_Controls:SyndicationFeedListBox x:Name="SyndicationFeedTest" HorizontalAlignment="Left" Margin="8,8,0,8" Width="208"/>
+		<Blacklight_Controls:DraggablePanel Content="DraggablePanel" Height="157" Margin="546,98,480,0" VerticalAlignment="Top" Background="Black"/>
+	</Grid>
+</UserControl>

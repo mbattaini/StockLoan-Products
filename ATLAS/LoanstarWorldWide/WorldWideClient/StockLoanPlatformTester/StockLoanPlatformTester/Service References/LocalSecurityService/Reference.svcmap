@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0ef06055-ece4-4579-9cb4-2f25c4892103" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/StockLoan.WebServices/SecurityService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SecurityService.wsdl" MetadataType="Wsdl" ID="1f67995a-6b7f-41b4-a60b-291242c53058" SourceId="1" SourceUrl="http://wspen-sl08w7.penson.com/StockLoan.WebServices/SecurityService.svc?wsdl" />
+    <MetadataFile FileName="SecurityService.disco" MetadataType="Disco" ID="83c04e3e-41fe-4d74-b7b0-0a80c9dda64b" SourceId="1" SourceUrl="http://wspen-sl08w7.penson.com/StockLoan.WebServices/SecurityService.svc?disco" />
+    <MetadataFile FileName="SecurityService.xsd" MetadataType="Schema" ID="549105ea-ce7d-4b71-8b03-b61758e4db71" SourceId="1" SourceUrl="http://wspen-sl08w7.penson.com/StockLoan.WebServices/SecurityService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SecurityService1.xsd" MetadataType="Schema" ID="173e7177-c7c6-4426-92fb-630a58bebe77" SourceId="1" SourceUrl="http://wspen-sl08w7.penson.com/StockLoan.WebServices/SecurityService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

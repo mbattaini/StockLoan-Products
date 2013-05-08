@@ -1,0 +1,97 @@
+﻿<navigation:Page 
+    Name="InventoryFileLayouts" x:Class="LoanStarWorldWideAdmin.Views.InventoryFileLayout" 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation" 
+    xmlns:c1="clr-namespace:C1.Silverlight;assembly=C1.Silverlight" 
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+    mc:Ignorable="d"
+
+    Title="Inventory File Layout Page" d:DesignHeight="475" d:DesignWidth="640" >
+
+    <Grid x:Name="LayoutRoot" Height="474" Width="640" VerticalAlignment="Top" HorizontalAlignment="Center" >
+
+        <Grid HorizontalAlignment="Left" Margin="0,35,0,0" x:Name="DetailGrid" Width="640" Height="437" VerticalAlignment="Top">
+            <Grid.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF325988" Offset="1" />
+                    <GradientStop Color="#FF1F3F68" />
+                </RadialGradientBrush>
+            </Grid.Background>
+        </Grid>
+
+        
+        <Grid HorizontalAlignment="Left" Margin="1,2,0,0" Name="CaptionGrid" Width="639" Height="34" VerticalAlignment="Top">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" />
+                    <GradientStop Color="#FF365E90" Offset="1" />
+                    <GradientStop Color="#FF1C3C64" Offset="0.009" />
+                </LinearGradientBrush>
+            </Grid.Background>
+            <TextBlock FontSize="10.667" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" Margin="7,9,0,4" Text="Book Group" TextWrapping="Wrap" Width="77" />
+            <TextBox Height="28" Text="Desk Text Box" HorizontalAlignment="Left" Margin="283,3,0,0" Name="DeskTextBox" VerticalAlignment="Top" Width="98" Background="#FF4566B4" Foreground="White" FontWeight="Bold" FontSize="12" IsTabStop="False" IsReadOnly="True" />
+            <sdk:Label Content="Desk" FontSize="11" FontWeight="Bold" Foreground="White" Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="244,4,0,6" Name="DeskLabel" Width="44" />
+            <sdk:Label Content="Inventory/Rate File" FontSize="11" FontWeight="Bold" Foreground="White" Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="502,5,0,5" Name="InventoryTypeLabel" Width="132" />
+            <TextBox Height="28" HorizontalAlignment="Right" Margin="0,3,476,0" Name="BookGroupTextBox" Text="Book Group" VerticalAlignment="Top" Width="76" Background="#FF4566B4" FontWeight="Bold" FontSize="12" Foreground="White" AcceptsReturn="False" IsEnabled="True" IsReadOnly="True" IsTabStop="False" />
+        </Grid>
+        <Rectangle Height="68" HorizontalAlignment="Left" Margin="0,34,0,0" Name="rectangle1" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="639" />
+        <sdk:Label Content="Delimited Files Layouts" FontSize="14" FontWeight="Bold" Foreground="White" Height="28" HorizontalAlignment="Center" 
+                   Margin="0,35,0,411" Name="label5" Width="639" VerticalAlignment="Center" />
+        <sdk:Label Height ="25" FontWeight="Bold" Foreground="White" Content="Header Flag" FontSize="11" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="4,72,0,0" x:Name="HeaderFlagLabel" Width="78" VerticalAlignment="Top" />
+        <sdk:Label Height ="25" FontWeight="Bold" Foreground="White" Content="Data Flag" FontSize="11" HorizontalContentAlignment="Right" Margin="174,73,0,0" x:Name="DataFlagLabel" HorizontalAlignment="Left" Width="65" VerticalAlignment="Top" />
+        <sdk:Label Height ="25" FontWeight="Bold" Foreground="White" Content="Trailer Flag" FontSize="11" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="331,74,0,0" x:Name="TrailerFlagLabel" Width="74" VerticalAlignment="Top" />
+        <sdk:Label Height ="25" FontWeight="Bold" Foreground="White" Content="Field Delimiter" FontSize="11" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="498,74,0,0" x:Name="DelimiterLabel" Width="97" VerticalAlignment="Top" />
+        <sdk:Label Content="Fixed Position File Layouts" FontSize="14" FontWeight="Bold" Foreground="White" Height="28" HorizontalAlignment="Center" 
+                   Margin="0,122,0,324" Name="label6" Width="639" VerticalAlignment="Center" />
+
+        <TextBox Height="23" Text="" HorizontalAlignment="Left" TextAlignment="Center" Margin="80,71,0,0" Name="HeaderTextBox" VerticalAlignment="Top" Width="85" TabIndex="0" />
+        <TextBox Height="23" Text="" HorizontalAlignment="Left" TextAlignment="Center" Margin="234,71,0,0" Name="DataFlagTextBox" VerticalAlignment="Top" Width="85" TabIndex="1" />
+        <TextBox Height="23" Text="" HorizontalAlignment="Left" TextAlignment="Center" Margin="403,72,0,0" Name="TrailerFlagTextBox" VerticalAlignment="Top" Width="85" TabIndex="2" />
+        <TextBox Height="23" Text="" HorizontalAlignment="Left" TextAlignment="Center" Margin="590,71,0,0" Name="DelimiterBox" VerticalAlignment="Top" Width="33" TabIndex="3" />
+        
+        <sdk:Label Content="Record Length" FontSize="11" FontWeight="Bold" Foreground="White" Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="14,182,0,0" Name="label1" Width="95" VerticalAlignment="Top" />
+        <sdk:Label Content="Account" Width="65" FontSize="11" FontWeight="Bold" Foreground="White" Height="25" HorizontalAlignment="Left" Margin="51,210,0,0" Name="label11" HorizontalContentAlignment="Right" FlowDirection="LeftToRight" VerticalAlignment="Top" />
+        <sdk:Label Content="SecurityId" FontSize="11" FontWeight="Bold" Foreground="White" Height="25" HorizontalAlignment="Left" Margin="36,237,0,0" Name="label12" Width="75" HorizontalContentAlignment="Right" FlowDirection="LeftToRight" VerticalAlignment="Top" />
+        <sdk:Label Content="Quantity" Width="65" FontSize="11" FontWeight="Bold" Foreground="White" Height="25" HorizontalAlignment="Left" Margin="44,266,0,0" Name="label13" HorizontalContentAlignment="Right" FlowDirection="LeftToRight" VerticalAlignment="Top" />
+        <sdk:Label Content="Rate" Width="60" FontSize="11" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" Margin="66,293,0,0" Name="label14" HorizontalContentAlignment="Right" FlowDirection="LeftToRight" Height="25" VerticalAlignment="Top" />
+        <sdk:Label Content="Record Count" FontSize="11" FontWeight="Bold" Foreground="White" Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="10,321,0,0" Name="label15" Width="85" VerticalAlignment="Top" />
+        <sdk:Label Content="Date DD" FontSize="11" FontWeight="Bold" Foreground="White" Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="67,366,0,0" Name="label16" Width="60" VerticalAlignment="Top" />
+        <sdk:Label Content="Date MM" FontSize="11" FontWeight="Bold" Foreground="White" Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="164,366,0,0" Name="label17" Width="63" VerticalAlignment="Top" />
+        <sdk:Label Content="Date YY" FontSize="11" FontWeight="Bold" Foreground="White" Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="265,366,0,0" Name="label2" Width="59" VerticalAlignment="Top" />
+        
+        
+        <sdk:Label Content="Status" FontSize="14" FontWeight="Bold" Foreground="White" Height="30" BorderBrush="White" BorderThickness="2" HorizontalAlignment="Center" 
+                   Margin="0,96,1,348" Name="StatusLabel" Width="639" VerticalAlignment="Center" />
+        <Rectangle Height="369" HorizontalAlignment="Left" Margin="0,101,0,0" Name="rectangle3" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="639" />        
+        <sdk:Label Content="Locale" FontSize="11" FontWeight="Bold" Foreground="White" Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="412,155,0,0" Name="label7" Width="49" VerticalAlignment="Top" />
+        <sdk:Label Content="Ordinal" FontSize="11" FontWeight="Bold" Foreground="White" Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="118,154,0,0" Name="label8" Width="53" VerticalAlignment="Top" />
+        <sdk:Label Content="Length" FontSize="11" FontWeight="Bold" Foreground="White" Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="312,153,0,0" Name="label9" Width="78" VerticalAlignment="Top" />
+        <sdk:Label Content="Start Position" FontSize="11" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="203,154,0,0" Name="label10" Width="92" Height="24" VerticalAlignment="Top" />
+        <TextBox TextAlignment="Center" Text="-1" Height="23" HorizontalAlignment="Left" Margin="317,180,0,0" Name="RecordLengthText" VerticalAlignment="Top" Width="33" TabIndex="4" />
+        <TextBox TextAlignment="Center" Text="-1" Height="23" HorizontalAlignment="Left" Margin="226,208,0,0" Name="AccountStartText" VerticalAlignment="Top" Width="33" TabIndex="7" />
+        <TextBox TextAlignment="Center" Text="-1" Height="23" HorizontalAlignment="Left" Margin="417,180,0,0" Name="LocaleText" VerticalAlignment="Top" Width="33" TabIndex="5" />
+        <TextBox TextAlignment="Center" Text="-1" Height="23" HorizontalAlignment="Left" Margin="226,236,0,0" Name="SecurityStartText" VerticalAlignment="Top" Width="33" TabIndex="10" />
+        <TextBox TextAlignment="Center" Text="-1" Height="23" HorizontalAlignment="Left" Margin="226,264,0,0" Name="QuantityStartText" VerticalAlignment="Top" Width="33" TabIndex="13" />
+        <TextBox TextAlignment="Center" Text="-1" Height="23" HorizontalAlignment="Left" Margin="226,291,0,0" Name="RateStartText" VerticalAlignment="Top" Width="33" TabIndex="16" />
+        <TextBox TextAlignment="Center" Text="-1" Height="23" HorizontalAlignment="Left" Margin="226,318,0,0" Name="RecordCountStartText" VerticalAlignment="Top" Width="33" TabIndex="18" />
+        <TextBox TextAlignment="Center" Text="-1" Height="23" HorizontalAlignment="Left" Margin="317,208,0,0" Name="AccountLengthText" VerticalAlignment="Top" Width="33" TabIndex="8" />
+        <TextBox TextAlignment="Center" Text="-1" HorizontalAlignment="Left" Margin="317,236,0,0" Name="SecurityLengthText" Width="33" TabIndex="11" Height="23" VerticalAlignment="Top" />
+        <TextBox TextAlignment="Center" Text="-1" Height="23" HorizontalAlignment="Left" Margin="317,264,0,0" Name="QuantityLengthText" VerticalAlignment="Top" Width="33" TabIndex="14" />
+        <TextBox TextAlignment="Center" Text="-1" Height="23" HorizontalAlignment="Left" Margin="317,291,0,0" Name="RateLengthText" VerticalAlignment="Top" Width="33" TabIndex="16" />
+        <TextBox TextAlignment="Center" Text="-1" Height="23" HorizontalAlignment="Left" Margin="317,318,0,0" Name="RecordCountLengthText" VerticalAlignment="Top" Width="33" TabIndex="19" />
+        <TextBox TextAlignment="Center" Text="-1"  Height="23" HorizontalAlignment="Left" Margin="125,208,0,0" Name="AccountOrdinalText" VerticalAlignment="Top" Width="33" TabIndex="6" />
+        <TextBox TextAlignment="Center" Text="-1" Height="23" HorizontalAlignment="Left" Margin="125,236,0,0" Name="SecurityOrdinalText" VerticalAlignment="Top" Width="33" TabIndex="9" />
+        <TextBox TextAlignment="Center" Text="-1" HorizontalAlignment="Left" Margin="125,264,0,0" Name="QuantityOrdinalText" Width="33" TabIndex="12" Height="23" VerticalAlignment="Top" />
+        <TextBox TextAlignment="Center" Text="-1" HorizontalAlignment="Left" Margin="125,291,0,0" Name="RateOrdinalText" Width="33" Height="23" VerticalAlignment="Top" TabIndex="15" />
+        <TextBox TextAlignment="Center" Text="-1" Height="23" HorizontalAlignment="Left" Margin="125,318,0,0" Name="RecordCountOrdinalText" VerticalAlignment="Top" Width="33" TabIndex="17" />
+        <TextBox TextAlignment="Center" Text="" Height="23" HorizontalAlignment="Left" Margin="124,363,0,0" Name="DateDDText" VerticalAlignment="Top" Width="33" TabIndex="21" />
+        <TextBox TextAlignment="Center" Text="" Height="23" HorizontalAlignment="Left" Margin="223,363,0,0" Name="DateMMTextBox" VerticalAlignment="Top" Width="33" TabIndex="22" />
+        <TextBox TextAlignment="Center" Text="" Height="23" HorizontalAlignment="Left" Margin="318,363,0,0" Name="DateYYText" VerticalAlignment="Top" Width="33" TabIndex="23" />
+        <Button Content="Save  Layouts" Height="32" HorizontalAlignment="Left" Margin="431,430,0,0" Name="SaveButton" VerticalAlignment="Top" Width="159" Click="SaveButton_Click" TabIndex="24" />
+        <sdk:Label Content="Last Updated By: " FontSize="11" FontWeight="Bold" Foreground="White" Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="56,404,0,0" Name="label3" Width="108" VerticalAlignment="Top" />
+        <sdk:Label Content="by " FontSize="11" FontWeight="Bold" Foreground="White" Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="172,405,0,0" Name="MessageLabel" Width="411" VerticalAlignment="Top" />
+    </Grid>
+</navigation:Page>

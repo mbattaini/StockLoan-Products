@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E26331D4-A076-443C-9CBF-40F5C54F61A1}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DashApplication</RootNamespace>
+    <AssemblyName>DashApplication</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>DashApplication.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>DashApplication.App</SilverlightAppEntry>
+    <TestPageFileName>DashApplication3._0TestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>false</EnableOutOfBrowser>
+    <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>
+    </LinkedServerProject>
+    <TargetFrameworkProfile />
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20525.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.Silverlight" />
+    <Reference Include="C1.Silverlight.Analytics" />
+    <Reference Include="C1.Silverlight.Automation" />
+    <Reference Include="C1.Silverlight.Carousel" />
+    <Reference Include="C1.Silverlight.Chart" />
+    <Reference Include="C1.Silverlight.Chart.Editor" />
+    <Reference Include="C1.Silverlight.Chart.Extended" />
+    <Reference Include="C1.Silverlight.Chart3D" />
+    <Reference Include="C1.Silverlight.Data" />
+    <Reference Include="C1.Silverlight.DataGrid" />
+    <Reference Include="C1.Silverlight.DataGrid.Analytics" />
+    <Reference Include="C1.Silverlight.DataGrid.Excel" />
+    <Reference Include="C1.Silverlight.DataGrid.Filters" />
+    <Reference Include="C1.Silverlight.DataGrid.Ria" />
+    <Reference Include="C1.Silverlight.DataGrid.Summaries" />
+    <Reference Include="C1.Silverlight.DateTimeEditors" />
+    <Reference Include="C1.Silverlight.Docking" />
+    <Reference Include="C1.Silverlight.Excel" />
+    <Reference Include="C1.Silverlight.Extended" />
+    <Reference Include="C1.Silverlight.Extended.Analytics" />
+    <Reference Include="C1.Silverlight.FlexGrid.4" />
+    <Reference Include="C1.Silverlight.FlexGridFilter.4" />
+    <Reference Include="C1.Silverlight.Gauge" />
+    <Reference Include="C1.Silverlight.Imaging" />
+    <Reference Include="C1.Silverlight.Legacy" />
+    <Reference Include="C1.Silverlight.Maps" />
+    <Reference Include="C1.Silverlight.MediaPlayer" />
+    <Reference Include="C1.Silverlight.Olap.4" />
+    <Reference Include="C1.Silverlight.OrgChart" />
+    <Reference Include="C1.Silverlight.OutlookBar" />
+    <Reference Include="C1.Silverlight.Pdf" />
+    <Reference Include="C1.Silverlight.PdfViewer" />
+    <Reference Include="C1.Silverlight.ReportViewer" />
+    <Reference Include="C1.Silverlight.RichTextBox" />
+    <Reference Include="C1.Silverlight.RichTextBox.LegacyHtmlFilter" />
+    <Reference Include="C1.Silverlight.RichTextBox.PdfFilter" />
+    <Reference Include="C1.Silverlight.RichTextBox.RtfFilter" />
+    <Reference Include="C1.Silverlight.RichTextBox.Toolbar" />
+    <Reference Include="C1.Silverlight.Schedule" />
+    <Reference Include="C1.Silverlight.SpellChecker" />
+    <Reference Include="C1.Silverlight.Theming" />
+    <Reference Include="C1.Silverlight.Theming.BureauBlack" />
+    <Reference Include="C1.Silverlight.Theming.Cosmopolitan" />
+    <Reference Include="C1.Silverlight.Theming.ExpressionDark" />
+    <Reference Include="C1.Silverlight.Theming.ExpressionLight" />
+    <Reference Include="C1.Silverlight.Theming.Office2007" />
+    <Reference Include="C1.Silverlight.Theming.Office2010" />
+    <Reference Include="C1.Silverlight.Theming.RainierOrange" />
+    <Reference Include="C1.Silverlight.Theming.ShinyBlue" />
+    <Reference Include="C1.Silverlight.Theming.WhistlerBlue" />
+    <Reference Include="C1.Silverlight.TileView" />
+    <Reference Include="C1.Silverlight.Toolbar" />
+    <Reference Include="C1.Silverlight.Uploader" />
+    <Reference Include="C1.Silverlight.Zip" />
+    <Reference Include="Microsoft.Expression.Effects" />
+    <Reference Include="Microsoft.Expression.Interactions" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System.ComponentModel.DataAnnotations, Version=2.0.5.0, Culture=neutral, PublicKeyToken=ddd0da4d3e678217, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.Windows.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Data.Input, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Navigation, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.Windows.Controls.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Interactivity" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Classes\ClientWindow.cs" />
+    <Compile Include="Custom Classes\CustomEvents.cs" />
+    <Compile Include="Custom Classes\Functions.cs" />
+    <Compile Include="Custom Classes\PdfUtils.cs" />
+    <Compile Include="Custom Classes\UserInformation.cs" />
+    <Compile Include="Service References\ServicePosition\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\BorrowsMorningControl.xaml.cs">
+      <DependentUpon>BorrowsMorningControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\CollateralUtilizationControl.xaml.cs">
+      <DependentUpon>CollateralUtilizationControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\CollateralUtilizationDetailControl.xaml.cs">
+      <DependentUpon>CollateralUtilizationDetailControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Pages\PageApps.xaml.cs">
+      <DependentUpon>PageApps.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Pages\PageBorrowsMorning.xaml.cs">
+      <DependentUpon>PageBorrowsMorning.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Pages\PageCollateralUtilization.xaml.cs">
+      <DependentUpon>PageCollateralUtilization.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ErrorWindow.xaml.cs">
+      <DependentUpon>ErrorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Resource Include="Assets\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Page Include="User Controls\BorrowsMorningControl.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="User Controls\CollateralUtilizationControl.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="User Controls\CollateralUtilizationDetailControl.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="User Pages\PageApps.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="User Pages\PageBorrowsMorning.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="User Pages\PageCollateralUtilization.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ErrorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\About.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Resource Include="Images\Balance.png" />
+    <Resource Include="Images\Dreamweaver.png" />
+    <Resource Include="Images\Export-Excel.png" />
+    <Resource Include="Images\MB_0005_weather1.png" />
+    <Resource Include="Images\MB_0007_book.png" />
+    <Resource Include="Images\MB_0023_home2.png" />
+    <Resource Include="Images\MB_0043_apps9.png" />
+    <Resource Include="Images\Recycle.png" />
+    <Resource Include="Images\Sun-Cloudy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Service References\ServicePosition\PositionService.wsdl" />
+    <None Include="Service References\ServicePosition\PositionService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicePosition\PositionService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicePosition\PositionService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="ServiceReferences.ClientConfig" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServicePosition\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicePosition\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicePosition\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicePosition\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

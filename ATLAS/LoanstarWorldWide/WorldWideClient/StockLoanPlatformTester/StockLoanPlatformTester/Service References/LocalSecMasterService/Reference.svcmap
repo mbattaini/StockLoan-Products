@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3efaad8f-adff-42c7-a06d-92648b62884c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/StockLoan.WebServices/SecMasterService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SecMasterService.xsd" MetadataType="Schema" ID="0dba76a4-3b4c-4873-b070-616afa3a1601" SourceId="1" SourceUrl="http://wspen-sl08w7.penson.com/StockLoan.WebServices/SecMasterService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SecMasterService1.xsd" MetadataType="Schema" ID="c6f90752-78bf-422a-b16b-e68061b6a03c" SourceId="1" SourceUrl="http://wspen-sl08w7.penson.com/StockLoan.WebServices/SecMasterService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SecMasterService.disco" MetadataType="Disco" ID="52b8cfde-7bca-469e-9692-034efde34fc8" SourceId="1" SourceUrl="http://wspen-sl08w7.penson.com/StockLoan.WebServices/SecMasterService.svc?disco" />
+    <MetadataFile FileName="SecMasterService.wsdl" MetadataType="Wsdl" ID="4198597b-836e-4d3a-873a-13636fa795d9" SourceId="1" SourceUrl="http://wspen-sl08w7.penson.com/StockLoan.WebServices/SecMasterService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

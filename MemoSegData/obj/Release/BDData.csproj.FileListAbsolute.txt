@@ -1,0 +1,10 @@
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDData\bin\Release\StockLoan.BDData.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDData\bin\Release\DatabaseFunctions.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDData\bin\Release\iConnectNet.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDData\bin\Release\StockLoan.Common.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDData\bin\Release\StockLoan.Filer.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDData\bin\Release\Rebex.Net.Ftp.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDData\bin\Release\Rebex.Net.ProxySocket.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDData\bin\Release\DatabaseFunctions.pdb
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDData\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDData\obj\Release\StockLoan.BDData.dll

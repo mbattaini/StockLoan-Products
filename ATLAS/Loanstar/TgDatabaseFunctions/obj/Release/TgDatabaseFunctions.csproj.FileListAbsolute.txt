@@ -1,0 +1,5 @@
+C:\_Dev\ATLAS\Loanstar\TgDatabaseFunctions\bin\Release\TgDatabaseFunctions.dll
+C:\_Dev\ATLAS\Loanstar\TgDatabaseFunctions\bin\Release\TgDatabaseFunctions.pdb
+C:\_Dev\ATLAS\Loanstar\TgDatabaseFunctions\obj\Release\ResolveAssemblyReference.cache
+C:\_Dev\ATLAS\Loanstar\TgDatabaseFunctions\obj\Release\TgDatabaseFunctions.dll
+C:\_Dev\ATLAS\Loanstar\TgDatabaseFunctions\obj\Release\TgDatabaseFunctions.pdb

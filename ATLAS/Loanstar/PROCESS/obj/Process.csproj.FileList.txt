@@ -1,0 +1,9 @@
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\StockLoan.Common.dll
+bin\Debug\StockLoan.Common.pdb
+bin\Debug\StockLoan.BackOffice.dll
+bin\Debug\StockLoan.BackOffice.pdb
+bin\Debug\StockLoan.Process.dll
+bin\Debug\StockLoan.Process.pdb
+obj\Debug\StockLoan.Process.dll
+obj\Debug\StockLoan.Process.pdb

@@ -1,0 +1,12 @@
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\StockLoan.StaticDataServer.dll
+bin\Debug\StockLoan.StaticDataServer.pdb
+bin\Debug\StockLoan.Common.dll
+bin\Debug\StockLoan.Common.pdb
+obj\Debug\StockLoan.StaticDataServer.dll
+obj\Debug\StockLoan.StaticDataServer.pdb
+bin\Release\StockLoan.StaticDataServer.dll
+bin\Release\StockLoan.Common.dll
+bin\Release\StockLoan.Common.pdb
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\StockLoan.StaticDataServer.dll

@@ -1,0 +1,20 @@
+C:\ATLAS\Loanstar\MAIN\bin\Release\StockLoan.Main.dll
+C:\ATLAS\Loanstar\MAIN\bin\Release\StockLoan.Common.dll
+C:\ATLAS\Loanstar\MAIN\obj\Release\ResolveAssemblyReference.cache
+C:\ATLAS\Loanstar\MAIN\obj\Release\StockLoan.Main.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAIN\bin\Release\StockLoan.Main.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAIN\bin\Release\StockLoan.Common.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAIN\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAIN\obj\Release\StockLoan.Main.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MAIN\bin\Release\StockLoan.Main.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MAIN\bin\Release\StockLoan.Common.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MAIN\obj\Release\ResolveAssemblyReference.cache
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\MAIN\obj\Release\StockLoan.Main.dll
+U:\_Dev\ATLAS\Loanstar\MAIN\bin\Release\StockLoan.Main.dll
+U:\_Dev\ATLAS\Loanstar\MAIN\bin\Release\StockLoan.Common.dll
+U:\_Dev\ATLAS\Loanstar\MAIN\obj\Release\ResolveAssemblyReference.cache
+U:\_Dev\ATLAS\Loanstar\MAIN\obj\Release\StockLoan.Main.dll
+C:\_Dev\ATLAS\Loanstar\MAIN\bin\Release\StockLoan.Main.dll
+C:\_Dev\ATLAS\Loanstar\MAIN\bin\Release\StockLoan.Common.dll
+C:\_Dev\ATLAS\Loanstar\MAIN\obj\Release\ResolveAssemblyReference.cache
+C:\_Dev\ATLAS\Loanstar\MAIN\obj\Release\StockLoan.Main.dll

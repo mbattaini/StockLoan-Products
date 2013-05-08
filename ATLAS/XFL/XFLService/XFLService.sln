@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XflService", "XflService.csproj", "{A73E8788-640B-40D1-A706-5537D0E5A6D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XflServer", "..\XFLServer\XflServer.csproj", "{BF900D61-184E-4C56-860F-C9D8A16DB4A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "..\..\Common\Common.csproj", "{51D7F048-02E1-49F8-BA33-743E3E5373F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A73E8788-640B-40D1-A706-5537D0E5A6D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A73E8788-640B-40D1-A706-5537D0E5A6D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A73E8788-640B-40D1-A706-5537D0E5A6D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A73E8788-640B-40D1-A706-5537D0E5A6D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF900D61-184E-4C56-860F-C9D8A16DB4A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF900D61-184E-4C56-860F-C9D8A16DB4A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF900D61-184E-4C56-860F-C9D8A16DB4A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF900D61-184E-4C56-860F-C9D8A16DB4A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51D7F048-02E1-49F8-BA33-743E3E5373F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51D7F048-02E1-49F8-BA33-743E3E5373F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51D7F048-02E1-49F8-BA33-743E3E5373F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51D7F048-02E1-49F8-BA33-743E3E5373F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

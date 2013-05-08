@@ -1,0 +1,24 @@
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Filer\bin\Release\StockLoan.Filer.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Filer\bin\Release\Rebex.Net.Ftp.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Filer\bin\Release\Rebex.Net.ProxySocket.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Filer\bin\Release\StockLoan.Common.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Filer\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Filer\obj\Release\StockLoan.Filer.dll
+U:\_Dev\ATLAS\Filer\bin\Release\StockLoan.Filer.dll
+U:\_Dev\ATLAS\Filer\bin\Release\Rebex.Net.Ftp.dll
+U:\_Dev\ATLAS\Filer\bin\Release\Rebex.Net.ProxySocket.dll
+U:\_Dev\ATLAS\Filer\bin\Release\StockLoan.Common.dll
+U:\_Dev\ATLAS\Filer\obj\Release\ResolveAssemblyReference.cache
+U:\_Dev\ATLAS\Filer\obj\Release\StockLoan.Filer.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Filer\bin\Release\StockLoan.Filer.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Filer\bin\Release\Rebex.Net.Ftp.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Filer\bin\Release\Rebex.Net.ProxySocket.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Filer\bin\Release\StockLoan.Common.dll
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Filer\obj\Release\ResolveAssemblyReference.cache
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Filer\obj\Release\StockLoan.Filer.dll
+C:\_Dev\ATLAS\Filer\bin\Release\StockLoan.Filer.dll
+C:\_Dev\ATLAS\Filer\bin\Release\Rebex.Net.Ftp.dll
+C:\_Dev\ATLAS\Filer\bin\Release\Rebex.Net.ProxySocket.dll
+C:\_Dev\ATLAS\Filer\bin\Release\StockLoan.Common.dll
+C:\_Dev\ATLAS\Filer\obj\Release\ResolveAssemblyReference.cache
+C:\_Dev\ATLAS\Filer\obj\Release\StockLoan.Filer.dll

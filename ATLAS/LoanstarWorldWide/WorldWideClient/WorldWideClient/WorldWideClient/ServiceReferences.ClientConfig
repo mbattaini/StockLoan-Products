@@ -1,0 +1,108 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="BasicHttpBinding_IAdminService" sendTimeout="00:10:00"
+                    maxBufferSize="2147483647" maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IContractsService" sendTimeout="00:10:00"
+                    maxBufferSize="2147483647" maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IDealsService" sendTimeout="00:10:00"
+                    maxBufferSize="2147483647" maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IFunctionsService" sendTimeout="00:10:00"
+                    maxBufferSize="2147483647" maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IFundsService" sendTimeout="00:10:00"
+                    maxBufferSize="2147483647" maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IInventoryService" sendTimeout="00:10:00"
+                    maxBufferSize="2147483647" maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IMarksService" sendTimeout="00:10:00"
+                    maxBufferSize="2147483647" maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IRecallsService" sendTimeout="00:10:00"
+                    maxBufferSize="2147483647" maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IReturnsService" sendTimeout="00:10:00"
+                    maxBufferSize="2147483647" maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_ISecMasterService" sendTimeout="00:10:00"
+                    maxBufferSize="2147483647" maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_ISecurityService" sendTimeout="00:10:00"
+                    maxBufferSize="2147483647" maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IUserAdminService" sendTimeout="00:10:00"
+                    maxBufferSize="2147483647" maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IPositionsService" sendTimeout="00:10:00"
+                    maxBufferSize="2147483647" maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IBooksService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:46714/ContractsService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IContractsService"
+                contract="ServiceContracts.IContractsService" name="BasicHttpBinding_IContractsService" />
+            <endpoint address="http://localhost:46714/DealsService.svc" binding="basicHttpBinding"
+                bindingConfiguration="BasicHttpBinding_IDealsService" contract="ServiceDeals.IDealsService"
+                name="BasicHttpBinding_IDealsService" />
+            <endpoint address="http://localhost:46714/FunctionsService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IFunctionsService"
+                contract="ServiceFunctions.IFunctionsService" name="BasicHttpBinding_IFunctionsService" />
+            <endpoint address="http://localhost:46714/FundsService.svc" binding="basicHttpBinding"
+                bindingConfiguration="BasicHttpBinding_IFundsService" contract="ServiceFunds.IFundsService"
+                name="BasicHttpBinding_IFundsService" />
+            <endpoint address="http://localhost:46714/InventoryService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IInventoryService"
+                contract="ServiceInventory.IInventoryService" name="BasicHttpBinding_IInventoryService" />
+            <endpoint address="http://localhost:46714/MarksService.svc" binding="basicHttpBinding"
+                bindingConfiguration="BasicHttpBinding_IMarksService" contract="ServiceMarks.IMarksService"
+                name="BasicHttpBinding_IMarksService" />
+            <endpoint address="http://localhost:46714/RecallsService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IRecallsService"
+                contract="ServiceRecalls.IRecallsService" name="BasicHttpBinding_IRecallsService" />
+            <endpoint address="http://localhost:46714/ReturnsService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IReturnsService"
+                contract="ServiceReturns.IReturnsService" name="BasicHttpBinding_IReturnsService" />
+            <endpoint address="http://localhost:46714/SecMasterService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ISecMasterService"
+                contract="ServiceSecMaster.ISecMasterService" name="BasicHttpBinding_ISecMasterService" />
+            <endpoint address="http://localhost:46714/SecurityService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ISecurityService"
+                contract="ServiceSecurity.ISecurityService" name="BasicHttpBinding_ISecurityService" />
+            <endpoint address="http://localhost:46714/UserAdminService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IUserAdminService"
+                contract="ServiceUserAdmin.IUserAdminService" name="BasicHttpBinding_IUserAdminService" />
+            <endpoint address="http://localhost:46714/AdminService.svc" binding="basicHttpBinding"
+                bindingConfiguration="BasicHttpBinding_IAdminService" contract="ServiceAdmin.IAdminService"
+                name="BasicHttpBinding_IAdminService" />
+            <endpoint address="http://localhost:46714/PositionsService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IPositionsService"
+                contract="ServicePositions.IPositionsService" name="BasicHttpBinding_IPositionsService" />
+            <endpoint address="http://localhost:46714/BooksService.svc" binding="basicHttpBinding"
+                bindingConfiguration="BasicHttpBinding_IBooksService" contract="ServiceBooks.IBooksService"
+                name="BasicHttpBinding_IBooksService" />
+        </client>
+    </system.serviceModel>
+</configuration>

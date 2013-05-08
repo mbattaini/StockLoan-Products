@@ -1,0 +1,477 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Silverlight.DataGrid.Summaries</name>
+    </assembly>
+    <members>
+        <member name="T:C1.Silverlight.DataGrid.Summaries.C1GroupingWithSummariesBehavior">
+            <summary>
+            Makes each group row to show the summaries specified in the attached collection of aggregate functions.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.C1GroupingWithSummariesBehavior.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Silverlight.DataGrid.Summaries.C1GroupingWithSummariesBehavior"/> class.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Summaries.DataGridAggregate">
+            <summary>
+            Represents an abstract aggregate function.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridAggregate.GetAggregateFunctions(C1.Silverlight.DataGrid.DataGridColumn)">
+            <summary>
+            Gets the collection of aggregate functions applied to the corresponding column.
+            </summary>
+            <param name="column">The column to which the aggregate functions are applied.</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridAggregate.SetAggregateFunctions(C1.Silverlight.DataGrid.DataGridColumn,C1.Silverlight.DataGrid.Summaries.DataGridAggregatesCollection)">
+            <summary>
+            Sets the collection of aggregate functions that will be applied to the column.
+            </summary>
+            <param name="column">The column to which the aggregate functions will be applied.</param>
+            <param name="aggregates">The collection of aggregate functions that will be applied to the column.</param>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Summaries.DataGridAggregate.AggregateFunctionsProperty">
+            <summary>
+            Collection of aggregate functions.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Summaries.DataGridAggregate.ResultTemplateProperty">
+            <summary>
+            Gets or sets the data template that will be applied to the result of the aggregate function.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridAggregate.Compute(C1.Silverlight.DataGrid.DataGridRowCollection,C1.Silverlight.DataGrid.DataGridBoundColumn,System.Boolean)">
+            <summary>
+            Execute the aggregate function.
+            </summary>
+            <param name="rows">The rows collection to which the aggregate function is applied.</param>
+            <param name="column">The column to which the aggregate function is applied.</param>
+            <param name="recursive">if set to <c>true</c> the function must be applied to sub groups recursively.</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridAggregate.GetResult(C1.Silverlight.DataGrid.DataGridRowCollection,C1.Silverlight.DataGrid.DataGridBoundColumn,System.Boolean)">
+            <summary>
+            Gets a <see cref="T:System.Windows.Controls.ContentPresenter"/> that contains the result of the aggregate function with the corresponding template applied.
+            </summary>
+            <param name="rows">The rows to which the aggregate function will be applied.</param>
+            <param name="boundColumn">The bound column.</param>
+            <param name="recursive">if set to <c>true</c> the aggregate function will be applied recursively over the rows collection.</param>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridAggregate.GetDataTemplateFromString(System.String)">
+            <summary>
+            Gets a <seealso cref="T:System.Windows.DataTemplate"/> from a string formatted(Only "{0}" is accepted).
+            <example>"SUM = {0}"</example>
+            </summary>
+            <param name="stringFormat">The string format.</param>
+            <returns></returns>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Summaries.DataGridAggregate.ResultTemplate">
+            <summary>
+            Gets or sets the data template that will be applied to the result of the aggregate function.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Summaries.DataGridAggregateSum">
+            <summary>
+            Computes the sum of the items in a row collection
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridAggregateSum.Compute(C1.Silverlight.DataGrid.DataGridRowCollection,C1.Silverlight.DataGrid.DataGridBoundColumn,System.Boolean)">
+            <summary>
+            Computes the sum of the values in the rows collection corresponding to the specified column.
+            </summary>
+            <param name="rows">The rows collection to which the aggregate function is applied.</param>
+            <param name="column">The column to which the aggregate function is applied.</param>
+            <param name="recursive">if set to <c>true</c> the function must be applied to sub groups recursively.</param>
+            <returns></returns>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Summaries.DataGridAggregateCount">
+            <summary>
+            Computes the count of the items in a row collection
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridAggregateCount.Compute(C1.Silverlight.DataGrid.DataGridRowCollection,C1.Silverlight.DataGrid.DataGridBoundColumn,System.Boolean)">
+            <summary>
+            Computes the amount of elements in the rows collection.
+            </summary>
+            <param name="rows">The rows collection to which the aggregate function is applied.</param>
+            <param name="column">The column to which the aggregate function is applied.</param>
+            <param name="recursive">if set to <c>true</c> the function must be applied to sub groups recursively.</param>
+            <returns></returns>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Summaries.DataGridAggregateAvg">
+            <summary>
+            Computes the average of the items in a row collection
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridAggregateAvg.Compute(C1.Silverlight.DataGrid.DataGridRowCollection,C1.Silverlight.DataGrid.DataGridBoundColumn,System.Boolean)">
+            <summary>
+            Computes the average of the values in the rows collection corresponding to the specified column.
+            </summary>
+            <param name="rows">The rows collection to which the aggregate function is applied.</param>
+            <param name="column">The column to which the aggregate function is applied.</param>
+            <param name="recursive">if set to <c>true</c> the function must be applied to sub groups recursively.</param>
+            <returns></returns>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Summaries.DataGridAggregateMin">
+            <summary>
+            Computes the minimum among the items of a row collection
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridAggregateMin.Compute(C1.Silverlight.DataGrid.DataGridRowCollection,C1.Silverlight.DataGrid.DataGridBoundColumn,System.Boolean)">
+            <summary>
+            Computes the minimum value in the rows collection corresponding to the specified column.
+            </summary>
+            <param name="rows">The rows collection to which the aggregate function is applied.</param>
+            <param name="column">The column to which the aggregate function is applied.</param>
+            <param name="recursive">if set to <c>true</c> the function must be applied to sub groups recursively.</param>
+            <returns></returns>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Summaries.DataGridAggregateMax">
+            <summary>
+            Computes the maximum among the items of a row collection
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridAggregateMax.Compute(C1.Silverlight.DataGrid.DataGridRowCollection,C1.Silverlight.DataGrid.DataGridBoundColumn,System.Boolean)">
+            <summary>
+            Computes the maximum value in the rows collection corresponding to the specified column.
+            </summary>
+            <param name="rows">The rows collection to which the aggregate function is applied.</param>
+            <param name="column">The column to which the aggregate function is applied.</param>
+            <param name="recursive">if set to <c>true</c> the function must be applied to sub groups recursively.</param>
+            <returns></returns>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Summaries.DataGridAggregateDistinct">
+            <summary>
+            Computes the count of distinct items among the items of a row collection
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridAggregateDistinct.Compute(C1.Silverlight.DataGrid.DataGridRowCollection,C1.Silverlight.DataGrid.DataGridBoundColumn,System.Boolean)">
+            <summary>
+            Computes the amount of distinct values in the rows collection corresponding to the specified column.
+            </summary>
+            <param name="rows">The rows collection to which the aggregate function is applied.</param>
+            <param name="column">The column to which the aggregate function is applied.</param>
+            <param name="recursive">if set to <c>true</c> the function must be applied to sub groups recursively.</param>
+            <returns></returns>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Summaries.DataGridAggregatesCollection">
+            <summary>
+            Collection of aggregate functions. 
+            This collection is typically used in xaml to enclose the aggregate function declarations.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRow">
+            <summary>
+            Grouping row which displays summaries in the row itself in addition to the classic grouping title and expand/collapse button.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRow"/> class.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRow.OnLoaded">
+            <summary>
+            Called after the row is added to the row collection.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRow.OnUnloaded">
+            <summary>
+            Called before the row is removed from the row collection.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRow.GetRowPresenterRecyclingKey">
+            <summary>
+            Key used to store the row presenter for future reuse in a shared pool. Rows
+            returning the same RecyclingKey will be candidate to share the same row
+            presenter instances.
+            <list type="number">
+            		<item>
+            			<description>If there is no recycled row presenter matching the recycling key,
+            the method <see cref="M:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRow.CreateRowPresenter">CreateRowPresenter</see> will be
+            called to create a new one. </description></item>
+            		<item>
+            			<description>Once the row presenter is created or a recycled one is taken, the
+            method <see cref="!:BindRowPresenter">BindRowPresenter</see> will be called.
+            </description></item>
+            		<item>
+            			<description>When the row presenter is not being used the method <see cref="!:UnbindRowPresenter">UnbindRowPresenter</see> will be called, and the row
+            presenter will be saved for future use in other
+            rows.</description></item></list>
+            </summary>
+            <returns>
+            The recycling key, or null to disable recycling.
+            </returns>
+            <remarks>
+            Typically this method returns the type of the element returned by the method
+            <see cref="M:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRow.CreateRowPresenter">CreateRowPresenter</see>.
+            </remarks>
+            <example><c>return typeof(DataGridGroupWithSummaryRowPresenter);</c></example>
+            <seealso cref="M:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRow.CreateRowPresenter">CreateRowPresenter</seealso>
+            <seealso cref="!:BindRowPresenter">BindRowPresenter</seealso>
+            <seealso cref="!:UnbindRowPresenter">UnbindRowPresenter</seealso>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRow.CreateRowPresenter">
+            <summary>
+            Gets the row presenter corresponding to this row.
+            </summary>
+            <returns>
+            The row presenter corresponding to this row.
+            </returns>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRow.HasCellPresenter(C1.Silverlight.DataGrid.DataGridColumn)">
+            <summary>
+            Determines whether should exists a cell for this row and the specified column.
+            </summary>
+            <param name="column">The column for which the cell presenter is
+            requested.</param>
+            <returns>
+            	<c>true</c> if should exists a cell for this row and the specified column; otherwise, <c>false</c>.
+            </returns>
+            <example>
+            In group rows with summary should exist cells for columns which specify an
+            aggregate function, but shouldn't be cells for the rest of the columns.
+            </example>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRow.GetCellContentRecyclingKey(C1.Silverlight.DataGrid.DataGridColumn)">
+            <summary>
+            Key used to store the cell content for future reuse in a shared pool. Columns
+            returning the same RecyclingKey will be candidate to share the same cells
+            content instances.
+            <list type="number">
+            		<item>
+            			<description>If there is no recycled cell content matching the recycling key,
+            the method <see cref="M:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRow.CreateCellContent(C1.Silverlight.DataGrid.DataGridColumn)">CreateCellContent</see> will be called
+            to create a new one. </description></item>
+            		<item>
+            			<description>Once the cell content is created or a recycled one is taken, the
+            method <see cref="M:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRow.BindCellContent(System.Windows.FrameworkElement,C1.Silverlight.DataGrid.DataGridColumn)">BindCellContent</see> will be called.
+            </description></item>
+            		<item>
+            			<description>When the cell content is not being used the method <see cref="!:UnbindCellContent">UnbindCellContent</see> will be called, and the cell
+            content will be saved for future use in other cells.</description></item></list>
+            </summary>
+            <param name="column">The column for which the recycling key is being
+            requested.</param>
+            <returns>
+            The recycling key, or null to disable recycling.
+            </returns>
+            <remarks>
+            Typically this method returns the recycling key of the column passed by
+            parameter. In some cases like FilterRow (row with TextBoxes in each cell to
+            filter) the content of the cell is independent of the column, in this case this
+            method will be overridden.
+            </remarks>
+            <example>
+            	<c>return typeof(StackPanel);</c>
+            </example>
+            <seealso cref="M:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRow.CreateCellContent(C1.Silverlight.DataGrid.DataGridColumn)">CreateCellContent</seealso>
+            <seealso cref="M:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRow.BindCellContent(System.Windows.FrameworkElement,C1.Silverlight.DataGrid.DataGridColumn)">BindCellContent</seealso>
+            <seealso cref="!:UnbindCellContent">UnbindCellContent</seealso>
+            <seealso cref="!:GetCellContentStyle">GetCellContentStyle</seealso>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRow.CreateCellContent(C1.Silverlight.DataGrid.DataGridColumn)">
+            <summary>
+            Creates the visual element that will be used to display the info inside a cell
+            of this column.
+            </summary>
+            <param name="column">The column for which the cell content element is being
+            requested.</param>
+            <returns>
+            Visual element used to display the content of a cell.
+            </returns>
+            <remarks>
+            This method is only called if no cell content is found in the shared pool
+            matching the recycling key returned by the method <see cref="M:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRow.GetCellContentRecyclingKey(C1.Silverlight.DataGrid.DataGridColumn)">GetCellContentRecyclingKey</see>.
+            </remarks>
+            <example>
+            	<c>return column.CreateCellContent(this);</c>
+            </example>
+            <seealso cref="M:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRow.GetCellContentRecyclingKey(C1.Silverlight.DataGrid.DataGridColumn)">GetCellContentRecyclingKey</seealso>
+            <seealso cref="M:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRow.BindCellContent(System.Windows.FrameworkElement,C1.Silverlight.DataGrid.DataGridColumn)">BindCellContent</seealso>
+            <seealso cref="!:UnbindCellContent">UnbindCellContent</seealso>
+            <seealso cref="!:GetCellContentStyle">GetCellContentStyle</seealso>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRow.BindCellContent(System.Windows.FrameworkElement,C1.Silverlight.DataGrid.DataGridColumn)">
+            <summary>
+            Initializes the cell content presenter. This method must include cellContent
+            property settings, SetBinding of the corresponding dependency property being
+            "row.DataItem" the source which can be set directly in the binding or
+            as DataContext of the cellContent.
+            </summary>
+            <param name="cellContent">Visual element that will be bound in order to display
+            the cell content. If the cellContent received is not the expected you'll
+            probably need to override the method <see cref="M:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRow.GetCellContentRecyclingKey(C1.Silverlight.DataGrid.DataGridColumn)">GetCellContentRecyclingKey</see>.</param>
+            <param name="column">The column for which the cell content will be
+            initialized.</param>
+            <remarks>
+            This method is called after a cell content is created or a recycled one is
+            taken.
+            </remarks>
+            <example><c>column.BindCellContent(cellContent, this);</c></example>
+            <seealso cref="M:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRow.GetCellContentRecyclingKey(C1.Silverlight.DataGrid.DataGridColumn)">GetCellContentRecyclingKey</seealso>
+            <seealso cref="M:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRow.CreateCellContent(C1.Silverlight.DataGrid.DataGridColumn)">CreateCellContent</seealso>
+            <seealso cref="!:UnbindCellContent">UnbindCellContent</seealso>
+            <seealso cref="!:GetCellContentStyle">GetCellContentStyle</seealso>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRowPresenter">
+            <summary>
+            Visual representation of a group row which contains summaries.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRowPresenter.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRowPresenter"/> class.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRowPresenter.LeadingMarginProperty">
+            <summary>
+            Gets or sets the margin between the first column and the rows headers, 
+            this space is only visible when there are grouped columns.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRowPresenter.Load">
+            <summary>
+            Called after a row presenter is added to the visual tree.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRowPresenter.Unload">
+            <summary>
+            Called before the visual element is removed from the visual tree.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRowPresenter.LeadingMargin">
+            <summary>
+            Gets or sets the margin between the first column and the rows headers, 
+            this space is only visible when there are grouped columns.
+            </summary>
+            <value>The leading margin.</value>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Summaries.DataGridSummaryRow">
+            <summary>
+            Display the summaries for each column that has aggregate functions attached.
+            This row can be seen inside a group or not, in all cases will compute the value of all the items recursively. 
+            e.g. if this row is added inside a group row the sum function will display 
+            the sum of all the items inside that group and the items that are in a sub group of it.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridSummaryRow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Silverlight.DataGrid.Summaries.DataGridSummaryRow"/> class.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridSummaryRow.OnLoaded">
+            <summary>
+            Called after the row is added to the row collection.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridSummaryRow.OnUnloaded">
+            <summary>
+            Called before the row is removed from the row collection.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridSummaryRow.GetRowPresenterRecyclingKey">
+            <summary>
+            Key used to store the row presenter for future reuse in a shared pool. Rows
+            returning the same RecyclingKey will be candidate to share the same row
+            presenter instances.
+            <list type="number">
+            		<item>
+            			<description>If there is no recycled row presenter matching the recycling key,
+            the method <see cref="M:C1.Silverlight.DataGrid.Summaries.DataGridSummaryRow.CreateRowPresenter">CreateRowPresenter</see> will be
+            called to create a new one. </description></item>
+            		<item>
+            			<description>Once the row presenter is created or a recycled one is taken, the
+            method <see cref="!:BindRowPresenter">BindRowPresenter</see> will be called.
+            </description></item>
+            		<item>
+            			<description>When the row presenter is not being used the method <see cref="!:UnbindRowPresenter">UnbindRowPresenter</see> will be called, and the row
+            presenter will be saved for future use in other
+            rows.</description></item></list>
+            </summary>
+            <returns>
+            The recycling key, or null to disable recycling.
+            </returns>
+            <remarks>
+            Typically this method returns the type of the element returned by the method
+            <see cref="M:C1.Silverlight.DataGrid.Summaries.DataGridSummaryRow.CreateRowPresenter">CreateRowPresenter</see>.
+            </remarks>
+            <example><c>return typeof(DataGridSummaryRow);</c></example>
+            <seealso cref="M:C1.Silverlight.DataGrid.Summaries.DataGridSummaryRow.CreateRowPresenter">CreateRowPresenter</seealso>
+            <seealso cref="!:BindRowPresenter">BindRowPresenter</seealso>
+            <seealso cref="!:UnbindRowPresenter">UnbindRowPresenter</seealso>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridSummaryRow.CreateRowPresenter">
+            <summary>
+            Creates a new row presenter.
+            </summary>
+            <returns>The row presenter.</returns>
+            <remarks>
+            This method is only called if no row presenter is found in the shared pool
+            matching the recycling key returned by the method <see cref="M:C1.Silverlight.DataGrid.Summaries.DataGridSummaryRow.GetRowPresenterRecyclingKey">GetRowPresenterRecyclingKey</see>.
+            </remarks>
+            <example>
+            	<c>return new DataGridRowPresenter();</c>
+            </example>
+            <seealso cref="M:C1.Silverlight.DataGrid.Summaries.DataGridSummaryRow.GetRowPresenterRecyclingKey">GetRowPresenterRecyclingKey</seealso>
+            <seealso cref="!:BindRowPresenter">BindRowPresenter</seealso>
+            <seealso cref="!:UnbindRowPresenter">UnbindRowPresenter</seealso>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridSummaryRow.HasCellPresenter(C1.Silverlight.DataGrid.DataGridColumn)">
+            <summary>
+            Returns true only if there are at least one aggregate function for the specified column
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridSummaryRow.GetCellContentRecyclingKey(C1.Silverlight.DataGrid.DataGridColumn)">
+            <summary>
+            Key used to store the cell content for future reuse in a shared pool. Columns
+            returning the same RecyclingKey will be candidate to share the same cells
+            content instances.
+            <list type="number">
+            		<item>
+            			<description>If there is no recycled cell content matching the recycling key,
+            the method <see cref="M:C1.Silverlight.DataGrid.Summaries.DataGridSummaryRow.CreateCellContent(C1.Silverlight.DataGrid.DataGridColumn)">CreateCellContent</see> will be called
+            to create a new one. </description></item>
+            		<item>
+            			<description>Once the cell content is created or a recycled one is taken, the
+            method <see cref="M:C1.Silverlight.DataGrid.Summaries.DataGridSummaryRow.BindCellContent(System.Windows.FrameworkElement,C1.Silverlight.DataGrid.DataGridColumn)">BindCellContent</see> will be called.
+            </description></item>
+            		<item>
+            			<description>When the cell content is not being used the method <see cref="!:UnbindCellContent">UnbindCellContent</see> will be called, and the cell
+            content will be saved for future use in other cells.</description></item></list>
+            </summary>
+            <param name="column">The column for which the recycling key is being
+            requested.</param>
+            <returns>
+            The recycling key, or null to disable recycling.
+            </returns>
+            <remarks>
+            Typically this method returns the recycling key of the column passed by
+            parameter. In some cases like FilterRow (row with TextBoxes in each cell to
+            filter) the content of the cell is independent of the column, in this case this
+            method will be overridden.
+            </remarks>
+            <example>
+            	<c>return typeof(StackPanel);</c>
+            </example>
+            <seealso cref="M:C1.Silverlight.DataGrid.Summaries.DataGridSummaryRow.CreateCellContent(C1.Silverlight.DataGrid.DataGridColumn)">CreateCellContent</seealso>
+            <seealso cref="M:C1.Silverlight.DataGrid.Summaries.DataGridSummaryRow.BindCellContent(System.Windows.FrameworkElement,C1.Silverlight.DataGrid.DataGridColumn)">BindCellContent</seealso>
+            <seealso cref="!:UnbindCellContent">UnbindCellContent</seealso>
+            <seealso cref="!:GetCellContentStyle">GetCellContentStyle</seealso>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridSummaryRow.CreateCellContent(C1.Silverlight.DataGrid.DataGridColumn)">
+            <summary>
+            Returns a stack panel as the content of the summary cell.
+            The result of each aggregate function will be added as an item in the stack panel.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridSummaryRow.BindCellContent(System.Windows.FrameworkElement,C1.Silverlight.DataGrid.DataGridColumn)">
+            <summary>
+            Adds one item for each aggregate function.
+            </summary>
+        </member>
+    </members>
+</doc>

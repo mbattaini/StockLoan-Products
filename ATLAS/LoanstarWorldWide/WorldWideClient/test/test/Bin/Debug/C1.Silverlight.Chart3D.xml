@@ -1,0 +1,662 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Silverlight.Chart3D</name>
+    </assembly>
+    <members>
+        <member name="T:C1.Silverlight.Chart3D.Axis3D">
+            <summary>
+            Represents axis of 3D chart.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart3D.Axis3D.#ctor">
+            <summary>
+            Creates an instance of Axis3D class.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.Axis3D.ForegroundProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for Foreground.  
+             This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.Axis3D.MajorGridlineStrokeProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for GridlineStroke.  
+            This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.Axis3D.MinProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for Min. 
+             This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.Axis3D.MaxProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for Max.  
+             This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.Axis3D.MajorUnitProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for yProperty.  
+             This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.Axis3D.TitleProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for Title. 
+             This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.Axis3D.AnnoFormatProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for AnnoFormat.  
+             This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.Axis3D.AnnoTemplateProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for AnnoFormat.  
+             This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.Axis3D.MajorTickAppearanceProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for MajorTickAppearance. 
+             This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.Axis3D.MajorTickHeightProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for MajorTickHeight. 
+             This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.Axis3D.Foreground">
+            <summary>
+            Gets or set the foreground color of the axis.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.Axis3D.MajorGridlineStroke">
+            <summary>
+            Gets or sets the stroking brush for axis grid lines.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.Axis3D.Min">
+            <summary>
+            Gets or sets the axis minimum.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.Axis3D.Max">
+            <summary>
+            Gets or sets the axis maximum.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.Axis3D.MajorUnit">
+            <summary>
+            Gets or sets the distance between axis labels.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.Axis3D.Title">
+            <summary>
+            Gets or sets the axis title.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.Axis3D.AnnoFormat">
+            <summary>
+            Gets or sets the axis label format string.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.Axis3D.AnnoTemplate">
+            <summary>
+            Gets or sets the template for axis annotations.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.Axis3D.ActualMin">
+            <summary>
+            Gets the actual axis minimum.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.Axis3D.ActualMax">
+            <summary>
+            Gets the actual axis maximum.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Chart3D.LegendPosition">
+            <summary>
+            Enumerates available legend posotions.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.LegendPosition.Left">
+            <summary>
+            At the left from the chart. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.LegendPosition.Top">
+            <summary>
+            At the top from the chart.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.LegendPosition.Right">
+            <summary>
+            At the right from the chart.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.LegendPosition.Bottom">
+            <summary>
+            At the bottom from the chart.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.LegendPosition.None">
+            <summary>
+            No legend or the legend is placed outside the chart control.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Chart3D.LegendOrientation">
+            <summary>
+            Enumerates available legend orientation. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.LegendOrientation.Auto">
+            <summary>
+            The orientation is selected automatically.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.LegendOrientation.Horizontal">
+            <summary>
+            Horizontal orientation.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.LegendOrientation.Vertical">
+            <summary>
+            Vertical orientation.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Chart3D.LegendLabelPosition">
+            <summary>
+            Enumerates available labels positions in the legend.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.LegendLabelPosition.Far">
+            <summary>
+            The labels are farther from the chart than legend body.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.LegendLabelPosition.Near">
+            <summary>
+            The labels are nearer to the chart than legend body.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Chart3D.C1Chart3DLegend">
+            <summary>
+            Represents the legend for 3D chart.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart3D.C1Chart3DLegend.#ctor">
+            <summary>
+            Creates an instance of C1Chart3DLegend class.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.C1Chart3DLegend.OrientationProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for Orientation.  
+             This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.C1Chart3DLegend.FormatStringProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for FormatString. 
+             This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.C1Chart3DLegend.PositionProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for Position.  
+             This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.C1Chart3DLegend.LabelPositionProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for LabelPosition.  
+             This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart3D.C1Chart3DLegend.OnApplyTemplate">
+            <summary>
+            Invoked when ApplyTemplate() method is called.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart3D.C1Chart3DLegend.MeasureOverride(System.Windows.Size)">
+            <summary>
+            
+            </summary>
+            <param name="availableSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Silverlight.Chart3D.C1Chart3DLegend.ArrangeOverride(System.Windows.Size)">
+            <summary>
+            
+            </summary>
+            <param name="finalSize"></param>
+            <returns></returns>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.C1Chart3DLegend.Orientation">
+            <summary>
+            Gets or sets the legend orientation.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.C1Chart3DLegend.FormatString">
+            <summary>
+            Gets or sets the format string for the labels in the legend.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.C1Chart3DLegend.Position">
+            <summary>
+            Gets or sets the legend position relatively to the chart.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.C1Chart3DLegend.LabelPosition">
+            <summary>
+            Gets or sets the label position in the legend.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Chart3D.Chart3DType">
+            <summary>
+            Enumerates available chart types.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.Chart3DType.SurfaceWireframe">
+            <summary>
+            Wire-frame surface chart.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.Chart3DType.SurfaceWireframeContour">
+            <summary>
+            Wire-frame surface chart with contour levels.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.Chart3DType.Surface">
+            <summary>
+            Surface chart.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.Chart3DType.SurfaceContour">
+            <summary>
+            Surface chart with contour levels.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.Chart3DType.SurfaceZone">
+            <summary>
+            Surface chart with zones.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.Chart3DType.SurfaceZoneContour">
+            <summary>
+            Surface chart with contour zones.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Chart3D.SurfaceMeshAppearance">
+            <summary>
+            Options for grid mesh appearance.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.SurfaceMeshAppearance.None">
+            <summary>
+            No lines.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.SurfaceMeshAppearance.X">
+            <summary>
+            Lines along x-axis.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.SurfaceMeshAppearance.Y">
+            <summary>
+            Lines along y-axis.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.SurfaceMeshAppearance.XY">
+            <summary>
+            Lines along x- and y-axes.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Chart3D.PlaneAppearance">
+            <summary>
+            Options for ceil and floor appearance.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.PlaneAppearance.None">
+            <summary>
+            No contour.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.PlaneAppearance.Contour">
+            <summary>
+            Contour lines.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.PlaneAppearance.Zone">
+            <summary>
+            Zones.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.PlaneAppearance.ZoneContour">
+            <summary>
+            Contour zones.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Chart3D.C1Chart3D">
+            <summary>
+            Represents 3D chart.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart3D.C1Chart3D.#ctor">
+            <summary>
+            Creates an instance of C1Chart3D class. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart3D.C1Chart3D.OnApplyTemplate">
+            <summary>
+            Invoked when ApplyTemplate() method is called.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.C1Chart3D.ElevationProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for Elevation. 
+             This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.C1Chart3D.AzimuthProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for Azimuth.
+            This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.C1Chart3D.AxisXProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for AxisX. 
+             This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.C1Chart3D.AxisYProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for AxisY. 
+            This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.C1Chart3D.AxisZProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for AxisZ.
+             This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.C1Chart3D.ColorPaletteProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for ColorPalette.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.C1Chart3D.ChartTypeProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for ChartType. 
+             This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.C1Chart3D.SurfaceMeshAppearanceProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for SurfaceMeshAppearance.
+             This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.C1Chart3D.ContourLevelsCountProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for ContourLevelsCount. 
+             This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.C1Chart3D.XScaleProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for XScale.  
+             This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.C1Chart3D.YScaleProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for YScale.  
+             This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.C1Chart3D.LegendProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for Legend.  
+             This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.C1Chart3D.PlotFillProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for PlotFill.  
+             This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.C1Chart3D.CeilAppearanceProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for CeilAppearance.  
+             This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.C1Chart3D.FloorAppearanceProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for FloorAppearance.  
+             This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.C1Chart3D.Elevation">
+            <summary>
+            Gets or sets the elevation angle measured in degrees.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.C1Chart3D.Azimuth">
+            <summary>
+            Gets or sets the azimuth angle measured in degrees.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.C1Chart3D.AxisX">
+            <summary>
+            Gets or sets the x-axis.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.C1Chart3D.AxisY">
+            <summary>
+            Gets or sets the y-axis.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.C1Chart3D.AxisZ">
+            <summary>
+            Gets or sets the z-axis.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.C1Chart3D.ColorPalette">
+            <summary>
+            Gets or sets the color palette.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.C1Chart3D.ChartType">
+            <summary>
+            Gets or sets the chart type.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.C1Chart3D.SurfaceMeshAppearance">
+            <summary>
+            Gets or sets the surface mesh appearance.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.C1Chart3D.ContourLevelsCount">
+            <summary>
+            Gets or sets the number of contour levels.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.C1Chart3D.XScale">
+            <summary>
+            Gets or sets the chart scale along x-axis.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.C1Chart3D.YScale">
+            <summary>
+            Gets or sets the chart scale along y-axis.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.C1Chart3D.Legend">
+            <summary>
+            Gets or sets the chart legend.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.C1Chart3D.PlotFill">
+            <summary>
+            Gets or sets the brush for plot area filling.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.C1Chart3D.CeilAppearance">
+            <summary>
+            Gets or sets the ceil appearance.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.C1Chart3D.FloorAppearance">
+            <summary>
+            Gets or sets the floor appearance.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.C1Chart3D.Children">
+            <summary>
+            Gets the collection of data series. Now only one series is supported.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Chart3D.Chart3DView">
+            <summary>
+            Represent the main part of C1Chart3D control.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart3D.Chart3DView.#ctor">
+            <summary>
+            Creates an instance of Chart3DView class.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart3D.Chart3DView.OnApplyTemplate">
+            <summary>
+            Invoked when ApplyTemplate() method is called.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Chart3D.GridDataSeries">
+            <summary>
+            Represents series with data defined on rectangular grid.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart3D.GridDataSeries.#ctor">
+            <summary>
+            Creates an instance of GridDataSeries class.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.GridDataSeries.ZDataProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for GridData.  
+             This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.GridDataSeries.ContourDataProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for ContourData.  
+             This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.GridDataSeries.StartProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for Start.  
+             This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.GridDataSeries.StepProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for Step.  
+             This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.GridDataSeries.FillProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for Fill.
+             This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.GridDataSeries.BackFillProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for BackFill. 
+             This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.GridDataSeries.StrokeProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for Stroke.  
+             This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart3D.GridDataSeries.BackStrokeProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for BackStroke.  
+             This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.GridDataSeries.ZData">
+            <summary>
+            Gets or sets two-dimensional array of values on the grid.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.GridDataSeries.ContourData">
+            <summary>
+            Gets or sets two-dimensional array of contour data(4-dimensional chart). 
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.GridDataSeries.Start">
+            <summary>
+            Gets or sets the start point of data.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.GridDataSeries.Step">
+            <summary>
+            Gets or sets the step of grid data. 
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.GridDataSeries.Fill">
+            <summary>
+            Gets or sets the fill brush for the meshes facing up(Z+).
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.GridDataSeries.BackFill">
+            <summary>
+            Gets or sets the fill brush for the meshes facing down(Z-).
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.GridDataSeries.Stroke">
+            <summary>
+            Gets or sets the stroke brush for the meshes facing up(Z+).
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart3D.GridDataSeries.BackStroke">
+            <summary>
+            Gets or sets the stroke brush for the meshes facing down(Z-).
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart3D.GrahamConvexHull.FindHull(System.Collections.Generic.List{System.Windows.Point})">
+            <summary>
+            Find convex hull for the given set of points.
+            </summary>
+            
+            <param name="points">Set of points to search convex hull for.</param>
+            
+            <returns>Returns set of points, which form a convex hull for the given <paramref name="points"/>.
+            The first point in the list is the point with lowest X coordinate (and with lowest Y if there are
+            several points with the same X value). Points are provided in counter clockwise order
+            (<a href="http://en.wikipedia.org/wiki/Cartesian_coordinate_system">Cartesian
+            coordinate system</a>).</returns>
+            
+        </member>
+    </members>
+</doc>

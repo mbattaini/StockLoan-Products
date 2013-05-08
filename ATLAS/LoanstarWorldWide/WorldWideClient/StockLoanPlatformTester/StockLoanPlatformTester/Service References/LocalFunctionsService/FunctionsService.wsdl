@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FunctionsService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://wspen-sl08w7.penson.com/StockLoan.WebServices/FunctionsService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://wspen-sl08w7.penson.com/StockLoan.WebServices/FunctionsService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IFunctionsService_GetSourceIP_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSourceIP" />
+  </wsdl:message>
+  <wsdl:message name="IFunctionsService_GetSourceIP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSourceIPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctionsService_HolidaySet_InputMessage">
+    <wsdl:part name="parameters" element="tns:HolidaySet" />
+  </wsdl:message>
+  <wsdl:message name="IFunctionsService_HolidaySet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HolidaySetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctionsService_HolidaysGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:HolidaysGet" />
+  </wsdl:message>
+  <wsdl:message name="IFunctionsService_HolidaysGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HolidaysGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctionsService_IsBankHoliday_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsBankHoliday" />
+  </wsdl:message>
+  <wsdl:message name="IFunctionsService_IsBankHoliday_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsBankHolidayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctionsService_IsExchangeHoliday_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsExchangeHoliday" />
+  </wsdl:message>
+  <wsdl:message name="IFunctionsService_IsExchangeHoliday_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsExchangeHolidayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctionsService_KeyValueSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:KeyValueSet" />
+  </wsdl:message>
+  <wsdl:message name="IFunctionsService_KeyValueSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:KeyValueSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctionsService_KeyValuesGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:KeyValuesGet" />
+  </wsdl:message>
+  <wsdl:message name="IFunctionsService_KeyValuesGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:KeyValuesGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctionsService_KeyValuesListGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:KeyValuesListGet" />
+  </wsdl:message>
+  <wsdl:message name="IFunctionsService_KeyValuesListGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:KeyValuesListGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctionsService_LogicOperatorsGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:LogicOperatorsGet" />
+  </wsdl:message>
+  <wsdl:message name="IFunctionsService_LogicOperatorsGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogicOperatorsGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctionsService_SettlementSystsemProcessSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:SettlementSystsemProcessSet" />
+  </wsdl:message>
+  <wsdl:message name="IFunctionsService_SettlementSystsemProcessSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SettlementSystsemProcessSetResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IFunctionsService">
+    <wsdl:operation name="GetSourceIP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctionsService/GetSourceIP" message="tns:IFunctionsService_GetSourceIP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctionsService/GetSourceIPResponse" message="tns:IFunctionsService_GetSourceIP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HolidaySet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctionsService/HolidaySet" message="tns:IFunctionsService_HolidaySet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctionsService/HolidaySetResponse" message="tns:IFunctionsService_HolidaySet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HolidaysGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctionsService/HolidaysGet" message="tns:IFunctionsService_HolidaysGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctionsService/HolidaysGetResponse" message="tns:IFunctionsService_HolidaysGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsBankHoliday">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctionsService/IsBankHoliday" message="tns:IFunctionsService_IsBankHoliday_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctionsService/IsBankHolidayResponse" message="tns:IFunctionsService_IsBankHoliday_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsExchangeHoliday">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctionsService/IsExchangeHoliday" message="tns:IFunctionsService_IsExchangeHoliday_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctionsService/IsExchangeHolidayResponse" message="tns:IFunctionsService_IsExchangeHoliday_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="KeyValueSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctionsService/KeyValueSet" message="tns:IFunctionsService_KeyValueSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctionsService/KeyValueSetResponse" message="tns:IFunctionsService_KeyValueSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="KeyValuesGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctionsService/KeyValuesGet" message="tns:IFunctionsService_KeyValuesGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctionsService/KeyValuesGetResponse" message="tns:IFunctionsService_KeyValuesGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="KeyValuesListGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctionsService/KeyValuesListGet" message="tns:IFunctionsService_KeyValuesListGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctionsService/KeyValuesListGetResponse" message="tns:IFunctionsService_KeyValuesListGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LogicOperatorsGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctionsService/LogicOperatorsGet" message="tns:IFunctionsService_LogicOperatorsGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctionsService/LogicOperatorsGetResponse" message="tns:IFunctionsService_LogicOperatorsGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SettlementSystsemProcessSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctionsService/SettlementSystsemProcessSet" message="tns:IFunctionsService_SettlementSystsemProcessSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctionsService/SettlementSystsemProcessSetResponse" message="tns:IFunctionsService_SettlementSystsemProcessSet_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IFunctionsService" type="tns:IFunctionsService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSourceIP">
+      <soap:operation soapAction="http://tempuri.org/IFunctionsService/GetSourceIP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HolidaySet">
+      <soap:operation soapAction="http://tempuri.org/IFunctionsService/HolidaySet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HolidaysGet">
+      <soap:operation soapAction="http://tempuri.org/IFunctionsService/HolidaysGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsBankHoliday">
+      <soap:operation soapAction="http://tempuri.org/IFunctionsService/IsBankHoliday" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsExchangeHoliday">
+      <soap:operation soapAction="http://tempuri.org/IFunctionsService/IsExchangeHoliday" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KeyValueSet">
+      <soap:operation soapAction="http://tempuri.org/IFunctionsService/KeyValueSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KeyValuesGet">
+      <soap:operation soapAction="http://tempuri.org/IFunctionsService/KeyValuesGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KeyValuesListGet">
+      <soap:operation soapAction="http://tempuri.org/IFunctionsService/KeyValuesListGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogicOperatorsGet">
+      <soap:operation soapAction="http://tempuri.org/IFunctionsService/LogicOperatorsGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SettlementSystsemProcessSet">
+      <soap:operation soapAction="http://tempuri.org/IFunctionsService/SettlementSystsemProcessSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FunctionsService">
+    <wsdl:port name="BasicHttpBinding_IFunctionsService" binding="tns:BasicHttpBinding_IFunctionsService">
+      <soap:address location="http://wspen-sl08w7.penson.com/StockLoan.WebServices/FunctionsService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

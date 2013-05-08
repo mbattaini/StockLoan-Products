@@ -1,0 +1,17 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="BasicHttpBinding_ILocateService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:60372/LocateService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ILocateService"
+                contract="ServiceLocate.ILocateService" name="BasicHttpBinding_ILocateService" />
+        </client>
+    </system.serviceModel>
+</configuration>

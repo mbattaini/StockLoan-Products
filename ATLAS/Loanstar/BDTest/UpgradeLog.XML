@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="BDDataTest">
+</Property><Property Name="Solution File" Value="C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\BDDataTest.sln">
+</Property><Property Name="Date" Value="Monday, March 15, 2010">
+</Property><Property Name="Time" Value="8:44:08 AM">
+</Property></Properties><Event ErrorLevel="0" Project="BDDataTest" Source="..\BDDataTest\BDDataTest.csproj" Description="Project file successfully backed up as C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\Backup\BDDataTest.csproj">
+</Event><Event ErrorLevel="0" Project="BDDataTest" Source="..\BDDataTest\AssemblyInfo.cs" Description="File successfully backed up as C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\Backup\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="BDDataTest" Source="..\BDDataTest\TestHarness.cs" Description="File successfully backed up as C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\Backup\TestHarness.cs">
+</Event><Event ErrorLevel="0" Project="BDDataTest" Source="..\BDDataTest\App.config" Description="File successfully backed up as C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\BDTest\Backup\App.config">
+</Event><Event ErrorLevel="0" Project="BDDataTest" Source="..\BDDataTest\BDDataTest.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="BDDataTest" Source="..\BDDataTest\BDDataTest.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="BDDataTest" Source="..\BDDataTest\App.config" Description="File converted successfully. All &lt;supportedRuntime&gt; and &lt;requiredRuntime&gt; tags were removed to enable the project to build and run with Visual Studio 2005.">
+</Event><Event ErrorLevel="3" Project="BDDataTest" Source="..\BDDataTest\App.config" Description="Converted">
+</Event></UpgradeLog>

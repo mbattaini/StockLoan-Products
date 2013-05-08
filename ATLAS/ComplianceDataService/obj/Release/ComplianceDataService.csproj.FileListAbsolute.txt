@@ -1,0 +1,11 @@
+C:\_dev\ATLAS\ComplianceDataService\bin\Release\StockLoanComplianceDataService.exe.config
+C:\_dev\ATLAS\ComplianceDataService\bin\Release\StockLoanComplianceDataService.exe
+C:\_dev\ATLAS\ComplianceDataService\bin\Release\StockLoan.Common.dll
+C:\_dev\ATLAS\ComplianceDataService\bin\Release\StockLoan.ComplianceData.dll
+C:\_dev\ATLAS\ComplianceDataService\obj\Release\Anetics.Courier.ProjectInstaller.resources
+C:\_dev\ATLAS\ComplianceDataService\obj\Release\StockLoan.ComplianceData.Service.resources
+C:\_dev\ATLAS\ComplianceDataService\obj\Release\StockLoanComplianceDataService.exe
+C:\_dev\ATLAS\ComplianceDataService\obj\Release\ComplianceDataService.csprojResolveAssemblyReference.cache
+C:\_dev\ATLAS\ComplianceDataService\obj\Release\ComplianceDataService.csproj.GenerateResource.Cache
+C:\_dev\ATLAS\ComplianceDataService\bin\Release\C1.C1Excel.2.dll
+C:\_dev\ATLAS\ComplianceDataService\bin\Release\C1.C1Excel.2.xml

@@ -1,0 +1,6 @@
+C:\_Dev\ATLAS\Loanstar\TGTRADEFORMATS\bin\Release\TGTradeFormats.dll
+C:\_Dev\ATLAS\Loanstar\TGTRADEFORMATS\bin\Release\TGTradeFormats.pdb
+C:\_Dev\ATLAS\Loanstar\TGTRADEFORMATS\bin\Release\StockLoan.Common.dll
+C:\_Dev\ATLAS\Loanstar\TGTRADEFORMATS\obj\Release\ResolveAssemblyReference.cache
+C:\_Dev\ATLAS\Loanstar\TGTRADEFORMATS\obj\Release\TGTradeFormats.dll
+C:\_Dev\ATLAS\Loanstar\TGTRADEFORMATS\obj\Release\TGTradeFormats.pdb

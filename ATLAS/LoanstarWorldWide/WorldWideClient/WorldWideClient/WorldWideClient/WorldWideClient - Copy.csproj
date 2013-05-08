@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ExpressionBlendVersion>4.0.20525.0</ExpressionBlendVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5D0C5AA1-9152-4586-95FC-4303C05DF3B0}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WorldWideClient</RootNamespace>
+    <AssemblyName>WorldWideClient</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>WorldWideClient.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>WorldWideClient.App</SilverlightAppEntry>
+    <TestPageFileName>TestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>false</EnableOutOfBrowser>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>
+    </LinkedServerProject>
+    <Utf8Output>true</Utf8Output>
+    <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the
+		MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+		to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.Silverlight" />
+    <Reference Include="C1.Silverlight.Analytics" />
+    <Reference Include="C1.Silverlight.Chart" />
+    <Reference Include="C1.Silverlight.Chart.Editor" />
+    <Reference Include="C1.Silverlight.Chart.Extended" />
+    <Reference Include="C1.Silverlight.Chart3D" />
+    <Reference Include="C1.Silverlight.Data" />
+    <Reference Include="C1.Silverlight.DataGrid" />
+    <Reference Include="C1.Silverlight.DataGrid.Analytics" />
+    <Reference Include="C1.Silverlight.DataGrid.Ria" />
+    <Reference Include="C1.Silverlight.DateTimeEditors" />
+    <Reference Include="C1.Silverlight.Docking" />
+    <Reference Include="C1.Silverlight.Extended" />
+    <Reference Include="C1.Silverlight.Extended.Analytics" />
+    <Reference Include="C1.Silverlight.FlexGrid.4" />
+    <Reference Include="C1.Silverlight.Gauge" />
+    <Reference Include="C1.Silverlight.Imaging" />
+    <Reference Include="C1.Silverlight.Legacy" />
+    <Reference Include="C1.Silverlight.Maps" />
+    <Reference Include="C1.Silverlight.MediaPlayer" />
+    <Reference Include="C1.Silverlight.Pdf" />
+    <Reference Include="C1.Silverlight.PdfViewer" />
+    <Reference Include="C1.Silverlight.ReportViewer" />
+    <Reference Include="C1.Silverlight.RichTextBox" />
+    <Reference Include="C1.Silverlight.RichTextBox.LegacyHtmlFilter" />
+    <Reference Include="C1.Silverlight.RichTextBox.PdfFilter" />
+    <Reference Include="C1.Silverlight.RichTextBox.RtfFilter" />
+    <Reference Include="C1.Silverlight.RichTextBox.Toolbar" />
+    <Reference Include="C1.Silverlight.Schedule" />
+    <Reference Include="C1.Silverlight.SpellChecker" />
+    <Reference Include="C1.Silverlight.Theming" />
+    <Reference Include="C1.Silverlight.Theming.BureauBlack" />
+    <Reference Include="C1.Silverlight.Theming.Cosmopolitan" />
+    <Reference Include="C1.Silverlight.Theming.ExpressionDark" />
+    <Reference Include="C1.Silverlight.Theming.ExpressionLight" />
+    <Reference Include="C1.Silverlight.Theming.RainierOrange" />
+    <Reference Include="C1.Silverlight.Theming.ShinyBlue" />
+    <Reference Include="C1.Silverlight.Theming.WhistlerBlue" />
+    <Reference Include="C1.Silverlight.TileView" />
+    <Reference Include="C1.Silverlight.Toolbar" />
+    <Reference Include="C1.Silverlight.Uploader" />
+    <Reference Include="C1.Silverlight.Zip" />
+    <Reference Include="Microsoft.Expression.Drawing" />
+    <Reference Include="Microsoft.Expression.Effects" />
+    <Reference Include="Microsoft.Expression.Interactions" />
+    <Reference Include="mscorlib" />
+    <Reference Include="Synergist.Effects, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Synergist\Synergist Behaviors and Effects\SL4\Synergist.Effects.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls.Data.Input" />
+    <Reference Include="System.Windows.Controls.Input.Toolkit" />
+    <Reference Include="System.Windows.Controls.Navigation" />
+    <Reference Include="System.Windows.Controls.Theming.BubbleCreme" />
+    <Reference Include="System.Windows.Controls.Theming.BureauBlack" />
+    <Reference Include="System.Windows.Controls.Theming.BureauBlue" />
+    <Reference Include="System.Windows.Controls.Theming.ExpressionDark" />
+    <Reference Include="System.Windows.Controls.Theming.ExpressionLight" />
+    <Reference Include="System.Windows.Controls.Theming.RainierOrange" />
+    <Reference Include="System.Windows.Controls.Theming.RainierPurple" />
+    <Reference Include="System.Windows.Controls.Theming.ShinyBlue" />
+    <Reference Include="System.Windows.Controls.Theming.ShinyRed" />
+    <Reference Include="System.Windows.Controls.Theming.SystemColors" />
+    <Reference Include="System.Windows.Controls.Theming.TwilightBlue" />
+    <Reference Include="System.Windows.Controls.Theming.WhistlerBlue" />
+    <Reference Include="System.Windows.Controls.Toolkit" />
+    <Reference Include="System.Windows.Controls.Toolkit.Internals" />    
+    <Reference Include="System.Windows.Interactivity" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ClientWindow.cs" />
+    <Compile Include="Controls\SampleControls\SampleGridControl.xaml.cs">
+      <DependentUpon>SampleGridControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TradingControls\TradingQuickTicketControl.xaml.cs">
+      <DependentUpon>TradingQuickTicketControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UserControls\LoginControl.xaml.cs">
+      <DependentUpon>LoginControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SecurityMasterControl.xaml.cs">
+      <DependentUpon>SecurityMasterControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ClientItem.cs" />
+    <Compile Include="Controls\UserControls\UserIdControl.xaml.cs">
+      <DependentUpon>UserIdControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UserControls\UserMaintenanceControl.xaml.cs">
+      <DependentUpon>UserMaintenanceControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomEvents.cs" />
+    <Compile Include="SystemEventWindow.cs" />
+    <Compile Include="Functions.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Controls\InventoryLookupControl.xaml.cs">
+      <DependentUpon>InventoryLookupControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceAdmin\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceBooks\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceContracts\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceDeals\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceFunctions\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceFunds\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceInventory\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceMarks\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServicePositions\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceRecalls\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReturns\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceSecMaster\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceSecurity\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceUserAdmin\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="UserInformation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="Controls\SampleControls\SampleGridControl.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TradingControls\TradingQuickTicketControl.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\UserControls\LoginControl.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\SecurityMasterControl.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\UserControls\UserIdControl.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\UserControls\UserMaintenanceControl.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\InventoryLookupControl.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Service References\ServiceAdmin\AdminService.disco" />
+    <None Include="Service References\ServiceAdmin\configuration91.svcinfo" />
+    <None Include="Service References\ServiceAdmin\configuration.svcinfo" />
+    <None Include="Service References\ServiceAdmin\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceBooks\BooksService.disco" />
+    <None Include="Service References\ServiceBooks\configuration91.svcinfo" />
+    <None Include="Service References\ServiceBooks\configuration.svcinfo" />
+    <None Include="Service References\ServiceBooks\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceContracts\ContractsService.disco" />
+    <None Include="Service References\ServiceContracts\configuration91.svcinfo" />
+    <None Include="Service References\ServiceContracts\configuration.svcinfo" />
+    <None Include="Service References\ServiceContracts\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceDeals\DealsService.disco" />
+    <None Include="Service References\ServiceDeals\configuration91.svcinfo" />
+    <None Include="Service References\ServiceDeals\configuration.svcinfo" />
+    <None Include="Service References\ServiceDeals\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceFunctions\FunctionsService.disco" />
+    <None Include="Service References\ServiceFunctions\configuration91.svcinfo" />
+    <None Include="Service References\ServiceFunctions\configuration.svcinfo" />
+    <None Include="Service References\ServiceFunctions\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceFunds\FundsService.disco" />
+    <None Include="Service References\ServiceFunds\configuration91.svcinfo" />
+    <None Include="Service References\ServiceFunds\configuration.svcinfo" />
+    <None Include="Service References\ServiceFunds\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceInventory\InventoryService.disco" />
+    <None Include="Service References\ServiceInventory\configuration91.svcinfo" />
+    <None Include="Service References\ServiceInventory\configuration.svcinfo" />
+    <None Include="Service References\ServiceInventory\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceMarks\MarksService.disco" />
+    <None Include="Service References\ServiceMarks\configuration91.svcinfo" />
+    <None Include="Service References\ServiceMarks\configuration.svcinfo" />
+    <None Include="Service References\ServiceMarks\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServicePositions\PositionsService.disco" />
+    <None Include="Service References\ServicePositions\configuration91.svcinfo" />
+    <None Include="Service References\ServicePositions\configuration.svcinfo" />
+    <None Include="Service References\ServicePositions\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceRecalls\RecallsService.disco" />
+    <None Include="Service References\ServiceRecalls\configuration91.svcinfo" />
+    <None Include="Service References\ServiceRecalls\configuration.svcinfo" />
+    <None Include="Service References\ServiceRecalls\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceReturns\ReturnsService.disco" />
+    <None Include="Service References\ServiceReturns\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReturns\configuration.svcinfo" />
+    <None Include="Service References\ServiceReturns\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceSecMaster\SecMasterService.disco" />
+    <None Include="Service References\ServiceSecMaster\configuration91.svcinfo" />
+    <None Include="Service References\ServiceSecMaster\configuration.svcinfo" />
+    <None Include="Service References\ServiceSecMaster\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceSecurity\SecurityService.disco" />
+    <None Include="Service References\ServiceSecurity\configuration91.svcinfo" />
+    <None Include="Service References\ServiceSecurity\configuration.svcinfo" />
+    <None Include="Service References\ServiceSecurity\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceUserAdmin\UserAdminService.disco" />
+    <None Include="Service References\ServiceUserAdmin\configuration91.svcinfo" />
+    <None Include="Service References\ServiceUserAdmin\configuration.svcinfo" />
+    <None Include="Service References\ServiceUserAdmin\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\OutOfBrowserSettings.xml" />
+    <Content Include="Images\clusters_2_ritter.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ServiceReferences.ClientConfig" />
+    <None Include="Service References\ServiceAdmin\AdminService.wsdl" />
+    <None Include="Service References\ServiceAdmin\AdminService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceAdmin\AdminService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceBooks\BooksService.wsdl" />
+    <None Include="Service References\ServiceBooks\BooksService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceBooks\BooksService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceContracts\ContractsService.wsdl" />
+    <None Include="Service References\ServiceContracts\ContractsService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceContracts\ContractsService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceDeals\DealsService.wsdl" />
+    <None Include="Service References\ServiceDeals\DealsService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceDeals\DealsService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceFunctions\FunctionsService.wsdl" />
+    <None Include="Service References\ServiceFunctions\FunctionsService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceFunctions\FunctionsService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceFunds\FundsService.wsdl" />
+    <None Include="Service References\ServiceFunds\FundsService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceFunds\FundsService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceInventory\InventoryService.wsdl" />
+    <None Include="Service References\ServiceInventory\InventoryService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceInventory\InventoryService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceMarks\MarksService.wsdl" />
+    <None Include="Service References\ServiceMarks\MarksService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceMarks\MarksService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicePositions\PositionsService.wsdl" />
+    <None Include="Service References\ServicePositions\PositionsService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicePositions\PositionsService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceRecalls\RecallsService.wsdl" />
+    <None Include="Service References\ServiceRecalls\RecallsService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceRecalls\RecallsService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReturns\ReturnsService.wsdl" />
+    <None Include="Service References\ServiceReturns\ReturnsService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReturns\ReturnsService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceSecMaster\SecMasterService.wsdl" />
+    <None Include="Service References\ServiceSecMaster\SecMasterService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceSecMaster\SecMasterService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceSecurity\SecurityService.wsdl" />
+    <None Include="Service References\ServiceSecurity\SecurityService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceSecurity\SecurityService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceUserAdmin\UserAdminService.wsdl" />
+    <None Include="Service References\ServiceUserAdmin\UserAdminService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceUserAdmin\UserAdminService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Containers\" />
+    <Folder Include="Pages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Magnifier.png" />
+    <Resource Include="Images\Export-Excel.png" />
+    <Resource Include="Images\googleEarth.png" />
+    <Resource Include="Images\Accept.png">
+      <Link>Images\Accept.png</Link>
+    </Resource>
+    <Resource Include="Images\Global-Telecom.png">
+      <Link>Images\Global-Telecom.png</Link>
+    </Resource>
+    <Resource Include="Images\Green.png">
+      <Link>Images\Green.png</Link>
+    </Resource>
+    <Resource Include="Images\Helmet.png">
+      <Link>Images\Helmet.png</Link>
+    </Resource>
+    <Resource Include="Images\Money-Bag.png">
+      <Link>Images\Money-Bag.png</Link>
+    </Resource>
+    <Resource Include="Images\Money-Dollar.png">
+      <Link>Images\Money-Dollar.png</Link>
+    </Resource>
+    <Resource Include="Images\Money-Euro.png">
+      <Link>Images\Money-Euro.png</Link>
+    </Resource>
+    <Resource Include="Images\No-Commercial.png">
+      <Link>Images\No-Commercial.png</Link>
+    </Resource>
+    <Resource Include="Images\Qip-Invisible-For-All.png">
+      <Link>Images\Qip-Invisible-For-All.png</Link>
+    </Resource>
+    <Resource Include="Images\Qip-Invisible.png">
+      <Link>Images\Qip-Invisible.png</Link>
+    </Resource>
+    <Resource Include="Images\Rosette.png">
+      <Link>Images\Rosette.png</Link>
+    </Resource>
+    <Resource Include="Images\Safari-Browser.png">
+      <Link>Images\Safari-Browser.png</Link>
+    </Resource>
+    <Resource Include="Images\Scull.png">
+      <Link>Images\Scull.png</Link>
+    </Resource>
+    <Resource Include="Images\Soil-Layers.png">
+      <Link>Images\Soil-Layers.png</Link>
+    </Resource>
+    <Resource Include="Images\Status-Offline.png">
+      <Link>Images\Status-Offline.png</Link>
+    </Resource>
+    <Resource Include="Images\Status-Online.png">
+      <Link>Images\Status-Online.png</Link>
+    </Resource>
+    <Resource Include="Images\Stop.png">
+      <Link>Images\Stop.png</Link>
+    </Resource>
+    <Resource Include="Images\User-Silhouette.png">
+      <Link>Images\User-Silhouette.png</Link>
+    </Resource>
+    <Resource Include="Images\User.png">
+      <Link>Images\User.png</Link>
+    </Resource>
+    <Resource Include="Images\Vlc.png">
+      <Link>Images\Vlc.png</Link>
+    </Resource>
+    <Resource Include="Images\Weather-Sun.png">
+      <Link>Images\Weather-Sun.png</Link>
+    </Resource>
+    <Resource Include="Images\User-Silhouette.png" />
+    <Resource Include="Images\User.png" />
+    <Resource Include="Views\1311018847_e.png" />
+    <Resource Include="Views\1311019042_profile.png" />
+    <Resource Include="Views\1311019209_Globe.png" />
+    <Resource Include="Views\1311019224_Arrow-Right.png" />
+    <Resource Include="Views\InstallerApp.jpg" />
+    <Resource Include="Views\You-Gotta-See-This-icn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\WorldWideEncryption\WorldWideEncrypt.csproj">
+      <Project>{13FDC225-FD4B-40BF-ADDC-46E33BDB5118}</Project>
+      <Name>WorldWideEncrypt</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceAdmin\" />
+    <WCFMetadataStorage Include="Service References\ServiceBooks\" />
+    <WCFMetadataStorage Include="Service References\ServiceContracts\" />
+    <WCFMetadataStorage Include="Service References\ServiceDeals\" />
+    <WCFMetadataStorage Include="Service References\ServiceFunctions\" />
+    <WCFMetadataStorage Include="Service References\ServiceFunds\" />
+    <WCFMetadataStorage Include="Service References\ServiceInventory\" />
+    <WCFMetadataStorage Include="Service References\ServiceMarks\" />
+    <WCFMetadataStorage Include="Service References\ServicePositions\" />
+    <WCFMetadataStorage Include="Service References\ServiceRecalls\" />
+    <WCFMetadataStorage Include="Service References\ServiceReturns\" />
+    <WCFMetadataStorage Include="Service References\ServiceSecMaster\" />
+    <WCFMetadataStorage Include="Service References\ServiceSecurity\" />
+    <WCFMetadataStorage Include="Service References\ServiceUserAdmin\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	     Other similar extension points exist, see Microsoft.Common.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>

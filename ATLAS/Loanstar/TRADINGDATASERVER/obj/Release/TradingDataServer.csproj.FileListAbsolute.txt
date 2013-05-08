@@ -1,0 +1,12 @@
+C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVER\bin\Release\StockLoan.TradingDataServer.dll
+C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVER\bin\Release\StockLoan.Common.dll
+C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVER\bin\Release\StockLoan.MQSeries.dll
+C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVER\bin\Release\TgDatabaseFunctions.dll
+C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVER\bin\Release\TGTradeFormats.dll
+C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVER\bin\Release\TgDatabaseFunctions.pdb
+C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVER\bin\Release\TGTradeFormats.pdb
+C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVER\bin\Release\StockLoan.MQSeries.pdb
+C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVER\obj\Release\ResolveAssemblyReference.cache
+C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVER\obj\Release\StockLoan.TradingDataServer.dll
+C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVER\bin\Release\StockLoan.Transport.dll
+C:\_Dev\ATLAS\Loanstar\TRADINGDATASERVER\bin\Release\StockLoan.Transport.pdb

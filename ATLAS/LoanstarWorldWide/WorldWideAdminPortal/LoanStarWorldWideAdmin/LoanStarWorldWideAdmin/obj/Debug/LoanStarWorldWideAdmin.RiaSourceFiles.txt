@@ -1,0 +1,1 @@
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideAdminPortal\LoanStarWorldWideAdmin\LoanStarWorldWideAdmin.Web\LoanStarWorldWideAdmin.Web.csproj,634448498339086629,Properties\AssemblyInfo.cs,

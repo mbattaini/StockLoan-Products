@@ -1,0 +1,19 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+	mc:Ignorable="d"
+	x:Class="StockLoan_LocatesClient.LocateProcessingControl" Height="320" Width="400">
+
+	<Grid x:Name="LayoutRoot">
+		<Grid Margin="8" Style="{StaticResource TransparantLayoutGrid}" Loaded="Grid_Loaded">
+			<sdk:Label Height="16" Margin="32,56,32,0" Style="{StaticResource TransparantLabel}" VerticalAlignment="Top" Content="" FontSize="10.667" x:Name="LocatesProcessedLabel" d:LayoutOverrides="VerticalAlignment" HorizontalContentAlignment="Center" />
+			<sdk:Label Height="16" Margin="32,196,32,0" Style="{StaticResource TransparantLabel}" VerticalAlignment="Top" Content="" FontSize="10.667" x:Name="StatusLabel" />
+			<ProgressBar x:Name="LocatesProgressbar" Height="16" Margin="32,0,32,72" VerticalAlignment="Bottom"/>
+			<sdk:Label Height="16" Margin="32,96,32,0" Style="{StaticResource TransparantLabel}" VerticalAlignment="Top" Content="" FontSize="10.667" x:Name="LocatesTotalLabel" HorizontalContentAlignment="Center" d:LayoutOverrides="VerticalAlignment" />
+			<sdk:Label Height="16" Margin="32,76,32,0" Style="{StaticResource TransparantLabel}" VerticalAlignment="Top" Content="Out Of" FontSize="10.667" x:Name="StatusLabel_Copy2" HorizontalContentAlignment="Center" d:LayoutOverrides="VerticalAlignment" HorizontalAlignment="Center" />
+		</Grid>
+	</Grid>
+</UserControl>

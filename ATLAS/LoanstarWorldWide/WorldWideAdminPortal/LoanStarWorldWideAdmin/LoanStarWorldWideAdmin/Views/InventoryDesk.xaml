@@ -1,0 +1,56 @@
+﻿<sdk:Page	
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+	xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"	
+    xmlns:c1="clr-namespace:C1.Silverlight;assembly=C1.Silverlight" 
+    xmlns:c1grid="clr-namespace:C1.Silverlight.DataGrid;assembly=C1.Silverlight.DataGrid" 
+    xmlns:c1chart="clr-namespace:C1.Silverlight.Chart;assembly=C1.Silverlight.Chart"
+	xmlns:c1datetime="clr-namespace:C1.Silverlight.DateTimeEditors;assembly=C1.Silverlight.DateTimeEditors"
+	mc:Ignorable="d" 
+    
+    Title="LoanStar WorlwordWide Subscription Maintenance Page" Height="806" Width="905"
+	x:Class="DashApplication.InventoryDesk" 
+    
+    Style="{StaticResource PageStyle}">
+    
+	<Grid x:Name="LayoutRoot" >
+		<Grid x:Name="HeaderGrid" Margin="0,6,0,0" Height="43" VerticalAlignment="Top" HorizontalAlignment="Center" Width="797">
+			<Grid.Background>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="Black"/>
+					<GradientStop Color="#FF365E90" Offset="1"/>
+					<GradientStop Color="#FF1C3C64" Offset="0.009"/>
+				</LinearGradientBrush>
+			</Grid.Background>
+			<TextBlock HorizontalAlignment="Left" Margin="8,11,0,9" TextWrapping="Wrap" Text="PWI Equity Finance Inventory" Width="253" Foreground="White" FontSize="13.333" FontWeight="Bold"/>
+			<c1datetime:C1DateTimePicker x:Name="DeskDatePicker" Margin="0,10,4,8" Width="134" EditMode="Date" HorizontalAlignment="Right" d:LayoutOverrides="Width" DateTimeChanged="DeskDatePicker_DateTimeChanged"/>
+		</Grid>
+		<Grid x:Name="CaptionGrid" Margin="0,66,0,0" Height="33" VerticalAlignment="Top" HorizontalAlignment="Center" Width="797">
+			<Grid.Background>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="Black"/>
+					<GradientStop Color="#FF365E90" Offset="1"/>
+					<GradientStop Color="#FF1C3C64" Offset="0.009"/>
+				</LinearGradientBrush>
+			</Grid.Background>
+		</Grid>
+		<c1grid:C1DataGrid x:Name="DeskGrid" Margin="0,109,0,0" AutoGenerateColumns="False" HorizontalAlignment="Center" Width="797" CanUserEditRows="False" CanUserAddRows="False" Height="185" VerticalAlignment="Top" SelectionChanged="DeskGrid_SelectionChanged">
+			<c1grid:C1DataGrid.Columns>
+				<c1grid:DataGridBoundColumn Header="Desk" Binding="{Binding Desk}"/>
+				<c1grid:DataGridBoundColumn Header="Name" Binding="{Binding Firm}" Format="" GroupHeader="Name" x:Name="Name"/>
+				<c1grid:DataGridBoundColumn Header="Items" HorizontalAlignment="Right" AllowNull="True" Format="#,##0" Binding="{Binding ItemCount}" GroupHeader="Items" x:Name="Items"/>
+			</c1grid:C1DataGrid.Columns>
+		</c1grid:C1DataGrid>
+		<c1grid:C1DataGrid x:Name="InventoryGrid" Margin="0,298,0,8" AutoGenerateColumns="False" HorizontalAlignment="Center" Width="797" CanUserEditRows="False" CanUserAddRows="False">
+			<c1grid:C1DataGrid.Columns>
+				<c1grid:DataGridBoundColumn Header="Security ID" Binding="{Binding SecId}" GroupHeader="SecurityID" x:Name="SecurityID"/>
+				<c1grid:DataGridBoundColumn Header="Symbol" Binding="{Binding Symbol}" Format="" GroupHeader="Symbol" x:Name="Symbol"/>
+				<c1grid:DataGridBoundColumn Header="Scribe Time" HorizontalAlignment="Right" AllowNull="True" Format="yyyy-MM-dd hh.mm.ss" Binding="{Binding ScribeTime}" GroupHeader="Scribe Time" x:Name="ScribeTime"/>
+				<c1grid:DataGridBoundColumn Binding="{Binding Quantity}" Format="#,##0" Header="Quantity" GroupHeader="Quantity" HorizontalAlignment="Right"/>
+			</c1grid:C1DataGrid.Columns>
+		</c1grid:C1DataGrid>
+	</Grid>
+</sdk:Page>

@@ -1,0 +1,15 @@
+C:\_dev\Sendero 1.2\AresTest\bin\Debug\Anetics.AresTest.exe.config
+C:\_dev\Sendero 1.2\AresTest\bin\Debug\Anetics.AresTest.exe
+C:\_dev\Sendero 1.2\AresTest\bin\Debug\Anetics.AresTest.pdb
+C:\_dev\Sendero 1.2\AresTest\bin\Debug\Anetics.Ares.dll
+C:\_dev\Sendero 1.2\AresTest\bin\Debug\Anetics.Common.dll
+C:\_dev\Sendero 1.2\AresTest\bin\Debug\Anetics.Filer.dll
+C:\_dev\Sendero 1.2\AresTest\bin\Debug\C1.C1Excel.dll
+C:\_dev\Sendero 1.2\AresTest\bin\Debug\Rebex.Net.Ftp.dll
+C:\_dev\Sendero 1.2\AresTest\bin\Debug\Rebex.Net.ProxySocket.dll
+C:\_dev\Sendero 1.2\AresTest\bin\Debug\Anetics.Ares.pdb
+C:\_dev\Sendero 1.2\AresTest\bin\Debug\Anetics.Common.pdb
+C:\_dev\Sendero 1.2\AresTest\bin\Debug\Anetics.Filer.pdb
+C:\_dev\Sendero 1.2\AresTest\obj\Debug\AresTest.csprojResolveAssemblyReference.cache
+C:\_dev\Sendero 1.2\AresTest\obj\Debug\Anetics.AresTest.exe
+C:\_dev\Sendero 1.2\AresTest\obj\Debug\Anetics.AresTest.pdb

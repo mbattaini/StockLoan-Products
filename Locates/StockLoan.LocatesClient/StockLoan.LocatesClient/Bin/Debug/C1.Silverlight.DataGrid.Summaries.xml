@@ -1,0 +1,282 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Silverlight.DataGrid.Summaries</name>
+    </assembly>
+    <members>
+        <member name="T:C1.Silverlight.DataGrid.Summaries.C1GroupingWithSummariesBehavior">
+            <summary>
+            Makes each group row to show the summaries specified in the attached collection of aggregate functions.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.C1GroupingWithSummariesBehavior.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Silverlight.DataGrid.Summaries.C1GroupingWithSummariesBehavior"/> class.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.C1GroupingWithSummariesBehavior.GetGroupingWithSummariesBehavior(C1.Silverlight.DataGrid.C1DataGrid)">
+            <summary>
+            Gets the grouping with summaries behavior.
+            </summary>
+            <param name="datagrid">The data grid to which the behavior is applied.</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.C1GroupingWithSummariesBehavior.SetGroupingWithSummariesBehavior(C1.Silverlight.DataGrid.C1DataGrid,C1.Silverlight.DataGrid.Summaries.C1GroupingWithSummariesBehavior)">
+            <summary>
+            Sets the grouping with summaries behavior.
+            </summary>
+            <param name="datagrid">The data grid to which the behavior will be applied.</param>
+            <param name="value">The behavior.</param>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Summaries.C1GroupingWithSummariesBehavior.GroupingWithSummariesBehaviorProperty">
+            <summary>
+            Attached property used to group the data grid with summaries in each group row.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Summaries.DataGridAggregate">
+            <summary>
+            Represents an abstract aggregate function.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridAggregate.GetAggregateFunctions(C1.Silverlight.DataGrid.DataGridColumn)">
+            <summary>
+            Gets the collection of aggregate functions applied to the corresponding column.
+            </summary>
+            <param name="column">The column to which the aggregate functions are applied.</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridAggregate.SetAggregateFunctions(C1.Silverlight.DataGrid.DataGridColumn,C1.Silverlight.DataGrid.Summaries.DataGridAggregatesCollection)">
+            <summary>
+            Sets the collection of aggregate functions that will be applied to the column.
+            </summary>
+            <param name="column">The column to which the aggregate functions will be applied.</param>
+            <param name="aggregates">The collection of aggregate functions that will be applied to the column.</param>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Summaries.DataGridAggregate.AggregateFunctionsProperty">
+            <summary>
+            Collection of aggregate functions.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Summaries.DataGridAggregate.ResultTemplateProperty">
+            <summary>
+            Gets or sets the data template that will be applied to the result of the aggregate function.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridAggregate.Compute(C1.Silverlight.DataGrid.DataGridRowCollection,C1.Silverlight.DataGrid.DataGridColumn,System.Boolean)">
+            <summary>
+            Execute the aggregate function.
+            </summary>
+            <param name="rows">The rows collection to which the aggregate function is applied.</param>
+            <param name="column">The column to which the aggregate function is applied.</param>
+            <param name="recursive">if set to <c>true</c> the function must be applied to sub groups recursively.</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridAggregate.GetResult(C1.Silverlight.DataGrid.DataGridRowCollection,C1.Silverlight.DataGrid.DataGridColumn,System.Boolean)">
+            <summary>
+            Gets a <see cref="T:System.Windows.Controls.ContentPresenter"/> that contains the result of the aggregate function with the corresponding template applied.
+            </summary>
+            <param name="rows">The rows to which the aggregate function will be applied.</param>
+            <param name="column">The column to which the aggregate function is applied.</param>
+            <param name="recursive">if set to <c>true</c> the aggregate function will be applied recursively over the rows collection.</param>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridAggregate.GetDataTemplateFromString(System.String)">
+            <summary>
+            Gets a <seealso cref="T:System.Windows.DataTemplate"/> from a string formatted(Only "{0}" is accepted).
+            <example>"SUM = {0}"</example>
+            </summary>
+            <param name="stringFormat">The string format.</param>
+            <returns></returns>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Summaries.DataGridAggregate.ResultTemplate">
+            <summary>
+            Gets or sets the data template that will be applied to the result of the aggregate function.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Summaries.DataGridAggregateSum">
+            <summary>
+            Computes the sum of the items in a row collection
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridAggregateSum.Compute(C1.Silverlight.DataGrid.DataGridRowCollection,C1.Silverlight.DataGrid.DataGridColumn,System.Boolean)">
+            <summary>
+            Computes the sum of the values in the rows collection corresponding to the specified column.
+            </summary>
+            <param name="rows">The rows collection to which the aggregate function is applied.</param>
+            <param name="column">The column to which the aggregate function is applied.</param>
+            <param name="recursive">if set to <c>true</c> the function must be applied to sub groups recursively.</param>
+            <returns></returns>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Summaries.DataGridAggregateAvg">
+            <summary>
+            Computes the average of the items in a row collection
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridAggregateAvg.Compute(C1.Silverlight.DataGrid.DataGridRowCollection,C1.Silverlight.DataGrid.DataGridColumn,System.Boolean)">
+            <summary>
+            Computes the average of the values in the rows collection corresponding to the specified column.
+            </summary>
+            <param name="rows">The rows collection to which the aggregate function is applied.</param>
+            <param name="column">The column to which the aggregate function is applied.</param>
+            <param name="recursive">if set to <c>true</c> the function must be applied to sub groups recursively.</param>
+            <returns></returns>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Summaries.DataGridAggregateCount">
+            <summary>
+            Computes the count of the items in a row collection
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridAggregateCount.Compute(C1.Silverlight.DataGrid.DataGridRowCollection,C1.Silverlight.DataGrid.DataGridColumn,System.Boolean)">
+            <summary>
+            Computes the amount of elements in the rows collection.
+            </summary>
+            <param name="rows">The rows collection to which the aggregate function is applied.</param>
+            <param name="column">The column to which the aggregate function is applied.</param>
+            <param name="recursive">if set to <c>true</c> the function must be applied to sub groups recursively.</param>
+            <returns></returns>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Summaries.DataGridAggregateDistinct">
+            <summary>
+            Computes the count of distinct items among the items of a row collection
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridAggregateDistinct.Compute(C1.Silverlight.DataGrid.DataGridRowCollection,C1.Silverlight.DataGrid.DataGridColumn,System.Boolean)">
+            <summary>
+            Computes the amount of distinct values in the rows collection corresponding to the specified column.
+            </summary>
+            <param name="rows">The rows collection to which the aggregate function is applied.</param>
+            <param name="column">The column to which the aggregate function is applied.</param>
+            <param name="recursive">if set to <c>true</c> the function must be applied to sub groups recursively.</param>
+            <returns></returns>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Summaries.DataGridAggregateMin">
+            <summary>
+            Computes the minimum among the items of a row collection
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridAggregateMin.Compute(C1.Silverlight.DataGrid.DataGridRowCollection,C1.Silverlight.DataGrid.DataGridColumn,System.Boolean)">
+            <summary>
+            Computes the minimum value in the rows collection corresponding to the specified column.
+            </summary>
+            <param name="rows">The rows collection to which the aggregate function is applied.</param>
+            <param name="column">The column to which the aggregate function is applied.</param>
+            <param name="recursive">if set to <c>true</c> the function must be applied to sub groups recursively.</param>
+            <returns></returns>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Summaries.DataGridAggregateMax">
+            <summary>
+            Computes the maximum among the items of a row collection
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridAggregateMax.Compute(C1.Silverlight.DataGrid.DataGridRowCollection,C1.Silverlight.DataGrid.DataGridColumn,System.Boolean)">
+            <summary>
+            Computes the maximum value in the rows collection corresponding to the specified column.
+            </summary>
+            <param name="rows">The rows collection to which the aggregate function is applied.</param>
+            <param name="column">The column to which the aggregate function is applied.</param>
+            <param name="recursive">if set to <c>true</c> the function must be applied to sub groups recursively.</param>
+            <returns></returns>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Summaries.DataGridAggregatesCollection">
+            <summary>
+            Collection of aggregate functions. 
+            This collection is typically used in xaml to enclose the aggregate function declarations.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRow">
+            <summary>
+            Grouping row which displays summaries in the row itself in addition to the classic grouping title and expand/collapse button.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRow"/> class.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRow.OnLoaded">
+            <summary>
+            Called after the row is added to the row collection.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRow.OnUnloaded">
+            <summary>
+            Called before the row is removed from the row collection.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRow.HasCellPresenter(C1.Silverlight.DataGrid.DataGridColumn)">
+            <summary>
+            Determines whether should exists a cell for this row and the specified column.
+            </summary>
+            <param name="column">The column for which the cell presenter is
+            requested.</param>
+            <returns>
+            	<c>true</c> if should exists a cell for this row and the specified column; otherwise, <c>false</c>.
+            </returns>
+            <example>
+            In group rows with summary should exist cells for columns which specify an
+            aggregate function, but shouldn't be cells for the rest of the columns.
+            </example>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRowPresenter">
+            <summary>
+            Visual representation of a group row which contains summaries.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRowPresenter.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRowPresenter"/> class.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRowPresenter.LeadingMarginProperty">
+            <summary>
+            Gets or sets the margin between the first column and the rows headers, 
+            this space is only visible when there are grouped columns.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRowPresenter.Load">
+            <summary>
+            Called after a row presenter is added to the visual tree.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRowPresenter.Unload">
+            <summary>
+            Called before the visual element is removed from the visual tree.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Summaries.DataGridGroupWithSummaryRowPresenter.LeadingMargin">
+            <summary>
+            Gets or sets the margin between the first column and the rows headers, 
+            this space is only visible when there are grouped columns.
+            </summary>
+            <value>The leading margin.</value>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Summaries.DataGridSummaryRow">
+            <summary>
+            Display the summaries for each column that has aggregate functions attached.
+            This row can be seen inside a group or not, in all cases will compute the value of all the items recursively. 
+            e.g. if this row is added inside a group row the sum function will display 
+            the sum of all the items inside that group and the items that are in a sub group of it.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridSummaryRow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Silverlight.DataGrid.Summaries.DataGridSummaryRow"/> class.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridSummaryRow.HasCellPresenter(C1.Silverlight.DataGrid.DataGridColumn)">
+            <summary>
+            Returns true only if there are at least one aggregate function for the specified column
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridSummaryRow.CreateCellContent(C1.Silverlight.DataGrid.DataGridColumn)">
+            <summary>
+            Returns a stack panel as the content of the summary cell.
+            The result of each aggregate function will be added as an item in the stack panel.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Summaries.DataGridSummaryRow.BindCellContent(System.Windows.FrameworkElement,C1.Silverlight.DataGrid.DataGridColumn)">
+            <summary>
+            Adds one item for each aggregate function.
+            </summary>
+        </member>
+    </members>
+</doc>

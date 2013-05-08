@@ -1,0 +1,33 @@
+<UserControl 
+	Name="AddRoleWindow"
+	x:Class="LoanStarWorldWideAdmin.Views.RoleAddWindow"
+    	xmlns="http://schemas.microsoft.com/client/2007" 
+    	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
+        xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+
+    	Background="#FF374F5D">
+
+    <StackPanel x:Name="LayoutRoot" VerticalAlignment="Center" HorizontalAlignment="Center" Width="358" Height="158">
+        <Grid Height="157" x:Name="RoleAddGrid" VerticalAlignment="Top" HorizontalAlignment="Left" Width="358">
+            <Grid.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF325988" Offset="1" />
+                    <GradientStop Color="#FF1F3F68" />
+                </RadialGradientBrush>
+            </Grid.Background>
+            <sdk:Label Content="Name" FontSize="11" Height="25" FontWeight="Bold" Foreground="White" HorizontalContentAlignment="Right" Margin="16,12,0,120" Name="roleNameLabel" HorizontalAlignment="Left" Width="49" />
+            <TextBox x:Name="RoleNameTextBox" Margin="70,12,0,0" HorizontalAlignment="Left" Width="152" TabIndex="1" Height="25" VerticalAlignment="Top" />
+            <sdk:Label Content="Comments" FontSize="11" Height="25" FontWeight="Bold" Foreground="White" HorizontalContentAlignment="Right" Margin="6,43,0,89" Name="roleCommentLabel" HorizontalAlignment="Left" Width="59" />
+            <TextBox x:Name="RoleCommentTextBox" Margin="70,44,0,0" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" TabIndex="2"/>
+            <CheckBox Content="Delete Role" FontSize="11" FontWeight="Bold" Foreground="White" Height="16" HorizontalAlignment="Left" Margin="253,52,0,0" Name="DeleteRoleCheckBox" VerticalAlignment="Top" IsEnabled="False" TabIndex="3" />
+            <Button Content="Add Role" Height="28" HorizontalAlignment="Left" Margin="234,86,0,0" x:Name="AddRoleButton" VerticalAlignment="Top" Width="108" Click="AddRoleButton_Click"  TabIndex="5"></Button>
+            <sdk:Label Content="" FontSize="11" Height="25" FontWeight="Bold" Foreground="White" HorizontalContentAlignment="Right" Margin="6,123,0,9" Name="statusLabel" HorizontalAlignment="Left" Width="346" />
+        </Grid>
+
+    </StackPanel>
+
+</UserControl>
+
+
+
+

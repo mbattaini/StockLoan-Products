@@ -1,0 +1,8 @@
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\StockLoan.Central.dll
+bin\Debug\StockLoan.Central.pdb
+obj\Debug\StockLoan.Central.dll
+obj\Debug\StockLoan.Central.pdb
+bin\Release\StockLoan.Central.dll
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\StockLoan.Central.dll

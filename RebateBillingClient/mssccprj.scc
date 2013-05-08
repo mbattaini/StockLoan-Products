@@ -1,0 +1,17 @@
+SCC = This is a Source Code Control file
+
+[NorthStarClient.csproj]
+SCC_Aux_Path = "\\rspen001\SourceSafe\PensonSource"
+SCC_Project_Name = "$/SourceCode/C#/0 Development/Atlas/NorthStar/NorthStarClient", RPUFAAAA
+
+[NorthStarClient.sln]
+SCC_Aux_Path = "\\rspen001\SourceSafe\PensonSource"
+SCC_Project_Name = "$/SourceCode/C#/0 Development/Atlas/NorthStar/NorthStarClient", RPUFAAAA
+
+[RebateBillingClient.csproj]
+SCC_Aux_Path = "\\rspen001\SourceSafe\PensonSource"
+SCC_Project_Name = "$/SourceCode/C#/0 Development/Atlas/RebateBillingClient", ITKNAAAA
+
+[RebateBillingClient.sln]
+SCC_Aux_Path = "\\rspen001\SourceSafe\PensonSource"
+SCC_Project_Name = "$/SourceCode/C#/0 Development/Atlas/RebateBillingClient", ITKNAAAA

@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthStarServerTest", "NorthStarServerTest.csproj", "{D0C49175-6A93-477D-BC25-86F5274CDE52}"
+	ProjectSection(ProjectDependencies) = postProject
+		{51D7F048-02E1-49F8-BA33-743E3E5373F7} = {51D7F048-02E1-49F8-BA33-743E3E5373F7}
+		{71E6757A-332B-4A10-9606-3250CFA3B6E9} = {71E6757A-332B-4A10-9606-3250CFA3B6E9}
+		{E786D2F3-92ED-4585-BF67-50D0966F90EC} = {E786D2F3-92ED-4585-BF67-50D0966F90EC}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "..\..\Common\Common.csproj", "{51D7F048-02E1-49F8-BA33-743E3E5373F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthStar", "..\NorthStar\NorthStar.csproj", "{71E6757A-332B-4A10-9606-3250CFA3B6E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthStarServer", "..\NorthStarServer\NorthStarServer.csproj", "{E786D2F3-92ED-4585-BF67-50D0966F90EC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{71E6757A-332B-4A10-9606-3250CFA3B6E9} = {71E6757A-332B-4A10-9606-3250CFA3B6E9}
+		{51D7F048-02E1-49F8-BA33-743E3E5373F7} = {51D7F048-02E1-49F8-BA33-743E3E5373F7}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0C49175-6A93-477D-BC25-86F5274CDE52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0C49175-6A93-477D-BC25-86F5274CDE52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0C49175-6A93-477D-BC25-86F5274CDE52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0C49175-6A93-477D-BC25-86F5274CDE52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51D7F048-02E1-49F8-BA33-743E3E5373F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51D7F048-02E1-49F8-BA33-743E3E5373F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51D7F048-02E1-49F8-BA33-743E3E5373F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51D7F048-02E1-49F8-BA33-743E3E5373F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71E6757A-332B-4A10-9606-3250CFA3B6E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71E6757A-332B-4A10-9606-3250CFA3B6E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71E6757A-332B-4A10-9606-3250CFA3B6E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71E6757A-332B-4A10-9606-3250CFA3B6E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E786D2F3-92ED-4585-BF67-50D0966F90EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E786D2F3-92ED-4585-BF67-50D0966F90EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E786D2F3-92ED-4585-BF67-50D0966F90EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E786D2F3-92ED-4585-BF67-50D0966F90EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,5 @@
+C:\_dev\ATLAS\Golden\bin\Debug\StockLoan.Golden.dll
+C:\_dev\ATLAS\Golden\bin\Debug\StockLoan.Golden.pdb
+C:\_dev\ATLAS\Golden\obj\Debug\GOlden.csprojResolveAssemblyReference.cache
+C:\_dev\ATLAS\Golden\obj\Debug\StockLoan.Golden.dll
+C:\_dev\ATLAS\Golden\obj\Debug\StockLoan.Golden.pdb

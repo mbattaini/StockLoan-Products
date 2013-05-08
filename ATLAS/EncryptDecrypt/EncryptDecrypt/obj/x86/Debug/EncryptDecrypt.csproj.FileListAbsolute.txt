@@ -1,0 +1,9 @@
+C:\_Dev\ATLAS\EncryptDecrypt\EncryptDecrypt\bin\Debug\EncryptDecrypt.exe
+C:\_Dev\ATLAS\EncryptDecrypt\EncryptDecrypt\bin\Debug\EncryptDecrypt.pdb
+C:\_Dev\ATLAS\EncryptDecrypt\EncryptDecrypt\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\_Dev\ATLAS\EncryptDecrypt\EncryptDecrypt\obj\x86\Debug\EncryptDecrypt.Form1.resources
+C:\_Dev\ATLAS\EncryptDecrypt\EncryptDecrypt\obj\x86\Debug\EncryptDecrypt.Properties.Resources.resources
+C:\_Dev\ATLAS\EncryptDecrypt\EncryptDecrypt\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\_Dev\ATLAS\EncryptDecrypt\EncryptDecrypt\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\_Dev\ATLAS\EncryptDecrypt\EncryptDecrypt\obj\x86\Debug\EncryptDecrypt.exe
+C:\_Dev\ATLAS\EncryptDecrypt\EncryptDecrypt\obj\x86\Debug\EncryptDecrypt.pdb

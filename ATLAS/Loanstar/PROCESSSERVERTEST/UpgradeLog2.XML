@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ProcessServerTest">
+</Property><Property Name="Solution File" Value="C:\ATLAS\Loanstar\PROCESSSERVERTEST\ProcessServerTest.sln">
+</Property><Property Name="Date" Value="Monday, March 02, 2009">
+</Property><Property Name="Time" Value="10:16:16 AM">
+</Property><Property Name="Log Number" Value="2">
+</Property></Properties><Event ErrorLevel="1" Project="C:\ATLAS\Loanstar\PROCESS\Process.csproj" Source="..\PROCESS\Process.csproj" Description="MSB2014: The project-to-project reference with GUID {E80C0B0F-DA0D-4B72-85A2-183D96613175} cannot be converted because it is not listed in the file 'C:\ATLAS\Loanstar\PROCESSSERVERTEST\ProcessServerTest.sln'.">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\PROCESS\Process.csproj" Description="Project file successfully backed up as C:\ATLAS\Loanstar\PROCESSSERVERTEST\Backup1\Process.csproj">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\PROCESS\AssemblyInfo.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\PROCESSSERVERTEST\Backup1\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\PROCESS\BankLoan_Pledge_Release.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\PROCESSSERVERTEST\Backup1\BankLoan_Pledge_Release.cs">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\PROCESS\BankLoan_Pledge_Release_Datagram.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\PROCESSSERVERTEST\Backup1\BankLoan_Pledge_Release_Datagram.cs">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\PROCESS\Contract_Maintenance.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\PROCESSSERVERTEST\Backup1\Contract_Maintenance.cs">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\PROCESS\Debit_Data_Datagram.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\PROCESSSERVERTEST\Backup1\Debit_Data_Datagram.cs">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\PROCESS\Errors.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\PROCESSSERVERTEST\Backup1\Errors.cs">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\PROCESS\FullPartial_Return_AmountCallback.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\PROCESSSERVERTEST\Backup1\FullPartial_Return_AmountCallback.cs">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\PROCESS\General_System_Reject.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\PROCESSSERVERTEST\Backup1\General_System_Reject.cs">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\PROCESS\Lcor_Borrow_Order.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\PROCESSSERVERTEST\Backup1\Lcor_Borrow_Order.cs">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\PROCESS\Lcor_Borrow_Order_Executed_Datagram.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\PROCESSSERVERTEST\Backup1\Lcor_Borrow_Order_Executed_Datagram.cs">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\PROCESS\Lcor_Borrow_Order_Unexecuted_Datagram.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\PROCESSSERVERTEST\Backup1\Lcor_Borrow_Order_Unexecuted_Datagram.cs">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\PROCESS\Memo_Seg_Update.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\PROCESSSERVERTEST\Backup1\Memo_Seg_Update.cs">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\PROCESS\Memo_Seg_Update_Datagram.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\PROCESSSERVERTEST\Backup1\Memo_Seg_Update_Datagram.cs">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\PROCESS\NewContract_International_Add.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\PROCESSSERVERTEST\Backup1\NewContract_International_Add.cs">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\PROCESS\NewContract_SameDay_Add.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\PROCESSSERVERTEST\Backup1\NewContract_SameDay_Add.cs">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\PROCESS\ProfitCenter_Change.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\PROCESSSERVERTEST\Backup1\ProfitCenter_Change.cs">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\PROCESS\Rate_Change_BoxRate.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\PROCESSSERVERTEST\Backup1\Rate_Change_BoxRate.cs">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\PROCESS\Rate_Change_BoxToNegotiated.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\PROCESSSERVERTEST\Backup1\Rate_Change_BoxToNegotiated.cs">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\PROCESS\Rate_Change_NegotiatedRate.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\PROCESSSERVERTEST\Backup1\Rate_Change_NegotiatedRate.cs">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\PROCESS\Rate_Change_NegotiatedToBox.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\PROCESSSERVERTEST\Backup1\Rate_Change_NegotiatedToBox.cs">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\PROCESS\Rate_Change_PositiveNegative.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\PROCESSSERVERTEST\Backup1\Rate_Change_PositiveNegative.cs">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\PROCESS\Recall_Add.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\PROCESSSERVERTEST\Backup1\Recall_Add.cs">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\PROCESS\Recall_Delete.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\PROCESSSERVERTEST\Backup1\Recall_Delete.cs">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\PROCESS\Transaction_Data_Datagram.cs" Description="File successfully backed up as C:\ATLAS\Loanstar\PROCESSSERVERTEST\Backup1\Transaction_Data_Datagram.cs">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\PROCESS\Process.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Process" Source="..\PROCESS\Process.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\PROCESS\Process.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

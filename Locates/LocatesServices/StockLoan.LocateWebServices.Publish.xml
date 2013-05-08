@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="\\dalatlprd01\C$\LocatesWebServices\" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/StockLoan.LocatesWebServices.dll" publishTime="04/20/2012 06:40:43" />
+    <file relUrl="bin/StockLoan.LocatesWebServices.pdb" publishTime="04/20/2012 06:40:43" />
+    <file relUrl="bin/StockLoan.Common.dll" publishTime="04/20/2012 06:40:42" />
+    <file relUrl="Web.config" publishTime="04/20/2012 06:40:59" />
+    <file relUrl="crossdomain.xml" publishTime="06/29/2011 14:45:44" />
+    <file relUrl="clientaccesspolicy.xml" publishTime="06/29/2011 14:45:44" />
+    <file relUrl="bin/StockLoan.Common.pdb" publishTime="04/20/2012 06:40:42" />
+    <file relUrl="LocatesService.svc" publishTime="12/12/2011 13:43:07" />
+  </publishProfile>
+</publishData>

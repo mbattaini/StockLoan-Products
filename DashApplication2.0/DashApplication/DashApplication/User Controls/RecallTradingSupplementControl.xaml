@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="DashApplication.RecallTradingSupplementControl"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+    mc:Ignorable="d"
+    d:DesignHeight="300" Width="922">
+    
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <c1:C1ToolbarStrip Height="24" Background="#FFB2E0F4" Margin="10,5,10,0">
+            <sdk:Label  Content="Book Group:" Height="18" VerticalAlignment="Center" HorizontalAlignment="Right" Width="74" Style="{StaticResource LabelStyle}"/>
+            <c1:C1ComboBox x:Name="BookGroupCombo" Height="22" VerticalAlignment="Top" FontSize="10.667" HorizontalAlignment="Right" Width="89" Padding="0,0,0,0" />
+            <sdk:Label Content="Business Date:" Height="18" VerticalAlignment="Center" HorizontalAlignment="Right" Width="112" Style="{StaticResource LabelStyle}"/>
+            <c1:C1DateTimePicker x:Name="BizDatePicker" Width="134" EditMode="Date" HorizontalAlignment="Right" Margin="0" Padding="0" Style="{StaticResource C1BizDatePickerStyle}"/>
+<sdk:Label Content="Business Date (CNS Exception):" Height="18" VerticalAlignment="Center" HorizontalAlignment="Right" Width="170" Style="{StaticResource LabelStyle}"/>    
+            <c1:C1DateTimePicker x:Name="BizDatePickerPrior" Width="134" EditMode="Date" HorizontalAlignment="Right" Margin="0" Padding="0" Style="{StaticResource C1BizDatePickerStyle}"/>                    
+    <c1:C1ToolbarButton Content="Submit" HorizontalAlignment="Right" Width="75" Background="#00000000" Style="{StaticResource C1ToolBarButtonStyle}" Click="Button_Click"/>
+            <c1:C1ToolbarButton x:Name="ExportToExcelButton" ToolTipService.ToolTip="Export to Excel"  Style="{StaticResource C1ToolBarButtonStyle}" Margin="10,0,0,0" Click="ExportToExcelButton_Click">
+                <Image Width="22" Source="/DashApplication;component/Image/White/MB_0008_Excel.png"/>
+            </c1:C1ToolbarButton>
+        </c1:C1ToolbarStrip>
+        <c1:C1DataGrid
+    		x:Name="InfoGrid" CanUserRemoveRows="False" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" CanUserAddRows="False" CanUserEditRows="False" Margin="10,55,10,10" AutoGenerateColumns="False" ShowFluidMouseOver="True" CanUserFilter="True" FontSize="9.333" FrozenTopRowsCount="1" SelectionMode="SingleRow" AlternatingRowBackground="#FFB2E0F4" BorderBrush="#FFB0BDCA" HeaderBackground="#FFB2E0F4" GroupingPanelBackground="#FFB2E0F4" Style="{StaticResource C1GridStyle}">
+            <c1:C1DataGrid.TopRows>
+                <c1:DataGridFilterRow />
+            </c1:C1DataGrid.TopRows>
+            <c1:C1DataGrid.Columns>
+                <c1:DataGridBoundColumn Header="Security ID" Binding="{Binding SecId}" CanUserFilter="True" CanUserSort="True" FilterMemberPath="SecId" SortMemberPath="SecId" Width="100px"/>
+                <c1:DataGridBoundColumn Header="Symbol" Binding="{Binding Symbol}" CanUserFilter="True" CanUserSort="True" FilterMemberPath="Symbol" SortMemberPath="Symbol" Width="75px"/>
+                <c1:DataGridNumericColumn Header="CNS Exceptions" Binding="{Binding ClearingExceptions}" CanUserFilter="True" CanUserSort="True" FilterMemberPath="ClearingExceptions" SortMemberPath="ClearingExceptions" Format="#,##0" Width="120px" />                
+                <c1:DataGridBoundColumn Header="Comment" Binding="{Binding Comment}" CanUserFilter="True" CanUserSort="True" FilterMemberPath="Comment" SortMemberPath="Comment"/>
+                <c1:DataGridNumericColumn Header="BOD CNS FTD" Binding="{Binding BodClearingFtd}" CanUserFilter="True" CanUserSort="True" FilterMemberPath="BodClearingFtd" SortMemberPath="BodClearingFtd" Format="#,##0" Visibility="Visible"/>                
+                <c1:DataGridNumericColumn Header="Intraday CNS FTD" Binding="{Binding CurrentClearingFtd}" CanUserFilter="True" CanUserSort="True" FilterMemberPath="CurrentClearingFtd" SortMemberPath="CurrentClearingFtd" Format="#,##0" Visibility="Visible"/>                
+            </c1:C1DataGrid.Columns>
+        </c1:C1DataGrid>
+        <sdk:Label Height="18" Margin="10,32,10,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Content="T + 4 Exception Report" Style="{StaticResource LabelStyle}" Background="#FFB2E0F4"/>
+    </Grid>
+</UserControl>

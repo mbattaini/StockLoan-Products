@@ -1,0 +1,31 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "..\..\Common\Common.csproj", "{51D7F048-02E1-49F8-BA33-743E3E5373F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticDataService", "StaticDataService.csproj", "{8B0B50B7-05B9-4A9F-B1FC-8FFCC4611FFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticDataServer", "..\STATICDATASERVER\StaticDataServer.csproj", "{DB3234F9-404D-4297-8A94-35E9536F0348}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51D7F048-02E1-49F8-BA33-743E3E5373F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51D7F048-02E1-49F8-BA33-743E3E5373F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51D7F048-02E1-49F8-BA33-743E3E5373F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51D7F048-02E1-49F8-BA33-743E3E5373F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B0B50B7-05B9-4A9F-B1FC-8FFCC4611FFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B0B50B7-05B9-4A9F-B1FC-8FFCC4611FFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B0B50B7-05B9-4A9F-B1FC-8FFCC4611FFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B0B50B7-05B9-4A9F-B1FC-8FFCC4611FFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB3234F9-404D-4297-8A94-35E9536F0348}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB3234F9-404D-4297-8A94-35E9536F0348}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB3234F9-404D-4297-8A94-35E9536F0348}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB3234F9-404D-4297-8A94-35E9536F0348}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,113 @@
+﻿<sdk:Page 
+    Name="MaintainUsers"	
+    x:Class="LoanStarWorldWideAdmin.Views.AddUser"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation" 
+    xmlns:uriMapper="clr-namespace:System.Windows.Navigation;assembly=System.Windows.Controls.Navigation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+    xmlns:c1="clr-namespace:C1.Silverlight;assembly=C1.Silverlight" 
+    xmlns:c1tb="clr-namespace:C1.Silverlight.Toolbar;assembly=C1.Silverlight.Toolbar" 
+    xmlns:c1imaging="clr-namespace:C1.Silverlight.Imaging;assembly=C1.Silverlight.Imaging" 
+    xmlns:c1ext="clr-namespace:C1.Silverlight.Extended;assembly=C1.Silverlight.Extended" 
+    xmlns:c1grid="clr-namespace:C1.Silverlight.DataGrid;assembly=C1.Silverlight.DataGrid" 
+    xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+    mc:Ignorable="d" d:DesignHeight="713" d:DesignWidth="774"   
+    Style="{StaticResource PageStyle}" >
+
+    <Grid x:Name="LayoutRoot" Height="910" Width="769" VerticalAlignment="Top" HorizontalAlignment="Center">
+        <Grid Name="BodyGrid" Height="429" VerticalAlignment="Top" HorizontalAlignment="Center" Width="767">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" />
+                    <GradientStop Color="#FF365E90" Offset="1" />
+                    <GradientStop Color="#FF1C3C64" Offset="0.009" />
+                </LinearGradientBrush>
+            </Grid.Background>
+            
+            <sdk:Label x:Name="StatusLabel" Content="Status" FontSize="14" FontWeight="Bold" Foreground="DarkBlue" Height="30" BorderBrush="Blue" BorderThickness="2" 
+                   HorizontalContentAlignment="Center" VerticalAlignment="Top" />
+            <sdk:Label x:Name="UpdateLabel" Content="Message Bar" FontSize="12" FontWeight="Bold" Foreground="Red" Height="30" BorderBrush="Red" BorderThickness="2" 
+                   HorizontalContentAlignment="Center" Visibility="Collapsed" VerticalAlignment="Top" />
+            <sdk:Label x:Name="HeaderLabel" Content="Choose User and Book Group or New User | Complete Edits | Update to Finish" VerticalAlignment="Top"
+                FontSize="16" FontWeight="Bold" Foreground="White" Height="25" HorizontalContentAlignment="Center" Margin="0,27,0,0"  />
+            <sdk:GridSplitter x:Name="gridSplitter1" Height="3" HorizontalAlignment="Left" Margin="0,148,0,0" VerticalAlignment="Top" Width="767" />
+            <sdk:GridSplitter x:Name="gridSplitter2" Height="3" HorizontalAlignment="Left" Margin="0,292,0,0" VerticalAlignment="Top" Width="767" />
+            <RadioButton x:Name="NewUserRadioButton" Content="New User" Height="24" FontSize="16" FontWeight="Bold" Foreground="White" Margin="488,112,0,0" 
+        	           VerticalAlignment="Top" Padding="4,0,4,4" TabIndex="0" Checked="NewUserRadioButton_Checked" HorizontalAlignment="Left" />
+            <RadioButton x:Name="ExistUserRadioButton" Content="Existing User" Height="24" FontSize="16" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" Margin="487,77,0,0" 
+        	           VerticalAlignment="Top" Padding="4,0,4,4" TabIndex="1" Checked="ExistUserRadioButton_Checked" />
+            <sdk:Label x:Name="UserListLabel" Content="User" FontSize="11" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" HorizontalContentAlignment="Left" 
+            	       Margin="111,115,0,0" VerticalContentAlignment="Top" Width="33" Height="18" VerticalAlignment="Top" />
+            <sdk:Label x:Name="bookGroupLabel" Content="Book Group" FontSize="11" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" d:LayoutOverrides="HorizontalAlignment" 
+                       HorizontalContentAlignment="Left" Margin="71,78,0,0" VerticalContentAlignment="Top" Width="75" Height="20" VerticalAlignment="Top" />
+            <c1:C1ComboBox x:Name="UserListCombo" FontSize="10.667" Height="25" HorizontalAlignment="Left" Margin="147,112,0,0" VerticalAlignment="Top" Width="131" 
+                       TabIndex="2" SelectedItemChanged="UserListCombo_SelectedItemChanged" MouseLeftButtonUp="UserListCombo_MouseLeftButtonUp" />
+            <c1:C1ComboBox x:Name="BookGroupCombo" FontSize="10.667" Height="25" HorizontalAlignment="Left" Margin="147,76,0,0" VerticalAlignment="Top" Width="98" 
+            	       TabIndex="2" SelectedItemChanged="BookGroupCombo_SelectedItemChanged" MouseLeftButtonUp="BookGroupCombo_MouseLeftButtonUp" Loaded="BookGroupCombo_Loaded" d:LayoutOverrides="HorizontalAlignment" />
+            <Button x:Name="AddNewBookGroupButton" Content="Add New" Margin="264,76,0,0" RenderTransformOrigin="0.472,0.5" 
+        	           Height="26" VerticalAlignment="Top" TabIndex="8" HorizontalAlignment="Left" Width="54" />
+            <HyperlinkButton x:Name="AddNewBookGroupHyperlink" Content="" Height="25" HorizontalAlignment="Left" Margin="264,76,0,0" VerticalAlignment="Top" 
+        	           Width="54" Click="AddNewBookGroupHyperlink_Click" NavigateUri="/RolesMaintain" d:LayoutOverrides="HorizontalAlignment"  />
+            <sdk:Label x:Name="UserIdLabel" Content="User Id * " FontSize="11" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Margin="86,167,0,0" Width="63" Height="24" VerticalAlignment="Top" />
+            <TextBox x:Name="UserIdTextBox" Margin="147,166,0,0" TextWrapping="Wrap" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="135" d:LayoutOverrides="VerticalAlignment" TabIndex="0" MaxLength="50" />
+            <sdk:Label x:Name="label1" Content="Short Name" FontSize="11" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Margin="68,197,0,0" Width="77" Height="25" VerticalAlignment="Top" />
+            <TextBox x:Name="ShortNameTextBox" Height="23" HorizontalAlignment="Left" Margin="147,194,0,0" TabIndex="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" MaxLength="15" d:LayoutOverrides="HorizontalAlignment" />
+            <sdk:Label x:Name="PasswordLabel" Content="Temporary Password * " FontSize="11" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" 
+                       HorizontalContentAlignment="Left" Margin="2,221,0,0" Width="146" Height="25" VerticalAlignment="Top" />
+            <PasswordBox x:Name="PasswordTextBox" Height="23" Margin="147,223,0,0" VerticalAlignment="Top" Width="236" HorizontalAlignment="Left" TabIndex="1" MaxLength="50" />
+            <sdk:Label x:Name="label2" Content="E-Mail * " FontSize="11" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" 
+                       HorizontalContentAlignment="Left" Margin="438,169,0,0" Width="64" Height="25" VerticalAlignment="Top" />
+            <TextBox x:Name="UserEmailTextBox" Height="23" HorizontalAlignment="Left" Margin="492,166,0,0" TabIndex="0" TextWrapping="NoWrap" 
+                       VerticalAlignment="Top" Width="236" MaxLength="50" />
+            <sdk:Label x:Name="label3" Content="Title" FontSize="11" FontWeight="Bold" Foreground="White" Height="18" HorizontalAlignment="Left" HorizontalContentAlignment="Left" 
+                       Margin="460,199,0,0" VerticalAlignment="Top" Width="57" />
+            <TextBox x:Name="UserTitleTextBox" Height="23" HorizontalAlignment="Left" Margin="492,194,0,0" TabIndex="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" MaxLength="50" />
+            <CheckBox x:Name="ActiveCheckBox" Content="User Is Active" Height="18" FontSize="11" FontWeight="Bold" Foreground="White" Margin="605,228,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="113" Click="ActiveCheckBox_Click" Checked="ActiveCheckBox_Checked" />
+            <sdk:Label x:Name="CommentLabel" Content="Comments" FontSize="11" FontWeight="Bold" Foreground="White" Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Margin="72,254,0,0" VerticalAlignment="Top" Width="78" />
+            <TextBox x:Name="UserCommentsTextBox" Height="23" HorizontalAlignment="Left" Margin="147,252,0,0" MaxLength="50" TabIndex="0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="361" />
+            <CheckBox x:Name="DisabledCheckBox" Content="User Is Disabled" FontSize="11" FontWeight="Bold" Foreground="White" Height="18" Margin="606,257,0,0"  VerticalAlignment="Top" HorizontalAlignment="Left" Width="134" />
+            <sdk:Label x:Name="UserRoleLabel" Content="Roles for This User" FontSize="14" FontWeight="Bold" Foreground="White" HorizontalContentAlignment="Center" Margin="1,301,62,0" Height="28" VerticalAlignment="Top" Width="767" />
+            <sdk:Label x:Name="RoleLabel" Content="Select Role" FontSize="11" FontWeight="Bold" Foreground="White" HorizontalContentAlignment="Right" 
+                       Margin="70,330,0,0" VerticalContentAlignment="Center" Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Width="73" />
+            <c1:C1ComboBox x:Name="RoleCombo" FontSize="10.667" Height="25" HorizontalAlignment="Left" Margin="147,326,0,0" VerticalAlignment="Top" 
+        	           Width="98" TabIndex="2" SelectedItemChanged="RoleCombo_SelectedItemChanged" />
+            <Button x:Name="AddNewRoleButton" Content="Add New" HorizontalAlignment="Left" Margin="255,326,0,0" Width="54" RenderTransformOrigin="0.472,0.5" 
+                       Height="26" VerticalAlignment="Top" TabIndex="8" />
+            <HyperlinkButton x:Name="AddNewRoleHyperlink" Content="" Height="25" HorizontalAlignment="Left" Margin="255,327,0,0"  VerticalAlignment="Top" 
+                       Width="54" NavigateUri="/RolesMaintain" />
+            <sdk:Label x:Name="RoleCommentsLabel" Content="Comments" FontSize="11" FontWeight="Bold" Foreground="White" Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Left" 
+        	           Margin="76,362,0,0" VerticalAlignment="Top" Width="73" />
+            <TextBox x:Name="RoleCommentsTextBox" Height="23" HorizontalAlignment="Left" Margin="147,360,0,0" MaxLength="50" TabIndex="0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="361" />
+            <sdk:Label x:Name="FunctionLabel" Content="Select Function" FontSize="11" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" 
+                       HorizontalContentAlignment="Right" Margin="392,329,0,0" VerticalContentAlignment="Center" Width="101" Height="24" VerticalAlignment="Top" />
+            <c1:C1ComboBox x:Name="FunctionCombo" FontSize="10.667" Height="25" HorizontalAlignment="Left" Margin="492,326,0,0" VerticalAlignment="Top" 
+        	           Width="98" TabIndex="2" SelectedItemChanged="FunctionCombo_SelectedItemChanged"/>
+            <Button x:Name="AddNewFunctionButton" Content="Add New" HorizontalAlignment="Left" Margin="603,325,0,0" Width="54" RenderTransformOrigin="0.472,0.5" 
+                       Height="26" VerticalAlignment="Top" TabIndex="8" />
+            <HyperlinkButton x:Name="AddNewFunctionHyperlink" Content="" Height="25" Margin="603,326,0,0" VerticalAlignment="Top" NavigateUri="/RolesMaintain" HorizontalAlignment="Left" Width="54" />
+            <Button x:Name="CancelButton" Content="Cancel" HorizontalAlignment="Left" Margin="510,394,0,0" Width="104" RenderTransformOrigin="0.472,0.5" 
+        	           Click="CancelButton_Click"  Height="26" VerticalAlignment="Top" TabIndex="3" />
+            <Button x:Name="UpdateButton" Content="Update" HorizontalAlignment="Left" Margin="631,394,0,0" Width="104" RenderTransformOrigin="0.472,0.5" 
+        	           Click="UpdateButton_Click" Height="26" VerticalAlignment="Top" TabIndex="3" />
+            <sdk:Label Content="  (New Users Only)" FontSize="11" FontWeight="Bold" Foreground="White" Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Center"  Margin="2,235,0,0" Name="label4" VerticalAlignment="Top" Width="146" />
+        </Grid>
+
+        <c1grid:C1DataGrid x:Name="RolesGrid" Margin="0,433,0,0" AutoGenerateColumns="False" DeletingRows="RolesGrid_DeletingRows" CanUserEditRows="False" 
+                           CanUserAddRows="False" Height="264" VerticalAlignment="Top" DataContext="{Binding}" CanUserReorderColumns="False" CanUserResizeColumns="False" 
+                           CanUserResizeRows="False" CanUserSort="False" CanUserToggleDetails="False" ColumnHeaderClickAction="Select" HorizontalAlignment="Center" Width="767">
+        	<c1grid:C1DataGrid.Columns>
+        		<c1grid:DataGridBoundColumn Header="User ID" Binding="{Binding UserId}" Width="110"/>
+        		<c1grid:DataGridBoundColumn Header="Book Group" Binding="{Binding BookGroup}" Width="100"/>
+        		<c1grid:DataGridBoundColumn Header="Role" Binding="{Binding RoleName}" Width="100"/>
+        		<c1grid:DataGridBoundColumn Header="Function " Binding="{Binding FunctionPath}" Width="150"/>
+        		<c1grid:DataGridBoundColumn Header="Is Active"  HorizontalAlignment="Left" AllowNull="True" Binding="{Binding IsActive}" 
+        			Width="75" GroupHeader="IsActive" x:Name="IsActive"/>
+        		<c1grid:DataGridBoundColumn Header="Comments" HorizontalAlignment="Left" AllowNull="True" Binding="{Binding IsDisabled}" 
+        			Width="185" GroupHeader="Comments" x:Name="RoleComments"/>
+        	</c1grid:C1DataGrid.Columns>
+        </c1grid:C1DataGrid>
+
+    </Grid>
+</sdk:Page>

@@ -1,0 +1,3946 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Silverlight.Olap.4</name>
+    </assembly>
+    <members>
+        <member name="T:C1.Olap.C1OlapCollectionView">
+            <summary>
+            Class that acts like a <see cref="T:C1.Silverlight.Data.DataView"/> but implements a custom
+            sorting that preserves the position of the subtotal rows.
+            
+            NOTE:
+            This is for use in Silverlight and WPF only. In WinForms and ASP.NET,
+            use the C1OlapDataView instead.
+            </summary>
+        </member>
+        <member name="T:C1.Olap.Subtotal">
+            <summary>
+            Specifies the type of subtotal (aggregate) statistic to calculate.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.Subtotal.Sum">
+            <summary>
+            Gets the sum of a group.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.Subtotal.Count">
+            <summary>
+            Gets the number of values in a group.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.Subtotal.Average">
+            <summary>
+            Gets the average of a group.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.Subtotal.Max">
+            <summary>
+            Gets the maximum value in a group.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.Subtotal.Min">
+            <summary>
+            Gets the minimum value in a group.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.Subtotal.First">
+            <summary>
+            Gets the first value in a group.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.Subtotal.Last">
+            <summary>
+            Gets the last value in a group.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.Subtotal.Var">
+            <summary>
+            Gets the sample variance of a group.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.Subtotal.Std">
+            <summary>
+            Gets the sample standard deviation of a group.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.Subtotal.VarP">
+            <summary>
+            Gets the population variance of a group.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.Subtotal.StdP">
+            <summary>
+            Gets the population standard deviation of a group.
+            </summary>
+        </member>
+        <member name="T:C1.Olap.ShowTotals">
+            <summary>
+            Specifies whether to include totals in the output table.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.ShowTotals.None">
+            <summary>
+            Do not show any totals.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.ShowTotals.GrandTotals">
+            <summary>
+            Show grand totals.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.ShowTotals.Subtotals">
+            <summary>
+            Show subtotals and grand totals.
+            </summary>
+        </member>
+        <member name="T:C1.Olap.C1OlapEngine">
+            <summary>
+            Class that tabulates data in a <see cref="P:C1.Olap.C1OlapEngine.DataSource"/> according to lists of 
+            fields and creates a <see cref="T:C1.Silverlight.Data.DataTable"/> exposed by the <see cref="P:C1.Olap.C1OlapEngine.OlapTable"/> property.
+            </summary>
+        </member>
+        <member name="M:C1.Olap.C1OlapEngine.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Olap.C1OlapEngine"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Olap.C1OlapEngine.TransposeFields">
+            <summary>
+            Transposes the fields in the current view so rows become columns and
+            columns become rows.
+            </summary>
+        </member>
+        <member name="M:C1.Olap.C1OlapEngine.GetViewTitle">
+            <summary>
+            Gets a string with a title describing the current view.
+            </summary>
+            <returns>A string describing the current view.</returns>
+            <remarks>
+            The string includes the names of the fields currently active and 
+            can be used as a caption for charts and reports.
+            </remarks>
+        </member>
+        <member name="M:C1.Olap.C1OlapEngine.GetViewTitle(System.String,System.String)">
+            <summary>
+            Gets a localized string with a title describing the current view.
+            </summary>
+            <param name="by">String to use as a separator between value and row/column field names.</param>
+            <param name="and">String to use as a separator between row and column field names.</param>
+            <returns>A string describing the current view.</returns>
+            <remarks>
+            The string includes the names of the fields currently active and 
+            can be used as a caption for charts and reports.
+            </remarks>
+        </member>
+        <member name="M:C1.Olap.C1OlapEngine.BeginUpdate">
+            <summary>
+            Suspend automatic updates to the output table while defining the Olap view.
+            </summary>
+            <remarks>
+            The <see cref="T:C1.Olap.C1OlapEngine"/> updates the output table whenever the 
+            fields that make up the Olap view change. 
+            Before making multiple changes (such as defining a new Olap view), 
+            you can increase performance by enclosing the changes between calls to
+            <see cref="M:C1.Olap.C1OlapEngine.BeginUpdate"/> and <see cref="M:C1.Olap.C1OlapEngine.EndUpdate"/>.
+            </remarks>
+            <example>
+            The code below shows how to define a new Olap view efficiently by 
+            enclosing the changes between calls to <see cref="M:C1.Olap.C1OlapEngine.BeginUpdate"/> and 
+            <see cref="M:C1.Olap.C1OlapEngine.EndUpdate"/>.
+            <code>
+            // set data source (populates Fields list)
+            olap.DataSource = GetDataTable();
+            
+            // prevent updates while building Olap view
+            olap.BeginUpdate();
+            
+            // show countries in rows
+            olap.RowFields.Add("Country");
+            
+            // show categories and products in columns
+            olap.ColumnFields.Add("Category");
+            olap.ColumnFields.Add("Product");
+            
+            // show total sales in cells
+            olap.ValueFields.Add("Sales");
+            
+            // done defining the view
+            olap.EndUpdate();
+            </code>
+            </example>
+        </member>
+        <member name="M:C1.Olap.C1OlapEngine.EndUpdate">
+            <summary>
+            Restore automatic updates to the output table after the Olap view has been defined.
+            </summary>
+            <example>
+            For a complete example, please refer to the <see cref="M:C1.Olap.C1OlapEngine.BeginUpdate"/> method documentation.
+            </example>
+        </member>
+        <member name="M:C1.Olap.C1OlapEngine.OnUpdating(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:C1.Olap.C1OlapEngine.Updating"/> event.
+            </summary>
+            <param name="e"><see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:C1.Olap.C1OlapEngine.OnUpdated(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:C1.Olap.C1OlapEngine.Updated"/> event.
+            </summary>
+            <param name="e"><see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:C1.Olap.C1OlapEngine.Update">
+            <summary>
+            Causes the <see cref="T:C1.Olap.C1OlapEngine"/> to rebuild the output
+            table exposed by the <see cref="P:C1.Olap.C1OlapEngine.OlapTable"/> property.
+            </summary>
+        </member>
+        <member name="M:C1.Olap.C1OlapEngine.GetOlapKey(C1.Silverlight.Data.DataColumn)">
+            <summary>
+            Gets the <see cref="T:C1.Olap.C1OlapKey"/> associated with a <see cref="T:C1.Silverlight.Data.DataColumn"/>
+            on an Olap table.
+            </summary>
+            <param name="column"><see cref="T:C1.Silverlight.Data.DataColumn"/> for which the key should be retrieved.</param>
+            <returns>The <see cref="T:C1.Olap.C1OlapKey"/> associated with the <paramref name="column"/>.</returns>
+        </member>
+        <member name="M:C1.Olap.C1OlapEngine.GetOlapKey(C1.Silverlight.Data.DataRow)">
+            <summary>
+            Gets the <see cref="T:C1.Olap.C1OlapKey"/> associated with a <see cref="T:C1.Silverlight.Data.DataRow"/>
+            on an Olap table.
+            </summary>
+            <param name="row"><see cref="T:C1.Silverlight.Data.DataRow"/> for which the key should be retrieved.</param>
+            <returns>The <see cref="T:C1.Olap.C1OlapKey"/> associated with the <paramref name="row"/>.</returns>
+        </member>
+        <member name="M:C1.Olap.C1OlapEngine.GetDetail(C1.Silverlight.Data.DataRow,C1.Silverlight.Data.DataColumn)">
+            <summary>
+            Gets a list of objects in the raw data source that define the content 
+            of a specific cell in the output table exposed by the <see cref="P:C1.Olap.C1OlapEngine.OlapTable"/> 
+            property.
+            </summary>
+            <param name="row"><see cref="T:C1.Silverlight.Data.DataRow"/> that contains the Olap cell.</param>
+            <param name="column"><see cref="T:C1.Silverlight.Data.DataColumn"/> that contains the Olap cell.</param>
+            <returns>A list of objects in the raw data source that define the
+            content of the specified Olap cell.</returns>
+        </member>
+        <member name="M:C1.Olap.C1OlapEngine.GetDetail(C1.Silverlight.Data.DataRow,System.String)">
+            <summary>
+            Gets a list of objects in the raw data source that define the content 
+            of a specific cell in the output table exposed by the <see cref="P:C1.Olap.C1OlapEngine.OlapTable"/> 
+            property.
+            </summary>
+            <param name="row"><see cref="T:C1.Silverlight.Data.DataRow"/> that contains the Olap cell.</param>
+            <param name="columnName">Name of the column that contains the Olap cell.</param>
+            <returns>A list of objects in the raw data source that define the
+            content of the specified Olap cell.</returns>
+        </member>
+        <member name="M:C1.Olap.C1OlapEngine.WriteXml(System.Xml.XmlWriter)">
+            <summary>
+            Saves the current Olap view definition into an <see cref="T:System.Xml.XmlWriter"/>.
+            </summary>
+            <param name="xw"><see cref="T:System.Xml.XmlWriter"/> where the view definition will be saved.</param>
+        </member>
+        <member name="M:C1.Olap.C1OlapEngine.WriteXml(System.String)">
+            <summary>
+            Saves the current Olap view definition into an Xml file.
+            </summary>
+            <param name="path">Name of the file to save.</param>
+        </member>
+        <member name="M:C1.Olap.C1OlapEngine.ReadXml(System.Xml.XmlReader)">
+            <summary>
+            Reads an Olap view definition from an <see cref="T:System.Xml.XmlReader"/>.
+            </summary>
+            <param name="xr"><see cref="T:System.Xml.XmlReader"/> that contains the view definition.</param>
+        </member>
+        <member name="M:C1.Olap.C1OlapEngine.ReadXml(System.String)">
+            <summary>
+            Reads an Olap view definition from a file.
+            </summary>
+            <param name="path">Name of the file that contains the view definition.</param>
+        </member>
+        <member name="P:C1.Olap.C1OlapEngine.DataSource">
+            <summary>
+            Gets or sets the object that contains data to be analyzed.
+            </summary>
+        </member>
+        <member name="P:C1.Olap.C1OlapEngine.Fields">
+            <summary>
+            Gets the list of <see cref="T:C1.Olap.C1OlapField"/> objects exposed by 
+            the data source.
+            </summary>
+            <remarks>
+            <para>This list is created automatically whenever the <see cref="P:C1.Olap.C1OlapEngine.DataSource"/>
+            property is set.</para>
+            <para>Olap views are defined by copying fields from this list to
+            the lists that define the view: <see cref="P:C1.Olap.C1OlapEngine.ValueFields"/>, <see cref="P:C1.Olap.C1OlapEngine.RowFields"/>,
+            <see cref="P:C1.Olap.C1OlapEngine.ColumnFields"/>, and <see cref="P:C1.Olap.C1OlapEngine.FilterFields"/>.</para>
+            </remarks>
+            <example>
+            The code below assigns a data source to the Olap engine and then defines
+            a view by adding fields to each of the <see cref="P:C1.Olap.C1OlapEngine.RowFields"/>, 
+            <see cref="P:C1.Olap.C1OlapEngine.ColumnFields"/>, and <see cref="P:C1.Olap.C1OlapEngine.ValueFields"/> lists.
+            <code>
+            // set data source (populates Fields list)
+            olap.DataSource = GetDataTable();
+            
+            // prevent updates while building Olap view
+            olap.BeginUpdate();
+            
+            // show countries in rows
+            olap.RowFields.Add("Country");
+            
+            // show categories and products in columns
+            olap.ColumnFields.Add("Category");
+            olap.ColumnFields.Add("Product");
+            
+            // show total sales in cells
+            olap.ValueFields.Add("Sales");
+            
+            // done defining the view
+            olap.EndUpdate();
+            </code>
+            </example>
+        </member>
+        <member name="P:C1.Olap.C1OlapEngine.RowFields">
+            <summary>
+            Gets a list of <see cref="T:C1.Olap.C1OlapField"/> objects that define
+            the fields shown as rows in the output table.
+            </summary>
+            <remarks>
+            See the <see cref="P:C1.Olap.C1OlapEngine.Fields"/> property for details and an example.
+            </remarks>
+        </member>
+        <member name="P:C1.Olap.C1OlapEngine.ColumnFields">
+            <summary>
+            Gets a list of <see cref="T:C1.Olap.C1OlapField"/> objects that define
+            the fields shown as columns in the output table.
+            </summary>
+            <remarks>
+            See the <see cref="P:C1.Olap.C1OlapEngine.Fields"/> property for details and an example.
+            </remarks>
+        </member>
+        <member name="P:C1.Olap.C1OlapEngine.ValueFields">
+            <summary>
+            Gets a list of <see cref="T:C1.Olap.C1OlapField"/> objects that define
+            the fields summarized in the cells of the output table.
+            </summary>
+            <remarks>
+            See the <see cref="P:C1.Olap.C1OlapEngine.Fields"/> property for details and an example.
+            </remarks>
+        </member>
+        <member name="P:C1.Olap.C1OlapEngine.ValueField">
+            <summary>
+            Gets the first <see cref="T:C1.Olap.C1OlapField"/> in the <see cref="P:C1.Olap.C1OlapEngine.ValueFields"/>
+            collection, or null if the collection is empty.
+            </summary>
+        </member>
+        <member name="P:C1.Olap.C1OlapEngine.FilterFields">
+            <summary>
+            Gets a list of <see cref="T:C1.Olap.C1OlapField"/> objects that define
+            the fields used as filters for the output table.
+            </summary>
+            <remarks>
+            <para>Fields in this list do not appear in the output table,
+            but are still used for filtering the input data.</para>
+            <para>See the <see cref="P:C1.Olap.C1OlapEngine.Fields"/> property for details and an example.</para>
+            </remarks>
+        </member>
+        <member name="P:C1.Olap.C1OlapEngine.IsViewDefined">
+            <summary>
+            Gets a value that determines whether an Olap view is currently defined.
+            </summary>
+            <remarks>
+            An Olap view is defined if the <see cref="P:C1.Olap.C1OlapEngine.ValueFields"/> list is not
+            empty and either the <see cref="P:C1.Olap.C1OlapEngine.RowFields"/> or <see cref="P:C1.Olap.C1OlapEngine.ColumnFields"/>
+            lists are not empty.
+            </remarks>
+        </member>
+        <member name="P:C1.Olap.C1OlapEngine.ShowTotalsRows">
+            <summary>
+            Gets or sets a value that determines whether the Olap output table
+            should include rows containing subtotals or grand totals.
+            </summary>
+        </member>
+        <member name="P:C1.Olap.C1OlapEngine.ShowTotalsColumns">
+            <summary>
+            Gets or sets a value that determines whether the Olap output table
+            should include columns containing subtotals or grand totals.
+            </summary>
+        </member>
+        <member name="P:C1.Olap.C1OlapEngine.ShowKeyColumns">
+            <summary>
+            Gets or sets a value that determines whether the Olap output table
+            should include columns containing the row keys.
+            </summary>
+        </member>
+        <member name="P:C1.Olap.C1OlapEngine.ShowZeros">
+            <summary>
+            Gets or sets a value that determines whether the Olap output table
+            should use zeros to indicate missing values.
+            </summary>
+        </member>
+        <member name="P:C1.Olap.C1OlapEngine.OlapTable">
+            <summary>
+            Gets the <see cref="T:C1.Silverlight.Data.DataTable"/> that contains the output of
+            the Olap analysis.
+            </summary>
+        </member>
+        <member name="P:C1.Olap.C1OlapEngine.OlapDefaultView">
+            <summary>
+            Gets the default <see cref="T:System.ComponentModel.ICollectionView"/> that exposes the data 
+            in the <see cref="P:C1.Olap.C1OlapEngine.OlapTable"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Olap.C1OlapEngine.ItemCount">
+            <summary>
+            Gets the number of elements that in the data source.
+            </summary>
+        </member>
+        <member name="P:C1.Olap.C1OlapEngine.FilteredItemCount">
+            <summary>
+            Gets the number of elements that are represented in the current view.
+            </summary>
+            <remarks>
+            If no filters are active, this is the number of elements in the data source.
+            If filters are active, only elements that pass the filter are included in
+            the count.
+            </remarks>
+        </member>
+        <member name="E:C1.Olap.C1OlapEngine.Updating">
+            <summary>
+            Fires before the <see cref="T:C1.Olap.C1OlapEngine"/> starts updating 
+            the output <see cref="P:C1.Olap.C1OlapEngine.OlapTable"/>.
+            </summary>
+        </member>
+        <member name="E:C1.Olap.C1OlapEngine.Updated">
+            <summary>
+            Fires after the <see cref="T:C1.Olap.C1OlapEngine"/> finishes the Olap analysis 
+            and the output <see cref="P:C1.Olap.C1OlapEngine.OlapTable"/> is ready.
+            </summary>
+        </member>
+        <member name="P:C1.Olap.C1OlapEngine.ViewDefinition">
+            <summary>
+            Gets or sets the Olap view definition as an Xml string.
+            </summary>
+            <remarks>
+            This property is typically used to persist the current Olap
+            view as an application setting.
+            </remarks>
+            <example>
+            <para>The code below shows how to save an Olap view as an 
+            application setting when the application ends and how to 
+            load it when the application starts.</para>
+            <para>The code assumes that the application settings contain a 
+            string property called "OlapView".</para>
+            <code>
+            public Form1()
+            {
+              InitializeComponent();
+            
+              // load default view
+              C1OlapEngine olap = GetOlapEngine();
+              string view = Properties.Settings.Default.OlapView;
+              if (!string.IsNullOrEmpty(view))
+              {
+                olap.ViewDefinition = Properties.Settings.Default.OlapView;
+              }
+            }
+            protected override void OnClosed(EventArgs e)
+            {
+              // save current view as default
+              C1OlapEngine olap = GetOlapEngine();
+              Properties.Settings.Default.OlapView = olap.ViewDefinition;
+              Properties.Settings.Default.Save();
+            }
+            </code>
+            </example>
+        </member>
+        <member name="T:C1.Olap.C1OlapField">
+            <summary>
+            Represents a property of the items in the data source.
+            </summary>
+            <remarks>
+            <para><see cref="T:C1.Olap.C1OlapField"/> objects represent 'dimensions' in 
+            the output Olap table.</para>
+            <para>Each row and column on the output table is uniquely identified 
+            by a <see cref="T:C1.Olap.C1OlapKey"/> object. These objects contain a list
+            of <see cref="T:C1.Olap.C1OlapField"/> objects and specific values.</para>
+            </remarks>
+        </member>
+        <member name="M:C1.Olap.C1OlapField.GetUniqueValues">
+            <summary>
+            Gets a list of unique values found in the data source for this field.
+            </summary>
+            <returns>A list of unique values found in the data source for this field.</returns>
+            <remarks>
+            This list is updated whenever the <see cref="P:C1.Olap.C1OlapField.OlapEngine"/> traverses
+            the data to build the output table. Calling this method before the engine
+            builds the output table returns an empty collection.
+            </remarks>
+        </member>
+        <member name="M:C1.Olap.C1OlapField.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Raises the <see cref="E:C1.Olap.C1OlapField.PropertyChanged"/> event.
+            </summary>
+            <param name="e"><see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:C1.Olap.C1OlapField.WriteXml(System.Xml.XmlWriter)">
+            <summary>
+            Saves the field into an <see cref="T:System.Xml.XmlWriter"/>.
+            </summary>
+            <param name="xw"><see cref="T:System.Xml.XmlWriter"/> where the field will be saved.</param>
+        </member>
+        <member name="M:C1.Olap.C1OlapField.ReadXml(System.Xml.XmlReader)">
+            <summary>
+            Reads the field from an <see cref="T:System.Xml.XmlReader"/>.
+            </summary>
+            <param name="xr"><see cref="T:System.Xml.XmlReader"/> that contains the field information.</param>
+        </member>
+        <member name="P:C1.Olap.C1OlapField.Name">
+            <summary>
+            Gets the name of the field source column.
+            </summary>
+        </member>
+        <member name="P:C1.Olap.C1OlapField.Caption">
+            <summary>
+            Gets or sets a string to be displayed in the user interface.
+            </summary>
+            <remarks>
+            If this property is set to null or to an empty string, the <see cref="P:C1.Olap.C1OlapField.Name"/>
+            property will be used instead.
+            </remarks>
+        </member>
+        <member name="P:C1.Olap.C1OlapField.Width">
+            <summary>
+            Gets or sets the preferred width to be used for showing the field in the user interface.
+            </summary>
+            <remarks>
+            Setting this property to zero or to a negative value disables it. Setting it
+            to a positive value causes any bound grid controls to use the value when 
+            setting column widths.
+            </remarks>
+        </member>
+        <member name="P:C1.Olap.C1OlapField.Type">
+            <summary>
+            Gets the type of the field source column.
+            </summary>
+        </member>
+        <member name="P:C1.Olap.C1OlapField.Subtotal">
+            <summary>
+            Gets or sets the type of subtotal to use when combining field values.
+            </summary>
+        </member>
+        <member name="P:C1.Olap.C1OlapField.WeightField">
+            <summary>
+            Gets or sets the <see cref="T:C1.Olap.C1OlapField"/> used as a weight for calculating
+            subtotals on this field.
+            </summary>
+            <remarks>
+            <para>If this property is set to null, all values are assumed to have weight one.</para>
+            <para>This property allows you to calculate weighted averages and totals. 
+            For example, if the data contains a 'Quantity' field and a 'Price' field,
+            you could use the 'Price' field as a value field and the 'Quantity' field as
+            a weight. The output would contain a weighted average of the data.</para>
+            </remarks>
+        </member>
+        <member name="P:C1.Olap.C1OlapField.Format">
+            <summary>
+            Gets or sets the format to use when displaying field values.
+            </summary>
+        </member>
+        <member name="P:C1.Olap.C1OlapField.Style">
+            <summary>
+            Gets the <see cref="T:C1.Olap.C1OlapFieldStyle"/> used to display the field values on the grid.
+            </summary>
+            <remarks>
+            <para>This property allows you to assign style properties to a specific <see cref="T:C1.Olap.C1OlapField"/>,
+            customizing the way the field values are displayed to the user.</para>
+            <para>Customizing the appearance of a field can be useful in views that contain
+            multiple value fields.</para>
+            <para>For example, the code below creates a view with two value fields and gives one
+            of the fields a green background:</para>
+            <code>
+            // create view
+            var olap = this.c1OlapPage1.OlapEngine;
+            olap.RowFields.Add("ProductName");
+            olap.ColumnFields.Add("Country");
+            olap.ValueFields.MaxItems = 2;
+            olap.ValueFields.Add("ExtendedPrice", "Freight");
+            
+            // give the "ExtendedPrice" field a green background
+            var f = olap.Fields["ExtendedPrice"];
+            f.Style.BackColor = Color.FromArgb(240, 255, 240);
+            </code>
+            <para>You can also create conditional styles using the <see cref="P:C1.Olap.C1OlapField.StyleHigh"/>
+            and <see cref="P:C1.Olap.C1OlapField.StyleLow"/> properties.</para>
+            </remarks>
+        </member>
+        <member name="P:C1.Olap.C1OlapField.StyleHigh">
+            <summary>
+            Gets the <see cref="T:C1.Olap.C1OlapConditionalFieldStyle"/> used to display high values.
+            </summary>
+            <remarks>
+            <para>This property allows you to apply conditional formatting to a field, making
+            certain values stand out when displayed on to the user.</para>
+            <para>For example, the code below shows values in the top 10% range in bold
+            with a green background and values in the bottom 10% range in bold with a
+            red background:</para>
+            <code>
+            // apply formatting to all value fields
+            var olap = this.c1OlapPage1.OlapEngine;
+            foreach (var f in olap.ValueFields)
+            {
+              // show top 10% values in green, bold
+              var sh = f.StyleHigh;
+              sh.ConditionType = C1.Olap.ConditionType.Percentage;
+              sh.Value = .9;
+              sh.BackColor = Color.FromArgb(210, 255, 210);
+              sh.FontBold = true;
+              
+              // show bottom 10% values in red, bold
+              var sl = f.StyleLow;
+              sl.ConditionType = C1.Olap.ConditionType.Percentage;
+              sl.Value = .1;
+              sl.BackColor = Color.FromArgb(255, 210, 210);
+              sl.FontBold = true;
+            }
+            </code>
+            </remarks>
+        </member>
+        <member name="P:C1.Olap.C1OlapField.StyleLow">
+            <summary>
+            Gets the <see cref="T:C1.Olap.C1OlapConditionalFieldStyle"/> used to display low values.
+            </summary>
+            <remarks>
+            <para>This property allows you to apply conditional formatting to a field, making
+            certain values stand out when displayed to the user.</para>
+            <para>For an example, see the <see cref="P:C1.Olap.C1OlapField.StyleHigh"/> property.</para>
+            </remarks>
+        </member>
+        <member name="P:C1.Olap.C1OlapField.Filter">
+            <summary>
+            Gets the filter used to select field values.
+            </summary>
+        </member>
+        <member name="P:C1.Olap.C1OlapField.IsActive">
+            <summary>
+            Gets or sets whether this field is active in the Olap view.
+            </summary>
+            <remarks>
+            Setting this property to true causes the field to be added to the
+            <see cref="P:C1.Olap.C1OlapEngine.RowFields"/> list of the parent <see cref="T:C1.Olap.C1OlapEngine"/>.
+            </remarks>
+        </member>
+        <member name="P:C1.Olap.C1OlapField.OlapEngine">
+            <summary>
+            Gets the <see cref="T:C1.Olap.C1OlapEngine"/> that owns this field.
+            </summary>
+        </member>
+        <member name="P:C1.Olap.C1OlapField.ParentList">
+            <summary>
+            Gets the <see cref="T:C1.Olap.C1OlapFieldList"/> that contains this field.
+            </summary>
+        </member>
+        <member name="E:C1.Olap.C1OlapField.PropertyChanged">
+            <summary>
+            Fires when a property changes.
+            </summary>
+        </member>
+        <member name="T:C1.Olap.C1OlapFieldList">
+            <summary>
+            Represents a list of <see cref="T:C1.Olap.C1OlapField"/> objects.
+            </summary>
+        </member>
+        <member name="T:C1.Olap.BindingList`1">
+            <summary>
+            Provides a generic collection that supports data binding.
+            </summary>
+            <typeparam name="T">Type of element in the collection.</typeparam>
+        </member>
+        <member name="T:C1.Olap.IBindingList">
+            <summary>
+            Provides the features required to support both complex and simple 
+            scenarios when binding to a data source.
+            </summary>
+        </member>
+        <member name="E:C1.Olap.IBindingList.ListChanged">
+            <summary>
+            Occurs when the list changes or an item in the list changes.
+            </summary>
+        </member>
+        <member name="M:C1.Olap.BindingList`1.OnCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Overridden to raise the <see cref="E:C1.Olap.BindingList`1.ListChanged"/> event.
+            </summary>
+            <param name="e"><see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:C1.Olap.BindingList`1.OnListChanged(C1.Olap.ListChangedEventArgs)">
+            <summary>
+            Raises the <see cref="E:C1.Olap.BindingList`1.ListChanged"/> event.
+            </summary>
+            <param name="e"><see cref="T:C1.Olap.ListChangedEventArgs"/> that provides the event data.</param>
+        </member>
+        <member name="E:C1.Olap.BindingList`1.ListChanged">
+            <summary>
+            Occurs when the list changes or an item in the list changes.
+            </summary>
+        </member>
+        <member name="M:C1.Olap.C1OlapFieldList.Add(System.String[])">
+            <summary>
+            Adds an existing <see cref="T:C1.Olap.C1OlapField"/> to the list.
+            </summary>
+            <param name="fieldNames">One or more field names to add to the list.</param>
+        </member>
+        <member name="M:C1.Olap.C1OlapFieldList.Insert(System.Int32,System.String)">
+            <summary>
+            Inserts a <see cref="T:C1.Olap.C1OlapField"/> at a specified position in the list.
+            </summary>
+            <param name="index">Position where the field will be inserted.</param>
+            <param name="fieldName">Name of the existing <see cref="T:C1.Olap.C1OlapField"/>,</param>
+        </member>
+        <member name="M:C1.Olap.C1OlapFieldList.IndexOf(System.String)">
+            <summary>
+            Gets the position of a given <see cref="T:C1.Olap.C1OlapField"/> in the list.
+            </summary>
+            <param name="fieldName">Name of the field to look for.</param>
+            <returns>The index of the field in the list, or -1 if the field is
+            not a member of the list.</returns>
+        </member>
+        <member name="M:C1.Olap.C1OlapFieldList.InsertItem(System.Int32,C1.Olap.C1OlapField)">
+            <summary>
+            Inserts an <see cref="T:C1.Olap.C1OlapField"/> at a specified position in the list.
+            </summary>
+            <param name="index">Position where the field will be inserted.</param>
+            <param name="item"><see cref="T:C1.Olap.C1OlapField"/> to add to the list.</param>
+        </member>
+        <member name="M:C1.Olap.C1OlapFieldList.RemoveItem(System.Int32)">
+            <summary>
+            Removes an item from the list.
+            </summary>
+            <param name="index">Index of the item to remove from the list.</param>
+        </member>
+        <member name="M:C1.Olap.C1OlapFieldList.ClearItems">
+            <summary>
+            Removes all items from the list.
+            </summary>
+        </member>
+        <member name="M:C1.Olap.C1OlapFieldList.SetItem(System.Int32,C1.Olap.C1OlapField)">
+            <summary>
+            Replaces the item at a specified position.
+            </summary>
+            <param name="index">Index of the item to replace.</param>
+            <param name="item">New value for the item at the specified index.</param>
+        </member>
+        <member name="P:C1.Olap.C1OlapFieldList.IsReadOnly">
+            <summary>
+            Gets or sets whether this <see cref="T:C1.Olap.C1OlapFieldList"/> is read-only.
+            </summary>
+        </member>
+        <member name="P:C1.Olap.C1OlapFieldList.MaxItems">
+            <summary>
+            Gets or sets the maximum number of fields allowed in this list.
+            </summary>
+            <remarks>
+            Negative values mean the list can have any number of items.
+            </remarks>
+        </member>
+        <member name="P:C1.Olap.C1OlapFieldList.Item(System.String)">
+            <summary>
+            Gets a <see cref="T:C1.Olap.C1OlapField"/> by name.
+            </summary>
+            <param name="fieldName">Name of the field to retrieve.</param>
+            <returns>The requested <see cref="T:C1.Olap.C1OlapField"/>.</returns>
+            <remarks>
+            If the list does not contain a field with the specified name,
+            an exception is thrown.
+            </remarks>
+        </member>
+        <member name="T:C1.Olap.C1OlapFieldStyle">
+            <summary>
+            Style used to display field values to the user.
+            </summary>
+        </member>
+        <member name="M:C1.Olap.C1OlapFieldStyle.#ctor(C1.Olap.C1OlapField)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Olap.C1OlapFieldStyle"/>.
+            </summary>
+            <param name="field"><see cref="T:C1.Olap.C1OlapField"/> that owns this style.</param>
+        </member>
+        <member name="M:C1.Olap.C1OlapFieldStyle.Clear">
+            <summary>
+            Clears this style.
+            </summary>
+        </member>
+        <member name="M:C1.Olap.C1OlapFieldStyle.WriteXml(System.Xml.XmlWriter,System.String)">
+            <summary>
+            Saves the style into an <see cref="T:System.Xml.XmlWriter"/>.
+            </summary>
+            <param name="xw"><see cref="T:System.Xml.XmlWriter"/> where the style will be saved.</param>
+            <param name="styleName"><see cref="T:System.Xml.XmlWriter"/> name of the style to be saved.</param>
+        </member>
+        <member name="M:C1.Olap.C1OlapFieldStyle.ReadXml(System.Xml.XmlReader)">
+            <summary>
+            Reads the style from an <see cref="T:System.Xml.XmlReader"/>.
+            </summary>
+            <param name="xr"><see cref="T:System.Xml.XmlReader"/> that contains the style information.</param>
+        </member>
+        <member name="M:C1.Olap.C1OlapFieldStyle.OnPropertyChanged">
+            <summary>
+            Notifies the parent field that the style has changed.
+            </summary>
+        </member>
+        <member name="M:C1.Olap.C1OlapFieldStyle.SaveAttributes(System.Xml.XmlWriter)">
+            <summary>
+            Saves the style properties to an <see cref="T:System.Xml.XmlWriter"/>.
+            </summary>
+            <param name="xw"><see cref="T:System.Xml.XmlWriter"/> where the style properties will be saved.</param>
+        </member>
+        <member name="M:C1.Olap.C1OlapFieldStyle.LoadAttributes(System.Xml.XmlReader)">
+            <summary>
+            Loads the style properties from an <see cref="T:System.Xml.XmlReader"/>.
+            </summary>
+            <param name="xr"><see cref="T:System.Xml.XmlReader"/> that contains the style properties.</param>
+        </member>
+        <member name="P:C1.Olap.C1OlapFieldStyle.BackColor">
+            <summary>
+            Gets or sets the color used to paint the background of cells in this field.
+            </summary>
+        </member>
+        <member name="P:C1.Olap.C1OlapFieldStyle.ForeColor">
+            <summary>
+            Gets or sets the color used to paint the content of cells in this field.
+            </summary>
+        </member>
+        <member name="P:C1.Olap.C1OlapFieldStyle.FontBold">
+            <summary>
+            Gets or sets a value that determines whether cells in this field should be shown in bold.
+            </summary>
+        </member>
+        <member name="P:C1.Olap.C1OlapFieldStyle.Field">
+            <summary>
+            Gets the <see cref="T:C1.Olap.C1OlapField"/> that owns this style.
+            </summary>
+        </member>
+        <member name="P:C1.Olap.C1OlapFieldStyle.IsEmpty">
+            <summary>
+            Gets a value that indicates whether this style is empty.
+            </summary>
+        </member>
+        <member name="T:C1.Olap.ConditionType">
+            <summary>
+            Specifies the type of comparison to be used when applying a
+            <see cref="T:C1.Olap.C1OlapConditionalFieldStyle"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.ConditionType.NotSet">
+            <summary>
+            Disable conditional formatting for this style.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.ConditionType.Absolute">
+            <summary>
+            Compare field values to the specified absolute value.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.ConditionType.Percentage">
+            <summary>
+            Compare field values to the specified value as a percentage.
+            </summary>
+        </member>
+        <member name="T:C1.Olap.C1OlapConditionalFieldStyle">
+            <summary>
+            Conditional style applied to cells depending on their value.
+            </summary>
+        </member>
+        <member name="M:C1.Olap.C1OlapConditionalFieldStyle.#ctor(C1.Olap.C1OlapField,System.Boolean)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Olap.C1OlapFieldStyle"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Olap.C1OlapConditionalFieldStyle.AppliesTo(System.Double,System.Double,System.Double)">
+            <summary>
+             Determines whether this style should be applied to a given value.
+            </summary>
+            <param name="value">Value to test for.</param>
+            <param name="min">Lower value of the value range to use with conditional formatting.</param>
+            <param name="max">Upper value of the value range to use with conditional formatting.</param>
+        </member>
+        <member name="M:C1.Olap.C1OlapConditionalFieldStyle.SaveAttributes(System.Xml.XmlWriter)">
+            <summary>
+            Saves the style properties to an <see cref="T:System.Xml.XmlWriter"/>.
+            </summary>
+            <param name="xw"><see cref="T:System.Xml.XmlWriter"/> where the style properties will be saved.</param>
+        </member>
+        <member name="M:C1.Olap.C1OlapConditionalFieldStyle.LoadAttributes(System.Xml.XmlReader)">
+            <summary>
+            Reads the style from an <see cref="T:System.Xml.XmlReader"/>.
+            </summary>
+            <param name="xr"><see cref="T:System.Xml.XmlReader"/> that contains the style information.</param>
+        </member>
+        <member name="P:C1.Olap.C1OlapConditionalFieldStyle.ConditionType">
+            <summary>
+            Gets or sets the condition that determines whether this style should be applied.
+            </summary>
+        </member>
+        <member name="P:C1.Olap.C1OlapConditionalFieldStyle.Value">
+            <summary>
+            Gets or sets the threshold that determines whether this style should be applied.
+            </summary>
+        </member>
+        <member name="P:C1.Olap.C1OlapConditionalFieldStyle.IsEmpty">
+            <summary>
+            Gets a value that indicates whether this style is empty.
+            </summary>
+        </member>
+        <member name="T:C1.Olap.ConditionOperator">
+            <summary>
+            Represents operators that can be used in filter conditions.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.ConditionOperator.None">
+            <summary>
+            Disables the operator.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.ConditionOperator.Equals">
+            <summary>
+            Return true if the value equals the operator parameter.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.ConditionOperator.NotEquals">
+            <summary>
+            Return true if the value does not equal the operator parameter.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.ConditionOperator.GreaterThan">
+            <summary>
+            Return true if the value is greater than the operator parameter.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.ConditionOperator.LessThan">
+            <summary>
+            Return true if the value is less than the operator parameter.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.ConditionOperator.GreaterThanOrEqualTo">
+            <summary>
+            Return true if the value is greater than or equal to the operator parameter.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.ConditionOperator.LessThanOrEqualTo">
+            <summary>
+            Return true if the value is less than or equal to the operator parameter.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.ConditionOperator.Contains">
+            <summary>
+            Return true if the string representation of the value contains the operator parameter.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.ConditionOperator.DoesNotContain">
+            <summary>
+            Return true if the string representation of the value does not contain the operator parameter.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.ConditionOperator.BeginsWith">
+            <summary>
+            Return true if the string representation of the value begins with the operator parameter.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.ConditionOperator.EndsWith">
+            <summary>
+            Return true if the string representation of the value ends with the operator parameter.
+            </summary>
+        </member>
+        <member name="T:C1.Olap.C1OlapFilter">
+            <summary>
+            Represents a filter used to select values for a field.
+            </summary>
+        </member>
+        <member name="M:C1.Olap.C1OlapFilter.#ctor(C1.Olap.C1OlapField)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Olap.C1OlapFilter"/>.
+            </summary>
+            <param name="field"><see cref="T:C1.Olap.C1OlapField"/> that owns the new filter.</param>
+        </member>
+        <member name="M:C1.Olap.C1OlapFilter.Apply(System.Object)">
+            <summary>
+            Applies the filter to a value.
+            </summary>
+            <param name="value">Value to test.</param>
+            <returns>True if the values passes through the filter, false otherwise.</returns>
+        </member>
+        <member name="M:C1.Olap.C1OlapFilter.Clear">
+            <summary>
+            Clears the filter.
+            </summary>
+        </member>
+        <member name="M:C1.Olap.C1OlapFilter.Clone">
+            <summary>
+            Creates a clone of this filter.
+            </summary>
+            <returns>A clone of this filter.</returns>
+        </member>
+        <member name="M:C1.Olap.C1OlapFilter.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Raises the <see cref="E:C1.Olap.C1OlapFilter.PropertyChanged"/> event.
+            </summary>
+            <param name="e"><see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:C1.Olap.C1OlapFilter.Copy(C1.Olap.C1OlapFilter)">
+            <summary>
+            Copies all filter conditions from a source filter.
+            </summary>
+            <param name="source">Source filter to copy from.</param>
+        </member>
+        <member name="M:C1.Olap.C1OlapFilter.WriteXml(System.Xml.XmlWriter)">
+            <summary>
+            Persist filter to Xml.
+            </summary>
+            <param name="xw"><see cref="T:System.Xml.XmlWriter"/> where the filter will be saved.</param>
+        </member>
+        <member name="M:C1.Olap.C1OlapFilter.ReadXml(System.Xml.XmlReader)">
+            <summary>
+            Reads a filter from Xml.
+            </summary>
+            <param name="xr"><see cref="T:System.Xml.XmlReader"/> that contains the filter definition.</param>
+        </member>
+        <member name="P:C1.Olap.C1OlapFilter.Field">
+            <summary>
+            Gets the field that this filter is acting on.
+            </summary>
+        </member>
+        <member name="E:C1.Olap.C1OlapFilter.PropertyChanged">
+            <summary>
+            Fires when a property changes.
+            </summary>
+        </member>
+        <member name="P:C1.Olap.C1OlapFilter.Condition1">
+            <summary>
+            Gets the first filter condition.
+            </summary>
+        </member>
+        <member name="P:C1.Olap.C1OlapFilter.Condition2">
+            <summary>
+            Gets the second filter condition.
+            </summary>
+        </member>
+        <member name="P:C1.Olap.C1OlapFilter.AndConditions">
+            <summary>
+            Gets or sets whether the filter conditions should be combined
+            with an 'And' or with an 'Or' operator.
+            </summary>
+        </member>
+        <member name="P:C1.Olap.C1OlapFilter.IsCustomFilterActive">
+            <summary>
+            Gets a value that indicates the custom filter is active.
+            </summary>
+        </member>
+        <member name="P:C1.Olap.C1OlapFilter.IsActive">
+            <summary>
+            Gets a value that indicates the filter is active.
+            </summary>
+        </member>
+        <member name="P:C1.Olap.C1OlapFilter.ShowValues">
+            <summary>
+            Gets or sets an array with the values that should be included in the output.
+            </summary>
+            <remarks>
+            Setting this property to null causes the filter to include all values in the output.
+            </remarks>
+        </member>
+        <member name="P:C1.Olap.C1OlapFilter.Values">
+            <summary>
+            Gets or sets the list of values to be displayed in the value filter list editor.
+            </summary>
+            <remarks>
+            Setting this property to null causes the filter build the value list automatically
+            using the values present in the data source.
+            </remarks>
+        </member>
+        <member name="T:C1.Olap.FilterCondition">
+            <summary>
+            Represents a condition within a <see cref="T:C1.Olap.C1OlapFilter"/>.
+            </summary>
+            <remarks>
+            Each <see cref="T:C1.Olap.C1OlapFilter"/> contains up to two conditions that
+            can be combined with 'And' or 'Or' operators.
+            </remarks>
+        </member>
+        <member name="M:C1.Olap.FilterCondition.Clear">
+            <summary>
+            Clears this condition by setting the <see cref="P:C1.Olap.FilterCondition.Operator"/> to 'None' 
+            and the <see cref="P:C1.Olap.FilterCondition.Parameter"/> to null.
+            </summary>
+        </member>
+        <member name="M:C1.Olap.FilterCondition.Apply(System.Object)">
+            <summary>
+            Applies the condition to a given value.
+            </summary>
+            <param name="value">Value to test.</param>
+            <returns>True if the value satisfies the condition, false otherwise.</returns>
+        </member>
+        <member name="M:C1.Olap.FilterCondition.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Raises the <see cref="E:C1.Olap.FilterCondition.PropertyChanged"/> event.
+            </summary>
+            <param name="e"><see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="P:C1.Olap.FilterCondition.IsActive">
+            <summary>
+            Gets a value that indicates whether the condition is active.
+            </summary>
+        </member>
+        <member name="P:C1.Olap.FilterCondition.Operator">
+            <summary>
+            Gets or sets the operator used by this condition.
+            </summary>
+        </member>
+        <member name="P:C1.Olap.FilterCondition.Parameter">
+            <summary>
+            Gets or sets the parameter used by this condition.
+            </summary>
+        </member>
+        <member name="E:C1.Olap.FilterCondition.PropertyChanged">
+            <summary>
+            Fires when a property changes.
+            </summary>
+        </member>
+        <member name="T:C1.Olap.C1OlapKey">
+            <summary>
+            Represents a combination of <see cref="T:C1.Olap.C1OlapField"/> objects and their values.
+            </summary>
+            <remarks>
+            <para>Each row and column on the output Olap table is defined by a unique
+            <see cref="T:C1.Olap.C1OlapKey"/>. The values in the table cells represent an aggregation
+            of the value field for all items that match the row and column keys.</para>
+            <para>For example, if a column key is set to 'Country:UK;Customer:Joe' and 
+            the row key is set to 'Category:Desserts;Product:Pie', then the corresponding 
+            cell contains the aggregate for all items with the following properties:
+            'Country:UK;Customer:Joe;Category:Desserts;Product:Pie'.</para>
+            </remarks>
+        </member>
+        <member name="M:C1.Olap.C1OlapKey.GetFormattedValue(System.Int32)">
+            <summary>
+            Gets a formatted value from the <see cref="P:C1.Olap.C1OlapKey.Values"/> array.
+            </summary>
+            <param name="index">Index of the field whose value should be retrieved.</param>
+            <returns>The formatted value for the given index.</returns>
+        </member>
+        <member name="M:C1.Olap.C1OlapKey.GetFormattedValue(System.Int32,System.Object)">
+            <summary>
+            Gets a formatted value from the <see cref="P:C1.Olap.C1OlapKey.Values"/> array.
+            </summary>
+            <param name="index">Index of the field whose value should be retrieved.</param>
+            <param name="item">Object that provides the unformatted value.</param>
+            <returns>The formatted value for the given index.</returns>
+        </member>
+        <member name="M:C1.Olap.C1OlapKey.MatchesItem(System.Object)">
+            <summary>
+            Gets a value that determines whether a given data object matches the
+            content of this <see cref="T:C1.Olap.C1OlapKey"/>.
+            </summary>
+            <param name="item">Item that contains the raw data.</param>
+            <returns>True if the <paramref name="item"/> matches this 
+            <see cref="T:C1.Olap.C1OlapKey"/>.</returns>
+            <remarks>
+            <para>The match is determined by comparing the formatted values for each
+            <see cref="T:C1.Olap.C1OlapField"/> in the key to the formatted values in the
+            <paramref name="item"/>. Therefore, matches may occur even if the raw 
+            values are different.</para>
+            </remarks>
+        </member>
+        <member name="M:C1.Olap.C1OlapKey.ToString">
+            <summary>
+            Returns a string that represents this <see cref="T:C1.Olap.C1OlapKey"/>.
+            </summary>
+            <returns>A string that represents this <see cref="T:C1.Olap.C1OlapKey"/>.</returns>
+        </member>
+        <member name="M:C1.Olap.C1OlapKey.GetHashCode">
+            <summary>
+            Serves as a hash function for a <see cref="T:C1.Olap.C1OlapKey"/> object. 
+            </summary>
+            <returns>An integer that serves as a hash function for a <see cref="T:C1.Olap.C1OlapKey"/> object.</returns>
+        </member>
+        <member name="M:C1.Olap.C1OlapKey.Equals(System.Object)">
+            <summary>
+            Returns true if two <see cref="T:C1.Olap.C1OlapKey"/> objects represent the 
+            same set of <see cref="T:C1.Olap.C1OlapField"/> objects and values.
+            </summary>
+            <param name="obj"><see cref="T:C1.Olap.C1OlapKey"/> to compare with this key.</param>
+            <returns>True if both keys represent the same fields and values.</returns>
+        </member>
+        <member name="P:C1.Olap.C1OlapKey.Fields">
+            <summary>
+            Gets the list of <see cref="T:C1.Olap.C1OlapField"/> pivot fields associated with this
+            <see cref="T:C1.Olap.C1OlapKey"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Olap.C1OlapKey.Values">
+            <summary>
+            Gets an array of values for the <see cref="T:C1.Olap.C1OlapField"/> pivot fields
+            associated with this <see cref="T:C1.Olap.C1OlapKey"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Olap.C1OlapKey.ValueField">
+            <summary>
+            Gets the <see cref="T:C1.Olap.C1OlapField"/> that represents the value field 
+            associated with this <see cref="T:C1.Olap.C1OlapKey"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Olap.C1OlapTally">
+            <summary>
+            Accumulates observations and returns aggregate statistics.
+            </summary>
+        </member>
+        <member name="T:C1.Olap.Types">
+            <summary>
+            Static helpers for dealing with <see cref="T:System.Type"/> objects.
+            </summary>
+        </member>
+        <member name="T:C1.Olap.ValueSet`1">
+            <summary>
+            Represents a collection of unique values of type <b>T</b>.
+            </summary>
+        </member>
+        <member name="M:C1.Olap.ValueSet`1.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Olap.ValueSet`1"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Olap.ValueSet`1.#ctor(System.Collections.Generic.IEqualityComparer{`0})">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Olap.ValueSet`1"/>.
+            </summary>
+            <param name="comparer">The comparer to use when comparing keys.</param>
+        </member>
+        <member name="M:C1.Olap.ValueSet`1.Add(`0)">
+            <summary>
+            Adds a value to the collection if not already present.
+            </summary>
+            <param name="value">Value to add to the collection.</param>
+        </member>
+        <member name="M:C1.Olap.ValueSet`1.Contains(`0)">
+            <summary>
+            Determines whether the collection contains a specific value.
+            </summary>
+            <param name="value">Value to look for.</param>
+            <returns>True if the collection contains the value.</returns>
+        </member>
+        <member name="M:C1.Olap.ValueSet`1.Clear">
+            <summary>
+            Removes all objects from the collection.
+            </summary>
+        </member>
+        <member name="M:C1.Olap.ValueSet`1.Sort">
+            <summary>
+            Sorts the elements in the collection.
+            </summary>
+            <remarks>
+            This method assumes the elements support the <see cref="T:System.IComparable"/> interface.
+            </remarks>
+        </member>
+        <member name="M:C1.Olap.ValueSet`1.SameValues(`0[])">
+            <summary>
+            Determines whether the values in this set are the same as the
+            ones in a given array.
+            </summary>
+            <param name="values">Array containing the values to compare.</param>
+            <returns>True if the values in this set are the same as the
+            ones in the <paramref name="values"/> array.</returns>
+        </member>
+        <member name="M:C1.Olap.ValueSet`1.ToList">
+            <summary>
+            Creates a <see cref="T:System.Collections.Generic.List`1"/> from this collection.
+            </summary>
+            <returns>A <see cref="T:System.Collections.Generic.List`1"/> that contains the objects in this collection.</returns>
+        </member>
+        <member name="M:C1.Olap.ValueSet`1.ToArray">
+            <summary>
+            Creates an array from this collection.
+            </summary>
+            <returns>An array that contains the objects in this collection.</returns>
+        </member>
+        <member name="M:C1.Olap.ValueSet`1.System#Collections#Generic#IEnumerable{T}#GetEnumerator">
+            <summary>
+            Gets an <see cref="T:System.Collections.IEnumerator"/> that iterates though the collection.
+            </summary>
+            <returns>An <see cref="T:System.Collections.IEnumerator"/> that iterates though the collection.</returns>
+        </member>
+        <member name="M:C1.Olap.ValueSet`1.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Gets an <see cref="T:System.Collections.IEnumerator"/> that iterates though the collection.
+            </summary>
+            <returns>An <see cref="T:System.Collections.IEnumerator"/> that iterates though the collection.</returns>
+        </member>
+        <member name="P:C1.Olap.ValueSet`1.Count">
+            <summary>
+            Gets the number of objects in the collection.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Olap.C1ConditionalFieldStyleEditor">
+            <summary>
+            Editor for conditional field styles.
+            </summary>	
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1ConditionalFieldStyleEditor.GetValues(C1.Olap.C1OlapConditionalFieldStyle)">
+            <summary>
+            Initializes the control getting the values of a given field style.
+            </summary>
+            <param name="style">The style to load in the editor.</param>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1ConditionalFieldStyleEditor.ApplyValues(C1.Olap.C1OlapConditionalFieldStyle)">
+            <summary>
+            Applies the current values of the editor to a given field style.
+            </summary>
+            <param name="style">The style to update.</param>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1ConditionalFieldStyleEditor.HighValuesProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1ConditionalFieldStyleEditor.HighValues"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1ConditionalFieldStyleEditor.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Olap.C1ConditionalFieldStyleEditor"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1ConditionalFieldStyleEditor.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.Olap.C1ConditionalFieldStyleEditor"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1ConditionalFieldStyleEditor.HighValues">
+            <summary>
+            Gets or sets a value indicating whether this editor is used for high values.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Olap.C1FieldStyleEditor">
+            <summary>
+            Editor for field styles.
+            </summary>	
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1FieldStyleEditor.GetValues(C1.Olap.C1OlapFieldStyle)">
+            <summary>
+            Initializes the control getting the values of a given field style.
+            </summary>
+            <param name="style">The style to load in the editor.</param>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1FieldStyleEditor.ApplyValues(C1.Olap.C1OlapFieldStyle)">
+            <summary>
+            Applies the current values of the editor to a given field style.
+            </summary>
+            <param name="style">The style to update.</param>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1FieldStyleEditor.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Olap.C1FieldStyleEditor"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1FieldStyleEditor.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.Olap.C1FieldStyleEditor"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="T:C1.Silverlight.Olap.C1FormatEditor">
+            <summary>
+            Editor for <see cref="T:C1.Olap.C1OlapFilter"/> objects.
+            </summary>	
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1FormatEditor.TypeCodeProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1FormatEditor.TypeCode"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1FormatEditor.FormatProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1FormatEditor.Format"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1FormatEditor.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Olap.C1FormatEditor"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1FormatEditor.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.Olap.C1FormatEditor"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1FormatEditor.TypeCode">
+            <summary>
+            Gets or sets the <see cref="P:C1.Silverlight.Olap.C1FormatEditor.TypeCode"/> that specifies the type of format string being created or edited.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1FormatEditor.Format">
+            <summary>
+            Gets or sets the format string being created or edited.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Olap.ChartType">
+            <summary>
+            Specifies the type of chart to display.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.ChartType.Bar">
+            <summary>
+            Series are represented by horizontal bars.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.ChartType.Column">
+            <summary>
+            Series are represented by vertical columns.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.ChartType.Area">
+            <summary>
+            Series are represented by filled polygons.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.ChartType.Line">
+            <summary>
+            Series are represented by polygons with symbols at the data points.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.ChartType.Scatter">
+            <summary>
+            Series are represented by groups of symbols.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Olap.ShowLegend">
+            <summary>
+            Specifies whether a legend should be displayed.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.ShowLegend.Automatic">
+            <summary>
+            Show legend if there are two or more series.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.ShowLegend.Always">
+            <summary>
+            Always show legend.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.ShowLegend.Never">
+            <summary>
+            Never show legend.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Olap.C1OlapChart">
+            <summary>
+            Custom chart control for visualizing Olap data.
+            </summary>	
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapChart.UpdateChart">
+            <summary>
+            Regenerates the chart.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapChart.WriteXml(System.String)">
+            <summary>
+            Saves the control settings into an Xml file.
+            </summary>
+            <param name="path">Name of the file to save.</param>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapChart.WriteXml(System.Xml.XmlWriter)">
+            <summary>
+            Saves the control settings into an <see cref="T:System.Xml.XmlWriter"/>.
+            </summary>
+            <param name="xw"><see cref="T:System.Xml.XmlWriter"/> where the control settings will be saved.</param>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapChart.ReadXml(System.String)">
+            <summary>
+            Reads the control settings from a file.
+            </summary>
+            <param name="path">Name of the file that contains the control settings.</param>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapChart.ReadXml(System.Xml.XmlReader)">
+            <summary>
+            Reads the control settings from an <see cref="T:System.Xml.XmlReader"/>.
+            </summary>
+            <param name="xr"><see cref="T:System.Xml.XmlReader"/> that contains the control settings.</param>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapChart.DataSourceProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapChart.DataSource"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapChart.ChartTypeProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapChart.ChartType"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapChart.StackedProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapChart.Stacked"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapChart.ShowLegendProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapChart.ShowLegend"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapChart.ShowTitleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapChart.ShowTitle"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapChart.ShowGridLinesProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapChart.ShowGridLines"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapChart.PaletteProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapChart.Palette"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapChart.MaxSeriesProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapChart.MaxSeries"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapChart.MaxPointsProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapChart.MaxPoints"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapChart.ChartTotalsProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapChart.ChartTotals"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapChart.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Olap.C1OlapChart"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapChart.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.Olap.C1OlapChart"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapChart.DataSource">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.Olap.C1OlapPanel"/> that provides the data for this <see cref="T:C1.Silverlight.Olap.C1OlapChart"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapChart.ChartType">
+            <summary>
+            Gets or sets the type of chart to create.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapChart.Stacked">
+            <summary>
+            Gets or sets a value that determines whether the series should be stacked or placed side-by-side.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapChart.ShowLegend">
+            <summary>
+            Gets or sets whether the chart should include a legend.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapChart.ShowTitle">
+            <summary>
+            Gets or sets whether the chart should include a title.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapChart.ShowGridLines">
+            <summary>
+            Gets or sets whether the chart should include gridlines along the X axis.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapChart.Palette">
+            <summary>
+            Gets or sets the <see cref="P:C1.Silverlight.Olap.C1OlapChart.Palette"/> that defines the colors used for the chart series.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapChart.MaxSeries">
+            <summary>
+            Gets or sets the maximum number of data series that will be shown in the chart.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapChart.MaxPoints">
+            <summary>
+            Gets or sets the maximum number of points that will be shown in each series.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapChart.ChartTotals">
+            <summary>
+            Gets or sets whether the chart should include only totals.
+            </summary>
+            <remarks>
+            This property allows you to create summary charts that include only the totals, as opposed to one series for each column in the data source.
+            It is useful when creating views that have so many individual values that the default detailed chart becomes too crowded to be readable.
+            </remarks>
+        </member>
+        <member name="T:C1.Silverlight.Olap.ToolTipConverter">
+            <summary>
+            ValueConverter that provides tooltip text for each data point.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Olap.C1OlapContentOptions">
+            <summary>
+            Control used to configure the content options for C1Olap report.
+            </summary>	
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapContentOptions.IncludeGridProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapContentOptions.IncludeGrid"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapContentOptions.IncludeChartProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapContentOptions.IncludeChart"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapContentOptions.IncludeRawProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapContentOptions.IncludeRaw"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapContentOptions.GridScaleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapContentOptions.GridScale"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapContentOptions.ChartScaleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapContentOptions.ChartScale"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapContentOptions.RawScaleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapContentOptions.RawScale"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapContentOptions.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Olap.C1OlapContentOptions"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapContentOptions.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.Olap.C1OlapContentOptions"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapContentOptions.IncludeGrid">
+            <summary>
+            Gets or sets a value indicating whether the grid will be included in the printed document.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapContentOptions.IncludeChart">
+            <summary>
+            Gets or sets a value indicating whether the chart will be included in the printed document.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapContentOptions.IncludeRaw">
+            <summary>
+            Gets or sets a value indicating whether the raw data will be included in the printed document.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapContentOptions.GridScale">
+            <summary>
+            Gets or sets the ScaleMode for the Grid.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapContentOptions.ChartScale">
+            <summary>
+            Gets or sets the ScaleMode for the Chart.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapContentOptions.RawScale">
+            <summary>
+            Gets or sets the ScaleMode for the RawData.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Olap.C1OlapFieldEditor">
+            <summary>
+            Editor for <see cref="T:C1.Olap.C1OlapField"/> objects.
+            </summary>	
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapFieldEditor.#ctor(C1.Olap.C1OlapField)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Olap.C1OlapFieldEditor"/>.
+            </summary>
+            <param name="field"><see cref="T:C1.Olap.C1OlapField"/> to be edited with this dialog.</param>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapFieldEditor.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Olap.C1OlapFieldEditor"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapFieldEditor.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.Olap.C1OlapFieldEditor"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="T:C1.Silverlight.Olap.C1OlapFilterEditor">
+            <summary>
+            Editor for <see cref="T:C1.Olap.C1OlapFilter"/> objects.
+            </summary>	
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapFilterEditor.FilterProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapFilterEditor.Filter"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapFilterEditor.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Olap.C1OlapFilterEditor"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapFilterEditor.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.Olap.C1OlapFilterEditor"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapFilterEditor.Filter">
+            <summary>
+            Gets or sets the <see cref="T:C1.Olap.C1OlapFilter"/> being edited.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Olap.FilterItem">
+            <summary>
+            Wrapper used as a binding wrapper for filter items displayed in the
+            editor list box.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.FilterItem.#ctor(System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Olap.FilterItem"/>.
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="P:C1.Silverlight.Olap.FilterItem.Key">
+            <summary>
+            Gets the name of the item.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.FilterItem.Value">
+            <summary>
+            Gets or sets a value that determines whether this item should 
+            be accepted by the filter.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Olap.FilterItem.PropertyChanged">
+            <summary>
+            Occurs when the value of a property changes (required for binding).
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Olap.C1OlapGrid">
+            <summary>
+            Custom grid control for visualizing Olap data.
+            </summary>
+            <summary>
+            Custom grid control for visualizing Olap data.
+            </summary>	
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapGrid.ShowDetail(System.Int32,System.Int32)">
+            <summary>
+            Shows a modal dialog containing the detail information that defines the content 
+            of a specific cell in the grid.
+            </summary>
+            <param name="row">Index of the row that contains the cell.</param>
+            <param name="col">Index of the row that contains the cell.</param>
+            <remarks>
+            This method provides an easy way to add drill-down functionality to the 
+            <see cref="T:C1.Silverlight.Olap.C1OlapGrid"/> control.
+            </remarks>
+            <example>
+            The code below handles the grid's <b>DoubleClick</b> event to check which 
+            cell was clicked, then invokes the <see cref="M:C1.Silverlight.Olap.C1OlapGrid.ShowDetail(System.Int32,System.Int32)"/> method to display
+            a modal dialog containing all the raw data items that were used to calculate
+            the value of the cell that was clicked.
+            <code>
+            void OlapGrid_DoubleClick(object sender, MouseButtonEventArgs e)
+            {
+              var grid = _c1OlapPage.OlapGrid;
+              var ht = grid.HitTest(e);
+              if (ht.CellType == CellType.Cell &amp;&amp; ht.Row &gt; -1 &amp;&amp; ht.Column &gt; &gt; -1)
+              {
+                grid.ShowDetail(ht.Row, ht.Column);
+              }
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapGrid.OnSortedColumn(C1.Silverlight.FlexGrid.CellRangeEventArgs)">
+            <summary>
+            Overridden to update the grid headers when a column is sorted.
+            </summary>
+            <param name="e"><see cref="T:C1.Silverlight.FlexGrid.CellRangeEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapGrid.OnResizedColumn(C1.Silverlight.FlexGrid.CellRangeEventArgs)">
+            <summary>
+            Overridden to make all value columns the same width when the user resizes one of the columns.
+            </summary>
+            <param name="e"><see cref="T:C1.Silverlight.FlexGrid.CellRangeEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapGrid.OnMouseRightButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Overridden to call the <see cref="M:C1.Silverlight.Olap.C1OlapGrid.ShowDetail(System.Int32,System.Int32)"/> method when the user right-clicks a 
+            cell on the grid.
+            </summary>
+            <param name="e"><see cref="T:System.Windows.Input.MouseButtonEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapGrid.OnMouseRightButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Overridden to show details on right mouse click.
+            </summary>
+            <param name="e"><see cref="T:System.Windows.Input.MouseButtonEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapGrid.GetMergedRange(C1.Silverlight.FlexGrid.C1FlexGrid,C1.Silverlight.FlexGrid.CellType,C1.Silverlight.FlexGrid.CellRange)">
+            <summary>
+            This method is for internal use.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapGrid.ShowDetailOnRightClickProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapGrid.ShowDetailOnRightClick"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapGrid.DataSourceProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapGrid.DataSource"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapGrid.SubtotalBackgroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapGrid.SubtotalBackground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapGrid.CollapsibleSubtotalsProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapGrid.CollapsibleSubtotals"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapGrid.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Olap.C1OlapGrid"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapGrid.ShowDetailOnRightClick">
+            <summary>
+            Gets or sets a value that determines whether the grid should show a popup containing the detail records when the user right-clicks a cell.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapGrid.DataSource">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.Olap.C1OlapPanel"/> that provides data for this grid.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapGrid.SubtotalBackground">
+            <summary>
+            Gets or sets the brush used to paint the background of cells that contain totals.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapGrid.CollapsibleSubtotals">
+            <summary>
+            Gets or sets a value that determines whether the grid should allow users to collapse and expand subtotal groups.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Olap.C1OlapHeaderOptions">
+            <summary>
+            Control used to configure the header/footer options for C1Olap report.
+            </summary>	
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapHeaderOptions.HeaderLeftProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapHeaderOptions.HeaderLeft"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapHeaderOptions.HeaderCenterProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapHeaderOptions.HeaderCenter"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapHeaderOptions.HeaderRightProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapHeaderOptions.HeaderRight"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapHeaderOptions.FooterLeftProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapHeaderOptions.FooterLeft"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapHeaderOptions.FooterCenterProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapHeaderOptions.FooterCenter"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapHeaderOptions.FooterRightProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapHeaderOptions.FooterRight"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapHeaderOptions.ShowHeaderSeparatorProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapHeaderOptions.ShowHeaderSeparator"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapHeaderOptions.ShowFooterSeparatorProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapHeaderOptions.ShowFooterSeparator"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapHeaderOptions.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Olap.C1OlapHeaderOptions"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapHeaderOptions.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.Olap.C1OlapHeaderOptions"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapHeaderOptions.HeaderLeft">
+            <summary>
+            Gets or sets the text for the header aligned to the left of the page.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapHeaderOptions.HeaderCenter">
+            <summary>
+            Gets or sets the text for the header aligned to the center of the page.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapHeaderOptions.HeaderRight">
+            <summary>
+            Gets or sets the text for the header aligned to the right of the page.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapHeaderOptions.FooterLeft">
+            <summary>
+            Gets or sets the text for the footer aligned to the left of the page.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapHeaderOptions.FooterCenter">
+            <summary>
+            Gets or sets the text for the footer aligned to the center of the page.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapHeaderOptions.FooterRight">
+            <summary>
+            Gets or sets the text for the footer aligned to the right of the page.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapHeaderOptions.ShowHeaderSeparator">
+            <summary>
+            Gets or sets a value indicating whether the document will have a header separator.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapHeaderOptions.ShowFooterSeparator">
+            <summary>
+            Gets or sets a value indicating whether the document will have a footer separator.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Olap.C1OlapMarginOptions">
+            <summary>
+            Control used to configure the margin options for C1Olap report.
+            </summary>	
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapMarginOptions.TopMarginProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapMarginOptions.TopMargin"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapMarginOptions.LeftMarginProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapMarginOptions.LeftMargin"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapMarginOptions.BottomMarginProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapMarginOptions.BottomMargin"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapMarginOptions.RightMarginProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapMarginOptions.RightMargin"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapMarginOptions.TopPaddingProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapMarginOptions.TopPadding"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapMarginOptions.LeftPaddingProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapMarginOptions.LeftPadding"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapMarginOptions.BottomPaddingProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapMarginOptions.BottomPadding"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapMarginOptions.RightPaddingProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapMarginOptions.RightPadding"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapMarginOptions.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Olap.C1OlapMarginOptions"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapMarginOptions.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.Olap.C1OlapMarginOptions"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapMarginOptions.TopMargin">
+            <summary>
+            Gets or sets the top margin.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapMarginOptions.LeftMargin">
+            <summary>
+            Gets or sets the left margin.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapMarginOptions.BottomMargin">
+            <summary>
+            Gets or sets the bottom margin.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapMarginOptions.RightMargin">
+            <summary>
+            Gets or sets the right margin.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapMarginOptions.TopPadding">
+            <summary>
+            Gets or sets the top padding.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapMarginOptions.LeftPadding">
+            <summary>
+            Gets or sets the left padding.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapMarginOptions.BottomPadding">
+            <summary>
+            Gets or sets the bottom padding.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapMarginOptions.RightPadding">
+            <summary>
+            Gets or sets the right padding.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Olap.C1OlapPage">
+            <remarks>
+            <para>The control contains an <see cref="T:C1.Silverlight.Olap.C1OlapPanel"/> on the left and 
+            a tabbed content area on the right.</para>
+            <para>The <see cref="T:C1.Silverlight.Olap.C1OlapPanel"/> allows users to select and customize
+            the fields that should be included in the Olap analysis.</para>
+            <para>The tabbed content area contains three pages: a <see cref="T:C1.Silverlight.Olap.C1OlapGrid"/>
+            and a <see cref="T:C1.Silverlight.Olap.C1OlapChart"/> that show the Olap analysis, and a plain 
+            grid that shows the raw data.</para>
+            <para>The control also provides a customizable menu with commonly used 
+            commands.</para>
+            </remarks>
+            <summary>
+            Provides a complete user interface for Olap applications.
+            </summary>	
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapPage.WriteXml(System.String)">
+            <summary>
+            Saves the control settings into an Xml file.
+            </summary>
+            <param name="path">Name of the file to save.</param>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapPage.WriteXml(System.Xml.XmlWriter)">
+            <summary>
+            Saves the control settings into an <see cref="T:System.Xml.XmlWriter"/>.
+            </summary>
+            <param name="xw"><see cref="T:System.Xml.XmlWriter"/> where the control settings will be saved.</param>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapPage.ReadXml(System.String)">
+            <summary>
+            Reads the control settings from a file.
+            </summary>
+            <param name="path">Name of the file that contains the control settings.</param>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapPage.ReadXml(System.Xml.XmlReader)">
+            <summary>
+            Reads the control settings from an <see cref="T:System.Xml.XmlReader"/>.
+            </summary>
+            <param name="xr"><see cref="T:System.Xml.XmlReader"/> that contains the control settings.</param>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapPage.OnUpdating(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:C1.Silverlight.Olap.C1OlapPage.Updating"/> event.
+            </summary>
+            <param name="e"><see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapPage.OnUpdated(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:C1.Silverlight.Olap.C1OlapPage.Updated"/> event.
+            </summary>
+            <param name="e"><see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapPage.OnViewDefinitionChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:C1.Silverlight.Olap.C1OlapPage.ViewDefinitionChanged"/> event.
+            </summary>
+            <param name="e"><see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapPage.OnDataSourceChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:C1.Silverlight.Olap.C1OlapPage.DataSourceChanged"/> event.
+            </summary>
+            <param name="e"><see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapPage.DataSourceProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapPage.DataSource"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapPage.ShowRawDataProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapPage.ShowRawData"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapPage.ShortcutsEnabledProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapPage.ShortcutsEnabled"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapPage.ShowUndoRedoProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapPage.ShowUndoRedo"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapPage.ChartTypeProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapPage.ChartType"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapPage.StackedProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapPage.Stacked"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapPage.ShowLegendProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapPage.ShowLegend"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapPage.ShowTitleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapPage.ShowTitle"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapPage.ShowGridLinesProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapPage.ShowGridLines"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapPage.PaletteProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapPage.Palette"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapPage.MaxSeriesProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapPage.MaxSeries"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapPage.MaxPointsProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapPage.MaxPoints"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapPage.ChartTotalsProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapPage.ChartTotals"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapPage.ShowDetailOnRightClickProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapPage.ShowDetailOnRightClick"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapPage.SubtotalBackgroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapPage.SubtotalBackground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapPage.CollapsibleSubtotalsProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapPage.CollapsibleSubtotals"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapPage.ShowTotalsRowsProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapPage.ShowTotalsRows"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapPage.ShowTotalsColumnsProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapPage.ShowTotalsColumns"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapPage.ShowZerosProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapPage.ShowZeros"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapPage.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Olap.C1OlapPage"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapPage.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.Olap.C1OlapPage"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapPage.OlapPanel">
+            <summary>
+            Gets the <see cref="T:C1.Silverlight.Olap.C1OlapPanel"/> docked to the left of the page.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapPage.OlapGrid">
+            <summary>
+            Gets the <see cref="T:C1.Silverlight.Olap.C1OlapGrid"/> used to display the Olap results.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapPage.OlapChart">
+            <summary>
+            Gets the <see cref="T:C1.Silverlight.Olap.C1OlapChart"/> used to display the Olap results.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapPage.OlapEngine">
+            <summary>
+            Gets a reference to the <see cref="T:C1.Olap.C1OlapEngine"/> that performs
+            the Olap analysis for this <see cref="T:C1.Silverlight.Olap.C1OlapPage"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapPage.MainMenu">
+            <summary>
+            Gets a reference to the <see cref="T:C1.Silverlight.C1Menu"/> that contains the main menu 
+            on the page.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapPage.ViewDefinition">
+            <summary>
+            Gets or sets the Olap view definition as an Xml string.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Olap.C1OlapPage.Updating">
+            <summary>
+            Fires before the <see cref="P:C1.Silverlight.Olap.C1OlapPage.OlapPanel"/> starts updating the output Olap table.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Olap.C1OlapPage.Updated">
+            <summary>
+            Fires after the <see cref="P:C1.Silverlight.Olap.C1OlapPage.OlapPanel"/> finishes the Olap analysis.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Olap.C1OlapPage.ViewDefinitionChanged">
+            <summary>
+            Occurs when the view definition changes, before the output table is updated.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Olap.C1OlapPage.DataSourceChanged">
+            <summary>
+            Occurs when the data source changes.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapPage.DataSource">
+            <summary>
+            Gets or sets the object that contains the data to be analyzed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapPage.ShowRawData">
+            <summary>
+            Gets or sets a value that determines whether the page should include a tab showing the raw data.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapPage.ShortcutsEnabled">
+            <summary>
+            Gets or sets a value that determines whether the page should automatically handle shortcut keys (e.g. Ctrl+S to save a view, Ctrl+O to open a view, Ctrl+Y to undo, Ctrl+Z to redo).
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapPage.ShowUndoRedo">
+            <summary>
+            Gets or sets a value that determines whether the toolbar should include undo/redo buttons.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapPage.ChartType">
+            <summary>
+            Gets or sets the type of chart to create.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapPage.Stacked">
+            <summary>
+            Gets or sets a value that determines whether the series should be stacked or placed side-by-side.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapPage.ShowLegend">
+            <summary>
+            Gets or sets whether the chart should include a legend.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapPage.ShowTitle">
+            <summary>
+            Gets or sets whether the chart should include a title.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapPage.ShowGridLines">
+            <summary>
+            Gets or sets whether the chart should include gridlines along the X axis.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapPage.Palette">
+            <summary>
+            Gets or sets the color scheme used for the data series.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapPage.MaxSeries">
+            <summary>
+            Gets or sets the maximum number of data series that will be shown in the chart.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapPage.MaxPoints">
+            <summary>
+            Gets or sets the maximum number of points that will be shown in each series.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapPage.ChartTotals">
+            <summary>
+            Gets or sets whether the chart should include only totals.
+            </summary>
+            <remarks>
+            This property allows you to create summary charts that include only the totals, as opposed to one series for each column in the data source.
+            It is useful when creating views that have so many individual values that the default detailed chart becomes too crowded to be readable.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapPage.ShowDetailOnRightClick">
+            <summary>
+            Gets or sets a value that determines whether right-clicking the Olap grid should cause the control to display the raw records represented by the cell clicked.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapPage.SubtotalBackground">
+            <summary>
+            Gets or sets the brush used to paint the background of cells that contain totals.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapPage.CollapsibleSubtotals">
+            <summary>
+            Gets or sets a value that determines whether the grid should allow users to collapse and expand subtotal groups.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapPage.ShowTotalsRows">
+            <summary>
+            Gets or sets a value that determines whether the Olap output table should include a row with the totals for each column.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapPage.ShowTotalsColumns">
+            <summary>
+            Gets or sets a value that determines whether the Olap output table should include a column with the totals for each row.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapPage.ShowZeros">
+            <summary>
+            Gets or sets a value that determines whether the Olap output table should use zeros to indicate missing values.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Olap.C1OlapPanel">
+            <remarks>
+            <para>Olap pivot tables group data into one or more dimensions. The dimensions are represented
+            by rows and columns on a grid, and the data is stored in the grid cells.</para>
+            <para>Use the <see cref="P:C1.Silverlight.Olap.C1OlapPanel.DataSource"/> property to set the source table, then use the 
+            <see cref="P:C1.Silverlight.Olap.C1OlapPanel.OlapTable"/> property to get the output table.</para>
+            <para>If you use a <see cref="T:C1.Silverlight.Olap.C1OlapGrid"/> to show the output data, then set the grid's
+            <see cref="P:C1.Silverlight.Olap.C1OlapGrid.DataSource"/> property to the appropriate <b>C1OlapPanel</b>.</para>
+            </remarks>
+            <summary>
+            Provides a user interface for interactively transforming regular data tables into Olap pivot tables.
+            </summary>	
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapPanel.SetCustomDefaultValues">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Olap.C1OlapPanel"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapPanel.OnUpdating(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:C1.Silverlight.Olap.C1OlapPanel.Updating"/> event.
+            </summary>
+            <param name="e"><see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapPanel.OnUpdated(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:C1.Silverlight.Olap.C1OlapPanel.Updated"/> event.
+            </summary>
+            <param name="e"><see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapPanel.OnViewDefinitionChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:C1.Silverlight.Olap.C1OlapPanel.ViewDefinitionChanged"/> event.
+            </summary>
+            <param name="e"><see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapPanel.OnDataSourceChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:C1.Silverlight.Olap.C1OlapPanel.DataSourceChanged"/> event.
+            </summary>
+            <param name="e"><see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapPanel.DataSourceProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapPanel.DataSource"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapPanel.ShowTotalsRowsProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapPanel.ShowTotalsRows"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapPanel.ShowTotalsColumnsProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapPanel.ShowTotalsColumns"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapPanel.ShowZerosProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapPanel.ShowZeros"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapPanel.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Olap.C1OlapPanel"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapPanel.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.Olap.C1OlapPanel"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapPanel.OlapTable">
+            <summary>
+            Gets a reference to the <see cref="T:C1.Silverlight.Data.DataTable"/> that contains the
+            output of the Olap analysis.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapPanel.OlapEngine">
+            <summary>
+            Gets a reference to the <see cref="T:C1.Olap.C1OlapEngine"/> that performs
+            the Olap analysis for this <see cref="T:C1.Silverlight.Olap.C1OlapPanel"/>.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Olap.C1OlapPanel.Updating">
+            <summary>
+            Occurs before the <see cref="P:C1.Silverlight.Olap.C1OlapPanel.OlapEngine"/> starts updating the output Olap table.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Olap.C1OlapPanel.Updated">
+            <summary>
+            Occurs after the <see cref="P:C1.Silverlight.Olap.C1OlapPanel.OlapEngine"/> finishes the Olap analysis.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapPanel.ViewDefinition">
+            <summary>
+            Gets or sets an XML string containing an Olap view definition.
+            </summary>
+            <remarks>
+            <para>This property is typically used to persist the current view as
+            an application setting, so views are preserved across sessions.</para>
+            </remarks>
+            <example>
+            The code below loads an Olap view from the application settings when
+            the application starts, and saves them back when the application ends.
+            <code>
+            </code>
+            </example>
+        </member>
+        <member name="E:C1.Silverlight.Olap.C1OlapPanel.ViewDefinitionChanged">
+            <summary>
+            Occurs when the view definition changes, before the output table is updated.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Olap.C1OlapPanel.DataSourceChanged">
+            <summary>
+            Occurs when the data source changes.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapPanel.DataSource">
+            <summary>
+            Gets or sets the object that contains the data to be analyzed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapPanel.ShowTotalsRows">
+            <summary>
+            Gets or sets a value that determines whether the Olap output table should include a row with the totals for each column.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapPanel.ShowTotalsColumns">
+            <summary>
+            Gets or sets a value that determines whether the Olap output table should include a column with the totals for each row.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapPanel.ShowZeros">
+            <summary>
+            Gets or sets a value that determines whether the Olap output table should use zeros to indicate missing values.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Olap.DraggableItem">
+            <summary>
+            Class used in the data template to represent <see cref="T:C1.Olap.C1OlapField"/> objects.
+            </summary>
+            <remarks>
+            <b>DraggableItem</b> elements handle the <b>Loaded</b> event to register 
+            themselves as drag sources and to install the context sensitive menu used to 
+            configure the underlying <see cref="T:C1.Olap.C1OlapField"/>.
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.Olap.DraggableItem.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Olap.DraggableItem"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Olap.ReportOptions">
+            <summary>
+            Specifies options for Olap reports.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.ReportOptions.WriteXml(System.Xml.XmlWriter)">
+            <summary>
+            Saves the document settings into an <see cref="T:System.Xml.XmlWriter"/>.
+            </summary>
+            <param name="xw"><see cref="T:System.Xml.XmlWriter"/> where the document settings will be saved.</param>
+        </member>
+        <member name="M:C1.Silverlight.Olap.ReportOptions.ReadXml(System.Xml.XmlReader)">
+            <summary>
+            Reads the document settings from an <see cref="T:System.Xml.XmlReader"/>.
+            </summary>
+            <param name="xr"><see cref="T:System.Xml.XmlReader"/> that contains the document settings.</param>
+        </member>
+        <member name="P:C1.Silverlight.Olap.ReportOptions.Margin">
+            <summary>
+            Gets or sets the margin around each page (in pixels).
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.ReportOptions.Padding">
+            <summary>
+            Gets or sets the padding added within each page (in pixels).
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.ReportOptions.FooterLeft">
+            <summary>
+            Gets or sets the text displayed on the left part of the page footer.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.ReportOptions.FooterCenter">
+            <summary>
+            Gets or sets the text displayed on the center of the page footer.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.ReportOptions.FooterRight">
+            <summary>
+            Gets or sets the text displayed on the right part of the page footer.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.ReportOptions.HeaderLeft">
+            <summary>
+            Gets or sets the text displayed on the left part of the page header.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.ReportOptions.HeaderCenter">
+            <summary>
+            Gets or sets the text displayed on the center of the page header.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.ReportOptions.HeaderRight">
+            <summary>
+            Gets or sets the text displayed on the right part of the page header.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.ReportOptions.ShowHeaderSeparator">
+            <summary>
+            Gets or sets a value that determines whether a line should be displayed 
+            between the page header and the page content.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.ReportOptions.ShowFooterSeparator">
+            <summary>
+            Gets or sets a value that determines whether a line should be displayed 
+            between the page footer and the page content.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.ReportOptions.IncludeGrid">
+            <summary>
+            Gets or sets a value that determines whether the Olap grid should be
+            included in the report.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.ReportOptions.IncludeChart">
+            <summary>
+            Gets or sets a value that determines whether the Olap chart should be
+            included in the report.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.ReportOptions.IncludeRawData">
+            <summary>
+            Gets or sets a value that determines whether the raw data grid should be
+            included in the report.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.ReportOptions.GridScale">
+            <summary>
+            Gets or sets the scaling mode to be used when rendering the Olap grid.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.ReportOptions.ChartScale">
+            <summary>
+            Gets or sets the scaling mode to be used when rendering the Olap chart.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.ReportOptions.RawDataScale">
+            <summary>
+            Gets or sets the scaling mode to be used when rendering the raw data grid.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Olap.C1OlapReportOptions">
+            <summary>
+            Control used to host the report options for C1Olap.
+            </summary>	
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapReportOptions.#ctor(C1.Silverlight.Olap.ReportOptions)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Olap.C1OlapReportOptions"/>.
+            </summary>
+            <param name="reportOptions">Specifies the options for this object.</param>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapReportOptions.TopMarginProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapReportOptions.TopMargin"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapReportOptions.LeftMarginProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapReportOptions.LeftMargin"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapReportOptions.BottomMarginProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapReportOptions.BottomMargin"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapReportOptions.RightMarginProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapReportOptions.RightMargin"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapReportOptions.TopPaddingProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapReportOptions.TopPadding"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapReportOptions.LeftPaddingProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapReportOptions.LeftPadding"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapReportOptions.BottomPaddingProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapReportOptions.BottomPadding"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapReportOptions.RightPaddingProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapReportOptions.RightPadding"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapReportOptions.IncludeGridProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapReportOptions.IncludeGrid"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapReportOptions.IncludeChartProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapReportOptions.IncludeChart"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapReportOptions.IncludeRawProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapReportOptions.IncludeRaw"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapReportOptions.GridScaleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapReportOptions.GridScale"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapReportOptions.ChartScaleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapReportOptions.ChartScale"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapReportOptions.RawScaleProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapReportOptions.RawScale"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapReportOptions.HeaderLeftProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapReportOptions.HeaderLeft"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapReportOptions.HeaderCenterProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapReportOptions.HeaderCenter"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapReportOptions.HeaderRightProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapReportOptions.HeaderRight"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapReportOptions.FooterLeftProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapReportOptions.FooterLeft"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapReportOptions.FooterCenterProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapReportOptions.FooterCenter"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapReportOptions.FooterRightProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapReportOptions.FooterRight"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapReportOptions.ShowHeaderSeparatorProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapReportOptions.ShowHeaderSeparator"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.C1OlapReportOptions.ShowFooterSeparatorProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.C1OlapReportOptions.ShowFooterSeparator"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapReportOptions.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Olap.C1OlapReportOptions"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.C1OlapReportOptions.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.Olap.C1OlapReportOptions"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapReportOptions.TopMargin">
+            <summary>
+            Gets or sets the top margin.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapReportOptions.LeftMargin">
+            <summary>
+            Gets or sets the left margin.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapReportOptions.BottomMargin">
+            <summary>
+            Gets or sets the bottom margin.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapReportOptions.RightMargin">
+            <summary>
+            Gets or sets the right margin.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapReportOptions.TopPadding">
+            <summary>
+            Gets or sets the top padding.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapReportOptions.LeftPadding">
+            <summary>
+            Gets or sets the left padding.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapReportOptions.BottomPadding">
+            <summary>
+            Gets or sets the bottom padding.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapReportOptions.RightPadding">
+            <summary>
+            Gets or sets the right padding.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapReportOptions.IncludeGrid">
+            <summary>
+            Gets or sets a value indicating whether the grid will be included in the document.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapReportOptions.IncludeChart">
+            <summary>
+            Gets or sets a value indicating whether the chart will be included in the document.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapReportOptions.IncludeRaw">
+            <summary>
+            Gets or sets a value indicating whether the raw data will be included in the document.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapReportOptions.GridScale">
+            <summary>
+            Gets or sets the ScaleMode for the Grid.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapReportOptions.ChartScale">
+            <summary>
+            Gets or sets the ScaleMode for the Chart.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapReportOptions.RawScale">
+            <summary>
+            Gets or sets the ScaleMode for the RawData.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapReportOptions.HeaderLeft">
+            <summary>
+            Gets or sets the text for the header aligned to the left of the page.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapReportOptions.HeaderCenter">
+            <summary>
+            Gets or sets the text for the header aligned to the center of the page.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapReportOptions.HeaderRight">
+            <summary>
+            Gets or sets the text for the header aligned to the right of the page.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapReportOptions.FooterLeft">
+            <summary>
+            Gets or sets the text for the footer aligned to the left of the page.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapReportOptions.FooterCenter">
+            <summary>
+            Gets or sets the text for the footer aligned to the center of the page.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapReportOptions.FooterRight">
+            <summary>
+            Gets or sets the text for the footer aligned to the right of the page.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapReportOptions.ShowHeaderSeparator">
+            <summary>
+            Gets or sets a value indicating whether a header separator will be included in the document.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.C1OlapReportOptions.ShowFooterSeparator">
+            <summary>
+            Gets or sets a value indicating whether a footer separator will be included in the document.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Olap.CustomFilterEditor">
+            <summary>
+            Editor for conditions in a <see cref="T:C1.Olap.C1OlapFilter"/>.
+            </summary>	
+        </member>
+        <member name="F:C1.Silverlight.Olap.CustomFilterEditor.FilterProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.CustomFilterEditor.Filter"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.CustomFilterEditor.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Olap.CustomFilterEditor"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.CustomFilterEditor.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.Olap.CustomFilterEditor"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Olap.CustomFilterEditor.Filter">
+            <summary>
+            Gets or sets the <see cref="T:C1.Olap.C1OlapFilter"/> being edited.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Olap.PrintManager">
+            <summary>
+            Handles printing Olap reports.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.PrintManager.Print(C1.Silverlight.Olap.C1OlapPage,C1.Silverlight.Olap.ReportOptions)">
+            <summary>
+            Generates a report based on the current Olap view.
+            </summary>
+            <param name="olapPage"><see cref="T:C1.Silverlight.Olap.C1OlapPage"/> that contains the view to be printed.</param>
+            <param name="reportOptions"><see cref="T:C1.Silverlight.Olap.ReportOptions"/> that contains options to be used when generating the report.</param>
+        </member>
+        <member name="T:C1.Silverlight.Olap.PrintPageTemplate">
+            <summary>
+            Template control used as a container for printing.
+            </summary>	
+        </member>
+        <member name="F:C1.Silverlight.Olap.PrintPageTemplate.ContentProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.PrintPageTemplate.Content"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.PrintPageTemplate.FooterRightProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.PrintPageTemplate.FooterRight"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.PrintPageTemplate.FooterCenterProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.PrintPageTemplate.FooterCenter"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.PrintPageTemplate.FooterLeftProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.PrintPageTemplate.FooterLeft"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.PrintPageTemplate.HeaderRightProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.PrintPageTemplate.HeaderRight"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.PrintPageTemplate.HeaderCenterProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.PrintPageTemplate.HeaderCenter"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.PrintPageTemplate.HeaderLeftProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.PrintPageTemplate.HeaderLeft"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.PrintPageTemplate.MarginProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.PrintPageTemplate.Margin"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.PrintPageTemplate.StretchProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.PrintPageTemplate.Stretch"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.PrintPageTemplate.ShowHeaderSeparatorProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.PrintPageTemplate.ShowHeaderSeparator"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.PrintPageTemplate.ShowFooterSeparatorProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.PrintPageTemplate.ShowFooterSeparator"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Olap.PrintPageTemplate.PaddingProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Olap.PrintPageTemplate.Padding"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.PrintPageTemplate.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Olap.PrintPageTemplate"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.PrintPageTemplate.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.Olap.PrintPageTemplate"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Olap.PrintPageTemplate.Content">
+            <summary>
+            Gets or sets the content of the page template.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.PrintPageTemplate.FooterRight">
+            <summary>
+            Gets or sets the text for the footer on the right side of the page template.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.PrintPageTemplate.FooterCenter">
+            <summary>
+            Gets or sets the text for the footer on the center of the page template.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.PrintPageTemplate.FooterLeft">
+            <summary>
+            Gets or sets the text for the footer on the left side of the page template.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.PrintPageTemplate.HeaderRight">
+            <summary>
+            Gets or sets the text for the header on the right side of the page template.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.PrintPageTemplate.HeaderCenter">
+            <summary>
+            Gets or sets the text for the header on the center of the page template.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.PrintPageTemplate.HeaderLeft">
+            <summary>
+            Gets or sets the text for the header on the left side of the page template.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.PrintPageTemplate.Margin">
+            <summary>
+            Gets or sets the margin of the page template.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.PrintPageTemplate.Stretch">
+            <summary>
+            Gets or sets the stretch mode of the page template.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.PrintPageTemplate.ShowHeaderSeparator">
+            <summary>
+            Gets or sets a value indicating whether to show the header separator or not.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.PrintPageTemplate.ShowFooterSeparator">
+            <summary>
+            Gets or sets a value indicating whether to show the footer separator or not.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.PrintPageTemplate.Padding">
+            <summary>
+            Gets or sets the padding of the page template.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Olap.Resources.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Absolute">
+            <summary>
+              Looks up a localized string similar to Absolute.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.ActualSize">
+            <summary>
+              Looks up a localized string similar to Actual size.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.And">
+            <summary>
+              Looks up a localized string similar to And.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.ApplyToValuesAbove">
+            <summary>
+              Looks up a localized string similar to Apply to Values Above.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.ApplyToValuesBelow">
+            <summary>
+              Looks up a localized string similar to Apply to Values Below.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Background">
+            <summary>
+              Looks up a localized string similar to Background:.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.BeginsWith">
+            <summary>
+              Looks up a localized string similar to Begins With....
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Between">
+            <summary>
+              Looks up a localized string similar to Between....
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Bold">
+            <summary>
+              Looks up a localized string similar to Bold:.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Bottom">
+            <summary>
+              Looks up a localized string similar to Bottom:.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Cancel">
+            <summary>
+              Looks up a localized string similar to Cancel.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Caption">
+            <summary>
+              Looks up a localized string similar to Caption.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Chart">
+            <summary>
+              Looks up a localized string similar to Chart.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.ChartOptions">
+            <summary>
+              Looks up a localized string similar to Chart Options.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.ChartType">
+            <summary>
+              Looks up a localized string similar to Chart Type.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.ChartTypes">
+            <summary>
+              Looks up a localized string similar to Bar|Column|Area|Line|Scatter.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.ChooseFields">
+            <summary>
+              Looks up a localized string similar to Choose fields to add to table:.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Clear">
+            <summary>
+              Looks up a localized string similar to Clear.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.ClearFilter">
+            <summary>
+              Looks up a localized string similar to Clear Filter.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.ColumnFields">
+            <summary>
+              Looks up a localized string similar to Column Fields.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Conditions">
+            <summary>
+              Looks up a localized string similar to None|Equals|Does Not Equal|Greater Than|Less Than|Greater Than Or Equal To|Less Than Or Equal To|Contains|Does Not Contain|Begins With|Ends With.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Contains">
+            <summary>
+              Looks up a localized string similar to Contains....
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.CurrentDate">
+            <summary>
+              Looks up a localized string similar to Current Date.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.CurrentTime">
+            <summary>
+              Looks up a localized string similar to Current Time.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.CustomFilter">
+            <summary>
+              Looks up a localized string similar to Custom Filter.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.CustomFormat">
+            <summary>
+              Looks up a localized string similar to Custom Format:.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.CustomizeGridView">
+            <summary>
+              Looks up a localized string similar to Customize Grid view.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.DateFormats">
+            <summary>
+              Looks up a localized string similar to MMMM dd, yyyy|d|d/M/yy|dd/MM/yy|dd/MM/yyyy|MMM yyyy|MMMM yyyy|d-MMM-yy|d-MMM-yyyy|Custom.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.DecimalPlaces">
+            <summary>
+              Looks up a localized string similar to Decimal Places:.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.DefaultExtension">
+            <summary>
+              Looks up a localized string similar to .olapx.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.DeferUpdates">
+            <summary>
+              Looks up a localized string similar to Defer Updates.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Display">
+            <summary>
+              Looks up a localized string similar to Display.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.DocumentOptions">
+            <summary>
+              Looks up a localized string similar to Document Options.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.DoesNotContain">
+            <summary>
+              Looks up a localized string similar to Does Not Contain....
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.DoesNotEqual">
+            <summary>
+              Looks up a localized string similar to Does Not Equal....
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.DragFields">
+            <summary>
+              Looks up a localized string similar to Drag fields between areas below:.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.EndsWith">
+            <summary>
+              Looks up a localized string similar to Ends With....
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.FieldSettings">
+            <summary>
+              Looks up a localized string similar to Field Settings....
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.FieldSettingsParam">
+            <summary>
+              Looks up a localized string similar to Field Settings: {0}.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.FileDialogFilter">
+            <summary>
+              Looks up a localized string similar to C1Olap view definition files (*.olapx)|*.olapx.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Filter">
+            <summary>
+              Looks up a localized string similar to Filter.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.FilterTypes">
+            <summary>
+              Looks up a localized string similar to Numeric Filter|Date/Time Filter|Text Filter.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.FitToOnePage">
+            <summary>
+              Looks up a localized string similar to Fit to one page.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.FitToPageWidth">
+            <summary>
+              Looks up a localized string similar to Fit to page width.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Footer">
+            <summary>
+              Looks up a localized string similar to Footer:.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Foreground">
+            <summary>
+              Looks up a localized string similar to Foreground:.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Format">
+            <summary>
+              Looks up a localized string similar to Format.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.GenerateReports">
+            <summary>
+              Looks up a localized string similar to Generate reports based on the current view..
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.GrandTotals">
+            <summary>
+              Looks up a localized string similar to Grand Totals.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.GreaterThan">
+            <summary>
+              Looks up a localized string similar to Greater Than....
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.GreaterThanOrEqualTo">
+            <summary>
+              Looks up a localized string similar to Greater Than Or Equal To....
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Grid">
+            <summary>
+              Looks up a localized string similar to Grid.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.GridOptions">
+            <summary>
+              Looks up a localized string similar to Grid Options.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Header">
+            <summary>
+              Looks up a localized string similar to Header:.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.HeaderFooter">
+            <summary>
+              Looks up a localized string similar to Header/Footer.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.HighValues">
+            <summary>
+              Looks up a localized string similar to High Values.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.IncludeInReport">
+            <summary>
+              Looks up a localized string similar to Include in report.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.InvalidFormat">
+            <summary>
+              Looks up a localized string similar to Invalid format.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Left">
+            <summary>
+              Looks up a localized string similar to Left:.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.LessThan">
+            <summary>
+              Looks up a localized string similar to Less Than....
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.LessThanOrEqualTo">
+            <summary>
+              Looks up a localized string similar to Less Than Or Equal To....
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.LoadViewFromFile">
+            <summary>
+              Looks up a localized string similar to Load Olap view from a file.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.LowValues">
+            <summary>
+              Looks up a localized string similar to Low Values.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Margin">
+            <summary>
+              Looks up a localized string similar to Margin:.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.MnuEquals">
+            <summary>
+              Looks up a localized string similar to Equals....
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.MoveDown">
+            <summary>
+              Looks up a localized string similar to Move Down.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.MoveToBeginning">
+            <summary>
+              Looks up a localized string similar to Move to Beginning.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.MoveToColumnFields">
+            <summary>
+              Looks up a localized string similar to Move to Column Fields.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.MoveToEnd">
+            <summary>
+              Looks up a localized string similar to Move to End.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.MoveToFilterFields">
+            <summary>
+              Looks up a localized string similar to Move to Filter Fields.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.MoveToRowFields">
+            <summary>
+              Looks up a localized string similar to Move to Row Fields.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.MoveToValueFields">
+            <summary>
+              Looks up a localized string similar to Move to Value Fields.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.MoveUp">
+            <summary>
+              Looks up a localized string similar to Move Up.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.None">
+            <summary>
+              Looks up a localized string similar to None.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.NotSet">
+            <summary>
+              Looks up a localized string similar to Not Set.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.NumberFormats">
+            <summary>
+              Looks up a localized string similar to Number|Currency|Percentage|Scientific|Custom.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.OK">
+            <summary>
+              Looks up a localized string similar to OK.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.OlapChart">
+            <summary>
+              Looks up a localized string similar to Olap Chart.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.OlapGrid">
+            <summary>
+              Looks up a localized string similar to Olap Grid.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Options">
+            <summary>
+              Looks up a localized string similar to Options....
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Or">
+            <summary>
+              Looks up a localized string similar to Or.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Padding">
+            <summary>
+              Looks up a localized string similar to Padding:.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Page">
+            <summary>
+              Looks up a localized string similar to Page.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.PageNumber">
+            <summary>
+              Looks up a localized string similar to Page Number.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Palette">
+            <summary>
+              Looks up a localized string similar to Palette.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Percentage">
+            <summary>
+              Looks up a localized string similar to Percentage.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Print">
+            <summary>
+              Looks up a localized string similar to Print.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.RawData">
+            <summary>
+              Looks up a localized string similar to Raw Data.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.RawDataOptions">
+            <summary>
+              Looks up a localized string similar to Raw Data Options.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Redo">
+            <summary>
+              Looks up a localized string similar to Redo.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.RemoveField">
+            <summary>
+              Looks up a localized string similar to Remove Field.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Report">
+            <summary>
+              Looks up a localized string similar to Report.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.ReportContent">
+            <summary>
+              Looks up a localized string similar to Report Content.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Right">
+            <summary>
+              Looks up a localized string similar to Right:.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.RowFields">
+            <summary>
+              Looks up a localized string similar to Row Fields.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Sample">
+            <summary>
+              Looks up a localized string similar to Sample:.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.SaveViewToFile">
+            <summary>
+              Looks up a localized string similar to Save OLAP view to a file.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Scaling">
+            <summary>
+              Looks up a localized string similar to Scaling:.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.SelectAll">
+            <summary>
+              Looks up a localized string similar to (Select All).
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Separator">
+            <summary>
+              Looks up a localized string similar to Separator.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.ShowDetailOnRightClick">
+            <summary>
+              Looks up a localized string similar to Show Detail On Right Click.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.ShowGridLines">
+            <summary>
+              Looks up a localized string similar to Show Gridlines.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.ShowItems">
+            <summary>
+              Looks up a localized string similar to Show items where the value:.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.ShowLegend">
+            <summary>
+              Looks up a localized string similar to Show Legend.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.ShowRawData">
+            <summary>
+              Looks up a localized string similar to Show Raw Data.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.ShowSelectionStatus">
+            <summary>
+              Looks up a localized string similar to Show Selection Status.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.ShowTitle">
+            <summary>
+              Looks up a localized string similar to Show Title.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.ShowTotalsColumn">
+            <summary>
+              Looks up a localized string similar to Show Totals Column.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.ShowTotalsRow">
+            <summary>
+              Looks up a localized string similar to Show Totals Row.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.ShowZeros">
+            <summary>
+              Looks up a localized string similar to Show Zeros.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Stacked">
+            <summary>
+              Looks up a localized string similar to Stacked.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Style">
+            <summary>
+              Looks up a localized string similar to Style.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.StyleConditions">
+            <summary>
+              Looks up a localized string similar to Not Set|Absolute|Percentage.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.SubtotalFuncs">
+            <summary>
+              Looks up a localized string similar to Sum|Count|Average|Maximum|Minimum|First|Last|Variance|Standard Deviation|Variance Population|Standard Deviation Population.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Subtotals">
+            <summary>
+              Looks up a localized string similar to Subtotals.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Title">
+            <summary>
+              Looks up a localized string similar to Title.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Top">
+            <summary>
+              Looks up a localized string similar to Top:.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.TotalColumns">
+            <summary>
+              Looks up a localized string similar to Total Columns.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.TotalPageCount">
+            <summary>
+              Looks up a localized string similar to Total Page Count.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.TotalRows">
+            <summary>
+              Looks up a localized string similar to Total Rows.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.TotalsOnly">
+            <summary>
+              Looks up a localized string similar to Totals Only.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Undo">
+            <summary>
+              Looks up a localized string similar to Undo.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.UseThousandSeparator">
+            <summary>
+              Looks up a localized string similar to Use 1000 separator.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.Values">
+            <summary>
+              Looks up a localized string similar to Values.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.Resources.Resources.WeighBy">
+            <summary>
+              Looks up a localized string similar to Weigh by:.
+            </summary>
+        </member>
+        <member name="T:C1.Util.Licensing.C1ProductInfoAttribute">
+            <summary>
+            Attribute used to attach licensing/product information to assemblies.
+            </summary>
+        </member>
+        <member name="T:C1.Util.Licensing.LicenseMode">
+            <summary>
+            Provides the licensing mode connection between a control and its designer.
+            </summary>
+        </member>
+        <member name="M:C1.Util.Licensing.LicenseMode.GetEvaluation(System.Windows.DependencyObject)">
+            <summary>
+            This property is for internal use only.
+            </summary>
+        </member>
+        <member name="M:C1.Util.Licensing.LicenseMode.SetEvaluation(System.Windows.DependencyObject,System.Boolean)">
+            <summary>
+            This property is for internal use only.
+            </summary>
+        </member>
+        <member name="F:C1.Util.Licensing.LicenseMode.EvaluationProperty">
+            <summary>
+            This property is for internal use only.
+            </summary>
+        </member>
+        <member name="T:C1.Olap.ITypedList">
+            <summary>
+            Provides functionality to discover the schema for a bindable list,
+            where the properties available for binding differ from the public 
+            properties of the object to bind to. 
+            </summary>
+        </member>
+        <member name="M:C1.Olap.ITypedList.GetItemProperties(C1.Olap.PropertyDescriptor[])">
+            <summary>
+            Returns the <see cref="T:C1.Olap.PropertyDescriptorCollection"/> that 
+            represents the properties on each item used to bind data.
+            </summary>
+            <param name="listAccessors">An array of <see cref="T:C1.Olap.PropertyDescriptor"/>
+            objects to find in the collection (may be null).</param>
+            <returns>
+            A <see cref="T:C1.Olap.PropertyDescriptorCollection"/> that 
+            represents the properties on each item used to bind data.
+            </returns>
+        </member>
+        <member name="T:C1.Olap.ListChangedEventArgs">
+            <summary>
+            Provides data for the <b>ListChanged</b> event.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.ListChangedEventArgs.ListChangedType">
+            <summary>
+            Gets the type of change.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.ListChangedEventArgs.NewIndex">
+            <summary>
+            Gets the index of the item affected by the change.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.ListChangedEventArgs.OldIndex">
+            <summary>
+            Gets the old index of an item that has been moved.
+            </summary>
+        </member>
+        <member name="M:C1.Olap.ListChangedEventArgs.#ctor(C1.Olap.ListChangedType,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Olap.ListChangedEventArgs"/>.
+            </summary>
+            <param name="type"><see cref="F:C1.Olap.ListChangedEventArgs.ListChangedType"/> that describes the change.</param>
+            <param name="newIndex">Index of the item affected by the change.</param>
+            <param name="oldIndex">Old index of an item that has been moved.</param>
+        </member>
+        <member name="T:C1.Olap.ListChangedType">
+            <summary>
+            Specifies how the list changed.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.ListChangedType.Reset">
+            <summary>
+            List has changed in a major way and all items have to be refreshed.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.ListChangedType.ItemAdded">
+            <summary>
+            An item was added to the list.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.ListChangedType.ItemDeleted">
+            <summary>
+            An item was removed from the list.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.ListChangedType.ItemMoved">
+            <summary>
+            An item was moved within the list.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.ListChangedType.ItemChanged">
+            <summary>
+            The value of an item was modified.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.ListChangedType.PropertyDescriptorAdded">
+            <summary>
+            A column was added to the list.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.ListChangedType.PropertyDescriptorDeleted">
+            <summary>
+            A column was removed from the list.
+            </summary>
+        </member>
+        <member name="F:C1.Olap.ListChangedType.PropertyDescriptorChanged">
+            <summary>
+            A column changed in some way.
+            </summary>
+        </member>
+        <member name="T:C1.Olap.TypeDescriptor">
+            <summary>
+            Provides information about the characteristics for an object, 
+            such as its attributes, properties, and events.
+            </summary>
+        </member>
+        <member name="M:C1.Olap.TypeDescriptor.GetProperties(System.Object)">
+            <summary>
+            Returns the collection of properties on an object or a type.
+            </summary>
+            <param name="obj">Object or <see cref="T:System.Type"/> to get properties for.</param>
+            <returns>
+            A <see cref="T:C1.Olap.PropertyDescriptorCollection"/> with the properties
+            for the specified object or type.
+            </returns>
+        </member>
+        <member name="T:C1.Olap.PropertyDescriptor">
+            <summary>
+            Provides an abstraction of a property on a class.
+            </summary>
+        </member>
+        <member name="M:C1.Olap.PropertyDescriptor.GetValue(System.Object)">
+            <summary>
+            Gets the current value of the property on an object.
+            </summary>
+            <param name="obj">The object for which to retrieve the value.</param>
+            <returns>The current value of the property on an object.</returns>
+        </member>
+        <member name="P:C1.Olap.PropertyDescriptor.Name">
+            <summary>
+            Gets the name of the property.
+            </summary>
+        </member>
+        <member name="P:C1.Olap.PropertyDescriptor.PropertyType">
+            <summary>
+            Gets the type of the property.
+            </summary>
+        </member>
+        <member name="T:C1.Olap.PropertyDescriptorCollection">
+            <summary>
+            Represents a collection of <see cref="T:C1.Olap.PropertyDescriptor"/> objects.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Olap.OlapPageUndoStack">
+            <summary>
+            Undo/Redo stack for the C1OlapPage.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Olap.UndoStack">
+            <summary>
+            Generic Undo/Redo stack.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.UndoStack.#ctor">
+            <summary>
+            Initializes a new instance of an <see cref="T:C1.Silverlight.Olap.UndoStack"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.UndoStack.GetCurrentState">
+            <summary>
+            Gets an object that represents the current state.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.UndoStack.ApplySavedState(System.Object)">
+            <summary>
+            Applies a saved state.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.UndoStack.Clear">
+            <summary>
+            Clears the undo/redo stack.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.UndoStack.Undo">
+            <summary>
+            Executes an Undo command.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.UndoStack.Redo">
+            <summary>
+            Executes a Redo command.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.UndoStack.SaveState">
+            <summary>
+            Saves the current state to the stack.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.UndoStack.CanUndo">
+            <summary>
+            Gets a value that indicates whether the stack contains Undo states.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Olap.UndoStack.CanRedo">
+            <summary>
+            Gets a value that indicates whether the stack contains Redo states.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.OlapPageUndoStack.#ctor(C1.Silverlight.Olap.C1OlapPage,C1.Silverlight.C1MenuItem,C1.Silverlight.C1MenuItem)">
+            <summary>
+            Initializes a new instance of an <see cref="T:C1.Silverlight.Olap.OlapPageUndoStack"/>.
+            </summary>
+            <param name="page"></param>
+            <param name="btnUndo"></param>
+            <param name="btnRedo"></param>
+        </member>
+        <member name="M:C1.Silverlight.Olap.OlapPageUndoStack.GetCurrentState">
+            <summary>
+            Gets an object that represents the current state.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.OlapPageUndoStack.ApplySavedState(System.Object)">
+            <summary>
+            Applies a saved state.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Olap.OlapPageUndoStack.Clear">
+            <summary>
+            Overridden to update button state after clearing the undo stack.
+            </summary>
+        </member>
+    </members>
+</doc>

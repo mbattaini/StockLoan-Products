@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SecMasterService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/SecMasterService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/SecMasterService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISecMasterService_GetSourceIP_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSourceIP" />
+  </wsdl:message>
+  <wsdl:message name="ISecMasterService_GetSourceIP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSourceIPResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecMasterService_PriceSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:PriceSet" />
+  </wsdl:message>
+  <wsdl:message name="ISecMasterService_PriceSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PriceSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecMasterService_PricesGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:PricesGet" />
+  </wsdl:message>
+  <wsdl:message name="ISecMasterService_PricesGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PricesGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecMasterService_SecIdAliasSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:SecIdAliasSet" />
+  </wsdl:message>
+  <wsdl:message name="ISecMasterService_SecIdAliasSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SecIdAliasSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecMasterService_SecMasterGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:SecMasterGet" />
+  </wsdl:message>
+  <wsdl:message name="ISecMasterService_SecMasterGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SecMasterGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecMasterService_SecMasterSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:SecMasterSet" />
+  </wsdl:message>
+  <wsdl:message name="ISecMasterService_SecMasterSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SecMasterSetResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISecMasterService">
+    <wsdl:operation name="GetSourceIP">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecMasterService/GetSourceIP" message="tns:ISecMasterService_GetSourceIP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecMasterService/GetSourceIPResponse" message="tns:ISecMasterService_GetSourceIP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PriceSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecMasterService/PriceSet" message="tns:ISecMasterService_PriceSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecMasterService/PriceSetResponse" message="tns:ISecMasterService_PriceSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PricesGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecMasterService/PricesGet" message="tns:ISecMasterService_PricesGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecMasterService/PricesGetResponse" message="tns:ISecMasterService_PricesGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SecIdAliasSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecMasterService/SecIdAliasSet" message="tns:ISecMasterService_SecIdAliasSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecMasterService/SecIdAliasSetResponse" message="tns:ISecMasterService_SecIdAliasSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SecMasterGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecMasterService/SecMasterGet" message="tns:ISecMasterService_SecMasterGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecMasterService/SecMasterGetResponse" message="tns:ISecMasterService_SecMasterGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SecMasterSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecMasterService/SecMasterSet" message="tns:ISecMasterService_SecMasterSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecMasterService/SecMasterSetResponse" message="tns:ISecMasterService_SecMasterSet_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISecMasterService" type="tns:ISecMasterService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSourceIP">
+      <soap:operation soapAction="http://tempuri.org/ISecMasterService/GetSourceIP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PriceSet">
+      <soap:operation soapAction="http://tempuri.org/ISecMasterService/PriceSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PricesGet">
+      <soap:operation soapAction="http://tempuri.org/ISecMasterService/PricesGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SecIdAliasSet">
+      <soap:operation soapAction="http://tempuri.org/ISecMasterService/SecIdAliasSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SecMasterGet">
+      <soap:operation soapAction="http://tempuri.org/ISecMasterService/SecMasterGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SecMasterSet">
+      <soap:operation soapAction="http://tempuri.org/ISecMasterService/SecMasterSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SecMasterService">
+    <wsdl:port name="BasicHttpBinding_ISecMasterService" binding="tns:BasicHttpBinding_ISecMasterService">
+      <soap:address location="http://dalgsldev01.penson.com:8080/StockLoan.WebServices.DChen/SecMasterService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

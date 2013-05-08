@@ -1,0 +1,310 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Silverlight.DataGrid.Filters</name>
+    </assembly>
+    <members>
+        <member name="T:C1.Silverlight.DataGrid.Filters.DataGridFilterRowHeaderPresenter">
+            <summary>
+            Row header of a filter row.
+            This header shows a funnel to be differentiated from the other rows.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRowHeaderPresenter.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Silverlight.DataGrid.Filters.DataGridFilterRowHeaderPresenter"/> class.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Filters.DelayHelper">
+            <summary>
+            Allow to execute an action delayed a specified amount of time.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Filters.C1FullTextSearchBehavior">
+            <summary>
+            Configure <see cref="T:C1.Silverlight.DataGrid.C1DataGrid"/> to be filtered from a string 
+            which can be entered using a textbox,
+            and highlights the matched text in the cells foreground and background.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.C1FullTextSearchBehavior.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.Silverlight.DataGrid.Filters.C1FullTextSearchBehavior"/> class.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.C1FullTextSearchBehavior.GetFullTextSearchBehavior(C1.Silverlight.DataGrid.C1DataGrid)">
+            <summary>
+            Gets the full text search behavior.
+            </summary>
+            <param name="obj">The data grid to which the filter is applied.</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.C1FullTextSearchBehavior.SetFullTextSearchBehavior(C1.Silverlight.DataGrid.C1DataGrid,C1.Silverlight.DataGrid.Filters.C1FullTextSearchBehavior)">
+            <summary>
+            Sets the full text search behavior.
+            </summary>
+            <param name="obj">The data grid to which the filter will be applied.</param>
+            <param name="value">The behavior.</param>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.C1FullTextSearchBehavior.FullTextSearchBehaviorProperty">
+            <summary>
+            Attached full text search behavior.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.C1FullTextSearchBehavior.TextChangedDelayProperty">
+            <summary>
+            Gets or sets the delay time used to filter after the last typed character.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.C1FullTextSearchBehavior.FilterProperty">
+            <summary>
+            Gets or sets the filter string.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.C1FullTextSearchBehavior.HighlightedBackgroundProperty">
+            <summary>
+            Gets or sets the brush used to highlight the cell background that matches the searched text.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.DataGrid.Filters.C1FullTextSearchBehavior.HighlightedForegroundProperty">
+            <summary>
+            Gets or sets the brush used to highlight the cell foreground that matches the searched text.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.C1FullTextSearchBehavior.Delay">
+            <summary>
+            Gets or sets the delay time used to filter after the last typed character.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.C1FullTextSearchBehavior.Filter">
+            <summary>
+            Gets or sets the filter string.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.C1FullTextSearchBehavior.HighlightedBackground">
+            <summary>
+            Gets or sets the brush used to highlight the cell background that matches the searched text.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.C1FullTextSearchBehavior.HighlightedForeground">
+            <summary>
+            Gets or sets the brush used to highlight the cell foreground that matches the searched text.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Filters.DataGridFilterRow">
+            <summary>
+            Row that shows one textbox per column and the data is filtered 
+            as the user type in one of the textbox's.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.OnLoaded">
+            <summary>
+            Called after the row is added to the row collection.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.GetRowHeaderPresenterRecyclingKey">
+            <summary>
+            Key used to store the row header for future reuse in a shared pool. Rows
+            returning the same RecyclingKey will be candidate to share the same row header
+            instances.
+            <list type="number">
+            		<item>
+            			<description>If there is no recycled row header matching the recycling key, the
+            method <see cref="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.CreateRowHeaderPresenter">CreateRowHeaderPresenter</see> will
+            be called to create a new one. </description></item>
+            		<item>
+            			<description>Once the row header is created or a recycled one is taken, the
+            method <see cref="!:BindRowHeaderPresenter">BindRowHeaderPresenter</see> will be
+            called. </description></item>
+            		<item>
+            			<description>When the row header is not being used the method <see cref="!:UnbindRowHeaderPresenter">UnbindRowHeaderPresenter</see> will be called,
+            and the row header will be saved for future use in other
+            rows.</description></item></list>
+            </summary>
+            <returns>
+            The recycling key, or null to disable recycling.
+            </returns>
+            <remarks>
+            Typically this method returns the type of the element returned by the method
+            <see cref="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.CreateRowHeaderPresenter">CreateRowHeaderPresenter</see>.
+            </remarks>
+            <example>
+            	<c>return typeof(DataGridFilterRowHeaderPresenter);</c>
+            </example>
+            <seealso cref="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.CreateRowHeaderPresenter">CreateRowHeaderPresenter</seealso>
+            <seealso cref="!:BindRowHeaderPresenter">BindRowHeaderPresenter</seealso>
+            <seealso cref="!:UnbindRowHeaderPresenter">UnbindRowHeaderPresenter</seealso>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.CreateRowHeaderPresenter">
+            <summary>
+            Gets the row header presenter corresponding to this row.
+            </summary>
+            <returns>
+            The row header presenter corresponding to this row.
+            </returns>
+            <remarks>
+            This method is only called if no row header presenter is found in the shared
+            pool matching the recycling key returned by the method <see cref="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.GetCellContentRecyclingKey(C1.Silverlight.DataGrid.DataGridColumn)">GetRowHeaderPresenterRecyclingKey</see>.
+            </remarks>
+            <example>
+            	<c>return new DataGridFilterRowHeaderPresenter();</c>
+            </example>
+            <seealso cref="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.GetRowHeaderPresenterRecyclingKey">GetRowHeaderPresenterRecyclingKey</seealso>
+            <seealso cref="!:BindRowHeaderPresenter">BindRowHeaderPresenter</seealso>
+            <seealso cref="!:UnbindRowHeaderPresenter">UnbindRowHeaderPresenter</seealso>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.GetRowPresenterRecyclingKey">
+            <summary>
+            Key used to store the row presenter for future reuse in a shared pool. Rows
+            returning the same RecyclingKey will be candidate to share the same row
+            presenter instances.
+            <list type="number">
+            		<item>
+            			<description>If there is no recycled row presenter matching the recycling key,
+            the method <see cref="!:CreateRowPresenter">CreateRowPresenter</see> will be
+            called to create a new one. </description></item>
+            		<item>
+            			<description>Once the row presenter is created or a recycled one is taken, the
+            method <see cref="!:BindRowPresenter">BindRowPresenter</see> will be called.
+            </description></item>
+            		<item>
+            			<description>When the row presenter is not being used the method <see cref="!:UnbindRowPresenter">UnbindRowPresenter</see> will be called, and the row
+            presenter will be saved for future use in other
+            rows.</description></item></list>
+            </summary>
+            <returns>
+            The recycling key, or null to disable recycling.
+            </returns>
+            <remarks>
+            Typically this method returns the type of the element returned by the method
+            <see cref="!:CreateRowPresenter">CreateRowPresenter</see>.
+            </remarks>
+            <example><c>return typeof(DataGridFilterRow);</c></example>
+            <seealso cref="!:CreateRowPresenter">CreateRowPresenter</seealso>
+            <seealso cref="!:BindRowPresenter">BindRowPresenter</seealso>
+            <seealso cref="!:UnbindRowPresenter">UnbindRowPresenter</seealso>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.GetCellContentRecyclingKey(C1.Silverlight.DataGrid.DataGridColumn)">
+            <summary>
+            Key used to store the cell content for future reuse in a shared pool. Columns
+            returning the same RecyclingKey will be candidate to share the same cells
+            content instances.
+            <list type="number">
+            		<item>
+            			<description>If there is no recycled cell content matching the recycling key,
+            the method <see cref="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.CreateCellContent(C1.Silverlight.DataGrid.DataGridColumn)">CreateCellContent</see> will be called
+            to create a new one. </description></item>
+            		<item>
+            			<description>Once the cell content is created or a recycled one is taken, the
+            method <see cref="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.BindCellContent(System.Windows.FrameworkElement,C1.Silverlight.DataGrid.DataGridColumn)">BindCellContent</see> will be called.
+            </description></item>
+            		<item>
+            			<description>When the cell content is not being used the method <see cref="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.UnbindCellContent(System.Windows.FrameworkElement,C1.Silverlight.DataGrid.DataGridColumn)">UnbindCellContent</see> will be called, and the cell
+            content will be saved for future use in other cells.</description></item></list>
+            </summary>
+            <param name="column">The column for which the recycling key is being
+            requested.</param>
+            <returns>
+            The recycling key, or null to disable recycling.
+            </returns>
+            <remarks>
+            Typically this method returns the recycling key of the column passed by
+            parameter. In some cases like FilterRow (row with TextBoxes in each cell to
+            filter) the content of the cell is independent of the column, in this case this
+            method will be overridden.
+            </remarks>
+            <example>
+            	<c>return typeof(C1TextBoxBase);</c>
+            </example>
+            <seealso cref="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.CreateCellContent(C1.Silverlight.DataGrid.DataGridColumn)">CreateCellContent</seealso>
+            <seealso cref="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.BindCellContent(System.Windows.FrameworkElement,C1.Silverlight.DataGrid.DataGridColumn)">BindCellContent</seealso>
+            <seealso cref="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.UnbindCellContent(System.Windows.FrameworkElement,C1.Silverlight.DataGrid.DataGridColumn)">UnbindCellContent</seealso>
+            <seealso cref="!:GetCellContentStyle">GetCellContentStyle</seealso>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.CreateCellContent(C1.Silverlight.DataGrid.DataGridColumn)">
+            <summary>
+            Creates the visual element that will be used to display the info inside a cell
+            of this column.
+            </summary>
+            <param name="column">The column for which the cell content element is being
+            requested.</param>
+            <returns>
+            Visual element used to display the content of a cell.
+            </returns>
+            <remarks>
+            This method is only called if no cell content is found in the shared pool
+            matching the recycling key returned by the method <see cref="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.GetCellContentRecyclingKey(C1.Silverlight.DataGrid.DataGridColumn)">GetCellContentRecyclingKey</see>.
+            </remarks>
+            <example>
+            	<c>return column.CreateCellContent(this);</c>
+            </example>
+            <seealso cref="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.GetCellContentRecyclingKey(C1.Silverlight.DataGrid.DataGridColumn)">GetCellContentRecyclingKey</seealso>
+            <seealso cref="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.BindCellContent(System.Windows.FrameworkElement,C1.Silverlight.DataGrid.DataGridColumn)">BindCellContent</seealso>
+            <seealso cref="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.UnbindCellContent(System.Windows.FrameworkElement,C1.Silverlight.DataGrid.DataGridColumn)">UnbindCellContent</seealso>
+            <seealso cref="!:GetCellContentStyle">GetCellContentStyle</seealso>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.CreateTextBoxFilter(C1.Silverlight.DataGrid.DataGridColumn)">
+            <summary>
+            Creates the text box filter that will be located inside each cell of the filter row.
+            </summary>
+            <param name="column">The column to which the textbox is created.</param>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.BindCellContent(System.Windows.FrameworkElement,C1.Silverlight.DataGrid.DataGridColumn)">
+            <summary>
+            Initializes the cell content presenter. This method must include cellContent
+            property settings, SetBinding of the corresponding dependency property being
+            "row.DataItem" the source which can be set directly in the binding or
+            as DataContext of the cellContent.
+            </summary>
+            <param name="cellContent">Visual element that will be bound in order to display
+            the cell content. If the cellContent received is not the expected you'll
+            probably need to override the method <see cref="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.GetCellContentRecyclingKey(C1.Silverlight.DataGrid.DataGridColumn)">GetCellContentRecyclingKey</see>.</param>
+            <param name="column">The column for which the cell content will be
+            initialized.</param>
+            <remarks>
+            This method is called after a cell content is created or a recycled one is
+            taken.
+            </remarks>
+            <example><c>column.BindCellContent(cellContent, this);</c></example>
+            <seealso cref="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.GetCellContentRecyclingKey(C1.Silverlight.DataGrid.DataGridColumn)">GetCellContentRecyclingKey</seealso>
+            <seealso cref="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.CreateCellContent(C1.Silverlight.DataGrid.DataGridColumn)">CreateCellContent</seealso>
+            <seealso cref="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.UnbindCellContent(System.Windows.FrameworkElement,C1.Silverlight.DataGrid.DataGridColumn)">UnbindCellContent</seealso>
+            <seealso cref="!:GetCellContentStyle">GetCellContentStyle</seealso>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.UnbindCellContent(System.Windows.FrameworkElement,C1.Silverlight.DataGrid.DataGridColumn)">
+            <summary>
+            This method is called before the cell content is recycled.
+            </summary>
+            <param name="cellContent">Visual element which is currently bound to the
+            row.</param>
+            <param name="column">The column for which the cell content is currently bound.</param>
+            <remarks>
+            If you set the DataContext in the <see cref="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.BindCellContent(System.Windows.FrameworkElement,C1.Silverlight.DataGrid.DataGridColumn)">BindCellContent</see> method, you must set it to null
+            here to avoid memory leaking.
+            </remarks>
+            <seealso cref="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.GetCellContentRecyclingKey(C1.Silverlight.DataGrid.DataGridColumn)">GetCellContentRecyclingKey</seealso>
+            <seealso cref="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.CreateCellContent(C1.Silverlight.DataGrid.DataGridColumn)">CreateCellContent</seealso>
+            <seealso cref="M:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.BindCellContent(System.Windows.FrameworkElement,C1.Silverlight.DataGrid.DataGridColumn)">BindCellContent</seealso>
+            <seealso cref="!:GetCellContentStyle">GetCellContentStyle</seealso>
+        </member>
+        <member name="P:C1.Silverlight.DataGrid.Filters.DataGridFilterRow.CellPadding">
+            <summary>
+            Gets or sets the cell padding.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.DataGrid.Filters.TextFilterHelper">
+            <summary>
+            Helps translating from text to FilterInfo and vice-versa.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.DataGrid.Filters.TextFilterHelper.GetIdsContainingText(System.String,C1.Silverlight.DataGrid.DataGridComboBoxColumn)">
+            <summary>
+            Retrieves all the ids whose display label contains the desired text.
+            (Uses the same properties used by the combo column itself)
+            </summary>
+            <param name="text">The text.</param>
+            <param name="column">The column.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

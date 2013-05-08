@@ -1,0 +1,17 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="BasicHttpBinding_ILocatesService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://dalatlprd01.penson.com:43/LocatesService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ILocatesService"
+                contract="ServiceLocates.ILocatesService" name="BasicHttpBinding_ILocatesService" />
+        </client>
+    </system.serviceModel>
+</configuration>

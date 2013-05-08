@@ -1,0 +1,13 @@
+// Licensed Materials - Property of Anetics, LLC.
+// Copyright (C) Anetics, LLC. 2005  All rights reserved.
+
+using System;
+using System.Data;
+
+namespace Anetics.Medalist
+{
+	public interface IPositionReporting
+	{
+		DataSet ClearingEquityDeliveriesGet (string bizDate, string bookGroup);
+	}
+}

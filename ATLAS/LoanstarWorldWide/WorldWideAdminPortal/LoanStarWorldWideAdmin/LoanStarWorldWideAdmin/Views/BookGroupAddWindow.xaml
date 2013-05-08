@@ -1,0 +1,51 @@
+<UserControl 
+	Name="AddBookGroupWindow"
+	x:Class="LoanStarWorldWideAdmin.Views.BookGroupAddWindow"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+    xmlns:c1datetime="clr-namespace:C1.Silverlight.DateTimeEditors;assembly=C1.Silverlight.DateTimeEditors"
+    xmlns:c1grid="clr-namespace:C1.Silverlight.DataGrid;assembly=C1.Silverlight.DataGrid" 
+    xmlns:c1="clr-namespace:C1.Silverlight;assembly=C1.Silverlight"
+    Background="#FF374F5D" Loaded="FillControls">
+
+    <StackPanel x:Name="LayoutRoot" VerticalAlignment="Center" HorizontalAlignment="Center" Height="242" Width="425">
+        <Grid Height="241" x:Name="BookGroupGrid" VerticalAlignment="Top" HorizontalAlignment="Left" Width="425">
+            <Grid.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF325988" Offset="1" />
+                    <GradientStop Color="#FF1F3F68" />
+                </RadialGradientBrush>
+            </Grid.Background>
+
+            <sdk:Label x:Name="NameLabel" Margin="52,21,0,0" Content="Name" FontSize="11" Height="20" FontWeight="Bold" Foreground="White" HorizontalContentAlignment="Right" 
+                        HorizontalAlignment="Left" Width="40" VerticalAlignment="Top" />
+            <TextBox x:Name="NameTextBox" Margin="98,20,0,0" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" Width="174" TabIndex="1" />
+
+            <sdk:Label x:Name="bookLabel" Margin="55,51,0,0" Content="Book" FontSize="11" Height="20" FontWeight="Bold" Foreground="White" HorizontalContentAlignment="Right" 
+                        HorizontalAlignment="Left" Width="37" VerticalAlignment="Top" />
+            <c1:C1ComboBox x:Name="BookCombo" Margin="98,51,0,0" FontSize="10.667" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" Width="235" TabIndex="2" />
+            <sdk:Label x:Name="timeZoneLabel" Margin="26,82,0,0" Content="TimeZone" FontSize="11" Height="20" FontWeight="Bold" Foreground="White"  
+                        HorizontalAlignment="Left" Width="67" VerticalAlignment="Top" />
+            <c1:C1ComboBox x:Name="TimeZoneCombo" Margin="98,82,0,0" FontSize="10.667" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" Width="291" TabIndex="4" />
+            <CheckBox Content="Use Wekends" Height="20" HorizontalAlignment="Left" FontSize="11" FontWeight="Bold" Foreground="White" Margin="280,117,0,86" 
+                        Name="UseWeekendsCheckbox" VerticalAlignment="Center" TabIndex="5" />
+            <sdk:Label x:Name="settlementTypeLabel" Margin="18,115,0,0" FontWeight="Bold" Foreground="White" Content="Settle Type" FontSize="11" Height="20" HorizontalContentAlignment="Right" 
+                       HorizontalAlignment="Left" Width="72" VerticalAlignment="Top" />
+            <TextBox x:Name="SettlementTypeTextBox" Margin="98,112,0,0" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" TabIndex="3" />
+            <Button x:Name="CancelButton" Content="Cancel" Height="28" HorizontalAlignment="Left" Margin="54,168,0,0" VerticalAlignment="Top" 
+                        Width="120" Click="CancelButton_Click"  TabIndex="6" Visibility="Collapsed"></Button>
+            <Button x:Name="BookGroupAddButton" Content="Save Book Group" Height="28" HorizontalAlignment="Left" Margin="202,168,0,0" VerticalAlignment="Top" 
+                        Width="159" Click="BookGroupAddButton_Click"  TabIndex="7" ></Button>
+            <sdk:Label Content="" FontSize="11" Height="25" FontWeight="Bold" Foreground="White" HorizontalContentAlignment="Right" Margin="4,206,0,10" Name="statusLabel" HorizontalAlignment="Left" Width="416" />
+        </Grid>
+
+
+
+    </StackPanel>
+
+</UserControl>
+
+
+
+

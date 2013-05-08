@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="LoanStarWorldWideAdmin.Views.FirmMaintAddWindow"
+    Name="FirmAddWindow"	
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+	xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"	
+    xmlns:c1="clr-namespace:C1.Silverlight;assembly=C1.Silverlight" 
+    xmlns:c1grid="clr-namespace:C1.Silverlight.DataGrid;assembly=C1.Silverlight.DataGrid" 
+    xmlns:c1chart="clr-namespace:C1.Silverlight.Chart;assembly=C1.Silverlight.Chart"
+	xmlns:c1datetime="clr-namespace:C1.Silverlight.DateTimeEditors;assembly=C1.Silverlight.DateTimeEditors"
+	mc:Ignorable="d" 
+    d:DesignHeight="130" d:DesignWidth="450">
+
+    <Grid x:Name="LayoutRoot" Background="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid Height="126" HorizontalAlignment="Left" Margin="1,0,0,0" Name="DetailGrid" VerticalAlignment="Top" Width="443">
+            <Grid.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF325988" Offset="1" />
+                    <GradientStop Color="#FF1F3F68" />
+                </RadialGradientBrush>
+            </Grid.Background>
+            <TextBox x:Name="firmNameText" Height="23" HorizontalAlignment="Left" Margin="86,47,0,0" VerticalAlignment="Top" Width="337" TabIndex="2" />
+            <sdk:Label x:Name="firmCodeLabel" Content="Firm Code" FontSize="11" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" Margin="17,15,0,0" Width="64" Height="21" VerticalAlignment="Top" />
+            <sdk:Label x:Name="firmNameLabel" Content="Firm Name" FontSize="11" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" Margin="13,49,0,0" Width="74" Height="21" VerticalAlignment="Top" />
+            <TextBox x:Name="firmCodeText" Height="23" HorizontalAlignment="Left" Margin="86,12,0,0" VerticalAlignment="Top" Width="90" TabIndex="0" />
+            <Button x:Name="FirmAddButton" Click="FirmAddButton_Click"  Content="Add/Update Firm" Height="25" HorizontalAlignment="Left" Margin="305,90,0,0" VerticalAlignment="Top" Width="120" TabIndex="3" />
+            <CheckBox x:Name="isActivecheckBox" Content="Is Active" Height="18" HorizontalAlignment="Left" Margin="342,15,0,0"  
+                      VerticalAlignment="Top" FontSize="11" Foreground="White" FontWeight="Bold" TabIndex="1" />
+            <sdk:Label x:Name="StatusLabel" Content="" FontSize="11" FontWeight="Bold" Foreground="White" Height="30" Width="300"  
+                   Margin="2,87,141,0"  HorizontalAlignment="Center" VerticalAlignment="Top" />
+
+
+        </Grid>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="StockLoan.Main.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="StockLoan_MainServer_Xignite_XigniteGlobalQuotes" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://www.xignite.com/xGlobalQuotes.asmx</Value>
+    </Setting>
+    <Setting Name="StockLoan_MainServer_WebServiceProcess_TradeGeneric" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://localhost:62896/TradeGeneric.svc</Value>
+    </Setting>
+    <Setting Name="StockLoan_MainServer_serviceTradeGeneric_TradeGeneric" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://localhost:62896/TradeGeneric.svc</Value>
+    </Setting>
+    <Setting Name="StockLoan_MainServer_serviceGenericTrade_TradeGeneric" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://sendero1.london.penson.com/TradeGeneric.svc</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

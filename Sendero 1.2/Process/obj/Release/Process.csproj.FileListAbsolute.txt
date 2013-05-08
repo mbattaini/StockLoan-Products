@@ -1,0 +1,2 @@
+C:\_dev\Sendero 1.2\Process\bin\Release\Anetics.Process.dll
+C:\_dev\Sendero 1.2\Process\obj\Release\Anetics.Process.dll

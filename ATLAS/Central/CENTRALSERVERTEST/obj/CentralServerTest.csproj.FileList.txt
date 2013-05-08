@@ -1,0 +1,14 @@
+bin\Debug\StockLoan.CentralServerTest.exe.config
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\StockLoan.CentralServerTest.exe
+bin\Debug\StockLoan.CentralServerTest.pdb
+bin\Debug\StockLoan.CentralServer.dll
+bin\Debug\StockLoan.Common.dll
+bin\Debug\StockLoan.Common.pdb
+bin\Debug\StockLoan.CentralServer.pdb
+obj\Debug\StockLoan.CentralServerTest.exe
+obj\Debug\StockLoan.CentralServerTest.pdb
+bin\Debug\Rebex.Net.ProxySocket.dll
+bin\Debug\Rebex.Net.Ftp.dll
+bin\Debug\StockLoan.Filer.dll
+bin\Debug\StockLoan.Filer.pdb

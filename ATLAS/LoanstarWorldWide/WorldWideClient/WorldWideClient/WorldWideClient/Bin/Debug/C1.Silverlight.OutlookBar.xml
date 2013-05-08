@@ -1,0 +1,411 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Silverlight.OutlookBar</name>
+    </assembly>
+    <members>
+        <member name="T:C1.Silverlight.OutlookBar.C1HorizontalDock">
+            <summary>
+            Specifies how <see cref="T:C1.Silverlight.OutlookBar.C1OutlookBar"/> is aligned.
+            </summary>    
+        </member>
+        <member name="F:C1.Silverlight.OutlookBar.C1HorizontalDock.Left">
+            <summary>
+            The control's left edge is docked to the left edge of its containing control. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OutlookBar.C1HorizontalDock.Right">
+            <summary>
+            The control's right edge is docked to the right edge of its containing control. 
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.OutlookBar.C1OutlookBar">
+            <summary>
+            Group menus and controls into distinct categories with this side bar navigation system
+            </summary>	
+        </member>
+        <member name="M:C1.Silverlight.OutlookBar.C1OutlookBar.ChangeVisualStateDock(System.Boolean)">
+            <summary>
+            Updates the current visual state of the Dock visual state group to match the object's properties.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.OutlookBar.C1OutlookBar.ChangeVisualStateExpansion(System.Boolean)">
+            <summary>
+            Updates the current visual state of the Expansion visual state group to match the object's properties.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OutlookBar.C1OutlookBar.DockProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OutlookBar.C1OutlookBar.Dock"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OutlookBar.C1OutlookBar.UnselectedContentModeProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OutlookBar.C1OutlookBar.UnselectedContentMode"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OutlookBar.C1OutlookBar.SelectedIndexProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OutlookBar.C1OutlookBar.SelectedIndex"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OutlookBar.C1OutlookBar.SelectedItemProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OutlookBar.C1OutlookBar.SelectedItem"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OutlookBar.C1OutlookBar.IsExpandedProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OutlookBar.C1OutlookBar.IsExpanded"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OutlookBar.C1OutlookBar.CollapsedContentProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OutlookBar.C1OutlookBar.CollapsedContent"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OutlookBar.C1OutlookBar.CollapsedTemplateProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OutlookBar.C1OutlookBar.CollapsedTemplate"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OutlookBar.C1OutlookBar.ContentTemplateProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OutlookBar.C1OutlookBar.ContentTemplate"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OutlookBar.C1OutlookBar.SmallIconTemplateProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OutlookBar.C1OutlookBar.SmallIconTemplate"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OutlookBar.C1OutlookBar.FirstOverflowIndexProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OutlookBar.C1OutlookBar.FirstOverflowIndex"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OutlookBar.C1OutlookBar.LargeIconTemplateProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OutlookBar.C1OutlookBar.LargeIconTemplate"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OutlookBar.C1OutlookBar.ItemBackgroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OutlookBar.C1OutlookBar.ItemBackground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OutlookBar.C1OutlookBar.ItemForegroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OutlookBar.C1OutlookBar.ItemForeground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OutlookBar.C1OutlookBar.ExpandedWidthProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OutlookBar.C1OutlookBar.ExpandedWidth"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OutlookBar.C1OutlookBar.ShowMoreButtonsCommandProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OutlookBar.C1OutlookBar.ShowMoreButtonsCommand"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OutlookBar.C1OutlookBar.ShowFewerButtonsCommandProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OutlookBar.C1OutlookBar.ShowFewerButtonsCommand"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OutlookBar.C1OutlookBar.MouseOverBrushProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OutlookBar.C1OutlookBar.MouseOverBrush"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OutlookBar.C1OutlookBar.SelectedBackgroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OutlookBar.C1OutlookBar.SelectedBackground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.OutlookBar.C1OutlookBar.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.OutlookBar.C1OutlookBar"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.OutlookBar.C1OutlookBar.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.OutlookBar.C1OutlookBar"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.OutlookBar.C1OutlookBar.Dock">
+            <summary>
+            Gets or sets the side taken by the control.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OutlookBar.C1OutlookBar.UnselectedContentMode">
+            <summary>
+            Gets or sets what is done with the content of unselected items.
+            </summary>
+            <remarks>
+            The default is OutsideVisualTree, which removes from the visual tree the content of unselected items. Changing the property to retain the content of unselected items improves performance at the cost of memory.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.OutlookBar.C1OutlookBar.SelectedIndex">
+            <summary>
+            Gets or sets the index of the currently selected <see cref="T:C1.Silverlight.OutlookBar.C1OutlookItem"/>.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.OutlookBar.C1OutlookBar.SelectedIndexChanged">
+            <summary> 
+            Event raised when the <see cref="P:SelectedIndex"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OutlookBar.C1OutlookBar.SelectedItem">
+            <summary>
+            Gets or sets the selected item or null if the selection is empty.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.OutlookBar.C1OutlookBar.SelectedItemChanged">
+            <summary> 
+            Event raised when the <see cref="P:SelectedItem"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OutlookBar.C1OutlookBar.IsExpanded">
+            <summary>
+            Gets or sets a value that indicates whether the content of the selected item is shown.
+            
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OutlookBar.C1OutlookBar.CollapsedContent">
+            <summary>
+            Gets or sets a value to display in the content area when the control is collapsed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OutlookBar.C1OutlookBar.CollapsedTemplate">
+            <summary>
+            Gets or sets the DataTemplate to apply to CollapsedContent.
+            
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OutlookBar.C1OutlookBar.ContentTemplate">
+            <summary>
+            Gets or sets the DataTemplate to apply to any item that does not have a HeaderTemplate property defined.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OutlookBar.C1OutlookBar.SmallIconTemplate">
+            <summary>
+            Gets or sets the DataTemplate to apply to any item that does not have a SmallIconTemplate property defined.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OutlookBar.C1OutlookBar.FirstOverflowIndex">
+            <summary>
+            Gets or sets the index of the first item that causes overflow.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OutlookBar.C1OutlookBar.LargeIconTemplate">
+            <summary>
+            Gets or sets the DataTemplate to apply to any item that does not have a LargeIconTemplate property defined.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OutlookBar.C1OutlookBar.ItemBackground">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used as background of the contained <see cref="T:C1.Silverlight.OutlookBar.C1OutlookItem"/>s.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OutlookBar.C1OutlookBar.ItemForeground">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used as foreground of the contained <see cref="T:C1.Silverlight.OutlookBar.C1OutlookItem"/>s.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OutlookBar.C1OutlookBar.ExpandedWidth">
+            <summary>
+            Gets or sets the horizontal size of the whole control when in expanded mode.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OutlookBar.C1OutlookBar.ShowMoreButtonsCommand">
+            <summary>
+            Gets the <see cref="T:System.Windows.Input.ICommand"/> that increments <see cref="P:C1.Silverlight.OutlookBar.C1OutlookBar.FirstOverflowIndex"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OutlookBar.C1OutlookBar.ShowFewerButtonsCommand">
+            <summary>
+            Gets the <see cref="T:System.Windows.Input.ICommand"/> that decrements <see cref="P:C1.Silverlight.OutlookBar.C1OutlookBar.FirstOverflowIndex"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OutlookBar.C1OutlookBar.MouseOverBrush">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to highlight the control when it has the mouse over.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OutlookBar.C1OutlookBar.SelectedBackground">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to highlight the control when it is selected.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.OutlookBar.C1OutlookItem">
+            <summary>
+            Implements a item inside a <see cref="T:C1.Silverlight.OutlookBar.C1OutlookBar"/>.
+            </summary>	
+        </member>
+        <member name="M:C1.Silverlight.OutlookBar.C1OutlookItem.ChangeVisualStateSelection(System.Boolean)">
+            <summary>
+            Updates the current visual state of the Selection visual state group to match the object's properties.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.OutlookBar.C1OutlookItem.ChangeVisualStateCommon(System.Boolean)">
+            <summary>
+            Updates the current visual state of the Common visual state group to match the object's properties.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OutlookBar.C1OutlookItem.IsSelectedProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OutlookBar.C1OutlookItem.IsSelected"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OutlookBar.C1OutlookItem.HeaderProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OutlookBar.C1OutlookItem.Header"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OutlookBar.C1OutlookItem.HeaderTemplateProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OutlookBar.C1OutlookItem.HeaderTemplate"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OutlookBar.C1OutlookItem.SmallIconProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OutlookBar.C1OutlookItem.SmallIcon"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OutlookBar.C1OutlookItem.SmallIconTemplateProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OutlookBar.C1OutlookItem.SmallIconTemplate"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OutlookBar.C1OutlookItem.LargeIconProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OutlookBar.C1OutlookItem.LargeIcon"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OutlookBar.C1OutlookItem.LargeIconTemplateProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OutlookBar.C1OutlookItem.LargeIconTemplate"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OutlookBar.C1OutlookItem.IsMouseOverProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OutlookBar.C1OutlookItem.IsMouseOver"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OutlookBar.C1OutlookItem.ForceMouseOverProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OutlookBar.C1OutlookItem.ForceMouseOver"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OutlookBar.C1OutlookItem.MouseOverBrushProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OutlookBar.C1OutlookItem.MouseOverBrush"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.OutlookBar.C1OutlookItem.SelectedBackgroundProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.OutlookBar.C1OutlookItem.SelectedBackground"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.OutlookBar.C1OutlookItem.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.OutlookBar.C1OutlookItem"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.OutlookBar.C1OutlookItem.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.OutlookBar.C1OutlookItem"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.OutlookBar.C1OutlookItem.IsSelected">
+            <summary>
+            Gets or sets whether the item is selected.
+            
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OutlookBar.C1OutlookItem.Header">
+            <summary>
+            Gets or sets the value shown above the content when the item is selected.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OutlookBar.C1OutlookItem.HeaderTemplate">
+            <summary>
+            Gets or sets a DataTemplate to style the <see cref="P:C1.Silverlight.OutlookBar.C1OutlookItem.Header"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OutlookBar.C1OutlookItem.SmallIcon">
+            <summary>
+            Gets or sets the object shown for the item in the overflow pane and menu. Since the object is placed in the visual tree twice, it cannot be a UIElement. Use <see cref="P:C1.Silverlight.OutlookBar.C1OutlookItem.SmallIconTemplate"/> to create a Image element.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OutlookBar.C1OutlookItem.SmallIconTemplate">
+            <summary>
+            Gets or sets a DataTemplate to style the <see cref="P:C1.Silverlight.OutlookBar.C1OutlookItem.SmallIcon"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OutlookBar.C1OutlookItem.LargeIcon">
+            <summary>
+            Gets or sets the object shown for the item when collapsed and to the left of the header when expanded.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OutlookBar.C1OutlookItem.LargeIconTemplate">
+            <summary>
+            Gets or sets a DataTemplate to style the <see cref="P:C1.Silverlight.OutlookBar.C1OutlookItem.LargeIcon"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OutlookBar.C1OutlookItem.IsMouseOver">
+            <summary>
+            Returns true if the mouse is over the control.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.OutlookBar.C1OutlookItem.IsMouseOverChanged">
+            <summary> 
+            Event raised when the <see cref="P:IsMouseOver"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OutlookBar.C1OutlookItem.ForceMouseOver">
+            <summary>
+            Set to true to force the mouse over visual state.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OutlookBar.C1OutlookItem.MouseOverBrush">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to highlight the control when it has the mouse over.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OutlookBar.C1OutlookItem.SelectedBackground">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Media.Brush"/> used to highlight the control when it is selected.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.OutlookBar.C1OutlookPanel">
+            <summary>
+            Internal class.  Use only in <see cref="T:C1.Silverlight.OutlookBar.C1OutlookBar"/>'s ItemsPanelTemplate.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.OutlookBar.Resources.C1_Silverlight_OutlookBar">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OutlookBar.Resources.C1_Silverlight_OutlookBar.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.OutlookBar.Resources.C1_Silverlight_OutlookBar.DefaultCollapsedContent">
+            <summary>
+              Looks up a localized string similar to Navigation Pane.
+            </summary>
+        </member>
+    </members>
+</doc>

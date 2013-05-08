@@ -1,0 +1,205 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9A1336DE-2EA9-48D3-BF83-9BDAD25061AB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LocatesClient</RootNamespace>
+    <AssemblyName>LocatesClient</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.C1Excel.2, Version=2.1.20082.89, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.C1Preview.2, Version=2.0.20082.50031, Culture=neutral, PublicKeyToken=594a0605db190bb9" />
+    <Reference Include="C1.Win.C1Command.2, Version=2.0.20082.19408, Culture=neutral, PublicKeyToken=e808566f358766d8, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1Input.2, Version=2.0.20082.33212, Culture=neutral, PublicKeyToken=7e7ff60f0c214f9a, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1List.2, Version=2.1.20082.139, Culture=neutral, PublicKeyToken=6b24f8f981dbd7bc, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1Preview.2, Version=2.0.20082.50031, Culture=neutral, PublicKeyToken=41780e2fc605e636, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1Ribbon.2, Version=2.0.20082.94, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1TrueDBGrid.2, Version=2.0.20082.61142, Culture=neutral, PublicKeyToken=75ae3fb0e2b1e0da, processorArchitecture=MSIL" />
+    <Reference Include="Compression, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\ClassLibrary1\ClassLibrary1\bin\Debug\Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicNP.ShellObjects, Version=10.0.0.0, Culture=neutral, PublicKeyToken=ff6f27194af4af75" />
+    <Reference Include="StockLoan.Common, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Common\bin\Release\StockLoan.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="StockLoan.Locates, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Locates\bin\Debug\StockLoan.Locates.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Excel.cs" />
+    <Compile Include="ExcelCellStyle.cs" />
+    <Compile Include="LocatesExportToolForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocatesExportToolForm.Designer.cs">
+      <DependentUpon>LocatesExportToolForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocatesInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocatesInputForm.Designer.cs">
+      <DependentUpon>LocatesInputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocatesInventoryLookupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocatesInventoryLookupForm.Designer.cs">
+      <DependentUpon>LocatesInventoryLookupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocatesResearchSummaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocatesResearchSummaryForm.Designer.cs">
+      <DependentUpon>LocatesResearchSummaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocatesSummaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocatesSummaryForm.Designer.cs">
+      <DependentUpon>LocatesSummaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocatesTradingGroupsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocatesTradingGroupsForm.Designer.cs">
+      <DependentUpon>LocatesTradingGroupsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="LocatesExportToolForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LocatesExportToolForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocatesInputForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LocatesInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocatesInventoryLookupForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LocatesInventoryLookupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocatesResearchSummaryForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LocatesResearchSummaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocatesSummaryForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LocatesSummaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocatesTradingGroupsForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LocatesTradingGroupsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecMaster.resx">
+      <DependentUpon>SecMaster.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecurityMasterForm.resx">
+      <DependentUpon>SecurityMasterForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SecMaster.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SecMaster.designer.cs">
+      <DependentUpon>SecMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecurityMasterForm.designer.cs">
+      <DependentUpon>SecurityMasterForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bar Alt 3.jpg" />
+    <None Include="Resources\Bar Alt 2.jpg" />
+    <None Include="Resources\Bar.jpg" />
+    <None Include="Resources\Bar Alt.jpg" />
+    <None Include="Resources\Bar Alt 4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redo1.PNG" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,9 @@
+C:\_Dev\ATLAS\Loanstar\TradingGateway\MQSeries\bin\Release\StockLoan.MQSeries.dll
+C:\_Dev\ATLAS\Loanstar\TradingGateway\MQSeries\bin\Release\StockLoan.MQSeries.pdb
+C:\_Dev\ATLAS\Loanstar\TradingGateway\MQSeries\bin\Release\StockLoan.Common.dll
+C:\_Dev\ATLAS\Loanstar\TradingGateway\MQSeries\obj\x86\Release\ResolveAssemblyReference.cache
+C:\_Dev\ATLAS\Loanstar\TradingGateway\MQSeries\obj\x86\Release\StockLoan.MQSeries.Properties.Resources.resources
+C:\_Dev\ATLAS\Loanstar\TradingGateway\MQSeries\obj\x86\Release\ResGen.read.1.tlog
+C:\_Dev\ATLAS\Loanstar\TradingGateway\MQSeries\obj\x86\Release\ResGen.write.1.tlog
+C:\_Dev\ATLAS\Loanstar\TradingGateway\MQSeries\obj\x86\Release\StockLoan.MQSeries.dll
+C:\_Dev\ATLAS\Loanstar\TradingGateway\MQSeries\obj\x86\Release\StockLoan.MQSeries.pdb

@@ -1,0 +1,34 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="StockLoan.LocatesClient" EntryPointType="StockLoan_LocatesClient.App" RuntimeVersion="4.0.50826.0">
+  <Deployment.Parts>
+    <AssemblyPart x:Name="StockLoan.LocatesClient" Source="StockLoan.LocatesClient.dll" />
+    <AssemblyPart x:Name="C1.Silverlight.Chart" Source="C1.Silverlight.Chart.dll" />
+    <AssemblyPart x:Name="C1.Silverlight.Data" Source="C1.Silverlight.Data.dll" />
+    <AssemblyPart x:Name="C1.Silverlight.DataGrid.Analytics" Source="C1.Silverlight.DataGrid.Analytics.dll" />
+    <AssemblyPart x:Name="C1.Silverlight.DataGrid" Source="C1.Silverlight.DataGrid.dll" />
+    <AssemblyPart x:Name="C1.Silverlight.DataGrid.Excel" Source="C1.Silverlight.DataGrid.Excel.dll" />
+    <AssemblyPart x:Name="C1.Silverlight.DataGrid.Filters" Source="C1.Silverlight.DataGrid.Filters.dll" />
+    <AssemblyPart x:Name="C1.Silverlight.DataGrid.Ria" Source="C1.Silverlight.DataGrid.Ria.dll" />
+    <AssemblyPart x:Name="C1.Silverlight.DataGrid.Summaries" Source="C1.Silverlight.DataGrid.Summaries.dll" />
+    <AssemblyPart x:Name="C1.Silverlight.DateTimeEditors" Source="C1.Silverlight.DateTimeEditors.dll" />
+    <AssemblyPart x:Name="C1.Silverlight" Source="C1.Silverlight.dll" />
+    <AssemblyPart x:Name="C1.Silverlight.Docking" Source="C1.Silverlight.Docking.dll" />
+    <AssemblyPart x:Name="C1.Silverlight.Excel" Source="C1.Silverlight.Excel.dll" />
+    <AssemblyPart x:Name="C1.Silverlight.FlexGrid.4" Source="C1.Silverlight.FlexGrid.4.dll" />
+    <AssemblyPart x:Name="C1.Silverlight.Imaging" Source="C1.Silverlight.Imaging.dll" />
+    <AssemblyPart x:Name="C1.Silverlight.Pdf" Source="C1.Silverlight.Pdf.dll" />
+    <AssemblyPart x:Name="C1.Silverlight.PdfViewer" Source="C1.Silverlight.PdfViewer.dll" />
+    <AssemblyPart x:Name="C1.Silverlight.Theming.BureauBlack" Source="C1.Silverlight.Theming.BureauBlack.dll" />
+    <AssemblyPart x:Name="C1.Silverlight.Theming" Source="C1.Silverlight.Theming.dll" />
+    <AssemblyPart x:Name="C1.Silverlight.Toolbar" Source="C1.Silverlight.Toolbar.dll" />
+    <AssemblyPart x:Name="System.Windows.Controls.Data.Input" Source="System.Windows.Controls.Data.Input.dll" />
+    <AssemblyPart x:Name="System.Windows.Controls" Source="System.Windows.Controls.dll" />
+    <AssemblyPart x:Name="System.Windows.Controls.Input" Source="System.Windows.Controls.Input.dll" />
+    <AssemblyPart x:Name="System.Windows.Data" Source="System.Windows.Data.dll" />
+    <AssemblyPart x:Name="System.ComponentModel.DataAnnotations" Source="System.ComponentModel.DataAnnotations.dll" />
+    <AssemblyPart x:Name="System.ComponentModel.Composition" Source="System.ComponentModel.Composition.dll" />
+    <AssemblyPart x:Name="System.Windows.Controls.DomainServices" Source="System.Windows.Controls.DomainServices.dll" />
+    <AssemblyPart x:Name="System.Xml.Linq" Source="System.Xml.Linq.dll" />
+    <AssemblyPart x:Name="C1.Silverlight.Zip" Source="C1.Silverlight.Zip.dll" />
+    <AssemblyPart x:Name="System.ServiceModel.DomainServices.Client" Source="System.ServiceModel.DomainServices.Client.dll" />
+  </Deployment.Parts>
+</Deployment>

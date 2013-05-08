@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TradeGeneric" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://sendero1.london.penson.com/TradeGeneric.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://sendero1.london.penson.com/TradeGeneric.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://sendero1.london.penson.com/TradeGeneric.svc?xsd=xsd2" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITradeGeneric_TradeNewRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:TradeNewRequest" />
+  </wsdl:message>
+  <wsdl:message name="ITradeGeneric_TradeNewRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TradeNewRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITradeGeneric_TradeReturnRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:TradeReturnRequest" />
+  </wsdl:message>
+  <wsdl:message name="ITradeGeneric_TradeReturnRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TradeReturnRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITradeGeneric_TradeNewResponse_InputMessage">
+    <wsdl:part name="parameters" element="tns:TradeNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITradeGeneric_TradeNewResponse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TradeNewResponseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITradeGeneric_TradeRevaluationRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:TradeRevaluationRequest" />
+  </wsdl:message>
+  <wsdl:message name="ITradeGeneric_TradeRevaluationRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TradeRevaluationRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITradeGeneric_TradeRevaluationResponse_InputMessage">
+    <wsdl:part name="parameters" element="tns:TradeRevaluationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITradeGeneric_TradeRevaluationResponse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TradeRevaluationResponseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITradeGeneric_TradeSystemsGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:TradeSystemsGet" />
+  </wsdl:message>
+  <wsdl:message name="ITradeGeneric_TradeSystemsGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TradeSystemsGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITradeGeneric_TradeCounterPartiesGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:TradeCounterPartiesGet" />
+  </wsdl:message>
+  <wsdl:message name="ITradeGeneric_TradeCounterPartiesGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TradeCounterPartiesGetResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITradeGeneric">
+    <wsdl:operation name="TradeNewRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITradeGeneric/TradeNewRequest" message="tns:ITradeGeneric_TradeNewRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITradeGeneric/TradeNewRequestResponse" message="tns:ITradeGeneric_TradeNewRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TradeReturnRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITradeGeneric/TradeReturnRequest" message="tns:ITradeGeneric_TradeReturnRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITradeGeneric/TradeReturnRequestResponse" message="tns:ITradeGeneric_TradeReturnRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TradeNewResponse">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITradeGeneric/TradeNewResponse" message="tns:ITradeGeneric_TradeNewResponse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITradeGeneric/TradeNewResponseResponse" message="tns:ITradeGeneric_TradeNewResponse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TradeRevaluationRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITradeGeneric/TradeRevaluationRequest" message="tns:ITradeGeneric_TradeRevaluationRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITradeGeneric/TradeRevaluationRequestResponse" message="tns:ITradeGeneric_TradeRevaluationRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TradeRevaluationResponse">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITradeGeneric/TradeRevaluationResponse" message="tns:ITradeGeneric_TradeRevaluationResponse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITradeGeneric/TradeRevaluationResponseResponse" message="tns:ITradeGeneric_TradeRevaluationResponse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TradeSystemsGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITradeGeneric/TradeSystemsGet" message="tns:ITradeGeneric_TradeSystemsGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITradeGeneric/TradeSystemsGetResponse" message="tns:ITradeGeneric_TradeSystemsGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TradeCounterPartiesGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITradeGeneric/TradeCounterPartiesGet" message="tns:ITradeGeneric_TradeCounterPartiesGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITradeGeneric/TradeCounterPartiesGetResponse" message="tns:ITradeGeneric_TradeCounterPartiesGet_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ITradeGeneric" type="tns:ITradeGeneric">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TradeNewRequest">
+      <soap:operation soapAction="http://tempuri.org/ITradeGeneric/TradeNewRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TradeReturnRequest">
+      <soap:operation soapAction="http://tempuri.org/ITradeGeneric/TradeReturnRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TradeNewResponse">
+      <soap:operation soapAction="http://tempuri.org/ITradeGeneric/TradeNewResponse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TradeRevaluationRequest">
+      <soap:operation soapAction="http://tempuri.org/ITradeGeneric/TradeRevaluationRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TradeRevaluationResponse">
+      <soap:operation soapAction="http://tempuri.org/ITradeGeneric/TradeRevaluationResponse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TradeSystemsGet">
+      <soap:operation soapAction="http://tempuri.org/ITradeGeneric/TradeSystemsGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TradeCounterPartiesGet">
+      <soap:operation soapAction="http://tempuri.org/ITradeGeneric/TradeCounterPartiesGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TradeGeneric">
+    <wsdl:port name="BasicHttpBinding_ITradeGeneric" binding="tns:BasicHttpBinding_ITradeGeneric">
+      <soap:address location="http://sendero1.london.penson.com/TradeGeneric.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

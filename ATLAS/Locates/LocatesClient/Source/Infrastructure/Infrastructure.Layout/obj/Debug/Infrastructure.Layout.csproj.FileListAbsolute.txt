@@ -1,0 +1,3 @@
+C:\ATLAS\Locates\LocatesClient\Source\Infrastructure\Infrastructure.Layout\obj\Debug\ResolveAssemblyReference.cache
+C:\ATLAS\Locates\LocatesClient\Source\Infrastructure\Infrastructure.Layout\obj\Debug\StockLoan.Locates.Infrastructure.Layout.ShellLayoutView.resources
+C:\ATLAS\Locates\LocatesClient\Source\Infrastructure\Infrastructure.Layout\obj\Debug\Infrastructure.Layout.csproj.GenerateResource.Cache

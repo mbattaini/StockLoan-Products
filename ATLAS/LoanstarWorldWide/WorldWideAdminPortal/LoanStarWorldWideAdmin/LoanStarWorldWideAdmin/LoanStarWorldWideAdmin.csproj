@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D9ED8A09-67F9-4394-8938-3D2799D015ED}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LoanStarWorldWideAdmin</RootNamespace>
+    <AssemblyName>LoanStarWorldWideAdmin</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>LoanStarWorldWideAdmin.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>LoanStarWorldWideAdmin.App</SilverlightAppEntry>
+    <TestPageFileName>LoanStarWorldWideAdminTestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>false</EnableOutOfBrowser>
+    <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>..\LoanStarWorldWideAdmin.Web\LoanStarWorldWideAdmin.Web.csproj</LinkedServerProject>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20901.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.Silverlight, Version=4.0.20102.80, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.Chart, Version=4.0.20102.80, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.Data, Version=4.0.20102.80, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.DataGrid, Version=4.0.20102.80, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.DateTimeEditors, Version=4.0.20102.80, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.Extended, Version=4.0.20102.80, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.FlexGrid.4, Version=4.0.20102.46, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.Imaging, Version=4.0.20102.80, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.Schedule, Version=4.0.20102.80, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="C1.Silverlight.Toolbar, Version=4.0.20102.80, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL" />
+    <Reference Include="FloatableWindow">
+      <HintPath>..\..\..\..\..\DashApplication\DashApplication\DashApplication\Bin\Release\FloatableWindow.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Drawing, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Expression.Interactions" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System.ComponentModel.DataAnnotations, Version=2.0.5.0, Culture=neutral, PublicKeyToken=ddd0da4d3e678217, processorArchitecture=MSIL" />
+    <Reference Include="System.Data.Services.Client, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.DomainServices.Client, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.ServiceModel.DomainServices.Client.Web, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.ServiceModel.Web.Extensions, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Data.Input, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Windows.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Interactivity" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+    <Reference Include="System.Windows.Controls" />
+    <Reference Include="System.Windows.Controls.Navigation" />
+    <Reference Include="WorldWideEncrypt">
+      <HintPath>..\..\..\WorldWideEncryption\bin\Release\WorldWideEncrypt.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AppInformation.cs" />
+    <Compile Include="Functions.cs" />
+    <Compile Include="Service References\SVR_AdminService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SVR_BooksService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SVR_FunctionsService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SVR_InventoryService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SVR_SecurityService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SVR_UserAdminService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddUser.xaml.cs">
+      <DependentUpon>AddUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BookGroupAddWindow.xaml.cs">
+      <DependentUpon>BookGroupAddWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CountryCurrencyMaintain.xaml.cs">
+      <DependentUpon>CountryCurrencyMaintain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ErrorWindow.xaml.cs">
+      <DependentUpon>ErrorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\FirmMaint.xaml.cs">
+      <DependentUpon>FirmMaint.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FirmMaintAddWindow.xaml.cs">
+      <DependentUpon>FirmMaintAddWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FunctionAddWindow.xaml.cs">
+      <DependentUpon>FunctionAddWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HolidayAddWindow.xaml.cs">
+      <DependentUpon>HolidayAddWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HolidaysMaintain.cs">
+      <DependentUpon>HolidaysMaintain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InventoryFileLayout.xaml.cs">
+      <DependentUpon>InventoryFileLayout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ResetPassword.xaml.cs">
+      <DependentUpon>ResetPassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RoleAddWindow.xaml.cs">
+      <DependentUpon>RoleAddWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RolesMaintain.xaml.cs">
+      <DependentUpon>RolesMaintain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SubscriptionInfo.xaml.cs">
+      <DependentUpon>SubscriptionInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SubscriptionMaint.xaml.cs">
+      <DependentUpon>SubscriptionMaint.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SubscriptionMaintWindow.xaml.cs">
+      <DependentUpon>SubscriptionMaintWindow.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Views\AddUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BookGroupAddWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CountryCurrencyMaintain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\FirmMaint.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\FirmMaintAddWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FunctionAddWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\HolidayAddWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\HolidaysMaintain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\InventoryFileLayout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ResetPassword.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RoleAddWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RolesMaintain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SubscriptionInfo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SubscriptionMaint.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SubscriptionMaintWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Resource Include="Assets\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Page Include="Views\ErrorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Service References\SVR_AdminService\AdminService.wsdl" />
+    <None Include="Service References\SVR_AdminService\AdminService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SVR_AdminService\AdminService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SVR_BooksService\BooksService.wsdl" />
+    <None Include="Service References\SVR_BooksService\BooksService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SVR_BooksService\BooksService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SVR_FunctionsService\FunctionsService.wsdl" />
+    <None Include="Service References\SVR_FunctionsService\FunctionsService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SVR_FunctionsService\FunctionsService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SVR_InventoryService\InventoryService.wsdl" />
+    <None Include="Service References\SVR_InventoryService\InventoryService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SVR_InventoryService\InventoryService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SVR_BooksService\BooksService.disco" />
+    <None Include="Service References\SVR_BooksService\configuration91.svcinfo" />
+    <None Include="Service References\SVR_BooksService\configuration.svcinfo" />
+    <None Include="Service References\SVR_BooksService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SVR_InventoryService\InventoryService.disco" />
+    <None Include="Service References\SVR_InventoryService\configuration91.svcinfo" />
+    <None Include="Service References\SVR_InventoryService\configuration.svcinfo" />
+    <None Include="Service References\SVR_InventoryService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SVR_AdminService\AdminService.disco" />
+    <None Include="Service References\SVR_AdminService\configuration91.svcinfo" />
+    <None Include="Service References\SVR_AdminService\configuration.svcinfo" />
+    <None Include="Service References\SVR_AdminService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SVR_SecurityService\SecurityService.disco" />
+    <None Include="Service References\SVR_SecurityService\configuration91.svcinfo" />
+    <None Include="Service References\SVR_SecurityService\configuration.svcinfo" />
+    <None Include="Service References\SVR_SecurityService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SVR_UserAdminService\service.wsdl" />
+    <None Include="Service References\SVR_UserAdminService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SVR_UserAdminService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SVR_UserAdminService\configuration91.svcinfo" />
+    <None Include="Service References\SVR_UserAdminService\configuration.svcinfo" />
+    <None Include="Service References\SVR_UserAdminService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SVR_FunctionsService\FunctionsService.disco" />
+    <None Include="Service References\SVR_FunctionsService\configuration91.svcinfo" />
+    <None Include="Service References\SVR_FunctionsService\configuration.svcinfo" />
+    <None Include="Service References\SVR_FunctionsService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="ServiceReferences.ClientConfig" />
+    <None Include="Service References\SVR_SecurityService\SecurityService.wsdl" />
+    <None Include="Service References\SVR_SecurityService\SecurityService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SVR_SecurityService\SecurityService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\background_example.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\SVR_AdminService\" />
+    <WCFMetadataStorage Include="Service References\SVR_BooksService\" />
+    <WCFMetadataStorage Include="Service References\SVR_FunctionsService\" />
+    <WCFMetadataStorage Include="Service References\SVR_InventoryService\" />
+    <WCFMetadataStorage Include="Service References\SVR_SecurityService\" />
+    <WCFMetadataStorage Include="Service References\SVR_UserAdminService\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

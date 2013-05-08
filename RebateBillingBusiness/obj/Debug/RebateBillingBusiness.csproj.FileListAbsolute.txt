@@ -1,0 +1,10 @@
+U:\_Dev\RebateBillingBusiness\bin\Debug\RebateBillingBusiness.dll
+U:\_Dev\RebateBillingBusiness\bin\Debug\RebateBillingBusiness.pdb
+U:\_Dev\RebateBillingBusiness\obj\Debug\ResolveAssemblyReference.cache
+U:\_Dev\RebateBillingBusiness\obj\Debug\RebateBillingBusiness.dll
+U:\_Dev\RebateBillingBusiness\obj\Debug\RebateBillingBusiness.pdb
+C:\_Dev\RebateBillingBusiness\bin\Debug\RebateBillingBusiness.dll
+C:\_Dev\RebateBillingBusiness\bin\Debug\RebateBillingBusiness.pdb
+C:\_Dev\RebateBillingBusiness\obj\Debug\ResolveAssemblyReference.cache
+C:\_Dev\RebateBillingBusiness\obj\Debug\RebateBillingBusiness.dll
+C:\_Dev\RebateBillingBusiness\obj\Debug\RebateBillingBusiness.pdb

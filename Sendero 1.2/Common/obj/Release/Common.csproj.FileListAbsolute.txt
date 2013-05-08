@@ -1,0 +1,6 @@
+\\penson.com\shares\Users\MBattaini\_Dev\Sendero 1.2\Common\bin\Release\Anetics.Common.dll
+\\penson.com\shares\Users\MBattaini\_Dev\Sendero 1.2\Common\obj\Release\ResolveAssemblyReference.cache
+\\penson.com\shares\Users\MBattaini\_Dev\Sendero 1.2\Common\obj\Release\Anetics.Common.dll
+C:\_dev\Sendero 1.2\Common\bin\Release\Anetics.Common.dll
+C:\_dev\Sendero 1.2\Common\obj\Release\Common.csprojResolveAssemblyReference.cache
+C:\_dev\Sendero 1.2\Common\obj\Release\Anetics.Common.dll

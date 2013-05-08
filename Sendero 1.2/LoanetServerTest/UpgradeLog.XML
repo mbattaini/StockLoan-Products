@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="LoanetServerTest">
+</Property><Property Name="Solution File" Value="C:\_Dev\Sendero 1.2\LoanetServerTest\LoanetServerTest.sln">
+</Property><Property Name="Date" Value="Wednesday, January 19, 2011">
+</Property><Property Name="Time" Value="8:30 AM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="LoanetServerTest.sln" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\LoanetServerTest.sln">
+</Event><Event ErrorLevel="0" Project="LoanetServerTest" Source="LoanetServerTest.csproj" Description="Project file successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\LoanetServerTest.csproj">
+</Event><Event ErrorLevel="0" Project="LoanetServerTest" Source="LoanetServerTest.csproj.user" Description="Project user file successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\LoanetServerTest.csproj.user">
+</Event><Event ErrorLevel="0" Project="LoanetServerTest" Source="AssemblyInfo.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="LoanetServerTest" Source="TestHarness.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\TestHarness.cs">
+</Event><Event ErrorLevel="0" Project="LoanetServerTest" Source="App.config" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\App.config">
+</Event><Event ErrorLevel="1" Project="LoanetServerTest" Source="LoanetServerTest.csproj" Description="Your project is targeting .NET Framework 2.0 or 3.0. If your project uses assemblies requiring a newer .NET Framework, your project will fail to build. You can change the .NET Framework version by clicking Properties on the project menu and then selecting a new version in the '.NET Framework' dropdown box. (In Visual Basic, this is located on the Compile tab by clicking the 'Advanced Compiler Options...' button.)">
+</Event><Event ErrorLevel="0" Project="LoanetServerTest" Source="LoanetServerTest.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="LoanetServerTest" Source="LoanetServerTest.csproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="LoanetServer" Source="..\LoanetServer\LoanetServer.csproj" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="0" Project="LoanetServer" Source="..\LoanetServer\LoanetServer.csproj" Description="Project file successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\LoanetServer\LoanetServer.csproj">
+</Event><Event ErrorLevel="0" Project="LoanetServer" Source="..\LoanetServer\LoanetServer.csproj.user" Description="Project user file successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\LoanetServer\LoanetServer.csproj.user">
+</Event><Event ErrorLevel="0" Project="LoanetServer" Source="..\LoanetServer\AssemblyInfo.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\LoanetServer\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="LoanetServer" Source="..\LoanetServer\Clients.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\LoanetServer\Clients.cs">
+</Event><Event ErrorLevel="0" Project="LoanetServer" Source="..\LoanetServer\ClientsLong.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\LoanetServer\ClientsLong.cs">
+</Event><Event ErrorLevel="0" Project="LoanetServer" Source="..\LoanetServer\Collateral.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\LoanetServer\Collateral.cs">
+</Event><Event ErrorLevel="0" Project="LoanetServer" Source="..\LoanetServer\Contracts.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\LoanetServer\Contracts.cs">
+</Event><Event ErrorLevel="0" Project="LoanetServer" Source="..\LoanetServer\Loanet.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\LoanetServer\Loanet.cs">
+</Event><Event ErrorLevel="0" Project="LoanetServer" Source="..\LoanetServer\LoanetMain.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\LoanetServer\LoanetMain.cs">
+</Event><Event ErrorLevel="0" Project="LoanetServer" Source="..\LoanetServer\Marks.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\LoanetServer\Marks.cs">
+</Event><Event ErrorLevel="0" Project="LoanetServer" Source="..\LoanetServer\Master.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\LoanetServer\Master.cs">
+</Event><Event ErrorLevel="0" Project="LoanetServer" Source="..\LoanetServer\MqSeries.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\LoanetServer\MqSeries.cs">
+</Event><Event ErrorLevel="0" Project="LoanetServer" Source="..\LoanetServer\ProcessAgent.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\LoanetServer\ProcessAgent.cs">
+</Event><Event ErrorLevel="0" Project="LoanetServer" Source="..\LoanetServer\Recalls.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\LoanetServer\Recalls.cs">
+</Event><Event ErrorLevel="1" Project="LoanetServer" Source="..\LoanetServer\LoanetServer.csproj" Description="Your project is targeting .NET Framework 2.0 or 3.0. If your project uses assemblies requiring a newer .NET Framework, your project will fail to build. You can change the .NET Framework version by clicking Properties on the project menu and then selecting a new version in the '.NET Framework' dropdown box. (In Visual Basic, this is located on the Compile tab by clicking the 'Advanced Compiler Options...' button.)">
+</Event><Event ErrorLevel="0" Project="LoanetServer" Source="..\LoanetServer\LoanetServer.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="LoanetServer" Source="..\LoanetServer\LoanetServer.csproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="Common" Source="..\Common\Common.csproj" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\Common\Common.csproj" Description="Project file successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Common\Common.csproj">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\Common\Common.csproj.user" Description="Project user file successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Common\Common.csproj.user">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\Common\AssemblyInfo.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Common\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\Common\DealList.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Common\DealList.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\Common\KeyValue.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Common\KeyValue.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\Common\List.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Common\List.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\Common\Log.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Common\Log.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\Common\RegistryValue.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Common\RegistryValue.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\Common\RemotingTools.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Common\RemotingTools.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\Common\Security.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Common\Security.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\Common\Standard.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Common\Standard.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\Common\Tools.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Common\Tools.cs">
+</Event><Event ErrorLevel="0" Project="Common" Source="..\Common\Common.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Common" Source="..\Common\Common.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="1" Project="Filer" Source="..\Filer\Filer.csproj" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="0" Project="Filer" Source="..\Filer\Filer.csproj" Description="Project file successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Filer\Filer.csproj">
+</Event><Event ErrorLevel="0" Project="Filer" Source="..\Filer\Filer.csproj.user" Description="Project user file successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Filer\Filer.csproj.user">
+</Event><Event ErrorLevel="0" Project="Filer" Source="..\Filer\AssemblyInfo.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Filer\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Filer" Source="..\Filer\Filer.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Filer\Filer.cs">
+</Event><Event ErrorLevel="0" Project="Filer" Source="..\Filer\GnuPG.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Filer\GnuPG.cs">
+</Event><Event ErrorLevel="0" Project="Filer" Source="..\Filer\Filer.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Filer" Source="..\Filer\Filer.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="1" Project="Loanet" Source="..\Loanet\Loanet.csproj" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="0" Project="Loanet" Source="..\Loanet\Loanet.csproj" Description="Project file successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Loanet\Loanet.csproj">
+</Event><Event ErrorLevel="0" Project="Loanet" Source="..\Loanet\Loanet.csproj.user" Description="Project user file successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Loanet\Loanet.csproj.user">
+</Event><Event ErrorLevel="0" Project="Loanet" Source="..\Loanet\AssemblyInfo.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Loanet\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Loanet" Source="..\Loanet\BankLoan_Pledge_Release.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Loanet\BankLoan_Pledge_Release.cs">
+</Event><Event ErrorLevel="0" Project="Loanet" Source="..\Loanet\BankLoan_Pledge_Release_Datagram.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Loanet\BankLoan_Pledge_Release_Datagram.cs">
+</Event><Event ErrorLevel="2" Project="Loanet" Source="..\Loanet\Contract_Maintenance.cs" Description="Failed to backup file as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Loanet\Contract_Maintenance.cs">
+</Event><Event ErrorLevel="0" Project="Loanet" Source="..\Loanet\Debit_Data_Datagram.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Loanet\Debit_Data_Datagram.cs">
+</Event><Event ErrorLevel="0" Project="Loanet" Source="..\Loanet\Errors.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Loanet\Errors.cs">
+</Event><Event ErrorLevel="0" Project="Loanet" Source="..\Loanet\FullPartial_Return_AmountCallback.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Loanet\FullPartial_Return_AmountCallback.cs">
+</Event><Event ErrorLevel="0" Project="Loanet" Source="..\Loanet\General_System_Reject.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Loanet\General_System_Reject.cs">
+</Event><Event ErrorLevel="0" Project="Loanet" Source="..\Loanet\Lcor_Borrow_Order.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Loanet\Lcor_Borrow_Order.cs">
+</Event><Event ErrorLevel="0" Project="Loanet" Source="..\Loanet\Lcor_Borrow_Order_Executed_Datagram.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Loanet\Lcor_Borrow_Order_Executed_Datagram.cs">
+</Event><Event ErrorLevel="0" Project="Loanet" Source="..\Loanet\Lcor_Borrow_Order_Unexecuted_Datagram.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Loanet\Lcor_Borrow_Order_Unexecuted_Datagram.cs">
+</Event><Event ErrorLevel="0" Project="Loanet" Source="..\Loanet\Memo_Seg_Update.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Loanet\Memo_Seg_Update.cs">
+</Event><Event ErrorLevel="0" Project="Loanet" Source="..\Loanet\Memo_Seg_Update_Datagram.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Loanet\Memo_Seg_Update_Datagram.cs">
+</Event><Event ErrorLevel="0" Project="Loanet" Source="..\Loanet\NewContract_International_Add.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Loanet\NewContract_International_Add.cs">
+</Event><Event ErrorLevel="0" Project="Loanet" Source="..\Loanet\NewContract_SameDay_Add.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Loanet\NewContract_SameDay_Add.cs">
+</Event><Event ErrorLevel="0" Project="Loanet" Source="..\Loanet\ProfitCenter_Change.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Loanet\ProfitCenter_Change.cs">
+</Event><Event ErrorLevel="0" Project="Loanet" Source="..\Loanet\Rate_Change_BoxRate.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Loanet\Rate_Change_BoxRate.cs">
+</Event><Event ErrorLevel="0" Project="Loanet" Source="..\Loanet\Rate_Change_BoxToNegotiated.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Loanet\Rate_Change_BoxToNegotiated.cs">
+</Event><Event ErrorLevel="0" Project="Loanet" Source="..\Loanet\Rate_Change_NegotiatedRate.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Loanet\Rate_Change_NegotiatedRate.cs">
+</Event><Event ErrorLevel="0" Project="Loanet" Source="..\Loanet\Rate_Change_NegotiatedToBox.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Loanet\Rate_Change_NegotiatedToBox.cs">
+</Event><Event ErrorLevel="0" Project="Loanet" Source="..\Loanet\Rate_Change_PositiveNegative.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Loanet\Rate_Change_PositiveNegative.cs">
+</Event><Event ErrorLevel="0" Project="Loanet" Source="..\Loanet\Recall_Add.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Loanet\Recall_Add.cs">
+</Event><Event ErrorLevel="0" Project="Loanet" Source="..\Loanet\Recall_Delete.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Loanet\Recall_Delete.cs">
+</Event><Event ErrorLevel="0" Project="Loanet" Source="..\Loanet\Transaction_Data_Datagram.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Loanet\Transaction_Data_Datagram.cs">
+</Event><Event ErrorLevel="1" Project="Loanet" Source="..\Loanet\Loanet.csproj" Description="Your project is targeting .NET Framework 2.0 or 3.0. If your project uses assemblies requiring a newer .NET Framework, your project will fail to build. You can change the .NET Framework version by clicking Properties on the project menu and then selecting a new version in the '.NET Framework' dropdown box. (In Visual Basic, this is located on the Compile tab by clicking the 'Advanced Compiler Options...' button.)">
+</Event><Event ErrorLevel="0" Project="Loanet" Source="..\Loanet\Loanet.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Loanet" Source="..\Loanet\Loanet.csproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="Process" Source="..\Process\Process.csproj" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\Process\Process.csproj" Description="Project file successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Process\Process.csproj">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\Process\Process.csproj.user" Description="Project user file successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Process\Process.csproj.user">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\Process\AssemblyInfo.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Process\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\Process\IProcess.cs" Description="File successfully backed up as C:\_Dev\Sendero 1.2\LoanetServerTest\Backup\Process\IProcess.cs">
+</Event><Event ErrorLevel="0" Project="Process" Source="..\Process\Process.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Process" Source="..\Process\Process.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="" Source="LoanetServerTest.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="LoanetServerTest.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="LoanetServerTest" Source="LoanetServerTest.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="LoanetServer" Source="..\LoanetServer\LoanetServer.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Loanet" Source="..\Loanet\Loanet.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

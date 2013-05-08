@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="GetSourceIP">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSourceIPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSourceIPResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DesksGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="desk" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sIsNotSubscriber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DesksGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DesksGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeskSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="desk" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="firmCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="deskTypeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="countryCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeskSetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeskSetResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeskTypesGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="deskTypeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="deskType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sIsActive" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeskTypesGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeskTypesGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FirmsGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="firmCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FirmsGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FirmsGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FirmSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="firmCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="firm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sIsActive" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FirmSetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FirmSetResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InventoryGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="desk" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="secId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="version" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="source" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sourceActor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InventoryGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InventoryGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InventoryItemSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="desk" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="secId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quantity" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="source" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sourceActor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InventoryItemSetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InventoryItemSetResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InventoryFileLayoutGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bookGroupGet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="desk" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="inventoryType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InventoryFileLayoutGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InventoryFileLayoutGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InventoryFileLayoutSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bookGroupSet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="desk" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="inventoryType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="recordLength" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="headerFlag" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dataFlag" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="trailerFlag" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="delimiter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountLocale" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountOrdinal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountPosition" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accountLength" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="secIdOrdinal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="secIdPosition" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="secIdLength" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quantityOrdinal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quantityPosition" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quantityLength" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rateOrdinal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ratePosition" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rateLength" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="recordCountOrdinal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="recordCountPosition" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="recordCountLength" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bizDateDD" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bizDateMM" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bizDateYY" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="actor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InventoryFileLayoutSetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InventoryFileLayoutSetResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InventoryRatesGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="desk" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="secId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="version" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="source" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sourceActor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InventoryRatesGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InventoryRatesGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InventorySubscriptionsGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bookGroupGet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="desk" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="inventoryType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="utcOffset" type="xs:short" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InventorySubscriptionsGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InventorySubscriptionsGetResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InventorySubscriptionSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bookGroupSet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="desk" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="inventoryType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bizDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loadTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loadStatus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="items" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lastLoadedTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lastLoadedVersion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loadBizDatePrior" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fileTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fileChecktime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fileStatus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fileName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fileHost" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fileUserId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="filePassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mailAddress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mailSubject" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="comment" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="actor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isActive" type="xs:boolean" />
+        <xs:element minOccurs="0" name="bookGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="functionPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InventorySubscriptionSetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InventorySubscriptionSetResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

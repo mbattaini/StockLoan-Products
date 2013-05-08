@@ -1,0 +1,12 @@
+bin\Debug\StockLoan.Common.dll
+bin\Debug\StockLoan.Common.pdb
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\StockLoan.NorthStarServerTest.exe.config
+bin\Debug\StockLoan.NorthStarServerTest.exe
+bin\Debug\StockLoan.NorthStarServerTest.pdb
+bin\Debug\StockLoan.NorthStarServer.dll
+bin\Debug\StockLoan.NorthStar.dll
+bin\Debug\StockLoan.NorthStarServer.pdb
+bin\Debug\StockLoan.NorthStar.pdb
+obj\Debug\StockLoan.NorthStarServerTest.exe
+obj\Debug\StockLoan.NorthStarServerTest.pdb

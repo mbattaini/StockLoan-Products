@@ -1,0 +1,413 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Silverlight.Legacy</name>
+    </assembly>
+    <members>
+        <member name="T:C1.Silverlight.Legacy.CubeFace">
+            <summary>
+            Specifies a face in a cube.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Legacy.CubeFace.Front">
+            <summary>
+            The cube's front face.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Legacy.CubeFace.Back">
+            <summary>
+            The cube's back face.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Legacy.CubeFace.Left">
+            <summary>
+            The cube's left face.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Legacy.CubeFace.Right">
+            <summary>
+            The cube's right face.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Legacy.CubeFace.Top">
+            <summary>
+            The cube's top face.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Legacy.CubeFace.Bottom">
+            <summary>
+            The cube's bottom face.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Legacy.C1Cube">
+            <summary>
+            ItemsControl that provides a 3D rotating cube with different content on each face.
+            </summary>	
+        </member>
+        <member name="M:C1.Silverlight.Legacy.C1Cube.Rotate(System.Double,System.Double,System.Double)">
+            <summary>
+            Rotates the cube.
+            </summary>
+            <remarks>
+            The rotation is done around the X axis, then around the Y axis and finally around the Z axis.
+            </remarks>
+            <param name="rotationX">Rotation around the X axis.</param>
+            <param name="rotationY">Rotation around the Y axis.</param>
+            <param name="rotationZ">Rotation around the Z axis.</param>
+        </member>
+        <member name="M:C1.Silverlight.Legacy.C1Cube.ShowFace(C1.Silverlight.Legacy.CubeFace)">
+            <summary>
+            Smoothly rotates the cube so that a face faces forward.
+            </summary>
+            <param name="face">The face that will be facing forward.</param>
+        </member>
+        <member name="M:C1.Silverlight.Legacy.C1Cube.RotateTo(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Smoothly rotates the cube to a specified position.
+            </summary>
+            <param name="rotationX">The target rotation around the X axis.</param>
+            <param name="rotationY">The target rotation around the Y axis.</param>
+            <param name="rotationZ">The target rotation around the Z axis.</param>
+            <param name="delay">The time in seconds that the animation will last.</param>
+        </member>
+        <member name="M:C1.Silverlight.Legacy.C1Cube.ShowItem(System.Object)">
+            <summary>
+            Smoothly rotates the cube so that the face an item is in faces forward.
+            </summary>
+            <param name="item">The item whose face will be facing forward.</param>
+        </member>
+        <member name="M:C1.Silverlight.Legacy.C1Cube.ChangeVisualStateCommon(System.Boolean)">
+            <summary>
+            Updates the current visual state of the Common visual state group to match the object's properties.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Legacy.C1Cube.RotationXProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Legacy.C1Cube.RotationX"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Legacy.C1Cube.RotationYProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Legacy.C1Cube.RotationY"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Legacy.C1Cube.RotationZProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Legacy.C1Cube.RotationZ"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Legacy.C1Cube.ShowFaceDelayProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Legacy.C1Cube.ShowFaceDelay"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Legacy.C1Cube.IsDraggableProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Legacy.C1Cube.IsDraggable"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Legacy.C1Cube.IsMouseOverProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Legacy.C1Cube.IsMouseOver"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Legacy.C1Cube.ForceMouseOverProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Legacy.C1Cube.ForceMouseOver"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Legacy.C1Cube.GetFace(System.Windows.DependencyObject)">
+            <summary> 
+            Gets the value of the Face attached property for the 
+            specified element.
+            </summary> 
+            <param name="element">
+            The element from which to read the attached property.
+            </param> 
+            <returns>The value of the Face property.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Legacy.C1Cube.SetFace(System.Windows.DependencyObject,C1.Silverlight.Legacy.CubeFace)">
+            <summary> 
+            Sets the value of the Face attached property for the 
+            specified element.
+            </summary> 
+            <param name="element">
+            The element to write the attached property to.
+            </param> 
+            <param name="value">The property value to set.</param>
+        </member>
+        <member name="F:C1.Silverlight.Legacy.C1Cube.FaceProperty">
+            <summary> 
+            Identifies the Face attached property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Legacy.C1Cube.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Legacy.C1Cube"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Legacy.C1Cube.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.Legacy.C1Cube"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Legacy.C1Cube.RotationX">
+            <summary>
+            Gets or sets the rotation of the cube in the x axis.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Legacy.C1Cube.RotationXChanged">
+            <summary> 
+            Event raised when the <see cref="P:RotationX"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Legacy.C1Cube.RotationY">
+            <summary>
+            Gets or sets the rotation of the cube in the y axis.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Legacy.C1Cube.RotationYChanged">
+            <summary> 
+            Event raised when the <see cref="P:RotationY"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Legacy.C1Cube.RotationZ">
+            <summary>
+            Gets or sets the rotation of the cube in the z axis.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Legacy.C1Cube.RotationZChanged">
+            <summary> 
+            Event raised when the <see cref="P:RotationZ"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Legacy.C1Cube.ShowFaceDelay">
+            <summary>
+            Gets or sets the time in seconds that it takes to go to a new face when CurrentFace is set.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Legacy.C1Cube.IsDraggable">
+            <summary>
+            Gets or sets a value indicating whether the cube can be rotated by dragging with the mouse.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Legacy.C1Cube.IsMouseOver">
+            <summary>
+            Returns true if the mouse is over the control.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Legacy.C1Cube.IsMouseOverChanged">
+            <summary> 
+            Event raised when the <see cref="P:IsMouseOver"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Legacy.C1Cube.ForceMouseOver">
+            <summary>
+            Set to true to force the mouse over visual state.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Legacy.C1CubePanel">
+            <summary>
+            Panel that provides a 3D rotating cube with different content on each face.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Legacy.C1CubePanel.GetBounds">
+            <summary>
+            Returns a rectangles that bounds the rotated cube.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Legacy.C1CubePanel.Rotate(System.Double,System.Double,System.Double)">
+            <summary>
+            Rotates the cube.
+            </summary>
+            <remarks>
+            The rotation is done around the X axis, then around the Y axis and finally around the Z axis.
+            </remarks>
+            <param name="rotationX">Rotation around the X axis.</param>
+            <param name="rotationY">Rotation around the Y axis.</param>
+            <param name="rotationZ">Rotation around the Z axis.</param>
+        </member>
+        <member name="F:C1.Silverlight.Legacy.C1CubePanel.RotationXProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Legacy.C1CubePanel.RotationX"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Legacy.C1CubePanel.RotationYProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Legacy.C1CubePanel.RotationY"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Legacy.C1CubePanel.RotationZProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Legacy.C1CubePanel.RotationZ"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Legacy.C1CubePanel.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Legacy.C1CubePanel"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Legacy.C1CubePanel.RotationX">
+            <summary>
+            Gets or sets the rotation of the cube in the x axis.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Legacy.C1CubePanel.RotationY">
+            <summary>
+            Gets or sets the rotation of the cube in the y axis.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Legacy.C1CubePanel.RotationZ">
+            <summary>
+            Gets or sets the rotation of the cube in the z axis.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Legacy.C1ImageMagnifier">
+            <summary>
+            C1ImageMagnifier control adds a magnifying glass over regular images, allowing end-users to zoom in on parts of the image.
+            </summary>	
+        </member>
+        <member name="M:C1.Silverlight.Legacy.C1ImageMagnifier.ChangeVisualStateCommon(System.Boolean)">
+            <summary>
+            Updates the current visual state of the Common visual state group to match the object's properties.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Legacy.C1ImageMagnifier.ChangeVisualStateFocus(System.Boolean)">
+            <summary>
+            Updates the current visual state of the Focus visual state group to match the object's properties.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Legacy.C1ImageMagnifier.ZoomMaximumProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Legacy.C1ImageMagnifier.ZoomMaximum"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Legacy.C1ImageMagnifier.ZoomMinimumProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Legacy.C1ImageMagnifier.ZoomMinimum"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Legacy.C1ImageMagnifier.ZoomIncrementProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Legacy.C1ImageMagnifier.ZoomIncrement"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Legacy.C1ImageMagnifier.PanStepProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Legacy.C1ImageMagnifier.PanStep"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Legacy.C1ImageMagnifier.HandleKeyboardProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Legacy.C1ImageMagnifier.HandleKeyboard"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Legacy.C1ImageMagnifier.ZoomProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Legacy.C1ImageMagnifier.Zoom"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Legacy.C1ImageMagnifier.SourceProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Legacy.C1ImageMagnifier.Source"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Legacy.C1ImageMagnifier.IsMouseOverProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Legacy.C1ImageMagnifier.IsMouseOver"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Legacy.C1ImageMagnifier.ForceMouseOverProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Legacy.C1ImageMagnifier.ForceMouseOver"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Legacy.C1ImageMagnifier.IsFocusedProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.Legacy.C1ImageMagnifier.IsFocused"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Legacy.C1ImageMagnifier.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.Legacy.C1ImageMagnifier"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Legacy.C1ImageMagnifier.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.Legacy.C1ImageMagnifier"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.Legacy.C1ImageMagnifier.Magnifier">
+            <summary>
+            Gets the <see cref="T:System.Windows.Controls.Border"/> element that represents the magnifying 
+            glass over the main image.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Legacy.C1ImageMagnifier.ZoomMaximum">
+            <summary>
+            Gets or sets the maximum zoom applied when the user presses the plus and minus keys.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Legacy.C1ImageMagnifier.ZoomMinimum">
+            <summary>
+            Gets or sets the minimum zoom applied when the user presses the plus and minus keys.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Legacy.C1ImageMagnifier.ZoomIncrement">
+            <summary>
+            Gets or sets the zoom increment applied when the user presses the plus and minus keys.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Legacy.C1ImageMagnifier.PanStep">
+            <summary>
+            Gets or sets the distance by which the magnifier moves when the user presses the cursor keys;
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Legacy.C1ImageMagnifier.HandleKeyboard">
+            <summary>
+            Determines whether the control should handle the keyboard to provide automatic zooming and panning.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Legacy.C1ImageMagnifier.Zoom">
+            <summary>
+            Gets or sets the zoom factor provided by the magnifying glass.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Legacy.C1ImageMagnifier.ZoomChanged">
+            <summary> 
+            Event raised when the <see cref="P:Zoom"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Legacy.C1ImageMagnifier.Source">
+            <summary>
+            Gets or sets the source for the <see cref="T:C1.Silverlight.Legacy.C1ImageMagnifier"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Legacy.C1ImageMagnifier.IsMouseOver">
+            <summary>
+            Returns true if the mouse is over the control.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Legacy.C1ImageMagnifier.IsMouseOverChanged">
+            <summary> 
+            Event raised when the <see cref="P:IsMouseOver"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Legacy.C1ImageMagnifier.ForceMouseOver">
+            <summary>
+            Set to true to force the mouse over visual state.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Legacy.C1ImageMagnifier.IsFocused">
+            <summary>
+            Returns true if the control has the focus.
+            </summary>
+        </member>
+    </members>
+</doc>

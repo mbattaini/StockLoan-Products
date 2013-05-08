@@ -1,0 +1,68 @@
+C:\ATLAS\Loanstar\MAINSERVICE\bin\Release\StockLoan.MainService.exe
+C:\ATLAS\Loanstar\MAINSERVICE\bin\Release\StockLoan.MainServer.dll
+C:\ATLAS\Loanstar\MAINSERVICE\bin\Release\StockLoan.Common.dll
+C:\ATLAS\Loanstar\MAINSERVICE\bin\Release\StockLoan.Main.dll
+C:\ATLAS\Loanstar\MAINSERVICE\bin\Release\StockLoan.PushData.dll
+C:\ATLAS\Loanstar\MAINSERVICE\bin\Release\StockLoan.BackOffice.dll
+C:\ATLAS\Loanstar\MAINSERVICE\bin\Release\C1.C1Pdf.2.dll
+C:\ATLAS\Loanstar\MAINSERVICE\bin\Release\StockLoan.PushData.pdb
+C:\ATLAS\Loanstar\MAINSERVICE\obj\Release\ResolveAssemblyReference.cache
+C:\ATLAS\Loanstar\MAINSERVICE\obj\Release\Anetics.Medalist.ProjectInstaller.resources
+C:\ATLAS\Loanstar\MAINSERVICE\obj\Release\StockLoan.Main.Service.resources
+C:\ATLAS\Loanstar\MAINSERVICE\obj\Release\MainService.csproj.GenerateResource.Cache
+C:\ATLAS\Loanstar\MAINSERVICE\obj\Release\StockLoan.MainService.exe
+C:\ATLAS\Loanstar\MAINSERVICE\bin\Release\StockLoan.MainBusiness.dll
+C:\ATLAS\Loanstar\MAINSERVICE\bin\Release\StockLoan.MainBusiness.pdb
+C:\ATLAS\Loanstar\MAINSERVICE\bin\Release\C1.C1Report.2.dll
+C:\ATLAS\Loanstar\MAINSERVICE\bin\Release\C1.C1Report.2.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVICE\bin\Release\StockLoan.MainService.exe
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVICE\bin\Release\StockLoan.MainServer.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVICE\bin\Release\C1.C1Pdf.2.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVICE\bin\Release\StockLoan.Common.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVICE\bin\Release\StockLoan.MainBusiness.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVICE\bin\Release\StockLoan.BackOffice.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVICE\bin\Release\StockLoan.Main.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVICE\bin\Release\C1.C1Report.2.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVICE\bin\Release\StockLoan.PushData.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVICE\bin\Release\StockLoan.MainBusiness.pdb
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVICE\bin\Release\C1.C1Report.2.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVICE\bin\Release\StockLoan.PushData.pdb
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVICE\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVICE\obj\Release\Anetics.Medalist.ProjectInstaller.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVICE\obj\Release\StockLoan.Main.Service.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVICE\obj\Release\MainService.csproj.GenerateResource.Cache
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\MAINSERVICE\obj\Release\StockLoan.MainService.exe
+U:\_Dev\ATLAS\Loanstar\MAINSERVICE\bin\Release\StockLoan.MainService.exe
+U:\_Dev\ATLAS\Loanstar\MAINSERVICE\bin\Release\StockLoan.MainServer.dll
+U:\_Dev\ATLAS\Loanstar\MAINSERVICE\bin\Release\StockLoan.Main.dll
+U:\_Dev\ATLAS\Loanstar\MAINSERVICE\bin\Release\StockLoan.BackOffice.dll
+U:\_Dev\ATLAS\Loanstar\MAINSERVICE\bin\Release\StockLoan.Common.dll
+U:\_Dev\ATLAS\Loanstar\MAINSERVICE\bin\Release\C1.C1Report.2.dll
+U:\_Dev\ATLAS\Loanstar\MAINSERVICE\bin\Release\StockLoan.MainBusiness.dll
+U:\_Dev\ATLAS\Loanstar\MAINSERVICE\bin\Release\StockLoan.PushData.dll
+U:\_Dev\ATLAS\Loanstar\MAINSERVICE\bin\Release\C1.C1Pdf.2.dll
+U:\_Dev\ATLAS\Loanstar\MAINSERVICE\bin\Release\C1.C1Report.2.xml
+U:\_Dev\ATLAS\Loanstar\MAINSERVICE\bin\Release\StockLoan.MainBusiness.pdb
+U:\_Dev\ATLAS\Loanstar\MAINSERVICE\bin\Release\StockLoan.PushData.pdb
+U:\_Dev\ATLAS\Loanstar\MAINSERVICE\obj\Release\ResolveAssemblyReference.cache
+U:\_Dev\ATLAS\Loanstar\MAINSERVICE\obj\Release\Anetics.Medalist.ProjectInstaller.resources
+U:\_Dev\ATLAS\Loanstar\MAINSERVICE\obj\Release\StockLoan.Main.Service.resources
+U:\_Dev\ATLAS\Loanstar\MAINSERVICE\obj\Release\ResGen.read.1.tlog
+U:\_Dev\ATLAS\Loanstar\MAINSERVICE\obj\Release\ResGen.write.1.tlog
+U:\_Dev\ATLAS\Loanstar\MAINSERVICE\obj\Release\StockLoan.MainService.exe
+C:\_Dev\ATLAS\Loanstar\MAINSERVICE\bin\Release\StockLoan.MainService.exe
+C:\_Dev\ATLAS\Loanstar\MAINSERVICE\bin\Release\StockLoan.MainServer.dll
+C:\_Dev\ATLAS\Loanstar\MAINSERVICE\bin\Release\StockLoan.Main.dll
+C:\_Dev\ATLAS\Loanstar\MAINSERVICE\bin\Release\StockLoan.Common.dll
+C:\_Dev\ATLAS\Loanstar\MAINSERVICE\bin\Release\StockLoan.MainBusiness.dll
+C:\_Dev\ATLAS\Loanstar\MAINSERVICE\bin\Release\C1.C1Report.2.dll
+C:\_Dev\ATLAS\Loanstar\MAINSERVICE\bin\Release\System.Windows.Forms.DataVisualization.dll
+C:\_Dev\ATLAS\Loanstar\MAINSERVICE\bin\Release\StockLoan.MainBusiness.pdb
+C:\_Dev\ATLAS\Loanstar\MAINSERVICE\bin\Release\C1.C1Report.2.xml
+C:\_Dev\ATLAS\Loanstar\MAINSERVICE\obj\Release\ResolveAssemblyReference.cache
+C:\_Dev\ATLAS\Loanstar\MAINSERVICE\obj\Release\Anetics.Medalist.ProjectInstaller.resources
+C:\_Dev\ATLAS\Loanstar\MAINSERVICE\obj\Release\StockLoan.Main.Service.resources
+C:\_Dev\ATLAS\Loanstar\MAINSERVICE\obj\Release\ResGen.read.1.tlog
+C:\_Dev\ATLAS\Loanstar\MAINSERVICE\obj\Release\ResGen.write.1.tlog
+C:\_Dev\ATLAS\Loanstar\MAINSERVICE\obj\Release\StockLoan.MainService.exe
+C:\_Dev\ATLAS\Loanstar\MAINSERVICE\bin\Release\StockLoan.MainServer.XmlSerializers.dll

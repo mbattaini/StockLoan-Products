@@ -1,0 +1,12 @@
+C:\_dev\ATLAS\LoanstarWorldWide\S3_Pending_Trades\S3_Pending_Trades\bin\Debug\S3_Pending_Trades.exe
+C:\_dev\ATLAS\LoanstarWorldWide\S3_Pending_Trades\S3_Pending_Trades\bin\Debug\S3_Pending_Trades.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\S3_Pending_Trades\S3_Pending_Trades\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\_dev\ATLAS\LoanstarWorldWide\S3_Pending_Trades\S3_Pending_Trades\obj\x86\Debug\S3_Pending_Trades.Form1.resources
+C:\_dev\ATLAS\LoanstarWorldWide\S3_Pending_Trades\S3_Pending_Trades\obj\x86\Debug\S3_Pending_Trades.Properties.Resources.resources
+C:\_dev\ATLAS\LoanstarWorldWide\S3_Pending_Trades\S3_Pending_Trades\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\_dev\ATLAS\LoanstarWorldWide\S3_Pending_Trades\S3_Pending_Trades\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\_dev\ATLAS\LoanstarWorldWide\S3_Pending_Trades\S3_Pending_Trades\obj\x86\Debug\S3_Pending_Trades.exe
+C:\_dev\ATLAS\LoanstarWorldWide\S3_Pending_Trades\S3_Pending_Trades\obj\x86\Debug\S3_Pending_Trades.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\S3_Pending_Trades\S3_Pending_Trades\bin\Debug\S3_Pending_Trades.exe.config
+C:\_dev\ATLAS\LoanstarWorldWide\S3_Pending_Trades\S3_Pending_Trades\bin\Debug\StockLoan.Common.dll
+C:\_dev\ATLAS\LoanstarWorldWide\S3_Pending_Trades\S3_Pending_Trades\bin\Debug\StockLoan.Common.pdb

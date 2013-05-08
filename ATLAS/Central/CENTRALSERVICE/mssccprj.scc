@@ -1,0 +1,17 @@
+SCC = This is a Source Code Control file
+
+[MedalistService.csproj]
+SCC_Aux_Path = "\\rspen001\SourceSafe\PensonSource"
+SCC_Project_Name = "$/SourceCode/C++/0 Development/Sendero1.2/MedalistService", MALDAAAA
+
+[MedalistService.sln]
+SCC_Aux_Path = "\\rspen001\SourceSafe\PensonSource"
+SCC_Project_Name = "$/SourceCode/C++/0 Development/Sendero1.2/MedalistService", MALDAAAA
+
+[CentralService.csproj]
+SCC_Aux_Path = "\\rspen001\SourceSafe\PensonSource"
+SCC_Project_Name = "$/SourceCode/C#/0 Development/Atlas/LSCentral/LSCentralService", KGOFAAAA
+
+[CentralService.sln]
+SCC_Aux_Path = "\\rspen001\SourceSafe\PensonSource"
+SCC_Project_Name = "$/SourceCode/C#/0 Development/Atlas/LSCentral/LSCentralService", KGOFAAAA

@@ -1,0 +1,16 @@
+Medalist Client 
+
+As Deployed in Staging Environment: 
+
+Files: 
+	\\rspen001\staging\Apps\Sendero\Client
+
+
+In user machine: 
+	Create C:\SenderoTesting and C:\SenderoTesting\Logs
+	Create shortcut to Sendero.cmd on user desktop
+
+
+In production:
+Must modify the .config file to point to 
+the correct folders and locations for production. 

@@ -1,0 +1,11 @@
+C:\_dev\Sendero 1.2\Ares\bin\Release\Anetics.Ares.dll
+C:\_dev\Sendero 1.2\Ares\bin\Release\Anetics.Common.dll
+C:\_dev\Sendero 1.2\Ares\bin\Release\Anetics.Filer.dll
+C:\_dev\Sendero 1.2\Ares\bin\Release\c1.c1excel.dll
+C:\_dev\Sendero 1.2\Ares\bin\Release\C1.Common.dll
+C:\_dev\Sendero 1.2\Ares\bin\Release\C1.Win.C1TrueDBGrid.dll
+C:\_dev\Sendero 1.2\Ares\bin\Release\Rebex.Net.Ftp.dll
+C:\_dev\Sendero 1.2\Ares\bin\Release\Rebex.Net.ProxySocket.dll
+C:\_dev\Sendero 1.2\Ares\bin\Release\Anetics.Common.pdb
+C:\_dev\Sendero 1.2\Ares\obj\Release\Ares.csprojResolveAssemblyReference.cache
+C:\_dev\Sendero 1.2\Ares\obj\Release\Anetics.Ares.dll

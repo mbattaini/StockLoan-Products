@@ -1,0 +1,9 @@
+C:\_dev\ATLAS\ComplianceData\bin\Debug\StockLoan.Common.dll
+C:\_dev\ATLAS\ComplianceData\bin\Debug\StockLoan.Common.pdb
+C:\_dev\ATLAS\ComplianceData\bin\Debug\StockLoan.ComplianceData.dll
+C:\_dev\ATLAS\ComplianceData\bin\Debug\StockLoan.ComplianceData.pdb
+C:\_dev\ATLAS\ComplianceData\obj\Debug\StockLoan.ComplianceData.dll
+C:\_dev\ATLAS\ComplianceData\obj\Debug\StockLoan.ComplianceData.pdb
+C:\_dev\ATLAS\ComplianceData\obj\Debug\ComplianceData.csprojResolveAssemblyReference.cache
+C:\_dev\ATLAS\ComplianceData\bin\Debug\C1.C1Excel.2.dll
+C:\_dev\ATLAS\ComplianceData\bin\Debug\C1.C1Excel.2.xml

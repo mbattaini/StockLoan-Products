@@ -1,0 +1,594 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Silverlight.Chart.Editor</name>
+    </assembly>
+    <members>
+        <member name="T:C1.Silverlight.Chart.Editor.AutoColorPicker">
+            <summary>
+            Color picker with support of automatic(default) color.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.AutoColorPicker.#ctor">
+            <summary>
+            Initializes a new instance of AutoColorPicker class.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.AutoColorPicker.OnApplyTemplate">
+            <summary>
+            Called when applying template.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.AutoColorPicker.Supports(C1.Silverlight.Extended.PropertyAttribute)">
+            <summary>
+            Returns true if the editor supports (is able to show/edit) the property
+            values described by the PropertyAttribute.
+            </summary>
+            <param name="Property">The property attribute.</param>
+            <returns>The value indicating whether the editor supports the property.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.AutoColorPicker.Attach(C1.Silverlight.Extended.PropertyAttribute)">
+            <summary>
+            Attaches (initializes) the editor with the current property.
+            </summary>
+            <param name="property">The property attribute.</param>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.AutoColorPicker.Detach(C1.Silverlight.Extended.PropertyAttribute)">
+            <summary>
+            Detaches (releases) the editor that was attached with the property passed as parameter.
+            </summary>
+            <param name="property">The property attribute.</param>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.AutoColorPicker.Create">
+            <summary>
+            Creates ands initializes a new instance of the editor.
+            </summary>
+            <returns>The created instance.</returns>
+        </member>
+        <member name="E:C1.Silverlight.Chart.Editor.AutoColorPicker.ValueChanged">
+            <summary>
+            Fired when the value of the current property has changed.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Chart.Editor.AxisEditor">
+            <summary>
+            Represents a control for editing main properties of chart axis
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Chart.Editor.Editor">
+            <summary>
+            Base editor class 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.Editor.#ctor">
+            <summary>
+            Initializes a new instance of Editor class.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.Editor.OnDataContextChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when the data context was changed.
+            </summary>
+            <param name="obj">Event object</param>
+            <param name="args">Event arguments</param>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.AxisEditor.#ctor">
+            <summary>
+            Initializes a new instance of AxisEditor class.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.AxisEditor.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Chart.Editor.ChartEditor">
+            <summary>
+            Represents a control for editing main properties of chart.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.ChartEditor.#ctor">
+            <summary>
+            Initializes a new instance of ChartEditor class.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.ChartEditor.OnDataContextChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when the data context was changed.
+            </summary>
+            <param name="obj">Event object</param>
+            <param name="args">Event arguments</param>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.ChartEditor.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Chart.Editor.ChartEditorOptions">
+            <summary>
+            Contains various option for chart editor.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.ChartEditorOptions.GetLabelOptions(C1.Silverlight.Chart.C1Chart)">
+            <summary>
+            Gets the value of LabelOptions property for the specified chart.
+            </summary>
+            <param name="obj">The chart instance.</param>
+            <returns>The value of property.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.ChartEditorOptions.SetLabelOptions(C1.Silverlight.Chart.C1Chart,C1.Silverlight.Chart.Editor.LabelOptions)">
+            <summary>
+            Sets the value of LabelOptions property for the specified chart.
+            </summary>
+            <param name="obj">The chart.</param>
+            <param name="value">The property value.</param>
+        </member>
+        <member name="F:C1.Silverlight.Chart.Editor.ChartEditorOptions.LabelOptionsProperty">
+            <summary>
+            Identifies the attached dependency property LabelOptions.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.ChartEditorOptions.GetTooltipOptions(C1.Silverlight.Chart.C1Chart)">
+            <summary>
+            Gets the value of TooltipOptions property for the specified chart.
+            </summary>
+            <param name="obj">The chart instance.</param>
+            <returns>The value of property.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.ChartEditorOptions.SetTooltipOptions(C1.Silverlight.Chart.C1Chart,C1.Silverlight.Chart.Editor.LabelOptions)">
+            <summary>
+            Sets the value of TooltipOptions property for the specified chart.
+            </summary>
+            <param name="obj">The chart.</param>
+            <param name="value">The property value.</param>
+        </member>
+        <member name="F:C1.Silverlight.Chart.Editor.ChartEditorOptions.TooltipOptionsProperty">
+            <summary>
+            Identifies the attached dependency property TooltipOptions.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Chart.Editor.DashesEditor">
+            <summary>
+            Represents editor for stroke dashes.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.DashesEditor.#ctor">
+            <summary>
+            Initializes a new instance of DashesEditor class.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.DashesEditor.GetSelectedItem">
+            <summary>
+            Clones and returns the selected item.
+            </summary>
+            <returns>Clone of the selected item.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.DashesEditor.SetForeground(System.Windows.Media.Brush)">
+            <summary>
+            Sets the foreground brush.
+            </summary>
+            <param name="brush"></param>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.DashesEditor.Supports(C1.Silverlight.Extended.PropertyAttribute)">
+            <summary>
+            Returns true if the editor supports (is able to show/edit) the property
+            values described by the PropertyAttribute.
+            </summary>
+            <param name="Property">The property attribute.</param>
+            <returns>The value indicating whether the editor supports the property.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.DashesEditor.Attach(C1.Silverlight.Extended.PropertyAttribute)">
+            <summary>
+            Attaches (initializes) the editor with the current property.
+            </summary>
+            <param name="property">The property attribute.</param>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.DashesEditor.Detach(C1.Silverlight.Extended.PropertyAttribute)">
+            <summary>
+            Detaches (releases) the editor that was attached with the property passed as parameter.
+            </summary>
+            <param name="property">The property attribute.</param>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.DashesEditor.Create">
+            <summary>
+            Creates ands initializes a new instance of the editor.
+            </summary>
+            <returns>The created instance.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.DashesEditor.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Chart.Editor.DashesEditor.ValueChanged">
+            <summary>
+            Fires when the property value was changed.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Chart.Editor.DashesEditor.SelectionChanged">
+            <summary>
+            Fires when the selection was changed.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Chart.Editor.DashesConverter">
+            <summary>
+            Converter for dashes editor.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.DashesConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the value.
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.DashesConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the value back.
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.DashesConverter.Clone(System.Windows.Media.DoubleCollection)">
+            <summary>
+            Clones the collection.
+            </summary>
+            <param name="dc">Original collection.</param>
+            <returns>Clone of the collection.</returns>
+        </member>
+        <member name="T:C1.Silverlight.Chart.Editor.DataLabelEditor">
+            <summary>
+            Represents a control for editing template for data labels and tooltips.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.DataLabelEditor.#ctor">
+            <summary>
+            Initializes a new instance of DataLabelEditor class.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.DataLabelEditor.OnDataContextChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when the data context was changed.
+            </summary>
+            <param name="obj">Event object</param>
+            <param name="args">Event arguments</param>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.DataLabelEditor.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Editor.DataLabelEditor.UseTooltips">
+            <summary>
+            Gets or sets the value indicating whether to use tooltips for data points.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Editor.DataLabelEditor.LabelOptions">
+            <summary>
+            Gets or sets the options for data point labels.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Chart.Editor.LabelOptions">
+            <summary>
+            Contains options for data labels and tooltips.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart.Editor.LabelOptions.deftempl">
+            <summary>
+            Default template for labels and tooltips.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.LabelOptions.CreateTemplate">
+            <summary>
+            Create template from the options.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Editor.LabelOptions.Text">
+            <summary>
+            Gets or sets the label text.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Editor.LabelOptions.Alignment">
+            <summary>
+            Gets or sets the label alignment.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Editor.LabelOptions.OffsetX">
+            <summary>
+            Gets or sets the horizontal offset of label.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Editor.LabelOptions.OffsetY">
+            <summary>
+            Gets or sets vertical offset of label.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.Chart.Editor.LabelOptions.PropertyChanged">
+            <summary>
+            Fires when the property was changed.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Chart.Editor.LegendEditor">
+            <summary>
+            Represents a control for editing main properties of chart legend.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.LegendEditor.#ctor">
+            <summary>
+            Initializes a new instance of LegendEditor class.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.LegendEditor.OnDataContextChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when the data context was changed.
+            </summary>
+            <param name="obj">Event object</param>
+            <param name="args">Event arguments</param>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.LegendEditor.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Chart.Editor.BrushPropertyEditor">
+            <summary>
+            Represents editor for brush property.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Chart.Editor.PropertyEditor">
+            <summary>
+            Base class for editing properties.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.PropertyEditor.#ctor">
+            <summary>
+            Initializes a new instance of PropertyEditor class.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.PropertyEditor.OnAutoClicked(System.Object,System.EventArgs)">
+            <summary>
+            Fires the AutoClicked event.
+            </summary>
+            <param name="sender">Event sender</param>
+            <param name="args">Event arguments</param>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.PropertyEditor.OnValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            Fires the ValueChanged event.
+            </summary>
+            <param name="sender">Event sender</param>
+            <param name="args">Event arguments</param>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.PropertyEditor.UpdateEditor">
+            <summary>
+            Creates or updates editor controls.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.PropertyEditor.OnDataContextChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when the data context was changed.
+            </summary>
+            <param name="obj">Event object</param>
+            <param name="args">Event arguments</param>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.PropertyEditor.CreateGrid">
+            <summary>
+            Creates the grid for layout.
+            </summary>
+            <returns>The created grid.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.PropertyEditor.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Editor.PropertyEditor.PropertyPath">
+            <summary>
+            Gets or sets the property path.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Editor.PropertyEditor.Label">
+            <summary>
+            Gets or sets the label.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Editor.PropertyEditor.LabelWidth">
+            <summary>
+            Gets or sets the label width.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Editor.PropertyEditor.FieldWidth">
+            <summary>
+            Gets or sets the field width.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Editor.PropertyEditor.FieldValue">
+            <summary>
+            Gets or set the field value.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart.Editor.BrushPropertyEditor.AutoColor">
+            <summary>
+            Value for automatic(default) color.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.BrushPropertyEditor.UpdateEditor">
+            <summary>
+            Creates or updates editor controls.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Chart.Editor.DashesPropertyEditor">
+            <summary>
+            Represents editor for StrokeDashes property.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.DashesPropertyEditor.UpdateEditor">
+            <summary>
+            Creates or updates editor controls.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Editor.DashesPropertyEditor.Stroke">
+            <summary>
+            Gets or sets the stroke brush.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Chart.Editor.EnumPropertyEditor">
+            <summary>
+            Represents editor of enum property.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.EnumPropertyEditor.UpdateEditor">
+            <summary>
+            Creates or updates editor controls.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Editor.EnumPropertyEditor.Values">
+            <summary>
+            Gets or sets comma separated available values for the property.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Chart.Editor.NumberPropertyEditor">
+            <summary>
+            Represents editor for numeric property.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.NumberPropertyEditor.UpdateEditor">
+            <summary>
+            Creates or updates editor controls.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Editor.NumberPropertyEditor.Min">
+            <summary>
+            Gets or sets the mininmal value.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Editor.NumberPropertyEditor.Max">
+            <summary>
+            Gets or sets the maximal value.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Editor.NumberPropertyEditor.Increment">
+            <summary>
+            Gets or sets the increment value.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Editor.NumberPropertyEditor.Format">
+            <summary>
+            Gets or sets the format string.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Chart.Editor.TextPropertyEditor">
+            <summary>
+            Represents editor for text property.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Editor.TextPropertyEditor.UpdateEditor">
+            <summary>
+            Creates or updates editor controls.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Chart.Editor.Resources.C1_Silverlight_Chart_Editor">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Editor.Resources.C1_Silverlight_Chart_Editor.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Editor.Resources.C1_Silverlight_Chart_Editor.Add">
+            <summary>
+              Looks up a localized string similar to Add.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Editor.Resources.C1_Silverlight_Chart_Editor.Add_legend">
+            <summary>
+              Looks up a localized string similar to Add legend.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Editor.Resources.C1_Silverlight_Chart_Editor.Annotations">
+            <summary>
+              Looks up a localized string similar to Annotations.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Editor.Resources.C1_Silverlight_Chart_Editor.Auto">
+            <summary>
+              Looks up a localized string similar to Auto.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Editor.Resources.C1_Silverlight_Chart_Editor.Axes">
+            <summary>
+              Looks up a localized string similar to Axes.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Editor.Resources.C1_Silverlight_Chart_Editor.Chart">
+            <summary>
+              Looks up a localized string similar to Chart.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Editor.Resources.C1_Silverlight_Chart_Editor.Colors">
+            <summary>
+              Looks up a localized string similar to Colors.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Editor.Resources.C1_Silverlight_Chart_Editor.Data">
+            <summary>
+              Looks up a localized string similar to Data.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Editor.Resources.C1_Silverlight_Chart_Editor.Legend">
+            <summary>
+              Looks up a localized string similar to Legend.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Editor.Resources.C1_Silverlight_Chart_Editor.Major_grid_lines">
+            <summary>
+              Looks up a localized string similar to Major grid lines.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Editor.Resources.C1_Silverlight_Chart_Editor.Major_ticks">
+            <summary>
+              Looks up a localized string similar to Major ticks.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Editor.Resources.C1_Silverlight_Chart_Editor.Minor_grid_lines">
+            <summary>
+              Looks up a localized string similar to Minor grid lines.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Editor.Resources.C1_Silverlight_Chart_Editor.Minor_ticks">
+            <summary>
+              Looks up a localized string similar to Minor ticks.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Editor.Resources.C1_Silverlight_Chart_Editor.Point_labels">
+            <summary>
+              Looks up a localized string similar to Point labels.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Editor.Resources.C1_Silverlight_Chart_Editor.Point_tooltips">
+            <summary>
+              Looks up a localized string similar to Point tooltips.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Editor.Resources.C1_Silverlight_Chart_Editor.Remove">
+            <summary>
+              Looks up a localized string similar to Remove.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Editor.Resources.C1_Silverlight_Chart_Editor.Remove_legend">
+            <summary>
+              Looks up a localized string similar to Remove legend.
+            </summary>
+        </member>
+    </members>
+</doc>

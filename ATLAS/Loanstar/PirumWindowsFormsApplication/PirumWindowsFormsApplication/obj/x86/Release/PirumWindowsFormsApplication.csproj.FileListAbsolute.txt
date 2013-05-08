@@ -1,0 +1,7 @@
+C:\_Dev\ATLAS\Loanstar\PirumWindowsFormsApplication\PirumWindowsFormsApplication\bin\Release\PirumWindowsFormsApplication.exe.config
+C:\_Dev\ATLAS\Loanstar\PirumWindowsFormsApplication\PirumWindowsFormsApplication\obj\x86\Release\ResolveAssemblyReference.cache
+C:\_Dev\ATLAS\Loanstar\PirumWindowsFormsApplication\PirumWindowsFormsApplication\obj\x86\Release\PirumWindowsFormsApplication.Form1.resources
+C:\_Dev\ATLAS\Loanstar\PirumWindowsFormsApplication\PirumWindowsFormsApplication\obj\x86\Release\PirumWindowsFormsApplication.Properties.Resources.resources
+C:\_Dev\ATLAS\Loanstar\PirumWindowsFormsApplication\PirumWindowsFormsApplication\obj\x86\Release\GenerateResource.read.1.tlog
+C:\_Dev\ATLAS\Loanstar\PirumWindowsFormsApplication\PirumWindowsFormsApplication\obj\x86\Release\GenerateResource.write.1.tlog
+C:\_Dev\ATLAS\Loanstar\PirumWindowsFormsApplication\PirumWindowsFormsApplication\obj\x86\Release\PirumWindowsFormsApplication.exe.licenses

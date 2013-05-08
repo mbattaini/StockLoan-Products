@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WorldWideClientSite", "WorldWideClientSite\", "{3A035D19-ACAB-49A0-8AC9-901E45C019CB}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/WorldWideClientSite"
+		Debug.AspNetCompiler.PhysicalPath = "WorldWideClientSite\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\WorldWideClientSite\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/WorldWideClientSite"
+		Release.AspNetCompiler.PhysicalPath = "WorldWideClientSite\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\WorldWideClientSite\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "38452"
+		ProjOutputReferences = "{5d0c5aa1-9152-4586-95fc-4303c05df3b0}|ClientBin|false;"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldWideClient", "WorldWideClient\WorldWideClient.csproj", "{5D0C5AA1-9152-4586-95FC-4303C05DF3B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldWideEncrypt", "..\..\WorldWideEncryption\WorldWideEncrypt.csproj", "{13FDC225-FD4B-40BF-ADDC-46E33BDB5118}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A035D19-ACAB-49A0-8AC9-901E45C019CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A035D19-ACAB-49A0-8AC9-901E45C019CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A035D19-ACAB-49A0-8AC9-901E45C019CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A035D19-ACAB-49A0-8AC9-901E45C019CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D0C5AA1-9152-4586-95FC-4303C05DF3B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D0C5AA1-9152-4586-95FC-4303C05DF3B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D0C5AA1-9152-4586-95FC-4303C05DF3B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D0C5AA1-9152-4586-95FC-4303C05DF3B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13FDC225-FD4B-40BF-ADDC-46E33BDB5118}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13FDC225-FD4B-40BF-ADDC-46E33BDB5118}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13FDC225-FD4B-40BF-ADDC-46E33BDB5118}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13FDC225-FD4B-40BF-ADDC-46E33BDB5118}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

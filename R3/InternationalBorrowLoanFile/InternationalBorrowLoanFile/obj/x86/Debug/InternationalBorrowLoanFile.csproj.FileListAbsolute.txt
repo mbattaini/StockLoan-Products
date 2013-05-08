@@ -1,0 +1,12 @@
+C:\_Dev\R3\InternationalBorrowLoanFile\InternationalBorrowLoanFile\bin\Debug\InternationalBorrowLoanFile.exe.config
+C:\_Dev\R3\InternationalBorrowLoanFile\InternationalBorrowLoanFile\bin\Debug\InternationalBorrowLoanFile.exe
+C:\_Dev\R3\InternationalBorrowLoanFile\InternationalBorrowLoanFile\bin\Debug\InternationalBorrowLoanFile.pdb
+C:\_Dev\R3\InternationalBorrowLoanFile\InternationalBorrowLoanFile\bin\Debug\StockLoan.Common.dll
+C:\_Dev\R3\InternationalBorrowLoanFile\InternationalBorrowLoanFile\bin\Debug\StockLoan.Common.pdb
+C:\_Dev\R3\InternationalBorrowLoanFile\InternationalBorrowLoanFile\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\_Dev\R3\InternationalBorrowLoanFile\InternationalBorrowLoanFile\obj\x86\Debug\InternationalBorrowLoanFile.InternationalBorrowLoan.resources
+C:\_Dev\R3\InternationalBorrowLoanFile\InternationalBorrowLoanFile\obj\x86\Debug\InternationalBorrowLoanFile.Properties.Resources.resources
+C:\_Dev\R3\InternationalBorrowLoanFile\InternationalBorrowLoanFile\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\_Dev\R3\InternationalBorrowLoanFile\InternationalBorrowLoanFile\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\_Dev\R3\InternationalBorrowLoanFile\InternationalBorrowLoanFile\obj\x86\Debug\InternationalBorrowLoanFile.exe
+C:\_Dev\R3\InternationalBorrowLoanFile\InternationalBorrowLoanFile\obj\x86\Debug\InternationalBorrowLoanFile.pdb

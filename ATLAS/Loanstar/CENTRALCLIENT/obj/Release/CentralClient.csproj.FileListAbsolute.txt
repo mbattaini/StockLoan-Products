@@ -1,0 +1,327 @@
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\CentralClient.exe.config
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.csproj.ResolveComReference.cache
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.exe
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\CentralClient.exe.manifest
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\CentralClient.application
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\CentralClient.exe
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.C1Excel.2.dll
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Command.2.dll
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Input.2.dll
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1List.2.dll
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Ribbon.2.dll
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Schedule.2.dll
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Sizer.2.dll
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1SuperTooltip.2.dll
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1TrueDBGrid.2.dll
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\LogicNP.ShellObjects.dll
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\StockLoan.Common.dll
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\StockLoan.Main.dll
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1SuperTooltip.2.xml
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1TrueDBGrid.2.xml
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\ResolveAssemblyReference.cache
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminBooksForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminCountriesForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminCurrenciesForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminHolidaysForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminHolidaysInputForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminKeyValuesForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminLoginForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminRolesForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminSecMasterForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminSecMasterItemForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminUsersForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.InventoryLookupForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.InventoryUploadForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.MessageForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.ProcessStatusForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.SecMasterResultsForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.SplashStartUpInfoForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.InventorySubscriptionsForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.MainForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.Properties.Resources.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.SecMaster.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.SecurityMasterForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.SplashForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingContractBlotterForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingContractResearchPopupForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingContractsMarksForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingContractSummaryForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingDeskInputForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingFundingRatesForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingRecallInputForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingReturnInputForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.csproj.GenerateResource.Cache
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.exe.licenses
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.exe.manifest
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.application
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\StockLoan.MainBusiness.dll
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\StockLoan.MainBusiness.pdb
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\Layouts\contract-summary.xml
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\Layouts\mark-summary.xml
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\Layouts\recall-summary.xml
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\Layouts\return-summary.xml
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminLoginPasswordChangeForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1InputPanel.2.dll
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.C1Excel.2.xml
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1List.2.xml
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Input.2.xml
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1InputPanel.2.xml
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Sizer.2.xml
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Ribbon.2.xml
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Schedule.2.xml
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Command.2.xml
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminSecMasterUploadPricingForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AnalysisReportGeneratorForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Chart.2.dll
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Chart3D.2.dll
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Chart.2.xml
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Chart3D.2.xml
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\Layouts\BillingContractsDetails.xml
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\Layouts\BillingContracts.xml
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\Layouts\BillingContractsTop.xml
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\Layouts\MarksReport.xml
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.C1Report.2.dll
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Report.2.dll
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Report.2.xml
+C:\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.C1Report.2.xml
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.HelpAboutForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingContractExceptionsForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.HistoryFundingRateResearchForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.HistoryOnDemandForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingContractMaintenanceForm.resources
+C:\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingBookCreditForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\Layouts\BillingContractsDetails.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\Layouts\BillingContracts.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\Layouts\BillingContractsTop.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\Layouts\contract-summary.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\Layouts\mark-summary.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\Layouts\recall-summary.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\Layouts\return-summary.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\Layouts\MarksReport.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\CentralClient.exe.config
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\CentralClient.exe.manifest
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\CentralClient.application
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\CentralClient.exe
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.C1Excel.2.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.C1Report.2.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Chart.2.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Chart3D.2.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Command.2.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Input.2.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1InputPanel.2.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1List.2.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Report.2.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Ribbon.2.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Schedule.2.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Sizer.2.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1SuperTooltip.2.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1TrueDBGrid.2.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\LogicNP.ShellObjects.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\StockLoan.Common.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\StockLoan.Main.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\StockLoan.MainBusiness.dll
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.C1Excel.2.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Report.2.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1TrueDBGrid.2.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Chart.2.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.C1Report.2.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Input.2.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\StockLoan.MainBusiness.pdb
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1SuperTooltip.2.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1InputPanel.2.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Sizer.2.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Ribbon.2.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Schedule.2.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Command.2.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1List.2.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Chart3D.2.xml
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.csproj.ResolveComReference.cache
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingBookCreditForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminBooksForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminCountriesForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminCurrenciesForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminHolidaysForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminHolidaysInputForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminKeyValuesForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminLoginForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminRolesForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminSecMasterForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminSecMasterItemForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminUsersForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminLoginPasswordChangeForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminSecMasterUploadPricingForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.HelpAboutForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.HistoryFundingRateResearchForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.HistoryOnDemandForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.InventoryLookupForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.InventoryUploadForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.MessageForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.ProcessStatusForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.SecMasterResultsForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.SplashStartUpInfoForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.InventorySubscriptionsForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.MainForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.Properties.Resources.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.SecMaster.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.SecurityMasterForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.SplashForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingContractBlotterForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingContractExceptionsForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingContractMaintenanceForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingContractResearchPopupForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingContractsMarksForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingContractSummaryForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingDeskInputForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingFundingRatesForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingRecallInputForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingReportingBillingForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingReportingForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingReturnInputForm.resources
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.csproj.GenerateResource.Cache
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.exe.licenses
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.exe.manifest
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.application
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.exe
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\ResolveAssemblyReference.cache
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.csproj.ResolveComReference.cache
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\ResGen.read.1.tlog
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\ResGen.write.1.tlog
+\\penson.com\shares\Users\MBattaini\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.exe
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\Layouts\BillingContractsDetails.xml
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\Layouts\BillingContracts.xml
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\Layouts\BillingContractsTop.xml
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\Layouts\contract-summary.xml
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\Layouts\mark-summary.xml
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\Layouts\recall-summary.xml
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\Layouts\return-summary.xml
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\Layouts\MarksReport.xml
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\CentralClient.exe.config
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\CentralClient.exe.manifest
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\CentralClient.application
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\CentralClient.exe
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.C1Excel.2.dll
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.C1Pdf.2.dll
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Chart.2.dll
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Command.2.dll
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Input.2.dll
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1List.2.dll
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Ribbon.2.dll
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Schedule.2.dll
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Sizer.2.dll
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1SuperTooltip.2.dll
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1TrueDBGrid.2.dll
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\LogicNP.ShellObjects.dll
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\StockLoan.Common.dll
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\StockLoan.Main.dll
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\StockLoan.MainBusiness.dll
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\StockLoan.MainBusiness.pdb
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.C1Excel.2.xml
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.C1Pdf.2.xml
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Chart.2.xml
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Command.2.xml
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Input.2.xml
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1List.2.xml
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Ribbon.2.xml
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Schedule.2.xml
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1Sizer.2.xml
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1SuperTooltip.2.xml
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\C1.Win.C1TrueDBGrid.2.xml
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\ResolveAssemblyReference.cache
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.csproj.ResolveComReference.cache
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingBookCreditForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminBooksForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminCountriesForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminCurrenciesForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminHolidaysForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminHolidaysInputForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminKeyValuesForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminLoginForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminRolesForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminSecMasterForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminSecMasterItemForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminUsersForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminLoginPasswordChangeForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminSecMasterUploadPricingForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.HelpAboutForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.HistoryFundingRateResearchForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.HistoryOnDemandForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.InventoryLookupForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.InventoryUploadForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.MessageForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.ProcessStatusForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.SecMasterResultsForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.SplashStartUpInfoForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.InventorySubscriptionsForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.MainForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.Properties.Resources.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.SecMaster.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.SecurityMasterForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.SplashForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingContractBlotterForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingContractMaintenanceForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingContractsMarksForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingContractSummaryForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingDeskInputForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingFundingRatesForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingRecallInputForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingReportingBillingForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingReportingForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingReturnInputForm.resources
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\ResGen.read.1.tlog
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\ResGen.write.1.tlog
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.exe.licenses
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.exe.manifest
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.application
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.exe
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\ResolveAssemblyReference.cache
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.csproj.ResolveComReference.cache
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingBookCreditForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminBooksForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminCountriesForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminCurrenciesForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminHolidaysForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminHolidaysInputForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminKeyValuesForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminLoginForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminRolesForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminSecMasterForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminSecMasterItemForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminUsersForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminLoginPasswordChangeForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.AdminSecMasterUploadPricingForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.HelpAboutForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.HistoryFundingRateResearchForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.HistoryOnDemandForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.InventoryLookupForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.InventoryUploadForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.MessageForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.ProcessStatusForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.SecMasterResultsForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.SplashStartUpInfoForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.InventorySubscriptionsForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.MainForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.Properties.Resources.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.SecMaster.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.SecurityMasterForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.SplashForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingContractBlotterForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingContractExceptionsForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingContractMaintenanceForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingContractResearchPopupForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingContractsMarksForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingContractSummaryForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingDeskInputForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingFundingRatesForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingRecallInputForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingReportingBillingForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingReportingForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingReturnInputForm.resources
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\ResGen.read.1.tlog
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\ResGen.write.1.tlog
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.exe.licenses
+U:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.exe
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\Microsoft.Office.Interop.Outlook.dll
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\Office.dll
+C:\_Dev\ATLAS\Loanstar\CENTRALCLIENT\obj\Release\CentralClient.TradingDealMaintenanceForm.resources
+C:\_dev\ATLAS\Loanstar\CENTRALCLIENT\bin\Release\LogicNP.ShellObjects.xml

@@ -1,0 +1,69 @@
+Symbol|Security Name|Market Category|Reg SHO Threshold Flag|Filler|Filler
+AAB.WS|Lehman Brothers Currency Baske|Amex|Y||
+ACY|AeroCentury Corp|Amex|Y||
+APE|10% SPARQS Linked to Apple Computer, Inc.|Amex|Y||
+AZL|Arizona Land Income Corp|Amex|Y||
+BZP|BPZ Energy, Inc|Amex|Y||
+CFM|7.5% SPARQS  Linked to Coach Inc.|Amex|Y||
+CKK|10% SPARQS Linked to Circuit City Stores, Inc.|Amex|Y||
+CLM|Cornerstone Strategic Value Fund|Amex|Y||
+CRF|Cornerstone Total Return Fund|Amex|Y||
+DBA|PowerShares DB Agriculture Fund|Amex|Y||
+DDM|Ultra Dow30 ProShares|Amex|Y||
+DIA|DIAMONDS|Amex|Y||
+DJL|Performance Leveraged Upside Securities linked to the DJIA|Amex|Y||
+DPP|Capital Protected Notes Based on the Value of the Dow Jones Industrial Average|Amex|Y||
+DSA|8% SPARQS Linked to Dell Inc.|Amex|Y||
+DXD|UltraShort Dow30 ProShares|Amex|Y||
+EAG|Eagle Broadband, Inc|Amex|Y||
+EDA|Endeavor Acquisition Corp|Amex|Y||
+ESA|Energy Services Acquisition Corp.|Amex|Y||
+ESA.WS|Energy Services Acquisition Co|Amex|Y||
+FDM|First Trust Dow Jones Select MicroCap Index Fund|Amex|Y||
+FDV|First Trust DB Strategic Value Index Fund|Amex|Y||
+FVI|First Trust Value Line Equity Allocation Index Fund|Amex|Y||
+GDX|Market Vectors Gold Miners ETF|Amex|Y||
+GHN.WS|Granahan McCourt Acquisition Corporation|Amex|Y||
+GLA|Global Logistics Acquisition Corporation|Amex|Y||
+GLL|Global Indices Basket Capital Protected Notes|Amex|Y||
+GLU|Gabelli Global Utility & Income Trust (The)|Amex|Y||
+HPM|Bear Market PLUS Based on the Value of the PHLX Housing Sector Index|Amex|Y||
+IIG|iMergent, Inc|Amex|Y||
+IOC|InterOil Corporation|Amex|Y||
+IXP|iShares S&P Global Telecommunications Sector|Amex|Y||
+JSC|SPDR Russell/Nomura Small Cap Japan ETF|Amex|Y||
+KCE|KBW Capital Markets ETF|Amex|Y||
+KRE|KBW Regional Banking ETF|Amex|Y||
+LDB|Strategic Return Notes Linked to the Industrial 15 Index|Amex|Y||
+MLB|Dow Jones EURO STOXX 50 Index MITTS|Amex|Y||
+MWL|8.5% SPARQS Linked to Whole Foods Market, Inc.|Amex|Y||
+MYH|9% SPARQS Linked to Yahoo! Inc.|Amex|Y||
+MZZ|UltraShort MidCap400 ProShares|Amex|Y||
+NZX|Nuveen Georgia Dividend Advantage Municipal Fund|Amex|Y||
+PFM|PowerShares Dividend Achievers Portfolio|Amex|Y||
+PID|PowerShares International Dividend Achievers Portfolio|Amex|Y||
+PIQ|PowerShares Dynamic MagniQuant Portfolio|Amex|Y||
+PMR|PowerShares Dynamic Retail Portfolio|Amex|Y||
+PSP|PowerShares Listed Private Equity Portfolio|Amex|Y||
+PWB|PowerShares Dynamic Large Cap Growth Portfolio|Amex|Y||
+PZJ|PowerShares Zacks Small Cap Portfolio|Amex|Y||
+RAA|BlackRock California Investment Quality Municipal Trust|Amex|Y||
+RWX|SPDR DJ Wilshire International Real Estate ETF|Amex|Y||
+SDS|UltraShort S&P500 ProShares|Amex|Y||
+SEM|Stock Market Upturn Notes Linked to the Dow Jones EURO STOXX 50 Index|Amex|Y||
+TAQ|Transforma Acquisition Group Inc|Amex|Y||
+TMW|SPDR DJ Wilshire Total Market ETF|Amex|Y||
+UPG|Universal Power Group, Inc|Amex|Y||
+VBR|Vanguard Small-Cap Value ETF|Amex|Y||
+VPL|Vanguard Pacific ETF|Amex|Y||
+VWO|Vanguard Emerging Markets ETF|Amex|Y||
+VXF|Vanguard Extended Market ETF|Amex|Y||
+VYM|Vanguard High Dividend Yield ETF|Amex|Y||
+XBI|SPDR S&P Biotech ETF|Amex|Y||
+XES|SPDR S&P Oil & Gas Equipment & Services ETF|Amex|Y||
+XFN|Xfone, Inc|Amex|Y||
+XLI|Select Sector SPDR-Industrial|Amex|Y||
+XME|SPDR S&P Metals & Mining ETF|Amex|Y||
+XOP|SPDR S&P Oil & Gas Exploration & Production ETF|Amex|Y||
+XRT|SPDR S&P Retail ETF|Amex|Y||
+20070125173746

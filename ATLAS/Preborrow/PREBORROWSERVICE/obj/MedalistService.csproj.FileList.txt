@@ -1,0 +1,11 @@
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\Anetics.Medalist.ProjectInstaller.resources
+obj\Release\MedalistService.csproj.GenerateResource.Cache
+bin\Release\StockLoan.MedalistService.exe
+bin\Release\StockLoan.MedalistServer.dll
+bin\Release\StockLoan.Common.dll
+bin\Release\StockLoan.Medalist.dll
+bin\Release\StockLoan.Common.pdb
+bin\Release\StockLoan.Medalist.pdb
+obj\Release\StockLoan.Medalist.Service.resources
+obj\Release\StockLoan.MedalistService.exe

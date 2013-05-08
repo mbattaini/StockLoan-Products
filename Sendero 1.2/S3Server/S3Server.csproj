@@ -1,0 +1,202 @@
+<VisualStudioProject>
+    <CSHARP
+        ProjectType = "Local"
+        ProductVersion = "7.10.3077"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{9D789FF2-9290-40C5-889D-6A0521F9F8DF}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = ""
+                AssemblyKeyContainerName = ""
+                AssemblyName = "S3Server"
+                AssemblyOriginatorKeyFile = ""
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "Library"
+                PreBuildEvent = ""
+                PostBuildEvent = ""
+                RootNamespace = "S3Server"
+                RunPostBuildEvent = "OnBuildSuccess"
+                StartupObject = ""
+            >
+                <Config
+                    Name = "Debug"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "DEBUG;TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "true"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "false"
+                    OutputPath = "bin\Debug\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+                <Config
+                    Name = "Release"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "false"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "true"
+                    OutputPath = "bin\Release\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                    HintPath = "..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.dll"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                    HintPath = "..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Data.dll"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                    HintPath = "..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.XML.dll"
+                />
+                <Reference
+                    Name = "Anetics.Common"
+                    AssemblyName = "Anetics.Common"
+                    HintPath = "..\Common\bin\Debug\Anetics.Common.dll"
+                />
+                <Reference
+                    Name = "Anetics.Email"
+                    AssemblyName = "Anetics.Email"
+                    HintPath = "..\Email\bin\Debug\Anetics.Email.dll"
+                />
+                <Reference
+                    Name = "Anetics.Filer"
+                    AssemblyName = "Anetics.Filer"
+                    HintPath = "..\Filer\bin\Debug\Anetics.Filer.dll"
+                />
+                <Reference
+                    Name = "amqmdnet"
+                    AssemblyName = "amqmdnet"
+                    HintPath = "amqmdnet.dll"
+                />
+                <Reference
+                    Name = "System.Runtime.Remoting"
+                    AssemblyName = "System.Runtime.Remoting"
+                    HintPath = "..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Runtime.Remoting.dll"
+                />
+                <Reference
+                    Name = "Zip"
+                    Project = "{FCE59116-8BCC-4803-8DBC-8080C20A1B11}"
+                    Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
+                />
+                <Reference
+                    Name = "System.Web.Services"
+                    AssemblyName = "System.Web.Services"
+                    HintPath = "..\..\..\..\..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Web.Services.dll"
+                />
+                <Reference
+                    Name = "S3"
+                    Project = "{863D23F7-042C-4A17-8A13-76370F6238C6}"
+                    Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
+                />
+                <Reference
+                    Name = "Anetics.Process"
+                    AssemblyName = "Anetics.Process"
+                    HintPath = "..\Process\bin\Debug\Anetics.Process.dll"
+                />
+                <Reference
+                    Name = "Anetics.SmartSeg"
+                    AssemblyName = "Anetics.SmartSeg"
+                    HintPath = "..\SmartSeg\bin\Debug\Anetics.SmartSeg.dll"
+                />
+            </References>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "AssemblyInfo.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Email.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FileReader.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Master.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "MqSeries.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "S3Agent.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "S3Main.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Web References\STKSEGModule\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.cs"
+                />
+                <File
+                    RelPath = "Web References\STKSEGModule\Reference.cs"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "Web References\STKSEGModule\STKSEGModule.wsdl"
+                    BuildAction = "None"
+                />
+                <Folder
+                    RelPath = "Web References\STKSEGModule\"
+                    WebReferenceUrl = "http://snds301.penson.com/STKSEG/STKSEGModule.asmx?wsdl"
+                    UrlBehavior = "Dynamic"
+                />
+                <Folder
+                    RelPath = "Web References\"
+                    WebReferences = "TRUE"
+                />
+            </Include>
+        </Files>
+    </CSHARP>
+</VisualStudioProject>
+

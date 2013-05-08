@@ -1,0 +1,1 @@
+<%@ ServiceHost Language="C#" Debug="true" Service="StockLoan.WebServices.FunctionsService.FunctionsService" CodeBehind="~/App_Code/FunctionsService.svc.cs" %>

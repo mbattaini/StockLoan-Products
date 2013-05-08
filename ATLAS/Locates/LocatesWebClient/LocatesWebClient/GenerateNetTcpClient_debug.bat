@@ -1,0 +1,1 @@
+svcutil.exe net.tcp://localhost:5000/LocatesWebService

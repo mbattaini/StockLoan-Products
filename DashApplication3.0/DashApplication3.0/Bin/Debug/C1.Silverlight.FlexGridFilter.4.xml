@@ -1,0 +1,742 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Silverlight.FlexGridFilter.4</name>
+    </assembly>
+    <members>
+        <member name="T:C1.Silverlight.FlexGrid.C1FlexGridFilterService">
+            <summary>
+            Provides the standard implementation for attaching a <see cref="T:C1.Silverlight.FlexGrid.C1FlexGridFilter"/> 
+            to a <see cref="T:C1.Silverlight.FlexGrid.C1FlexGrid"/> control.
+            </summary>
+            <remarks>
+            This class allows you to attach filters to grids using XAML. For example:
+            <code>
+            &lt;c1:C1FlexGrid x:Name="_flex" &gt;
+              &lt;ff:C1FlexGridFilterService.FlexGridFilter&gt;
+                &lt;ff:C1FlexGridFilter /&gt;
+              &lt;/ff:C1FlexGridFilterService.FlexGridFilter&gt;
+            &lt;/c1:C1FlexGrid&gt;
+            </code>
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.C1FlexGridFilterService.GetFlexGridFilter(System.Windows.DependencyObject)">
+            <summary>
+            Gets the value of the FlexGridFilter attached property of the specified object.
+            </summary>
+            <param name="obj">Object to query concerning the FlexGridFilter property.</param>
+            <returns>Value of the FlexGridFilter property.</returns>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.C1FlexGridFilterService.SetFlexGridFilter(System.Windows.DependencyObject,C1.Silverlight.FlexGrid.C1FlexGridFilter)">
+            <summary>
+            Sets the value of the FlexGridFilter property of the specified object.
+            </summary>
+            <param name="obj">Object to set the property on.</param>
+            <param name="value">Value to set.</param>
+        </member>
+        <member name="F:C1.Silverlight.FlexGrid.C1FlexGridFilterService.FlexGridFilterProperty">
+            <summary>
+            Identifies the FlexGridFilter attached property.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.C1FlexGridFilterService.OnFlexGridFilterChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Handles changes to the FlexGridFilter attached property.
+            </summary>
+            <param name="o">DependencyObject that changed.</param>
+            <param name="e">Event data for the DependencyPropertyChangedEvent.</param>
+        </member>
+        <member name="T:C1.Silverlight.FlexGrid.FilterCellFactory">
+            <summary>
+            Custom cell factory that creates column headers with a drop down used to
+            edit the column filter.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.FilterCellFactory.ShowFilterEditor(C1.Silverlight.FlexGrid.Column)">
+            <summary>
+            Show the filter editor for a given grid column.
+            </summary>
+            <param name="col"><see cref="T:C1.Silverlight.FlexGrid.Column"/> that contains the filter to be edited.</param>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.FilterCellFactory.CreateCell(C1.Silverlight.FlexGrid.C1FlexGrid,C1.Silverlight.FlexGrid.CellType,C1.Silverlight.FlexGrid.CellRange)">
+            <summary>
+            Creates a <see cref="T:System.Windows.FrameworkElement"/> responsible for representing a grid
+            cell of a given type at the given coordinates.
+            </summary>
+            <param name="grid"><see cref="T:C1.Silverlight.FlexGrid.C1FlexGrid"/> that owns the cell.</param>
+            <param name="cellType"><see cref="T:C1.Silverlight.FlexGrid.CellType"/> that specifies the type of cell to be created.</param>
+            <param name="range"><see cref="T:C1.Silverlight.FlexGrid.CellRange"/> that specifies the row and column represented by the cell.</param>
+            <returns>A new <see cref="T:System.Windows.FrameworkElement"/> responsible for representing the grid cell.</returns>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.FilterCellFactory.CreateCellEditor(C1.Silverlight.FlexGrid.C1FlexGrid,C1.Silverlight.FlexGrid.CellType,C1.Silverlight.FlexGrid.CellRange)">
+            <summary>
+            Creates a <see cref="T:System.Windows.FrameworkElement"/> responsible for  for editing the value in a grid
+            cell at the given coordinates.
+            </summary>
+            <param name="grid"><see cref="T:C1.Silverlight.FlexGrid.C1FlexGrid"/> that owns the cell.</param>
+            <param name="cellType"><see cref="T:C1.Silverlight.FlexGrid.CellType"/> that specifies the type of cell to be created.</param>
+            <param name="range"><see cref="T:C1.Silverlight.FlexGrid.CellRange"/> that specifies the row and column represented by the cell.</param>
+            <returns>A new <see cref="T:System.Windows.FrameworkElement"/> responsible for representing the grid cell.</returns>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.FilterCellFactory.DisposeCell(C1.Silverlight.FlexGrid.C1FlexGrid,C1.Silverlight.FlexGrid.CellType,System.Windows.FrameworkElement)">
+            <summary>
+            Disposes of a <see cref="T:System.Windows.FrameworkElement"/> when its associated cell is scrolled
+            out of view.
+            </summary>
+            <param name="grid"><see cref="T:C1.Silverlight.FlexGrid.C1FlexGrid"/> that owns the cell.</param>
+            <param name="cellType"><see cref="T:C1.Silverlight.FlexGrid.CellType"/> that specifies the type of cell to be created.</param>
+            <param name="cell"><see cref="T:System.Windows.FrameworkElement"/> to be disposed of.</param>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.FilterCellFactory.CreateColumnHeaderContent(C1.Silverlight.FlexGrid.C1FlexGrid,System.Windows.Controls.Border,C1.Silverlight.FlexGrid.CellRange)">
+            <summary>
+            Sets the content of a <see cref="T:System.Windows.Controls.Border"/> element used to display the value of a column header cell.
+            </summary>
+            <param name="grid"><see cref="T:C1.Silverlight.FlexGrid.C1FlexGrid"/> that owns the cell.</param>
+            <param name="bdr"><see cref="T:System.Windows.Controls.Border"/> element that contains the header.</param>
+            <param name="range"><see cref="T:C1.Silverlight.FlexGrid.CellRange"/> that specifies the row and column represented by the cell.</param>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.FilterCellFactory.Editor">
+            <summary>
+            Gets or sets the filter editor.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.FlexGrid.C1FlexGridFilter">
+            <summary>
+            Implements an Excel-style filter that can be added to existing C1FlexGrid controls.
+            </summary>
+            <remarks>
+            To enable filtering on a C1FlexGrid control, create an instance of a C1FlexGridFilter
+            and pass the grid as a parameter to the constructor. For example:
+            <code>
+            // enable filtering on the _flex control
+            var ff = new C1FlexGridFilter(_flex);
+            </code>
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.C1FlexGridFilter.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.FlexGrid.C1FlexGridFilter"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.C1FlexGridFilter.#ctor(C1.Silverlight.FlexGrid.C1FlexGrid)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.FlexGrid.C1FlexGridFilter"/>.
+            </summary>
+            <param name="flex">Grid that owns this filter.</param>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.C1FlexGridFilter.Apply">
+            <summary>
+            Applies the current filters to the rows currently loaded on the grid.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.C1FlexGridFilter.OnFilterApplied(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:C1.Silverlight.FlexGrid.C1FlexGridFilter.FilterApplied"/> event.
+            </summary>
+            <param name="e">Event data.</param>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.C1FlexGridFilter.OnEditorOpened(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:C1.Silverlight.FlexGrid.C1FlexGridFilter.EditorOpened"/> event.
+            </summary>
+            <param name="e">Event data</param>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.C1FlexGridFilter.OnEditorClosed(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:C1.Silverlight.FlexGrid.C1FlexGridFilter.EditorClosed"/> event.
+            </summary>
+            <param name="e">Event data</param>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.C1FlexGridFilter.Clear">
+            <summary>
+            Clears all column filters in this <see cref="T:C1.Silverlight.FlexGrid.C1FlexGridFilter"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.C1FlexGridFilter.GetColumnFilter(C1.Silverlight.FlexGrid.Column)">
+            <summary>
+            Gets the filter attached to a given grid column.
+            </summary>
+            <param name="column">Column to get the filter for.</param>
+            <returns>A <see cref="T:C1.Silverlight.FlexGrid.ColumnFilter"/> object used to filter the given column.</returns>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.C1FlexGridFilter.ShowFilterEditor(C1.Silverlight.FlexGrid.Column)">
+            <summary>
+            Show the filter editor for a given grid column.
+            </summary>
+            <param name="col"><see cref="T:C1.Silverlight.FlexGrid.Column"/> that contains the filter to be edited.</param>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.C1FlexGridFilter.SaveFilterDefinition(System.Xml.XmlWriter)">
+            <summary>
+            Save the current filter definition to an <see cref="T:System.Xml.XmlWriter"/>.
+            </summary>
+            <param name="xw"><see cref="T:System.Xml.XmlWriter"/> that will receive the filter definition.</param>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.C1FlexGridFilter.LoadFilterDefinition(System.Xml.XmlReader)">
+            <summary>
+            Loads a filter definition from an <see cref="T:System.Xml.XmlReader"/>.
+            </summary>
+            <param name="xr"><see cref="T:System.Xml.XmlReader"/> that contains the filter definition.</param>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.C1FlexGridFilter.Owner">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.FlexGrid.C1FlexGrid"/> that owns this filter.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.C1FlexGridFilter.Editor">
+            <summary>
+            Gets the <see cref="T:System.Windows.Controls.Control"/> used to edit the filter parameters.
+            </summary>
+            <remarks>
+            <para>This property is useful if you want to customize the appearance of the
+            built-in filter editor.</para>
+            <para>By default, the filter editor uses the style properties set on the grid 
+            (e.g. Background, FontFamily, FontSize, etc). In some cases, you may want
+            to override this behavior and specify the editor's properties directly.</para>
+            </remarks>
+            <example>
+            The code below creates a grid and a filter, and then customizes the appearance
+            of the filter editor by setting its Background and FontSize properties:
+            <code>
+            // create and populate the grid
+            var flex = new C1.Silverlight.FlexGrid.C1FlexGrid();
+            flex.ItemsSource = Product.GetProducts(200);
+            LayoutRoot.Children.Add(flex);
+            
+            // create the filter and customize the filter editor
+            var filter = new C1.Silverlight.FlexGrid.C1FlexGridFilter(flex);
+            filter.Editor.Background = new SolidColorBrush(Colors.Red);
+            filter.Editor.FontSize = 16;
+            </code>
+            </example>
+        </member>
+        <member name="E:C1.Silverlight.FlexGrid.C1FlexGridFilter.FilterApplied">
+            <summary>
+            Occurs when the filter is applied to the grid.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.FlexGrid.C1FlexGridFilter.EditorOpened">
+            <summary>
+            Occurs when the filter editor is displayed.
+            </summary>
+            <remarks>
+            You can get a reference to the filter editor using the <see cref="P:C1.Silverlight.FlexGrid.C1FlexGridFilter.Editor"/> property.
+            </remarks>
+        </member>
+        <member name="E:C1.Silverlight.FlexGrid.C1FlexGridFilter.EditorClosed">
+            <summary>
+            Occurs when the filter editor is closed.
+            </summary>
+            <remarks>
+            You can get a reference to the filter editor using the <see cref="P:C1.Silverlight.FlexGrid.C1FlexGridFilter.Editor"/> property.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.C1FlexGridFilter.UseCollectionView">
+            <summary>
+            Gets or sets whether the filter should be applied to the grid's data source.
+            </summary>
+            <remarks>
+            <para>If this property is set to true, the filter is applied to the <see cref="T:System.ComponentModel.ICollectionView"/> 
+            being used as the grid data source. Filters applied this way reflect on all objects 
+            bound to the same </para>
+            <para>If this property is set to false, the filter is applied directly to the grid rows. Data
+            that is filtered out remains in the grid and in the data source, but is hidden from the UI
+            since the rows become invisible.</para>
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.C1FlexGridFilter.FilterDefinition">
+            <summary>
+             Gets or sets the current filter definition as an XML string.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.FlexGrid.FilterExtensionMethods">
+            <summary>
+            Provides extension methods to support grid and column filtering.
+            </summary>
+            <remarks>
+            <para>The extension methods are optional. They are useful for simplifying
+            the syntax and making applications easier to read.</para>
+            <para>For example, the code below uses the standard syntax to enable filtering 
+            on a grid and to customize the first two column filters:</para>
+            <code>
+            // enable filtering using regular syntax
+            var gridFilter = new C1FlexGridFilter(flex);
+            
+            // disable the filter on column 0
+            var cf = gridFilter.GetColumnFilter(flex.Columns[0]);
+            cf.FilterType = FilterType.None;
+            
+            // show a Condition filter on column 1
+            cf = gridFilter.GetColumnFilter(flex.Columns[1]);
+            cf.FilterType = FilterType.Condition;
+            </code>
+            <para>Using the extension methods, you could re-write this code as follows:</para>
+            <code>
+            // enable filtering using extension methods
+            flex.EnableFiltering(true);
+            
+            // disable the filter on column 0
+            var cf = flex.Columns[0].GetColumnFilter();
+            cf.FilterType = FilterType.None;
+            
+            // show a Value filter on column 1
+            var cf = flex.Columns[1].GetColumnFilter();
+            cf.FilterType = FilterType.Value;
+            </code>
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.FilterExtensionMethods.EnableFiltering(C1.Silverlight.FlexGrid.C1FlexGrid,System.Boolean)">
+            <summary>
+            Extension method to enable or disable column filtering on a <see cref="T:C1.Silverlight.FlexGrid.C1FlexGrid"/>.
+            </summary>
+            <param name="flex"><see cref="T:C1.Silverlight.FlexGrid.C1FlexGrid"/> that will have filtering turned on or off.</param>
+            <param name="enable">Whether to enable or disable filtering on the grid.</param>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.FilterExtensionMethods.GetColumnFilter(C1.Silverlight.FlexGrid.Column)">
+            <summary>
+            Extension method to get the <see cref="T:C1.Silverlight.FlexGrid.ColumnFilter"/> associated with a <see cref="T:C1.Silverlight.FlexGrid.Column"/>.
+            </summary>
+            <param name="column"><see cref="T:C1.Silverlight.FlexGrid.Column"/> that owns the filter.</param>
+            <returns><see cref="T:C1.Silverlight.FlexGrid.ColumnFilter"/> associated with column <paramref name="column"/>.</returns>
+        </member>
+        <member name="T:C1.Silverlight.FlexGrid.FilterType">
+            <summary>
+            Represents the type if filtering provided by a <see cref="T:C1.Silverlight.FlexGrid.ColumnFilter"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.FlexGrid.FilterType.None">
+            <summary>
+            No filtering.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.FlexGrid.FilterType.Automatic">
+            <summary>
+            Automatically select the filter type based on data type 
+            (use a Value filter for Boolean and enumeration columns,
+            and a ValueAndCondition filter for other column types).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.FlexGrid.FilterType.Value">
+            <summary>
+            Filter by values.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.FlexGrid.FilterType.Condition">
+            <summary>
+            Filter by condition.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.FlexGrid.FilterType.ValueAndCondition">
+            <summary>
+            Filter by value or by condition.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.FlexGrid.ColumnFilter">
+            <summary>
+            Filter defined by a <see cref="P:C1.Silverlight.FlexGrid.ColumnFilter.ValueFilter"/> and a <see cref="P:C1.Silverlight.FlexGrid.ColumnFilter.ConditionFilter"/>.
+            Both filters must be satisfied by values.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.ColumnFilter.#ctor(C1.Silverlight.FlexGrid.Column)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.FlexGrid.ColumnFilter"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.ColumnFilter.Clear">
+            <summary>
+            Clears this filter.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.ColumnFilter.Apply(System.Object)">
+            <summary>
+            Applies the filter to a given value.
+            </summary>
+            <param name="value">Value to test.</param>
+            <returns>True if the value satisfies the filter, false otherwise.</returns>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.ColumnFilter.Column">
+            <summary>
+            Gets the <see cref="P:C1.Silverlight.FlexGrid.ColumnFilter.Column"/> that this filter acts on.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.ColumnFilter.FilterType">
+            <summary>
+            The type of filtering provided by this <see cref="T:C1.Silverlight.FlexGrid.ColumnFilter"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.ColumnFilter.DataType">
+            <summary>
+            Gets the type of data that this filter works on.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.ColumnFilter.ConditionFilter">
+            <summary>
+            Gets the <see cref="P:C1.Silverlight.FlexGrid.ColumnFilter.ConditionFilter"/> in this filter.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.ColumnFilter.ValueFilter">
+            <summary>
+            Gets the <see cref="P:C1.Silverlight.FlexGrid.ColumnFilter.ValueFilter"/> in this filter.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.ColumnFilter.IsActive">
+            <summary>
+            Gets a value that indicates whether the filter is active.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.FlexGrid.ColumnFilterEditor">
+            <summary>
+            Editor used to inspect and modify <see cref="T:C1.Silverlight.FlexGrid.ColumnFilter"/> objects.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.ColumnFilterEditor.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.FlexGrid.ColumnFilterEditor"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.ColumnFilterEditor.OnApplyTemplate">
+            <summary>
+            Build the control layout.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.ColumnFilterEditor.OnKeyDown(System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Close editor when user presses Enter or Escape.
+            </summary>
+            <param name="e"><see cref="T:System.Windows.Input.KeyEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.ColumnFilterEditor.OnCloseEditor(System.Boolean)">
+            <summary>
+            Raises the <see cref="E:C1.Silverlight.FlexGrid.ColumnFilterEditor.CloseEditor"/> event.
+            </summary>
+            <param name="applyEdits"></param>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.ColumnFilterEditor.InitializeUI">
+            <summary>
+            Update editor UI based on the current column filter.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.ColumnFilterEditor.UpdateValueList">
+            <summary>
+            Re-populates the list of values in the value filter.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.ColumnFilterEditor.AddValueCheckBox(System.Object,System.Boolean)">
+            <summary>
+            Adds a checkbox to value list.
+            </summary>
+            <param name="content">Content of the checkbox.</param>
+            <param name="isChecked">Whether the value represented by the checkbox is selected.</param>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.ColumnFilterEditor.Filter">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.FlexGrid.ColumnFilter"/> being edited
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.ColumnFilterEditor.ValueFilterVisible">
+            <summary>
+            Gets or sets whether the value filter is currently being edited.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.FlexGrid.ColumnFilterEditor.CloseEditor">
+            <summary>
+            Occurs when the user closes the editor.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.FlexGrid.ConditionOperator">
+            <summary>
+            Represents operators that can be used in filter conditions.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.FlexGrid.ConditionOperator.None">
+            <summary>
+            Disables the operator.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.FlexGrid.ConditionOperator.Equals">
+            <summary>
+            Return true if the value equals the operator parameter.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.FlexGrid.ConditionOperator.DoesNotEqual">
+            <summary>
+            Return true if the value does not equal the operator parameter.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.FlexGrid.ConditionOperator.IsGreaterThan">
+            <summary>
+            Return true if the value is greater than the operator parameter.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.FlexGrid.ConditionOperator.IsLessThan">
+            <summary>
+            Return true if the value is less than the operator parameter.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.FlexGrid.ConditionOperator.IsGreaterThanOrEqualTo">
+            <summary>
+            Return true if the value is greater than or equal to the operator parameter.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.FlexGrid.ConditionOperator.IsLessThanOrEqualTo">
+            <summary>
+            Return true if the value is less than or equal to the operator parameter.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.FlexGrid.ConditionOperator.Contains">
+            <summary>
+            Return true if the string representation of the value contains the operator parameter.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.FlexGrid.ConditionOperator.DoesNotContain">
+            <summary>
+            Return true if the string representation of the value does not contain the operator parameter.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.FlexGrid.ConditionOperator.BeginsWith">
+            <summary>
+            Return true if the string representation of the value begins with the operator parameter.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.FlexGrid.ConditionOperator.EndsWith">
+            <summary>
+            Return true if the string representation of the value ends with the operator parameter.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.FlexGrid.Condition">
+            <summary>
+            Represents a condition within a <see cref="T:C1.Silverlight.FlexGrid.ConditionFilter"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.Condition.Clear">
+            <summary>
+            Clears this condition by setting the <see cref="P:C1.Silverlight.FlexGrid.Condition.Operator"/> to 'None' 
+            and the <see cref="P:C1.Silverlight.FlexGrid.Condition.Parameter"/> to null.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.Condition.Apply(System.Object)">
+            <summary>
+            Applies the condition to a given value.
+            </summary>
+            <param name="value">Value to test.</param>
+            <returns>True if the value satisfies the condition, false otherwise.</returns>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.Condition.Operator">
+            <summary>
+            Gets or sets the operator used by this condition.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.Condition.Parameter">
+            <summary>
+            Gets or sets the parameter used by this condition.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.Condition.IsActive">
+            <summary>
+            Gets a value that indicates whether the condition is active.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.FlexGrid.ConditionFilter">
+            <summary>
+            Filter composed of two <see cref="T:C1.Silverlight.FlexGrid.Condition"/> elements that can be
+            combined using an 'and' or an 'or' operator.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.ConditionFilter.#ctor(System.Type)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.FlexGrid.ConditionFilter"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.ConditionFilter.Clear">
+            <summary>
+            Clears this filter.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.ConditionFilter.Apply(System.Object)">
+            <summary>
+            Applies the filter to a given value.
+            </summary>
+            <param name="value">Value to test.</param>
+            <returns>True if the value satisfies the filter, false otherwise.</returns>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.ConditionFilter.DataType">
+            <summary>
+            Gets the type of data that this filter works on.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.ConditionFilter.Condition1">
+            <summary>
+            Gets or sets the first condition of the filter.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.ConditionFilter.Condition2">
+            <summary>
+            Gets or sets the second condition of the filter.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.ConditionFilter.AndConditions">
+            <summary>
+            Gets or sets how the two conditions should be combined ('and' or 'or').
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.ConditionFilter.IsActive">
+            <summary>
+            Gets a value that indicates whether the filter is active.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.FlexGrid.ValueFilter">
+            <summary>
+            Filter defined by a list of values that should be accepted.
+            If the list is empty, all values satisfy the filter.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.ValueFilter.#ctor(System.Type)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.FlexGrid.ColumnFilter"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.ValueFilter.Clear">
+            <summary>
+            Clears this filter.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.FlexGrid.ValueFilter.Apply(System.Object)">
+            <summary>
+            Applies the filter to a given value.
+            </summary>
+            <param name="value">Value to test.</param>
+            <returns>True if the value satisfies the filter, false otherwise.</returns>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.ValueFilter.DataType">
+            <summary>
+            Gets the type of data that this filter works on.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.ValueFilter.IsActive">
+            <summary>
+            Gets a value that indicates whether the filter is active.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.ValueFilter.Values">
+            <summary>
+            Gets or sets the list of values that satisfy this filter.
+            If the list is empty, the filter is disabled.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.FlexGrid.NullValue">
+            <summary>
+            Class used to represent null values (which can't be used as dictionary keys)
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.FlexGrid.Resources.Strings">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.Resources.Strings.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.Resources.Strings.And">
+            <summary>
+              Looks up a localized string similar to And.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.Resources.Strings.Apply">
+            <summary>
+              Looks up a localized string similar to Apply.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.Resources.Strings.Cancel">
+            <summary>
+              Looks up a localized string similar to Cancel.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.Resources.Strings.Clear">
+            <summary>
+              Looks up a localized string similar to Clear.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.Resources.Strings.Conditions">
+            <summary>
+              Looks up a localized string similar to Conditions &gt;&gt;.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.Resources.Strings.OpBeginsWith">
+            <summary>
+              Looks up a localized string similar to Begins With.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.Resources.Strings.OpContains">
+            <summary>
+              Looks up a localized string similar to Contains.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.Resources.Strings.OpDoesNotContain">
+            <summary>
+              Looks up a localized string similar to Does Not Contain.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.Resources.Strings.OpDoesNotEqual">
+            <summary>
+              Looks up a localized string similar to &lt;&gt;.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.Resources.Strings.OpEndsWith">
+            <summary>
+              Looks up a localized string similar to Ends With.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.Resources.Strings.OpEquals">
+            <summary>
+              Looks up a localized string similar to =.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.Resources.Strings.OpIsGreaterThan">
+            <summary>
+              Looks up a localized string similar to &gt;.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.Resources.Strings.OpIsGreaterThanOrEqualTo">
+            <summary>
+              Looks up a localized string similar to &gt;=.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.Resources.Strings.OpIsLessThan">
+            <summary>
+              Looks up a localized string similar to &lt;.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.Resources.Strings.OpIsLessThanOrEqualTo">
+            <summary>
+              Looks up a localized string similar to &lt;=.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.Resources.Strings.OpNone">
+            <summary>
+              Looks up a localized string similar to (none).
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.Resources.Strings.Or">
+            <summary>
+              Looks up a localized string similar to Or.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.Resources.Strings.SelectAll">
+            <summary>
+              Looks up a localized string similar to Select All.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.Resources.Strings.ShowItems">
+            <summary>
+              Looks up a localized string similar to Show items where the value:.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.FlexGrid.Resources.Strings.Values">
+            <summary>
+              Looks up a localized string similar to Values &gt;&gt;.
+            </summary>
+        </member>
+    </members>
+</doc>

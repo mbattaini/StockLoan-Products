@@ -1,0 +1,54 @@
+﻿<controls:ChildWindow  
+    x:Class="LoanStarWorldWideAdmin.ErrorWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"    
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+    Title="Error" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" d:DesignHeight="291">
+
+    <Grid x:Name="LayoutRoot" Width="575">
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="../Images/background_example.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="16*" />
+        </Grid.RowDefinitions>
+
+        <Grid HorizontalAlignment="Left" Name="CaptionGrid" Width="575" Height="35" VerticalAlignment="Top">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" />
+                    <GradientStop Color="#FF365E90" Offset="1" />
+                    <GradientStop Color="#FF1C3C64" Offset="0.009" />
+                </LinearGradientBrush>
+            </Grid.Background>
+            <sdk:Label Content="LoanStar Administration Portal - ERROR" FontSize="16" FontWeight="Bold" 
+                       Foreground="White" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="1,-1,0,-1" Name="CaptionLabel" 
+                       Width="575" Height="35" VerticalAlignment="Center" />
+
+        </Grid>
+
+        <TextBlock x:Name="IntroductoryText" Margin="3,3,0,0" FontSize="11" FontWeight="Bold" Foreground="White" 
+                   Text="An error was encountered. Please contact your administrator for more information." Grid.Row="2" Height="25" 
+                   VerticalAlignment="Top" />
+
+        <StackPanel x:Name="ContentStackPanel"  Grid.Row="2" Margin="0,27,0,0">
+
+            <TextBlock x:Name="LabelText" TextWrapping="Wrap" Margin="3,0,0,2" FontSize="11" FontWeight="Bold" Foreground="White" 
+                       Text="Error details"/>
+            <TextBlock x:Name="ErrorTextBox"  Height="127" TextWrapping="Wrap"   
+                     FontSize="11" FontWeight="Bold" Foreground="White" Text="Test Input" />
+
+        </StackPanel>
+
+        <Button x:Name="OKButton" Grid.Row="3" Click="OKButton_Click" 
+            Width="75" Height="23" HorizontalAlignment="Right" Margin="0,10,0,0" 
+            TabIndex="0" Content="OK"/>
+
+    </Grid>
+
+</controls:ChildWindow>

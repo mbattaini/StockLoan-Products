@@ -1,0 +1,3 @@
+C:\_dev\ATLAS\LoanstarWorldWide\Common\bin\Release\StockLoan.Common.dll
+C:\_dev\ATLAS\LoanstarWorldWide\Common\obj\Release\ResolveAssemblyReference.cache
+C:\_dev\ATLAS\LoanstarWorldWide\Common\obj\Release\StockLoan.Common.dll

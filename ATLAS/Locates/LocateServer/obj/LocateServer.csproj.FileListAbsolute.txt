@@ -1,0 +1,16 @@
+C:\_DEV\ATLAS.LOCATES1.0.DEVELOPMENT\LOCATESERVER\bin\Debug\StockLoan.LocateServer.dll
+C:\_DEV\ATLAS.LOCATES1.0.DEVELOPMENT\LOCATESERVER\bin\Debug\StockLoan.LocateServer.pdb
+C:\_DEV\ATLAS.LOCATES1.0.DEVELOPMENT\LOCATESERVER\bin\Debug\StockLoan.Common.dll
+C:\_DEV\ATLAS.LOCATES1.0.DEVELOPMENT\LOCATESERVER\bin\Debug\StockLoan.Common.pdb
+C:\_DEV\ATLAS.LOCATES1.0.DEVELOPMENT\LOCATESERVER\obj\Debug\ResolveAssemblyReference.cache
+C:\_DEV\ATLAS.LOCATES1.0.DEVELOPMENT\LOCATESERVER\obj\Debug\StockLoan.LocateServer.dll
+C:\_DEV\ATLAS.LOCATES1.0.DEVELOPMENT\LOCATESERVER\obj\Debug\StockLoan.LocateServer.pdb
+C:\_DEV\ATLAS.LOCATES1.0.DEVELOPMENT\LOCATESERVER\bin\Debug\StockLoan.Locates.pdb
+C:\_DEV\ATLAS.LOCATES1.0.DEVELOPMENT\LOCATESERVER\bin\Debug\StockLoan.Locates.dll
+C:\_DEV\ATLAS.LOCATES1.0.DEVELOPMENT\LocateServer\bin\Release\StockLoan.LocateServer.dll
+C:\_DEV\ATLAS.LOCATES1.0.DEVELOPMENT\LocateServer\bin\Release\StockLoan.Common.dll
+C:\_DEV\ATLAS.LOCATES1.0.DEVELOPMENT\LocateServer\bin\Release\StockLoan.Locates.dll
+C:\_DEV\ATLAS.LOCATES1.0.DEVELOPMENT\LocateServer\bin\Release\StockLoan.Common.pdb
+C:\_DEV\ATLAS.LOCATES1.0.DEVELOPMENT\LocateServer\bin\Release\StockLoan.Locates.pdb
+C:\_DEV\ATLAS.LOCATES1.0.DEVELOPMENT\LocateServer\obj\Release\ResolveAssemblyReference.cache
+C:\_DEV\ATLAS.LOCATES1.0.DEVELOPMENT\LocateServer\obj\Release\StockLoan.LocateServer.dll

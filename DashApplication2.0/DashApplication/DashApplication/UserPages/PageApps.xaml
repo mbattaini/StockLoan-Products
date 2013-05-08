@@ -1,0 +1,105 @@
+﻿<navigation:Page 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:i="http://schemas.microsoft.com/expression/2010/interactions"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" x:Class="DashApplication.UserPages.PageApps"
+           mc:Ignorable="d"
+           d:DesignWidth="640" d:DesignHeight="480"
+           Title="PageApps Page" BorderThickness="1">
+    <Grid x:Name="LayoutRoot">      
+            <c1:C1UniformGrid Columns="4" Rows="3" Background="White" Margin="8,9,0,0" Height="461" VerticalAlignment="Top" HorizontalAlignment="Left" Width="632" x:Name="AppsGrid">       
+                <HyperlinkButton x:Name="CollateralSummaryHuperLink" Click="CollateralSummaryHuperLink_Click"  VerticalContentAlignment="Center" Margin="10,10,27,10" Background="#FFD1D6D6" BorderThickness="2" BorderBrush="#FF6BC3D9" Style="{StaticResource HyperlinkButtonRollover}" HorizontalContentAlignment="Center" MouseEnter="HyperLink_MouseEnter" Visibility="Collapsed" >              
+                <HyperlinkButton.Content>
+                    <StackPanel Orientation="Vertical">
+                        <c1:C1Image Source="/DashApplication;component/Image/Other/MB_0010_world.png" ToolTipService.ToolTip="SBREQ Check" Height="109"/>
+                        <TextBlock VerticalAlignment="Stretch" Text="Collateral Summary" TextWrapping="Wrap" />
+                    </StackPanel>
+                </HyperlinkButton.Content>
+            </HyperlinkButton>            
+                <HyperlinkButton x:Name="CollateralHyperLink" Click="CollateralHyperLink_Click" Margin="10,10,27,10" VerticalContentAlignment="Center" MouseEnter="HyperLink_MouseEnter" Background="#FFD1D6D6" BorderThickness="2" BorderBrush="#FF6BC3D9" Style="{StaticResource HyperlinkButtonRollover}" HorizontalContentAlignment="Center" Visibility="Collapsed">             
+                    <HyperlinkButton.Content>
+                    <StackPanel Orientation="Vertical">                   
+                        <c1:C1Image Source="/DashApplication;component/Image/Other/MB_0006_calculator.png" ToolTipService.ToolTip="Collateral Utilization" Height="109" />
+                        <TextBlock VerticalAlignment="Center" Text="Collateral Utilization" TextWrapping="Wrap" />                
+                    </StackPanel>
+                </HyperlinkButton.Content>              
+                    
+                </HyperlinkButton>
+                <HyperlinkButton x:Name="SbreqHyperLink" Click="SbreqHyperLink_Click"  VerticalContentAlignment="Center" Margin="10,10,27,10" Background="#FFD1D6D6" BorderThickness="10,2,2,2" BorderBrush="#FF6BC3D9" Style="{StaticResource HyperlinkButtonRollover}" HorizontalContentAlignment="Center" MouseEnter="HyperLink_MouseEnter" Visibility="Collapsed" >
+                <HyperlinkButton.Content>
+                <StackPanel Orientation="Vertical">
+                        <c1:C1Image Source="/DashApplication;component/Image/Other/MB_0005_weather1.png" ToolTipService.ToolTip="SBREQ Check" Height="109"/>
+                        <TextBlock VerticalAlignment="Stretch" Text="SBREQ Borrows" TextWrapping="Wrap" Width="91" />                    
+                 </StackPanel>
+                </HyperlinkButton.Content>
+            </HyperlinkButton>            
+                <HyperlinkButton x:Name="Recall204HyperLink"  VerticalContentAlignment="Center" Margin="10,10,27,10" Background="#FFD1D6D6" BorderThickness="10,2,2,2" BorderBrush="#FF6BC3D9" Style="{StaticResource HyperlinkButtonRollover}" HorizontalContentAlignment="Center" MouseEnter="HyperLink_MouseEnter" Click="Recall204HyperLink_Click" Visibility="Collapsed" >
+                <HyperlinkButton.Content>
+                    <StackPanel Orientation="Vertical">
+                        <c1:C1Image Source="/DashApplication;component/Image/Other/MB_0006_back.png" ToolTipService.ToolTip="204 Recall Test" Height="109"/>
+                        <TextBlock VerticalAlignment="Stretch" Text="204 Recall Test" TextWrapping="Wrap" Width="91" />
+                    </StackPanel>
+                </HyperlinkButton.Content>
+            </HyperlinkButton>
+            <HyperlinkButton x:Name="Recall204SupplementHyperLink"  VerticalContentAlignment="Center" Margin="10,10,27,10" Background="#FFD1D6D6" BorderThickness="10,2,2,2" BorderBrush="#FF6BC3D9" Style="{StaticResource HyperlinkButtonRollover}" HorizontalContentAlignment="Center" MouseEnter="HyperLink_MouseEnter" Visibility="Collapsed" Click="Recall204SupplementHyperLink_Click" >
+                <HyperlinkButton.Content>
+                    <StackPanel Orientation="Vertical">
+                        <c1:C1Image Source="/DashApplication;component/Image/Other/MB_0003_Apps.png" ToolTipService.ToolTip="204 Supplement Test" Height="109"/>
+                        <TextBlock VerticalAlignment="Stretch" Text="204 Recall Supplement Test" TextWrapping="Wrap" Width="91" />
+                    </StackPanel>
+                </HyperlinkButton.Content>
+            </HyperlinkButton>
+                <HyperlinkButton x:Name="ReportViewerHyperLink"  VerticalContentAlignment="Center" Margin="10,10,27,10" Background="#FFD1D6D6" BorderThickness="10,2,2,2" BorderBrush="#FF6BC3D9" Style="{StaticResource HyperlinkButtonRollover}" HorizontalContentAlignment="Center" MouseEnter="HyperLink_MouseEnter"  Visibility="Collapsed" Click="ReportViewerHyperLink_Click" >
+                <HyperlinkButton.Content>
+                    <StackPanel Orientation="Vertical">
+                        <c1:C1Image Source="/DashApplication;component/Image/Other/MB_0007_book.png" ToolTipService.ToolTip="Report Viewer" Height="109"/>
+                        <TextBlock VerticalAlignment="Stretch" Text="Report Viewer" TextWrapping="Wrap" Width="91" />
+                    </StackPanel>
+                </HyperlinkButton.Content>
+            </HyperlinkButton>
+                <HyperlinkButton x:Name="PenaltyBoxHyperLink"  VerticalContentAlignment="Center" Margin="10,10,27,10" Background="#FFD1D6D6" BorderThickness="10,2,2,2" BorderBrush="#FF6BC3D9" Style="{StaticResource HyperlinkButtonRollover}" HorizontalContentAlignment="Center" MouseEnter="HyperLink_MouseEnter"  Visibility="Collapsed" Click="PenaltyBoxHyperLink_Click">
+                <HyperlinkButton.Content>
+                    <StackPanel Orientation="Vertical">
+                        <c1:C1Image Source="/DashApplication;component/Image/Other/MB_0024_LOCK.png" ToolTipService.ToolTip="Report Viewer" Height="109"/>
+                        <TextBlock VerticalAlignment="Stretch" Text="Penalty Box" TextWrapping="Wrap" Width="91" />
+                    </StackPanel>
+                </HyperlinkButton.Content>
+            </HyperlinkButton>
+                <HyperlinkButton x:Name="StockLoanDashboardHyperLink"  VerticalContentAlignment="Center" Margin="10,10,27,10" Background="#FFD1D6D6" BorderThickness="10,2,2,2" BorderBrush="#FF6BC3D9" Style="{StaticResource HyperlinkButtonRollover}" HorizontalContentAlignment="Center" MouseEnter="HyperLink_MouseEnter"  Visibility="Collapsed" Click="StockLoanDashboardHyperLink_Click">
+                <HyperlinkButton.Content>
+                    <StackPanel Orientation="Vertical">
+                        <c1:C1Image Source="/DashApplication;component/Image/Other/MB_0042_apps4.png" ToolTipService.ToolTip="StockLoan Dashbaord" Height="109"/>
+                        <TextBlock VerticalAlignment="Stretch" Text="StockLoan Dashboard" TextWrapping="Wrap" Width="91" />
+                    </StackPanel>
+                </HyperlinkButton.Content>
+            </HyperlinkButton>
+            <HyperlinkButton x:Name="CashAndCollateralHyperLink"  VerticalContentAlignment="Center" Margin="10,10,27,10" Background="#FFD1D6D6" BorderThickness="10,2,2,2" BorderBrush="#FF6BC3D9" Style="{StaticResource HyperlinkButtonRollover}" HorizontalContentAlignment="Center" MouseEnter="HyperLink_MouseEnter"  Visibility="Collapsed" Click="CashAndCollateralHyperLink_Click">
+                <HyperlinkButton.Content>
+                    <StackPanel Orientation="Vertical">
+                        <c1:C1Image Source="/DashApplication;component/Image/Other/MB_0024_LOCK.png" ToolTipService.ToolTip="Cash And Collateral Reporting" Height="109"/>
+                        <TextBlock VerticalAlignment="Stretch" Text="Cash And Collateral" TextWrapping="Wrap" Width="91" />
+                    </StackPanel>
+                </HyperlinkButton.Content>
+            </HyperlinkButton>
+            <HyperlinkButton x:Name="ContractsBySecurityHyperLink"  VerticalContentAlignment="Center" Margin="10,10,27,10" Background="#FFD1D6D6" BorderThickness="10,2,2,2" BorderBrush="#FF6BC3D9" Style="{StaticResource HyperlinkButtonRollover}" HorizontalContentAlignment="Center" MouseEnter="HyperLink_MouseEnter"  Visibility="Collapsed" Click="ContractsBySecurityHyperLink_Click">
+                <HyperlinkButton.Content>
+                    <StackPanel Orientation="Vertical">
+                        <c1:C1Image Source="/DashApplication;component/Image/Other/MB_0017_Sattelite.png" ToolTipService.ToolTip="Contracts By Security" Height="109"/>
+                        <TextBlock VerticalAlignment="Stretch" Text="Contracts By Security" TextWrapping="Wrap" Width="91" />
+                    </StackPanel>
+                </HyperlinkButton.Content>
+            </HyperlinkButton>
+            <HyperlinkButton x:Name="HardToBorrowItemHyperLink"  VerticalContentAlignment="Center" Margin="10,10,27,10" Background="#FFD1D6D6" BorderThickness="10,2,2,2" BorderBrush="#FF6BC3D9" Style="{StaticResource HyperlinkButtonRollover}" HorizontalContentAlignment="Center" MouseEnter="HyperLink_MouseEnter"  Visibility="Collapsed" Click="HardToBorrowItemHyperLink_Click">
+                <HyperlinkButton.Content>
+                    <StackPanel Orientation="Vertical">
+                        <c1:C1Image Source="/DashApplication;component/Image/Other/MB_0019_plus.png" ToolTipService.ToolTip="HTB Item Add" Height="109"/>
+                        <TextBlock VerticalAlignment="Stretch" Text="HTB item Add" TextWrapping="Wrap" Width="91" />
+                    </StackPanel>
+                </HyperlinkButton.Content>
+            </HyperlinkButton>
+            </c1:C1UniformGrid>        
+    </Grid>
+</navigation:Page>

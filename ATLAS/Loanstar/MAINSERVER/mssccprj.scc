@@ -1,0 +1,17 @@
+SCC = This is a Source Code Control file
+
+[MedalistServer.csproj]
+SCC_Aux_Path = "\\rspen001\SourceSafe\PensonSource"
+SCC_Project_Name = "$/SourceCode/C#/0 Development/Atlas/LoanStar/MedalistServer", DSKIAAAA
+
+[MedalistServer.sln]
+SCC_Aux_Path = "\\rspen001\SourceSafe\PensonSource"
+SCC_Project_Name = "$/SourceCode/C#/0 Development/Atlas/LoanStar/MedalistServer", DSKIAAAA
+
+[MainServer.csproj]
+SCC_Aux_Path = "\\rspen001\SourceSafe\PensonSource"
+SCC_Project_Name = "$/SourceCode/C#/0 Development/Atlas/LoanStar/MainServer", PSFNAAAA
+
+[MainServer.sln]
+SCC_Aux_Path = "\\rspen001\SourceSafe\PensonSource"
+SCC_Project_Name = "$/SourceCode/C#/0 Development/Atlas/LoanStar/MainServer", PSFNAAAA

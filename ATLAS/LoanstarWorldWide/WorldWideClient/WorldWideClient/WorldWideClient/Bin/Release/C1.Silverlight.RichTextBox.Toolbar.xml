@@ -1,0 +1,2111 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Silverlight.RichTextBox.Toolbar</name>
+    </assembly>
+    <members>
+        <member name="T:C1.Silverlight.RichTextBox.C1ColorPickerMenuItem">
+            <summary>
+            The <see cref="T:C1.Silverlight.C1MenuItem"/> used in <see cref="T:C1.Silverlight.RichTextBox.C1BorderTool"/> to pick colors.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1ColorPickerMenuItem.BrushProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1ColorPickerMenuItem.Brush"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1ColorPickerMenuItem.IconTemplateProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1ColorPickerMenuItem.IconTemplate"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1ColorPickerMenuItem.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1ColorPickerMenuItem"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1ColorPickerMenuItem.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.RichTextBox.C1ColorPickerMenuItem"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1ColorPickerMenuItem.Brush">
+            <summary>
+            Gets or sets brush value.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.RichTextBox.C1ColorPickerMenuItem.BrushChanged">
+            <summary> 
+            Event raised when the <see cref="P:Brush"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1ColorPickerMenuItem.IconTemplate">
+            <summary>
+            Gets or sets the icon template.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1FindAndReplace">
+            <summary>
+            Control for finding and replacing text from the toolbar.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1FindAndReplace.ChangeVisualStateCommon(System.Boolean)">
+            <summary>
+            Updates the current visual state of the Common visual state group to match the object's properties.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1FindAndReplace.RichTextBoxProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1FindAndReplace.RichTextBox"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1FindAndReplace.DropDownProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1FindAndReplace.DropDown"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1FindAndReplace.IsMouseOverProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1FindAndReplace.IsMouseOver"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1FindAndReplace.ForceMouseOverProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1FindAndReplace.ForceMouseOver"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1FindAndReplace.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1FindAndReplace"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1FindAndReplace.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.RichTextBox.C1FindAndReplace"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1FindAndReplace.RichTextBox">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/> associated with this tool.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1FindAndReplace.DropDown">
+            <summary>
+            Gets or sets the dropdown of this tool.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1FindAndReplace.IsMouseOver">
+            <summary>
+            Returns true if the mouse is over the control.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.RichTextBox.C1FindAndReplace.IsMouseOverChanged">
+            <summary> 
+            Event raised when the <see cref="P:IsMouseOver"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1FindAndReplace.ForceMouseOver">
+            <summary>
+            Set to true to force the mouse over visual state.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1ImageDialog">
+            <summary>
+            Contents of the dialog used in <see cref="T:C1.Silverlight.RichTextBox.C1InsertImageTool"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1ImageDialog.UrlProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1ImageDialog.Url"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1ImageDialog.StreamProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1ImageDialog.Stream"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1ImageDialog.FilenameProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1ImageDialog.Filename"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1ImageDialog.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1ImageDialog"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1ImageDialog.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.RichTextBox.C1ImageDialog"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="E:C1.Silverlight.RichTextBox.C1ImageDialog.FileSelected">
+            <summary>
+            Event fired when the file OK button is clicked.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.RichTextBox.C1ImageDialog.UrlSelected">
+            <summary>
+            Event fired when the Url OK button is clicked.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1ImageDialog.Url">
+            <summary>
+            Gets or sets the content of the url field.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1ImageDialog.Stream">
+            <summary>
+            Gets or sets an array of bytes with image data.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1ImageDialog.Filename">
+            <summary>
+            Gets or sets the name of the selected file.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1InsertTableGrid">
+            <summary>
+            A helper control for <see cref="T:C1.Silverlight.RichTextBox.C1InsertTableTool"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1InsertTableGrid.RichTextBoxProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1InsertTableGrid.RichTextBox"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1InsertTableGrid.DropDownProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1InsertTableGrid.DropDown"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1InsertTableGrid.CellSizeProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1InsertTableGrid.CellSize"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1InsertTableGrid.ColumnsProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1InsertTableGrid.Columns"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1InsertTableGrid.RowsProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1InsertTableGrid.Rows"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1InsertTableGrid.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1InsertTableGrid"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1InsertTableGrid.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.RichTextBox.C1InsertTableGrid"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1InsertTableGrid.RichTextBox">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/> associated with this tool.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1InsertTableGrid.DropDown">
+            <summary>
+            Gets or sets the dropdown of this tool.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1InsertTableGrid.CellSize">
+            <summary>
+            Gets or sets the size of cell in the dropdown.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1InsertTableGrid.Columns">
+            <summary>
+            Gets or sets the initial number of columns in the cell grid.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1InsertTableGrid.Rows">
+            <summary>
+            Gets or sets the initial number of rows in the cell grid.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1InsertTableGridPanel">
+            <summary>
+            A helper panel for <see cref="T:C1.Silverlight.RichTextBox.C1InsertTableTool"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1InsertTableGridPanel.RowsProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1InsertTableGridPanel.Rows"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1InsertTableGridPanel.ColumnsProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1InsertTableGridPanel.Columns"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1InsertTableGridPanel.CellSizeProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1InsertTableGridPanel.CellSize"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1InsertTableGridPanel.CellTemplateProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1InsertTableGridPanel.CellTemplate"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1InsertTableGridPanel.SelectedCellTemplateProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1InsertTableGridPanel.SelectedCellTemplate"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1InsertTableGridPanel.MinRowsProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1InsertTableGridPanel.MinRows"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1InsertTableGridPanel.MinColumnsProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1InsertTableGridPanel.MinColumns"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1InsertTableGridPanel.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1InsertTableGridPanel"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1InsertTableGridPanel.Rows">
+            <summary>
+            Gets or sets the initial number rows in the cell grid.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1InsertTableGridPanel.Columns">
+            <summary>
+            Gets or sets the initial number columns in the cell grid.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1InsertTableGridPanel.CellSize">
+            <summary>
+            Gets or sets the size of cell in the grid.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1InsertTableGridPanel.CellTemplate">
+            <summary>
+            Gets or sets the template for each cell in the grid.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1InsertTableGridPanel.SelectedCellTemplate">
+            <summary>
+            Gets or sets the template for each selected cell in the grid.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1InsertTableGridPanel.MinRows">
+            <summary>
+            Gets or sets the mininum number of rows in the grid.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1InsertTableGridPanel.MinColumns">
+            <summary>
+            Gets or sets the minimum number of columns in the grid.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1ThicknessMenuItem">
+            <summary>
+            The <see cref="T:C1.Silverlight.C1MenuItem"/> used in <see cref="T:C1.Silverlight.RichTextBox.C1BorderTool"/> to pick thickness.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1ThicknessMenuItem.ThicknessProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1ThicknessMenuItem.Thickness"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1ThicknessMenuItem.IconTemplateProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1ThicknessMenuItem.IconTemplate"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1ThicknessMenuItem.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1ThicknessMenuItem"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1ThicknessMenuItem.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.RichTextBox.C1ThicknessMenuItem"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1ThicknessMenuItem.Thickness">
+            <summary>
+            Gets or sets the thickness value.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1ThicknessMenuItem.IconTemplate">
+            <summary>
+            Gets or sets the icon template.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1BorderTool">
+            <summary>
+            Control for editing borders in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.IUpdateableTool">
+            <summary>
+            Tools that need to be updated when the associated <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/> changes implement this interface.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.IUpdateableTool.Update">
+            <summary>
+            Method called when the tool should update its state.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1BorderTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1BorderTool"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1BorderTool.RichTextBoxProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1BorderTool.RichTextBox"/> dependency property. 
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1BorderTool.RichTextBox">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/> this tool edits.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1FormatPainterTool">
+            <summary>
+            Toolbar button that copies format in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1FormatPainterTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1FormatPainterTool"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1FormatPainterTool.RichTextBoxProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1FormatPainterTool.RichTextBox"/> dependency property. 
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1FormatPainterTool.RichTextBox">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/> this tool edits.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1BottomAlignTool">
+            <summary>
+            Toolbar button that aligns the content of a table cell to the bottom in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1ToggleButtonTool`1">
+            <summary>
+            Abstract base class for toggle buttons in <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBoxToolbar"/>.
+            </summary>
+            <typeparam name="T">The type of values toggled by the button.</typeparam>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1ToggleButtonTool`1.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1ToggleButtonTool`1"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1ToggleButtonTool`1.RichTextBoxProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1ToggleButtonTool`1.RichTextBox"/> dependency property. 
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1ToggleButtonTool`1.RichTextBox">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/> this tool edits.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1BottomAlignTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1BottomAlignTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1SelectTableTool">
+            <summary>
+            Toolbar dropdown for selecting table cells, rows and columns in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1SelectTableTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1SelectTableTool"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1SelectTableTool.RichTextBoxProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1SelectTableTool.RichTextBox"/> dependency property. 
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1SelectTableTool.RichTextBox">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/> this tool edits.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1ShowGridlinesTool">
+            <summary>
+            Toolbar button that enables table gridlines in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1ShowGridlinesTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1ShowGridlinesTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1VerticalCenterAlignTool">
+            <summary>
+            Toolbar button that center aligns the content of a table cell in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1VerticalCenterAlignTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1VerticalCenterAlignTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1LengthTool">
+            <summary>
+            Abstract base class of tools that edit C1Length.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1LengthTool.RichTextBoxProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1LengthTool.RichTextBox"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1LengthTool.ChangeVisualStateCommon(System.Boolean)">
+            <summary>
+            Updates the current visual state of the Common visual state group to match the object's properties.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1LengthTool.LengthProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1LengthTool.Length"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1LengthTool.HeaderTemplateProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1LengthTool.HeaderTemplate"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1LengthTool.IsMouseOverProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1LengthTool.IsMouseOver"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1LengthTool.ForceMouseOverProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1LengthTool.ForceMouseOver"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1LengthTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1LengthTool"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1LengthTool.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.RichTextBox.C1LengthTool"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1LengthTool.RichTextBox">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/> this tool edits.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1LengthTool.Length">
+            <summary>
+            Gets or sets the length value.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.RichTextBox.C1LengthTool.LengthChanged">
+            <summary> 
+            Event raised when the <see cref="P:Length"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1LengthTool.HeaderTemplate">
+            <summary>
+            Gets or sets the header template.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1LengthTool.IsMouseOver">
+            <summary>
+            Returns true if the mouse is over the control.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.RichTextBox.C1LengthTool.IsMouseOverChanged">
+            <summary> 
+            Event raised when the <see cref="P:IsMouseOver"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1LengthTool.ForceMouseOver">
+            <summary>
+            Set to true to force the mouse over visual state.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1LengthUnitConverter">
+            <summary>
+            Converts <see cref="T:C1.Silverlight.RichTextBox.Documents.C1LengthUnitType"/> to text.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1RichTextBoxToolbar">
+            <summary>
+            Represents a toolbar for a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1RichTextBoxToolbar.ChangeVisualStateCommon(System.Boolean)">
+            <summary>
+            Updates the current visual state of the Common visual state group to match the object's properties.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1RichTextBoxToolbar.RichTextBoxProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1RichTextBoxToolbar.RichTextBox"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1RichTextBoxToolbar.SpellCheckerProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1RichTextBoxToolbar.SpellChecker"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1RichTextBoxToolbar.IsMouseOverProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1RichTextBoxToolbar.IsMouseOver"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1RichTextBoxToolbar.ForceMouseOverProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1RichTextBoxToolbar.ForceMouseOver"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1RichTextBoxToolbar.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBoxToolbar"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1RichTextBoxToolbar.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBoxToolbar"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1RichTextBoxToolbar.FontFamilies">
+            <summary>
+            Gets the collection of font families available in the toolbar.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1RichTextBoxToolbar.FontSizes">
+            <summary>
+            Gets the collection of font sizes available in the toolbar.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1RichTextBoxToolbar.RichTextBox">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/> associated with this <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBoxToolbar"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1RichTextBoxToolbar.SpellChecker">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.ISpellChecker"/> used with the <see cref="T:C1.Silverlight.RichTextBox.C1SpellCheckTool"/>
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1RichTextBoxToolbar.IsMouseOver">
+            <summary>
+            Returns true if the mouse is over the control.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.RichTextBox.C1RichTextBoxToolbar.IsMouseOverChanged">
+            <summary> 
+            Event raised when the <see cref="P:IsMouseOver"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1RichTextBoxToolbar.ForceMouseOver">
+            <summary>
+            Set to true to force the mouse over visual state.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1ThicknessPicker">
+            <summary>
+            Control used to pick a <see cref="P:C1.Silverlight.RichTextBox.C1ThicknessPicker.Thickness"/> value.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1ThicknessPicker.ChangeVisualStateCommon(System.Boolean)">
+            <summary>
+            Updates the current visual state of the Common visual state group to match the object's properties.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1ThicknessPicker.ThicknessProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1ThicknessPicker.Thickness"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1ThicknessPicker.IsMouseOverProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1ThicknessPicker.IsMouseOver"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1ThicknessPicker.ForceMouseOverProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1ThicknessPicker.ForceMouseOver"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1ThicknessPicker.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1ThicknessPicker"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1ThicknessPicker.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.RichTextBox.C1ThicknessPicker"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1ThicknessPicker.Thickness">
+            <summary>
+            Gets or sets the current thickness value.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.RichTextBox.C1ThicknessPicker.ThicknessChanged">
+            <summary> 
+            Event raised when the <see cref="P:Thickness"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1ThicknessPicker.IsMouseOver">
+            <summary>
+            Returns true if the mouse is over the control.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.RichTextBox.C1ThicknessPicker.IsMouseOverChanged">
+            <summary> 
+            Event raised when the <see cref="P:IsMouseOver"/> property has changed.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1ThicknessPicker.ForceMouseOver">
+            <summary>
+            Set to true to force the mouse over visual state.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1HyperlinkDialog">
+            <summary>
+            Contents of the dialog used in <see cref="T:C1.Silverlight.RichTextBox.C1InsertHyperlinkTool"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1HyperlinkDialog.TextProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1HyperlinkDialog.Text"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1HyperlinkDialog.UrlProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1HyperlinkDialog.Url"/> dependency property. 
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1HyperlinkDialog.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1HyperlinkDialog"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1HyperlinkDialog.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:C1.Silverlight.RichTextBox.C1HyperlinkDialog"/> control when a new template is applied.
+            </summary>
+            <remarks>
+            This method is invoked whenever application code or an internal process, such as a rebuilding layout pass, calls the <see cref="M:ApplyTemplate"/> method.
+            </remarks>
+        </member>
+        <member name="E:C1.Silverlight.RichTextBox.C1HyperlinkDialog.Completed">
+            <summary>
+            Event fired when the OK button is clicked.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1HyperlinkDialog.Text">
+            <summary>
+            Gets or sets the content of the text field.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1HyperlinkDialog.Url">
+            <summary>
+            Gets or sets the content of the url field.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.VisualStateHelper.GoToState(System.Windows.Controls.Control,System.String,System.Boolean)">
+            <summary>
+            Tries to go to a new state and throws a friendly error message
+            </summary>
+            <param name="control">Control that is going to change the state.</param>
+            <param name="stateName">Name of the state.</param>
+            <param name="useTransitions">Use transitions or not.</param>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Cell_Title">
+            <summary>
+              Looks up a localized string similar to Cell.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Edit_Title">
+            <summary>
+              Looks up a localized string similar to Edit.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.FindTool_BtnFindNext">
+            <summary>
+              Looks up a localized string similar to Find Next.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.FindTool_BtnReplace">
+            <summary>
+              Looks up a localized string similar to Replace.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.FindTool_BtnReplaceAll">
+            <summary>
+              Looks up a localized string similar to Replace All.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.FindTool_LblFind">
+            <summary>
+              Looks up a localized string similar to Find:.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.FindTool_LblReplace">
+            <summary>
+              Looks up a localized string similar to Replace:.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Font_Bold">
+            <summary>
+              Looks up a localized string similar to Bold.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Font_BoldInitial">
+            <summary>
+              Looks up a localized string similar to B.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Font_ChangeCase">
+            <summary>
+              Looks up a localized string similar to Change Case.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Font_ChangeCase_CapitalizeEachWord">
+            <summary>
+              Looks up a localized string similar to Capitalize Each Word.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Font_ChangeCase_LowerCase">
+            <summary>
+              Looks up a localized string similar to lowercase.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Font_ChangeCase_ToggleCase">
+            <summary>
+              Looks up a localized string similar to tOGGLE cASE.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Font_ChangeCase_UpperCase">
+            <summary>
+              Looks up a localized string similar to UPPERCASE.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Font_Font">
+            <summary>
+              Looks up a localized string similar to Font.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Font_FontColor">
+            <summary>
+              Looks up a localized string similar to Font Color.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Font_FontSize">
+            <summary>
+              Looks up a localized string similar to Font Size.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Font_GrowFont">
+            <summary>
+              Looks up a localized string similar to Grow Font.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Font_Italic">
+            <summary>
+              Looks up a localized string similar to Italic.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Font_ItalicInitial">
+            <summary>
+              Looks up a localized string similar to I.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Font_ShrinkFont">
+            <summary>
+              Looks up a localized string similar to Shrink Font.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Font_Subscript">
+            <summary>
+              Looks up a localized string similar to Subscript.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Font_Superscript">
+            <summary>
+              Looks up a localized string similar to Superscript.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Font_TextHighlightColor">
+            <summary>
+              Looks up a localized string similar to Text Highlight Color.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Font_Title">
+            <summary>
+              Looks up a localized string similar to Font.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Font_Underline">
+            <summary>
+              Looks up a localized string similar to Underline.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Font_UnderlineInitial">
+            <summary>
+              Looks up a localized string similar to U.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.FormatPainter">
+            <summary>
+              Looks up a localized string similar to Format Painter.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.HomeTab_Header">
+            <summary>
+              Looks up a localized string similar to Home.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Insert_InsertHyperlink">
+            <summary>
+              Looks up a localized string similar to Insert Hyperlink.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Insert_InsertHyperlink_InvalidURL">
+            <summary>
+              Looks up a localized string similar to The URL &quot;{0}&quot; is invalid.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Insert_InsertHyperlink_TextLabel">
+            <summary>
+              Looks up a localized string similar to Text:.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Insert_InsertHyperlink_URLLabel">
+            <summary>
+              Looks up a localized string similar to URL:.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Insert_InsertImage">
+            <summary>
+              Looks up a localized string similar to Insert Image.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Insert_InsertImage_FileFilter">
+            <summary>
+              Looks up a localized string similar to Image Files (*.PNG;*.JPG)|*.PNG;*.JPG|All files (*.*)|*.*.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Insert_InsertImage_InvalidURL">
+            <summary>
+              Looks up a localized string similar to The URL &quot;{0}&quot; is invalid.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Insert_InsertImage_NotLoaded">
+            <summary>
+              Looks up a localized string similar to Image from &quot;{0}&quot; could not be loaded..
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Insert_InsertImage_UploadMessage">
+            <summary>
+              Looks up a localized string similar to Choose an image to upload:.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Insert_InsertImage_UploadTab">
+            <summary>
+              Looks up a localized string similar to Upload.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Insert_InsertImage_UrlMessage">
+            <summary>
+              Looks up a localized string similar to Enter the URL where the image is located:.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Insert_InsertImage_UrlTab">
+            <summary>
+              Looks up a localized string similar to URL.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Insert_InsertSymbol">
+            <summary>
+              Looks up a localized string similar to Insert Symbol.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Insert_RemoveHyperlink">
+            <summary>
+              Looks up a localized string similar to Remove Hyperlink.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Insert_Title">
+            <summary>
+              Looks up a localized string similar to Insert.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Merge_Title">
+            <summary>
+              Looks up a localized string similar to Merge.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Paragraph_AlignTextCenter">
+            <summary>
+              Looks up a localized string similar to Align Text Center.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Paragraph_AlignTextLeft">
+            <summary>
+              Looks up a localized string similar to Align Text Left.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Paragraph_AlignTextRight">
+            <summary>
+              Looks up a localized string similar to Align Text Right.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Paragraph_BorderColor">
+            <summary>
+              Looks up a localized string similar to Border Color.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Paragraph_BorderThickness">
+            <summary>
+              Looks up a localized string similar to Border Thickness.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Paragraph_Bullets">
+            <summary>
+              Looks up a localized string similar to Bullets.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Paragraph_Justify">
+            <summary>
+              Looks up a localized string similar to Justify.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Paragraph_Margin">
+            <summary>
+              Looks up a localized string similar to Margin.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Paragraph_Numbering">
+            <summary>
+              Looks up a localized string similar to Numbering.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Paragraph_Padding">
+            <summary>
+              Looks up a localized string similar to Padding.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Paragraph_ParagraphColor">
+            <summary>
+              Looks up a localized string similar to Paragraph Color.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Paragraph_TextWrapping">
+            <summary>
+              Looks up a localized string similar to Text Wrapping.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Paragraph_Title">
+            <summary>
+              Looks up a localized string similar to Paragraph.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.RowsAndColumns_Title">
+            <summary>
+              Looks up a localized string similar to Rows &amp; Columns.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Table_Title">
+            <summary>
+              Looks up a localized string similar to Table.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.TablesTab_Header">
+            <summary>
+              Looks up a localized string similar to Tables.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.ThicknessPicker_Bottom">
+            <summary>
+              Looks up a localized string similar to Bottom:.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.ThicknessPicker_Left">
+            <summary>
+              Looks up a localized string similar to Left:.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.ThicknessPicker_Right">
+            <summary>
+              Looks up a localized string similar to Right:.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.ThicknessPicker_Top">
+            <summary>
+              Looks up a localized string similar to Top:.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_BorderTool">
+            <summary>
+              Looks up a localized string similar to Borders.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_BorderTool_AllBorders">
+            <summary>
+              Looks up a localized string similar to All Borders.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_BorderTool_BottomBorder">
+            <summary>
+              Looks up a localized string similar to Bottom Border.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_BorderTool_Color">
+            <summary>
+              Looks up a localized string similar to Color.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_BorderTool_InsideBorders">
+            <summary>
+              Looks up a localized string similar to Inside Borders.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_BorderTool_InsideHorizontalBorders">
+            <summary>
+              Looks up a localized string similar to Inside Horizontal Border.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_BorderTool_InsideVerticalBorders">
+            <summary>
+              Looks up a localized string similar to Inside Vertical Border.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_BorderTool_LeftBorder">
+            <summary>
+              Looks up a localized string similar to Left Border.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_BorderTool_NoBorder">
+            <summary>
+              Looks up a localized string similar to No Border.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_BorderTool_OutsideBorders">
+            <summary>
+              Looks up a localized string similar to Outside Borders.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_BorderTool_RightBorder">
+            <summary>
+              Looks up a localized string similar to Right Border.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_BorderTool_TopBorder">
+            <summary>
+              Looks up a localized string similar to Top Border.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_BorderTool_Weight">
+            <summary>
+              Looks up a localized string similar to Weight.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_BottomAlign">
+            <summary>
+              Looks up a localized string similar to Align Bottom.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_ColumnWidth_Header">
+            <summary>
+              Looks up a localized string similar to Width:.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_Copy">
+            <summary>
+              Looks up a localized string similar to Copy.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_Cut">
+            <summary>
+              Looks up a localized string similar to Cut.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_Delete">
+            <summary>
+              Looks up a localized string similar to Delete.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_DeleteTable">
+            <summary>
+              Looks up a localized string similar to Delete Table.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_DeleteTable_DeleteCells">
+            <summary>
+              Looks up a localized string similar to Delete Cells.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_DeleteTable_DeleteColumns">
+            <summary>
+              Looks up a localized string similar to Delete Columns.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_DeleteTable_DeleteRows">
+            <summary>
+              Looks up a localized string similar to Delete Rows.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_DeleteTable_DeleteTable">
+            <summary>
+              Looks up a localized string similar to Delete Table.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_FindAndReplace">
+            <summary>
+              Looks up a localized string similar to Find and Replace.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_FindAndReplace_NotFound">
+            <summary>
+              Looks up a localized string similar to The following specified text was not found:.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_FindAndReplace_ReachStart">
+            <summary>
+              Looks up a localized string similar to Find reached the starting point of the search..
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_Gridlines">
+            <summary>
+              Looks up a localized string similar to Gridlines.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_InsertAbove">
+            <summary>
+              Looks up a localized string similar to Insert Above.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_InsertBelow">
+            <summary>
+              Looks up a localized string similar to Insert Below.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_InsertColumnsLeft">
+            <summary>
+              Looks up a localized string similar to Insert Columns to the Left.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_InsertColumnsRight">
+            <summary>
+              Looks up a localized string similar to Insert Columns to the Right.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_InsertLeft">
+            <summary>
+              Looks up a localized string similar to Insert Left.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_InsertRight">
+            <summary>
+              Looks up a localized string similar to Insert Right.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_InsertRowsAbove">
+            <summary>
+              Looks up a localized string similar to Insert Rows Above.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_InsertRowsBelow">
+            <summary>
+              Looks up a localized string similar to Insert Rows Below.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_InsertTable">
+            <summary>
+              Looks up a localized string similar to Insert Table.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_InsertTable_ConvertText">
+            <summary>
+              Looks up a localized string similar to Convert Text to Table.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_MergeCells">
+            <summary>
+              Looks up a localized string similar to Merge Cells.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_Paste">
+            <summary>
+              Looks up a localized string similar to Paste.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_Picture">
+            <summary>
+              Looks up a localized string similar to Picture.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_Redo">
+            <summary>
+              Looks up a localized string similar to Redo.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_RowHeight_Header">
+            <summary>
+              Looks up a localized string similar to Height:.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_Select">
+            <summary>
+              Looks up a localized string similar to Select.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_SelectTable">
+            <summary>
+              Looks up a localized string similar to Select Table.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_SelectTable_SelectCell">
+            <summary>
+              Looks up a localized string similar to Select Cell.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_SelectTable_SelectColumn">
+            <summary>
+              Looks up a localized string similar to Select Column.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_SelectTable_SelectRow">
+            <summary>
+              Looks up a localized string similar to Select Row.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_SelectTable_SelectTable">
+            <summary>
+              Looks up a localized string similar to Select Table.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_ShowGridlines">
+            <summary>
+              Looks up a localized string similar to Show Gridlines.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_SpellCheck">
+            <summary>
+              Looks up a localized string similar to Spell Check.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_SpellCheck_NoErrors">
+            <summary>
+              Looks up a localized string similar to No spelling errors found..
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_SpellCheck_NotConfigured">
+            <summary>
+              Looks up a localized string similar to Spell checking is not configured..
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_Spelling">
+            <summary>
+              Looks up a localized string similar to Spelling.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_SplitCell">
+            <summary>
+              Looks up a localized string similar to Split Cell.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_TableWidth_Header">
+            <summary>
+              Looks up a localized string similar to Width:.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_Title">
+            <summary>
+              Looks up a localized string similar to Tools.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_TopAlign">
+            <summary>
+              Looks up a localized string similar to Align Top.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_Undo">
+            <summary>
+              Looks up a localized string similar to Undo.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_Unmerge">
+            <summary>
+              Looks up a localized string similar to Unmerge.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_UnmergeCell">
+            <summary>
+              Looks up a localized string similar to Unmerge Cell.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.Tools_VerticalCenterAlign">
+            <summary>
+              Looks up a localized string similar to Align Center.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.View_Draft">
+            <summary>
+              Looks up a localized string similar to Draft.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.View_PrintLayout">
+            <summary>
+              Looks up a localized string similar to Print Layout.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.Resources.C1_Silverlight_RichTextBox_Toolbar.View_Zoom">
+            <summary>
+              Looks up a localized string similar to Zoom.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1BoldTool">
+            <summary>
+            Toolbar button that makes text bold in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1BoldTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1BoldTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1BorderColorTool">
+            <summary>
+            Control that modifies the color of borders in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1ColorTool">
+            <summary>
+            Abstract base class for color tools in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBoxToolbar"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1ColorTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1ColorTool"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1ColorTool.RichTextBoxProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1ColorTool.RichTextBox"/> dependency property. 
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1ColorTool.RichTextBox">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/> this tool edits.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1BorderColorTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1BorderColorTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1BorderThicknessTool">
+            <summary>
+            Control that modifies the thickness of borders in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1ThicknessTool">
+            <summary>
+            Abstract base class for controls that modify thickness in <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBoxToolbar"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1ThicknessTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1ThicknessTool"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1ThicknessTool.RichTextBoxProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1ThicknessTool.RichTextBox"/> dependency property. 
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1ThicknessTool.RichTextBox">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/> this tool edits.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1BorderThicknessTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1BorderThicknessTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1BulletsTool">
+            <summary>
+            Toolbar button that creates bullet lists in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1ListTool">
+            <summary>
+            Base class for toolbar buttons that create lists in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1ListTool.MarkerStyle">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.RichTextBox.Documents.TextMarkerStyle"/> for the created lists.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1BulletsTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1BulletsTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1ButtonTool">
+            <summary>
+            Abstract base class for <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBoxToolbar"/> button tools.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1ButtonTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1ButtonTool"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1ButtonTool.RichTextBoxProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1ButtonTool.RichTextBox"/> dependency property. 
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1ButtonTool.RichTextBox">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/> this tool edits.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1ColumnWidthTool">
+            <summary>
+            Control for editing the width of table columns in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1ColumnWidthTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1ColumnWidthTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1DeleteTableTool">
+            <summary>
+            Toolbar drop down for deleting rows, columns and cells from a table in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1DeleteTableTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1DeleteTableTool"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1DeleteTableTool.RichTextBoxProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1DeleteTableTool.RichTextBox"/> dependency property. 
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1DeleteTableTool.RichTextBox">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/> this tool edits.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1InsertColumnsRightTool">
+            <summary>
+            Toolbar button for inserting table columns in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1InsertColumnsRightTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1InsertColumnsRightTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1InsertColumnsLeftTool">
+            <summary>
+            Toolbar button for inserting table columns in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1InsertColumnsLeftTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1InsertColumnsLeftTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1InsertRowsAboveTool">
+            <summary>
+            Toolbar button for inserting table rows in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1InsertRowsAboveTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1InsertRowsAboveTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1InsertRowsBelowTool">
+            <summary>
+            Toolbar button for inserting table rows in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1InsertRowsBelowTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1InsertRowsBelowTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1MergeCellsTool">
+            <summary>
+            Toolbar button for merging table cells in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1MergeCellsTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1MergeCellsTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1CopyTool">
+            <summary>
+            Toolbar button that copies text into the clipboard from a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1CopyTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1CopyTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1CutTool">
+            <summary>
+            Toolbar button that cuts text into the clipboard from a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1CutTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1CutTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1DraftViewTool">
+            <summary>
+            Toolbar button that toggles draft view mode in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1DraftViewTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1DraftViewTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1FindAndReplaceTool">
+            <summary>
+            Control for finding and replacing text in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1FindAndReplaceTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1FindAndReplaceTool"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1FindAndReplaceTool.RichTextBoxProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1FindAndReplaceTool.RichTextBox"/> dependency property. 
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1FindAndReplaceTool.RichTextBox">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/> this tool edits.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1InsertHyperlinkTool">
+            <summary>
+            Toolbar button that inserts hyperlinks in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1InsertHyperlinkTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1InsertHyperlinkTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1InsertImageTool">
+            <summary>
+            Toolbar button that inserts images in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1InsertImageTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1InsertImageTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1InsertSymbolTool">
+            <summary>
+            Toolbar dropdown that inserts character symbols in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1InsertSymbolTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1InsertSymbolTool"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1InsertSymbolTool.RichTextBoxProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1InsertSymbolTool.RichTextBox"/> dependency property. 
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1InsertSymbolTool.RichTextBox">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/> this tool edits.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1InsertTableTool">
+            <summary>
+            Toolbar dropdown for inserting tables in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1InsertTableTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1InsertTableTool"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1InsertTableTool.RichTextBoxProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1InsertTableTool.RichTextBox"/> dependency property. 
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1InsertTableTool.RichTextBox">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/> this tool edits.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1MarginTool">
+            <summary>
+            Control that modifies the margin of blocks in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1MarginTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1MarginTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1PaddingTool">
+            <summary>
+            Control that modifies padding of blocks in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1PaddingTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1PaddingTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1ParagraphColorTool">
+            <summary>
+            Control that modifies the background of paragraphs in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1ParagraphColorTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1ParagraphColorTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1PasteTool">
+            <summary>
+            Toolbar button that pastes text from the clipboard to a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1PasteTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1PasteTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1PasteLargeTool">
+            <summary>
+            Large version of <see cref="T:C1.Silverlight.RichTextBox.C1PasteTool"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1PasteLargeTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1PasteLargeTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1PrintViewTool">
+            <summary>
+            Toolbar button that toggles print view mode in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1PrintViewTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1PrintViewTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1RedoTool">
+            <summary>
+            Toolbar button that redoes actions in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1RedoTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1RedoTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1RemoveHyperlinkTool">
+            <summary>
+            Toolbar button that removes hyperlinks from a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1RemoveHyperlinkTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1RemoveHyperlinkTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1SpellCheckTool">
+            <summary>
+            Toolbar button that opens a spell checker dialog in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1SpellCheckTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1SpellCheckTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1RowHeightTool">
+            <summary>
+            Control for editing the height of table rows in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1RowHeightTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1RowHeightTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1TableWidthTool">
+            <summary>
+            Control that modifies the width of a table in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1TableWidthTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1TableWidthTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1TopAlignTool">
+            <summary>
+            Toolbar button that aligns the content of a table cell to the top in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1TopAlignTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1TopAlignTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1UnmergeCellTool">
+            <summary>
+            Toolbar button for unmerging table cells in <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1UnmergeCellTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1UnmergeCellTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1TextWrappingTool">
+            <summary>
+            Toolbar button that toggles text wrapping in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1TextWrappingTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1TextWrappingTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1JustifyTool">
+            <summary>
+            Toolbar button that justifies text in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1JustifyTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1JustifyTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1ChangeCaseTool">
+            <summary>
+            Toolbar dropdown that modifies the case of text in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1ChangeCaseTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1ChangeCaseTool"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1ChangeCaseTool.RichTextBoxProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1ChangeCaseTool.RichTextBox"/> dependency property. 
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1ChangeCaseTool.RichTextBox">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/> this tool edits.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1CenterAlignTool">
+            <summary>
+            Toolbar button that aligns text to the center in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1CenterAlignTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1CenterAlignTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1ComboTool`1">
+            <summary>
+            Abstract base class for combo tools in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBoxToolbar"/>.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1ComboTool`1.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1ComboTool`1"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1ComboTool`1.RichTextBoxProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1ComboTool`1.RichTextBox"/> dependency property. 
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1ComboTool`1.RichTextBox">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/> this tool edits.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1DecreaseFontSizeTool">
+            <summary>
+            Toolbar button that decreases the font size in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1DecreaseFontSizeTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1DecreaseFontSizeTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1FontColorTool">
+            <summary>
+            Control that modifies the foreground color in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1FontColorTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1FontColorTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1FontFamilyTool">
+            <summary>
+            Control that modifies the font family in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1FontFamilyTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1FontFamilyTool"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1FontFamilyTool.DefaultFont">
+            <summary>
+            Gets or sets the default font.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1FontSizeTool">
+            <summary>
+            Control that modifies the font size in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1FontSizeTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1FontSizeTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1IncreaseFontSizeTool">
+            <summary>
+            Toolbar button that increases the font size in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1IncreaseFontSizeTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1IncreaseFontSizeTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1ItalicTool">
+            <summary>
+            Toolbar button that makes text italic in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1ItalicTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1ItalicTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1LeftAlignTool">
+            <summary>
+            Toolbar button that aligns text to the left in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1LeftAlignTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1LeftAlignTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1NumberingTool">
+            <summary>
+            Toolbar button that creates numbered lists in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1NumberingTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1NumberingTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1RichTextTool">
+            <summary>
+            Helper class for tools in <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBoxToolbar"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1RightAlignTool">
+            <summary>
+            Toolbar button that aligns text to the right in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1RightAlignTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1RightAlignTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1SubscriptTool">
+            <summary>
+            Toolbar button that vertically aligns text as subscript in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1SubscriptTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1SubscriptTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1SuperscriptTool">
+            <summary>
+            Toolbar button that vertically aligns text as superscript in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1SuperscriptTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1SuperscriptTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1TextHighlightTool">
+            <summary>
+            Control that highlights text in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1TextHighlightTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1TextHighlightTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1UnderlineTool">
+            <summary>
+            Toolbar button that underlines text in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1UnderlineTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1UnderlineTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1UndoTool">
+            <summary>
+            Toolbar button that undoes actions in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1UndoTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1UndoTool"/>.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1ZoomComboTool">
+            <summary>
+            Control that modifies the zoom of a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1ZoomComboTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1ZoomComboTool"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1ZoomComboTool.RichTextBoxProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1ZoomComboTool.RichTextBox"/> dependency property. 
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1ZoomComboTool.RichTextBox">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/> this tool edits.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.RichTextBox.C1ZoomSliderTool">
+            <summary>
+            Slider that modifies the zoom in a <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.RichTextBox.C1ZoomSliderTool.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.RichTextBox.C1ZoomSliderTool"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.RichTextBox.C1ZoomSliderTool.RichTextBoxProperty">
+            <summary>
+            Identifies the <see cref="P:C1.Silverlight.RichTextBox.C1ZoomSliderTool.RichTextBox"/> dependency property. 
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.RichTextBox.C1ZoomSliderTool.RichTextBox">
+            <summary>
+            Gets or sets the <see cref="T:C1.Silverlight.RichTextBox.C1RichTextBox"/> this tool edits.
+            </summary>
+        </member>
+    </members>
+</doc>

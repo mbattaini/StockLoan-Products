@@ -1,0 +1,7 @@
+C:\_dev\Locates\LocatesServices\bin\StockLoan.LocatesWebServices.dll
+C:\_dev\Locates\LocatesServices\bin\StockLoan.LocatesWebServices.pdb
+C:\_dev\Locates\LocatesServices\bin\StockLoan.Common.dll
+C:\_dev\Locates\LocatesServices\bin\StockLoan.Common.pdb
+C:\_dev\Locates\LocatesServices\obj\Debug\StockLoan.LocatesWebServices.dll
+C:\_dev\Locates\LocatesServices\obj\Debug\StockLoan.LocatesWebServices.pdb
+C:\_dev\Locates\LocatesServices\obj\Debug\StockLoan.LocateWebServices.csprojResolveAssemblyReference.cache

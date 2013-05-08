@@ -1,0 +1,7 @@
+C:\_dev\DashBoardWebService2.0\DashBusiness\bin\Deployment\DashBusiness.dll
+C:\_dev\DashBoardWebService2.0\DashBusiness\bin\Deployment\DashBusiness.pdb
+C:\_dev\DashBoardWebService2.0\DashBusiness\bin\Deployment\StockLoan.Common.dll
+C:\_dev\DashBoardWebService2.0\DashBusiness\bin\Deployment\StockLoan.Common.pdb
+C:\_dev\DashBoardWebService2.0\DashBusiness\obj\Deployment\DashBusiness.csprojResolveAssemblyReference.cache
+C:\_dev\DashBoardWebService2.0\DashBusiness\obj\Deployment\DashBusiness.dll
+C:\_dev\DashBoardWebService2.0\DashBusiness\obj\Deployment\DashBusiness.pdb

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a2c505f8-7aaa-424a-90b4-f99ccdfebd8c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.180.4.41:81/PositionService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PositionService4.xsd" MetadataType="Schema" ID="25fcb358-aee9-43e7-a02a-1a66d7d64ec8" SourceId="1" SourceUrl="http://d1watlappprd1.apexclearing.local:81/PositionService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PositionService2.disco" MetadataType="Disco" ID="a44ca0ac-b3f2-4e0d-9927-3c9a1730e811" SourceId="1" SourceUrl="http://d1watlappprd1.apexclearing.local:81/PositionService.svc?disco" />
+    <MetadataFile FileName="PositionService5.xsd" MetadataType="Schema" ID="9f9f35e3-ace3-46bf-8ad7-4b9353fa6d19" SourceId="1" SourceUrl="http://d1watlappprd1.apexclearing.local:81/PositionService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PositionService2.wsdl" MetadataType="Wsdl" ID="02bed272-58d2-4dba-88a6-0d36959cb2f9" SourceId="1" SourceUrl="http://d1watlappprd1.apexclearing.local:81/PositionService.svc?wsdl" />
+    <MetadataFile FileName="PositionService6.xsd" MetadataType="Schema" ID="9dcf1622-f23b-4706-b312-ffde8bfc9846" SourceId="1" SourceUrl="http://d1watlappprd1.apexclearing.local:81/PositionService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

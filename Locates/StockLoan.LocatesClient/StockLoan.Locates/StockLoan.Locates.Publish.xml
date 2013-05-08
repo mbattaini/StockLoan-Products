@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="\\dalatlprd01\C$\LocatesClient" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="Web.config" publishTime="04/20/2012 12:03:39" />
+    <file relUrl="bin/StockLoan.Locates.dll" publishTime="04/20/2012 12:03:32" />
+    <file relUrl="Site.Master" publishTime="04/20/2012 06:50:13" />
+    <file relUrl="Account/Web.config" publishTime="04/20/2012 06:50:13" />
+    <file relUrl="Account/Register.aspx" publishTime="04/20/2012 06:50:13" />
+    <file relUrl="StockLoanLocates.aspx" publishTime="04/20/2012 06:50:33" />
+    <file relUrl="Account/ChangePasswordSuccess.aspx" publishTime="04/20/2012 06:50:13" />
+    <file relUrl="Account/Login.aspx" publishTime="04/20/2012 06:50:13" />
+    <file relUrl="Styles/Site.css" publishTime="04/20/2012 06:50:13" />
+    <file relUrl="Scripts/jquery-1.4.1.js" publishTime="04/20/2012 06:50:13" />
+    <file relUrl="Account/ChangePassword.aspx" publishTime="04/20/2012 06:50:13" />
+    <file relUrl="StockLoan.LocatesClientTestPage.html" publishTime="04/20/2012 06:50:33" />
+    <file relUrl="bin/StockLoan.Locates.pdb" publishTime="04/20/2012 12:03:32" />
+    <file relUrl="Global.asax" publishTime="04/20/2012 06:50:13" />
+    <file relUrl="Scripts/jquery-1.4.1-vsdoc.js" publishTime="04/20/2012 06:50:13" />
+    <file relUrl="ClientBin/StockLoan.LocatesClient.xap" publishTime="04/20/2012 11:45:57" />
+    <file relUrl="Silverlight.js" publishTime="04/20/2012 06:50:33" />
+    <file relUrl="Default.aspx" publishTime="04/20/2012 06:50:13" />
+    <file relUrl="Scripts/jquery-1.4.1.min.js" publishTime="04/20/2012 06:50:13" />
+    <file relUrl="About.aspx" publishTime="04/20/2012 06:50:13" />
+  </publishProfile>
+</publishData>

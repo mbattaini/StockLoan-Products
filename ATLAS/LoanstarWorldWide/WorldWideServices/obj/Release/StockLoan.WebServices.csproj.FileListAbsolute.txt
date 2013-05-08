@@ -1,0 +1,15 @@
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideServices\bin\StockLoan.WebServices.dll
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideServices\bin\StockLoan.WebServices.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideServices\bin\StockLoan.Business.dll
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideServices\bin\StockLoan.Common.dll
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideServices\bin\StockLoan.DataAccess.dll
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideServices\bin\Encrypt.dll
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideServices\bin\StockLoan.Transport.dll
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideServices\bin\StockLoan.Business.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideServices\bin\StockLoan.DataAccess.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideServices\bin\StockLoan.Common.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideServices\bin\Encrypt.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideServices\bin\StockLoan.Transport.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideServices\obj\Release\ResolveAssemblyReference.cache
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideServices\obj\Release\StockLoan.WebServices.dll
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideServices\obj\Release\StockLoan.WebServices.pdb

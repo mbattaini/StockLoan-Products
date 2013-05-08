@@ -1,0 +1,12 @@
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\StockLoan.Common.dll
+bin\Debug\StockLoan.Common.pdb
+bin\Debug\StockLoan.Medalist.dll
+bin\Debug\StockLoan.Medalist.pdb
+obj\Debug\StockLoan.Medalist.dll
+obj\Debug\StockLoan.Medalist.pdb
+bin\Release\StockLoan.Medalist.dll
+bin\Release\StockLoan.Common.dll
+bin\Release\StockLoan.Common.pdb
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\StockLoan.Medalist.dll

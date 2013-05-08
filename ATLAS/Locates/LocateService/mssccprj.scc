@@ -1,0 +1,9 @@
+SCC = This is a Source Code Control file
+
+[LocateService.csproj]
+SCC_Aux_Path = "\\rspen001\SourceSafe\PensonSource"
+SCC_Project_Name = "$/SourceCode/C#/0 Development/Atlas/Locates/LocateService", CBFFAAAA
+
+[LocateService.sln]
+SCC_Aux_Path = "\\rspen001\SourceSafe\PensonSource"
+SCC_Project_Name = "$/SourceCode/C#/0 Development/Atlas/Locates/LocateService", CBFFAAAA

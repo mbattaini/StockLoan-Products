@@ -1,0 +1,16 @@
+C:\ATLAS\Loanstar\STATICDATASERVERTEST\bin\Release\StockLoan.StaticDataServerTest.exe.config
+C:\ATLAS\Loanstar\STATICDATASERVERTEST\bin\Release\StockLoan.StaticDataServerTest.exe
+C:\ATLAS\Loanstar\STATICDATASERVERTEST\bin\Release\StockLoan.StaticDataServer.dll
+C:\ATLAS\Loanstar\STATICDATASERVERTEST\bin\Release\StockLoan.Common.dll
+C:\ATLAS\Loanstar\STATICDATASERVERTEST\bin\Release\StockLoan.Common.pdb
+C:\ATLAS\Loanstar\STATICDATASERVERTEST\obj\Release\ResolveAssemblyReference.cache
+C:\ATLAS\Loanstar\STATICDATASERVERTEST\obj\Release\StockLoan.StaticDataServerTest.exe
+\\penson.com\shares\users\MBattaini\_Dev\ATLAS\Loanstar\STATICDATASERVERTEST\bin\Release\StockLoan.StaticDataServerTest.exe.config
+\\penson.com\shares\users\MBattaini\_Dev\ATLAS\Loanstar\STATICDATASERVERTEST\obj\Release\StockLoan.StaticDataServerTest.exe
+\\penson.com\shares\users\MBattaini\_Dev\ATLAS\Loanstar\STATICDATASERVERTEST\bin\Release\StockLoan.StaticDataServerTest.exe
+\\penson.com\shares\users\MBattaini\_Dev\ATLAS\Loanstar\STATICDATASERVERTEST\bin\Release\StockLoan.StaticDataServer.dll
+\\penson.com\shares\users\MBattaini\_Dev\ATLAS\Loanstar\STATICDATASERVERTEST\bin\Release\StockLoan.Common.dll
+\\penson.com\shares\users\MBattaini\_Dev\ATLAS\Loanstar\STATICDATASERVERTEST\bin\Release\StockLoan.Common.pdb
+\\penson.com\shares\users\MBattaini\_Dev\ATLAS\Loanstar\STATICDATASERVERTEST\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\STATICDATASERVERTEST\bin\Release\StockLoan.StaticDataServerTest.exe.config
+C:\Documents and Settings\mbattaini\Desktop\_Dev\ATLAS\Loanstar\STATICDATASERVERTEST\obj\Release\StockLoan.StaticDataServerTest.exe

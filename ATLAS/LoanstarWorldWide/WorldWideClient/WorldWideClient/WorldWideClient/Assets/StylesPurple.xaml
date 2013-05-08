@@ -1,0 +1,428 @@
+﻿<ResourceDictionary 
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
+	xmlns:ctl="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data.Input">
+
+    <Color x:Key="ColorBackground">#4D5F00FF</Color>
+    <Color x:Key="ColorBackgroundAlternate">#4D0027FF</Color>
+    <Color x:Key="ColorBorderBrush">#4D0027FF</Color>
+    <Color x:Key="ColorHorizontalGridLinesBrush">#4D0027FF</Color>
+    <Color x:Key="ColorMouseOverBrush">#FFD3D8E2</Color>
+    <Color x:Key="ColorPressedBrush">#FFD3D8E2</Color>
+    <Color x:Key="ColorRowBackground">#3CFFFFFF</Color>
+    <Color x:Key="ColorAlternatingRowBackground">#28FFFFFF</Color>
+    <Color x:Key="ColorSelectedBackground">#FF422561</Color>
+    <Color x:Key="ColorVerticalGridLinesBrush">#4D0027FF</Color>
+    <Color x:Key="ColorForeground">#FFFFFFFF</Color>
+    <Color x:Key="ColorRowForeground">#FFFFFFFF</Color>
+    <Color x:Key="ColorAlternatingRowForeground">#FFFFFFFF</Color>
+    <Color x:Key="ColorStroke">#FF6A88A5</Color>
+    <Color x:Key="ColorFill">#40254061</Color>
+    <Color x:Key="ColorCaretBrush">#FFFFFFFF</Color>
+    <Color x:Key="ColorButtonBackground">#FF6A88A5</Color>
+    <Color x:Key="ColorButtonForeground">#FFFFFFFF</Color>
+    <Color x:Key="ColorHeaderForeground">#FFFFFFFF</Color>
+    <Color x:Key="ColorHeaderBackground">#FF6A88A5</Color>
+
+    <Style x:Key="TransparantGrid" TargetType="c1:C1DataGrid">    
+		<Setter Property="Background">
+			<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorBackground}"/>
+			</Setter.Value>
+		</Setter>
+		
+        <Setter Property="BorderBrush">
+        	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorBorderBrush}"/>
+			</Setter.Value>   
+		</Setter>
+		
+        <Setter Property="HorizontalGridLinesBrush">
+        	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorHorizontalGridLinesBrush}"/>
+			</Setter.Value>   	      
+		</Setter>
+		
+        <Setter Property="MouseOverBrush">
+   	     	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorHorizontalGridLinesBrush}"/>
+			</Setter.Value>   	      
+		</Setter>  
+
+        <Setter Property="PressedBrush">
+   	     	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorPressedBrush}"/>
+			</Setter.Value>   	      
+		</Setter>  
+
+        <Setter Property="RowBackground">
+   	     	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorRowBackground}"/>
+			</Setter.Value>   	      
+		</Setter>  
+
+        <Setter Property="AlternatingRowBackground">
+   	     	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorAlternatingRowBackground}"/>
+			</Setter.Value>   	      
+		</Setter>  
+
+        <Setter Property="SelectedBackground">
+   	     	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorSelectedBackground}"/>
+			</Setter.Value>   	      
+		</Setter>  
+
+        <Setter Property="VerticalGridLinesBrush">
+   	     	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorVerticalGridLinesBrush}"/>
+			</Setter.Value>   	      
+		</Setter>  
+
+        <Setter Property="Foreground">
+   	     	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorForeground}"/>
+			</Setter.Value>   	      
+		</Setter>  
+
+        <Setter Property="RowForeground">
+   	     	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorRowForeground}"/>
+			</Setter.Value>   	      
+		</Setter>  
+
+        <Setter Property="AlternatingRowForeground">
+		   	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorAlternatingRowForeground}"/>
+			</Setter.Value>   	      
+		</Setter>  
+
+    </Style>
+	
+	<Style x:Key="TransparantChart" TargetType="c1:C1Chart">
+       	<Setter Property="Background">
+			<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorBackground}"/>
+			</Setter.Value>
+		</Setter>
+		
+          <Setter Property="BorderBrush">
+        	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorBorderBrush}"/>
+			</Setter.Value>   
+		</Setter>
+		                     
+        
+        <Setter Property="Foreground">
+   	     	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorForeground}"/>
+			</Setter.Value>   	      
+		</Setter>  
+			
+        <Setter Property="BorderThickness" Value="1,1,1,1" />
+    </Style>
+    
+	<Style x:Key="TransparantToolBarStrip" TargetType="c1:C1ToolbarStrip">
+        <Setter Property="Background">
+			<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorBackground}"/>
+			</Setter.Value>
+		</Setter>
+          <Setter Property="BorderBrush">
+        	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorBorderBrush}"/>
+			</Setter.Value>   
+		</Setter>                   
+               <Setter Property="Foreground">
+   	     	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorForeground}"/>
+			</Setter.Value>   	      
+		</Setter>  		
+        <Setter Property="BorderThickness" Value="1,1,1,1"/>        
+    </Style>
+    
+	<Style x:Key="TransparantToolBarStripButton" TargetType="c1:C1ToolbarButton">
+      <Setter Property="Background">
+			<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorBackground}"/>
+			</Setter.Value>
+		</Setter>
+          <Setter Property="BorderBrush">
+        	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorBorderBrush}"/>
+			</Setter.Value>   
+		</Setter>                   
+               <Setter Property="Foreground">
+   	     	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorForeground}"/>
+			</Setter.Value>   	      
+		</Setter>  		
+        <Setter Property="BorderThickness" Value="1,1,1,1"/>        
+    </Style>
+    
+	
+    <Style x:Key="TransparantRectangle" TargetType="Rectangle">       
+            <Setter Property="Stroke">
+   	     	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorStroke}"/>
+			</Setter.Value> 
+			</Setter>
+            
+			<Setter Property="Fill">
+   	     	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorFill}"/>
+			</Setter.Value> 
+			</Setter>
+			
+        <Setter Property="StrokeThickness" Value="1"/>
+    </Style>
+	
+	<Style x:Key="TransparantTextBox" TargetType="c1:C1TextBoxBase">       
+        <Setter Property="Background">
+			<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorBackground}"/>
+			</Setter.Value>
+		</Setter>
+          <Setter Property="BorderBrush">
+        	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorBorderBrush}"/>
+			</Setter.Value>   
+		</Setter>                   
+               <Setter Property="Foreground">
+   	     	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorForeground}"/>
+			</Setter.Value>   	      
+		</Setter> 		
+        <Setter Property="BorderThickness" Value="1,1,1,1"/>      
+    </Style>
+	
+	<Style x:Key="TransparantLightBlueTextBox" TargetType="c1:C1TextBoxBase">       
+        <Setter Property="Background">
+			<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorBackground}"/>
+			</Setter.Value>
+		</Setter>
+          <Setter Property="BorderBrush">
+        	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorBorderBrush}"/>
+			</Setter.Value>   
+		</Setter>                   
+               <Setter Property="Foreground">
+   	     	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorForeground}"/>
+			</Setter.Value>   	      
+		</Setter> 			
+        <Setter Property="BorderThickness" Value="1,1,1,1"/>      
+    </Style>
+	
+	<Style x:Key="TransparantPurpleTextBox" TargetType="c1:C1TextBoxBase">       
+       <Setter Property="Background">
+			<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorBackground}"/>
+			</Setter.Value>
+		</Setter>
+          <Setter Property="BorderBrush">
+        	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorBorderBrush}"/>
+			</Setter.Value>   
+		</Setter>                   
+               <Setter Property="Foreground">
+   	     	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorForeground}"/>
+			</Setter.Value>   	      
+		</Setter> 					
+		<Setter Property="CaretBrush">
+   	     	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorCaretBrush}"/>
+			</Setter.Value>   	      
+		</Setter> 		
+        <Setter Property="BorderThickness" Value="1,1,1,1"/>      
+    </Style>
+	
+	<Style x:Key="TransparantLabel" TargetType="ctl:Label">
+		  <Setter Property="Background">
+				<Setter.Value>
+					<SolidColorBrush Color="{StaticResource ColorBackground}"/>
+				</Setter.Value>
+			</Setter>                
+           <Setter Property="Foreground">
+   	     	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorForeground}"/>
+			</Setter.Value>   	      
+		</Setter> 			
+	</Style>
+	
+	<Style x:Key="TransparantButton" TargetType="Button">
+	     <Setter Property="Background">
+			<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorBackground}"/>
+			</Setter.Value>
+		</Setter>
+          <Setter Property="BorderBrush">
+        	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorBorderBrush}"/>
+			</Setter.Value>   
+		</Setter>                   
+               <Setter Property="Foreground">
+   	     	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorForeground}"/>
+			</Setter.Value>   	      
+		</Setter> 		       
+	</Style>
+	
+	<Style x:Key="TransparantBlueButton" TargetType="Button">
+	     <Setter Property="Background">
+			<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorBackground}"/>
+			</Setter.Value>
+		</Setter>
+          <Setter Property="BorderBrush">
+        	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorBorderBrush}"/>
+			</Setter.Value>   
+		</Setter>                   
+               <Setter Property="Foreground">
+   	     	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorForeground}"/>
+			</Setter.Value>   	      
+		</Setter> 		
+        <Setter Property="BorderThickness" Value="1,1,1,1"/>   
+	</Style>
+	
+	
+	<Style x:Key="TransparantPasswordBox" TargetType="PasswordBox">
+	    <Setter Property="Background">
+			<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorBackground}"/>
+			</Setter.Value>
+		</Setter>
+          <Setter Property="BorderBrush">
+        	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorBorderBrush}"/>
+			</Setter.Value>   
+		</Setter>                   
+               <Setter Property="Foreground">
+   	     	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorForeground}"/>
+			</Setter.Value>   	      
+		</Setter> 		 
+	</Style>
+	
+	<Style x:Key="TransparantWindow" TargetType="c1:C1Window">
+		 <Setter Property="Background">
+			<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorBackground}"/>
+			</Setter.Value>
+		</Setter>     
+           <Setter Property="BorderBrush">
+        	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorBorderBrush}"/>
+			</Setter.Value>   
+		</Setter>    
+        <Setter Property="ButtonBackground">
+        	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorButtonBackground}"/>
+			</Setter.Value>        
+		</Setter>
+        <Setter Property="ButtonForeground">
+        	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorButtonForeground}"/>
+			</Setter.Value>        
+		</Setter>
+        <Setter Property="MouseOverBrush">
+        	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorMouseOverBrush}"/>
+			</Setter.Value>        
+		</Setter>
+        <Setter Property="PressedBrush">
+        	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorPressedBrush}"/>
+			</Setter.Value>        
+		</Setter>
+		<Setter Property="HeaderForeground">
+			<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorHeaderForeground}"/>
+			</Setter.Value>  
+		</Setter>
+        <Setter Property="HeaderBackground">
+        	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorHeaderBackground}"/>
+			</Setter.Value>        
+		</Setter>      
+             
+			 <Setter Property="Foreground">
+   	     	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorForeground}"/>
+			</Setter.Value>   	      
+		</Setter> 	
+              
+	</Style>
+	
+	<Style x:Key="TransparantLayoutGrid" TargetType="Grid">
+		 <Setter Property="Background">
+			<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorBackground}"/>
+			</Setter.Value>
+		</Setter>      
+	</Style>
+	
+	<Style x:Key="TransparantUserControl" TargetType="UserControl">
+           <Setter Property="Background">
+			<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorBackground}"/>
+			</Setter.Value>
+		</Setter>
+          <Setter Property="BorderBrush">
+        	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorBorderBrush}"/>
+			</Setter.Value>   
+		</Setter>                   
+               <Setter Property="Foreground">
+   	     	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorForeground}"/>
+			</Setter.Value>   	      
+		</Setter> 			
+        <Setter Property="BorderThickness" Value="1,1,1,1"/>        
+    </Style>
+	
+	<Style x:Key="TransparantDockTabControl" TargetType="c1:C1DockTabControl">
+           <Setter Property="Background">
+			<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorBackground}"/>
+			</Setter.Value>
+		</Setter>
+          <Setter Property="BorderBrush">
+        	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorBorderBrush}"/>
+			</Setter.Value>   
+		</Setter>                   
+               <Setter Property="Foreground">
+   	     	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorForeground}"/>
+			</Setter.Value>   	      
+		</Setter> 			
+        <Setter Property="BorderThickness" Value="1,1,1,1"/>        
+    </Style>
+
+	<Style x:Key="TransparantTabControl" TargetType="c1:C1TabControl">
+          <Setter Property="Background">
+			<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorBackground}"/>
+			</Setter.Value>
+		</Setter>
+          <Setter Property="BorderBrush">
+        	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorBorderBrush}"/>
+			</Setter.Value>   
+		</Setter>                   
+               <Setter Property="Foreground">
+   	     	<Setter.Value>
+				<SolidColorBrush Color="{StaticResource ColorForeground}"/>
+			</Setter.Value>   	      
+		</Setter> 		
+        <Setter Property="BorderThickness" Value="1,1,1,1"/>        
+    </Style>
+		
+     
+</ResourceDictionary>

@@ -1,0 +1,12 @@
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\StockLoan.MedalistServerTest.exe.config
+bin\Debug\StockLoan.MedalistServerTest.exe
+bin\Debug\StockLoan.MedalistServerTest.pdb
+bin\Debug\StockLoan.MedalistServer.dll
+bin\Debug\StockLoan.Common.dll
+bin\Debug\StockLoan.Medalist.dll
+bin\Debug\StockLoan.MedalistServer.pdb
+bin\Debug\StockLoan.Common.pdb
+bin\Debug\StockLoan.Medalist.pdb
+obj\Debug\StockLoan.MedalistServerTest.exe
+obj\Debug\StockLoan.MedalistServerTest.pdb

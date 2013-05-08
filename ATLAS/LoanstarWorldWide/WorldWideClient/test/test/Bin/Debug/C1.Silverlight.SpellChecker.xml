@@ -1,0 +1,1347 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Silverlight.SpellChecker</name>
+    </assembly>
+    <members>
+        <member name="T:C1.Silverlight.SpellChecker.ISpellDialog">
+            <summary>
+            Interface that must be implemented by dialogs used with the <see cref="!:C1SpellChecker.CheckControl(TextBoxBase, bool, ISpellDialog)"/>
+            methods.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.ISpellDialog.Initialize(C1.Silverlight.SpellChecker.C1SpellChecker,C1.Silverlight.SpellChecker.ISpellCheckableEditor,C1.Silverlight.SpellChecker.CharRangeList)">
+            <summary>
+            Initializes the dialog with the <see cref="T:C1.Silverlight.SpellChecker.C1SpellChecker"/> being used to check the spelling
+            on a control, the <see cref="T:C1.Silverlight.SpellChecker.ISpellCheckableEditor"/> control that is being checked, and an
+            initial <see cref="T:C1.Silverlight.SpellChecker.CharRangeList"/> that contains the list of errors detected by the spell checker.
+            </summary>
+            <param name="spell"><see cref="T:C1.Silverlight.SpellChecker.C1SpellChecker"/> being used to check the spelling on a control.</param>
+            <param name="editor"><see cref="T:C1.Silverlight.SpellChecker.ISpellCheckableEditor"/> that contains the text being spell-checked.</param>
+            <param name="errors"><see cref="T:C1.Silverlight.SpellChecker.CharRangeList"/> that contains the initial list of errors detected by the spell-checker.</param>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.ISpellDialog.ErrorCount">
+            <summary>
+            Gets the number of errors initially detected by the <see cref="T:C1.Silverlight.SpellChecker.C1SpellChecker"/> that controls this dialog.
+            </summary>
+            <remarks>
+            This property contains the number of errors detected when the dialog is initially displayed. It does not change
+            when errors are removed from the error list when the user clicks the <b>IgnoreAll</b> or <b>Add</b> 
+            buttons.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.ISpellDialog.Editor">
+            <summary>
+            Gets the <see cref="T:C1.Silverlight.SpellChecker.ISpellCheckableEditor"/> object that is being spell-checked.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.C1SpellDialog.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.SpellChecker.C1SpellDialog"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.C1SpellDialog.Initialize(C1.Silverlight.SpellChecker.C1SpellChecker,C1.Silverlight.SpellChecker.ISpellCheckableEditor,C1.Silverlight.SpellChecker.CharRangeList)">
+            <summary>
+            Initializes the dialog to use the given parameters.
+            </summary>
+            <param name="spell"><see cref="T:C1.Silverlight.SpellChecker.C1SpellChecker"/> to use for spelling.</param>
+            <param name="editor"><see cref="T:C1.Silverlight.SpellChecker.ISpellCheckableEditor"/> that contains the text to spell-check.</param>
+            <param name="errors"><see cref="T:C1.Silverlight.SpellChecker.CharRangeList"/> that contains the initial error list.</param>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.C1SpellDialog.OnErrorDisplayed(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:C1.Silverlight.SpellChecker.C1SpellDialog.ErrorDisplayed"/> event.
+            </summary>
+            <param name="e"><see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.C1SpellDialog.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.C1SpellDialog.ErrorCount">
+            <summary>
+            Gets the total number of errors detected in the control.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.C1SpellDialog.Editor">
+            <summary>
+            Gets a reference to the <see cref="T:C1.Silverlight.SpellChecker.ISpellCheckableEditor"/> object being spell-checked.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.C1SpellDialog.Errors">
+            <summary>
+            Gets a <see cref="T:C1.Silverlight.SpellChecker.CharRangeList"/> object with all the errors detected by the 
+            <see cref="T:C1.Silverlight.SpellChecker.C1SpellChecker"/> component that owns the dialog.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.C1SpellDialog.ErrorIndex">
+            <summary>
+            Gets or sets the index of the current error into the <see cref="P:C1.Silverlight.SpellChecker.C1SpellDialog.Errors"/> list.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.C1SpellDialog.CurrentError">
+            <summary>
+            Gets the <see cref="T:C1.Silverlight.SpellChecker.CharRange"/> object that represents the error currently 
+            displayed in the dialog.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.SpellChecker.C1SpellDialog.ErrorDisplayed">
+            <summary>
+            Event that fires when the <see cref="T:C1.Silverlight.SpellChecker.C1SpellDialog"/> displays an error
+            to the user.
+            </summary>
+            <remarks>
+            You can use the <see cref="P:C1.Silverlight.SpellChecker.C1SpellDialog.ErrorIndex"/> and <see cref="P:C1.Silverlight.SpellChecker.C1SpellDialog.Errors"/> properties
+            to display information about the error in a status bar.
+            </remarks>
+        </member>
+        <member name="T:C1.Silverlight.SpellChecker.ISpellParser">
+            <summary>
+            Interface that must be implemented by custom spell-check parsers.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.ISpellParser.GetNextWord(System.String,System.Int32,C1.Silverlight.SpellChecker.IgnoreOptions,System.String)">
+            <summary>
+            Method that retrieves the next word to spell-check in a string.
+            </summary>
+            <param name="text">String that contains the text being spell-checked.</param>
+            <param name="start">Position being checked within the <paramref name="text"/> string.</param>
+            <param name="ignore"><see cref="T:C1.Silverlight.SpellChecker.IgnoreOptions"/> that specifies types of words that should be ignored.</param>
+            <param name="previousWord">Last word retrieved by the parser (used to detect duplicates).</param>
+            <returns>A <see cref="T:C1.Silverlight.SpellChecker.CharRange"/> object that represents the next word to be spell-checked, or 
+            null if all the text has been spell-checked.</returns>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.ISpellParser.FilterWord(System.String)">
+            <summary>
+            Method that filters any unwanted characters out of a string to be checked.
+            </summary>
+            <param name="word">Raw text to be checked.</param>
+            <returns>A modified word to be checked, null to skip checking this string, 
+            or the same word if no filtering is required.</returns>
+            <remarks>
+            <para>This method is useful in custom parsers that should ignore specific characters
+            or words.</para>
+            <para>For example, a parser that parses strings with accelerator characters should
+            filter out the ampersands before the word is checked.</para>
+            </remarks>
+        </member>
+        <member name="T:C1.Silverlight.SpellChecker.CharRange">
+            <summary>
+            Class that represents a character range within a string.
+            This is used by the <see cref="T:C1.Silverlight.SpellChecker.C1SpellChecker"/> control to represent the
+            spelling mistakes found in text.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.CharRange.#ctor(System.String,System.Int32,System.Boolean)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.SpellChecker.CharRange"/>.
+            </summary>
+            <param name="text">Text contained in the range.</param>
+            <param name="start">Starting index of the range within the text.</param>
+            <param name="duplicate">Whether the range is misspelled or just a duplicate.</param>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.CharRange.Equals(System.Object)">
+            <summary>
+            Determines whether this <see cref="T:C1.Silverlight.SpellChecker.CharRange"/> is equal to another.
+            </summary>
+            <param name="obj"><see cref="T:C1.Silverlight.SpellChecker.CharRange"/> to compare to this one.</param>
+            <returns>True if both objects contain the same word at the same position.</returns>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.CharRange.GetHashCode">
+            <summary>
+            Serves as a hash function for the <see cref="T:C1.Silverlight.SpellChecker.CharRange"/> type.
+            </summary>
+            <returns>A hash code for this <see cref="T:C1.Silverlight.SpellChecker.CharRange"/>.</returns>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.CharRange.ExpandOverWhitespace(System.String,C1.Silverlight.SpellChecker.CharRange)">
+            <summary>
+            Extends a <see cref="T:C1.Silverlight.SpellChecker.CharRange"/> over whitespace.
+            </summary>
+            <param name="text">String that contains the <see cref="T:C1.Silverlight.SpellChecker.CharRange"/>.</param>
+            <param name="error"><see cref="T:C1.Silverlight.SpellChecker.CharRange"/> that will be expanded.</param>
+            <returns>Expanded <see cref="T:C1.Silverlight.SpellChecker.CharRange"/>.</returns>
+            <remarks>
+            <para>The method returns a new <see cref="T:C1.Silverlight.SpellChecker.CharRange"/> object that includes the original <paramref name="error"/>
+            plus any whitespace that immediately follows it. If there is no whitespace after the original <paramref name="error"/>,
+            then the returned value is extended to include any whitespace that precedes the original <paramref name="error"/>.</para>
+            <para>This method is used to extend editor selections before deleting duplicate words.</para>
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.CharRange.IsWordCharacter(System.Char)">
+            <summary>
+            Determines whether a character is spell-checkable.
+            </summary>
+            <param name="c">Character to test.</param>
+            <returns>True if the character is spell-checkable, false otherwise.</returns>
+            <remarks>This method returns true for all letter and digit characters, underscores, and single quotes.</remarks>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.CharRange.GetNextWord(System.String,System.Int32,C1.Silverlight.SpellChecker.IgnoreOptions,System.String)">
+            <summary>
+            Gets the next word in a string, starting from a given position.
+            </summary>
+            <param name="text">String that contains the text.</param>
+            <param name="start">Starting position where to look for a word.</param>
+            <param name="ignore"><see cref="T:C1.Silverlight.SpellChecker.IgnoreOptions"/> that determines words to ignore.</param>
+            <param name="previousWord">Previous word (used to detect duplicates).</param>
+            <returns>A <see cref="T:C1.Silverlight.SpellChecker.CharRange"/> object that contains the next word in the string,
+            or null if there are no more words in the string.</returns>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.CharRange.GetWordAt(System.String,System.Int32,C1.Silverlight.SpellChecker.IgnoreOptions)">
+            <summary>
+            Gets the word at a given position in the string.
+            </summary>
+            <param name="text">String that contains the text.</param>
+            <param name="pos">Position where to look for a word.</param>
+            <param name="ignore"><see cref="T:C1.Silverlight.SpellChecker.IgnoreOptions"/> that determines words to ignore.</param>
+            <returns>A <see cref="T:C1.Silverlight.SpellChecker.CharRange"/> object that contains the word at the specified
+            position in the string, or null if there are no more words at the specified position.</returns>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.CharRange.Text">
+            <summary>
+            Gets the string represented by this <see cref="T:C1.Silverlight.SpellChecker.CharRange"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.CharRange.Start">
+            <summary>
+            Gets the starting index of the string represented by this <see cref="T:C1.Silverlight.SpellChecker.CharRange"/> within the text.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.CharRange.Length">
+            <summary>
+            Gets the length of the string represented by this <see cref="T:C1.Silverlight.SpellChecker.CharRange"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.CharRange.End">
+            <summary>
+            Gets the end index of the string represented by this <see cref="T:C1.Silverlight.SpellChecker.CharRange"/>.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.CharRange.Duplicate">
+            <summary>
+            Gets whether this <see cref="T:C1.Silverlight.SpellChecker.CharRange"/> contains the same string as the previous one.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.SpellChecker.CharRangeList">
+            <summary>
+            List of <see cref="T:C1.Silverlight.SpellChecker.CharRange"/> objects.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.CharRangeList.Add(System.String,System.Int32,System.Boolean)">
+            <summary>
+            Adds a new <see cref="T:C1.Silverlight.SpellChecker.CharRange"/> to the list.
+            </summary>
+            <param name="word">Word to add to the list.</param>
+            <param name="start">Starting index of the character range within the text.</param>
+            <param name="duplicate">Whether the range is a duplicate of the previous range in the text.</param>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.CharRangeList.GetRangeFromPosition(System.Int32)">
+            <summary>
+            Gets the <see cref="T:C1.Silverlight.SpellChecker.CharRange"/> that contains a specified position within the text.
+            </summary>
+            <param name="charPosition">Position within the text.</param>
+            <returns>A <see cref="T:C1.Silverlight.SpellChecker.CharRange"/> that contains the specified position,
+            or null if there is no error at the specified position.</returns>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.CharRangeList.GetRangeIndexFromPosition(System.Int32)">
+            <summary>
+            Gets the index of the <see cref="T:C1.Silverlight.SpellChecker.CharRange"/> that contains the specified position within the text.
+            </summary>
+            <param name="charPosition">Position within the text.</param>
+            <returns>Index of the <see cref="T:C1.Silverlight.SpellChecker.CharRange"/> in the list that contains the specified position,
+            or -1 if there is no error at the specified position.</returns>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.CharRangeList.Equals(System.Object)">
+            <summary>
+            Determines whether the given <see cref="T:C1.Silverlight.SpellChecker.CharRangeList"/> is equal to this one.
+            </summary>
+            <param name="obj"><see cref="T:C1.Silverlight.SpellChecker.CharRangeList"/> to compare to this one.</param>
+            <returns>True if both objects contain the same members.</returns>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.CharRangeList.GetHashCode">
+            <summary>
+            Serves as a hash function for the <see cref="T:C1.Silverlight.SpellChecker.CharRangeList"/> type.
+            </summary>
+            <returns>A hash code for this <see cref="T:C1.Silverlight.SpellChecker.CharRangeList"/>.</returns>
+        </member>
+        <member name="T:C1.Silverlight.SpellChecker.BadWordEventHandler">
+            <summary>
+            Represents the method that will handle the <see cref="E:C1.Silverlight.SpellChecker.C1SpellChecker.BadWordFound"/> event.
+            </summary>
+            <param name="sender"><see cref="T:C1.Silverlight.SpellChecker.C1SpellChecker"/> that fired the event.</param>
+            <param name="e"><see cref="T:C1.Silverlight.SpellChecker.BadWordEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="T:C1.Silverlight.SpellChecker.BadWordEventArgs">
+            <summary>
+            Provides data for the <see cref="E:C1.Silverlight.SpellChecker.C1SpellChecker.BadWordFound"/> event.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.BadWordEventArgs.#ctor(System.Windows.Controls.Control,System.Windows.Controls.Control,C1.Silverlight.SpellChecker.CharRange,C1.Silverlight.SpellChecker.CharRangeList)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.SpellChecker.BadWordEventArgs"/>.
+            </summary>
+            <param name="dialog">Dialog that raised the event, or null if the event was not raised by a dialog.</param>
+            <param name="control"><see cref="P:C1.Silverlight.SpellChecker.BadWordEventArgs.Control"/> being spell-checked.</param>
+            <param name="error"><see cref="T:C1.Silverlight.SpellChecker.CharRange"/> that contains the bad word and its position within the text.</param>
+            <param name="errors"><see cref="T:C1.Silverlight.SpellChecker.CharRangeList"/> that contains all the bad words found in the text.</param>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.BadWordEventArgs.Dialog">
+            <summary>
+            Gets a reference to the <see cref="T:C1.Silverlight.SpellChecker.ISpellDialog"/> that is being used to spell-check a control.
+            </summary>
+            <remarks>
+            If this parameter is null, then no spell dialog is active and the bad word was found in 
+            as-you-type mode.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.BadWordEventArgs.Control">
+            <summary>
+            Gets a reference to the control that is being spell-checked.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.BadWordEventArgs.BadWord">
+            <summary>
+            Gets a <see cref="T:C1.Silverlight.SpellChecker.CharRange"/> object that contains the bad word and its location within 
+            the text being spell-checked.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.BadWordEventArgs.BadWordList">
+            <summary>
+            Gets a <see cref="T:C1.Silverlight.SpellChecker.CharRangeList"/> that contains all errors detected in the text.
+            </summary>
+            <remarks>
+            The <see cref="P:C1.Silverlight.SpellChecker.BadWordEventArgs.BadWord"/> property contains the specific error being handled. You can
+            use the collection to determine the total number of errors and the index of this error
+            within the collection.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.BadWordEventArgs.Cancel">
+            <summary>
+            Gets or sets whether this bad word should be ignored by the <see cref="T:C1.Silverlight.SpellChecker.C1SpellChecker"/>.
+            </summary>
+            <remarks>
+            <para>If the <see cref="P:C1.Silverlight.SpellChecker.BadWordEventArgs.Dialog"/> property is not null, then the error is about to be displayed
+            in a spell dialog. Setting the <b>Cancel</b> parameter to true in this case causes the dialog
+            to skip to the next error.</para>
+            <para>If the <see cref="P:C1.Silverlight.SpellChecker.BadWordEventArgs.Dialog"/> property is null, then the error was detected in as-you-type
+            mode and the word is about to be underlined. Setting the <b>Cancel</b> parameter to true in
+            this case prevents the word from being underlined.</para>
+            </remarks>
+        </member>
+        <member name="T:C1.Silverlight.SpellChecker.AutoReplaceEventHandler">
+            <summary>
+            Represents the method that will handle the <see cref="E:C1.Silverlight.SpellChecker.C1SpellChecker.AutoReplace"/> event.
+            </summary>
+            <param name="sender"><see cref="T:C1.Silverlight.SpellChecker.C1SpellChecker"/> that fired the event.</param>
+            <param name="e"><see cref="T:C1.Silverlight.SpellChecker.AutoReplaceEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="T:C1.Silverlight.SpellChecker.AutoReplaceEventArgs">
+            <summary>
+            Provides data for the <see cref="E:C1.Silverlight.SpellChecker.C1SpellChecker.AutoReplace"/> event.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.AutoReplaceEventArgs.#ctor(System.Windows.Controls.Control,System.String,System.String,System.Int32)">
+            <summary>
+            Initializes a new instance of an <see cref="T:C1.Silverlight.SpellChecker.AutoReplaceEventArgs"/>.
+            </summary>
+            <param name="control"><see cref="P:C1.Silverlight.SpellChecker.AutoReplaceEventArgs.Control"/> where the text is being replaced.</param>
+            <param name="found">String that contains the text about to be replaced.</param>
+            <param name="replace">String that contains the replacement text.</param>
+            <param name="index">Position of the <paramref name="found"/> string in the control's text.</param>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.AutoReplaceEventArgs.Control">
+            <summary>
+            Gets a reference to the control where the replacement will take place.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.AutoReplaceEventArgs.Found">
+            <summary>
+            Gets the string that is about to be replaced.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.AutoReplaceEventArgs.Replace">
+            <summary>
+            Gets or sets the string that contains the replacement text.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.AutoReplaceEventArgs.Cancel">
+            <summary>
+            Gets or sets whether to skip this replacement.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.SpellChecker.ContextMenuEventHandler">
+            <summary>
+            Represents the method that will handle the <see cref="E:C1.Silverlight.SpellChecker.C1SpellChecker.ContextMenuCreated"/> event.
+            </summary>
+            <param name="sender"><see cref="T:C1.Silverlight.SpellChecker.C1SpellChecker"/> that fired the event.</param>
+            <param name="e"><see cref="T:C1.Silverlight.SpellChecker.ContextMenuEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="T:C1.Silverlight.SpellChecker.ContextMenuEventArgs">
+            <summary>
+            Provides data for the <see cref="E:C1.Silverlight.SpellChecker.C1SpellChecker.ContextMenuCreated"/> event.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.ContextMenuEventArgs.#ctor(C1.Silverlight.C1ContextMenu)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.SpellChecker.ContextMenuEventArgs"/>.
+            </summary>
+            <param name="menu"><see cref="T:C1.Silverlight.C1ContextMenu"/> that caused the event to fire.</param>
+        </member>
+        <member name="T:C1.Silverlight.SpellChecker.CheckControlCompletedEventHandler">
+            <summary>
+            Represents the method that will handle the <see cref="E:C1.Silverlight.SpellChecker.C1SpellChecker.CheckControlCompleted"/> event.
+            </summary>
+            <param name="sender"><see cref="T:C1.Silverlight.SpellChecker.C1SpellChecker"/> that fired the event.</param>
+            <param name="e"><see cref="T:C1.Silverlight.SpellChecker.CheckControlCompletedEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.CheckControlCompletedEventArgs.ErrorCount">
+            <summary>
+            Gets the number of spelling errors detected.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.CheckControlCompletedEventArgs.Editor">
+            <summary>
+            Gets the <see cref="T:C1.Silverlight.SpellChecker.ISpellCheckableEditor"/> object that was spell-checked.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.CheckControlCompletedEventArgs.Dialog">
+            <summary>
+            Gets the <see cref="T:C1.Silverlight.SpellChecker.ISpellDialog"/> used to perform the modal spell-check.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.SpellChecker.ISpellCheckableEditor">
+            <summary>
+            Interface used to provide modal (dialog-based) spell-checking using a <see cref="T:C1.Silverlight.SpellChecker.C1SpellChecker"/>.
+            </summary>
+            <remarks>
+            <para>The <see cref="T:C1.Silverlight.SpellChecker.C1SpellChecker"/> can provide spell-checking for classes derived from
+            the <see cref="!:TextBoxBase"/> class (<see cref="T:System.Windows.Controls.TextBox"/> and <see cref="T:System.Windows.Controls.RichTextBox"/>).</para>
+            <para>To use <see cref="T:C1.Silverlight.SpellChecker.C1SpellChecker"/> with other editors, you should create a class that 
+            implements the <see cref="T:C1.Silverlight.SpellChecker.ISpellCheckableEditor"/> interface on behalf of the editor.</para>
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.ISpellCheckableEditor.Select(System.Int32,System.Int32)">
+            <summary>
+            Selects a range of text in the editor.
+            </summary>
+            <param name="start">Index of the character where the selection starts.</param>
+            <param name="length">Length of the selection.</param>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.ISpellCheckableEditor.HasMoreText">
+            <summary>
+            Gets the next batch of text to spell check using the same modal dialog.
+            </summary>
+            <returns>True if there is more text to check, false otherwise.</returns>
+            <remarks>
+            <para>This method allows spell-checking complex controls such as lists and
+            grids. In these cases, a typical implementation will use this method to
+            increment an internal index, update its <see cref="P:C1.Silverlight.SpellChecker.ISpellCheckableEditor.Text"/> property, and
+            return true to continue spell-checking without closing the dialog.</para>
+            <para>Implementations for simple controls such as text boxes should simply
+            return false.</para>
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.ISpellCheckableEditor.BeginSpell">
+            <summary>
+            Called when the spell-checking process starts.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.ISpellCheckableEditor.EndSpell">
+            <summary>
+            Called when the spell-checking process ends.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.ISpellCheckableEditor.Text">
+            <summary>
+            Gets or sets the text in the editor.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.ISpellCheckableEditor.SelectedText">
+            <summary>
+            Gets or sets the text that is selected in the editor.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.ISpellCheckableEditor.SelectionStart">
+            <summary>
+            Gets or sets the starting index of text selected in the editor.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.ISpellCheckableEditor.SelectionLength">
+            <summary>
+            Gets or sets the length of text selected in the editor.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.ISpellCheckableEditor.Control">
+            <summary>
+            Gets a reference to the <see cref="P:C1.Silverlight.SpellChecker.ISpellCheckableEditor.Control"/> that implements the editor.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.SpellChecker.SpellCheckableWrapper">
+            <summary>
+            Generic reflection-based wrapper class for spell-checking.
+            This was created specifically to allow spell-checking C1RichTextBox
+            controls without adding a dependency to the C1SpellChecker.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.SpellChecker.Resources.C1_Silverlight_SpellChecker">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.Resources.C1_Silverlight_SpellChecker.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.Resources.C1_Silverlight_SpellChecker.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.Resources.C1_Silverlight_SpellChecker.add">
+            <summary>
+              Looks up a localized string similar to Add.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.Resources.C1_Silverlight_SpellChecker.cancel">
+            <summary>
+              Looks up a localized string similar to Cancel.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.Resources.C1_Silverlight_SpellChecker.change">
+            <summary>
+              Looks up a localized string similar to Change.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.Resources.C1_Silverlight_SpellChecker.changeAll">
+            <summary>
+              Looks up a localized string similar to Change All.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.Resources.C1_Silverlight_SpellChecker.changeTo">
+            <summary>
+              Looks up a localized string similar to Change To.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.Resources.C1_Silverlight_SpellChecker.delete">
+            <summary>
+              Looks up a localized string similar to Delete repeated word.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.Resources.C1_Silverlight_SpellChecker.ignore">
+            <summary>
+              Looks up a localized string similar to Ignore.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.Resources.C1_Silverlight_SpellChecker.ignoreAll">
+            <summary>
+              Looks up a localized string similar to Ignore All.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.Resources.C1_Silverlight_SpellChecker.noSuggestions">
+            <summary>
+              Looks up a localized string similar to (no suggestions).
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.Resources.C1_Silverlight_SpellChecker.notInDictionary">
+            <summary>
+              Looks up a localized string similar to Not in dictionary:.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.Resources.C1_Silverlight_SpellChecker.remove">
+            <summary>
+              Looks up a localized string similar to Remove.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.Resources.C1_Silverlight_SpellChecker.repeatedWord">
+            <summary>
+              Looks up a localized string similar to Repeated word:.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.Resources.C1_Silverlight_SpellChecker.spelling">
+            <summary>
+              Looks up a localized string similar to Spelling.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.Resources.C1_Silverlight_SpellChecker.suggest">
+            <summary>
+              Looks up a localized string similar to Suggest.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.Resources.C1_Silverlight_SpellChecker.suggestions">
+            <summary>
+              Looks up a localized string similar to Suggestions.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.Resources.C1_Silverlight_SpellChecker.title">
+            <summary>
+              Looks up a localized string similar to Spelling.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.C1SpellChecker.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.SpellChecker.C1SpellChecker"/>.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.C1SpellChecker.CheckText(System.String,System.Int32,System.Int32)">
+            <summary>
+            Checks a string containing text and returns a list of spelling errors.
+            </summary>
+            <param name="text">Text to be spell-checked.</param>
+            <param name="start">Index of the character where to start checking.</param>
+            <param name="length">Length of the string to check.</param>
+            <returns>List of <see cref="T:C1.Silverlight.SpellChecker.CharRange"/> objects that describe the spelling mistakes.</returns>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.C1SpellChecker.CheckText(System.String,System.Int32)">
+            <summary>
+            Checks a string containing text and returns a list of spelling errors.
+            </summary>
+            <param name="text">Text to be spell-checked.</param>
+            <param name="start">Index of the character where to start checking.</param>
+            <returns>List of <see cref="T:C1.Silverlight.SpellChecker.CharRange"/> objects that describe the spelling mistakes.</returns>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.C1SpellChecker.CheckText(System.String)">
+            <summary>
+            Checks a string containing text and returns a list of spelling errors.
+            </summary>
+            <param name="text">Text to be spell-checked.</param>
+            <returns>List of <see cref="T:C1.Silverlight.SpellChecker.CharRange"/> objects that describe the spelling mistakes.</returns>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.C1SpellChecker.CheckWord(System.String)">
+            <summary>
+            Checks a word to see if it's spelled correctly.
+            </summary>
+            <param name="word">Word to check.</param>
+            <returns>True if the word is in the dictionary, false otherwise.</returns>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.C1SpellChecker.GetSuggestions(System.String,System.Int32)">
+            <summary>
+            Gets an array containing suggestions for a misspelled word.
+            </summary>
+            <param name="word">Word to suggest alternatives for.</param>
+            <param name="maxCount">Maximum number of suggestions to provide.</param>
+            <returns>An array containing suggestions for the <paramref name="word"/> parameter.</returns>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.C1SpellChecker.GetSuggestions(System.String)">
+            <summary>
+            Gets an array containing suggestions for a misspelled word.
+            </summary>
+            <param name="word">Word to suggest alternatives for.</param>
+            <returns>An array containing suggestions for the <paramref name="word"/> parameter.</returns>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.C1SpellChecker.CheckControlAsync(System.Object,System.Boolean,C1.Silverlight.SpellChecker.ISpellDialog)">
+            <summary>
+            Shows a spell-checking dialog for an editor control.
+            </summary>
+            <param name="editor">Object that contains the text to be spell-checked.</param>
+            <param name="fromCursor">Whether to check only from the cursor position or the entire control contents.</param>
+            <param name="dlg">Dialog that implements the <see cref="T:C1.Silverlight.SpellChecker.ISpellDialog"/> interface used for displaying and correcting errors.</param>
+            <remarks>
+            In order to be spell-checkable, the <paramref name="editor"/> must be a 
+            <see cref="T:System.Windows.Controls.TextBox"/>, <b>C1RichTextBox</b>, or an object that implements the 
+            <see cref="T:C1.Silverlight.SpellChecker.ISpellCheckableEditor"/> interface. Other objects are invalid and will 
+            cause this method to throw an exception.
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.C1SpellChecker.CheckControlAsync(System.Object)">
+            <summary>
+            Shows a spell-checking dialog for an editor control.
+            </summary>
+            <param name="editor">Object that contains the text to be spell-checked.</param>
+            <remarks>
+            In order to be spell-checkable, the <paramref name="editor"/> must be a 
+            <see cref="T:System.Windows.Controls.TextBox"/>, <b>C1RichTextBox</b>, or an object that implements the 
+            <see cref="T:C1.Silverlight.SpellChecker.ISpellCheckableEditor"/> interface. Other objects are invalid and will 
+            cause this method to throw an exception.
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.C1SpellChecker.CheckControlAsync(System.Object,System.Boolean)">
+            <summary>
+            Shows a spell-checking dialog for an editor control.
+            </summary>
+            <param name="editor"> Object that contains the text to be spell-checked.</param>
+            <param name="fromCursor">Whether to check only from the cursor position or the entire control contents.</param>
+            <remarks>
+            In order to be spell-checkable, the <paramref name="editor"/> must be a 
+            <see cref="T:System.Windows.Controls.TextBox"/>, <b>C1RichTextBox</b>, or an object that implements the 
+            <see cref="T:C1.Silverlight.SpellChecker.ISpellCheckableEditor"/> interface. Other objects are invalid and will 
+            cause this method to throw an exception.
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.C1SpellChecker.OnBadWordFound(C1.Silverlight.SpellChecker.BadWordEventArgs)">
+            <summary>
+            Raises the <see cref="E:C1.Silverlight.SpellChecker.C1SpellChecker.BadWordFound"/> event.
+            </summary>
+            <param name="e"><see cref="T:C1.Silverlight.SpellChecker.BadWordEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.C1SpellChecker.OnAutoReplace(C1.Silverlight.SpellChecker.AutoReplaceEventArgs)">
+            <summary>
+            Raises the <see cref="E:C1.Silverlight.SpellChecker.C1SpellChecker.AutoReplace"/> event.
+            </summary> 
+            <param name="e"><see cref="T:C1.Silverlight.SpellChecker.AutoReplaceEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.C1SpellChecker.OnContextMenuCreated(C1.Silverlight.SpellChecker.ContextMenuEventArgs)">
+            <summary>
+            Raises the <see cref="!:OpeningContextMenu"/> event.
+            </summary>
+            <param name="e"><see cref="T:C1.Silverlight.SpellChecker.ContextMenuEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.C1SpellChecker.OnCheckControlCompleted(C1.Silverlight.SpellChecker.CheckControlCompletedEventArgs)">
+            <summary>
+            Raises the <see cref="E:C1.Silverlight.SpellChecker.C1SpellChecker.CheckControlCompleted"/> event.
+            </summary>
+            <param name="e"><see cref="T:C1.Silverlight.SpellChecker.CheckControlCompletedEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.C1SpellChecker.OnDictionaryChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:C1.Silverlight.SpellChecker.C1SpellChecker.DictionaryChanged"/> event.
+            </summary>
+            <param name="e"><see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.C1SpellChecker.Enabled">
+            <summary>
+            Gets a value that indicates whether the main spelling dictionary has been loaded.
+            </summary>
+            <remarks>
+            <para>If <see cref="T:C1.Silverlight.SpellChecker.C1SpellChecker"/> cannot find the spelling dictionary, it will not throw
+            any exceptions. The <b>Enabled</b> property will be set to false and the component will not 
+            be able to spell-check any text.</para>
+            <para>You can check the state of the <see cref="P:C1.Silverlight.SpellChecker.C1SpellChecker.MainDictionary"/> and the <see cref="P:C1.Silverlight.SpellChecker.C1SpellChecker.UserDictionary"/>
+            by inspecting their <see cref="P:C1.Silverlight.SpellChecker.SpellDictionaryBase.State"/> property.</para>
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.C1SpellChecker.Options">
+            <summary>
+            Gets a <see cref="T:C1.Silverlight.SpellChecker.SpellOptions"/> object that specifies spell-checking options.
+            </summary>
+            <remarks>
+            Options available include types of words to ignore, whether to display suggestions in a context menu,
+            the number of suggestions to display, and so on.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.C1SpellChecker.MainDictionary">
+            <summary>
+            Gets the main dictionary used for spell-checking.
+            </summary>
+            <remarks>
+            <para>This is the main dictionary. It is stored in a compressed format, and is read-only.</para>
+            <para>You can edit the spell dictionaries or create your own using the
+            <b>C1DictionaryEditor</b> utility that ships with <see cref="T:C1.Silverlight.SpellChecker.C1SpellChecker"/>.
+            This option can be useful for domain-specific applications that require the
+            use of technical jargon (for example, medical, legal, and so on).</para>
+            <para>Users cannot add words to this dictionary, only to the <see cref="P:C1.Silverlight.SpellChecker.C1SpellChecker.UserDictionary"/>.</para>
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.C1SpellChecker.UserDictionary">
+            <summary>
+            Gets the user dictionary used for spell-checking.
+            </summary>
+            <remarks>
+            This is the user dictionary. The user may add words to this dictionary using the
+            spell-checking dialog, and it is automatically persisted to the specified file.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.C1SpellChecker.CustomDictionary">
+            <summary>
+            Gets or sets a custom spell-checking dictionary.
+            </summary>
+            <remarks>
+            This property allows you to specify additional custom dictionaries to be used 
+            in addition to the standard <see cref="P:C1.Silverlight.SpellChecker.C1SpellChecker.MainDictionary"/> and <see cref="P:C1.Silverlight.SpellChecker.C1SpellChecker.UserDictionary"/>
+            dictionaries.
+            </remarks>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:C1.Silverlight.SpellChecker.C1SpellChecker.CustomParser" -->
+        <member name="P:C1.Silverlight.SpellChecker.C1SpellChecker.IgnoreList">
+            <summary>
+            Gets the list of words to ignore during spell-checking.
+            </summary>
+            <remarks>
+            <para>The list is used by the built-in spell dialog and by the as-you-type mechanism.</para>
+            <para>The user may add words to this list using the "Ignore All" button in the spell dialog 
+            or the "Ignore All" option in the as-you-type context menu.</para>
+            <para>Strings in the list are case-sensitive.</para>
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.C1SpellChecker.AutoReplaceList">
+            <summary>
+            Gets a list of words and replacements to use while spell-checking.
+            </summary>
+            <remarks>
+            <para>This list is used by the built-in spell dialog and by the as-you-type mechanism.</para>
+            <para>The built-in spell dialog checks the list when it finds a misspelled word. If a match
+            is found, the misspelled word is replaced with the corresponding list entry.</para>
+            <para>The as-you-type mechanism looks for matches whenever the user types a character that
+            is not a letter or a digit. If a match is found, the text is replaced with the corresponding
+            list entry.</para>
+            <para>Note the difference in operation between the two modes. In as-you-type spell-checking,
+            any matches will be replaced, whether the key is spelled correctly or not. In dialog mode,
+            keys that are spelled correctly will not be flagged as errors and therefore will not be 
+            replaced. For example, if the <b>AutoReplaceList</b> contains an entry with the strings
+            ("attn.", "attention of"), then typing "attn. " into the editor will trigger a replacement 
+            and the editor will contain "attention of ". However, because "attn." is not a spelling 
+            error, the spell dialog will not replace instances of the string "attn." with "attention of".</para>
+            <para>The <see cref="T:C1.Silverlight.SpellChecker.C1SpellChecker"/> fires the <see cref="E:C1.Silverlight.SpellChecker.C1SpellChecker.AutoReplace"/> event before
+            making each automatic replacement. The event handler may cancel the replacement.</para>
+            <para>Strings in the list are case-sensitive.</para>
+            </remarks>
+            <example>
+            The example below causes the <see cref="T:C1.Silverlight.SpellChecker.C1SpellChecker"/> to monitor spelling on a 
+            <see cref="T:System.Windows.Controls.TextBox"/> control. If the user types the string "teh", it is automatically 
+            replaced with "the". If the user types "cant", it is automatically replaced with "can't".
+            <code>
+            // build AutoReplace list
+            c1SpellChecker1.AutoReplaceList.Clear();
+            c1SpellChecker1.AutoReplaceList.Add("teh", "the");
+            c1SpellChecker1.AutoReplaceList.Add("cant", "can't");
+            
+            // activate as-you-type spell-checking on textBox1
+            c1SpellChecker1.SetSpellChecking(textBox1, true);
+            </code>
+            </example>
+        </member>
+        <member name="E:C1.Silverlight.SpellChecker.C1SpellChecker.BadWordFound">
+            <summary>
+            Event that fires when a spelling error is found by the <see cref="T:C1.Silverlight.SpellChecker.C1SpellChecker"/>.
+            </summary>
+            <remarks>
+            <para>This event fires when the component detects a spelling error in a control. 
+            This happens while a spell dialog is displayed (see the <see cref="!:CheckControlAsync(ISpellCheckableEditor)"/> 
+            method) or while the component is painting the red wavy underlines that mark misspelled words
+            in dynamic mode (see the <see cref="!:SetSpellChecking"/> method).</para>
+            <para>The event parameters have a <b>Dialog</b> property that allow the handler to determine
+            whether a spell dialog is being displayed or not.</para>
+            <para>The event parameters also have a <b>Cancel</b> property that can be used to ignore 
+            the error.</para>
+            <para>Note that this event fires every time a misspelled word is about to be underlined,
+            which occurs whenever the control is painted (not just when the bad word is initially 
+            typed into the control. Because of this, one single misspelled word can cause this event
+            to fire multiple times.</para>
+            </remarks>
+        </member>
+        <member name="E:C1.Silverlight.SpellChecker.C1SpellChecker.AutoReplace">
+            <summary>
+            Event that fires before the <see cref="T:C1.Silverlight.SpellChecker.C1SpellChecker"/> makes an automatic replacement
+            in the control's text.
+            </summary>
+            <remarks>
+            <see cref="T:C1.Silverlight.SpellChecker.C1SpellChecker"/> automatically replaces text as the user types based on the
+            list of words specified by the <see cref="P:C1.Silverlight.SpellChecker.C1SpellChecker.AutoReplaceList"/> property.
+            </remarks>
+        </member>
+        <member name="E:C1.Silverlight.SpellChecker.C1SpellChecker.ContextMenuCreated">
+            <summary>
+            Event that fires when a context menu is created containing the spelling suggestions and commands.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.SpellChecker.C1SpellChecker.CheckControlCompleted">
+            <summary>
+            Event that fires when the <see cref="M:C1.Silverlight.SpellChecker.C1SpellChecker.CheckControlAsync(System.Object,System.Boolean,C1.Silverlight.SpellChecker.ISpellDialog)"/> method finishes spell-checking a control.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.SpellChecker.C1SpellChecker.DictionaryChanged">
+            <summary>
+            Event that fires when any of the spell dictionaries changes in any way.
+            </summary>
+            <remarks>
+            This event notifies listeners that the spell dictionaries have changed and
+            the text should be re-checked. It fires for example when words are added to the 
+            user dictionary or when new dictionaries are loaded. 
+            </remarks>
+        </member>
+        <member name="T:C1.Silverlight.SpellChecker.SpellDictionary">
+            <summary>
+            Class that contains a list of words and methods looking them up and loading them from a compressed file.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.SpellChecker.SpellDictionaryBase">
+            <summary>
+            Base class for built-in and user dictionaries (see (<see cref="T:C1.Silverlight.SpellChecker.SpellDictionary"/> and
+            <see cref="T:C1.Silverlight.SpellChecker.UserDictionary"/>).
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.SpellChecker.ISpellDictionary">
+            <summary>
+            Interface implemented by all spell dictionaries.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.ISpellDictionary.Contains(System.String)">
+            <summary>
+            Checks whether the dictionary contains a given word.
+            </summary>
+            <param name="word">Word to look up.</param>
+            <returns>True if the dictionary contains the word, false otherwise.</returns>
+        </member>
+        <member name="F:C1.Silverlight.SpellChecker.SpellDictionaryBase.m_state">
+            <summary>
+            Gets or sets a <see cref="T:C1.Silverlight.SpellChecker.DictionaryState"/> value that indicates whether 
+            the dictionary has been loaded or why it hasn't.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.SpellChecker.SpellDictionaryBase.m_enabled">
+            <summary>
+            Gets or sets whether the dictionary is enabled.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.SpellChecker.SpellDictionaryBase.m_spell">
+            <summary>
+            <see cref="T:C1.Silverlight.SpellChecker.C1SpellChecker"/> that owns the dictionary.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.SpellDictionaryBase.EnsureLoaded">
+            <summary>
+            Ensures the dictionary is loaded, reading words from the file if necessary.
+            </summary>
+            <returns>True if the dictionary is enabled and has been loaded successfully.</returns>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.SpellDictionaryBase.LoadAsync(System.String)">
+            <summary>
+            Loads the dictionary from a Uri pointing to the compressed dictionary data.
+            </summary>
+            <param name="uri">Uri that points to the compressed dictionary data.</param>
+            <remarks>
+            When this method completes, it fires the <see cref="!:LoadAsyncCompleted"/> event.
+            </remarks>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:C1.Silverlight.SpellChecker.SpellDictionaryBase.LoadAsync(System.Uri)" -->
+        <member name="M:C1.Silverlight.SpellChecker.SpellDictionaryBase.OnLoadProgressChanged(System.Net.DownloadProgressChangedEventArgs)">
+            <summary>
+            Raises the <see cref="E:C1.Silverlight.SpellChecker.SpellDictionaryBase.LoadProgressChanged"/> event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.SpellDictionaryBase.OnLoadCompleted(System.Net.OpenReadCompletedEventArgs)">
+            <summary>
+            Raises the <see cref="E:C1.Silverlight.SpellChecker.SpellDictionaryBase.LoadCompleted"/> event.
+            </summary>
+            <param name="e"><see cref="T:System.Net.OpenReadCompletedEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.SpellDictionaryBase.Contains(System.String)">
+            <summary>
+            Checks whether the dictionary contains a given word.
+            </summary>
+            <param name="word">Word to look up.</param>
+            <returns>True if the dictionary contains the word, false otherwise.</returns>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.SpellDictionaryBase.Load(System.IO.Stream)">
+            <summary>
+            Loads the dictionary from a stream.
+            </summary>
+            <returns>True if the dictionary was loaded successfully, false otherwise.</returns>
+            <remarks>
+            If the dictionary fails to load, this method returns false. In this case,
+            you can check the value of the dictionary's <see cref="P:C1.Silverlight.SpellChecker.SpellDictionaryBase.State"/> property to determine 
+            why the file failed to load.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.SpellDictionaryBase.Enabled">
+            <summary>
+            Gets or sets whether the dictionary is enabled.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.SpellDictionaryBase.State">
+            <summary>
+            Gets a <see cref="T:C1.Silverlight.SpellChecker.DictionaryState"/> value that indicates whether the dictionary was loaded
+            successfully.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.SpellChecker.SpellDictionaryBase.LoadProgressChanged">
+            <summary>
+            Fires while the dictionary loads after a call to the <see cref="M:C1.Silverlight.SpellChecker.SpellDictionaryBase.LoadAsync(System.String)"/> method.
+            </summary>
+        </member>
+        <member name="E:C1.Silverlight.SpellChecker.SpellDictionaryBase.LoadCompleted">
+            <summary>
+            Fires when the dictionary finishes loading after a call to the <see cref="M:C1.Silverlight.SpellChecker.SpellDictionaryBase.LoadAsync(System.String)"/> method.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.SpellDictionary.Contains(System.String)">
+            <summary>
+            Checks whether the dictionary contains a given word.
+            </summary>
+            <param name="word">Word to look up.</param>
+            <returns>True if the dictionary contains the word, false otherwise.</returns>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.SpellDictionary.Load(System.IO.Stream)">
+            <summary>
+            Loads the dictionary from a stream containing the compressed dictionary data.
+            </summary>
+            <returns>True if the dictionary was loaded successfully, false otherwise.</returns>
+            <remarks>
+            If the dictionary fails to load, this method returns false. In this case,
+            you can check the value of the dictionary's <see cref="P:C1.Silverlight.SpellChecker.SpellDictionaryBase.State"/> property to determine 
+            why the file failed to load.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.SpellDictionary.Password">
+            <summary>
+            Gets or sets the password needed to load password-protected dictionaries.
+            </summary>
+            <remarks>
+            <para>If the dictionary file in use is password-protected, you must provide a
+            valid password in order to use it.</para>
+            <para>The dictionary files that ship with <see cref="T:C1.Silverlight.SpellChecker.C1SpellChecker"/> are not
+            password-protected. You can create password-protected dictionaries using the
+            dictionary utility shipped with <see cref="T:C1.Silverlight.SpellChecker.C1SpellChecker"/>.</para>
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.SpellDictionary.WordCount">
+            <summary>
+            Gets the number of words loaded in the dictionary.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.SpellChecker.DictionaryEntries">
+            <summary>
+            DictionaryEntries is a dictionary that associates:
+              key: hash codes for the lower-case version of the strings
+              value: bytes (0 for lower-case strings, 1 for upper-case strings)
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.DictionaryEntries.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of a <see cref="T:C1.Silverlight.SpellChecker.DictionaryEntries"/>.
+            </summary>
+            <param name="capacity">Initial capacity of the list.</param>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.DictionaryEntries.Add(System.String)">
+            <summary>
+            Adds a word to the list.
+            </summary>
+            <param name="word">Word to add to the list.</param>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.DictionaryEntries.Contains(System.String)">
+            <summary>
+            Checks whether the dictionary contains a given word.
+            </summary>
+            <param name="word">Word to look up.</param>
+            <returns>True if the dictionary contains the word, false otherwise.</returns>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.DictionaryEntries.Load(C1.Silverlight.SpellChecker.SpellDictionary,System.String,System.IO.Stream)">
+            <summary>
+            Loads the word list from a stream.
+            </summary>
+            <param name="dictionary">The <see cref="T:C1.Silverlight.SpellChecker.SpellDictionary"/> that contains the entries.</param>
+            <param name="stream"><see cref="T:System.IO.Stream"/> that contains the dictionary data.</param>
+            <param name="password">Password used to open encrypted dictionary streams.</param>
+            <returns>A <see cref="T:C1.Silverlight.SpellChecker.DictionaryState"/> value that determines whether the dictionary was loaded successfully.</returns>
+        </member>
+        <member name="T:C1.Silverlight.SpellChecker.DictionaryState">
+            <summary>
+            Describes the current state of a <see cref="T:C1.Silverlight.SpellChecker.SpellDictionary"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.SpellChecker.DictionaryState.Empty">
+            <summary>
+            The dictionary has not been loaded yet.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.SpellChecker.DictionaryState.Loaded">
+            <summary>
+            The dictionary has been successfully loaded.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.SpellChecker.DictionaryState.FileNotFound">
+            <summary>
+            The dictionary has not been loaded because the specified file could not be found.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.SpellChecker.DictionaryState.InvalidFileFormat">
+            <summary>
+            The dictionary has not been loaded because the specified file has invalid format.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.SpellChecker.DictionaryState.InvalidPassword">
+            <summary>
+            The dictionary is protected and the password used to load it was missing or incorrect.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.SpellChecker.IgnoreOptions">
+            <summary>
+            Specifies flags that determine whether words should be ignored during spell-checking.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.SpellChecker.IgnoreOptions.None">
+            <summary>
+            Do not ignore any words.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.SpellChecker.IgnoreOptions.Numbers">
+            <summary>
+            Ignore words that contain numbers (digits).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.SpellChecker.IgnoreOptions.UpperCase">
+            <summary>
+            Ignore words that are all uppercase.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.SpellChecker.IgnoreOptions.MixedCase">
+            <summary>
+            Ignore words that contain a mix of uppercase and lowercase characters, except
+            when there is a single uppercase at the start (for example, "Lowercase" would 
+            not be ignored, but "LowerCase" and "lowerCase" would).
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.SpellChecker.IgnoreOptions.Urls">
+            <summary>
+            Ignore words that look like URLs or file names.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.SpellChecker.IgnoreOptions.HtmlTags">
+            <summary>
+            Ignore text in HTML/XML tags.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.SpellChecker.IgnoreOptions.Default">
+            <summary>
+            Default setting: ignores numbers, mixed case, URLs, and HTML tags.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.SpellChecker.IgnoreOptions.All">
+            <summary>
+            Ignores numbers, mixed case, URLs, HTML tags, and uppercase.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.SpellChecker.SpellOptions">
+            <summary>
+            Class that contains spelling options including words to ignore, whether to show suggestions in
+            a spell context menu, etc.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.SpellOptions.ToString">
+            <summary>
+            Gets a string representation of this object.
+            </summary>
+            <returns>A string representation of this object.</returns>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.SpellOptions.ShowSuggestionsInContextMenu">
+            <summary>
+            Gets or sets whether the spell-checker should show spelling suggestions in the 
+            <see cref="!:System.Windows.Forms.ContextMenuStrip"/> associated with the 
+            editor being monitored by this <see cref="T:C1.Silverlight.SpellChecker.C1SpellChecker"/>.
+            </summary>
+            <remarks>
+            You can determine how many suggestions should be displayed in the context menu using the 
+            <see cref="P:C1.Silverlight.SpellChecker.SpellOptions.MaxSuggestionsInContextMenu"/> property.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.SpellOptions.MaxSuggestionsInContextMenu">
+            <summary>
+            Gets or sets the maximum number of spelling suggestions to show in the editor's context menu.
+            </summary>
+            <remarks>
+            The spelling context menu is displayed only if the <see cref="P:C1.Silverlight.SpellChecker.SpellOptions.ShowSuggestionsInContextMenu"/> property is set to true.
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.SpellOptions.Ignore">
+            <summary>
+            Gets or sets types of words to ignore during the spell-check.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.SpellOptions.ActiveSpellingEnabled">
+            <summary>
+            Gets or sets whether active (as-you-type) spell-checking is enabled.
+            </summary>
+            <remarks>
+            <para>This property allows you to temporarily turn off active spell-checking for all
+            connected editors.</para>
+            <para>To turn active spell-checking on or off for specific editors, use the
+            <see cref="!:C1SpellChecker.SetActiveSpellChecking(ISpellCheckableRichEditor, bool)"/> method.</para>
+            </remarks>
+        </member>
+        <member name="P:C1.Silverlight.SpellChecker.SpellOptions.UnderlineColor">
+            <summary>
+            Gets or sets the color of the wavy underlines drawn under misspelled words.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.SpellChecker.SuggestionBuilder">
+            <summary>
+            Special chars:
+                en:    á   èéê   ïñó ö    ü
+                es:    á    é  í  ñó    ú ü
+                fr:   àáâäçèéêëíîï óôö ù ûü
+                de: ß à âä  éê    ñ  ö    ü
+                pt :  àáâ çèéê í   óô õ ú ü
+                ALL: åàáâäçèéêëíîïñóôöõùúûü
+            
+            Start with alpha + '
+            if not enough, try ALL
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.SpellChecker.UserDictionary">
+            <summary>
+            Class that contains a list of additional words and methods for managing the list.
+            </summary>
+            <remarks>
+            This class is used to store user dictionaries. It provides methods for adding and 
+            removing words, as well as saving the dictionary.
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.UserDictionary.AddWord(System.String)">
+            <summary>
+            Adds a word to the dictionary.
+            </summary>
+            <param name="word">Word to add to the dictionary.</param>
+            <returns>True if the word was added to the dictionary, false if it was already present.</returns>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.UserDictionary.RemoveWord(System.String)">
+            <summary>
+            Removes a word from the dictionary.
+            </summary>
+            <param name="word">Word to remove from the dictionary.</param>
+            <returns>True if the word was removed from the dictionary, false if it was not found.</returns>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.UserDictionary.Clear">
+            <summary>
+            Clears the dictionary removing all words in it.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.UserDictionary.Save(System.IO.Stream)">
+            <summary>
+            Saves the user dictionary into a UTF-8 encoded stream.
+            </summary>
+            <param name="stream">UTF-8 encoded stream where the dictionary will be saved.</param>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.UserDictionary.LoadFromIsolatedStorage(System.String)">
+            <summary>
+            Loads the dictionary from a compressed file in isolated storage.
+            </summary>
+            <param name="fileName">Name of the file where the dictionary is stored.</param>
+            <returns>True if the dictionary was loaded successfully, false otherwise.</returns>
+            <remarks>
+            The user dictionary file is usually created by calling the 
+            <see cref="M:C1.Silverlight.SpellChecker.UserDictionary.SaveToIsolatedStorage(System.String)"/> method.
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.UserDictionary.SaveToIsolatedStorage(System.String)">
+            <summary>
+            Saves the dictionary into a compressed file in isolated storage.
+            </summary>
+            <param name="fileName">Name of the file to save.</param>
+            <remarks>
+            This method is used to save user dictionaries that were modified 
+            during the spell checking process. It is normally invoked only once,
+            before the applications exits.
+            </remarks>
+            <example>
+            <code>
+            public Page()
+            {
+              InitializeComponent();
+              
+              // load user dictionary
+              UserDictionary ud = c1SpellChecker1.UserDictionary;
+              ud.LoadFromIsolatedStorage("Custom.dct");
+              
+              // save user dictionary when app exits
+              App.Current.Exit += App_Exit; 
+            }
+            void App_Exit(object sender, EventArgs e)
+            {
+              // save modified user dictionary
+              UserDictionary ud = c1SpellChecker1.UserDictionary;
+              ud.SaveToIsolatedStorage("Custom.dct");
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.UserDictionary.Contains(System.String)">
+            <summary>
+            Checks whether the dictionary contains a given word.
+            </summary>
+            <param name="word">Word to look up.</param>
+            <returns>True if the dictionary contains the word, false otherwise.</returns>
+            
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.UserDictionary.Load(System.IO.Stream)">
+            <summary>
+            Loads the dictionary from a UTF-8 stream.
+            </summary>
+            <returns>True if the dictionary was loaded successfully, false otherwise.</returns>
+            <remarks>
+            If the dictionary fails to load, this method returns false. In this case,
+            you can check the value of the dictionary's <see cref="P:C1.Silverlight.SpellChecker.SpellDictionaryBase.State"/> property to determine 
+            why the file failed to load.
+            </remarks>
+        </member>
+        <member name="T:C1.Silverlight.SpellChecker.UserDictionaryEntries">
+            <summary>
+            DictionaryEntries is a dictionary that associates:
+              key: hash codes for lower case strings
+              value: bytes (0 for lower-case entry, 1 for upper-case)
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.UserDictionaryEntries.Add(System.String)">
+            <summary>
+            Adds a word to the list.
+            </summary>
+            <param name="word">Word to add to the list.</param>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.UserDictionaryEntries.Contains(System.String)">
+            <summary>
+            Checks whether the dictionary contains a given word.
+            </summary>
+            <param name="word">Word to look up.</param>
+            <returns>True if the dictionary contains the word, false otherwise.</returns>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.UserDictionaryEntries.Load(C1.Silverlight.SpellChecker.UserDictionary,System.IO.Stream)">
+            <summary>
+            Loads the word list from a UTF-8 encoded text file.
+            </summary>
+            <param name="dictionary"><see cref="T:C1.Silverlight.SpellChecker.SpellDictionary"/> that owns the word list.</param>
+            <param name="stream">UTF-8 stream that contains the word list.</param>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.UserDictionaryEntries.Save(System.IO.Stream)">
+            <summary>
+            Saves the word list to an UTF-8 stream.
+            </summary>
+            <param name="stream">Stream where the dictionary is saved.</param>
+        </member>
+        <member name="T:C1.Silverlight.SpellChecker.WordList">
+            <summary>
+            Keyed list of words to ignore while spell-checking.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.WordList.ClearItems">
+            <summary>
+            Removes all elements from the list.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.WordList.InsertItem(System.Int32,System.String)">
+            <summary>
+            Inserts a word into the list at the specified index.
+            </summary>
+            <param name="index">The zero-based <paramref name="index"/> at which the new item should be inserted.</param>
+            <param name="item">The item to insert into the list.</param>
+            <remarks>
+            Duplicate items are automatically discarded; the list will contain at most one copy of any given string.
+            </remarks>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.WordList.RemoveItem(System.Int32)">
+            <summary>
+            Removes the word at the specified index from the collection.
+            </summary>
+            <param name="index">The zero-based <paramref name="index"/> at which the new item should be removed.</param>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.WordList.SetItem(System.Int32,System.String)">
+            <summary>
+            Not supported.
+            </summary>
+            <param name="index">Index of the element to replace.</param>
+            <param name="item">Element to replace.</param>
+        </member>
+        <member name="M:C1.Silverlight.SpellChecker.WordList.GetKeyForItem(System.String)">
+            <summary>
+            Obtains a key for the given element. 
+            </summary>
+            <param name="item">The element from which to obtain the key.</param>
+            <returns>The key for the specified element.</returns>
+        </member>
+        <member name="T:C1.Silverlight.SpellChecker.WordDictionary">
+            <summary>
+            Dictionary of words and their replacements.
+            </summary>
+        </member>
+    </members>
+</doc>

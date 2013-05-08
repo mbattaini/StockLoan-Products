@@ -1,0 +1,6 @@
+C:\_dev\ATLAS\ComplianceData\bin\Release\StockLoan.ComplianceData.dll
+C:\_dev\ATLAS\ComplianceData\bin\Release\StockLoan.Common.dll
+C:\_dev\ATLAS\ComplianceData\obj\Release\StockLoan.ComplianceData.dll
+C:\_dev\ATLAS\ComplianceData\obj\Release\ComplianceData.csprojResolveAssemblyReference.cache
+C:\_dev\ATLAS\ComplianceData\bin\Release\C1.C1Excel.2.dll
+C:\_dev\ATLAS\ComplianceData\bin\Release\C1.C1Excel.2.xml

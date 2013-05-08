@@ -1,0 +1,9 @@
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideTradeData\LoanetParsingMessages\obj\Debug\ResolveAssemblyReference.cache
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideTradeData\LoanetParsingMessages\bin\Debug\LoanetParsingMessages.dll
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideTradeData\LoanetParsingMessages\bin\Debug\LoanetParsingMessages.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideTradeData\LoanetParsingMessages\bin\Debug\StockLoan.DataAccess.dll
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideTradeData\LoanetParsingMessages\bin\Debug\StockLoan.Common.dll
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideTradeData\LoanetParsingMessages\bin\Debug\StockLoan.DataAccess.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideTradeData\LoanetParsingMessages\bin\Debug\StockLoan.Common.pdb
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideTradeData\LoanetParsingMessages\obj\Debug\LoanetParsingMessages.dll
+C:\_dev\ATLAS\LoanstarWorldWide\WorldWideTradeData\LoanetParsingMessages\obj\Debug\LoanetParsingMessages.pdb

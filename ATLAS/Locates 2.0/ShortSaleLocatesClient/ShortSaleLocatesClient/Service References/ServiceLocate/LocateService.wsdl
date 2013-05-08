@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="LocateService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:60372/LocateService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:60372/LocateService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ILocateService_LocateGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocateGet" />
+  </wsdl:message>
+  <wsdl:message name="ILocateService_LocateGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocateGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILocateService_LocateSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocateSet" />
+  </wsdl:message>
+  <wsdl:message name="ILocateService_LocateSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocateSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILocateService_SeucrityIdInformationGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:SeucrityIdInformationGet" />
+  </wsdl:message>
+  <wsdl:message name="ILocateService_SeucrityIdInformationGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SeucrityIdInformationGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILocateService_LocateResearchGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocateResearchGet" />
+  </wsdl:message>
+  <wsdl:message name="ILocateService_LocateResearchGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocateResearchGetResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ILocateService">
+    <wsdl:operation name="LocateGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILocateService/LocateGet" message="tns:ILocateService_LocateGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILocateService/LocateGetResponse" message="tns:ILocateService_LocateGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocateSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILocateService/LocateSet" message="tns:ILocateService_LocateSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILocateService/LocateSetResponse" message="tns:ILocateService_LocateSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SeucrityIdInformationGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILocateService/SeucrityIdInformationGet" message="tns:ILocateService_SeucrityIdInformationGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILocateService/SeucrityIdInformationGetResponse" message="tns:ILocateService_SeucrityIdInformationGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocateResearchGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILocateService/LocateResearchGet" message="tns:ILocateService_LocateResearchGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILocateService/LocateResearchGetResponse" message="tns:ILocateService_LocateResearchGet_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ILocateService" type="tns:ILocateService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LocateGet">
+      <soap:operation soapAction="http://tempuri.org/ILocateService/LocateGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocateSet">
+      <soap:operation soapAction="http://tempuri.org/ILocateService/LocateSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SeucrityIdInformationGet">
+      <soap:operation soapAction="http://tempuri.org/ILocateService/SeucrityIdInformationGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocateResearchGet">
+      <soap:operation soapAction="http://tempuri.org/ILocateService/LocateResearchGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LocateService">
+    <wsdl:port name="BasicHttpBinding_ILocateService" binding="tns:BasicHttpBinding_ILocateService">
+      <soap:address location="http://localhost:60372/LocateService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

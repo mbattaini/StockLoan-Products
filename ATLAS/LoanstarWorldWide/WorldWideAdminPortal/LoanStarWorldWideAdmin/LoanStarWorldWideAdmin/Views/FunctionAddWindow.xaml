@@ -1,0 +1,36 @@
+<UserControl 
+	Name="AddFunctionWindow"
+	x:Class="LoanStarWorldWideAdmin.Views.FunctionAddWindow"
+    	xmlns="http://schemas.microsoft.com/client/2007" 
+    	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
+        xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+
+    	Background="#FF374F5D">
+
+    <StackPanel x:Name="LayoutRoot" VerticalAlignment="Center" HorizontalAlignment="Center" Width="331" Height="156">
+        <Grid x:Name="FunctionAddGrid" Height="155" VerticalAlignment="Top" HorizontalAlignment="Left" Width="331">
+            <Grid.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF325988" Offset="1" />
+                    <GradientStop Color="#FF1F3F68" />
+                </RadialGradientBrush>
+            </Grid.Background>
+            <sdk:Label x:Name="FunctionPathLabel" Margin="2,16,232,0" Content="Function Path" FontSize="11" Height="20" FontWeight="Bold" Foreground="White" 
+                       HorizontalContentAlignment="Right" VerticalAlignment="Top"/>
+            <TextBox  x:Name="FunctionPathTextBox" Margin="105,12,0,0" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" Width="196" TabIndex="1"/>
+            <CheckBox x:Name="MayEditCheckBox" Margin="25,52,0,0" Content="May Edit" FontSize="11"  FontWeight="Bold" Foreground="White" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top" TabIndex="2"/>
+            <CheckBox x:Name="MayViewCheckBox" Margin="127,52,0,0" Content="May View" FontSize="11"  FontWeight="Bold" Foreground="White" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top" TabIndex="3"/>
+            <CheckBox x:Name="DeleteFunctionCheckBox" Margin="252,52,0,0" Content="Delete?" FontSize="11"  FontWeight="Bold" Foreground="White" Height="16" HorizontalAlignment="Left"  
+                      VerticalAlignment="Top" />
+            <Button x:Name="AddFunctionButton" Margin="215,85,0,0" Content="Add Function" Height="28" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                        Width="108" Click="AddFunctionButton_Click"  TabIndex="5"></Button>
+            <sdk:Label Content="" FontSize="11" Height="25" FontWeight="Bold" Foreground="White" HorizontalContentAlignment="Right" Margin="3,123,0,9" Name="statusLabel" HorizontalAlignment="Left" Width="323" />
+        </Grid>
+
+    </StackPanel>
+
+</UserControl>
+
+
+
+

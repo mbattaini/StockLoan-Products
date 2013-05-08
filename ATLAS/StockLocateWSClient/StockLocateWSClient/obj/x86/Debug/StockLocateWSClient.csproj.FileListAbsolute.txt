@@ -1,0 +1,15 @@
+C:\_Dev\ATLAS\StockLocateWSClient\StockLocateWSClient\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\_Dev\ATLAS\StockLocateWSClient\StockLocateWSClient\obj\x86\Debug\Interop.CAPICOM.dll
+C:\_Dev\ATLAS\StockLocateWSClient\StockLocateWSClient\obj\x86\Debug\StockLocateWSClient.csproj.ResolveComReference.cache
+C:\_Dev\ATLAS\StockLocateWSClient\StockLocateWSClient\obj\x86\Debug\StockLocateWSClient.Properties.Resources.resources
+C:\_Dev\ATLAS\StockLocateWSClient\StockLocateWSClient\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\_Dev\ATLAS\StockLocateWSClient\StockLocateWSClient\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\_Dev\ATLAS\StockLocateWSClient\StockLocateWSClient\bin\Debug\StockLocateWSClient.exe.config
+C:\_Dev\ATLAS\StockLocateWSClient\StockLocateWSClient\bin\Debug\StockLocateWSClient.exe
+C:\_Dev\ATLAS\StockLocateWSClient\StockLocateWSClient\bin\Debug\StockLocateWSClient.pdb
+C:\_Dev\ATLAS\StockLocateWSClient\StockLocateWSClient\obj\x86\Debug\StockLocateWSClient.exe
+C:\_Dev\ATLAS\StockLocateWSClient\StockLocateWSClient\obj\x86\Debug\StockLocateWSClient.pdb
+C:\_Dev\ATLAS\StockLocateWSClient\StockLocateWSClient\bin\Debug\C1.Win.C1TrueDBGrid.4.dll
+C:\_Dev\ATLAS\StockLocateWSClient\StockLocateWSClient\bin\Debug\C1.Win.C1TrueDBGrid.4.xml
+C:\_Dev\ATLAS\StockLocateWSClient\StockLocateWSClient\obj\x86\Debug\StockLocateWSClient.exe.licenses
+C:\_Dev\ATLAS\StockLocateWSClient\StockLocateWSClient\obj\x86\Debug\StockLocateWSClient.LocatesTestForm.resources

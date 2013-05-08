@@ -1,0 +1,357 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Silverlight.Chart.Extended</name>
+    </assembly>
+    <members>
+        <member name="T:C1.Silverlight.Chart.Extended.FunctionSeries">
+            <summary>
+            Base class for function series.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Extended.FunctionSeries.#ctor">
+            <summary>
+            Initializes a new instance of FunctionSeries class.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart.Extended.FunctionSeries.MinProperty">
+            <summary>
+            Identifies the MinProperty dependency property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart.Extended.FunctionSeries.MaxProperty">
+            <summary>
+            Identifies the MaxProperty dependency property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart.Extended.FunctionSeries.SampleCountProperty">
+            <summary>
+            Identifies the SampleCountProperty dependency property.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Extended.FunctionSeries.OnDPChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when dependency property was changed.
+            </summary>
+            <param name="obj"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Extended.FunctionSeries.FireException(System.String)">
+            <summary>
+            Fire the exception with specified message.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Extended.FunctionSeries.ValidateValue(System.Double)">
+            <summary>
+            Perform validation of data value.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Extended.FunctionSeries.CalculateValue(System.Func{System.Double,System.Double},System.String,System.Double,System.String@)">
+            <summary>
+            Calculate the value of function.
+            </summary>
+            <param name="func"></param>
+            <param name="funcJS"></param>
+            <param name="parameter"></param>
+            <param name="errmsg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Extended.FunctionSeries.GetErrorString(System.String)">
+            <summary>
+            Gets the error in the specified JS code.
+            </summary>
+            <param name="funcJS">String with JS code.</param>
+            <returns>The error message.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Extended.FunctionSeries.UpdateData">
+            <summary>
+            Update plotted data values.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Extended.FunctionSeries.Min">
+            <summary>
+            Gets or sets the minimal value of function parameter.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Extended.FunctionSeries.Max">
+            <summary>
+            Gets or sets the maximum value of function parameter.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Extended.FunctionSeries.SampleCount">
+            <summary>
+            Gets or sets the sample count for function calculation.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Extended.FunctionSeries.ThrowException">
+            <summary>
+            Whether to throw the exceptions which fire during function calculation,
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Chart.Extended.YFunctionSeries">
+            <summary>
+            Represents y=f(x) function.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Extended.YFunctionSeries.UpdateData">
+            <summary>
+            Update plotted data values.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Extended.YFunctionSeries.Function">
+            <summary>
+            Gets or sets the delegate that defines function.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Extended.YFunctionSeries.FunctionCode">
+            <summary>
+            Gets or sets the function code(JavaScript).
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Extended.YFunctionSeries.FunctionCodeError">
+            <summary>
+            Gets the error text which was returned after evaluating FunctionCode
+            expression. Returns empty string if the code was evaluated without
+            errors or FunctionCode property value is empty.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Chart.Extended.ParametricFunctionSeries">
+            <summary>
+            Represent function series with coordinates defined as two functions x=x(t) and y=y(t).
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Extended.ParametricFunctionSeries.UpdateData">
+            <summary>
+            Update plotted data values.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Extended.ParametricFunctionSeries.XFunction">
+            <summary>
+            Gets or sets the function calculating x-value of data point.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Extended.ParametricFunctionSeries.XFunctionCode">
+            <summary>
+            Gets or sets the code of function calculating x-value of data point.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Extended.ParametricFunctionSeries.XFunctionCodeError">
+            <summary>
+            Gets the error message for the x-function.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Extended.ParametricFunctionSeries.YFunction">
+            <summary>
+            Gets or sets the function calculating y-value of data point.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Extended.ParametricFunctionSeries.YFunctionCode">
+            <summary>
+            Gets or sets the code of function calculating y-value of data point.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Extended.ParametricFunctionSeries.YFunctionCodeError">
+            <summary>
+            Gets the error message for the y-function.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Chart.Extended.ImageFormat">
+            <summary>
+            Enumerates available image formats.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart.Extended.ImageFormat.Jpeg">
+            <summary>
+            The Joint Photographic Experts Group (JPEG) image format.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart.Extended.ImageFormat.Png">
+            <summary>
+            The W3C Portable Network Graphics (PNG) image format.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Chart.Extended.ImageExport">
+            <summary>
+            Contains chart export routines.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Extended.ImageExport.SaveImage(C1.Silverlight.Chart.C1Chart,System.IO.Stream,C1.Silverlight.Chart.Extended.ImageFormat)">
+            <summary>
+            Saves the chart image to the provided stream using the specified image format.
+            </summary>
+            <param name="chart"></param>
+            <param name="stream"></param>
+            <param name="imageFormat"></param>
+        </member>
+        <member name="T:C1.Silverlight.Chart.Extended.LeastSquaresMethod">
+            <summary>
+            Contains routines for Least Squares Method
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Chart.Extended.MovingAverage">
+            <summary>
+            Represents moving average filter applied to the data.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Extended.MovingAverage.#ctor">
+            <summary>
+            Initializes a new instance of MovingAverage class.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart.Extended.MovingAverage.PeriodProperty">
+            <summary>
+            Identifies the PeriodProperty dependency property.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Extended.MovingAverage.OnPeriodChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when period was changed.
+            </summary>
+            <param name="obj"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Extended.MovingAverage.UpdateData">
+            <summary>
+            Update plotted data values.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Extended.MovingAverage.ProcessValues(System.Double[0:,0:])">
+            <summary>
+            Perform the processing of data values.
+            </summary>
+            <param name="values">Original data values.</param>
+            <returns>Processed data values.</returns>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Extended.MovingAverage.Period">
+            <summary>
+            Gets or sets the period of moving average. The period is the number of
+            previous points used for calculating mean value at the current point.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Chart.Extended.FitType">
+            <summary>
+            Specifies fit type for trend line.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart.Extended.FitType.Polynom">
+            <summary>
+            Regression fit to the equation Y(x) = C0 + C1*x + C2*x2 + : + Cn-1*xn-1, where n - number of terms.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart.Extended.FitType.Exponent">
+            <summary>
+            Regression fit to the equation Y(x) = C0 * exp( C1*x)
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart.Extended.FitType.Logarithmic">
+            <summary>
+            Regression fit to the equation Y(x) = C0 * ln(C1*x)
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart.Extended.FitType.Power">
+            <summary>
+            Regression fit to the equation Y(x) = C0 * pow(x, C1)
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart.Extended.FitType.Fourier">
+            <summary>
+            Regression fit to the equation Y(x) = C0 + C1 * cos(x) + C2 * sin(x) + C3 * cos(2*x) + C4 * sin(2*x) + ...
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart.Extended.FitType.MinX">
+            <summary>
+            Minimal X-value.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart.Extended.FitType.MinY">
+            <summary>
+            Minimal Y-value.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart.Extended.FitType.MaxX">
+            <summary>
+            Maximum X-value.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart.Extended.FitType.MaxY">
+            <summary>
+            Maximum Y-value.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart.Extended.FitType.AverageX">
+            <summary>
+            Average X-value.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart.Extended.FitType.AverageY">
+            <summary>
+            Average Y-value.
+            </summary>
+        </member>
+        <member name="T:C1.Silverlight.Chart.Extended.TrendLine">
+            <summary>
+            Represents trend line.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Extended.TrendLine.#ctor">
+            <summary>
+            Initializes a new instance of TrendLine class.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart.Extended.TrendLine.FitTypeProperty">
+            <summary>
+            Identifies the FitTypeProperty dependency property.
+            </summary>
+        </member>
+        <member name="F:C1.Silverlight.Chart.Extended.TrendLine.OrderProperty">
+            <summary>
+            Identifies the OrderProperty dependency property.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Extended.TrendLine.OnOrderChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when order has been changed.
+            </summary>
+            <param name="obj"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Extended.TrendLine.UpdateData">
+            <summary>
+            Update plotted data values.
+            </summary>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Extended.TrendLine.ProcessValues(System.Double[0:,0:])">
+            <summary>
+            Perform the processing of data values.
+            </summary>
+            <param name="values">Original data values.</param>
+            <returns>Processed data values.</returns>
+        </member>
+        <member name="M:C1.Silverlight.Chart.Extended.TrendLine.Aproximate(System.Double)">
+            <summary>
+            Returns the calculated(predicted) trend line value that corresponds to specified argument. 
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Extended.TrendLine.FitType">
+            <summary>
+            Gets or sets the fit type.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Extended.TrendLine.Order">
+            <summary>
+            Gets or sets the order of trend line. The order defines number of
+            terms in polynom equation.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Chart.Extended.TrendLine.Coefficients">
+            <summary>
+            Gets the coefficients of equation.
+            </summary>
+        </member>
+    </members>
+</doc>
