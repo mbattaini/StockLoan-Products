@@ -115,8 +115,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004  All rights reserved.
+ 
+ 
 
 CREATE Trigger tgSecIdLinkSet On dbo.tbSecMaster 
 After Insert 
@@ -156,8 +156,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004  All rights reserved.
+ 
+ 
 
 CREATE Trigger tgSecMasterSecIdListSet On [dbo].[tbSecIdLinks] 
 For Insert, Update, Delete
@@ -233,8 +233,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004  All rights reserved.
+ 
+ 
 
 CREATE Procedure dbo.spSecIdLinkSet
 	@SecId varchar(12),
@@ -318,8 +318,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004  All rights reserved.
+ 
+ 
 
 CREATE Procedure dbo.spSecMasterItemSet
 	@SecId varchar(12),
@@ -503,8 +503,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004  All rights reserved.
+ 
+ 
 
 CREATE Procedure dbo.spBorrowEasySet
 	@TradeDate datetime,
@@ -643,8 +643,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004  All rights reserved.
+ 
+ 
 
 CREATE Procedure dbo.spBorrowNoSet
 	@SecId varchar(12),
@@ -705,8 +705,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004, 2005  All rights reserved.
+ 
+
 
 CREATE Procedure dbo.spSecMasterItemGet
 	@SecId varchar(12)
@@ -747,8 +747,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004  All rights reserved.
+ 
+ 
 
 CREATE Procedure spSecIdSymbolLookup
 	@SecIdLink  varchar(12),
@@ -802,8 +802,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004  All rights reserved.
+ 
+ 
 
 CREATE Procedure dbo.spDeskQuipGet
 	@SecId varchar(12) = Null,
@@ -849,8 +849,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004  All rights reserved.
+ 
+ 
 
 CREATE Procedure dbo.spDeskQuipSet
 	@SecId varchar(12),
@@ -968,8 +968,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spBooksGet 
 	@IsActive bit = Null,
@@ -1150,8 +1150,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spBookGet
 	@BookGroup varchar(10) = Null,
@@ -1220,8 +1220,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spBookSet
 	@BookGroup varchar(10), 
@@ -1300,8 +1300,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spBookGroupGet 
 	@BizDate datetime = Null
@@ -1391,8 +1391,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spContractGet
 	@BizDate datetime = Null,
@@ -1601,8 +1601,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spContractSet
 	@BizDate datetime,
@@ -1742,8 +1742,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spContractBizDateList
 	@ListItemCountMax int = 50 
@@ -1778,8 +1778,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spContractBizDateRoll
             @BizDatePrior datetime,
@@ -1884,8 +1884,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spMarkSet
 	@BizDate datetime,
@@ -2017,8 +2017,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spDealGet 
 	@DealId char(16) = Null,
@@ -2088,8 +2088,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spDealSet
 	@DealId char(16),
@@ -2291,8 +2291,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004, 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spLoanetClientInsert
 	@BizDate datetime,
@@ -2394,8 +2394,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004, 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spLoanetClientPurge
 	@BizDate datetime,
@@ -2506,8 +2506,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spLoanetClientLongInsert
 	@BizDate [datetime],
@@ -2658,8 +2658,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004, 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spLoanetClientLongPurge
 	@BizDate datetime,
@@ -2715,8 +2715,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004, 2005  All rights reserved.
+ 
+
 
 CREATE Procedure dbo.spLoanetCollateralInsert
 	@BizDate datetime,
@@ -2768,8 +2768,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004, 2005  All rights reserved.
+ 
+
 
 CREATE Procedure dbo.spLoanetCollateralPurge
 	@BizDate datetime,
@@ -2824,8 +2824,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004, 2005  All rights reserved.
+ 
+
 
 CREATE Procedure dbo.spLoanetContractControlSet
 	@ClientId char(4),
@@ -2934,8 +2934,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004, 2005  All rights reserved.
+ 
+
 
 CREATE Procedure dbo.spLoanetContractInsert
 	@BizDate datetime,
@@ -3016,8 +3016,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004, 2005  All rights reserved.
+ 
+
 
 CREATE Procedure dbo.spLoanetContractPurge
 	@BizDate datetime,
@@ -3074,8 +3074,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spLoanetMarkInsert
 	@BizDate datetime,
@@ -3115,8 +3115,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE Procedure dbo.spLoanetMarkPurge
 	@BizDate datetime,
@@ -3179,8 +3179,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004, 2005  All rights reserved.
+ 
+
 
 CREATE Procedure dbo.spLoanetRecallInsert
 	@BizDate datetime,
@@ -3238,8 +3238,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004, 2005  All rights reserved.
+ 
+
 
 CREATE Procedure dbo.spLoanetRecallPurge
 	@BizDate datetime
@@ -3270,8 +3270,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004, 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spLoanetBookUpdate
 	@BizDate datetime,
@@ -3440,8 +3440,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004, 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spLoanetBookLongUpdate
 	@BizDate datetime,
@@ -3613,8 +3613,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spLoanetContractUpdate
 	@BizDate datetime,
@@ -3772,8 +3772,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spLoanetRecallUpdate
 	@BizDate datetime
@@ -3855,8 +3855,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spLoanetContractSet 
 	@BookGroup char(4),
@@ -3945,8 +3945,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spLoanetRecallSet 
 	@BookGroup char(4),
@@ -3997,8 +3997,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spLoanetMarkUpdate
 	@BizDate datetime,
@@ -4061,8 +4061,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spLoanetCoOpMessageInsert
 	@ProcessId char(16),
@@ -4096,8 +4096,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spLoanetCoOpMessageGet
 	@ProcessId char(16),
@@ -4135,8 +4135,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spLoanetContractRecallUpdate
 	@BookGroup char(4),
@@ -4183,8 +4183,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE Procedure dbo.spLoanetDatagramTransactionUpdate
 	@SystemTime datetime = Null,	
@@ -4777,8 +4777,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spRecallActivityGet 
 	@BizDate datetime = Null,
@@ -4823,8 +4823,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spRecallActivityInsert 
 	@RecallId char(16),
@@ -4868,8 +4868,8 @@ GO
 SET ANSI_NULLS OFF 
 GO
 
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004, 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spRecallsGet 
 	@BizDate datetime = Null,
@@ -4947,8 +4947,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spRecallSet
 	@RecallId char(16),
@@ -5166,8 +5166,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spRecallReasonsGet 
 	@ReasonId char(2) = Null,
@@ -5229,8 +5229,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spRecallIndicatorsGet 
 
@@ -5260,8 +5260,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spRecallBizDateSet 
 	@RecordCount int output
@@ -5317,8 +5317,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004  All rights reserved.
+ 
+ 
 
 CREATE Procedure dbo.spShortSaleLocateGet
 		@LocateId bigint = Null,
@@ -5384,8 +5384,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004  All rights reserved.
+ 
+ 
 
 CREATE Procedure dbo.spShortSaleTradeDates
 	@GroupCode varchar(5) = Null,
@@ -5438,8 +5438,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004  All rights reserved.
+ 
+ 
 
 CREATE Procedure dbo.spTradingGroupGet
 	@GroupCode varchar(5) = Null,
@@ -5477,8 +5477,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004  All rights reserved.
+ 
+ 
 
 CREATE Procedure dbo.spInventoryGet
 	@SecId varchar(12),
@@ -5526,7 +5526,7 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
+ 
 --| Copyright (C) 2005  All rights reserved.
 
 CREATE Procedure dbo.spInventoryHistoryGet
@@ -5593,8 +5593,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004  All rights reserved.
+ 
+ 
 
 CREATE Procedure dbo.spShortSaleLocateRequest
 	@LocateId bigint = Null Output,
@@ -5780,8 +5780,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004  All rights reserved.
+ 
+ 
 
 CREATE Procedure dbo.spShortSaleLocateSet
 	@ActUserId varchar(50),
@@ -5922,8 +5922,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004, 2005  All rights reserved.
+ 
+
 
 CREATE Procedure dbo.spThresholdControlSet
 	@Exchange	char(4),
@@ -5990,8 +5990,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004, 2005  All rights reserved.
+ 
+
 
 CREATE Procedure spThresholdItemSet
 	@BizDate datetime,
@@ -6058,8 +6058,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004, 2005  All rights reserved.
+ 
+
 
 CREATE Procedure dbo.spThresholdList
 	@BizDate datetime = Null
@@ -6122,8 +6122,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004, 2005  All rights reserved.
+ 
+
 
 CREATE Procedure dbo.spThresholdPurge
 	@BizDate	datetime,
@@ -6200,8 +6200,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004, 2005  All rights reserved.
+ 
+
 
 CREATE Procedure dbo.spThresholdSubset
 	@BizDateSubset datetime,
@@ -6293,8 +6293,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004  All rights reserved.
+ 
+ 
 
 CREATE Procedure dbo.spInventoryFileDataMaskGet
 	@Desk varchar(12),
@@ -6369,8 +6369,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004  All rights reserved.
+ 
+ 
 
 CREATE Procedure dbo.spInventoryFileDataMaskList
 	@Desk varchar(12) = Null,
@@ -6427,8 +6427,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004  All rights reserved.
+ 
+ 
 
 CREATE Procedure dbo.spInventoryFileDataMaskSet
 	@Desk varchar(12),
@@ -6604,8 +6604,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE Procedure spBoxPositionGet
 	@BizDate  datetime,
@@ -6724,8 +6724,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE Procedure spBoxPositionStateSet
 	@BizDate  datetime,
@@ -6761,8 +6761,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE Procedure spBoxPositionPurge
 	@BizDate  datetime,
@@ -6799,8 +6799,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE Procedure dbo.spBoxPositionItemSet
 		@BizDatePrior datetime = Null,
@@ -7057,7 +7057,7 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS ON 
 GO
---| Licensed Materials - Property of Anetics, LLC.
+ 
 --| Copyright (C) 2005  All rights reserved.
 
 CREATE Procedure dbo.spBoxFailHistoryGet
@@ -7144,8 +7144,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE Procedure spBoxLocationGet
 	@SecId varchar(12) = Null,
@@ -7181,8 +7181,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE Procedure spBoxLocationStateSet
 
@@ -7214,8 +7214,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE Procedure spBoxLocationPurge
 
@@ -7248,8 +7248,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE Procedure dbo.spBoxLocationItemSet
 		@SecId varchar(12),
@@ -7311,8 +7311,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spBookCreditAvailableGet
 	@BookGroup varchar(10),
@@ -7570,8 +7570,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE Procedure dbo.spBoxSummarySet
 	@BookGroup varchar(10),
@@ -7626,8 +7626,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE Procedure dbo.spBoxSummaryGet
 	@BizDate  datetime,
@@ -7853,8 +7853,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE Procedure dbo.spProcessStatusGet
 	@ProcessId varchar(16) = Null,
@@ -7914,8 +7914,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spProcessStatusSet
 	@ProcessId varchar(16),
@@ -8030,8 +8030,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spDeliveriesSet
 	@BookGroup varchar(10),
@@ -8101,8 +8101,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spLoanetRecallDebitUpdate
 	@BookGroup char(4),
@@ -8192,8 +8192,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spLoanetDatagramDebitUpdate
 	@ClientId char(4),
@@ -8278,8 +8278,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spDeskGet 
 	@Desk varchar(12) = null,
@@ -8323,8 +8323,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004  All rights reserved.
+ 
+ 
 
 CREATE Procedure dbo.spCountryGet
 	@CountryCode char(2) = Null
@@ -8355,8 +8355,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spCountrySet 
 	@CountryCode varchar(5),
@@ -8404,8 +8404,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spCurrencySet 
 	@CurrencyCode varchar(5),
@@ -8457,8 +8457,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004  All rights reserved.
+ 
+ 
 
 CREATE Procedure dbo.spDeskTypeGet
 	@DeskTypeCode varchar(3) = Null
@@ -8489,8 +8489,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spDeskTypeSet 
 	@DeskTypeCode varchar(5),
@@ -8542,8 +8542,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004  All rights reserved.
+ 
+ 
 
 CREATE Procedure dbo.spFirmGet
 	@FirmCode varchar(5) = Null
@@ -8574,8 +8574,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE PROCEDURE dbo.spFirmSet 
 	@FirmCode varchar(5),
@@ -8626,8 +8626,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004  All rights reserved.
+ 
+ 
 
 CREATE Procedure dbo.spHolidayGet
 	@AnyDate  datetime = Null,
@@ -8692,8 +8692,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004  All rights reserved.
+ 
+ 
 
 CREATE PROCEDURE dbo.spHolidaySet 
 	@Date datetime ,
@@ -8795,8 +8795,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS ON 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE Procedure dbo.spInventoryPublisherGet
 	        @Desk varchar(12) = Null,
@@ -8851,8 +8851,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE Procedure dbo.spInventoryPublisherSet
 	@Desk varchar(12),
@@ -8951,8 +8951,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2003, 2004, 2005  All rights reserved.
+ 
+
 
 CREATE Procedure dbo.spInventoryItemSet
 	@BizDate datetime = Null,
@@ -9036,8 +9036,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS ON 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE Procedure dbo.spBorrowHardChanges
 	@BizDate datetime = Null,
@@ -9095,8 +9095,8 @@ SET QUOTED_IDENTIFIER OFF
 GO
 SET ANSI_NULLS OFF 
 GO
---| Licensed Materials - Property of Anetics, LLC.
---| Copyright (C) Anetics, LLC. 2005  All rights reserved.
+ 
+
 
 CREATE Procedure dbo.spBorrowNoChanges
 	@BizDate datetime = Null,
